@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-09-28T22:18:17-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: Multicloud Architecture</title><link href="https://josecastillolema.github.io/shift-multicloud/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture" /><published>2020-09-05T00:00:00-03:00</published><updated>2020-09-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-09-05-shift-multicloud.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-09-30T21:06:52-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">My code is open</title><link href="https://josecastillolema.github.io/mycodeisopen/" rel="alternate" type="text/html" title="My code is open" /><published>2020-09-30T00:00:00-03:00</published><updated>2020-09-30T17:00:58-03:00</updated><id>https://josecastillolema.github.io/mycodeisopen</id><content type="html" xml:base="https://josecastillolema.github.io/mycodeisopen/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-09-30-mycodeisopen/0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-09-30-mycodeisopen/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: Multicloud Architecture</title><link href="https://josecastillolema.github.io/shift-multicloud/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture" /><published>2020-09-05T00:00:00-03:00</published><updated>2020-09-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-09-05-shift-multicloud.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
 
@@ -576,75 +578,4 @@ files/docker/registry/v2/repositories/openshift/python/_manifests/revisions/sha2
 &lt;p&gt;The ONF Ambassador Program empowers anyone knowledgeable and passionate about ONF projects and initiatives to promote these in their part of the world. The program provides a simple framework and tools to help organize or attend events, recruit and mentor new contributors, and support a local developer community.If you feel that you want to represent and promote ONF, its mission, and projects in your region, and inspire, recruit, and support new contributors, please &lt;a href=&quot;https://forms.gle/PfkunXncognheAad8&quot;&gt;apply here&lt;/a&gt; to become an ONF Ambassador.&lt;/p&gt;
 
 &lt;h2 id=&quot;profile&quot;&gt;&lt;a href=&quot;https://www.opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;Profile&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-04-30-onf/3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="sdn" /><summary type="html">Open Networking Foundation</summary></entry><entry><title type="html">ComputeHCISriov role for Director/TripleO</title><link href="https://josecastillolema.github.io/computehcisriov-role/" rel="alternate" type="text/html" title="ComputeHCISriov role for Director/TripleO" /><published>2020-01-06T00:00:00-03:00</published><updated>2020-01-06T17:00:58-03:00</updated><id>https://josecastillolema.github.io/computehcisriov-role</id><content type="html" xml:base="https://josecastillolema.github.io/computehcisriov-role/">&lt;p&gt;Hyper-converged SR-IOV role for compute nodes.&lt;/p&gt;
-
-&lt;p&gt;Change &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;700887&lt;/code&gt; proposed and merged upstream: &lt;a href=&quot;https://review.opendev.org/#/c/700887/&quot;&gt;https://review.opendev.org/#/c/700887/&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;###############################################################################
-# Role: ComputeHCISriov #
-###############################################################################
-- name: ComputeHCISriov
- description: |
- Compute Node with SR-IOV role hosting Ceph OSD too
- networks:
- - InternalApi
- - Tenant
- - Storage
- - StorageMgmt
- - Management
- default_route_networks: ['Management']
- disable_upgrade_deployment: True
- RoleParametersDefault:
- TunedProfileName: &quot;cpu-partitioning&quot;
- # CephOSD present so serial has to be 1
- update_serial: 1
- ServicesDefault:
- - OS::TripleO::Services::Aide
- - OS::TripleO::Services::AuditD
- - OS::TripleO::Services::BootParams
- - OS::TripleO::Services::CACerts
- - OS::TripleO::Services::CephClient
- - OS::TripleO::Services::CephExternal
- - OS::TripleO::Services::CephOSD
- - OS::TripleO::Services::CertmongerUser
- - OS::TripleO::Services::Collectd
- - OS::TripleO::Services::ComputeCeilometerAgent
- - OS::TripleO::Services::ComputeNeutronCorePlugin
- - OS::TripleO::Services::ComputeNeutronL3Agent
- - OS::TripleO::Services::ComputeNeutronMetadataAgent
- - OS::TripleO::Services::ComputeNeutronOvsAgent
- - OS::TripleO::Services::Docker
- - OS::TripleO::Services::Fluentd
- - OS::TripleO::Services::IpaClient
- - OS::TripleO::Services::Ipsec
- - OS::TripleO::Services::Iscsid
- - OS::TripleO::Services::Kernel
- - OS::TripleO::Services::LoginDefs
- - OS::TripleO::Services::MetricsQdr
- - OS::TripleO::Services::MySQLClient
- - OS::TripleO::Services::NeutronBgpVpnBagpipe
- - OS::TripleO::Services::NeutronSriovAgent
- - OS::TripleO::Services::NeutronSriovHostConfig
- - OS::TripleO::Services::NeutronVppAgent
- - OS::TripleO::Services::NovaCompute
- - OS::TripleO::Services::NovaLibvirt
- - OS::TripleO::Services::NovaLibvirtGuests
- - OS::TripleO::Services::NovaMigrationTarget
- - OS::TripleO::Services::Ntp
- - OS::TripleO::Services::ContainersLogrotateCrond
- - OS::TripleO::Services::OpenDaylightOvs
- - OS::TripleO::Services::Rhsm
- - OS::TripleO::Services::RsyslogSidecar
- - OS::TripleO::Services::Securetty
- - OS::TripleO::Services::SensuClient
- - OS::TripleO::Services::SkydiveAgent
- - OS::TripleO::Services::Snmp
- - OS::TripleO::Services::Sshd
- - OS::TripleO::Services::Timezone
- - OS::TripleO::Services::TripleoFirewall
- - OS::TripleO::Services::TripleoPackages
- - OS::TripleO::Services::Vpp
- - OS::TripleO::Services::OVNController
- - OS::TripleO::Services::OVNMetadataAgent
- - OS::TripleO::Services::Ptp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="nfv" /><category term="openstack" /><category term="redhat" /><summary type="html">Hyper-converged SR-IOV role for compute nodes.</summary></entry></feed>
+&lt;p&gt;&lt;a href=&quot;https://www.opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-04-30-onf/3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="sdn" /><summary type="html">Open Networking Foundation</summary></entry></feed>

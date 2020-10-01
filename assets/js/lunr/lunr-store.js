@@ -418,4 +418,10 @@ var store = [{
         "tags": ["aws","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-multicloud/",
         "teaser": null
+      },{
+        "title": "My code is open",
+        "excerpt":"     ","categories": [],
+        "tags": ["redhat"],
+        "url": "https://josecastillolema.github.io/mycodeisopen/",
+        "teaser": null
       }]
