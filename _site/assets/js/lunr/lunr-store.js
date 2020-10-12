@@ -121,7 +121,7 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 1st edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-01/",
         "teaser": null
       },{
@@ -133,7 +133,7 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 2nd edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-02/",
         "teaser": null
       },{
@@ -151,31 +151,31 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 3rd edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-03/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 4th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-04/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 5th/6th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-05/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 7th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-07/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 8th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-08/",
         "teaser": null
       },{
@@ -187,7 +187,7 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 9th edition",
         "excerpt":"     ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-09/",
         "teaser": null
       },{
@@ -199,7 +199,7 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 10th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-10/",
         "teaser": null
       },{
@@ -217,7 +217,7 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 11th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-11/",
         "teaser": null
       },{
@@ -229,19 +229,19 @@ var store = [{
       },{
         "title": "HCNA-HNTD Training - 12th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-12/",
         "teaser": null
       },{
         "title": "HCNA-HNTD Training - 13th edition",
         "excerpt":"  ","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hntd-13/",
         "teaser": null
       },{
         "title": "Red Hat Academy",
         "excerpt":"Benefícios Aproveite os descontos (voucher 50% off) nos exames de certificação. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os ambientes de laboratório hands-on. Conecte-se com outros estudantes e os instrutores da Red Hat que fazem parte...","categories": [],
-        "tags": ["classes","fiap","openshift","openstack","pt","redhat"],
+        "tags": ["cert","classes","fiap","openshift","openstack","pt","redhat"],
         "url": "https://josecastillolema.github.io/redhat-academy/",
         "teaser": null
       },{
@@ -301,7 +301,7 @@ var store = [{
       },{
         "title": "AWS Educate",
         "excerpt":"Recursos e benefícios Acesso ao AWS Educate Student Portal. Accesso ao console AWS com 50$ de créditos e labs online. Cloud Career Pathways: Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor...","categories": [],
-        "tags": ["aws","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-educate/",
         "teaser": null
       },{
@@ -391,25 +391,25 @@ var store = [{
       },{
         "title": "Huawei Certificate Training Program",
         "excerpt":"A Huawei está oferecendo treinamentos digitais gratuitos, trazendo para o Brasil o Huawei Certificate Training Program, um programa de treinamentos para realizar os cursos preparatórios das certificações nível Associate, testes de qualificação e solicitar um voucher para realizar a prova sem custo (que normalmente tem um valor de $200). São...","categories": [],
-        "tags": ["huawei","networks","pt"],
+        "tags": ["cert","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/haina-brazil/",
         "teaser": null
       },{
         "title": "AWS Academy",
         "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
-        "tags": ["aws","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       },{
         "title": "Huawei ICT Academy",
         "excerpt":"A Huawei ICT Academy é um programa de parceria sem fins lucrativos que autoriza universidades e faculdades a oferecer cursos de Certificação Huawei para estudantes. Este programa atua como uma ponte entre empresas e academia para construir um ecossistema de talentos para as indústrias de TIC. Desde sua afiliação no...","categories": [],
-        "tags": ["classes","huawei","networks","pt"],
+        "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/haina/",
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Foundations",
         "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
-        "tags": ["aws","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations/",
         "teaser": null
       },{
@@ -423,5 +423,11 @@ var store = [{
         "excerpt":"     ","categories": [],
         "tags": ["redhat"],
         "url": "https://josecastillolema.github.io/mycodeisopen/",
+        "teaser": null
+      },{
+        "title": "AWS Global Certification Challenge",
+        "excerpt":"A AWS está oferecendo de forma gratuita a certificação AWS Cloud Practitioner, que normalmente tem um valor de $200, como parte da iniciativa AWS re:Invent 2020 durante os meses de outubro e novembro de este ano. Segue o link para a solicitação do voucher, que demora até 3 dias úteis,...","categories": [],
+        "tags": ["aws","cert","pt"],
+        "url": "https://josecastillolema.github.io/aws-cert-challenge/",
         "teaser": null
       }]

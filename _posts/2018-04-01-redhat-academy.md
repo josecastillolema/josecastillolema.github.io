@@ -2,6 +2,7 @@
 title:  "Red Hat Academy"
 last_modified_at: 2020-06-06T16:00:58-04:00
 tags:
+  - cert
   - classes
   - fiap
   - openshift

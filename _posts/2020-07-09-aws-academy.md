@@ -3,6 +3,7 @@ title:  "AWS Academy"
 last_modified_at: 2020-07-09T16:00:58-04:00
 tags:
   - aws
+  - cert
   - classes
   - fiap
   - pt
