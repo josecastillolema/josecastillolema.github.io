@@ -367,7 +367,7 @@ var store = [{
       },{
         "title": "Open Networking Foundation",
         "excerpt":"Open Networking Foundation The Open Networking Foundation (ONF) is a non-profit operator led consortium driving transformation of network infrastructure and carrier business models. We are an open, collaborative, community of communities. The ONF serves as the umbrella for a number of projects building solutions by leveraging network disaggregation, white box...","categories": [],
-        "tags": ["en","networks","nfv","sdn"],
+        "tags": ["en","networks","nfv","onf","sdn"],
         "url": "https://josecastillolema.github.io/onf/",
         "teaser": null
       },{
@@ -423,6 +423,12 @@ var store = [{
         "excerpt":"     ","categories": [],
         "tags": ["redhat"],
         "url": "https://josecastillolema.github.io/mycodeisopen/",
+        "teaser": null
+      },{
+        "title": "Webinar: Working with ONF to transform mobile and broadband networks in LATAM",
+        "excerpt":"Don’t miss this virtual event sponsored by the ONF LATAM Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella...","categories": [],
+        "tags": ["en","events","networks","nfv","onf","sdn","webinar"],
+        "url": "https://josecastillolema.github.io/onf-webinar/",
         "teaser": null
       },{
         "title": "AWS Global Certification Challenge",
