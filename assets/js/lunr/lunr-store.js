@@ -436,4 +436,10 @@ var store = [{
         "tags": ["aws","cert","pt"],
         "url": "https://josecastillolema.github.io/aws-cert-challenge/",
         "teaser": null
+      },{
+        "title": "HCIA-Routing & Switching - 14th edition",
+        "excerpt":"  ","categories": [],
+        "tags": ["cert","classes","huawei","networks","pt"],
+        "url": "https://josecastillolema.github.io/hcia-14/",
+        "teaser": null
       }]
