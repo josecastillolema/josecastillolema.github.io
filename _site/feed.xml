@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-10-27T21:29:41-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">HCIA-Routing &amp;amp; Switching - 14th edition</title><link href="https://josecastillolema.github.io/hcia-14/" rel="alternate" type="text/html" title="HCIA-Routing &amp; Switching - 14th edition" /><published>2020-10-25T00:00:00-03:00</published><updated>2020-10-25T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-14</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-14/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-10-25-hcia-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">AWS Global Certification Challenge</title><link href="https://josecastillolema.github.io/aws-cert-challenge/" rel="alternate" type="text/html" title="AWS Global Certification Challenge" /><published>2020-10-12T00:00:00-03:00</published><updated>2020-10-12T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-cert-challenge</id><content type="html" xml:base="https://josecastillolema.github.io/aws-cert-challenge/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-12-aws-cert-challenge.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-10-31T11:07:51-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Caio Ferreira - canal de YouTube</title><link href="https://josecastillolema.github.io/caio-youtube/" rel="alternate" type="text/html" title="Caio Ferreira - canal de YouTube" /><published>2020-10-31T00:00:00-03:00</published><updated>2020-10-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/caio-youtube</id><content type="html" xml:base="https://josecastillolema.github.io/caio-youtube/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-31-caio-youtube.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Gostaria de recomendar o &lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;canal de YouTube&lt;/a&gt; do meu amigo &lt;a href=&quot;https://www.linkedin.com/in/caiocf/&quot;&gt;&lt;strong&gt;Caio Ferreria&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;No canal podem encontrar videos sobre:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;AWS&lt;/li&gt;
+  &lt;li&gt;Fluxos de pagamento&lt;/li&gt;
+  &lt;li&gt;Restcomm/Mobicents&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Parabéns pelo canal Caio!&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="networks" /><category term="pt" /><category term="youtube" /><summary type="html"></summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 14th edition</title><link href="https://josecastillolema.github.io/hcia-14/" rel="alternate" type="text/html" title="HCIA-Routing &amp; Switching - 14th edition" /><published>2020-10-25T00:00:00-03:00</published><updated>2020-10-25T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-14</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-14/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-10-25-hcia-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">AWS Global Certification Challenge</title><link href="https://josecastillolema.github.io/aws-cert-challenge/" rel="alternate" type="text/html" title="AWS Global Certification Challenge" /><published>2020-10-12T00:00:00-03:00</published><updated>2020-10-12T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-cert-challenge</id><content type="html" xml:base="https://josecastillolema.github.io/aws-cert-challenge/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-12-aws-cert-challenge.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A AWS está oferecendo de forma gratuita a &lt;strong&gt;certificação AWS Cloud Practitioner&lt;/strong&gt;, que normalmente tem um valor de $200, como parte da iniciativa AWS re:Invent 2020 durante os meses de outubro e novembro de este ano.&lt;/p&gt;
 
@@ -195,169 +206,4 @@
 
 &lt;p&gt;São 500 vouchers para realização da prova, que pode ser realizada remotamente pelos centros da &lt;a href=&quot;https://home.pearsonvue.com/Clients/Huawei.aspx&quot;&gt;Person VUE&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-07-haina-brazil/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Importing alarms from OpenStack Aodh into Sensu Core</title><link href="https://josecastillolema.github.io/aodh2sensu/" rel="alternate" type="text/html" title="Importing alarms from OpenStack Aodh into Sensu Core" /><published>2020-05-25T00:00:00-03:00</published><updated>2020-04-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aodh2sensu</id><content type="html" xml:base="https://josecastillolema.github.io/aodh2sensu/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=aodh2sensu&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.shields.io/github/license/josecastillolema/aodh2sensu&quot; alt=&quot;GitHub&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/github/languages/count/josecastillolema/aodh2sensu&quot; alt=&quot;GitHub language count&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/github/languages/top/josecastillolema/aodh2sensu&quot; alt=&quot;GitHub top language&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/aodh2sensu&quot; alt=&quot;GitHub Pipenv locked Python version&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/flask&quot; alt=&quot;GitHub Pipenv locked dependency version&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/requests&quot; alt=&quot;GitHub Pipenv locked dependency version&quot; /&gt;
-&lt;a href=&quot;https://requires.io/github/josecastillolema/aodh2sensu/requirements/?branch=master&quot;&gt;&lt;img src=&quot;https://requires.io/github/josecastillolema/aodh2sensu/requirements.svg?branch=master&quot; alt=&quot;Requirements Status&quot; /&gt;&lt;/a&gt;
-&lt;img src=&quot;https://img.shields.io/github/workflow/status/josecastillolema/aodh2sensu/CI&quot; alt=&quot;GitHub Workflow Status&quot; /&gt;
-&lt;img src=&quot;https://github.com/josecastillolema/aodh2sensu/workflows/Python%20application/badge.svg&quot; alt=&quot;Python application&quot; /&gt;
-&lt;img src=&quot;https://github.com/josecastillolema/aodh2sensu/workflows/CI/badge.svg&quot; alt=&quot;CI&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;aodh2sensu&quot;&gt;aodh2sensu&lt;/h1&gt;
-
-&lt;p&gt;Imports &lt;a href=&quot;https://docs.openstack.org/aodh/latest/&quot;&gt;OpenStack Aodh&lt;/a&gt; alarms into &lt;a href=&quot;https://docs.sensu.io/sensu-core/latest/&quot;&gt;Sensu Core&lt;/a&gt; Server.&lt;/p&gt;
-
-&lt;h2 id=&quot;install&quot;&gt;Install&lt;/h2&gt;
-
-&lt;h3 id=&quot;via-requirements-file&quot;&gt;Via requirements file&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip3 install -r ./requirements.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;via-pipenv-pipfile&quot;&gt;Via pipenv pipfile&lt;/h3&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pipenv install
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;use&quot;&gt;Use&lt;/h2&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Usage: aodh2sensu.py [options]
-
-Imports OpenStack Aodh alarms into Sensu Core Server.
-
-Options:
-  -h, --help            show this help message and exit
-  --sensu-url URL       if not specified, defaults to localhost:4567
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Run the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sensu_url&lt;/code&gt; must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ ./aodh2sensu.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;or alternatively via pipenv:&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ pipenv shell
- $ ./aodh2sensu.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy whenever the cpu utilization of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$INSTANCE_ID&lt;/code&gt; goes above 20%:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm create \
- --name cpu_hi \
- --type gnocchi_resources_threshold \
- --description 'CPU High Average' \
- --metric cpu_util4 \
- --threshold 20.0 \
- --comparison-operator gt \
- --aggregation-method mean \
- --granularity 300 \
- --evaluation-periods 1 \
- --resource-type instance \
- --resource-id $INSTANCE_ID \
- --alarm-action 'http://x.y.z.w:50000' \
- --ok-action 'http://x.y.z.w:50000' \
- --insufficient-data-action 'http://x.y.z.w:50000'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;x.y.z.w&lt;/code&gt; is the IP address of the server running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; proxy.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Confirm the alarm transitions from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insufficient_data&lt;/code&gt; state to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ok&lt;/code&gt; state:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
- | alarm_id                             | type                                       | name           | state             | severity | enabled |
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
- | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alarm&lt;/code&gt; state:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
- | alarm_id                             | type                                       | name           | state             | severity | enabled |
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
- | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | alarm             | low      | True    |
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Check the alarm from the Uchiwa dashboard:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot1.png&quot; alt=&quot;Screenshot 1 of the Uchiwa dashboard&quot; /&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot2.png&quot; alt=&quot;Screenshoto 2 of the Uchiwa dashboard&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Stop the load generation in the instance, wait for the alarm to transition back to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ok&lt;/code&gt; state:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ openstack alarm list
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
- | alarm_id                             | type                                       | name           | state             | severity | enabled |
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
- | c466d832-cfce-4488-9726-c631800a36b1 | gnocchi_resources_threshold                | cpu_hi4        | ok                | low      | True    |
- +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Check the new state of the sensu alert:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot3.png&quot; alt=&quot;Screenshot 3 of the Uchiwa dashboard&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Confirm it has disappeared from the list of active alerts:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot4.png&quot; alt=&quot;Screenshot 4 of the Uchiwa dashboard&quot; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;docker&quot;&gt;Docker&lt;/h2&gt;
-&lt;p&gt;To build the image:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ buildah build-using-dockerfile -t aodh2sensu .
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;To run the image:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 aodh2sensu
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Pointing to a specific Sensu Server URL:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman run --name aodh2sensu --add-host=&quot;localhost:10.88.0.1&quot; -d -p 50000:50000 -e SENSU_URL=x.y.z.w:p aodh2sensu
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Check logs:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ podman logs aodh2sensu
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;systemd&quot;&gt;Systemd&lt;/h2&gt;
-
-&lt;p&gt;To run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;aodh2sensu&lt;/code&gt; as a systemd service.&lt;/p&gt;
-
-&lt;h3 id=&quot;normal&quot;&gt;Normal&lt;/h3&gt;
-&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cat /usr/lib/systemd/system/aodh2sensu.service
-&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[Unit]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;aodh2sensu service&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;[Service]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/opt/aodh2sensu/aodh2sensu.py&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;[Install]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;multi-user.target&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;docker-1&quot;&gt;Docker&lt;/h3&gt;
-&lt;div class=&quot;language-ini highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# cat ~/.config/systemd/user/aodh2sensu.service 
-&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;[Unit]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Description&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;aodh2sensu service via podman&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;[Service]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Restart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;on-failure&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ExecStartPre&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/bin/rm -f /%t/%n-pid /%t/%n-cid&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ExecStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/bin/podman run --conmon-pidfile  /%t/%n-pid  --cidfile /%t/%n-cid --add-host=&quot;localhost:10.88.0.1&quot; -d --name aodh2sensu -p 50000:50000 aodh2sensu&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;ExecStop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/bin/sh -c &quot;/usr/bin/podman rm -f `cat /%t/%n-cid`&quot;&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;KillMode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;none&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;forking&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;PIDFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/%t/%n-pid&lt;/span&gt;
-
-&lt;span class=&quot;nn&quot;&gt;[Install]&lt;/span&gt;
-&lt;span class=&quot;py&quot;&gt;WantedBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;multi-user.target&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="openstack" /><category term="monitoring" /><category term="redhat" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-07-haina-brazil/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry></feed>

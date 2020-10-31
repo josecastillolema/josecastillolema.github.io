@@ -181,7 +181,7 @@ var store = [{
       },{
         "title": "Ultra Challenge Saint-Gobain",
         "excerpt":"    ","categories": [],
-        "tags": ["events","hackathon","iot","pt"],
+        "tags": ["events","hackathon","iot","pt","youtube"],
         "url": "https://josecastillolema.github.io/saint-gobain-ultrachallenge/",
         "teaser": null
       },{
@@ -247,7 +247,7 @@ var store = [{
       },{
         "title": "OpenStack Day SP 2018",
         "excerpt":"IPv6 no OpenStack            ","categories": [],
-        "tags": ["events","openstack","pt"],
+        "tags": ["events","openstack","pt","youtube"],
         "url": "https://josecastillolema.github.io/openstackday/",
         "teaser": null
       },{
@@ -441,5 +441,11 @@ var store = [{
         "excerpt":"  ","categories": [],
         "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hcia-14/",
+        "teaser": null
+      },{
+        "title": "Caio Ferreira - canal de YouTube",
+        "excerpt":"   Gostaria de recomendar o canal de YouTube do meu amigo Caio Ferreria.   No canal podem encontrar videos sobre:     AWS   Fluxos de pagamento   Restcomm/Mobicents   Parabéns pelo canal Caio!   ","categories": [],
+        "tags": ["aws","networks","pt","youtube"],
+        "url": "https://josecastillolema.github.io/caio-youtube/",
         "teaser": null
       }]
