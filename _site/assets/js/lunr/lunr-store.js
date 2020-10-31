@@ -443,6 +443,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/hcia-14/",
         "teaser": null
       },{
+        "title": "TOTVS TALKS #09 - A computação em nuvem no Brasil",
+        "excerpt":"O TOTVS TALKS Podcast é uma parceria entre a BandNews FM e a TOTVS. Aqui, você ouve conversas sobre tecnologia – ferramentas, soluções e caminhos; cada mês, um novo assunto. Os episódios novos saem sempre no dia 20 e você encontra o programa no site da BandNews FM e no...","categories": [],
+        "tags": ["events","podcast","pt"],
+        "url": "https://josecastillolema.github.io/totvs-talks/",
+        "teaser": null
+      },{
         "title": "Caio Ferreira - canal de YouTube",
         "excerpt":"   Gostaria de recomendar o canal de YouTube do meu amigo Caio Ferreria.   No canal podem encontrar videos sobre:     AWS   Fluxos de pagamento   Restcomm/Mobicents   Parabéns pelo canal Caio!   ","categories": [],
         "tags": ["aws","networks","pt","youtube"],
