@@ -144,8 +144,12 @@ author:
       icon: "fab fa-fw fa-battle-net"
       url: "https://www.opennetworking.org/ambassadors/jose-castillo-lema/"
     - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
+      icon: "fab fa-fw fa-youtube-square"
       url: "https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists"
+    - label: "RSS"
+      icon: "fas fa-fw fa-rss-square"
+      url: "https://josecastillolema.github.io/feed.xml"
+
 
 # Site Footer
 footer:
