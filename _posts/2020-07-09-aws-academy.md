@@ -35,7 +35,4 @@ O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [*
 
 Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
 
-![](/assets/images/posts/2020-07-09-aws-academy/02.jpeg)
-![](/assets/images/posts/2020-07-09-aws-academy/03.png)
-
-![](/assets/images/posts/2020-07-09-aws-academy/04.png)
+<div data-iframe-width="600" data-iframe-height="1080" data-share-badge-id="5f33a8fe-cb96-4458-a574-e4892068c66e" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
