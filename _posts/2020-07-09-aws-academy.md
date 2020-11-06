@@ -1,6 +1,6 @@
 ---
 title:  "AWS Academy"
-last_modified_at: 2020-07-09T16:00:58-04:00
+last_modified_at: 2020-11-06T16:00:58-04:00
 tags:
   - aws
   - cert
@@ -19,7 +19,7 @@ toc: true
 
 ## Cursos
 
-### AWS Academy Cloud Foundations
+### [AWS Academy Cloud Foundations](/shift-aws-foundations)
 
 O curso é introdutório e oferece uma visão geral detalhada dos seguintes tópicos:
 * conceitos da nuvem
@@ -27,11 +27,13 @@ O curso é introdutório e oferece uma visão geral detalhada dos seguintes tóp
 * segurança
 * arquitetura
 * definição de preço
-* suporte.
+* suporte
 
 O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [**certificação AWS Certified Cloud Practitioner**](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/).
 
-### AWS Academy Cloud Developing (*coming soon*)
+Na FIAP ofertamos [este curso](/shift-aws-foundations), na modalidade [SHIFT](https://www.fiap.com.br/shift).
+
+### AWS Academy Cloud Developing
 
 Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
 
