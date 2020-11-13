@@ -330,7 +330,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP MBA em Engenharia de Software - Online (AOJO)",
-        "excerpt":"      Cloud Computing &amp; SRE   ","categories": [],
+        "excerpt":"      Fase 4            Data Engineering (Big Data &amp; Analytics)       Cloud Computing &amp; SRE       Leadership and Corporate Accountability           ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/fiap-aojo/",
         "teaser": null
@@ -453,5 +453,11 @@ var store = [{
         "excerpt":"   Gostaria de recomendar o canal de YouTube do meu amigo Caio Ferreria.   No canal podem encontrar videos sobre:     AWS   Fluxos de pagamento   Restcomm/Mobicents   Parabéns pelo canal Caio!   ","categories": [],
         "tags": ["aws","networks","pt","youtube"],
         "url": "https://josecastillolema.github.io/caio-youtube/",
+        "teaser": null
+      },{
+        "title": "Cadastro na plataforma Huawei Talent",
+        "excerpt":"Para acompanhar os cursos HCIA Routing &amp; Switching, uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma Huawei Talent Online. A plataforma on-line da Huawei ICT Academy fornece um suporte digital integrado com compartilhamento de recursos, suporte ao ensino, interação com a comunidade e...","categories": [],
+        "tags": ["cert","classes","huawei","networks","pt"],
+        "url": "https://josecastillolema.github.io/haina-talent/",
         "teaser": null
       }]

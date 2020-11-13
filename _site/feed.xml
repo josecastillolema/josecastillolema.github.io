@@ -1,4 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-11-06T13:08:59-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Caio Ferreira - canal de YouTube</title><link href="https://josecastillolema.github.io/caio-youtube/" rel="alternate" type="text/html" title="Caio Ferreira - canal de YouTube" /><published>2020-10-31T00:00:00-03:00</published><updated>2020-10-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/caio-youtube</id><content type="html" xml:base="https://josecastillolema.github.io/caio-youtube/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-31-caio-youtube.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-11-13T10:27:26-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Cadastro na plataforma Huawei Talent</title><link href="https://josecastillolema.github.io/haina-talent/" rel="alternate" type="text/html" title="Cadastro na plataforma Huawei Talent" /><published>2020-11-13T00:00:00-03:00</published><updated>2020-11-13T17:00:58-03:00</updated><id>https://josecastillolema.github.io/haina-talent</id><content type="html" xml:base="https://josecastillolema.github.io/haina-talent/">&lt;p&gt;&lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/logo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Para acompanhar os cursos &lt;a href=&quot;/hcia-14&quot;&gt;HCIA Routing &amp;amp; Switching&lt;/a&gt;, uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;Huawei Talent Online&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A plataforma on-line da Huawei ICT Academy fornece um suporte digital integrado com compartilhamento de recursos, suporte ao ensino, interação com a comunidade e aprendizado móvel.&lt;/p&gt;
+
+&lt;p&gt;Os alunos podem adquirir materiais de aprendizagem, concluir tarefas, consultar resultados e interagir com professores e outros aprendizados a qualquer hora e em qualquer lugar.&lt;/p&gt;
+
+&lt;h1 id=&quot;criação-da-conta&quot;&gt;Criação da conta&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acessar o &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;site da plataforma&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Caso não tiver conta, na plataforma, &lt;strong&gt;registrar&lt;/strong&gt; um novo usuário:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Preencher as informações requisitadas. O dominio do endereço de mail não é relevante. Um SMS será enviado para confirmar a identidade:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar pelo mail de ativação (normalmente chega em minutos):
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;ativação-da-conta&quot;&gt;Ativação da conta&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Uma vez recebido o mail de ativação, abrir o enlace para ativar o e-mail previamente cadastrado:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fazer login no &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;site&lt;/a&gt;:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;associação-da-conta-com-a-instituição&quot;&gt;Associação da conta com a instituição&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Navegar até o &lt;strong&gt;&lt;em&gt;User Center&lt;/em&gt;&lt;/strong&gt; -&amp;gt; &lt;strong&gt;&lt;em&gt;My information&lt;/em&gt;&lt;/strong&gt;
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Solicitar a associação da conta com a instituição &lt;strong&gt;Escola Politécnica da USP - USP&lt;/strong&gt;:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/6.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/7.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Confirmar a solicitação e aguardar pelo mail de aprovação. A aprovação é manual, e não inmediata:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/8.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar o mail de aprovação:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/9.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;acesso-ao-curso&quot;&gt;Acesso ao curso&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logar novamente na plataforma e confirmar que o curso é mostrado na aba &lt;strong&gt;My course&lt;/strong&gt;:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nos detalhes do curso, confirmar o estado de registro:
+&lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Caio Ferreira - canal de YouTube</title><link href="https://josecastillolema.github.io/caio-youtube/" rel="alternate" type="text/html" title="Caio Ferreira - canal de YouTube" /><published>2020-10-31T00:00:00-03:00</published><updated>2020-10-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/caio-youtube</id><content type="html" xml:base="https://josecastillolema.github.io/caio-youtube/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-31-caio-youtube.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Gostaria de recomendar o &lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;canal de YouTube&lt;/a&gt; do meu amigo &lt;a href=&quot;https://www.linkedin.com/in/caiocf/&quot;&gt;&lt;strong&gt;Caio Ferreria&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
@@ -178,36 +252,4 @@
 
 &lt;p&gt;Para se registrar na plataforma de aprendizado on-line gratuitamente e obter os materiais mais recentes: &lt;a href=&quot;https://www.huaweiacad.com&quot;&gt;https://www.huaweiacad.com&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">AWS Academy</title><link href="https://josecastillolema.github.io/aws-academy/" rel="alternate" type="text/html" title="AWS Academy" /><published>2020-07-09T00:00:00-03:00</published><updated>2020-11-06T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-academy</id><content type="html" xml:base="https://josecastillolema.github.io/aws-academy/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/pt/training/awsacademy/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-07-09-aws-academy/01.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;benefícios-do-programa&quot;&gt;Benefícios do programa&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.&lt;/li&gt;
-  &lt;li&gt;Crie habilidades alinhadas à AWS Certification: os alunos adquirem habilidades de computação na Nuvem AWS por meio de experiência prática e podem se preparar para a AWS Certification com simulados gratuitos e &lt;strong&gt;descontos de 50% para os exames completos&lt;/strong&gt;.&lt;/li&gt;
-  &lt;li&gt;Aumente a força de trabalho da Nuvem AWS: Com o currículo da AWS Academy, os alunos obtêm experiência prática trabalhando em ambientes ao vivo, o que os ajuda a ganhar a experiência do mundo real necessária para conseguir emprego no setor.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;cursos&quot;&gt;Cursos&lt;/h2&gt;
-
-&lt;h3 id=&quot;aws-academy-cloud-foundations&quot;&gt;&lt;a href=&quot;/shift-aws-foundations&quot;&gt;AWS Academy Cloud Foundations&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;O curso é introdutório e oferece uma visão geral detalhada dos seguintes tópicos:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;conceitos da nuvem&lt;/li&gt;
-  &lt;li&gt;principais serviços da AWS&lt;/li&gt;
-  &lt;li&gt;segurança&lt;/li&gt;
-  &lt;li&gt;arquitetura&lt;/li&gt;
-  &lt;li&gt;definição de preço&lt;/li&gt;
-  &lt;li&gt;suporte&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;O curso possui &lt;strong&gt;20 horas&lt;/strong&gt; de conteúdo e prepara os alunos para conseguir a &lt;a href=&quot;https://aws.amazon.com/pt/certification/certified-cloud-practitioner/&quot;&gt;&lt;strong&gt;certificação AWS Certified Cloud Practitioner&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Na FIAP ofertamos &lt;a href=&quot;/shift-aws-foundations&quot;&gt;este curso&lt;/a&gt;, na modalidade &lt;a href=&quot;https://www.fiap.com.br/shift&quot;&gt;SHIFT&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;aws-academy-cloud-developing&quot;&gt;AWS Academy Cloud Developing&lt;/h3&gt;
-
-&lt;p&gt;Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de &lt;a href=&quot;https://aws.amazon.com/pt/certification/certified-developer-associate/&quot;&gt;&lt;strong&gt;certificação AWS Certified Developer - Associate&lt;/strong&gt;&lt;/a&gt;. Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente &lt;strong&gt;40 horas&lt;/strong&gt; de conteúdo fornecido por meio de palestras e laboratórios práticos.&lt;/p&gt;
-
-&lt;div data-iframe-width=&quot;600&quot; data-iframe-height=&quot;1080&quot; data-share-badge-id=&quot;5f33a8fe-cb96-4458-a574-e4892068c66e&quot; data-share-badge-host=&quot;https://www.youracclaim.com&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.youracclaim.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-07-17-haina/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry></feed>
