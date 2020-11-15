@@ -438,7 +438,7 @@ var store = [{
         "teaser": null
       },{
         "title": "HCIA-Routing & Switching - 14th edition",
-        "excerpt":"  ","categories": [],
+        "excerpt":"   Uma vez aprovado no processo seletivo seguir as seguintes instruções para efetuar o cadastro na plataforma EaD Huawei Talent Online.  ","categories": [],
         "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hcia-14/",
         "teaser": null
