@@ -330,7 +330,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP MBA em Engenharia de Software - Online (AOJO)",
-        "excerpt":"      Fase 4            Data Engineering (Big Data &amp; Analytics)       Cloud Computing &amp; SRE       Leadership and Corporate Accountability           ","categories": [],
+        "excerpt":"      Fase 4: Data Analytics            Data Engineering (Big Data &amp; Analytics)       Cloud Computing &amp; SRE       Leadership and Corporate Accountability           ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/fiap-aojo/",
         "teaser": null
@@ -459,5 +459,11 @@ var store = [{
         "excerpt":"Para acompanhar os cursos HCIA Routing &amp; Switching, uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma Huawei Talent Online. A plataforma on-line da Huawei ICT Academy fornece um suporte digital integrado com compartilhamento de recursos, suporte ao ensino, interação com a comunidade e...","categories": [],
         "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/haina-talent/",
+        "teaser": null
+      },{
+        "title": "FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition",
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "tags": ["aws","cert","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-aws-foundations-2/",
         "teaser": null
       }]
