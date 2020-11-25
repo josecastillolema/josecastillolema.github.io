@@ -456,7 +456,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP MBA em Arquitetura de Soluções - Online (ASOO)",
-        "excerpt":"      Fase 4: On the Clouds            Gestão Financeira de TI       Bimodal IT &amp; Sourcing       Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)           ","categories": [],
+        "excerpt":"      Fase 4: On the Clouds            Gestão Financeira de TI       Bimodal IT &amp; Sourcing       [Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)]((https://github.com/josecastillolema/fiap/blob/master/asoo/multicloud/README.md)           ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/fiap-asoo/",
         "teaser": null
