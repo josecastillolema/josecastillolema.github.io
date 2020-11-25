@@ -48,5 +48,19 @@ toc: yes
 - ![](/assets/images/posts/2019-04-30-aws-educate/badge7.png) Alexa
 - ![](/assets/images/posts/2019-04-30-aws-educate/badge8.png) Startups da AWS
 
+
+## Cadastro na plataforma
+
+1. Acessar [www.awseducate.com](https://www.awseducate.com/)
+
+2. Seleccionar **Join AWS Educate**
+
+3. Selecionar o rol de estudante
+
+4. Preencher o formulario, usando o mail da FIAP (RMxyzw@fiap.com.br) e **colocando uma data de término do curso/graduação no futuro**.
+
+5. Aguardar o mail de confirmação
+
+
 ![](/assets/images/posts/2019-04-30-aws-educate/cert2019.jpg)
 ![](/assets/images/posts/2019-04-30-aws-educate/cert2020.jpg)

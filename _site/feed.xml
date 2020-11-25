@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-11-24T20:40:43-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-2/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition" /><published>2020-11-17T00:00:00-03:00</published><updated>2020-11-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-11-17-shift-aws-foundations-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-11-24T21:20:11-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-2/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition" /><published>2020-11-17T00:00:00-03:00</published><updated>2020-11-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-11-17-shift-aws-foundations-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
 
@@ -104,7 +104,17 @@
     &lt;p&gt;Nos detalhes do curso, confirmar o estado de registro:
 &lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Caio Ferreira - canal de YouTube</title><link href="https://josecastillolema.github.io/caio-youtube/" rel="alternate" type="text/html" title="Caio Ferreira - canal de YouTube" /><published>2020-10-31T00:00:00-03:00</published><updated>2020-10-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/caio-youtube</id><content type="html" xml:base="https://josecastillolema.github.io/caio-youtube/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-31-caio-youtube.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/ol&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP MBA em Arquitetura de Soluções - Online (ASOO)</title><link href="https://josecastillolema.github.io/fiap-asoo/" rel="alternate" type="text/html" title="FIAP MBA em Arquitetura de Soluções - Online (ASOO)" /><published>2020-11-09T00:00:00-03:00</published><updated>2020-11-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-asoo</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-asoo/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/online/mba/mba-em-arquitetura-de-solucoes/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/img/asoo.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Fase 4: &lt;strong&gt;On the Clouds&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Gestão Financeira de TI&lt;/li&gt;
+      &lt;li&gt;Bimodal IT &amp;amp; Sourcing&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/asoo/multicloud/README.md&quot;&gt;Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html">Fase 4: On the Clouds Gestão Financeira de TI Bimodal IT &amp;amp; Sourcing Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)</summary></entry><entry><title type="html">Caio Ferreira - canal de YouTube</title><link href="https://josecastillolema.github.io/caio-youtube/" rel="alternate" type="text/html" title="Caio Ferreira - canal de YouTube" /><published>2020-10-31T00:00:00-03:00</published><updated>2020-10-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/caio-youtube</id><content type="html" xml:base="https://josecastillolema.github.io/caio-youtube/">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-31-caio-youtube.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Gostaria de recomendar o &lt;a href=&quot;https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos&quot;&gt;canal de YouTube&lt;/a&gt; do meu amigo &lt;a href=&quot;https://www.linkedin.com/in/caiocf/&quot;&gt;&lt;strong&gt;Caio Ferreria&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
 
@@ -197,36 +207,4 @@
       &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations</title><link href="https://josecastillolema.github.io/shift-aws-foundations/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations" /><published>2020-08-30T00:00:00-03:00</published><updated>2020-08-30T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-08-30-shift-aws-foundations.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.&lt;/p&gt;
-
-&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
-&lt;p&gt;Profissionais DevOps e Arquitetos de Plataformas/Soluções que querem ter certificação e experiência hands-on na AWS.&lt;/p&gt;
-
-&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
-&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
-
-&lt;h2 id=&quot;como-funciona&quot;&gt;Como funciona?&lt;/h2&gt;
-
-&lt;p&gt;Você vai ter acesso à plataforma AWS Academy, com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da Amazon e professor da FIAP.&lt;/p&gt;
-
-&lt;h2 id=&quot;digital--live&quot;&gt;Digital + Live&lt;/h2&gt;
-&lt;p&gt;Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios práticos e mais duas lives com o professor, visando à preparação para a prova, nos dias 15/10 e 19/11, das 19h às 20h. No fim, você receberá um certificado oficial de conclusão de curso da AWS Academy e poderá aproveitar 50% OFF para fazer a prova de Certificação AWS Cloud Foundations.&lt;/p&gt;
-
-&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem&lt;/li&gt;
-  &lt;li&gt;Módulo 2: Economia e faturamento da nuvem&lt;/li&gt;
-  &lt;li&gt;Módulo 3: Visão geral da infraestrutura global da AWS&lt;/li&gt;
-  &lt;li&gt;Módulo 4: Segurança na nuvem AWS&lt;/li&gt;
-  &lt;li&gt;Módulo 5: Redes e entrega de conteúdo&lt;/li&gt;
-  &lt;li&gt;Módulo 6: Computação&lt;/li&gt;
-  &lt;li&gt;Módulo 7: Armazenamento&lt;/li&gt;
-  &lt;li&gt;Módulo 8: Bancos de dados&lt;/li&gt;
-  &lt;li&gt;Módulo 9: Arquitetura de nuvem&lt;/li&gt;
-  &lt;li&gt;Módulo 10: Auto scaling e monitoramento&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>

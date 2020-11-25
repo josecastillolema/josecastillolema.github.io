@@ -31,7 +31,7 @@ O curso é introdutório e oferece uma visão geral detalhada dos seguintes tóp
 
 O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [**certificação AWS Certified Cloud Practitioner**](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/).
 
-Na FIAP ofertamos [este curso](/shift-aws-foundations), na modalidade [SHIFT](https://www.fiap.com.br/shift).
+Na FIAP ofertamos este curso ([1a edição](/shift-aws-foundations) e [2a edição](/shift-aws-foundations-2)), na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
 ### AWS Academy Cloud Developing
 
