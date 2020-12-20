@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-11-26T09:53:42-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-2/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition" /><published>2020-11-17T00:00:00-03:00</published><updated>2020-11-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-11-17-shift-aws-foundations-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2020-12-20T10:15:59-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Intel Network Builders University</title><link href="https://josecastillolema.github.io/intel-network-builders/" rel="alternate" type="text/html" title="Intel Network Builders University" /><published>2020-12-20T00:00:00-03:00</published><updated>2020-12-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/intel-network-builders</id><content type="html" xml:base="https://josecastillolema.github.io/intel-network-builders/">&lt;p&gt;&lt;a href=&quot;https://networkbuilders.intel.com/university&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-12-20-intel-network-builders/logo.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://networkbuilders.intel.com/university&quot;&gt;Intel® Network Builders University&lt;/a&gt; is a comprehensive network functions virtualization (NFV) and software defined networking (SDN) training program. The university includes a broad collection of online content training to help technical professionals in the network industry to improve their knowledge of key Intel® technologies, industry trends, and technical aspects of NFV deployments.&lt;/p&gt;
+
+&lt;p&gt;I would like to recomend its courses to everyone who is interested in learning more about OpenStack, 4G, DPDK and Open vSwitch. Intel proposes three learning paths:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-12-20-intel-network-builders/paths.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;foundational-learning-pathway&quot;&gt;Foundational Learning Pathway&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Software Defined Infrastructure (SDI) – A World Where the Application Defines the System&lt;/li&gt;
+  &lt;li&gt;Network Transformation&lt;/li&gt;
+  &lt;li&gt;NFV Technologies&lt;/li&gt;
+  &lt;li&gt;NFV/SDN Essentials Series – Network Virtualization&lt;/li&gt;
+  &lt;li&gt;NFV/SDN Essentials Series – Virtualization Concepts&lt;/li&gt;
+  &lt;li&gt;NFV/SDN Essentials Series – Network Functions Virtualization&lt;/li&gt;
+  &lt;li&gt;NFV/SDN Essentials Series – Cloud IaaS with OpenStack&lt;/li&gt;
+  &lt;li&gt;NFV/SDN Essentials Series – Software-Defined Networking&lt;/li&gt;
+  &lt;li&gt;NFV/SDN Essentials Series – Deployment Use Cases&lt;/li&gt;
+  &lt;li&gt;The Intel® Xeon® Scalable Processor: Foundations for Communications Service Providers&lt;/li&gt;
+  &lt;li&gt;Server Ingredients: Virtualization 101&lt;/li&gt;
+  &lt;li&gt;Server Ingredients: Virtualization 102&lt;/li&gt;
+  &lt;li&gt;Cloud 101&lt;/li&gt;
+  &lt;li&gt;Open Source and NFV&lt;/li&gt;
+  &lt;li&gt;DPDK 101&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;intermediate-learning-pathway&quot;&gt;Intermediate Learning Pathway&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;VNF re-architecting&lt;/li&gt;
+  &lt;li&gt;NFVI Hardware Configurations&lt;/li&gt;
+  &lt;li&gt;Hyperscan Overview&lt;/li&gt;
+  &lt;li&gt;Intel ® Xeon ® Scalable Platform Technical Deep Dive&lt;/li&gt;
+  &lt;li&gt;DPDK 201&lt;/li&gt;
+  &lt;li&gt;DPDK Intro&lt;/li&gt;
+  &lt;li&gt;DPDK Open vSwitch: Accelerating the Path to the Guest&lt;/li&gt;
+  &lt;li&gt;Intel’s NFV Technologies Management &amp;amp; Orchestration&lt;/li&gt;
+  &lt;li&gt;Intel® QuickAssist Technology Overview – NDA Content&lt;/li&gt;
+  &lt;li&gt;Extend Cloud and Data Center Capacity with Intel® QuickAssist Technology&lt;/li&gt;
+  &lt;li&gt;OpenStack* Enhanced Platform Awareness 101&lt;/li&gt;
+  &lt;li&gt;OpenStack* Enhanced Platform Awareness 102&lt;/li&gt;
+  &lt;li&gt;Virtual Enterprise Customer Premises Equipment (vE-CPE) Overview&lt;/li&gt;
+  &lt;li&gt;Gi-LAN Overview&lt;/li&gt;
+  &lt;li&gt;Virtual IP Multimedia Subsystem (vIMS) Overview&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;advanced-learning-pathway&quot;&gt;Advanced Learning Pathway&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;How to Maximize Performance of NFV on Intel® Architecture&lt;/li&gt;
+  &lt;li&gt;Setting Up DPDK on Different Operating Systems&lt;/li&gt;
+  &lt;li&gt;Open vSwitch with DPDK Architectural Deep Dive&lt;/li&gt;
+  &lt;li&gt;VSPERF Deep Dive: Virtual Switch performance in OPNFV&lt;/li&gt;
+  &lt;li&gt;Using DPDK and OvS to Accelerate Virtual Switching&lt;/li&gt;
+  &lt;li&gt;Container Orchestration with Kubernetes*&lt;/li&gt;
+  &lt;li&gt;Integration of OpenDaylight Service Function Chaining and Vector Packet Processing&lt;/li&gt;
+  &lt;li&gt;Introduction to SDN Controller and VIM Integration – OpenStack* and OpenDaylight* Integration&lt;/li&gt;
+  &lt;li&gt;NetVirt* Features and Their Use Cases&lt;/li&gt;
+  &lt;li&gt;Virtual Enterprise Customer Premises Equipment (vE-CPE) Reference Architecture&lt;/li&gt;
+  &lt;li&gt;Virtual Enterprise Customer Premises Equipment (vE-CPE) Use Cases&lt;/li&gt;
+  &lt;li&gt;Virtual Enterprise Customer Premises Equipment (vE-CPE) Operations&lt;/li&gt;
+  &lt;li&gt;Gi-LAN Deep Dive&lt;/li&gt;
+  &lt;li&gt;vGi-LAN Architecture&lt;/li&gt;
+  &lt;li&gt;Service Function Chaining&lt;/li&gt;
+  &lt;li&gt;IP Multimedia Subsystem (IMS) Architecture&lt;/li&gt;
+  &lt;li&gt;Virtual IP Multimedia Subsystem (vIMS) Architecture&lt;/li&gt;
+  &lt;li&gt;Virtual IP Multimedia Subsystem (vIMS) Additional Benefits&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="openstack" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-2/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition" /><published>2020-11-17T00:00:00-03:00</published><updated>2020-11-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-11-17-shift-aws-foundations-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
 
@@ -153,58 +219,4 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-10-01-onf-webinar/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="onf" /><category term="sdn" /><category term="webinar" /><summary type="html"></summary></entry><entry><title type="html">My code is open</title><link href="https://josecastillolema.github.io/mycodeisopen/" rel="alternate" type="text/html" title="My code is open" /><published>2020-09-30T00:00:00-03:00</published><updated>2020-09-30T17:00:58-03:00</updated><id>https://josecastillolema.github.io/mycodeisopen</id><content type="html" xml:base="https://josecastillolema.github.io/mycodeisopen/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-09-30-mycodeisopen/0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-09-30-mycodeisopen/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: Multicloud Architecture</title><link href="https://josecastillolema.github.io/shift-multicloud/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture" /><published>2020-09-05T00:00:00-03:00</published><updated>2020-09-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-09-05-shift-multicloud.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
-
-&lt;p&gt;Além de ser uma solução inovadora, a Cloud também é um modelo de negócio relativamente novo, aplicável a qualquer tipo de empresa. Nosso foco é formar o profissional para dominar modelos de serviços de Computação em Nuvem (SaaS, PaaS, IaaS), modelos de implantação em Nuvem (privado, público, híbrido e multicloud) e economia em Nuvem. Tudo isso por meio de atividades hands-on na Amazon Web Services (AWS).&lt;/p&gt;
-
-&lt;p&gt;A jornada é desafiadora. E a transformação, o único caminho.&lt;/p&gt;
-
-&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
-&lt;p&gt;Profissionais de TI (analistas, especialistas e gestores) que atuam nas áreas de Cloud, Virtualização e/ou DevOps.&lt;/p&gt;
-
-&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
-&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
-
-&lt;h2 id=&quot;benefício-amazon&quot;&gt;Benefício Amazon&lt;/h2&gt;
-
-&lt;p&gt;Cada aluno vai receber US$ 50 em créditos para usar em laboratórios no ambiente Amazon, durante e após o curso.&lt;/p&gt;
-
-&lt;h2 id=&quot;shift-remoto&quot;&gt;Shift remoto&lt;/h2&gt;
-&lt;p&gt;Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.&lt;/p&gt;
-
-&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem
-    &lt;ul&gt;
-      &lt;li&gt;Virtualização&lt;/li&gt;
-      &lt;li&gt;Modelos de serviço&lt;/li&gt;
-      &lt;li&gt;Segurança em nuvem / Modelo de responsabilidade compartilhada&lt;/li&gt;
-      &lt;li&gt;Modelos de implementação&lt;/li&gt;
-      &lt;li&gt;Multicloud&lt;/li&gt;
-      &lt;li&gt;Economia e faturamento da nuvem&lt;/li&gt;
-      &lt;li&gt;Arquitetura de nuvem / Desenvolvimento de aplicações para a nuvem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Módulo 2: Infraestrutura como serviço  (IaaS)
-    &lt;ul&gt;
-      &lt;li&gt;Instanciação de máquinas virtuais&lt;/li&gt;
-      &lt;li&gt;Autoscaling&lt;/li&gt;
-      &lt;li&gt;Infraestrutura de armazenamento: block/object/file storage&lt;/li&gt;
-      &lt;li&gt;Containers&lt;/li&gt;
-      &lt;li&gt;Orquestração de containers&lt;/li&gt;
-      &lt;li&gt;Arquitetura de microserviços&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Módulo 3: Plataforma como serviço (PaaS)
-    &lt;ul&gt;
-      &lt;li&gt;Automação e entrega contínua (CI/CD)&lt;/li&gt;
-      &lt;li&gt;Pipeline DevOps&lt;/li&gt;
-      &lt;li&gt;DBaaS SQL/NoSQL&lt;/li&gt;
-      &lt;li&gt;Function as a Service&lt;/li&gt;
-      &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-09-30-mycodeisopen/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="redhat" /><summary type="html"></summary></entry></feed>
