@@ -472,4 +472,10 @@ var store = [{
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations-2/",
         "teaser": null
+      },{
+        "title": "Intel Network Builders University",
+        "excerpt":"Intel® Network Builders University is a comprehensive network functions virtualization (NFV) and software defined networking (SDN) training program. The university includes a broad collection of online content training to help technical professionals in the network industry to improve their knowledge of key Intel® technologies, industry trends, and technical aspects of...","categories": [],
+        "tags": ["en","networks","nfv","openstack","sdn"],
+        "url": "https://josecastillolema.github.io/intel-network-builders/",
+        "teaser": null
       }]
