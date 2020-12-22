@@ -14,7 +14,9 @@ toc: true
 
 [Intel® Network Builders University](https://networkbuilders.intel.com/university) is a comprehensive network functions virtualization (NFV) and software defined networking (SDN) training program. The university includes a broad collection of online content training to help technical professionals in the network industry to improve their knowledge of key Intel® technologies, industry trends, and technical aspects of NFV deployments.
 
-I would like to recomend its courses to everyone who is interested in learning more about OpenStack, 4G, DPDK and Open vSwitch. Intel proposes three learning paths:
+I would like to recomend its courses to everyone who is interested in learning more about OpenStack, 4G, DPDK and Open vSwitch.
+
+Intel proposes three learning paths:
 
 ![](/assets/images/posts/2020-12-20-intel-network-builders/paths.png)
 

@@ -478,4 +478,10 @@ var store = [{
         "tags": ["en","networks","nfv","openstack","sdn"],
         "url": "https://josecastillolema.github.io/intel-network-builders/",
         "teaser": null
+      },{
+        "title": "Red Hat Co.Lab: Open Source Stories",
+        "excerpt":"Na Red Hat, acreditamos no potencial da tecnologia para educar, ensinar, evoluir e transformar o mundo. Foi com esse propósito que a Red Hat, em parceria com a prefeitura de Boston, junto à organização Sociedad Latina, iniciou o projeto Co.Lab com um objetivo: ensinar às crianças e jovens os fundamentos...","categories": [],
+        "tags": ["iot","pt","redhat"],
+        "url": "https://josecastillolema.github.io/colab/",
+        "teaser": null
       }]
