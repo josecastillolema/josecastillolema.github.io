@@ -1,6 +1,6 @@
 ---
 title:  "AWS Academy"
-last_modified_at: 2020-11-06T16:00:58-04:00
+last_modified_at: 2020-12-29T16:00:58-04:00
 tags:
   - aws
   - cert
@@ -19,7 +19,7 @@ toc: true
 
 ## Cursos
 
-### [AWS Academy Cloud Foundations](/shift-aws-foundations)
+### [AWS Academy Cloud Foundations](/shift-aws-foundations-2)
 
 O curso é introdutório e oferece uma visão geral detalhada dos seguintes tópicos:
 * conceitos da nuvem
@@ -36,5 +36,10 @@ Na FIAP ofertamos este curso ([1a edição](/shift-aws-foundations) e [2a ediç�
 ### AWS Academy Cloud Developing
 
 Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
+
+### AWS Academy Machine Learning Foundation
+
+Este curso introdutório apresenta aos alunos os conceitos e a terminologia de inteligência artificial (IA) e *machine learning* (ML). Ao final deste curso, os alunos poderão selecionar e aplicar serviços de ML para resolver problemas de negócios. Eles também poderão rotular, criar, treinar e implantar um modelo de ML personalizado. Este curso tem aproximadamente **20 horas** de conteúdo entregue por meio de palestras, laboratórios práticos e trabalho em projetos.
+
 
 <div data-iframe-width="600" data-iframe-height="1080" data-share-badge-id="5f33a8fe-cb96-4458-a574-e4892068c66e" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
