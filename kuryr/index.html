@@ -390,7 +390,8 @@ parameter_defaults:
     # and OctaviaClient cert to configure secure production environments.
     OctaviaGenerateCerts: true
 
-    # As an Octavia Load Balancer is used to access the OpenShift API, there is a need to increase their listeners      # default timeouts for the connections. The default timeout is 50 seconds. Increase the timeout to 20 minutes 
+    # As an Octavia Load Balancer is used to access the OpenShift API, there is a need to increase their listeners
+    # default timeouts for the connections. The default timeout is 50 seconds. Increase the timeout to 20 minutes 
     OctaviaTimeoutClientData: 1200000
     OctaviaTimeoutMemberData: 1200000
 
