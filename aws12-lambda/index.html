@@ -1,0 +1,848 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>AWS series XII: Lambda - GitOps</title>
+<meta name="description" content="    ">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="AWS series XII: Lambda">
+<meta property="og:url" content="https://josecastillolema.github.io/aws12-lambda/">
+
+
+  <meta property="og:description" content="    ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-07-22T00:00:00-03:00">
+
+
+
+  <meta property="article:modified_time" content="2020-07-20T17:00:58-03:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/aws12-lambda/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Jose Castillo Lema",
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt=""></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/fiap/">fiap</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jose Castillo Lema</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>Cloud consultant @ <strong>RedHat</strong>.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Brazil, SP</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="http://lattes.cnpq.br/7955703023492257" rel="noopener noreferrer" target="_blank"><i class="fas fa-fw fa-university" aria-hidden="true"></i><span class="label">Lattes</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="noopener noreferrer" target="_blank"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:josecastillolema@gmail.com">
+            <meta itemprop="email" content="josecastillolema@gmail.com">
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="AWS series XII: Lambda">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2020-07-22T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2020-07-20T17:00:58-03:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">AWS series XII: Lambda
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li>
+<a href="#lab-13---amazon-lambda">Lab 13 - Amazon Lambda</a>
+    <ul>
+      <li><a href="#pre-reqs">Pre-reqs</a></li>
+      <li><a href="#configura%C3%A7%C3%A3o-do-servi%C3%A7o">Configuração do serviço</a></li>
+      <li><a href="#configura%C3%A7%C3%A3o-do-segundo-endpoint-usando-a-mesma-api">Configuração do segundo endpoint usando a mesma API</a></li>
+    </ul>
+  </li>
+</ul>
+
+            </nav>
+          </aside>
+        
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-13---amazon-lambda">Lab 13 - Amazon Lambda</h1>
+
+<p>Em este lab sobre <a href="https://aws.amazon.com/pt/lambda/" target="_blank" rel="noopener noreferrer"><strong>Lambda</strong></a> aprenderemos alguns conceitos do modulo de Function as a Service (FaaS) / <em>serverless</em> da plataforma da AWS:</p>
+<ul>
+  <li>Criação de funções Lambda</li>
+  <li>Teste de funções</li>
+  <li>Criação de triggers (via API Gateway)</li>
+</ul>
+
+<h2 id="pre-reqs">Pre-reqs</h2>
+
+<ul>
+  <li>A seguinte tabela, com nome <code class="language-plaintext highlighter-rouge">Atmosfera</code> criada no DynamoDB:
+    <ul>
+      <li>sala: <em>primary key</em>, string</li>
+      <li>temperatura: number</li>
+      <li>humidade: number</li>
+    </ul>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda0.png" alt=""></p>
+  </li>
+</ul>
+
+<h2 id="configuração-do-serviço">Configuração do serviço</h2>
+
+<ol>
+  <li>
+    <p>Acessar o serviço <strong>Lambda</strong>:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda1.png" alt=""></p>
+  </li>
+  <li>
+    <p>Criar uma nova função:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda2.png" alt=""></p>
+  </li>
+  <li>
+    <p>Criar uma primera função <code class="language-plaintext highlighter-rouge">getTemperatura</code> com Python como <em>runtime</em>:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda3.png" alt=""></p>
+  </li>
+  <li>Configurar o seguinte código para a função:
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="kn">import</span> <span class="nn">json</span>
+ <span class="kn">import</span> <span class="nn">boto3</span>
+ <span class="k">def</span> <span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+    <span class="n">dynamodb</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="n">resource</span><span class="p">(</span><span class="s">'dynamodb'</span><span class="p">)</span>
+    <span class="n">tableTemperatures</span> <span class="o">=</span> <span class="n">dynamodb</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="s">'Atmosfera'</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">tableTemperatures</span><span class="p">.</span><span class="n">scan</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">{</span>
+       <span class="s">'statusCode'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+       <span class="s">'body'</span><span class="p">:</span> <span class="n">response</span><span class="p">[</span><span class="s">'Items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'temperatura'</span><span class="p">]</span>
+    <span class="p">}</span>
+</code></pre></div>    </div>
+    <p>O código lee o valor <code class="language-plaintext highlighter-rouge">temperatura</code> da tabela <code class="language-plaintext highlighter-rouge">Atmosfera</code> do DynamoDB.</p>
+  </li>
+  <li>
+    <p>Fazer <em>deploy</em> do código:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda4.png" alt=""></p>
+  </li>
+  <li>
+    <p>Vamos testar o código:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda5.png" alt=""></p>
+  </li>
+  <li>
+    <p>Criamos um evento de testes. A entrada do evento (o arquivo <code class="language-plaintext highlighter-rouge">json</code>) é indeferente em este caso específico, pois a API não está lendo entrada:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda6.png" alt=""></p>
+  </li>
+  <li>
+    <p>Executar o evento de testes recém criado <code class="language-plaintext highlighter-rouge">testeGetTemperatura</code>:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda7.png" alt=""></p>
+  </li>
+  <li>
+    <p>O teste deve falhar, pois a função não tem permissão para acessar o DynamoDB:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda8.png" alt=""></p>
+  </li>
+  <li>
+    <p>No IAM, procurar o <em>role</em> da função:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda9.png" alt=""></p>
+  </li>
+  <li>
+    <p>Adicionar uma nova <em>policy</em>: 
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda10.png" alt=""></p>
+  </li>
+  <li>
+    <p>A policy <code class="language-plaintext highlighter-rouge">AmazonDynamoDBReadOnlyAccess</code> vai dar acesso de leitura ao DynamoDB:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda11.png" alt=""></p>
+  </li>
+  <li>
+    <p>Estado final da <em>role</em>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda12.png" alt=""></p>
+  </li>
+  <li>
+    <p>Ejecutar de novo o teste, agora deberia funcionar:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda13.png" alt=""></p>
+  </li>
+  <li>
+    <p>Agora vamos configurar um <em>trigger</em> para a função:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda14.png" alt=""></p>
+  </li>
+  <li>
+    <p>O <em>trigger</em> será um <em>endpoint</em> em uma nova API do API Gateway chamada <code class="language-plaintext highlighter-rouge">api-lambda</code>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda15.png" alt=""></p>
+  </li>
+  <li>
+    <p>Conferir que o <em>trigger</em> foi criado e asociado à função:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda16.png" alt=""></p>
+  </li>
+  <li>
+    <p>Nos detalhes do <em>trigger</em> podemos ver a URL do <em>endpoint</em>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda17.png" alt=""></p>
+  </li>
+  <li>Testamos o <em>endpoint</em> (se aparecer a mensagem <code class="language-plaintext highlighter-rouge">{"message":"Missing Authentication Token"}</code> aguardar um minuto e repetir o teste):
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda18.png" alt="">
+</li>
+</ol>
+
+<h2 id="configuração-do-segundo-endpoint-usando-a-mesma-api">Configuração do segundo <em>endpoint</em> usando a mesma API</h2>
+
+<ol>
+  <li>
+    <p>Repetir os pasos <strong>2</strong> e <strong>3</strong> para criar uma segunda função <code class="language-plaintext highlighter-rouge">getHumidade</code> com Python como <em>runtime</em>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda19.png" alt=""></p>
+  </li>
+  <li>Configurar o seguinte código para a função e fazer <em>deploy</em> do mesmo:
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">boto3</span>
+<span class="k">def</span> <span class="nf">lambda_handler</span><span class="p">(</span><span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+   <span class="n">dynamodb</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="n">resource</span><span class="p">(</span><span class="s">'dynamodb'</span><span class="p">)</span>
+   <span class="n">tableTemperatures</span> <span class="o">=</span> <span class="n">dynamodb</span><span class="p">.</span><span class="n">Table</span><span class="p">(</span><span class="s">'Atmosfera'</span><span class="p">)</span>
+   <span class="n">response</span> <span class="o">=</span> <span class="n">tableTemperatures</span><span class="p">.</span><span class="n">scan</span><span class="p">()</span>
+   <span class="k">return</span> <span class="p">{</span>
+      <span class="s">'statusCode'</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+      <span class="s">'body'</span><span class="p">:</span> <span class="n">response</span><span class="p">[</span><span class="s">'Items'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'humidade'</span><span class="p">]</span>
+   <span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>O código lee o valor <code class="language-plaintext highlighter-rouge">humidade</code> da tabela <code class="language-plaintext highlighter-rouge">Atmosfera</code> do DynamoDB.</p>
+  </li>
+  <li>
+    <p>Configurar as devidas permissões para a role da nova função no IAM, como mostrado nos passos <strong>10</strong>, <strong>11</strong>, <strong>12</strong> e <strong>13</strong>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda20.png" alt=""></p>
+  </li>
+  <li>
+    <p>Testar a nova função como mostrado nos passos <strong>7</strong> e <strong>8</strong>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda21.png" alt=""></p>
+  </li>
+  <li>
+    <p>Criar um <em>trigger</em> para a função usando <em>a mesma API</em> que no passo <strong>16</strong>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda22.png" alt=""></p>
+  </li>
+  <li>
+    <p>Obter o endpoint nos detalhes do trigger:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda23.png" alt=""></p>
+  </li>
+  <li>Conferir o novo endpoint da API (se aparecer a mensagem <code class="language-plaintext highlighter-rouge">{"message":"Missing Authentication Token"}</code> aguardar um minuto e repetir o teste):
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/lambda24.png" alt="">
+</li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">aws</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#classes" class="page__taxonomy-item" rel="tag">classes</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#fiap" class="page__taxonomy-item" rel="tag">fiap</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#pt" class="page__taxonomy-item" rel="tag">pt</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#series" class="page__taxonomy-item" rel="tag">series</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-20">July 20, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/aws11-apigw/" class="pagination--pager" title="AWS series XI: API Gateway
+">Previous</a>
+    
+    
+      <a href="/shift-aws-foundations/" class="pagination--pager" title="FIAP SHIFT: AWS Academy Cloud Foundations
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/newyear/" rel="permalink">Happy new year!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/colab/" rel="permalink">Red Hat Co.Lab: Open Source Stories
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/intel-network-builders/" rel="permalink">Intel Network Builders University
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  4 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/shift-aws-foundations-2/" rel="permalink">FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="noopener noreferrer" target="_blank"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="noopener noreferrer" target="_blank"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2020 Jose Castillo Lema. Powered by <a href="https://jekyllrb.com" rel="noopener noreferrer" target="_blank">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="noopener noreferrer" target="_blank">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
