@@ -6,6 +6,7 @@ tags:
   - openstack
   - pt
   - redhat
+  - series
 toc: true
 ---
 
