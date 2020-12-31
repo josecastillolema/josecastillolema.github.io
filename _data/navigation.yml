@@ -8,6 +8,8 @@ main:
   #   url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/
+  - title: "series"
+    url: /series/  
   - title: "fiap"
     url: /fiap/
   - title: "mini-nfv"
