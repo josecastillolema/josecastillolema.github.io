@@ -484,4 +484,10 @@ var store = [{
         "tags": ["iot","pt","redhat"],
         "url": "https://josecastillolema.github.io/colab/",
         "teaser": null
+      },{
+        "title": "Happy new year!",
+        "excerpt":"        ","categories": [],
+        "tags": ["en","es","redhat","pt"],
+        "url": "https://josecastillolema.github.io/newyear/",
+        "teaser": null
       }]
