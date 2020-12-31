@@ -205,13 +205,13 @@ var store = [{
       },{
         "title": "[PT] Terraform – IaC – Terraformando no OpenStack",
         "excerpt":"Originally published at Churrops on DevOps on November 26, 2017. Olá pessoal, vamos começar uma uma série de artigos sobre OpenStack dando continuidade aos artigos sobre Terraform (parte 1 e parte 2) do Rodrigo Floriano, pois é uma ferramenta que vários assíduos do blog já conhecem e usam a diário!...","categories": [],
-        "tags": ["openstack","iac","terraform","pt","redhat"],
+        "tags": ["openstack","iac","terraform","pt","redhat","series"],
         "url": "https://josecastillolema.github.io/terraformando-openstack/",
         "teaser": null
       },{
         "title": "[PT] Heat - Introdução",
         "excerpt":"Originally published at Churrops on DevOps on December 20, 2017. Olá pessoal, vamos começar uma série de artigos sobre Heat, o “terraform” nativo do OpenStack, ou para quem vem do mundo da AWS, o CloudFormation do OpenStack (inclusive parcialmente compatível). Neste primeiro artigo introdutório vamos aprender a criar as nossas...","categories": [],
-        "tags": ["iac","openstack","pt","redhat"],
+        "tags": ["iac","openstack","pt","redhat","series"],
         "url": "https://josecastillolema.github.io/heat-introducao/",
         "teaser": null
       },{
@@ -372,7 +372,7 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS series I: Elastic Computing (EC2)",
-        "excerpt":"Lab 1 - AWS EC2 Criando a instancia Usaremos a imagem oficial Amazon Linux para aprender alguns conceitos importantes do Amazon Elastic Computing: flavors security groups cloud-init Acessar o serviço EC2: Lançar o assistente de criaçao de instancias: Escolher a imagem do Amazon Linux 2 AMI: Escolher o flavor t2.micro:...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 1 - AWS EC2 Criando a instancia Usaremos a imagem oficial Amazon Linux para aprender alguns conceitos importantes do Amazon Elastic Computing: flavors security groups cloud-init Acessar o serviço EC2: Lançar o assistente de criaçao de instancias: Escolher a imagem do Amazon...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws1-ec2/",
         "teaser": null
@@ -396,13 +396,13 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS series II: Elastic Block Service (EBS)",
-        "excerpt":"Lab 4 - AWS EBS Em este lab sobre Elastic Block Service aprenderemos alguns conceitos importantes do armazenamento em blocos: Criação de volumes Anexar volumes a instâncias Configurar volumes dentro das instâncias Formatação Criação do sistema de arquivos Montar o volume Pre-reqs Na maquina virtual do lab 01 - EC2,...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 4 - AWS EBS Em este lab sobre Elastic Block Service aprenderemos alguns conceitos importantes do armazenamento em blocos: Criação de volumes Anexar volumes a instâncias Configurar volumes dentro das instâncias Formatação Criação do sistema de arquivos Montar o volume Pre-reqs Na...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws2-ebs/",
         "teaser": null
       },{
         "title": "AWS series III: Simple Storage Service (S3)",
-        "excerpt":"Lab 5 - AWS S3 Em este lab sobre Simple Storage Service (S3) aprenderemos alguns conceitos importantes do armazenamento de objetos: Criação de buckets Criação de objetos Controle de permissões de acesso Hospedagem de sites estáticos Criação do bucket Accessar o serviço S3: Criar um novo bucket: Escolher um nome...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 5 - AWS S3 Em este lab sobre Simple Storage Service (S3) aprenderemos alguns conceitos importantes do armazenamento de objetos: Criação de buckets Criação de objetos Controle de permissões de acesso Hospedagem de sites estáticos Criação do bucket Accessar o serviço S3:...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws3-s3/",
         "teaser": null
@@ -414,7 +414,7 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS series IV: Auto Scaling",
-        "excerpt":"Lab 9 - AWS Autoscaling Usaremos a imagem oficial Amazon Linux para aprender alguns conceitos importantes de autoscaling: launch configuration templates autoscaling groups scaling policies Criando o launch template Acessar o serviço EC2: Criar um novo launch template: Escolher a imagem do Amazon Linux 2 AMI: Escolher o flavor t2.micro:...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 9 - AWS Autoscaling Usaremos a imagem oficial Amazon Linux para aprender alguns conceitos importantes de autoscaling: launch configuration templates autoscaling groups scaling policies Criando o launch template Acessar o serviço EC2: Criar um novo launch template: Escolher a imagem do Amazon...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws4-autoscaling/",
         "teaser": null
@@ -426,31 +426,31 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS series V: Elastic Container Service (ECS)",
-        "excerpt":"Lab 3 - AWS ECS Criando a instância Usaremos a imagem josecastillolema/api hospedada no Docker Hub para aprender alguns conceitos importantes do Elastic Container Service: Deploy de containers no ECS Mapeamento de portas Memory limits Acessar o serviço ECS: Lançar o assistente de criaçao de containers: Seleccionar o Fargate para...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 3 - AWS ECS Criando a instância Usaremos a imagem josecastillolema/api hospedada no Docker Hub para aprender alguns conceitos importantes do Elastic Container Service: Deploy de containers no ECS Mapeamento de portas Memory limits Acessar o serviço ECS: Lançar o assistente de...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws5-ecs/",
         "teaser": null
       },{
         "title": "AWS series VI: Elastic Beanstalk (EB)",
-        "excerpt":"Lab 6 - AWS Elastic Beanstalk Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Pre-reqs git python3 pip3 Se não tiver os pre-reqs na máquina local pular para o deploy em uma...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 6 - AWS Elastic Beanstalk Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Pre-reqs git python3 pip3 Se não tiver os pre-reqs na máquina...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws6-eb/",
         "teaser": null
       },{
         "title": "AWS series VII: Elastic Beanstalk (EB) com Spring Boot",
-        "excerpt":"Lab 10 - AWS Elastic Beanstalk com Spring Boot Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Deploy local Clonar o repositório: git clone https://github.com/josecastillolema/fiap Navegar ate o diretorio fiap/shift/multicloud/lab10-paas-eb. O diretorio...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 10 - AWS Elastic Beanstalk com Spring Boot Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Deploy local Clonar o repositório: git clone https://github.com/josecastillolema/fiap...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws7-eb-springboot/",
         "teaser": null
       },{
         "title": "AWS series VIII: CodePipeline",
-        "excerpt":"Lab 7 - AWS CP Em este lab sobre Code Pipeline aprenderemos alguns conceitos importantes da criação de pipelines: Criação do pipeline Automação de deploy no Beanstalk Pre-reqs A aplicação do lab de Beanstalk precisa estar no ar: Criação de um repositório no GitHub com os arquivos do lab de...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 7 - AWS CP Em este lab sobre Code Pipeline aprenderemos alguns conceitos importantes da criação de pipelines: Criação do pipeline Automação de deploy no Beanstalk Pre-reqs A aplicação do lab de Beanstalk precisa estar no ar: Criação de um repositório no...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws8-cp/",
         "teaser": null
       },{
         "title": "AWS series IX: DynamoDB",
-        "excerpt":"Lab 8 - AWS DynamoDB Em este lab sobre DynamoDB aprenderemos alguns conceitos importantes na criação de DBaaS NoSQL: Criação de tabelas Inserção/consulta de dados via console Inserção/consulta via código python Aproveitaremos para ver alguns conceitos importantes sobre Identity and Access Management (IAM): Autenticação usando arquivo de credenciais Autenticação usando...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 8 - AWS DynamoDB Em este lab sobre DynamoDB aprenderemos alguns conceitos importantes na criação de DBaaS NoSQL: Criação de tabelas Inserção/consulta de dados via console Inserção/consulta via código python Aproveitaremos para ver alguns conceitos importantes sobre Identity and Access Management (IAM):...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws9-dynamodb/",
         "teaser": null
@@ -462,19 +462,19 @@ var store = [{
         "teaser": null
       },{
         "title": "AWS series X: Elastic MapReduce (EMR)",
-        "excerpt":"Lab 12 - Elastic MapReduce Em este lab sobre EMR aprenderemos alguns conceitos da plataforma de Big Data as a Service da AWS: Criação de cluster Acesso via WEB e SSH/CLI Monitoramento Configuração do serviço Acessar o serviço EMR: Iniciar a criação do cluster: Escolher um nome para o cluster,...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 12 - Elastic MapReduce Em este lab sobre EMR aprenderemos alguns conceitos da plataforma de Big Data as a Service da AWS: Criação de cluster Acesso via WEB e SSH/CLI Monitoramento Configuração do serviço Acessar o serviço EMR: Iniciar a criação do...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws10-emr/",
         "teaser": null
       },{
         "title": "AWS series XI: API Gateway",
-        "excerpt":"Lab 11 - Amazon API Gateway Em este lab sobre API Gateway aprenderemos alguns conceitos do API gateway da plataforma da AWS: Configuração de rotas Throttling (limitação do número de requisições por segundo) Monitoramento Pre-reqs Dois URLs accessíveis. Por exemplo, dois apps no Beanstalk: http://springboot-env.eba-7znjbf9p.us-eats-1.elasticbeanstalk.com http://springboot-env-1.eba-7zbhbf9p.us-east-1.elasticbeanstalk.com Configuração do serviço Acessar...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 11 - Amazon API Gateway Em este lab sobre API Gateway aprenderemos alguns conceitos do API gateway da plataforma da AWS: Configuração de rotas Throttling (limitação do número de requisições por segundo) Monitoramento Pre-reqs Dois URLs accessíveis. Por exemplo, dois apps no...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws11-apigw/",
         "teaser": null
       },{
         "title": "AWS series XII: Lambda",
-        "excerpt":"Lab 13 - Amazon Lambda Em este lab sobre Lambda aprenderemos alguns conceitos do modulo de Function as a Service (FaaS) / serverless da plataforma da AWS: Criação de funções Lambda Teste de funções Criação de triggers (via API Gateway) Pre-reqs A seguinte tabela, com nome Atmosfera criada no DynamoDB:...","categories": [],
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 13 - Amazon Lambda Em este lab sobre Lambda aprenderemos alguns conceitos do modulo de Function as a Service (FaaS) / serverless da plataforma da AWS: Criação de funções Lambda Teste de funções Criação de triggers (via API Gateway) Pre-reqs A seguinte...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws12-lambda/",
         "teaser": null
