@@ -57,3 +57,7 @@ toc: true
 - OpenStack VI: Swift - Object Storage Service
 - OpenStack VII: Heat - Orquestration Service
 - OpenStack VIII: Terraform
+
+## Churrops
+- [Terraform – IaC – Terraformando no OpenStack](/terraformando-openstack)
+- [Heat - Introdução](/heat-introducao)
