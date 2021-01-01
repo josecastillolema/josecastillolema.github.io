@@ -323,6 +323,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      sticky: true
       read_time: true
       comments: # true
       share: false
@@ -334,3 +335,4 @@ defaults:
     values:
       layout: single
       author_profile: true
+      sticky: true

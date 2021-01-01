@@ -233,6 +233,24 @@ var store = [{
         "url": "https://josecastillolema.github.io/hntd-12/",
         "teaser": null
       },{
+        "title": "OpenStack series I: Keystone - Identity Manager",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 1 - OpenStack Keystone Identity Manager Usaremos o serviço Keystone para aprender alguns conceitos importantes de autenticação/autorização de usuários: projetos róis quotas endpoints Pre-reqs Listar os serviços Linux que compõem o Keystone: $ systemctl | grep devstack@keystone devstack@keystone.service loaded active running Devstack devstack@keystone.service Conferir...","categories": [],
+        "tags": ["classes","fiap","openstack","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/openstack1-keystone/",
+        "teaser": null
+      },{
+        "title": "OpenStack series II: Glance - Image Service",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 2 - OpenStack Glance Image Service Usaremos o serviço Glance para aprender alguns conceitos importantes de imagens/snapshots de máquinas virtuais: formatos: qcow2, raw, vmdk, ami, … conversão entre formatos: ferramenta qemu-img snapshots Pre-reqs Carregar as credenciais de administrador e conferir que foram aplicadas no...","categories": [],
+        "tags": ["classes","fiap","openstack","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/openstack2-glance/",
+        "teaser": null
+      },{
+        "title": "OpenStack series III: Nova - Compute Service",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 3 - OpenStack Nova Compute Service Usaremos o serviço Nova para aprender alguns conceitos importantes sobre máquinas virtuais: flavors security groups cloud-init Pre-reqs Conferir se as extensões de virtualizações estão presentes no processador: $ grep -E ' svm | vmx ' /proc/cpuinfo Listar os...","categories": [],
+        "tags": ["classes","fiap","openstack","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/openstack3-nova/",
+        "teaser": null
+      },{
         "title": "HCNA-HNTD Training - 13th edition",
         "excerpt":"  ","categories": [],
         "tags": ["cert","classes","huawei","networks","pt"],

@@ -19,23 +19,23 @@ toc: true
 # AWS
 
 ## IaaS
-- [AWS I: Elastic Computing (EC2)](/aws1-ec2)
-- [AWS II: Elastic Block Service (EBS)](/aws2-ebs)
-- [AWS III: Simple Storage Service (S3)](/aws3-s3)
-- [AWS IV: Auto Scaling](/aws4-autoscaling)
-- [AWS V: Elastic Container Service (ECS)](/aws5-ecs)
+- AWS I: [Elastic Computing (EC2)](/aws1-ec2)
+- AWS II: [Elastic Block Service (EBS)](/aws2-ebs)
+- AWS III: [Simple Storage Service (S3)](/aws3-s3)
+- AWS IV: [Auto Scaling](/aws4-autoscaling)
+- AWS V: [Elastic Container Service (ECS)](/aws5-ecs)
 
 
 ## PaaS
-- [AWS VI: Elastic Beanstalk (EB)](/aws6-eb)
-- [AWS VII: Elastic Beanstalk (EB) com Spring Boot](/aws7-eb-springboot)
-- [AWS VIII: CodePipeline](/aws8-cp)
-- [AWS IX: DynamoDB](/aws9-dynamodb)
-- [AWS X: Elastic MapReduce (EMR)](/aws10-emr)
-- [AWS XI: API Gateway](/aws11-apigw)
+- AWS VI: [Elastic Beanstalk (EB)](/aws6-eb)
+- AWS VII: [Elastic Beanstalk (EB) com Spring Boot](/aws7-eb-springboot)
+- AWS VIII: [CodePipeline](/aws8-cp)
+- AWS IX: [DynamoDB](/aws9-dynamodb)
+- AWS X: [Elastic MapReduce (EMR)](/aws10-emr)
+- AWS XI: [API Gateway](/aws11-apigw)
 
 ## FaaS
-- [AWS XII: Lambda](/aws12-lambda)
+- AWS [XII: Lambda](/aws12-lambda)
 
 # Containers
 - Containers I: Docker
@@ -49,9 +49,9 @@ toc: true
 - Containers VII: Kubernetes - Uso
 
 # OpenStack
-- OpenStack I: Keystone - Identity Manager
-- OpenStack II: Glance - Image Service
-- OpenStack III: Nova - Instance Service
+- OpenStack I: [Keystone - Identity Manager](/openstack1-keystone)
+- OpenStack II: [Glance - Image Service](/openstack2-glance)
+- OpenStack III: [Nova - Instance Service](/openstack3-nova)
 - OpenStack IV: Neutron - Network Service
 - OpenStack V: Cinder - Block Storage Service
 - OpenStack VI: Swift - Object Storage Service
