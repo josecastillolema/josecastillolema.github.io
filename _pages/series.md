@@ -35,7 +35,7 @@ toc: true
 - AWS XI: [API Gateway](/aws11-apigw)
 
 ## FaaS
-- AWS [XII: Lambda](/aws12-lambda)
+- AWS XII: [Lambda](/aws12-lambda)
 
 # Containers
 - Containers I: Docker

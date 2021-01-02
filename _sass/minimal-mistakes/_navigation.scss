@@ -184,6 +184,8 @@
     margin: 0 1rem;
     color: $masthead-link-color;
     text-decoration: none;
+    -webkit-transition: none;
+    transition: none;    
 
     &:hover {
       color: $masthead-link-color-hover;
@@ -199,6 +201,10 @@
     }
   }
 
+  img{
+    -webkit-transition: none;
+    transition: none;
+  }
   &__toggle {
     -ms-flex-item-align: center;
     align-self: center;
