@@ -18,7 +18,7 @@ toc: true
 
 # AWS
 
-## IaaS
+## Infrastructure as a Service (IaaS)
 - AWS I: [Elastic Computing (EC2)](/aws1-ec2)
 - AWS II: [Elastic Block Service (EBS)](/aws2-ebs)
 - AWS III: [Simple Storage Service (S3)](/aws3-s3)
@@ -26,7 +26,7 @@ toc: true
 - AWS V: [Elastic Container Service (ECS)](/aws5-ecs)
 
 
-## PaaS
+## Platform as a Service (PaaS)
 - AWS VI: [Elastic Beanstalk (EB)](/aws6-eb)
 - AWS VII: [Elastic Beanstalk (EB) com Spring Boot](/aws7-eb-springboot)
 - AWS VIII: [CodePipeline](/aws8-cp)
@@ -34,17 +34,17 @@ toc: true
 - AWS X: [Elastic MapReduce (EMR)](/aws10-emr)
 - AWS XI: [API Gateway](/aws11-apigw)
 
-## FaaS
+## Function as a Service (FaaS)
 - AWS XII: [Lambda](/aws12-lambda)
 
 # Containers
-- Containers I: Docker
-- Containers II: Docker - continuação
-- Containers III: Docker Compose
+- Containers I: [Docker](/containers1-docker)
+- Containers II: [Docker - continuação](/containers2-docker2)
+- Containers III: [Docker Compose](/containers3-docker-compose)
 
 ## Orquestração
-- Containers IV: Docker Swarm
-- Containers V: Kubernetes - Instalação
+- Containers IV: [Docker Swarm](/containers4-docker-swarm)
+- Containers V: [Kubernetes - Instalação](/containers5-k8s-install)
 - Containers VI: Kompose
 - Containers VII: Kubernetes - Uso
 
@@ -52,12 +52,12 @@ toc: true
 - OpenStack I: [Keystone - Identity Manager](/openstack1-keystone)
 - OpenStack II: [Glance - Image Service](/openstack2-glance)
 - OpenStack III: [Nova - Instance Service](/openstack3-nova)
-- OpenStack IV: Neutron - Network Service
-- OpenStack V: Cinder - Block Storage Service
-- OpenStack VI: Swift - Object Storage Service
-- OpenStack VII: Heat - Orquestration Service
-- OpenStack VIII: Terraform
+- OpenStack IV: [Neutron - Network Service](/openstack4-neutron)
+- OpenStack V: [Cinder - Block Storage Service](/openstack5-cinder)
+- OpenStack VI: [Swift - Object Storage Service](/openstack6-swift)
+- OpenStack VII: [Heat - Orquestration Service](/openstack7-heat)
+- OpenStack VIII: [Terraform](/openstack8-terraform)
 
-## Churrops
+## Infrastructure as code (IaC)
 - [Terraform – IaC – Terraformando no OpenStack](/terraformando-openstack)
 - [Heat - Introdução](/heat-introducao)

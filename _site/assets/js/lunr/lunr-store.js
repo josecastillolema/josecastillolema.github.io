@@ -263,6 +263,36 @@ var store = [{
         "url": "https://josecastillolema.github.io/redhat-academy/",
         "teaser": null
       },{
+        "title": "OpenStack series IV: Neutron - Network Service",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 4 - OpenStack Neutron Network Service Usaremos o serviço Neutron para aprender alguns conceitos importantes sobre virtualização de redes: criação de redes/subredes virtuais virtual routers security groups floating IPs Pre-reqs Conferir que o Neutron foi instalado no OpenStack: $ openstack service list +----------------------------------+-------------+----------------+ |...","categories": [],
+        "tags": ["classes","fiap","networks","openstack","pt","redhat","sdn","series"],
+        "url": "https://josecastillolema.github.io/openstack4-neutron/",
+        "teaser": null
+      },{
+        "title": "OpenStack series V: Cinder - Block Storage Service",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 5 - OpenStack Cinder Block Storage Service Usaremos o serviço Cinder para aprender alguns conceitos importantes sobre armazenamento de bloco: criação de volumes snapshots partição, formatação e montagem de volumes Pre-reqs Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente: $...","categories": [],
+        "tags": ["classes","fiap","openstack","pt","redhat","sds","series"],
+        "url": "https://josecastillolema.github.io/openstack5-cinder/",
+        "teaser": null
+      },{
+        "title": "OpenStack series VI: Swift - Object Storage Service",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 6 - OpenStack Swift Object Storage Service Usaremos o serviço Swift para aprender alguns conceitos importantes sobre armazenamento de objeto: criação de containers objetos acesso via URL Pre-reqs Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente: $ source devstack/openrc admin...","categories": [],
+        "tags": ["classes","fiap","openstack","pt","redhat","sds","series"],
+        "url": "https://josecastillolema.github.io/openstack6-swift/",
+        "teaser": null
+      },{
+        "title": "OpenStack series VII: Heat - Orchestration Service",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 7 - OpenStack Heat Orchestration Service Usaremos o serviço Heat para aprender alguns conceitos importantes sobre orquestração e Infrastructure as Code (IaC): criação de pilhas (stacks) listagem de recursos Pre-reqs Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente: $ source...","categories": [],
+        "tags": ["classes","fiap","iac","openstack","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/openstack7-heat/",
+        "teaser": null
+      },{
+        "title": "OpenStack series VIII: Terraform",
+        "excerpt":"Serie de artigos sobre OpenStack. Lab 8 - Terraform OpenStack Provider O Terraform é uma ferramenta para construir, alterar e controlar a infraestrutura de forma segura e eficiente. O Terraform pode gerenciar provedores de serviços existentes e populares como OpenStack, Azure, AWS, Digital Ocean, entre outras, bem como soluções internas...","categories": [],
+        "tags": ["classes","fiap","iac","openstack","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/openstack8-terraform/",
+        "teaser": null
+      },{
         "title": "OpenStack Day SP 2018",
         "excerpt":"IPv6 no OpenStack            ","categories": [],
         "tags": ["events","openstack","pt","youtube"],
@@ -291,6 +321,42 @@ var store = [{
         "excerpt":"           Arquitetura de Storage / DataCenter / Virtualização e Microcontainers            Arquitetura em MultiCloud (AWS / GCP / Azure / IBM Cloud)       ","categories": [],
         "tags": ["aws","azure","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/fiap-aso/",
+        "teaser": null
+      },{
+        "title": "Containers series I: Docker",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 1 - Docker Usaremos a imagem oficial Ubuntu Linux 18.04 para aprender alguns conceitos importantes do Docker: instalação customização de imagens via Dockerfile upload de imagens no DockerHub Vamos trabalhar com dois terminais abertos (T1 e T2)....","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers1-docker/",
+        "teaser": null
+      },{
+        "title": "Containers series II: Docker - continuação",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 2 - Docker - continuação Executando mysql server Usaremos a imagem oficial mysql para aprender alguns conceitos importantes do Docker: variáveis de entorno: docker run -e mapeamento de portas: docker run -p persistência de dados: docker run...","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers2-docker2/",
+        "teaser": null
+      },{
+        "title": "Containers series III: Docker Compose",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 3 - Docker Compose Executando servicos Docker Compose permite definir serviços (que a sua vez são formados por containers) e a comunicação entre os mesmos. Esta comunicação é implementada via DNS nos containers. Além disso, no arquivo...","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers3-docker-compose/",
+        "teaser": null
+      },{
+        "title": "Containers series IV: Docker Swarm",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 4 - Docker Swarm Orquestrando containers Docker Swarm permite orquestrar containers em um cluster formado por vários servidores. De esta forma conseguimos garantir as seguintes propriedades nos containers gerenciados pelo orquestrador: tolerância a falhas: se um dos...","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers4-docker-swarm/",
+        "teaser": null
+      },{
+        "title": "Containers series V: Kubernetes - Instalação",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 5 - Kubernetes - Instalação Orquestrando containers Kubernetes (k8s), da mesma forma que o Docker Swarm, permite orquestrar containers em um cluster formado por vários servidores. De esta forma conseguimos garantir as seguintes propriedades nos containers gerenciados...","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers5-k8s-install/",
+        "teaser": null
+      },{
+        "title": "Containers series VI: Kompose",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 6 - Kompose Kompose permite importar templates do Docker Swarm no Kubernetes. Instalação Instalação do Kompose a. Obtenção do executável: $ curl -L https://github.com/kubernetes/kompose/releases/download/v1.17.0/kompose-linux-amd64 -o kompose % Total % Received % Xferd Average Speed Time Time Time...","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers6-kompose/",
         "teaser": null
       },{
         "title": "Locust CCN client",
