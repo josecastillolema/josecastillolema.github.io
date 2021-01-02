@@ -326,7 +326,7 @@ defaults:
       sticky: true
       read_time: true
       comments: # true
-      share: false
+      share: true
       related: true
   # _pages
   - scope:
@@ -336,3 +336,5 @@ defaults:
       layout: single
       author_profile: true
       sticky: true
+      share: true
+
