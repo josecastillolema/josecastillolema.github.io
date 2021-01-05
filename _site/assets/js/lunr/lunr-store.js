@@ -646,4 +646,10 @@ var store = [{
         "tags": ["en","es","redhat","pt"],
         "url": "https://josecastillolema.github.io/newyear/",
         "teaser": null
+      },{
+        "title": "Certified Calico Operator",
+        "excerpt":"I would like to strongly recomend the Certified Calico Operator: Level 1 course for everyone interested in Kubernetes networking. This free and self-paced course will arm you with the knowledge you need to understand how Kubernetes networking works, how to configure and manage a Calico network, and how to secure...","categories": [],
+        "tags": ["cert","en","networks","nfv","openshift","sdn"],
+        "url": "https://josecastillolema.github.io/calico/",
+        "teaser": null
       }]

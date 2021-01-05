@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-01-02T20:06:08-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear/" rel="alternate" type="text/html" title="Happy new year!" /><published>2020-12-31T00:00:00-03:00</published><updated>2020-12-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/newyear</id><content type="html" xml:base="https://josecastillolema.github.io/newyear/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-12-31-newyear/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-01-05T19:30:24-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Certified Calico Operator</title><link href="https://josecastillolema.github.io/calico/" rel="alternate" type="text/html" title="Certified Calico Operator" /><published>2021-01-05T00:00:00-03:00</published><updated>2020-12-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/calico</id><content type="html" xml:base="https://josecastillolema.github.io/calico/">&lt;p&gt;&lt;a href=&quot;https://www.projectcalico.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://academy.tigera.io/course/certified-calico-operator-level-1/&quot;&gt;Certified Calico Operator: Level 1&lt;/a&gt; course for everyone interested in Kubernetes networking.&lt;/p&gt;
+
+&lt;p&gt;This free and self-paced course will arm you with the knowledge you need to understand how Kubernetes networking works, how to configure and manage a Calico network, and how to secure your cluster following today’s best practices, with the confidence you need to run mission critical workloads in production.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-the-course-covers&quot;&gt;What the Course Covers&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction to Kubernetes Networking&lt;/li&gt;
+  &lt;li&gt;Installing Calico&lt;/li&gt;
+  &lt;li&gt;Everything you need to know about Network Policy, including:
+    &lt;ul&gt;
+      &lt;li&gt;Introduction to Network Policy&lt;/li&gt;
+      &lt;li&gt;Best Practices for Network Policy&lt;/li&gt;
+      &lt;li&gt;Managing Trust Across Teams&lt;/li&gt;
+      &lt;li&gt;Network Policy for Hosts and NodePorts&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Everything you need to know about network connectivity, including:
+    &lt;ul&gt;
+      &lt;li&gt;Pod Connectivity Fundamentals&lt;/li&gt;
+      &lt;li&gt;Calico’s Next Generation eBPF Dataplane&lt;/li&gt;
+      &lt;li&gt;Encrypting Data in Transit&lt;/li&gt;
+      &lt;li&gt;Fun with IP Address Management&lt;/li&gt;
+      &lt;li&gt;Peering with BGP&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Everything you need to know about Kubernetes Services, including:
+    &lt;ul&gt;
+      &lt;li&gt;Introduction to Kubernetes Services&lt;/li&gt;
+      &lt;li&gt;Understanding Kube-Proxy Service Handling&lt;/li&gt;
+      &lt;li&gt;Understanding Calico Native Service Handling&lt;/li&gt;
+      &lt;li&gt;Advertising Services&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
+
+&lt;p&gt;At the end of the course, you can earn a certificate by passing a final exam.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://courses.academy.tigera.io/certificates/90b9e57cdec7460b8243401246da2e67&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="networks" /><category term="nfv" /><category term="openshift" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear/" rel="alternate" type="text/html" title="Happy new year!" /><published>2020-12-31T00:00:00-03:00</published><updated>2020-12-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/newyear</id><content type="html" xml:base="https://josecastillolema.github.io/newyear/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-12-31-newyear/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2020-12-31-newyear/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -225,8 +266,4 @@
 
 &lt;p&gt;Para entender como as soluções atuais têm englobado a tecnologia da nuvem e como a pandemia impactou este mercado, estão na mesa do TOTVS TALKS o diretor de Cloud da TOTVS, Vinicius Mendes, e o doutor em engenharia elétrica, nas áreas de telecomunicações, redes e internet das coisas, José Castillo Lema, consultor de Cloud para América Latina na Red Hat e professor no MBA da FIAP.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="podcast" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 14th edition</title><link href="https://josecastillolema.github.io/hcia-14/" rel="alternate" type="text/html" title="HCIA-Routing &amp; Switching - 14th edition" /><published>2020-10-25T00:00:00-03:00</published><updated>2020-11-15T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-14</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-14/">&lt;p&gt;&lt;a href=&quot;https://www.sympla.com.br/treinamento-de-redes--14-edicao__1020859&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-25-hcia-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Uma vez aprovado no processo seletivo seguir &lt;a href=&quot;/haina-talent&quot;&gt;as seguintes instruções&lt;/a&gt; para efetuar o cadastro na plataforma EaD &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;Huawei Talent Online&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">AWS Global Certification Challenge</title><link href="https://josecastillolema.github.io/aws-cert-challenge/" rel="alternate" type="text/html" title="AWS Global Certification Challenge" /><published>2020-10-12T00:00:00-03:00</published><updated>2020-10-12T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-cert-challenge</id><content type="html" xml:base="https://josecastillolema.github.io/aws-cert-challenge/">&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-12-aws-cert-challenge.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A AWS está oferecendo de forma gratuita a &lt;strong&gt;certificação AWS Cloud Practitioner&lt;/strong&gt;, que normalmente tem um valor de $200, como parte da iniciativa AWS re:Invent 2020 durante os meses de outubro e novembro de este ano.&lt;/p&gt;
-
-&lt;p&gt;Segue o &lt;a href=&quot;https://pages.awscloud.com/AWS_Global_Certification_Challenge_Practice_Exam_Voucher.html&quot;&gt;link para a solicitação do voucher&lt;/a&gt;, que demora até 3 dias úteis, e o &lt;a href=&quot;https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/&quot;&gt;blog do AWS Training com todas as informações sobre o programa&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;Uma vez aprovado no processo seletivo seguir &lt;a href=&quot;/haina-talent&quot;&gt;as seguintes instruções&lt;/a&gt; para efetuar o cadastro na plataforma EaD &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;Huawei Talent Online&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry></feed>
