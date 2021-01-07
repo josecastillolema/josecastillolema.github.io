@@ -1,6 +1,6 @@
 ---
 title:  "AWS Academy"
-last_modified_at: 2020-12-29T16:00:58-04:00
+last_modified_at: 2021-01-07T16:00:58-04:00
 tags:
   - aws
   - cert
@@ -40,6 +40,10 @@ Esse curso de nível intermediário ajudará os estudantes a ganharem experiênc
 ### AWS Academy Machine Learning Foundation
 
 Este curso introdutório apresenta aos alunos os conceitos e a terminologia de inteligência artificial (IA) e *machine learning* (ML). Ao final deste curso, os alunos poderão selecionar e aplicar serviços de ML para resolver problemas de negócios. Eles também poderão rotular, criar, treinar e implantar um modelo de ML personalizado. Este curso tem aproximadamente **20 horas** de conteúdo entregue por meio de palestras, laboratórios práticos e trabalho em projetos.
+
+### AWS Academy Data Analytics
+
+Estes exercícios de laboratório ensinam os alunos a conduzir a análise de Big Data com exemplos práticos do mundo real. Os laboratórios e os recursos de aprendizado foram projetados para complementar os cursos de análise de dados existentes em uma instituição e fornecer aos alunos uma experiência prática ao trabalhar com dados em escala. Voltado para estudantes interessados em seguir carreiras em análise de dados, o AWS Academy Data Analytics requer uma base sólida em conceitos e habilidades de TI e contém **7.5 horas** de conteúdo.
 
 
 <div data-iframe-width="600" data-iframe-height="1080" data-share-badge-id="5f33a8fe-cb96-4458-a574-e4892068c66e" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
