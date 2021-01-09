@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-01-07T14:26:48-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Certified Calico Operator</title><link href="https://josecastillolema.github.io/calico/" rel="alternate" type="text/html" title="Certified Calico Operator" /><published>2021-01-05T00:00:00-03:00</published><updated>2020-12-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/calico</id><content type="html" xml:base="https://josecastillolema.github.io/calico/">&lt;p&gt;&lt;a href=&quot;https://www.projectcalico.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-01-09T17:50:59-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 2nd edition</title><link href="https://josecastillolema.github.io/shift-multicloud-2/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 2nd edition" /><published>2021-01-09T00:00:00-03:00</published><updated>2021-01-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-09-shift-multicloud-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
+
+&lt;p&gt;Além de ser uma solução inovadora, a Cloud também é um modelo de negócio relativamente novo, aplicável a qualquer tipo de empresa. Nosso foco é formar o profissional para dominar modelos de serviços de Computação em Nuvem (SaaS, PaaS, IaaS), modelos de implantação em Nuvem (privado, público, híbrido e multicloud) e economia em Nuvem. Tudo isso por meio de atividades hands-on na Amazon Web Services (AWS).&lt;/p&gt;
+
+&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
+&lt;p&gt;Profissionais de TI (analistas, especialistas e gestores) que atuam nas áreas de Cloud, Virtualização e/ou DevOps.&lt;/p&gt;
+
+&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
+&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
+
+&lt;h2 id=&quot;benefício-amazon&quot;&gt;Benefício Amazon&lt;/h2&gt;
+
+&lt;p&gt;Cada aluno vai receber US$ 50 em créditos para usar em laboratórios no ambiente Amazon, durante e após o curso.&lt;/p&gt;
+
+&lt;h2 id=&quot;shift-remoto&quot;&gt;Shift remoto&lt;/h2&gt;
+&lt;p&gt;Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.&lt;/p&gt;
+
+&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem
+    &lt;ul&gt;
+      &lt;li&gt;Virtualização&lt;/li&gt;
+      &lt;li&gt;Modelos de serviço&lt;/li&gt;
+      &lt;li&gt;Segurança em nuvem / Modelo de responsabilidade compartilhada&lt;/li&gt;
+      &lt;li&gt;Modelos de implementação&lt;/li&gt;
+      &lt;li&gt;Multicloud&lt;/li&gt;
+      &lt;li&gt;Economia e faturamento da nuvem&lt;/li&gt;
+      &lt;li&gt;Arquitetura de nuvem / Desenvolvimento de aplicações para a nuvem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 2: Infraestrutura como serviço  (IaaS)
+    &lt;ul&gt;
+      &lt;li&gt;Instanciação de máquinas virtuais&lt;/li&gt;
+      &lt;li&gt;Autoscaling&lt;/li&gt;
+      &lt;li&gt;Infraestrutura de armazenamento: block/object/file storage&lt;/li&gt;
+      &lt;li&gt;Containers&lt;/li&gt;
+      &lt;li&gt;Orquestração de containers&lt;/li&gt;
+      &lt;li&gt;Arquitetura de microserviços&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 3: Plataforma como serviço (PaaS)
+    &lt;ul&gt;
+      &lt;li&gt;Automação e entrega contínua (CI/CD)&lt;/li&gt;
+      &lt;li&gt;Pipeline DevOps&lt;/li&gt;
+      &lt;li&gt;DBaaS SQL/NoSQL&lt;/li&gt;
+      &lt;li&gt;Function as a Service&lt;/li&gt;
+      &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Certified Calico Operator</title><link href="https://josecastillolema.github.io/calico/" rel="alternate" type="text/html" title="Certified Calico Operator" /><published>2021-01-05T00:00:00-03:00</published><updated>2020-12-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/calico</id><content type="html" xml:base="https://josecastillolema.github.io/calico/">&lt;p&gt;&lt;a href=&quot;https://www.projectcalico.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://academy.tigera.io/course/certified-calico-operator-level-1/&quot;&gt;Certified Calico Operator: Level 1&lt;/a&gt; course for everyone interested in Kubernetes networking.&lt;/p&gt;
 
@@ -264,6 +316,4 @@
 
 &lt;p&gt;Neste &lt;a href=&quot;https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w&quot;&gt;nono episódio&lt;/a&gt;, o podcast de tecnologia para o mundo dos negócios fala sobre o panorama atual da computação em nuvem no Brasil. A digitalização dos negócios continua parte do debate. Não só porque o mercado vem reconhecendo ano após ano a importância da tecnologia para manter as empresas competitivas, mas também porque o cenário imposto pela pandemia do coronavírus exigiu que as empresas se reinventassem apoiadas na tecnologia. E hoje já é praticamente impossível falar de tecnologia sem falar de Cloud Computing, a computação em nuvem.&lt;/p&gt;
 
-&lt;p&gt;Para entender como as soluções atuais têm englobado a tecnologia da nuvem e como a pandemia impactou este mercado, estão na mesa do TOTVS TALKS o diretor de Cloud da TOTVS, Vinicius Mendes, e o doutor em engenharia elétrica, nas áreas de telecomunicações, redes e internet das coisas, José Castillo Lema, consultor de Cloud para América Latina na Red Hat e professor no MBA da FIAP.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="podcast" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 14th edition</title><link href="https://josecastillolema.github.io/hcia-14/" rel="alternate" type="text/html" title="HCIA-Routing &amp; Switching - 14th edition" /><published>2020-10-25T00:00:00-03:00</published><updated>2020-11-15T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-14</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-14/">&lt;p&gt;&lt;a href=&quot;https://www.sympla.com.br/treinamento-de-redes--14-edicao__1020859&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-25-hcia-14.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Uma vez aprovado no processo seletivo seguir &lt;a href=&quot;/haina-talent&quot;&gt;as seguintes instruções&lt;/a&gt; para efetuar o cadastro na plataforma EaD &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;Huawei Talent Online&lt;/a&gt;.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;Para entender como as soluções atuais têm englobado a tecnologia da nuvem e como a pandemia impactou este mercado, estão na mesa do TOTVS TALKS o diretor de Cloud da TOTVS, Vinicius Mendes, e o doutor em engenharia elétrica, nas áreas de telecomunicações, redes e internet das coisas, José Castillo Lema, consultor de Cloud para América Latina na Red Hat e professor no MBA da FIAP.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="podcast" /><category term="pt" /><summary type="html"></summary></entry></feed>
