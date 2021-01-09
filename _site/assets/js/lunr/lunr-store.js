@@ -652,4 +652,10 @@ var store = [{
         "tags": ["cert","en","networks","nfv","openshift","sdn"],
         "url": "https://josecastillolema.github.io/calico/",
         "teaser": null
+      },{
+        "title": "FIAP SHIFT: Multicloud Architecture - 2nd edition",
+        "excerpt":"A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços. Além de ser uma solução inovadora, a Cloud...","categories": [],
+        "tags": ["aws","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-multicloud-2/",
+        "teaser": null
       }]

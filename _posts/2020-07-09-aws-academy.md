@@ -33,17 +33,24 @@ O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [*
 
 Na FIAP ofertamos este curso ([1a edição](/shift-aws-foundations) e [2a edição](/shift-aws-foundations-2)), na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
+![](/assets/images/posts/2020-07-09-aws-academy/05.png)
+
 ### AWS Academy Cloud Developing (ACD)
 
 Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
+
+![](/assets/images/posts/2020-07-09-aws-academy/06.png)
 
 ### AWS Academy Machine Learning Foundation (AMLF)
 
 Este curso introdutório apresenta aos alunos os conceitos e a terminologia de inteligência artificial (IA) e *machine learning* (ML). Ao final deste curso, os alunos poderão selecionar e aplicar serviços de ML para resolver problemas de negócios. Eles também poderão rotular, criar, treinar e implantar um modelo de ML personalizado. Este curso tem aproximadamente **20 horas** de conteúdo entregue por meio de palestras, laboratórios práticos e trabalho em projetos.
 
+![](/assets/images/posts/2020-07-09-aws-academy/07.png)
+
 ### AWS Academy Data Analytics (ADA)
 
 Estes exercícios de laboratório ensinam os alunos a conduzir a análise de Big Data com exemplos práticos do mundo real. Os laboratórios e os recursos de aprendizado foram projetados para complementar os cursos de análise de dados existentes em uma instituição e fornecer aos alunos uma experiência prática ao trabalhar com dados em escala. Voltado para estudantes interessados em seguir carreiras em análise de dados, o AWS Academy Data Analytics requer uma base sólida em conceitos e habilidades de TI e contém **7.5 horas** de conteúdo.
 
+![](/assets/images/posts/2020-07-09-aws-academy/08.png)
 
-<div data-iframe-width="600" data-iframe-height="1080" data-share-badge-id="5f33a8fe-cb96-4458-a574-e4892068c66e" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>
+<div data-iframe-width="600" data-iframe-height="260" data-share-badge-id="5f33a8fe-cb96-4458-a574-e4892068c66e" data-share-badge-host="https://www.youracclaim.com"></div><script type="text/javascript" async src="//cdn.youracclaim.com/assets/utilities/embed.js"></script>

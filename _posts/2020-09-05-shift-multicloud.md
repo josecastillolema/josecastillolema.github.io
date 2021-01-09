@@ -15,9 +15,6 @@ A Computação em Nuvem está transformando a forma como as organizações inves
 
 Além de ser uma solução inovadora, a Cloud também é um modelo de negócio relativamente novo, aplicável a qualquer tipo de empresa. Nosso foco é formar o profissional para dominar modelos de serviços de Computação em Nuvem (SaaS, PaaS, IaaS), modelos de implantação em Nuvem (privado, público, híbrido e multicloud) e economia em Nuvem. Tudo isso por meio de atividades hands-on na Amazon Web Services (AWS).  
 
-A jornada é desafiadora. E a transformação, o único caminho.
-
-
 ## Para quem?
 Profissionais de TI (analistas, especialistas e gestores) que atuam nas áreas de Cloud, Virtualização e/ou DevOps.
 
