@@ -319,7 +319,7 @@ var store = [{
       },{
         "title": "FIAP MBA em Arquitetura de Soluções (ASO)",
         "excerpt":"           Arquitetura de Storage / DataCenter / Virtualização e Microcontainers            Arquitetura em MultiCloud (AWS / GCP / Azure / IBM Cloud)       ","categories": [],
-        "tags": ["aws","azure","classes","fiap","pt"],
+        "tags": ["aws","azure","classes","fiap","openshift","pt"],
         "url": "https://josecastillolema.github.io/fiap-aso/",
         "teaser": null
       },{
@@ -373,7 +373,7 @@ var store = [{
       },{
         "title": "FIAP MBA em Big Data (Data Science) (BDT)",
         "excerpt":"      Cloud Computing   Fast Data &amp; Microservices   Internet das Coisas   Microserviços   ","categories": [],
-        "tags": ["aws","classes","fiap","iot","pt"],
+        "tags": ["aws","classes","fiap","iot","openshift","pt"],
         "url": "https://josecastillolema.github.io/fiap-bdt/",
         "teaser": null
       },{
