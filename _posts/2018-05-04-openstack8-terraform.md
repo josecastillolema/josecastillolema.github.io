@@ -9,6 +9,7 @@ tags:
   - pt
   - redhat
   - series
+  - terraform
 toc: true
 ---
 
