@@ -289,7 +289,7 @@ var store = [{
       },{
         "title": "OpenStack series VIII: Terraform",
         "excerpt":"Serie de artigos sobre OpenStack. Lab 8 - Terraform OpenStack Provider O Terraform é uma ferramenta para construir, alterar e controlar a infraestrutura de forma segura e eficiente. O Terraform pode gerenciar provedores de serviços existentes e populares como OpenStack, Azure, AWS, Digital Ocean, entre outras, bem como soluções internas...","categories": [],
-        "tags": ["classes","fiap","iac","openstack","pt","redhat","series"],
+        "tags": ["classes","fiap","iac","openstack","pt","redhat","series","terraform"],
         "url": "https://josecastillolema.github.io/openstack8-terraform/",
         "teaser": null
       },{
