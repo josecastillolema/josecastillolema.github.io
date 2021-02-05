@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-01-30T13:22:25-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 2nd edition</title><link href="https://josecastillolema.github.io/shift-multicloud-2/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 2nd edition" /><published>2021-01-09T00:00:00-03:00</published><updated>2021-01-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-09-shift-multicloud-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-02-05T07:24:18-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Aviatrix Certified Engineer - Multicloud</title><link href="https://josecastillolema.github.io/aviatrix/" rel="alternate" type="text/html" title="Aviatrix Certified Engineer - Multicloud" /><published>2021-02-05T00:00:00-03:00</published><updated>2021-02-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aviatrix</id><content type="html" xml:base="https://josecastillolema.github.io/aviatrix/">&lt;p&gt;&lt;a href=&quot;https://aviatrix.com/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-02-05-aviatrix/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://aviatrix.com/ace-multicloud-networking-training/&quot;&gt;Aviatrix Certified Engineer - Multi-Cloud Network Associate Course&lt;/a&gt; for anyone interested in public cloud networking (in AWS, Azure, GCP and OCI) and multicloud arquitecture.&lt;/p&gt;
+
+&lt;p&gt;Training and exam are free using code &lt;strong&gt;ACEHOLIDAY&lt;/strong&gt; through February 28th.&lt;/p&gt;
+
+&lt;h1 id=&quot;what-the-course-covers&quot;&gt;What the Course Covers&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction
+    &lt;ul&gt;
+      &lt;li&gt;Introductory Survey&lt;/li&gt;
+      &lt;li&gt;About ACE Associate Training&lt;/li&gt;
+      &lt;li&gt;About Aviatrix&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Public Cloud Networking
+    &lt;ul&gt;
+      &lt;li&gt;Networking Principles in the Cloud&lt;/li&gt;
+      &lt;li&gt;AWS Networking 101&lt;/li&gt;
+      &lt;li&gt;Azure Networking 101&lt;/li&gt;
+      &lt;li&gt;GCP Networking 101&lt;/li&gt;
+      &lt;li&gt;OCI Networking 101&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Multi-Cloud Network Architecture
+    &lt;ul&gt;
+      &lt;li&gt;What is the MCNA?&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Aviatrix Platform
+    &lt;ul&gt;
+      &lt;li&gt;Feature Overview - Part 1&lt;/li&gt;
+      &lt;li&gt;Feature Overview - Part 2&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Operations, Visibility, and Troubleshooting
+    &lt;ul&gt;
+      &lt;li&gt;Day 2 Operations&lt;/li&gt;
+      &lt;li&gt;CoPilot Demo&lt;/li&gt;
+      &lt;li&gt;Aviatrix Controller Deployment&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Customer Case Study
+    &lt;ul&gt;
+      &lt;li&gt;Real Aviatrix Customer Walk-Through - Single Region&lt;/li&gt;
+      &lt;li&gt;Real Aviatrix Customer Walk-Through - Multi-Region Multi-Cloud&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Conclusion
+    &lt;ul&gt;
+      &lt;li&gt;Course Feedback Survey&lt;/li&gt;
+      &lt;li&gt;How to take the Exam&lt;/li&gt;
+      &lt;li&gt;Scheduling the Exam&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
+
+&lt;p&gt;At the end of the course, you can earn a certificate by scheduling and passing a final exam.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://courses.academy.tigera.io/certificates/90b9e57cdec7460b8243401246da2e67&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-02-05-aviatrix/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="azure" /><category term="cert" /><category term="en" /><category term="iac" /><category term="networks" /><category term="sdn" /><category term="terraform" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 2nd edition</title><link href="https://josecastillolema.github.io/shift-multicloud-2/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 2nd edition" /><published>2021-01-09T00:00:00-03:00</published><updated>2021-01-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-09-shift-multicloud-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
 
@@ -50,7 +111,7 @@
       &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Certified Calico Operator</title><link href="https://josecastillolema.github.io/calico/" rel="alternate" type="text/html" title="Certified Calico Operator" /><published>2021-01-05T00:00:00-03:00</published><updated>2020-12-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/calico</id><content type="html" xml:base="https://josecastillolema.github.io/calico/">&lt;p&gt;&lt;a href=&quot;https://www.projectcalico.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Certified Calico Operator</title><link href="https://josecastillolema.github.io/calico/" rel="alternate" type="text/html" title="Certified Calico Operator" /><published>2021-01-05T00:00:00-03:00</published><updated>2021-01-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/calico</id><content type="html" xml:base="https://josecastillolema.github.io/calico/">&lt;p&gt;&lt;a href=&quot;https://www.projectcalico.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://academy.tigera.io/course/certified-calico-operator-level-1/&quot;&gt;Certified Calico Operator: Level 1&lt;/a&gt; course for everyone interested in Kubernetes networking.&lt;/p&gt;
 
@@ -306,14 +367,4 @@
   &lt;li&gt;Restcomm/Mobicents&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Parabéns pelo canal Caio!&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="networks" /><category term="pt" /><category term="youtube" /><summary type="html"></summary></entry><entry><title type="html">TOTVS TALKS #09 - A computação em nuvem no Brasil</title><link href="https://josecastillolema.github.io/totvs-talks/" rel="alternate" type="text/html" title="TOTVS TALKS #09 - A computação em nuvem no Brasil" /><published>2020-10-26T00:00:00-03:00</published><updated>2020-10-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/totvs-talks</id><content type="html" xml:base="https://josecastillolema.github.io/totvs-talks/">&lt;p&gt;&lt;a href=&quot;https://bandnewsfm.band.uol.com.br/totvs-talks/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-26-totvs-talks/0.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;O &lt;a href=&quot;https://bandnewsfm.band.uol.com.br/totvs-talks/&quot;&gt;TOTVS TALKS Podcast&lt;/a&gt; é uma parceria entre a BandNews FM e a TOTVS. Aqui, você ouve conversas sobre tecnologia – ferramentas, soluções e caminhos; cada mês, um novo assunto. Os episódios novos saem sempre no dia 20 e você encontra o programa no site da BandNews FM e no Spotify.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-26-totvs-talks/1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w&quot;&gt;&lt;img src=&quot;/assets/images/posts/2020-10-26-totvs-talks/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Neste &lt;a href=&quot;https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w&quot;&gt;nono episódio&lt;/a&gt;, o podcast de tecnologia para o mundo dos negócios fala sobre o panorama atual da computação em nuvem no Brasil. A digitalização dos negócios continua parte do debate. Não só porque o mercado vem reconhecendo ano após ano a importância da tecnologia para manter as empresas competitivas, mas também porque o cenário imposto pela pandemia do coronavírus exigiu que as empresas se reinventassem apoiadas na tecnologia. E hoje já é praticamente impossível falar de tecnologia sem falar de Cloud Computing, a computação em nuvem.&lt;/p&gt;
-
-&lt;p&gt;Para entender como as soluções atuais têm englobado a tecnologia da nuvem e como a pandemia impactou este mercado, estão na mesa do TOTVS TALKS o diretor de Cloud da TOTVS, Vinicius Mendes, e o doutor em engenharia elétrica, nas áreas de telecomunicações, redes e internet das coisas, José Castillo Lema, consultor de Cloud para América Latina na Red Hat e professor no MBA da FIAP.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="podcast" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;Parabéns pelo canal Caio!&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="networks" /><category term="pt" /><category term="youtube" /><summary type="html"></summary></entry></feed>

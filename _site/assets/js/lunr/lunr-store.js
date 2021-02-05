@@ -658,4 +658,10 @@ var store = [{
         "tags": ["aws","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-multicloud-2/",
         "teaser": null
+      },{
+        "title": "Aviatrix Certified Engineer - Multicloud",
+        "excerpt":"I would like to strongly recomend the Aviatrix Certified Engineer - Multi-Cloud Network Associate Course for anyone interested in public cloud networking (in AWS, Azure, GCP and OCI) and multicloud arquitecture. Training and exam are free using code ACEHOLIDAY through February 28th. What the Course Covers Introduction Introductory Survey About...","categories": [],
+        "tags": ["aws","azure","cert","en","iac","networks","sdn","terraform"],
+        "url": "https://josecastillolema.github.io/aviatrix/",
+        "teaser": null
       }]
