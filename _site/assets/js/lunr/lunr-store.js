@@ -664,4 +664,10 @@ var store = [{
         "tags": ["aws","azure","cert","en","iac","networks","sdn","terraform"],
         "url": "https://josecastillolema.github.io/aviatrix/",
         "teaser": null
+      },{
+        "title": "HCIA 5G - 1st edition",
+        "excerpt":"PROCESSO SELETIVO PARA CURSO DE FORMAÇÃO HCIA 5G - Turma 01/2021 Oportunidade ímpar a comunidade: formação GRATUITA para certificação em redes 5G. A Coordenação do projeto Instituto Metrópole Digital - UFRN – 5G Training RN abre inscrições para o processo seletivo para participação na primeira turma do curso de formação...","categories": [],
+        "tags": ["cert","classes","huawei","iot","networks","nfv","pt","sdn"],
+        "url": "https://josecastillolema.github.io/hcia-5g/",
+        "teaser": null
       }]
