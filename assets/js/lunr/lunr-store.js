@@ -359,6 +359,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/containers6-kompose/",
         "teaser": null
       },{
+        "title": "Containers series VII: Kubernetes - Uso",
+        "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 7 - Kubernetes - Uso Orquestrando containers Existem vários recursos dentro de um cluster Kubernetes: pod: conjunto de um ou mais containers service: cria um endpoint para acessar os pods de uma determinada app deployment: define as...","categories": [],
+        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "url": "https://josecastillolema.github.io/containers7-k8s-use/",
+        "teaser": null
+      },{
         "title": "Locust CCN client",
         "excerpt":"           locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
         "tags": ["ccn","en","networks"],
@@ -649,7 +655,7 @@ var store = [{
       },{
         "title": "Certified Calico Operator",
         "excerpt":"I would like to strongly recomend the Certified Calico Operator: Level 1 course for everyone interested in Kubernetes networking. This free and self-paced course will arm you with the knowledge you need to understand how Kubernetes networking works, how to configure and manage a Calico network, and how to secure...","categories": [],
-        "tags": ["cert","en","networks","nfv","openshift","sdn"],
+        "tags": ["cert","en","iac","networks","nfv","openshift","sdn"],
         "url": "https://josecastillolema.github.io/calico/",
         "teaser": null
       },{
