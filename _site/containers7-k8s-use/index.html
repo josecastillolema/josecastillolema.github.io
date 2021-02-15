@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Containers series VI: Kompose - GitOps</title>
+<!-- begin _includes/seo.html --><title>Containers series VII: Kubernetes - Uso - GitOps</title>
 <meta name="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).  ">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="Containers series VI: Kompose">
-<meta property="og:url" content="https://josecastillolema.github.io/containers6-kompose/">
+<meta property="og:title" content="Containers series VII: Kubernetes - Uso">
+<meta property="og:url" content="https://josecastillolema.github.io/containers7-k8s-use/">
 
 
   <meta property="og:description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).  ">
@@ -31,11 +31,11 @@
 
 
 
-  <meta property="article:published_time" content="2019-02-06T00:00:00-02:00">
+  <meta property="article:published_time" content="2019-02-08T00:00:00-02:00">
 
 
 
-  <meta property="article:modified_time" content="2019-02-06T18:00:58-02:00">
+  <meta property="article:modified_time" content="2019-02-08T18:00:58-02:00">
 
 
 
@@ -44,7 +44,7 @@
   
 
 
-<link rel="canonical" href="https://josecastillolema.github.io/containers6-kompose/">
+<link rel="canonical" href="https://josecastillolema.github.io/containers7-k8s-use/">
 
 
 
@@ -355,15 +355,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Containers series VI: Kompose">
+    <meta itemprop="headline" content="Containers series VII: Kubernetes - Uso">
     <meta itemprop="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
-    <meta itemprop="datePublished" content="2019-02-06T00:00:00-02:00">
-    <meta itemprop="dateModified" content="2019-02-06T18:00:58-02:00">
+    <meta itemprop="datePublished" content="2019-02-08T00:00:00-02:00">
+    <meta itemprop="dateModified" content="2019-02-08T18:00:58-02:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Containers series VI: Kompose
+          <h1 id="page-title" class="page__title" itemprop="headline">Containers series VII: Kubernetes - Uso
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -371,7 +371,7 @@
 
 
 
-  4 minute read
+  5 minute read
 
 </p>
           
@@ -386,12 +386,9 @@
 <i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
   <li>
-<a href="#lab-6---kompose">Lab 6 - Kompose</a>
+<a href="#lab-7---kubernetes---uso">Lab 7 - Kubernetes - Uso</a>
     <ul>
-      <li><a href="#instala%C3%A7%C3%A3o">Instalação</a></li>
-      <li><a href="#uso">Uso</a></li>
-      <li><a href="#valida%C3%A7%C3%A3o">Validação</a></li>
-      <li><a href="#clean-up">Clean-up</a></li>
+      <li><a href="#orquestrando-containers">Orquestrando containers</a></li>
     </ul>
   </li>
 </ul>
@@ -405,147 +402,225 @@
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="122" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-<h1 id="lab-6---kompose">Lab 6 - Kompose</h1>
+<h1 id="lab-7---kubernetes---uso">Lab 7 - Kubernetes - Uso</h1>
 
-<p><a href="https://kompose.io/" target="_blank" rel="noopener noreferrer">Kompose</a> permite importar <em>templates</em> do Docker Swarm no Kubernetes.</p>
-
-<h2 id="instalação">Instalação</h2>
-
-<ol>
+<h2 id="orquestrando-containers">Orquestrando containers</h2>
+<p>Existem vários recursos dentro de um cluster Kubernetes:</p>
+<ul>
   <li>
-    <p>Instalação do Kompose</p>
-
-    <p>a. Obtenção do executável:</p>
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ curl -L https://github.com/kubernetes/kompose/releases/download/v1.17.0/kompose-linux-amd64 -o kompose
-   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                  Dload  Upload   Total   Spent    Left  Speed
- 100   630  100   630    0     0   3500      0 --:--:-- --:--:-- --:--:--  3519
- 100 50.0M  100 50.0M    0     0  31.3M      0  0:00:01  0:00:01 --:--:-- 37.8M
-</code></pre></div>    </div>
-    <p>b. Ajuste da permissão de escrita:</p>
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ chmod +x kompose
-</code></pre></div>    </div>
-    <p>c. Mover o executável para a pasta correspondente:</p>
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ sudo mv ./kompose /usr/local/bin/
-</code></pre></div>    </div>
+<strong>pod</strong>: conjunto de um ou mais <em>containers</em>
+</li>
+  <li>
+<strong>service</strong>: cria um <em>endpoint</em> para acessar os <em>pods</em> de uma determinada <em>app</em>
+</li>
+  <li>
+<strong>deployment</strong>: define as propriedades desejadas de uma <em>app</em>
+    <ul>
+      <li>imagem</li>
+      <li>variáveis de entorno</li>
+      <li>volumes</li>
+      <li>número de réplicas</li>
+    </ul>
   </li>
-</ol>
-
-<h2 id="uso">Uso</h2>
+</ul>
 
 <ol>
-  <li>Clonar este repositório <em>git</em>:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap
- Cloning into 'fiap'...
- remote: Enumerating objects: 121, done.
- remote: Counting objects: 100% (121/121), done.
- remote: Compressing objects: 100% (116/116), done.
- remote: Total 4068 (delta 60), reused 3 (delta 1), pack-reused 3947
- Receiving objects: 100% (4068/4068), 51.48 MiB | 44.22 MiB/s, done.
- Resolving deltas: 100% (2059/2059), done.
-</code></pre></div>    </div>
+  <li>Navegar até a pasta <code class="language-plaintext highlighter-rouge">/fiap/bdt/microservices/kubernetes</code> de este repositório <em>git</em>:
+    <pre>
+ <b>$ cd fiap/bdt/microservices/kubernetes
+ $ pwd</b>
+ /home/ubuntu/fiap/bdt/microservices/kubernetes
+ <b>$ ls</b>
+ api-deployment.yaml  api-service.yaml  mysql-deployment.yaml  mysql-pv.yaml  mysql-service.yaml
+ </pre>
   </li>
-  <li>Navegar até a pasta <strong><em>/fiap/bdt/microservices/swarm/v1</em></strong> de este repositório <em>git</em>:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ cd fiap/bdt/microservices/swarm/v1
- $ pwd
- /home/ubuntu/fiap/bdt/microservices/swarm/v1
- $ ls
- docker-compose.yaml
-</code></pre></div>    </div>
-  </li>
-  <li>Conferir o conteúdo do arquivo <strong><em>docker-compose.yml</em></strong>:
+  <li>Conferir as definições do volume persistente:
     <div class="language-yaml highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat docker-compose.yaml</span> 
- <span class="s">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
- <span class="na">services</span><span class="pi">:</span>
-   <span class="na">api</span><span class="pi">:</span>
-     <span class="na">image</span><span class="pi">:</span> <span class="s">josecastillolema/api</span>
-     <span class="na">ports</span><span class="pi">:</span>
-       <span class="pi">-</span> <span class="s2">"</span><span class="s">3000:5000"</span>
-     <span class="na">depends_on</span><span class="pi">:</span>
-       <span class="pi">-</span> <span class="s">mysql</span>
-     <span class="na">deploy</span><span class="pi">:</span>
-       <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
-       <span class="c1">#update_config:</span>
-       <span class="c1">#  parallelism: 1</span>
-       <span class="c1">#  delay: 10is</span>
-       <span class="na">mode</span><span class="pi">:</span> <span class="s">replicated</span>
-       <span class="na">restart_policy</span><span class="pi">:</span>
-         <span class="na">condition</span><span class="pi">:</span> <span class="s">on-failure</span>
-   <span class="na">mysql</span><span class="pi">:</span>
-     <span class="na">image</span><span class="pi">:</span> <span class="s">josecastillolema/mysql</span>
-     <span class="na">ports</span><span class="pi">:</span>
-       <span class="pi">-</span> <span class="s2">"</span><span class="s">3306:3306"</span>
-     <span class="na">volumes</span><span class="pi">:</span>
-       <span class="pi">-</span> <span class="s">db-data:/var/lib/mysql</span>
-     <span class="na">environment</span><span class="pi">:</span>
-       <span class="na">MYSQL_USER</span><span class="pi">:</span> <span class="s">root</span>
-       <span class="na">MYSQL_DATABASE</span><span class="pi">:</span> <span class="s">fiapdb</span>
-       <span class="na">MYSQL_ROOT_PASSWORD</span><span class="pi">:</span> <span class="s">senhaFiap</span>
-     <span class="na">deploy</span><span class="pi">:</span>
-       <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
-       <span class="c1"># resources:</span>
-       <span class="c1">#   limits:</span>
-       <span class="c1">#     cpus: "0.1"</span>
-       <span class="c1">#     memory: 50M</span>
-       <span class="na">restart_policy</span><span class="pi">:</span>
-         <span class="na">condition</span><span class="pi">:</span> <span class="s">on-failure</span>
- <span class="na">volumes</span><span class="pi">:</span>
-   <span class="na">db-data</span><span class="pi">:</span>
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat mysql-pv.yaml</span> 
+ <span class="s">kind</span><span class="pi">:</span> <span class="s">PersistentVolume</span>
+ <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+ <span class="na">metadata</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">mysql-pv-volume</span>
+   <span class="na">labels</span><span class="pi">:</span>
+     <span class="na">type</span><span class="pi">:</span> <span class="s">local</span>
+ <span class="na">spec</span><span class="pi">:</span>
+   <span class="na">storageClassName</span><span class="pi">:</span> <span class="s">manual</span>
+   <span class="na">capacity</span><span class="pi">:</span>
+     <span class="na">storage</span><span class="pi">:</span> <span class="s">1Gi</span>
+   <span class="na">accessModes</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s">ReadWriteOnce</span>
+   <span class="na">hostPath</span><span class="pi">:</span>
+     <span class="na">path</span><span class="pi">:</span> <span class="s2">"</span><span class="s">/mnt/data"</span>
+ <span class="s">---</span>
+ <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+ <span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolumeClaim</span>
+ <span class="na">metadata</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">mysql-pv-claim</span>
+ <span class="na">spec</span><span class="pi">:</span>
+   <span class="na">storageClassName</span><span class="pi">:</span> <span class="s">manual</span>
+   <span class="na">accessModes</span><span class="pi">:</span>
+     <span class="pi">-</span> <span class="s">ReadWriteOnce</span>
+   <span class="na">resources</span><span class="pi">:</span>
+     <span class="na">requests</span><span class="pi">:</span>
+       <span class="na">storage</span><span class="pi">:</span> <span class="s">1Gi</span>
 </code></pre></div>    </div>
   </li>
-  <li>Importar o <em>stack</em> definido no arquivo <strong><em>docker-compose.yml</em></strong> dentro do Kubernetes:
+  <li>Criar o volume persistente do banco de dados:
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ kompose up
- INFO We are going to create Kubernetes Deployments, Services and PersistentVolumeClaims for your Dockerized application. If you need different kind of resources, use the 'kompose convert' and 'kubectl create -f' commands instead. 
-
- INFO Deploying application in "default" namespace 
- INFO Successfully created Service: api            
- INFO Successfully created Service: mysql          
- INFO Successfully created Pod: api                
- INFO Successfully created Pod: mysql              
- INFO Successfully created PersistentVolumeClaim: db-data of size 100Mi. If your cluster has dynamic storage provisioning, you don't have to do anything. Otherwise you have to create PersistentVolume to make PVC work 
-
- Your application has been deployed to Kubernetes. You can run 'kubectl get deployment,svc,pods,pvc' for details.
+<div class="highlight"><pre class="highlight"><code> $ kubectl create -f mysql-pv.yaml
+ persistentvolume/mysql-pv-volume created
+ persistentvolumeclaim/mysql-pv-claim created
 </code></pre></div>    </div>
   </li>
-</ol>
-
-<h2 id="validação">Validação</h2>
-
-<ol>
-  <li>Conferir que o <em>stack</em> foi importado corretamente dentro do Kubernetes:
+  <li>Conferir as definições do serviço <code class="language-plaintext highlighter-rouge">api-deployment</code>:
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat api-service.yaml</span>
+ <span class="s">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+ <span class="na">kind</span><span class="pi">:</span> <span class="s">Service</span>
+ <span class="na">metadata</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">api-deployment</span>
+ <span class="na">spec</span><span class="pi">:</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">port</span><span class="pi">:</span> <span class="m">5000</span>
+      <span class="na">targetPort</span><span class="pi">:</span> <span class="m">5000</span>
+    <span class="na">selector</span><span class="pi">:</span>
+      <span class="na">app</span><span class="pi">:</span> <span class="s">api</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Criar os serviços:
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ kubectl get service/api
- NAME   TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
- api    ClusterIP   10.152.183.40   &lt;none&gt;        3000/TCP   95s
+<div class="highlight"><pre class="highlight"><code> $ kubectl create -f mysql-service.yaml
+ service/mysql created
+ $ kubectl create -f api-service.yaml
+ service/api-deployment created
+</code></pre></div>    </div>
+  </li>
+  <li>Conferir as definições do <em>deployment</em> <code class="language-plaintext highlighter-rouge">api-deployment</code>:
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat api-deployment.yaml</span> 
+ <span class="s">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+ <span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+ <span class="na">metadata</span><span class="pi">:</span>
+    <span class="na">name</span><span class="pi">:</span> <span class="s">api-deployment</span>
+ <span class="na">spec</span><span class="pi">:</span>
+    <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+    <span class="na">selector</span><span class="pi">:</span>
+      <span class="na">matchLabels</span><span class="pi">:</span>
+        <span class="na">app</span><span class="pi">:</span> <span class="s">api</span>
+    <span class="na">template</span><span class="pi">:</span>
+      <span class="na">metadata</span><span class="pi">:</span>
+        <span class="na">labels</span><span class="pi">:</span>
+          <span class="na">app</span><span class="pi">:</span> <span class="s">api</span>
+      <span class="na">spec</span><span class="pi">:</span>
+        <span class="na">containers</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">api</span>
+          <span class="na">image</span><span class="pi">:</span> <span class="s">josecastillolema/api</span>
+          <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">Always</span>
+          <span class="na">ports</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">5000</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Criar os <em>deployments</em>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl create -f api-deployment.yaml
+ deployment.apps/api-deployment created
+ $ kubectl create -f mysql-deployment.yaml
+ deployment.apps/mysql created
+</code></pre></div>    </div>
+  </li>
+  <li>Confirmar a criação dos recursos:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl get all
+NAME                                  READY   STATUS    RESTARTS   AGE
+pod/api-deployment-7bcb964d7c-bmwmx   1/1     Running   0          2m26s
+pod/api-deployment-7bcb964d7c-n6svh   1/1     Running   0          2m26s
+pod/api-deployment-7bcb964d7c-tvr6w   1/1     Running   0          2m26s
+pod/mysql-59f74f847d-rjlxt            1/1     Running   0          2m20s
+
+NAME                     TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+service/api-deployment   ClusterIP   10.152.183.144   &lt;none&gt;        5000/TCP   2m35s
+service/kubernetes       ClusterIP   10.152.183.1     &lt;none&gt;        443/TCP    41m
+service/mysql            ClusterIP   10.152.183.120   &lt;none&gt;        3306/TCP   2m42s
+
+NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/api-deployment   3/3     3            3           2m26s
+deployment.apps/mysql            1/1     1            1           2m20s
+
+NAME                                        DESIRED   CURRENT   READY   AGE
+replicaset.apps/api-deployment-7bcb964d7c   3         3         3       2m26s
+replicaset.apps/mysql-59f74f847d            1         1         1       2m20s
 </code></pre></div>    </div>
   </li>
   <li>Testar a API:
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ curl 10.152.183.40:3000
+<div class="highlight"><pre class="highlight"><code> $ curl 10.152.183.144:5000
  Benvido a API FIAP!
 </code></pre></div>    </div>
   </li>
-</ol>
-
-<h2 id="clean-up"><em>Clean-up</em></h2>
-
-<ol>
-  <li>Remover o <em>stack</em>:
+  <li>Testar a conexão da API com o banco de dados:
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ kompose down
- INFO Deleting application in "default" namespace  
- INFO Successfully deleted Service: api            
- INFO Successfully deleted Service: mysql          
- INFO Successfully deleted Pod: api                
- INFO Successfully deleted Pod: mysql              
- INFO Successfully deleted PersistentVolumeClaim: db-data 
+<div class="highlight"><pre class="highlight"><code>$ curl 10.152.183.144:5000/getDados
+[{"id": 1234, "name": "Jose Castillo Lema"}]
+</code></pre></div>    </div>
+  </li>
+  <li>Escalar o número de replicas da API (<strong><em>scale-up</em></strong>). Para iso, editar o arquivo <strong><em>api-deployment.yaml</em></strong> da seguinte forma:
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="s">$ cat api-deployment.yaml</span> 
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
+<span class="na">metadata</span><span class="pi">:</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">api-deployment</span>
+<span class="na">spec</span><span class="pi">:</span>
+   <span class="na">replicas</span><span class="pi">:</span> <span class="m">5</span>
+   <span class="na">selector</span><span class="pi">:</span>
+     <span class="na">matchLabels</span><span class="pi">:</span>
+       <span class="na">app</span><span class="pi">:</span> <span class="s">api</span>
+   <span class="na">template</span><span class="pi">:</span>
+     <span class="na">metadata</span><span class="pi">:</span>
+       <span class="na">labels</span><span class="pi">:</span>
+         <span class="na">app</span><span class="pi">:</span> <span class="s">api</span>
+     <span class="na">spec</span><span class="pi">:</span>
+       <span class="na">containers</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">api</span>
+         <span class="na">image</span><span class="pi">:</span> <span class="s">josecastillolema/api</span>
+         <span class="na">imagePullPolicy</span><span class="pi">:</span> <span class="s">Always</span>
+         <span class="na">ports</span><span class="pi">:</span>
+         <span class="pi">-</span> <span class="na">containerPort</span><span class="pi">:</span> <span class="m">5000</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Aplicar os novos parámetros:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl apply -f api-deployment.yaml
+Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply
+deployment.apps/api-deployment configured
+</code></pre></div>    </div>
+  </li>
+  <li>Confirmar o <strong><em>scale-up</em></strong>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl get deployment api-deployment
+NAME             READY   UP-TO-DATE   AVAILABLE   AGE
+api-deployment   6/6     6            6           12s
+</code></pre></div>    </div>
+  </li>
+  <li>Remover os recursos criados:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl delete deployment api-deployment 
+deployment.apps "api-deployment" deleted
+
+$ kubectl delete deployment mysql
+deployment.apps "mysql" deleted
+
+$ kubectl delete service api-deployment
+service "api-deployment" deleted
+
+$ kubectl delete service mysql
+service "mysql" deleted
+
+$ kubectl delete persistentvolumeclaim/mysql-pv-claim
+persistentvolumeclaim "mysql-pv-claim" deleted
+
+$ kubectl delete persistentvolume/mysql-pv-volume 
+persistentvolume "mysql-pv-volume" deleted
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -604,7 +679,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-06">February 6, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-08">February 8, 2019</time></p>
         
       </footer>
 
@@ -613,22 +688,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Containers+series+VI%3A+Kompose%20https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers6-kompose%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Containers+series+VII%3A+Kubernetes+-+Uso%20https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers7-k8s-use%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers6-kompose%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers7-k8s-use%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers6-kompose%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers7-k8s-use%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/containers5-k8s-install/" class="pagination--pager" title="Containers series V: Kubernetes - Instalação
+      <a href="/containers6-kompose/" class="pagination--pager" title="Containers series VI: Kompose
 ">Previous</a>
     
     
-      <a href="/containers7-k8s-use/" class="pagination--pager" title="Containers series VII: Kubernetes - Uso
+      <a href="/locust-ccnclient/" class="pagination--pager" title="Locust CCN client
 ">Next</a>
     
   </nav>
@@ -877,8 +952,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/containers6-kompose/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/containers6-kompose"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/containers7-k8s-use/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/containers7-k8s-use"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

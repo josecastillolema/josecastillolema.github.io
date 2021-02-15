@@ -45,8 +45,8 @@ toc: true
 ## Orquestração
 - Containers IV: [Docker Swarm](/containers4-docker-swarm)
 - Containers V: [Kubernetes - Instalação](/containers5-k8s-install)
-- Containers VI: Kompose
-- Containers VII: Kubernetes - Uso
+- Containers VI: [Kompose](/containers6-kompose)
+- Containers VII: [Kubernetes - Uso](/containers7-k8s-use)
 
 # OpenStack
 - OpenStack I: [Keystone - Identity Manager](/openstack1-keystone)
