@@ -366,7 +366,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP MBA em Arquitetura e Desenvolvimento na Plataforma .NET (NET)",
-        "excerpt":"      Arquitetura Windows Azure Services   ","categories": [],
+        "excerpt":"      Arquitetura Windows Azure Services   Gestão de Configuração - ALM e DevOps   ","categories": [],
         "tags": ["azure","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/fiap-net/",
         "teaser": null
