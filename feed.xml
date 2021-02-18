@@ -1,4 +1,271 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-02-15T17:07:23-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">HCIA 5G - 1st edition</title><link href="https://josecastillolema.github.io/hcia-5g/" rel="alternate" type="text/html" title="HCIA 5G - 1st edition" /><published>2021-02-09T00:00:00-03:00</published><updated>2021-02-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-5g</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-5g/">&lt;p&gt;&lt;a href=&quot;https://www.imd.ufrn.br/portal/visualizar/252&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-02-18T11:29:44-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Azure series I: Virtual machine</title><link href="https://josecastillolema.github.io/azure1-vm/" rel="alternate" type="text/html" title="Azure series I: Virtual machine" /><published>2021-02-18T00:00:00-03:00</published><updated>2021-02-18T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure1-vm</id><content type="html" xml:base="https://josecastillolema.github.io/azure1-vm/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;lab-1---virtual-machine&quot;&gt;Lab 1 - Virtual Machine&lt;/h1&gt;
+
+&lt;h2 id=&quot;criando-a-instancia&quot;&gt;Criando a instancia&lt;/h2&gt;
+&lt;p&gt;Usaremos a imagem oficial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu Server&lt;/code&gt; para aprender alguns conceitos importantes de máquinas virtuais:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;flavors&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;em&gt;security groups&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cloud-init.io/&quot;&gt;cloud-init&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acessar o serviço &lt;strong&gt;Virtual machine&lt;/strong&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sempre que for criar novos recursos, selecione como &lt;strong&gt;&lt;em&gt;subscription&lt;/em&gt;&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Azure for students&lt;/code&gt; e como &lt;strong&gt;&lt;em&gt;resource group&lt;/em&gt;&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;19net&lt;/code&gt;. Se o &lt;em&gt;resource group&lt;/em&gt; ainda não existe, como é o caso, criar ele:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configurar um nome para a instãncia, escolher a &lt;strong&gt;imagem&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu Server&lt;/code&gt; e o &lt;strong&gt;&lt;em&gt;flavor&lt;/em&gt;&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Standard_B1&lt;/code&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Usaremos chave ssh como método de acesso à VM:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A porta 22 no &lt;strong&gt;&lt;em&gt;security group&lt;/em&gt;&lt;/strong&gt; precisa estar aberta para poder acessar a instância via SSH:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configurar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Standard HDD&lt;/code&gt; como tipo de disco:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Usaremos um &lt;em&gt;script&lt;/em&gt; de &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cloud-init&lt;/code&gt;&lt;/strong&gt; para customizar a instância:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Confirmar criaçao da instância uma vez validada:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fazer &lt;em&gt;download&lt;/em&gt; da &lt;strong&gt;chave&lt;/strong&gt; para poder acessar a instância via SSH de forma segura:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm09.png&quot; width=&quot;465&quot; height=&quot;342&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar a criacao da instância:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;accessando-à-instancia&quot;&gt;Accessando à instancia&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Note-se o IP público da instância:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;[&lt;strong&gt;Linux/MAC&lt;/strong&gt;] Seguiremos as próprias indicações do Azure:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;[&lt;strong&gt;Windows&lt;/strong&gt;] Usaremos o &lt;a href=&quot;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&quot;&gt;PuTTY&lt;/a&gt;, seguindo as seguintes &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows&quot;&gt;instruções&lt;/a&gt;. Como alternativa ao PuTTy, o &lt;a href=&quot;https://mobaxterm.mobatek.net/&quot;&gt;MobaXterm&lt;/a&gt; é uma excelente opçao.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;[&lt;strong&gt;Linux/MAC&lt;/strong&gt;] Em um terminal local:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ chmod 400 aula1_key.pem 
+$ ssh -i aula1_key.pem  azureuser@168.61.32.71
+The authenticity of host '168.61.32.71 (168.61.32.71)' can't be established.
+ECDSA key fingerprint is SHA256:KASB7hYoy0WvdiE+zDEBlyFQ7eoO3bwco32davnUxCA.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '168.61.32.71' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1039-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Feb 18 13:57:15 UTC 2021
+
+  System load:  0.0               Processes:           107
+  Usage of /:   4.5% of 28.90GB   Users logged in:     0
+  Memory usage: 44%               IP address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+0 packages can be updated.
+0 of these updates are security updates.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user &quot;root&quot;), use &quot;sudo &amp;lt;command&amp;gt;&quot;.
+See &quot;man sudo_root&quot; for details.
+
+azureuser@aula1:~$ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;[&lt;strong&gt;Windows&lt;/strong&gt;] Seguir as instruções do PuTTY: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Uma vez logado na maquina virtual, confirmar que o script de &lt;strong&gt;cloud-init&lt;/strong&gt; rodou com sucesso:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ls /tmp/
+CloudInitFunciona
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;instalando-um-servidor-web&quot;&gt;Instalando um servidor web&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Instalar o pacote &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apache2&lt;/code&gt;:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;azureuser@aula1:~$ sudo apt install apache2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  linux-headers-4.15.0-135
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  liblua5.2-0 ssl-cert
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap liblua5.2-0 ssl-cert
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1729 kB of archives.
+After this operation, 6985 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.14 [1070 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.14 [83.9 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.14 [160 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.14 [95.1 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Fetched 1729 kB in 0s (28.4 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 76706 files and directories currently installed.)
+Preparing to unpack .../0-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../1-libaprutil1_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../3-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../4-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../5-apache2-bin_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../6-apache2-utils_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../7-apache2-data_2.4.29-1ubuntu4.14_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../8-apache2_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../9-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Setting up libapr1:amd64 (1.6.3-2) ...
+Setting up apache2-data (2.4.29-1ubuntu4.14) ...
+Setting up ssl-cert (1.0.39) ...
+Setting up libaprutil1:amd64 (1.6.1-2) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Setting up apache2-utils (2.4.29-1ubuntu4.14) ...
+Setting up apache2-bin (2.4.29-1ubuntu4.14) ...
+Setting up apache2 (2.4.29-1ubuntu4.14) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+Processing triggers for systemd (237-3ubuntu10.44) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ufw (0.36-0ubuntu0.18.04.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Criar um &lt;em&gt;site&lt;/em&gt; de teste, no arquivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/var/www/html/index.html&lt;/code&gt; (como usuário admin):
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h1&amp;gt;
+   FIAP!!!
+&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Testar localmente o servidor web:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;azureuser@aula1:~$ curl localhost
+&amp;lt;h1&amp;gt;
+   FIAP!!!
+&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Obter o IP público da VM:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Testar accesso pelo IP público:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Como era esperado, o acesso web não funcionou pois a porta HTTP (TCP/80) deve ser liberada nos &lt;em&gt;security groups&lt;/em&gt;. Incluir uma liberação para esta porta no &lt;em&gt;security group&lt;/em&gt; associado à instância:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm14.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Validar a criação da regra: 
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Testar novamente o acesso pelo IP público:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">HCIA 5G - 1st edition</title><link href="https://josecastillolema.github.io/hcia-5g/" rel="alternate" type="text/html" title="HCIA 5G - 1st edition" /><published>2021-02-09T00:00:00-03:00</published><updated>2021-02-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-5g</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-5g/">&lt;p&gt;&lt;a href=&quot;https://www.imd.ufrn.br/portal/visualizar/252&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;processo-seletivo-para-curso-de-formação-hcia-5g---turma-012021&quot;&gt;PROCESSO SELETIVO PARA CURSO DE FORMAÇÃO HCIA 5G - Turma 01/2021&lt;/h2&gt;
 
@@ -376,14 +643,4 @@
     &lt;p&gt;Nos detalhes do curso, confirmar o estado de registro:
 &lt;img src=&quot;/assets/images/posts/2020-11-13-haina-talent/11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP MBA em Arquitetura de Soluções - Online (ASOO)</title><link href="https://josecastillolema.github.io/fiap-asoo/" rel="alternate" type="text/html" title="FIAP MBA em Arquitetura de Soluções - Online (ASOO)" /><published>2020-11-09T00:00:00-03:00</published><updated>2020-11-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-asoo</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-asoo/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/online/mba/mba-em-arquitetura-de-solucoes/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/img/asoo.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Fase 4: &lt;strong&gt;On the Clouds&lt;/strong&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Gestão Financeira de TI&lt;/li&gt;
-      &lt;li&gt;Bimodal IT &amp;amp; Sourcing&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/fiap/blob/master/asoo/multicloud/README.md&quot;&gt;Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html">Fase 4: On the Clouds Gestão Financeira de TI Bimodal IT &amp;amp; Sourcing Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)</summary></entry></feed>
+&lt;/ol&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry></feed>
