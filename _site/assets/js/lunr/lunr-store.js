@@ -676,4 +676,10 @@ var store = [{
         "tags": ["cert","classes","huawei","iot","networks","nfv","pt","sdn"],
         "url": "https://josecastillolema.github.io/hcia-5g/",
         "teaser": null
+      },{
+        "title": "Azure series I: Virtual machine",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 1 - Virtual Machine Criando a instancia Usaremos a imagem oficial Ubuntu Server para aprender alguns conceitos importantes de máquinas virtuais: flavors security groups cloud-init Acessar o serviço Virtual machine: Sempre que for criar novos recursos, selecione como subscription Azure for students e...","categories": [],
+        "tags": ["azure","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/azure1-vm/",
+        "teaser": null
       }]

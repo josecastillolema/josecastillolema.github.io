@@ -37,6 +37,11 @@ toc: true
 ## Function as a Service (FaaS)
 - AWS XII: [Lambda](/aws12-lambda)
 
+# Azure
+
+## Infrastructure as a Service (IaaS)
+- Azure I: [Virtual machine](/azure1-vm)
+
 # Containers
 - Containers I: [Docker](/containers1-docker)
 - Containers II: [Docker - continuação](/containers2-docker2)

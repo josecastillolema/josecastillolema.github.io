@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Containers series V: Kubernetes - Instalação - GitOps</title>
-<meta name="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).  ">
+<!-- begin _includes/seo.html --><title>Azure series I: Virtual machine - GitOps</title>
+<meta name="description" content="Serie de artigos sobre Microsoft Azure.  ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -19,32 +19,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="Containers series V: Kubernetes - Instalação">
-<meta property="og:url" content="https://josecastillolema.github.io/containers5-k8s-install/">
+<meta property="og:title" content="Azure series I: Virtual machine">
+<meta property="og:url" content="https://josecastillolema.github.io/azure1-vm/">
 
 
-  <meta property="og:description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).  ">
-
-
-
+  <meta property="og:description" content="Serie de artigos sobre Microsoft Azure.  ">
 
 
 
 
-  <meta property="article:published_time" content="2019-02-04T00:00:00-02:00">
 
 
 
-  <meta property="article:modified_time" content="2019-02-04T18:00:58-02:00">
+  <meta property="article:published_time" content="2021-02-18T00:00:00-03:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2021-02-18T17:00:58-03:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://josecastillolema.github.io/containers5-k8s-install/">
+
+<link rel="canonical" href="https://josecastillolema.github.io/azure1-vm/">
 
 
 
@@ -355,15 +355,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Containers series V: Kubernetes - Instalação">
-    <meta itemprop="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
-    <meta itemprop="datePublished" content="2019-02-04T00:00:00-02:00">
-    <meta itemprop="dateModified" content="2019-02-04T18:00:58-02:00">
+    <meta itemprop="headline" content="Azure series I: Virtual machine">
+    <meta itemprop="description" content="Serie de artigos sobre Microsoft Azure.">
+    <meta itemprop="datePublished" content="2021-02-18T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2021-02-18T17:00:58-03:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Containers series V: Kubernetes - Instalação
+          <h1 id="page-title" class="page__title" itemprop="headline">Azure series I: Virtual machine
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -371,7 +371,7 @@
 
 
 
-  5 minute read
+  9 minute read
 
 </p>
           
@@ -386,12 +386,11 @@
 <i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
   <li>
-<a href="#lab-5---kubernetes---instala%C3%A7%C3%A3o">Lab 5 - Kubernetes - Instalação</a>
+<a href="#lab-1---virtual-machine">Lab 1 - Virtual Machine</a>
     <ul>
-      <li><a href="#orquestrando-containers">Orquestrando containers</a></li>
-      <li><a href="#pre-reqs">Pre-reqs</a></li>
-      <li><a href="#instala%C3%A7%C3%A3o">Instalação</a></li>
-      <li><a href="#valida%C3%A7%C3%A3o">Validação</a></li>
+      <li><a href="#criando-a-instancia">Criando a instancia</a></li>
+      <li><a href="#accessando-%C3%A0-instancia">Accessando à instancia</a></li>
+      <li><a href="#instalando-um-servidor-web">Instalando um servidor web</a></li>
     </ul>
   </li>
 </ul>
@@ -399,209 +398,276 @@
             </nav>
           </aside>
         
-        <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
+        <p><a href="/series/#azure">Serie de artigos</a> sobre Microsoft Azure.</p>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="122" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-<h1 id="lab-5---kubernetes---instalação">Lab 5 - Kubernetes - Instalação</h1>
+<h1 id="lab-1---virtual-machine">Lab 1 - Virtual Machine</h1>
 
-<h2 id="orquestrando-containers">Orquestrando containers</h2>
-<p><a href="https://kubernetes.io/pt/" target="_blank" rel="noopener noreferrer"><strong>Kubernetes</strong> (k8s)</a>, da mesma forma que o Docker Swarm, permite orquestrar containers em um cluster formado por vários servidores. De esta forma conseguimos garantir as seguintes propriedades nos containers gerenciados pelo orquestrador:</p>
+<h2 id="criando-a-instancia">Criando a instancia</h2>
+<p>Usaremos a imagem oficial <code class="language-plaintext highlighter-rouge">Ubuntu Server</code> para aprender alguns conceitos importantes de máquinas virtuais:</p>
 <ul>
-  <li>
-<strong>tolerância a falhas</strong>: se um dos servidores do cluster cair, o container automaticamente será iniciado em outro servidor do cluster</li>
-  <li>
-<strong>alta disponibilidade</strong>: várias réplicas de cada container podem ser executadas em vários servidores do cluster</li>
-  <li>
-<strong>escalabilidade</strong>: o número de réplicas de cada container pode ser aumentado a qualquer momento em funçao da demanda</li>
+  <li><strong><em>flavors</em></strong></li>
+  <li><strong><em>security groups</em></strong></li>
+  <li><strong><a href="https://cloud-init.io/" target="_blank" rel="noopener noreferrer">cloud-init</a></strong></li>
 </ul>
-
-<p><a href="https://microk8s.io/" target="_blank" rel="noopener noreferrer"><strong>Microk8s</strong></a> é um Kubernetes pequeno, rápido, seguro e com um único nó (<em>all-in-one</em>) que é instalado em praticamente qualquer computador com Linux. Usado para desenvolvimento <em>off-line</em>, criação de protótipos, testes ou uso em uma VM como um k8s pequeno, barato e confiável para CI/CD.</p>
-
-<h2 id="pre-reqs">Pre-reqs</h2>
-
-<ul>
-  <li>
-    <p>Uma VM com a imagem <code class="language-plaintext highlighter-rouge">Ubuntu Linux 18.04</code></p>
-  </li>
-  <li>
-    <p>Flavor <code class="language-plaintext highlighter-rouge">t2.medium</code> (2 vcpus, 4 GB de memória) ou maior</p>
-  </li>
-</ul>
-
-<h2 id="instalação">Instalação</h2>
 
 <ol>
-  <li>Instalação do <strong>microk8s</strong>:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ sudo snap install microk8s --classic
- microk8s v1.18.0 from Canonical✓ installed
-</code></pre></div>    </div>
+  <li>
+    <p>Acessar o serviço <strong>Virtual machine</strong>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm00.png" alt=""></p>
   </li>
-  <li>Ajuste de permissões do usuário <strong><code class="language-plaintext highlighter-rouge">ubuntu</code></strong> no grupo <strong><code class="language-plaintext highlighter-rouge">microk8s</code></strong>:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ sudo usermod -a -G microk8s ubuntu
- $ sudo reboot
-</code></pre></div>    </div>
+  <li>
+    <p>Sempre que for criar novos recursos, selecione como <strong><em>subscription</em></strong> <code class="language-plaintext highlighter-rouge">Azure for students</code> e como <strong><em>resource group</em></strong> <code class="language-plaintext highlighter-rouge">19net</code>. Se o <em>resource group</em> ainda não existe, como é o caso, criar ele:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm01.png" alt=""></p>
   </li>
-  <li>Após o <em>reboot</em>, confirmar que o usuário pertence ao grupo <strong><code class="language-plaintext highlighter-rouge">microk8s</code></strong>:
+  <li>
+    <p>Configurar um nome para a instãncia, escolher a <strong>imagem</strong> <code class="language-plaintext highlighter-rouge">Ubuntu Server</code> e o <strong><em>flavor</em></strong> <code class="language-plaintext highlighter-rouge">Standard_B1</code>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm03.png" alt=""></p>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm02.png" alt=""></p>
+  </li>
+  <li>
+    <p>Usaremos chave ssh como método de acesso à VM:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm04.png" alt=""></p>
+  </li>
+  <li>
+    <p>A porta 22 no <strong><em>security group</em></strong> precisa estar aberta para poder acessar a instância via SSH:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm05.png" alt=""></p>
+  </li>
+  <li>
+    <p>Configurar <code class="language-plaintext highlighter-rouge">Standard HDD</code> como tipo de disco:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm06.png" alt=""></p>
+  </li>
+  <li>
+    <p>Usaremos um <em>script</em> de <strong><code class="language-plaintext highlighter-rouge">cloud-init</code></strong> para customizar a instância:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm07.png" alt=""></p>
+  </li>
+  <li>
+    <p>Confirmar criaçao da instância uma vez validada:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm08.png" alt=""></p>
+  </li>
+  <li>
+    <p>Fazer <em>download</em> da <strong>chave</strong> para poder acessar a instância via SSH de forma segura:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm09.png" width="465" height="342"></p>
+  </li>
+  <li>
+    <p>Aguardar a criacao da instância:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm10.png" alt=""></p>
+  </li>
+</ol>
+
+<h2 id="accessando-à-instancia">Accessando à instancia</h2>
+
+<ol>
+  <li>
+    <p>Note-se o IP público da instância:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png" alt=""></p>
+  </li>
+  <li>
+    <p>[<strong>Linux/MAC</strong>] Seguiremos as próprias indicações do Azure:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm12.png" alt=""></p>
+
+    <p>[<strong>Windows</strong>] Usaremos o <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" rel="noopener noreferrer">PuTTY</a>, seguindo as seguintes <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows" target="_blank" rel="noopener noreferrer">instruções</a>. Como alternativa ao PuTTy, o <a href="https://mobaxterm.mobatek.net/" target="_blank" rel="noopener noreferrer">MobaXterm</a> é uma excelente opçao.</p>
+  </li>
+  <li>[<strong>Linux/MAC</strong>] Em um terminal local:
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>$ groups
-ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
+<div class="highlight"><pre class="highlight"><code>$ chmod 400 aula1_key.pem 
+$ ssh -i aula1_key.pem  azureuser@168.61.32.71
+The authenticity of host '168.61.32.71 (168.61.32.71)' can't be established.
+ECDSA key fingerprint is SHA256:KASB7hYoy0WvdiE+zDEBlyFQ7eoO3bwco32davnUxCA.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '168.61.32.71' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1039-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Feb 18 13:57:15 UTC 2021
+
+  System load:  0.0               Processes:           107
+  Usage of /:   4.5% of 28.90GB   Users logged in:     0
+  Memory usage: 44%               IP address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+0 packages can be updated.
+0 of these updates are security updates.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo &lt;command&gt;".
+See "man sudo_root" for details.
+
+azureuser@aula1:~$ 
+</code></pre></div>    </div>
+
+    <p>[<strong>Windows</strong>] Seguir as instruções do PuTTY: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows</p>
+  </li>
+  <li>Uma vez logado na maquina virtual, confirmar que o script de <strong>cloud-init</strong> rodou com sucesso:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ ls /tmp/
+CloudInitFunciona
 </code></pre></div>    </div>
   </li>
 </ol>
 
-<h2 id="validação">Validação</h2>
+<h2 id="instalando-um-servidor-web">Instalando um servidor web</h2>
 
 <ol>
-  <li>Conferir instalação:
-    <div class="language-yaml highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.status</span>
- <span class="s">microk8s is running</span>
- <span class="s">addons</span><span class="pi">:</span>
- <span class="na">cilium</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">dashboard</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">dns</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">fluentd</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">gpu</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">helm</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">helm3</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">ingress</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">istio</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">jaeger</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">knative</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">kubeflow</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">linkerd</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">metallb</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">metrics-server</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">prometheus</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">rbac</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">registry</span><span class="pi">:</span> <span class="s">disabled</span>
- <span class="na">storage</span><span class="pi">:</span> <span class="s">disabled</span>
+  <li>Instalar o pacote <code class="language-plaintext highlighter-rouge">apache2</code>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>azureuser@aula1:~$ sudo apt install apache2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  linux-headers-4.15.0-135
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  liblua5.2-0 ssl-cert
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap liblua5.2-0 ssl-cert
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1729 kB of archives.
+After this operation, 6985 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.14 [1070 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.14 [83.9 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.14 [160 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.14 [95.1 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Fetched 1729 kB in 0s (28.4 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 76706 files and directories currently installed.)
+Preparing to unpack .../0-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../1-libaprutil1_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../3-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../4-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../5-apache2-bin_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../6-apache2-utils_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../7-apache2-data_2.4.29-1ubuntu4.14_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../8-apache2_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../9-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Setting up libapr1:amd64 (1.6.3-2) ...
+Setting up apache2-data (2.4.29-1ubuntu4.14) ...
+Setting up ssl-cert (1.0.39) ...
+Setting up libaprutil1:amd64 (1.6.1-2) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Setting up apache2-utils (2.4.29-1ubuntu4.14) ...
+Setting up apache2-bin (2.4.29-1ubuntu4.14) ...
+Setting up apache2 (2.4.29-1ubuntu4.14) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+Processing triggers for systemd (237-3ubuntu10.44) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ufw (0.36-0ubuntu0.18.04.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
 </code></pre></div>    </div>
   </li>
-  <li>Usar o cliente interno do microk8s (<strong><code class="language-plaintext highlighter-rouge">microk8s.kubectl</code></strong>):
+  <li>Criar um <em>site</em> de teste, no arquivo <code class="language-plaintext highlighter-rouge">/var/www/html/index.html</code> (como usuário admin):
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ microk8s.kubectl get all
- NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
- service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   4m5s
+<div class="highlight"><pre class="highlight"><code>&lt;h1&gt;
+   FIAP!!!
+&lt;/h1&gt;
 </code></pre></div>    </div>
   </li>
-  <li>Instalação do cliente externo (<strong><code class="language-plaintext highlighter-rouge">kubectl</code></strong>):
+  <li>Testar localmente o servidor web:
     <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ sudo snap install kubectl --classic
- kubectl 1.18.0 from Canonical✓ installed
+<div class="highlight"><pre class="highlight"><code>azureuser@aula1:~$ curl localhost
+&lt;h1&gt;
+   FIAP!!!
+&lt;/h1&gt;
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Configuracão dos parámetros de acesso (URL, credenciais, etc.) do cliente externo:</p>
-
-    <div class="language-yaml highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.config &gt; .kube/config</span>
- <span class="s">$ cat .kube/config</span> 
- <span class="s">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
- <span class="na">clusters</span><span class="pi">:</span>
- <span class="pi">-</span> <span class="na">cluster</span><span class="pi">:</span>
-     <span class="na">certificate-authority-data</span><span class="pi">:</span> <span class="s">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURBVENDQWVtZ0F3SUJBZ0lKQUx5UmJTeUd2NjRLTUEwR0NTcUdTSWIzRFFFQkN3VUFNQmN4RlRBVEJnTlYKQkFNTURERXdMakUxTWk0eE9ETXVNVEFlRncweU1EQTBNVFV5TURBek1URmFGdzB5TURBMU1UVXlNREF6TVRGYQpNQmN4RlRBVEJnTlZCQU1NRERFd0xqRTFNaTR4T0RNdU1UQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQCkFEQ0NBUW9DZ2dFQkFNODM5REltV1VLN2JNMWQ1OVR1SThITnRBbVlOQ2hqSStFa0txa2g5T1lPaWV0c0xjbDIKS2p5Ym5nRTJyOHp4M21YeEtGSmhnZGJxVzNmVHpGOGtxNGNKbVdFc0UxKzFtdFRaRUNFU0lrVmFlK3NUbjMvMwo0VWRYckV3SW5tQjJsMDlCRFNXblRBTHBaVUhnSFRvcUhOQmVzTlVlQ3h6Z0dzUWgranRGSlEzMWp4QnNqQnFNCk1EM1ZNRlFCK2FMUW5pSTM0UTZrNm8zZmR5dTArQlhJNHVYR3hldWFBVzViZStidWlPUlQ3a3hhdnZ4bmNsOE4KTFd0aG4wK2hjKzNEUE1DdXhxT2dra0UvRFZCV2trdklsbHBMeG5RLzU3b1BxUHVFVXRzd1hJeGZRMi9EUTBNdwpzZ1pLT0trNzYrby9nakhmaTNtRjArYTJWaUZPcm9FVTVBTUNBd0VBQWFOUU1FNHdIUVlEVlIwT0JCWUVGUE1LCkMyaXl0QkZxVTM3VU1uRXJHZEYrZnoyeU1COEdBMVVkSXdRWU1CYUFGUE1LQzJpeXRCRnFVMzdVTW5FckdkRisKZnoyeU1Bd0dBMVVkRXdRRk1BTUJBZjh3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUpRdG5HbGZPVTk5VGdyZgpUNDkxc3hCSUUydVdEVG9Pc3BMVC9hcEFjK1JSdGtlWk1tS1NQNjYzNTFhQnJEamFCem9nblZ6WVNDQWxEU3Y1Cm95bVN3MTBQUms2SGt0QW44YzlFOGFFTHpyOHowZytOVE1sazRDRHNtQTcrN3hpMm1UaEM3bitzMWpXd1Ztd08KUzdRWG05dTIyS2g4MFk4aU1qVHRDdDBTY2I1TFdFVmwyLzRzWHhyQnZiSFBpbllRdjZSdFhvQWxlODFGMmZZLwpjVDg0L0dHNHRJdXd0VlB2b09hS0lKTzZLT1l6a0VzcU81SFdiTnltZ2xpVGxlMEFBLzdEUUprd1c0M0h4clF1CmdoMThrVURtQXpJa2Z0dDV0M1pKVnNJR2xGUnprZXRJK25TVnVYbjhHN0l5NEd5aWdiNmlZcE1EeE9CblhXWG0KbG43L09YZz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=</span>
-     <span class="na">server</span><span class="pi">:</span> <span class="s">https://172.31.47.198:16443</span>
-   <span class="na">name</span><span class="pi">:</span> <span class="s">microk8s-cluster</span>
- <span class="na">contexts</span><span class="pi">:</span>
- <span class="pi">-</span> <span class="na">context</span><span class="pi">:</span>
-     <span class="na">cluster</span><span class="pi">:</span> <span class="s">microk8s-cluster</span>
-     <span class="na">user</span><span class="pi">:</span> <span class="s">admin</span>
-   <span class="na">name</span><span class="pi">:</span> <span class="s">microk8s</span>
- <span class="na">current-context</span><span class="pi">:</span> <span class="s">microk8s</span>
- <span class="na">kind</span><span class="pi">:</span> <span class="s">Config</span>
- <span class="na">preferences</span><span class="pi">:</span> <span class="pi">{}</span>
- <span class="na">users</span><span class="pi">:</span>
- <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">admin</span>
-   <span class="na">user</span><span class="pi">:</span>
-     <span class="na">username</span><span class="pi">:</span> <span class="s">admin</span>
-     <span class="na">password</span><span class="pi">:</span> <span class="s">NldvWW5rZGFzY3I4Tkw4SVY4Y25kV3YrR1lXcnZNek1tc2Z2a2prVStEQT0K\</span>
-</code></pre></div>    </div>
+    <p>Obter o IP público da VM:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png" alt=""></p>
   </li>
-  <li>Testar o cliente externo:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ kubectl get all --all-namespaces
- NAMESPACE   NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
- default     service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   6m46s
-</code></pre></div>    </div>
+  <li>
+    <p>Testar accesso pelo IP público:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm13.png" alt=""></p>
   </li>
-  <li>Habilitar os <em>plugins</em> <strong><code class="language-plaintext highlighter-rouge">dns</code></strong> e <strong><code class="language-plaintext highlighter-rouge">dashboard</code></strong>:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code> $ microk8s.enable dns dashboard
- Enabling DNS
- Applying manifest
- serviceaccount/coredns created
- configmap/coredns created
- deployment.apps/coredns created
- service/kube-dns created
- clusterrole.rbac.authorization.k8s.io/coredns created
- clusterrolebinding.rbac.authorization.k8s.io/coredns created
- Restarting kubelet
- DNS is enabled
- Applying manifest
- serviceaccount/kubernetes-dashboard created
- service/kubernetes-dashboard created
- secret/kubernetes-dashboard-certs created
- secret/kubernetes-dashboard-csrf created
- secret/kubernetes-dashboard-key-holder created
- configmap/kubernetes-dashboard-settings created
- role.rbac.authorization.k8s.io/kubernetes-dashboard created
- clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard created
- rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
- clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
- deployment.apps/kubernetes-dashboard created
- service/dashboard-metrics-scraper created
- deployment.apps/dashboard-metrics-scraper created
- service/monitoring-grafana created
- service/monitoring-influxdb created
- service/heapster created
- deployment.apps/monitoring-influxdb-grafana-v4 created
- serviceaccount/heapster created
- clusterrolebinding.rbac.authorization.k8s.io/heapster created
- configmap/heapster-config created
- configmap/eventer-config created
- deployment.apps/heapster-v1.5.2 created
+  <li>Como era esperado, o acesso web não funcionou pois a porta HTTP (TCP/80) deve ser liberada nos <em>security groups</em>. Incluir uma liberação para esta porta no <em>security group</em> associado à instância:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm14.png" alt="">
+</li>
+</ol>
 
- If RBAC is not enabled access the dashboard using the default token retrieved with:
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm15.png" alt=""></p>
 
- token=$(microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
- microk8s kubectl -n kube-system describe secret $token
-
- In an RBAC enabled setup (microk8s enable RBAC) you need to create a user with restricted
- permissions as shown in:
- https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
-</code></pre></div>    </div>
+<ol>
+  <li>
+    <p>Validar a criação da regra: 
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm16.png" alt=""></p>
   </li>
-  <li>Confirmar que os <em>plugins</em> estão habilitados:
-    <div class="language-plaintext highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code>$ microk8s.status
-microk8s is running
-addons:
-dashboard: enabled
-dns: enabled
-cilium: disabled
-fluentd: disabled
-gpu: disabled
-helm: disabled
-helm3: disabled
-ingress: disabled
-istio: disabled
-jaeger: disabled
-knative: disabled
-kubeflow: disabled
-linkerd: disabled
-metallb: disabled
-metrics-server: disabled
-prometheus: disabled
-rbac: disabled
-registry: disabled
-storage: disabled
-</code></pre></div>    </div>
+  <li>
+    <p>Testar novamente o acesso pelo IP público:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm17.png" alt=""></p>
   </li>
 </ol>
 
@@ -626,6 +692,10 @@ storage: disabled
     
       
       
+      <a href="/tags/#azure" class="page__taxonomy-item" rel="tag">azure</a><span class="sep">, </span>
+    
+      
+      
       <a href="/tags/#classes" class="page__taxonomy-item" rel="tag">classes</a><span class="sep">, </span>
     
       
@@ -634,19 +704,7 @@ storage: disabled
     
       
       
-      <a href="/tags/#iac" class="page__taxonomy-item" rel="tag">iac</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#openshift" class="page__taxonomy-item" rel="tag">openshift</a><span class="sep">, </span>
-    
-      
-      
       <a href="/tags/#pt" class="page__taxonomy-item" rel="tag">pt</a><span class="sep">, </span>
-    
-      
-      
-      <a href="/tags/#redhat" class="page__taxonomy-item" rel="tag">redhat</a><span class="sep">, </span>
     
       
       
@@ -659,7 +717,7 @@ storage: disabled
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-02-04">February 4, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-02-18">February 18, 2021</time></p>
         
       </footer>
 
@@ -668,23 +726,22 @@ storage: disabled
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Containers+series+V%3A+Kubernetes+-+Instala%C3%A7%C3%A3o%20https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers5-k8s-install%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Azure+series+I%3A+Virtual+machine%20https%3A%2F%2Fjosecastillolema.github.io%2Fazure1-vm%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers5-k8s-install%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fazure1-vm%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers5-k8s-install%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Fazure1-vm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/containers4-docker-swarm/" class="pagination--pager" title="Containers series IV: Docker Swarm
+      <a href="/hcia-5g/" class="pagination--pager" title="HCIA 5G - 1st edition
 ">Previous</a>
     
     
-      <a href="/containers6-kompose/" class="pagination--pager" title="Containers series VI: Kompose
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -707,36 +764,6 @@ storage: disabled
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/azure1-vm/" rel="permalink">Azure series I: Virtual machine
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Serie de artigos sobre Microsoft Azure.
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -817,7 +844,37 @@ storage: disabled
 
 
 
-  3 minute read
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/calico/" rel="permalink">Certified Calico Operator
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
 
 </p>
     
@@ -932,8 +989,8 @@ storage: disabled
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/containers5-k8s-install/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/containers5-k8s-install"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/azure1-vm/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/azure1-vm"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
