@@ -40,7 +40,10 @@ toc: true
 # Azure
 
 ## Infrastructure as a Service (IaaS)
-- Azure I: [Virtual machine](/azure1-vm)
+- Azure I: [Virtual machines](/azure1-vm)
+- Azure II: [Containers](/azure2-container)
+- Azure III: [Disks](/azure3-disk)
+- Azure IV: [Blob storage](/azure4-blob)
 
 # Containers
 - Containers I: [Docker](/containers1-docker)
