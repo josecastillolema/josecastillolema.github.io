@@ -677,9 +677,27 @@ var store = [{
         "url": "https://josecastillolema.github.io/hcia-5g/",
         "teaser": null
       },{
-        "title": "Azure series I: Virtual machine",
-        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 1 - Virtual Machine Criando a instancia Usaremos a imagem oficial Ubuntu Server para aprender alguns conceitos importantes de máquinas virtuais: flavors security groups cloud-init Acessar o serviço Virtual machine: Sempre que for criar novos recursos, selecione como subscription Azure for students e...","categories": [],
+        "title": "Azure series I: Virtual machines",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 1 - Virtual Machines Criando a instancia Usaremos a imagem oficial Ubuntu Server para aprender alguns conceitos importantes de máquinas virtuais: flavors security groups cloud-init Acessar o serviço Virtual machine: Sempre que for criar novos recursos, selecione como subscription Azure for students e...","categories": [],
         "tags": ["azure","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/azure1-vm/",
+        "teaser": null
+      },{
+        "title": "Azure series II: Containers",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 2 - Containers Criando a instância Usaremos a imagem josecastillolema/api hospedada no Docker Hub para aprender alguns conceitos importantes dos Azure Containers: Deploy de containers no Azure Mapeamento de portas Memory limits Acessar o serviço Container Instances: Parametrização da instância: Imagem: josecastillolema/api hospedada...","categories": [],
+        "tags": ["azure","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/azure2-container/",
+        "teaser": null
+      },{
+        "title": "Azure series III: Disks",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 2 - Azure Disks Em este lab sobre disks aprenderemos alguns conceitos importantes do armazenamento em bloco: Criação de volumes Anexar volumes a instâncias Configurar volumes dentro das instâncias Formatação Criação do sistema de arquivos Montar o volume Pre-reqs Na maquina virtual do...","categories": [],
+        "tags": ["azure","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/azure3-disk/",
+        "teaser": null
+      },{
+        "title": "Azure series IV: Blob storage",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 4 - Blob storage Em este lab sobre Azure Blob Storage aprenderemos alguns conceitos importantes do armazenamento de objetos: Criação de containers Criação de objetos (blobs) Controle de permissões de acesso Hospedagem de sites estáticos Criação do bucket Accessar o serviço Storage account:...","categories": [],
+        "tags": ["azure","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/azure4-blob/",
         "teaser": null
       }]
