@@ -696,8 +696,20 @@ var store = [{
         "teaser": null
       },{
         "title": "Azure series IV: Blob storage",
-        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 4 - Blob storage Em este lab sobre Azure Blob Storage aprenderemos alguns conceitos importantes do armazenamento de objetos: Criação de containers Criação de objetos (blobs) Controle de permissões de acesso Hospedagem de sites estáticos Criação do bucket Accessar o serviço Storage account:...","categories": [],
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 4 - Blob storage Em este lab sobre Azure Blob Storage aprenderemos alguns conceitos importantes do armazenamento de objetos: Criação de containers Criação de objetos (blobs) Controle de permissões de acesso Hospedagem de sites estáticos Criação do container Accessar o serviço Storage account:...","categories": [],
         "tags": ["azure","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/azure4-blob/",
+        "teaser": null
+      },{
+        "title": "Azure series V: App services",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 5 - App Service Plans Em este lab sobre App Service Plans aprenderemos alguns conceitos importantes da camada de plataforma da Azure: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Estratégias de release Blue-Green Canary Pre-reqs Uma VM com a imagem Ubuntu...","categories": [],
+        "tags": ["azure","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/azure5-app/",
+        "teaser": null
+      },{
+        "title": "FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition",
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "tags": ["aws","cert","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-aws-foundations-3/",
         "teaser": null
       }]
