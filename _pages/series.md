@@ -45,6 +45,9 @@ toc: true
 - Azure III: [Disks](/azure3-disk)
 - Azure IV: [Blob storage](/azure4-blob)
 
+## Platform as a Service (PaaS)
+- Azure V: [App services](/azure5-app)
+
 # Containers
 - Containers I: [Docker](/containers1-docker)
 - Containers II: [Docker - continuação](/containers2-docker2)
