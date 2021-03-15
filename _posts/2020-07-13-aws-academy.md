@@ -1,6 +1,6 @@
 ---
 title:  "AWS Academy"
-last_modified_at: 2021-01-07T16:00:58-04:00
+last_modified_at: 2021-03-15T16:00:58-04:00
 tags:
   - aws
   - cert
@@ -50,6 +50,8 @@ Este curso introdutório apresenta aos alunos os conceitos e a terminologia de i
 ### AWS Academy Data Analytics (ADA)
 
 Estes exercícios de laboratório ensinam os alunos a conduzir a análise de Big Data com exemplos práticos do mundo real. Os laboratórios e os recursos de aprendizado foram projetados para complementar os cursos de análise de dados existentes em uma instituição e fornecer aos alunos uma experiência prática ao trabalhar com dados em escala. Voltado para estudantes interessados em seguir carreiras em análise de dados, o AWS Academy Data Analytics requer uma base sólida em conceitos e habilidades de TI e contém **7.5 horas** de conteúdo.
+
+Na FIAP ofertamos este curso aos alunos do [MBA em Engenharia de dados](/fiap-abd).
 
 ![](/assets/images/posts/2020-07-09-aws-academy/08.png)
 

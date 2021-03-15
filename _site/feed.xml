@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-03-15T14:50:05-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-3/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition" /><published>2021-03-10T00:00:00-03:00</published><updated>2021-03-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-10-shift-aws-foundations-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-03-15T15:00:04-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-3/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition" /><published>2021-03-10T00:00:00-03:00</published><updated>2021-03-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-10-shift-aws-foundations-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
 
@@ -412,7 +412,11 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">Azure series III: Disks</title><link href="https://josecastillolema.github.io/azure3-disk/" rel="alternate" type="text/html" title="Azure series III: Disks" /><published>2021-02-22T00:00:00-03:00</published><updated>2021-02-22T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure3-disk</id><content type="html" xml:base="https://josecastillolema.github.io/azure3-disk/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">FIAP MBA em Engenharia de Dados (ABD)</title><link href="https://josecastillolema.github.io/fiap-abd/" rel="alternate" type="text/html" title="FIAP MBA em Engenharia de Dados (ABD)" /><published>2021-02-25T00:00:00-03:00</published><updated>2021-02-25T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-abd</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-abd/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/mba/mba-em-engenharia-de-dados/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/img/abd.jpg&quot; alt=&quot;FIAP MBA&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/fiap/tree/master/abd/dbaas&quot;&gt;DataBase as a Service - DBaaS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html">DataBase as a Service - DBaaS</summary></entry><entry><title type="html">Azure series III: Disks</title><link href="https://josecastillolema.github.io/azure3-disk/" rel="alternate" type="text/html" title="Azure series III: Disks" /><published>2021-02-22T00:00:00-03:00</published><updated>2021-02-22T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure3-disk</id><content type="html" xml:base="https://josecastillolema.github.io/azure3-disk/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
 
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
@@ -1087,45 +1091,4 @@ Processing triggers for ureadahead (0.100.0-21) ...
       &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Certified Calico Operator</title><link href="https://josecastillolema.github.io/calico/" rel="alternate" type="text/html" title="Certified Calico Operator" /><published>2021-01-05T00:00:00-03:00</published><updated>2021-01-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/calico</id><content type="html" xml:base="https://josecastillolema.github.io/calico/">&lt;p&gt;&lt;a href=&quot;https://www.projectcalico.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://academy.tigera.io/course/certified-calico-operator-level-1/&quot;&gt;Certified Calico Operator: Level 1&lt;/a&gt; course for everyone interested in Kubernetes networking.&lt;/p&gt;
-
-&lt;p&gt;This free and self-paced course will arm you with the knowledge you need to understand how Kubernetes networking works, how to configure and manage a Calico network, and how to secure your cluster following today’s best practices, with the confidence you need to run mission critical workloads in production.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-the-course-covers&quot;&gt;What the Course Covers&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction to Kubernetes Networking&lt;/li&gt;
-  &lt;li&gt;Installing Calico&lt;/li&gt;
-  &lt;li&gt;Everything you need to know about Network Policy, including:
-    &lt;ul&gt;
-      &lt;li&gt;Introduction to Network Policy&lt;/li&gt;
-      &lt;li&gt;Best Practices for Network Policy&lt;/li&gt;
-      &lt;li&gt;Managing Trust Across Teams&lt;/li&gt;
-      &lt;li&gt;Network Policy for Hosts and NodePorts&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Everything you need to know about network connectivity, including:
-    &lt;ul&gt;
-      &lt;li&gt;Pod Connectivity Fundamentals&lt;/li&gt;
-      &lt;li&gt;Calico’s Next Generation eBPF Dataplane&lt;/li&gt;
-      &lt;li&gt;Encrypting Data in Transit&lt;/li&gt;
-      &lt;li&gt;Fun with IP Address Management&lt;/li&gt;
-      &lt;li&gt;Peering with BGP&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Everything you need to know about Kubernetes Services, including:
-    &lt;ul&gt;
-      &lt;li&gt;Introduction to Kubernetes Services&lt;/li&gt;
-      &lt;li&gt;Understanding Kube-Proxy Service Handling&lt;/li&gt;
-      &lt;li&gt;Understanding Calico Native Service Handling&lt;/li&gt;
-      &lt;li&gt;Advertising Services&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
-
-&lt;p&gt;At the end of the course, you can earn a certificate by passing a final exam.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://courses.academy.tigera.io/certificates/90b9e57cdec7460b8243401246da2e67&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-05-calico/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><category term="networks" /><category term="nfv" /><category term="openshift" /><category term="sdn" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
