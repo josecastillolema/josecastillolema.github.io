@@ -509,12 +509,6 @@ var store = [{
         "url": "https://josecastillolema.github.io/aws4-autoscaling/",
         "teaser": null
       },{
-        "title": "AWS Academy",
-        "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
-        "url": "https://josecastillolema.github.io/aws-academy/",
-        "teaser": null
-      },{
         "title": "AWS series V: Elastic Container Service (ECS)",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 3 - AWS ECS Criando a instância Usaremos a imagem josecastillolema/api hospedada no Docker Hub para aprender alguns conceitos importantes do Elastic Container Service: Deploy de containers no ECS Mapeamento de portas Memory limits Acessar o serviço ECS: Lançar o assistente de...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
@@ -525,6 +519,12 @@ var store = [{
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 6 - AWS Elastic Beanstalk Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Pre-reqs git python3 pip3 Se não tiver os pre-reqs na máquina...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws6-eb/",
+        "teaser": null
+      },{
+        "title": "AWS Academy",
+        "excerpt":"Benefícios do programa Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem. Crie habilidades alinhadas à AWS...","categories": [],
+        "tags": ["aws","cert","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       },{
         "title": "AWS series VII: Elastic Beanstalk (EB) com Spring Boot",
@@ -693,6 +693,12 @@ var store = [{
         "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 2 - Azure Disks Em este lab sobre disks aprenderemos alguns conceitos importantes do armazenamento em bloco: Criação de volumes Anexar volumes a instâncias Configurar volumes dentro das instâncias Formatação Criação do sistema de arquivos Montar o volume Pre-reqs Na maquina virtual do...","categories": [],
         "tags": ["azure","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/azure3-disk/",
+        "teaser": null
+      },{
+        "title": "FIAP MBA em Engenharia de Dados (ABD)",
+        "excerpt":"      DataBase as a Service - DBaaS   ","categories": [],
+        "tags": ["aws","azure","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/fiap-abd/",
         "teaser": null
       },{
         "title": "Azure series IV: Blob storage",
