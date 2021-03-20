@@ -515,10 +515,10 @@ var store = [{
         "url": "https://josecastillolema.github.io/aws5-ecs/",
         "teaser": null
       },{
-        "title": "AWS series VI: Elastic Beanstalk (EB)",
+        "title": "AWS series VII: Elastic Beanstalk (EB)",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 6 - AWS Elastic Beanstalk Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Pre-reqs git python3 pip3 Se não tiver os pre-reqs na máquina...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws6-eb/",
+        "url": "https://josecastillolema.github.io/aws7-eb/",
         "teaser": null
       },{
         "title": "AWS Academy",
@@ -527,22 +527,22 @@ var store = [{
         "url": "https://josecastillolema.github.io/aws-academy/",
         "teaser": null
       },{
-        "title": "AWS series VII: Elastic Beanstalk (EB) com Spring Boot",
+        "title": "AWS series VIII: Elastic Beanstalk (EB) com Spring Boot",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 10 - AWS Elastic Beanstalk com Spring Boot Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Deploy local Clonar o repositório: git clone https://github.com/josecastillolema/fiap...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws7-eb-springboot/",
+        "url": "https://josecastillolema.github.io/aws8-eb-springboot/",
         "teaser": null
       },{
-        "title": "AWS series VIII: CodePipeline",
-        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 7 - AWS CP Em este lab sobre Code Pipeline aprenderemos alguns conceitos importantes da criação de pipelines: Criação do pipeline Automação de deploy no Beanstalk Pre-reqs A aplicação do lab de Beanstalk precisa estar no ar: Criação de um repositório no...","categories": [],
-        "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws8-cp/",
-        "teaser": null
-      },{
-        "title": "AWS series IX: DynamoDB",
+        "title": "AWS series XI: DynamoDB",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 8 - AWS DynamoDB Em este lab sobre DynamoDB aprenderemos alguns conceitos importantes na criação de DBaaS NoSQL: Criação de tabelas Inserção/consulta de dados via console Inserção/consulta via código python Aproveitaremos para ver alguns conceitos importantes sobre Identity and Access Management (IAM):...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws9-dynamodb/",
+        "url": "https://josecastillolema.github.io/aws11-dynamodb/",
+        "teaser": null
+      },{
+        "title": "AWS series IX: CodePipeline",
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 7 - AWS CP Em este lab sobre Code Pipeline aprenderemos alguns conceitos importantes da criação de pipelines: Criação do pipeline Automação de deploy no Beanstalk Pre-reqs A aplicação do lab de Beanstalk precisa estar no ar: Criação de um repositório no...","categories": [],
+        "tags": ["aws","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/aws9-cp/",
         "teaser": null
       },{
         "title": "Huawei ICT Academy",
@@ -551,22 +551,22 @@ var store = [{
         "url": "https://josecastillolema.github.io/haina/",
         "teaser": null
       },{
-        "title": "AWS series X: Elastic MapReduce (EMR)",
+        "title": "AWS series XIII: Elastic MapReduce (EMR)",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 12 - Elastic MapReduce Em este lab sobre EMR aprenderemos alguns conceitos da plataforma de Big Data as a Service da AWS: Criação de cluster Acesso via WEB e SSH/CLI Monitoramento Configuração do serviço Acessar o serviço EMR: Iniciar a criação do...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws10-emr/",
+        "url": "https://josecastillolema.github.io/aws13-emr/",
         "teaser": null
       },{
-        "title": "AWS series XI: API Gateway",
+        "title": "AWS series X: API Gateway",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 11 - Amazon API Gateway Em este lab sobre API Gateway aprenderemos alguns conceitos do API gateway da plataforma da AWS: Configuração de rotas Throttling (limitação do número de requisições por segundo) Monitoramento Pre-reqs Dois URLs accessíveis. Por exemplo, dois apps no...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws11-apigw/",
+        "url": "https://josecastillolema.github.io/aws10-apigw/",
         "teaser": null
       },{
-        "title": "AWS series XII: Lambda",
+        "title": "AWS series XIV: Lambda",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 13 - Amazon Lambda Em este lab sobre Lambda aprenderemos alguns conceitos do modulo de Function as a Service (FaaS) / serverless da plataforma da AWS: Criação de funções Lambda Teste de funções Criação de triggers (via API Gateway) Pre-reqs A seguinte...","categories": [],
         "tags": ["aws","classes","fiap","pt","series"],
-        "url": "https://josecastillolema.github.io/aws12-lambda/",
+        "url": "https://josecastillolema.github.io/aws14-lambda/",
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Foundations",
@@ -701,6 +701,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/fiap-abd/",
         "teaser": null
       },{
+        "title": "AWS series VII: Relational Database Service (RDS)",
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 5 - AWS RDS Em este lab sobre Relational Database Service (RDS) aprenderemos alguns conceitos importantes na criação de serviços de DBaaS NoSQL: Criação de instâncias RDS Plataformas/entornos disponíveis Logging Monitoramento Criação da instância RDS Acessar o serviço RDS: Criar um novo...","categories": [],
+        "tags": ["aws","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/aws12-rds/",
+        "teaser": null
+      },{
         "title": "Azure series IV: Blob storage",
         "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 4 - Blob storage Em este lab sobre Azure Blob Storage aprenderemos alguns conceitos importantes do armazenamento de objetos: Criação de containers Criação de objetos (blobs) Controle de permissões de acesso Hospedagem de sites estáticos Criação do container Accessar o serviço Storage account:...","categories": [],
         "tags": ["azure","classes","fiap","pt","series"],
@@ -717,5 +723,11 @@ var store = [{
         "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations-3/",
+        "teaser": null
+      },{
+        "title": "AWS series VI: CloudFormation",
+        "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 14 - AWS CloudFormation Em este lab sobre CloudFormation aprenderemos alguns conceitos importantes do paradigma de Infrastructure as Code (IaC): Criação de stacks Parametrização Monitoramento Criaremos um stack que configura um servidor WordPress. Criação do stack Accessar o serviço CloudFormation e criar...","categories": [],
+        "tags": ["aws","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/aws6-cloudformation/",
         "teaser": null
       }]
