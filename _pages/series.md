@@ -24,18 +24,24 @@ toc: true
 - AWS III: [Simple Storage Service (S3)](/aws3-s3)
 - AWS IV: [Auto Scaling](/aws4-autoscaling)
 - AWS V: [Elastic Container Service (ECS)](/aws5-ecs)
+- AWS VI: [CloudFormation](/aws6-cloudformation)
 
 
 ## Platform as a Service (PaaS)
-- AWS VI: [Elastic Beanstalk (EB)](/aws6-eb)
-- AWS VII: [Elastic Beanstalk (EB) com Spring Boot](/aws7-eb-springboot)
-- AWS VIII: [CodePipeline](/aws8-cp)
-- AWS IX: [DynamoDB](/aws9-dynamodb)
-- AWS X: [Elastic MapReduce (EMR)](/aws10-emr)
-- AWS XI: [API Gateway](/aws11-apigw)
+- AWS VII: [Elastic Beanstalk (EB)](/aws7-eb)
+- AWS VIII: [Elastic Beanstalk (EB) com Spring Boot](/aws8-eb-springboot)
+- AWS IX: [CodePipeline](/aws9-cp)
+- AWS X: [API Gateway](/aws10-apigw)
+
+### Database as a Service (DBaaS)
+- AWS XI: [DynamoDB](/aws11-dynamodb)
+- AWS XII: [Relational Database Service (RDS)](/aws12-rds)
+
+### Big Data as a Service (BDaaS)
+- AWS XIII: [Elastic MapReduce (EMR)](/aws13-emr)
 
 ## Function as a Service (FaaS)
-- AWS XII: [Lambda](/aws12-lambda)
+- AWS XIV: [Lambda](/aws14-lambda)
 
 # Azure
 

@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-03-15T15:00:04-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-3/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition" /><published>2021-03-10T00:00:00-03:00</published><updated>2021-03-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-10-shift-aws-foundations-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-03-20T11:33:44-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">AWS series VI: CloudFormation</title><link href="https://josecastillolema.github.io/aws6-cloudformation/" rel="alternate" type="text/html" title="AWS series VI: CloudFormation" /><published>2021-03-20T00:00:00-03:00</published><updated>2021-03-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws6-cloudformation</id><content type="html" xml:base="https://josecastillolema.github.io/aws6-cloudformation/">&lt;p&gt;&lt;a href=&quot;/series/#aws&quot;&gt;Serie de artigos&lt;/a&gt; sobre Amazon Web Services.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;lab-14---aws-cloudformation&quot;&gt;Lab 14 - AWS CloudFormation&lt;/h1&gt;
+
+&lt;p&gt;Em este lab sobre &lt;a href=&quot;https://aws.amazon.com/pt/cloudformation/&quot;&gt;&lt;strong&gt;CloudFormation&lt;/strong&gt;&lt;/a&gt; aprenderemos alguns conceitos importantes do paradigma de Infrastructure as Code (IaC):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Criação de &lt;em&gt;stacks&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Parametrização&lt;/li&gt;
+  &lt;li&gt;Monitoramento&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Criaremos um &lt;em&gt;stack&lt;/em&gt; que configura um servidor WordPress.&lt;/p&gt;
+
+&lt;h2 id=&quot;criação-do-stack&quot;&gt;Criação do &lt;em&gt;stack&lt;/em&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Accessar o serviço &lt;strong&gt;CloudFormation&lt;/strong&gt; e criar um novo &lt;em&gt;stack&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fazer &lt;em&gt;upload&lt;/em&gt; do &lt;em&gt;template&lt;/em&gt; &lt;a href=&quot;https://github.com/josecastillolema/fiap/blob/master/shift/multicloud/lab14-iaas-cloudformation/lab14-iaas-cloudformation.yaml&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lab14-iaas-cloudformation.yaml&lt;/code&gt;&lt;/a&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;No &lt;em&gt;designer&lt;/em&gt; podemos visualizar e editar graficamente o conteúdo do &lt;em&gt;template&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Parametrização do &lt;em&gt;stack&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Opçoes avançadas (sem mudanças):
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Revisar e confirmar a criação do &lt;em&gt;stack&lt;/em&gt;:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;accesso-ao-stack&quot;&gt;Accesso ao &lt;em&gt;stack&lt;/em&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar o &lt;em&gt;stack&lt;/em&gt; transicionar ao estado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CREATE_COMPLETE&lt;/code&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Confirmar a URL do WordPress:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Accessar o WordPress:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Amazon Web Services.</summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-3/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition" /><published>2021-03-10T00:00:00-03:00</published><updated>2021-03-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-10-shift-aws-foundations-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
 
@@ -167,9 +231,9 @@
 &lt;ol&gt;
   &lt;li&gt;Clonar o repositório local criado nos passos anteriores (copiar a URI do repositorio git local no passo anterior) usando as credencias recém criadas:
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://fiap-app.scm.azurewebsites.net:443/fiap.git
- Cloning into &apos;fiap-app&apos;...
- Username for &apos;https://fiap.scm.azurewebsites.net:443&apos;: jlema
- Password for &apos;https://jlema@fiap.scm.azurewebsites.net:443&apos;: 
+ Cloning into 'fiap-app'...
+ Username for 'https://fiap.scm.azurewebsites.net:443': jlema
+ Password for 'https://jlema@fiap.scm.azurewebsites.net:443': 
  warning: You appear to have cloned an empty repository.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
@@ -218,16 +282,16 @@ After doing this, you may fix the identity used for this commit with:
  create mode 100644 requirements.txt
      
 $ git push origin master
-Username for &apos;https://fiap.scm.azurewebsites.net:443&apos;: jlema
-Password for &apos;https://jlema@fiap.scm.azurewebsites.net:443&apos;: 
+Username for 'https://fiap.scm.azurewebsites.net:443': jlema
+Password for 'https://jlema@fiap.scm.azurewebsites.net:443': 
 Counting objects: 4, done.
 Compressing objects: 100% (4/4), done.
 Writing objects: 100% (4/4), 487 bytes | 487.00 KiB/s, done.
 Total 4 (delta 0), reused 0 (delta 0)
 remote: Deploy Async
-remote: Updating branch &apos;master&apos;.
+remote: Updating branch 'master'.
 remote: Updating submodules.
-remote: Preparing deployment for commit id &apos;a64c6ae136&apos;.
+remote: Preparing deployment for commit id 'a64c6ae136'.
 remote: Repository path is /home/site/repository
 remote: Running oryx build...
 remote: Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
@@ -244,7 +308,7 @@ remote:   python: 3.6.12
 remote: Warning: An outdated version of python was detected (3.6.12). Consider updating.\nVersions supported by Oryx: https://github.com/microsoft/Oryx
 remote: 
 remote: 
-remote: Using intermediate directory &apos;/tmp/8d8e34659c81cee&apos;.
+remote: Using intermediate directory '/tmp/8d8e34659c81cee'.
 remote: 
 remote: Copying files to the intermediate directory...
 remote: Done in 0 sec(s).
@@ -272,22 +336,22 @@ remote: [21:58:04+0000] Collecting Werkzeug&amp;gt;=0.15.3 (from -r requirements
 remote: [21:58:04+0000]   Downloading https://files.pythonhosted.org/packages/cc/94/5f7079a0e00bd6863ef8f1da638721e9da21e5bacee597595b318f71d62e/Werkzeug-1.0.1-py2.py3-none-any.whl (298kB)
 remote: [21:58:04+0000] Building wheels for collected packages: itsdangerous, MarkupSafe
 remote: [21:58:04+0000]   Running setup.py bdist_wheel for itsdangerous: started
-remote: [21:58:06+0000]   Running setup.py bdist_wheel for itsdangerous: finished with status &apos;done&apos;
+remote: [21:58:06+0000]   Running setup.py bdist_wheel for itsdangerous: finished with status 'done'
 remote: [21:58:06+0000]   Stored in directory: /usr/local/share/pip-cache/wheels/2c/4a/61/5599631c1554768c6290b08c02c72d7317910374ca602ff1e5
 remote: [21:58:06+0000]   Running setup.py bdist_wheel for MarkupSafe: started
-remote: [21:58:09+0000]   Running setup.py bdist_wheel for MarkupSafe: finished with status &apos;done&apos;
+remote: [21:58:09+0000]   Running setup.py bdist_wheel for MarkupSafe: finished with status 'done'
 remote: [21:58:09+0000]   Stored in directory: /usr/local/share/pip-cache/wheels/33/56/20/ebe49a5c612fffe1c5a632146b16596f9e64676768661e4e46
 remote: [21:58:09+0000] Successfully built itsdangerous MarkupSafe
 remote: [21:58:10+0000] Installing collected packages: click, itsdangerous, MarkupSafe, Jinja2, Werkzeug, Flas
 remote: [21:58:11+0000] Successfully installed Flask-1.0.2 Jinja2-2.11.3 MarkupSafe-1.0 Werkzeug-1.0.1 click-6.7 itsdangerous-0.24
 remote: You are using pip version 18.1, however version 21.0.1 is available.
-remote: You should consider upgrading via the &apos;pip install --upgrade pip&apos; command.
+remote: You should consider upgrading via the 'pip install --upgrade pip' command.
 remote: 
-remote: Compressing existing &apos;antenv3.6&apos; folder...
+remote: Compressing existing 'antenv3.6' folder...
 remote: Done in 3 sec(s).
 remote: Preparing output...
 remote: 
-remote: Copying files to destination directory &apos;/home/site/wwwroot&apos;...
+remote: Copying files to destination directory '/home/site/wwwroot'...
 remote: Done in 0 sec(s).
 remote: 
 remote: Removing existing manifest file
@@ -298,7 +362,7 @@ remote: Done in 26 sec(s).
 remote: Running post deployment command(s)...
 remote: Triggering recycle (preview mode disabled).
 remote: Deployment successful.
-remote: Deployment Logs : &apos;https://fiap.scm.azurewebsites.net/newui/jsonviewer?view_url=/api/deployments/a64c6ae136e87b9f9a83de6e1aa81a8145f997e5/log&apos;
+remote: Deployment Logs : 'https://fiap.scm.azurewebsites.net/newui/jsonviewer?view_url=/api/deployments/a64c6ae136e87b9f9a83de6e1aa81a8145f997e5/log'
 To https://fiap.scm.azurewebsites.net:443/fiap.git
  * [new branch]      master -&amp;gt; master
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
@@ -412,7 +476,195 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">FIAP MBA em Engenharia de Dados (ABD)</title><link href="https://josecastillolema.github.io/fiap-abd/" rel="alternate" type="text/html" title="FIAP MBA em Engenharia de Dados (ABD)" /><published>2021-02-25T00:00:00-03:00</published><updated>2021-02-25T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-abd</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-abd/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/mba/mba-em-engenharia-de-dados/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/img/abd.jpg&quot; alt=&quot;FIAP MBA&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">AWS series VII: Relational Database Service (RDS)</title><link href="https://josecastillolema.github.io/aws12-rds/" rel="alternate" type="text/html" title="AWS series VII: Relational Database Service (RDS)" /><published>2021-02-26T00:00:00-03:00</published><updated>2021-02-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws12-rds</id><content type="html" xml:base="https://josecastillolema.github.io/aws12-rds/">&lt;p&gt;&lt;a href=&quot;/series/#aws&quot;&gt;Serie de artigos&lt;/a&gt; sobre Amazon Web Services.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;lab-5---aws-rds&quot;&gt;Lab 5 - AWS RDS&lt;/h1&gt;
+
+&lt;p&gt;Em este lab sobre &lt;a href=&quot;https://aws.amazon.com/pt/rds/&quot;&gt;&lt;strong&gt;Relational Database Service (RDS)&lt;/strong&gt;&lt;/a&gt; aprenderemos alguns conceitos importantes na criação de serviços de DBaaS NoSQL:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Criação de instâncias RDS&lt;/li&gt;
+  &lt;li&gt;Plataformas/entornos disponíveis&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Logging&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Monitoramento&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;criação-da-instância-rds&quot;&gt;Criação da instância RDS&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acessar o serviço &lt;strong&gt;RDS&lt;/strong&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Criar um novo &lt;em&gt;database&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Escolher &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MySQL&lt;/code&gt; como &lt;em&gt;backend&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Selecionar a camada gratuita, e configurar nome, usuário e senha para o banco:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Parametrizaçao de &lt;em&gt;storage&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Se formos acessar desde a nossa máquina local, habilitar o acesso público ao banco:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Revisar as configurações e confirmar a criação da instância RDS:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar a correta criação da instância:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Na descrição da instância, note-se o &lt;em&gt;endpoint&lt;/em&gt; e a porta da mesma:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Testemos a conectividade com a instância:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com 3306         
+Trying 18.210.97.78...
+telnet: connect to address 18.210.97.78: Operation timed out
+telnet: Unable to connect to remote host
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Como vimos no passo anterior, a instância não está acessível na porta 3306. Precisamos criar um novo &lt;em&gt;security group&lt;/em&gt; e liberar a porta. Para isso, acessar o serviço Virtual Private Cloud (VPC):
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Criar um novo &lt;em&gt;security group&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Liberar a porta 3306 desde &lt;em&gt;anywhere&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;De volta no serviço RDS, vamos atualizar a instância com o novo &lt;em&gt;security group&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nos ajustes de conetividade, incluir o novo &lt;em&gt;security group&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar a configuraçao ser aplicada na instância:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Testar novamente a conetividade:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com 3306
+Trying 18.210.97.78...
+Connected to ec2-18-210-97-78.compute-1.amazonaws.com.
+Escape character is '^]'.
+8.0.20a#Xm7w(?M:w{%Z-
+                     /mysql_native_password
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;testando-o-acesso-ao-banco&quot;&gt;Testando o acesso ao banco&lt;/h2&gt;
+
+&lt;h3 id=&quot;pre-reqs&quot;&gt;Pre-reqs&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt; (client)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Se não tiver os pre-reqs na máquina local pular para o &lt;a href=&quot;#deploy-em-uma-vm-no-ec2&quot;&gt;teste em uma VM no EC2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;teste-local&quot;&gt;Teste local&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Usar o cliente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt; para acessar ao banco:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mysql -h fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com -u admin -p
+Enter password: 
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 26
+Server version: 8.0.20 Source distribution
+
+Copyright (c) 2000, 2021, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql&amp;gt; show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
++--------------------+
+3 rows in set (0.15 sec)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;teste-em-uma-vm-no-ec2&quot;&gt;Teste em uma VM no EC2&lt;/h2&gt;
+
+&lt;p&gt;Se tiver feito o deploy local pode pular esta seção.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Criar uma VM com a imagem &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 20.04&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logar na VM&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Atualizar os repositorios:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo apt update
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Instalar o cliente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt;:
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo apt install mysql-client -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Usar o cliente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt; para acessar ao banco:
+ ```
+ $ mysql -h fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com -u admin -p
+ Enter password: 
+ Welcome to the MySQL monitor.  Commands end with ; or \g.
+ Your MySQL connection id is 26
+ Server version: 8.0.20 Source distribution&lt;/p&gt;
+
+    &lt;p&gt;Copyright (c) 2000, 2021, Oracle and/or its affiliates.&lt;/p&gt;
+
+    &lt;p&gt;Oracle is a registered trademark of Oracle Corporation and/or its
+ affiliates. Other names may be trademarks of their respective
+ owners.&lt;/p&gt;
+
+    &lt;p&gt;Type ‘help;’ or ‘\h’ for help. Type ‘\c’ to clear the current input statement.&lt;/p&gt;
+
+    &lt;p&gt;mysql&amp;gt; show databases;
+ +——————–+
+ | Database           |
+ +——————–+
+ | information_schema |
+ | mysql              |
+ | performance_schema |
+ +——————–+
+ 3 rows in set (0.15 sec)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Amazon Web Services.</summary></entry><entry><title type="html">FIAP MBA em Engenharia de Dados (ABD)</title><link href="https://josecastillolema.github.io/fiap-abd/" rel="alternate" type="text/html" title="FIAP MBA em Engenharia de Dados (ABD)" /><published>2021-02-25T00:00:00-03:00</published><updated>2021-02-25T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-abd</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-abd/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/mba/mba-em-engenharia-de-dados/&quot;&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/img/abd.jpg&quot; alt=&quot;FIAP MBA&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/fiap/tree/master/abd/dbaas&quot;&gt;DataBase as a Service - DBaaS&lt;/a&gt;&lt;/li&gt;
@@ -497,7 +749,7 @@ Partition number (1-4, default 1):
 First sector (2048-104857599, default 2048): 
 Last sector, +sectors or +size{K,M,G,T,P} (2048-104857599, default 104857599): 
 
-Created a new partition 1 of type &apos;Linux&apos; and of size 50 GiB.
+Created a new partition 1 of type 'Linux' and of size 50 GiB.
 
 Command (m for help): w
 The partition table has been altered.
@@ -755,10 +1007,10 @@ sic mundus creatus est
   &lt;li&gt;[&lt;strong&gt;Linux/MAC&lt;/strong&gt;] Em um terminal local:
     &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ chmod 400 aula1_key.pem 
 $ ssh -i aula1_key.pem  azureuser@168.61.32.71
-The authenticity of host &apos;168.61.32.71 (168.61.32.71)&apos; can&apos;t be established.
+The authenticity of host '168.61.32.71 (168.61.32.71)' can't be established.
 ECDSA key fingerprint is SHA256:KASB7hYoy0WvdiE+zDEBlyFQ7eoO3bwco32davnUxCA.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added &apos;168.61.32.71&apos; (ECDSA) to the list of known hosts.
+Warning: Permanently added '168.61.32.71' (ECDSA) to the list of known hosts.
 Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1039-azure x86_64)
 
  * Documentation:  https://help.ubuntu.com
@@ -807,7 +1059,7 @@ Building dependency tree
 Reading state information... Done
 The following package was automatically installed and is no longer required:
   linux-headers-4.15.0-135
-Use &apos;sudo apt autoremove&apos; to remove it.
+Use 'sudo apt autoremove' to remove it.
 The following additional packages will be installed:
   apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
   liblua5.2-0 ssl-cert
@@ -973,122 +1225,4 @@ Processing triggers for ureadahead (0.100.0-21) ...
 
 &lt;p&gt;O resultado final será divulgado no dia 27 deste mês, por meio do portal do IMD, na aba “Editais”. As matrículas estão previstas para acontecer até o dia 05 de março.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="iot" /><category term="networks" /><category term="nfv" /><category term="pt" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">Aviatrix Certified Engineer - Multicloud</title><link href="https://josecastillolema.github.io/aviatrix/" rel="alternate" type="text/html" title="Aviatrix Certified Engineer - Multicloud" /><published>2021-02-05T00:00:00-03:00</published><updated>2021-02-05T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aviatrix</id><content type="html" xml:base="https://josecastillolema.github.io/aviatrix/">&lt;p&gt;&lt;a href=&quot;https://aviatrix.com/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-02-05-aviatrix/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://aviatrix.com/ace-multicloud-networking-training/&quot;&gt;Aviatrix Certified Engineer - Multi-Cloud Network Associate Course&lt;/a&gt; for anyone interested in public cloud networking (in AWS, Azure, GCP and OCI) and multicloud arquitecture.&lt;/p&gt;
-
-&lt;p&gt;Training and exam are free using code &lt;strong&gt;ACEHOLIDAY&lt;/strong&gt; through February 28th.&lt;/p&gt;
-
-&lt;h1 id=&quot;what-the-course-covers&quot;&gt;What the Course Covers&lt;/h1&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction
-    &lt;ul&gt;
-      &lt;li&gt;Introductory Survey&lt;/li&gt;
-      &lt;li&gt;About ACE Associate Training&lt;/li&gt;
-      &lt;li&gt;About Aviatrix&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Public Cloud Networking
-    &lt;ul&gt;
-      &lt;li&gt;Networking Principles in the Cloud&lt;/li&gt;
-      &lt;li&gt;AWS Networking 101&lt;/li&gt;
-      &lt;li&gt;Azure Networking 101&lt;/li&gt;
-      &lt;li&gt;GCP Networking 101&lt;/li&gt;
-      &lt;li&gt;OCI Networking 101&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Multi-Cloud Network Architecture
-    &lt;ul&gt;
-      &lt;li&gt;What is the MCNA?&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Aviatrix Platform
-    &lt;ul&gt;
-      &lt;li&gt;Feature Overview - Part 1&lt;/li&gt;
-      &lt;li&gt;Feature Overview - Part 2&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Operations, Visibility, and Troubleshooting
-    &lt;ul&gt;
-      &lt;li&gt;Day 2 Operations&lt;/li&gt;
-      &lt;li&gt;CoPilot Demo&lt;/li&gt;
-      &lt;li&gt;Aviatrix Controller Deployment&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Customer Case Study
-    &lt;ul&gt;
-      &lt;li&gt;Real Aviatrix Customer Walk-Through - Single Region&lt;/li&gt;
-      &lt;li&gt;Real Aviatrix Customer Walk-Through - Multi-Region Multi-Cloud&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Conclusion
-    &lt;ul&gt;
-      &lt;li&gt;Course Feedback Survey&lt;/li&gt;
-      &lt;li&gt;How to take the Exam&lt;/li&gt;
-      &lt;li&gt;Scheduling the Exam&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
-
-&lt;p&gt;At the end of the course, you can earn a certificate by scheduling and passing a final exam.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-05-aviatrix/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-05-aviatrix/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div data-iframe-width=&quot;600&quot; data-iframe-height=&quot;270&quot; data-share-badge-id=&quot;34d6bae6-b247-47a7-b4db-80554b7b2d12&quot; data-share-badge-host=&quot;https://www.youracclaim.com&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.youracclaim.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="azure" /><category term="cert" /><category term="en" /><category term="iac" /><category term="networks" /><category term="sdn" /><category term="terraform" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 2nd edition</title><link href="https://josecastillolema.github.io/shift-multicloud-2/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 2nd edition" /><published>2021-01-09T00:00:00-03:00</published><updated>2021-01-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud-2</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud-2/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-01-09-shift-multicloud-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
-
-&lt;p&gt;Além de ser uma solução inovadora, a Cloud também é um modelo de negócio relativamente novo, aplicável a qualquer tipo de empresa. Nosso foco é formar o profissional para dominar modelos de serviços de Computação em Nuvem (SaaS, PaaS, IaaS), modelos de implantação em Nuvem (privado, público, híbrido e multicloud) e economia em Nuvem. Tudo isso por meio de atividades hands-on na Amazon Web Services (AWS).&lt;/p&gt;
-
-&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
-&lt;p&gt;Profissionais de TI (analistas, especialistas e gestores) que atuam nas áreas de Cloud, Virtualização e/ou DevOps.&lt;/p&gt;
-
-&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
-&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
-
-&lt;h2 id=&quot;benefício-amazon&quot;&gt;Benefício Amazon&lt;/h2&gt;
-
-&lt;p&gt;Cada aluno vai receber US$ 50 em créditos para usar em laboratórios no ambiente Amazon, durante e após o curso.&lt;/p&gt;
-
-&lt;h2 id=&quot;shift-remoto&quot;&gt;Shift remoto&lt;/h2&gt;
-&lt;p&gt;Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.&lt;/p&gt;
-
-&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem
-    &lt;ul&gt;
-      &lt;li&gt;Virtualização&lt;/li&gt;
-      &lt;li&gt;Modelos de serviço&lt;/li&gt;
-      &lt;li&gt;Segurança em nuvem / Modelo de responsabilidade compartilhada&lt;/li&gt;
-      &lt;li&gt;Modelos de implementação&lt;/li&gt;
-      &lt;li&gt;Multicloud&lt;/li&gt;
-      &lt;li&gt;Economia e faturamento da nuvem&lt;/li&gt;
-      &lt;li&gt;Arquitetura de nuvem / Desenvolvimento de aplicações para a nuvem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Módulo 2: Infraestrutura como serviço  (IaaS)
-    &lt;ul&gt;
-      &lt;li&gt;Instanciação de máquinas virtuais&lt;/li&gt;
-      &lt;li&gt;Autoscaling&lt;/li&gt;
-      &lt;li&gt;Infraestrutura de armazenamento: block/object/file storage&lt;/li&gt;
-      &lt;li&gt;Containers&lt;/li&gt;
-      &lt;li&gt;Orquestração de containers&lt;/li&gt;
-      &lt;li&gt;Arquitetura de microserviços&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Módulo 3: Plataforma como serviço (PaaS)
-    &lt;ul&gt;
-      &lt;li&gt;Automação e entrega contínua (CI/CD)&lt;/li&gt;
-      &lt;li&gt;Pipeline DevOps&lt;/li&gt;
-      &lt;li&gt;DBaaS SQL/NoSQL&lt;/li&gt;
-      &lt;li&gt;Function as a Service&lt;/li&gt;
-      &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="iot" /><category term="networks" /><category term="nfv" /><category term="pt" /><category term="sdn" /><summary type="html"></summary></entry></feed>

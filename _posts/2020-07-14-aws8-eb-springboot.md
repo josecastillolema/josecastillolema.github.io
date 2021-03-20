@@ -1,5 +1,5 @@
 ---
-title:  "AWS series VII: Elastic Beanstalk (EB) com Spring Boot"
+title:  "AWS series VIII: Elastic Beanstalk (EB) com Spring Boot"
 last_modified_at: 2020-07-14T16:00:58-04:00
 tags:
   - aws

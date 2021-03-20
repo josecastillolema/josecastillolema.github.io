@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>AWS series VIII: CodePipeline - GitOps</title>
+<!-- begin _includes/seo.html --><title>AWS series XIII: Elastic MapReduce (EMR) - GitOps</title>
 <meta name="description" content="Serie de artigos sobre Amazon Web Services.  ">
 
 
@@ -19,8 +19,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="AWS series VIII: CodePipeline">
-<meta property="og:url" content="https://josecastillolema.github.io/aws8-cp/">
+<meta property="og:title" content="AWS series XIII: Elastic MapReduce (EMR)">
+<meta property="og:url" content="https://josecastillolema.github.io/aws13-emr/">
 
 
   <meta property="og:description" content="Serie de artigos sobre Amazon Web Services.  ">
@@ -31,11 +31,11 @@
 
 
 
-  <meta property="article:published_time" content="2020-07-16T00:00:00-03:00">
+  <meta property="article:published_time" content="2020-07-18T00:00:00-03:00">
 
 
 
-  <meta property="article:modified_time" content="2020-07-16T17:00:58-03:00">
+  <meta property="article:modified_time" content="2020-07-18T17:00:58-03:00">
 
 
 
@@ -44,7 +44,7 @@
   
 
 
-<link rel="canonical" href="https://josecastillolema.github.io/aws8-cp/">
+<link rel="canonical" href="https://josecastillolema.github.io/aws13-emr/">
 
 
 
@@ -355,15 +355,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="AWS series VIII: CodePipeline">
+    <meta itemprop="headline" content="AWS series XIII: Elastic MapReduce (EMR)">
     <meta itemprop="description" content="Serie de artigos sobre Amazon Web Services.">
-    <meta itemprop="datePublished" content="2020-07-16T00:00:00-03:00">
-    <meta itemprop="dateModified" content="2020-07-16T17:00:58-03:00">
+    <meta itemprop="datePublished" content="2020-07-18T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2020-07-18T17:00:58-03:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">AWS series VIII: CodePipeline
+          <h1 id="page-title" class="page__title" itemprop="headline">AWS series XIII: Elastic MapReduce (EMR)
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -371,7 +371,7 @@
 
 
 
-  1 minute read
+  3 minute read
 
 </p>
           
@@ -386,11 +386,10 @@
 <i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
   <li>
-<a href="#lab-7---aws-cp">Lab 7 - AWS CP</a>
+<a href="#lab-12---elastic-mapreduce">Lab 12 - Elastic MapReduce</a>
     <ul>
-      <li><a href="#pre-reqs">Pre-reqs</a></li>
-      <li><a href="#criando-o-pipeline">Criando o pipeline</a></li>
-      <li><a href="#validando-o-pipeline">Validando o pipeline</a></li>
+      <li><a href="#configura%C3%A7%C3%A3o-do-servi%C3%A7o">Configuração do serviço</a></li>
+      <li><a href="#acessando-o-servi%C3%A7o">Acessando o serviço</a></li>
     </ul>
   </li>
 </ul>
@@ -404,98 +403,98 @@
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="122" height="30" title="GitHub"></iframe>
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-<h1 id="lab-7---aws-cp">Lab 7 - AWS CP</h1>
+<h1 id="lab-12---elastic-mapreduce">Lab 12 - Elastic MapReduce</h1>
 
-<p>Em este lab sobre <a href="https://aws.amazon.com/pt/codepipeline/" target="_blank" rel="noopener noreferrer"><strong>Code Pipeline</strong></a> aprenderemos alguns conceitos importantes da criação de <em>pipelines</em>:</p>
+<p>Em este lab sobre <a href="https://aws.amazon.com/pt/emr" target="_blank" rel="noopener noreferrer"><strong>EMR</strong></a> aprenderemos alguns conceitos da plataforma de Big Data as a Service da AWS:</p>
 <ul>
-  <li>Criação do <em>pipeline</em>
-</li>
-  <li>Automação de <em>deploy</em> no Beanstalk</li>
+  <li>Criação de cluster</li>
+  <li>Acesso via WEB e SSH/CLI</li>
+  <li>Monitoramento</li>
 </ul>
 
-<h2 id="pre-reqs">Pre-reqs</h2>
-
-<ul>
-  <li>
-    <p>A aplicação do <a href="https://github.com/josecastillolema/fiap/blob/master/shift/multicloud/lab06-paas-eb.md" target="_blank" rel="noopener noreferrer">lab de Beanstalk</a> precisa estar no ar:
- <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp00-0.png" alt=""></p>
-  </li>
-  <li>
-    <p>Criação de um repositório no <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> com <a href="https://github.com/josecastillolema/fiap/tree/master/shift/multicloud/lab06-paas-eb" target="_blank" rel="noopener noreferrer">os arquivos do lab de Beanstalk</a>:
- <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp00-1.png" alt=""></p>
-  </li>
-</ul>
-
-<h2 id="criando-o-pipeline">Criando o <em>pipeline</em>
-</h2>
+<h2 id="configuração-do-serviço">Configuração do serviço</h2>
 
 <ol>
   <li>
-    <p>Acessar o serviço <strong>Code Pipeline</strong>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp01.png" alt=""></p>
+    <p>Acessar o serviço <strong>EMR</strong>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr0.png" alt=""></p>
   </li>
   <li>
-    <p>Criar um novo <em>pipeline</em>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp02.png" alt=""></p>
+    <p>Iniciar a criação do cluster:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr1.png" alt=""></p>
   </li>
   <li>
-    <p>Nomear o <em>pipeline</em>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp03.png" alt=""></p>
+    <p>Escolher um nome para o cluster, um bucket do S3 para armacenar os logs, versão do EMR e conjunto de aplicações solicitado:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr2.png" alt=""></p>
   </li>
   <li>
-    <p>Escolher <code class="language-plaintext highlighter-rouge">GitHub</code> como <em>source provider</em> e o repositório criado nos pre-reqs:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp04.png" alt=""></p>
+    <p>Escolha de flavor, número de instâncias e chave SSH para acessar o cluster. Quem tiver usando a conta do AWS Educate, lembre-se que só os seguintes flavors estão disponíveis: <code class="language-plaintext highlighter-rouge">t2.small</code>, <code class="language-plaintext highlighter-rouge">t2.micro</code>, <code class="language-plaintext highlighter-rouge">t2.nano</code>, <code class="language-plaintext highlighter-rouge">m4.large</code>, <code class="language-plaintext highlighter-rouge">c4.large</code>, <code class="language-plaintext highlighter-rouge">c5.large</code>, <code class="language-plaintext highlighter-rouge">m5.large</code>, <code class="language-plaintext highlighter-rouge">t2.medium</code>, <code class="language-plaintext highlighter-rouge">m4.xlarge</code>, <code class="language-plaintext highlighter-rouge">t2.nano</code>, <code class="language-plaintext highlighter-rouge">c4.xlarge</code>, <code class="language-plaintext highlighter-rouge">c5.xlarge</code>, <code class="language-plaintext highlighter-rouge">t2.2xlarge</code>, <code class="language-plaintext highlighter-rouge">m5.2xlarge</code>, <code class="language-plaintext highlighter-rouge">t2.large</code> e <code class="language-plaintext highlighter-rouge">t2.xlarge</code>.
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr3.png" alt=""></p>
   </li>
   <li>
-    <p>Já que usamos uma linguagem interpretada (Python), pulamos a fase de compilação:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp05.png" alt=""></p>
-  </li>
-  <li>
-    <p>Selecionar <code class="language-plaintext highlighter-rouge">AWS Elastic Beanstalk</code> como <em>Deploy Provider</em>, apontando para a aplicação dos pre-reqs:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp06.png" alt=""></p>
-  </li>
-  <li>
-    <p>Revisar as configuraçoes e confirmar a criação do <em>pipeline</em>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp07.png" alt="">
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp08.png" alt=""></p>
+    <p>Aguardar a criação do cluster:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr4.png" alt=""></p>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr5.png" alt=""></p>
   </li>
 </ol>
 
-<h2 id="validando-o-pipeline">Validando o <em>pipeline</em>
-</h2>
+<h2 id="acessando-o-serviço">Acessando o serviço</h2>
 
 <ol>
-  <li>Acompanhar o <em>pipeline</em> pelas diversas fases:
-    <ul>
-      <li>Recuperação do código do repositório</li>
-      <li>Deploy no Beanstalk
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp09.png" alt="">
-</li>
-    </ul>
+  <li>
+    <p>Acessar a interface web do YARN timeline server:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr6.png" alt=""></p>
   </li>
   <li>
-    <p><strong>No Beanstalk</strong>, confirmar que foi publicada uma nova versão pelo Code Pipeline;
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp10.png" alt=""></p>
+    <p>Acessar a interface web do Tez:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr7.png" alt=""></p>
   </li>
-  <li>
-    <p>Confirmar que a aplicação está no ar:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp11.png" alt=""></p>
+  <li>Acessar via SSH no master node e fazer uma consulta no Hive. É necessário liberar a porta 22 no <code class="language-plaintext highlighter-rouge">security group</code> associado às instâncias criadas no EC2:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> % ssh -i fiap.pem hadoop@ec2-3-81-126-78.compute-1.amazonaws.com
+
+ The authenticity of host 'ec2-3-81-126-78.compute-1.amazonaws.com (3.81.126.78)' can't be established.
+ ECDSA key fingerprint is SHA256:Bavwz+doMGvtdOwhJM7+IGCrURgDCL/a/6ISfjROYLM.
+ Are you sure you want to continue connecting (yes/no/[fingerprint])? YES
+ Warning: Permanently added 'ec2-3-81-126-78.compute-1.amazonaws.com,3.81.126.78' (ECDSA) to the list of known hosts.
+ Last login: Sun Sep 20 20:36:00 2020
+
+        __|  __|_  )
+        _|  (     /   Amazon Linux 2 AMI
+       ___|\___|___|
+
+ https://aws.amazon.com/amazon-linux-2/
+ 33 package(s) needed for security, out of 90 available
+ Run "sudo yum update" to apply all updates.
+
+ EEEEEEEEEEEEEEEEEEEE MMMMMMMM           MMMMMMMM RRRRRRRRRRRRRRR    
+ E::::::::::::::::::E M:::::::M         M:::::::M R::::::::::::::R   
+ EE:::::EEEEEEEEE:::E M::::::::M       M::::::::M R:::::RRRRRR:::::R 
+   E::::E       EEEEE M:::::::::M     M:::::::::M RR::::R      R::::R
+   E::::E             M::::::M:::M   M:::M::::::M   R:::R      R::::R
+   E:::::EEEEEEEEEE   M:::::M M:::M M:::M M:::::M   R:::RRRRRR:::::R 
+   E::::::::::::::E   M:::::M  M:::M:::M  M:::::M   R:::::::::::RR   
+   E:::::EEEEEEEEEE   M:::::M   M:::::M   M:::::M   R:::RRRRRR::::R  
+   E::::E             M:::::M    M:::M    M:::::M   R:::R      R::::R
+   E::::E       EEEEE M:::::M     MMM     M:::::M   R:::R      R::::R
+ EE:::::EEEEEEEE::::E M:::::M             M:::::M   R:::R      R::::R
+ E::::::::::::::::::E M:::::M             M:::::M RR::::R      R::::R
+ EEEEEEEEEEEEEEEEEEEE MMMMMMM             MMMMMMM RRRRRRR      RRRRRR
+
+ [hadoop@ip-172-31-42-29 ~]$ hive
+
+ Logging initialized using configuration in file:/etc/hive/conf.dist/hive-log4j2.properties Async: false
+ hive&gt; show databases;
+ OK
+ default
+ Time taken: 0.086 seconds, Fetched: 1 row(s)
+ hive&gt; 
+
+</code></pre></div>    </div>
   </li>
-  <li>
-    <p>Publicar uma nova versão da aplicação no repositório do GitHub:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp12.png" alt="">
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp13.png" alt=""></p>
-  </li>
-  <li>
-    <p>Acompanhar o <em>deploy</em> da nova versão no Code Pipeline:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp14.png" alt=""></p>
-  </li>
-  <li>
-    <p><strong>No Beanstalk</strong>, confirmar que foi publicada uma nova versão pelo Code Pipeline;
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp15.png" alt=""></p>
-  </li>
-  <li>Confirmar que foi publicada a nova versão:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cp16.png" alt="">
+  <li>Conferir a aba de monitoramento:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/emr8.png" alt="">
 </li>
 </ol>
 
@@ -545,7 +544,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-16">July 16, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-18">July 18, 2020</time></p>
         
       </footer>
 
@@ -554,22 +553,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=AWS+series+VIII%3A+CodePipeline%20https%3A%2F%2Fjosecastillolema.github.io%2Faws8-cp%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=AWS+series+XIII%3A+Elastic+MapReduce+%28EMR%29%20https%3A%2F%2Fjosecastillolema.github.io%2Faws13-emr%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Faws8-cp%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Faws13-emr%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Faws8-cp%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Faws13-emr%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/aws7-eb-springboot/" class="pagination--pager" title="AWS series VII: Elastic Beanstalk (EB) com Spring Boot
+      <a href="/haina/" class="pagination--pager" title="Huawei ICT Academy
 ">Previous</a>
     
     
-      <a href="/aws9-dynamodb/" class="pagination--pager" title="AWS series IX: DynamoDB
+      <a href="/aws10-apigw/" class="pagination--pager" title="AWS series X: API Gateway
 ">Next</a>
     
   </nav>
@@ -593,6 +592,36 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/aws6-cloudformation/" rel="permalink">AWS series VI: CloudFormation
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Serie de artigos sobre Amazon Web Services.
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -678,39 +707,6 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">Serie de artigos sobre Microsoft Azure.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/fiap-abd/" rel="permalink">FIAP MBA em Engenharia de Dados (ABD)
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-
-  DataBase as a Service - DBaaS
 
 </p>
   </article>
@@ -821,8 +817,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/aws8-cp/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/aws8-cp"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/aws13-emr/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/aws13-emr"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
