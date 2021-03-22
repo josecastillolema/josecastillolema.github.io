@@ -730,4 +730,10 @@ var store = [{
         "tags": ["aws","classes","fiap","pt","series"],
         "url": "https://josecastillolema.github.io/aws6-cloudformation/",
         "teaser": null
+      },{
+        "title": "HCIA 5G - 2nd edition",
+        "excerpt":"A Coordenação do projeto IMD/UFRN – 5G Training RN abre inscrições para o processo seletivo para participação na segunda turma do curso de formação HCIA 5G, promovido em parceria entre o IMD e a Huawei Technologies Co., LTD. São 100 vagas disponíveis, gratuito e a distância. Venha obter formação gratuita...","categories": [],
+        "tags": ["cert","classes","huawei","iot","networks","nfv","pt","sdn"],
+        "url": "https://josecastillolema.github.io/hcia-5g-2/",
+        "teaser": null
       }]
