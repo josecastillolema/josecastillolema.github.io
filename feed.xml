@@ -1,10 +1,138 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-03-22T18:29:19-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">HCIA 5G - 2nd edition</title><link href="https://josecastillolema.github.io/hcia-5g-2/" rel="alternate" type="text/html" title="HCIA 5G - 2nd edition" /><published>2021-03-22T00:00:00-03:00</published><updated>2021-03-22T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-5g-2</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-5g-2/">&lt;p&gt;&lt;a href=&quot;https://imd.ufrn.br/portal/visualizar/260&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-22-hcia-5g-2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-03-23T21:43:48-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Azure series VI: Azure Pipeline</title><link href="https://josecastillolema.github.io/azure6-pipeline/" rel="alternate" type="text/html" title="Azure series VI: Azure Pipeline" /><published>2021-03-23T00:00:00-03:00</published><updated>2021-03-23T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure6-pipeline</id><content type="html" xml:base="https://josecastillolema.github.io/azure6-pipeline/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;lab-6---azure-pipelines&quot;&gt;Lab 6 - Azure Pipelines&lt;/h1&gt;
+
+&lt;p&gt;Em este lab sobre &lt;a href=&quot;https://azure.microsoft.com/pt-br/services/devops/pipelines/&quot;&gt;&lt;strong&gt;Azure Pipelines&lt;/strong&gt;&lt;/a&gt; aprenderemos alguns conceitos importantes na criação de &lt;em&gt;pipelines&lt;/em&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Criação do &lt;em&gt;pipeline&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Automação de deploy no Azure Pipelines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;pre-reqs&quot;&gt;Pre-reqs&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Um &lt;em&gt;application service&lt;/em&gt; no ar, seguindo os passos do &lt;a href=&quot;https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app.md&quot;&gt;lab 05 - Application Services&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Criação de um repositório no &lt;a href=&quot;https://github.com/&quot;&gt;GitHub&lt;/a&gt; com &lt;a href=&quot;https://github.com/josecastillolema/fiap/tree/master/net/devops/lab05-paas-app&quot;&gt;os arquivos do lab de Application Services&lt;/a&gt;:
+ &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;acessando-e-criando-a-conta-no-azure-pipelines&quot;&gt;Acessando e criando a conta no Azure Pipelines&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Acessar o serviço &lt;a href=&quot;https://azure.microsoft.com/pt-br/services/devops/pipelines/&quot;&gt;&lt;strong&gt;Azure Pipelines&lt;/strong&gt;&lt;/a&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Logar e autorizar a conta:&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;criação-do-pipeline&quot;&gt;Criação do &lt;em&gt;pipeline&lt;/em&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Criar um novo projeto:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Escolher GitHub como repositório de código:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Autorizar o acesso do Azure Pipelines ao GitHub:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Selecionar o repositório dos pre-reqs (em este caso &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;azure-devops&lt;/code&gt;):
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Autorizar o acesso do Azure Pipelines ao repositório selecionado:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Configurar um novo &lt;em&gt;pipeline&lt;/em&gt;:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Selecionar a &lt;em&gt;subscription&lt;/em&gt; adecuada:
+&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Selecionar o &lt;em&gt;application service&lt;/em&gt; dos pre-reqs:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Revisar o template &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yaml&lt;/code&gt; que descreve o &lt;em&gt;pipeline&lt;/em&gt;. &lt;strong&gt;Apontar para a versão 3.6 do Python&lt;/strong&gt;. &lt;em&gt;Template&lt;/em&gt; completo &lt;a href=&quot;https://github.com/josecastillolema/fiap/tree/master/net/devops/lab06-paas-pipeline/azure-pipelines.yml&quot;&gt;aqui&lt;/a&gt;.
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Confirmar a criação do &lt;em&gt;template&lt;/em&gt; no repositório do GitHub (automaticamente o &lt;em&gt;pipeline&lt;/em&gt; será iniciado):
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar o término da execução do &lt;em&gt;pipeline&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Confirmar o correto &lt;em&gt;deploy&lt;/em&gt; da aplicação:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;invocando-o-pipeline&quot;&gt;Invocando o &lt;em&gt;pipeline&lt;/em&gt;&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Atualizar o código da aplicaçao no GitHub:&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Conferir que é criada uma nova execução do &lt;em&gt;pipeline&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aguardar o término da execução do &lt;em&gt;pipeline&lt;/em&gt;:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap19.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Confirmar o correto &lt;em&gt;deploy&lt;/em&gt; da nova versão da aplicação:
+   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">HCIA 5G - 2nd edition</title><link href="https://josecastillolema.github.io/hcia-5g-2/" rel="alternate" type="text/html" title="HCIA 5G - 2nd edition" /><published>2021-03-22T00:00:00-03:00</published><updated>2021-03-22T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-5g-2</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-5g-2/">&lt;p&gt;&lt;a href=&quot;https://imd.ufrn.br/portal/visualizar/260&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-22-hcia-5g-2/0.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A Coordenação do projeto &lt;strong&gt;IMD/UFRN – 5G Training RN&lt;/strong&gt; abre inscrições para o processo seletivo para participação na segunda turma do curso de formação HCIA 5G, promovido em parceria entre o &lt;a href=&quot;https://www.imd.ufrn.br/&quot;&gt;IMD&lt;/a&gt; e a &lt;a href=&quot;https://www.huawei.com/br/&quot;&gt;Huawei Technologies Co., LTD&lt;/a&gt;. São 100 vagas disponíveis, gratuito e a distância.&lt;/p&gt;
 
 &lt;p&gt;Venha obter formação gratuita em 5G, a tecnologia que irá revolucionar o mundo, e se posicionar fortemente no mercado a partir da certificação Huawei HCIA.&lt;/p&gt;
 
 &lt;p&gt;Edital de seleção em: &lt;a href=&quot;https://lnkd.in/esyWARY&quot;&gt;https://lnkd.in/esyWARY&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-03-22-hcia-5g-2/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As inscrições terão início no dia 23 de março e se estenderão até 12 de abril, podendo ser realizadas através do preenchimento de &lt;a href=&quot;https://docs.google.com/forms/d/e/1FAIpQLScV2K23q24iJfHiK-wdSkFKxEtPauetcOHeWH_xWyxKDc5YRw/viewform&quot;&gt;formulário online&lt;/a&gt;, juntamente com envio dos anexos solicitados no edital. O curso é aberto a qualquer pessoa que tenha conhecimento comprovado em Redes de Comunicação e/ou telecomunicações. Os critérios para tal comprovação são detalhados no &lt;a href=&quot;https://imd.ufrn.br/portal/visualizar/260&quot;&gt;edital do processo seletivo (nº 015/2021)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A seleção consistirá em avaliação de documentação comprobatória. Dentre os quesitos a serem analisados, encontram-se experiência de atuação profissional, formação acadêmica e certificações diversas em tecnologia. O resultado final será divulgado a partir do dia 16 de abril, por meio do portal do IMD, na aba “Editais”. As matrículas estão previstas para acontecer até 23 de abril.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="iot" /><category term="networks" /><category term="nfv" /><category term="pt" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">AWS series VI: CloudFormation</title><link href="https://josecastillolema.github.io/aws6-cloudformation/" rel="alternate" type="text/html" title="AWS series VI: CloudFormation" /><published>2021-03-20T00:00:00-03:00</published><updated>2021-03-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws6-cloudformation</id><content type="html" xml:base="https://josecastillolema.github.io/aws6-cloudformation/">&lt;p&gt;&lt;a href=&quot;/series/#aws&quot;&gt;Serie de artigos&lt;/a&gt; sobre Amazon Web Services.&lt;/p&gt;
 
@@ -935,273 +1063,6 @@ sic mundus creatus est
   &lt;li&gt;
     &lt;p&gt;Acessar o container pelo IP público &lt;strong&gt;na porta 5000&lt;/strong&gt;:
 &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/con07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">Azure series I: Virtual machines</title><link href="https://josecastillolema.github.io/azure1-vm/" rel="alternate" type="text/html" title="Azure series I: Virtual machines" /><published>2021-02-18T00:00:00-03:00</published><updated>2021-02-18T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure1-vm</id><content type="html" xml:base="https://josecastillolema.github.io/azure1-vm/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;lab-1---virtual-machines&quot;&gt;Lab 1 - Virtual Machines&lt;/h1&gt;
-
-&lt;h2 id=&quot;criando-a-instancia&quot;&gt;Criando a instancia&lt;/h2&gt;
-&lt;p&gt;Usaremos a imagem oficial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu Server&lt;/code&gt; para aprender alguns conceitos importantes de máquinas virtuais:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;flavors&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;em&gt;security groups&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://cloud-init.io/&quot;&gt;cloud-init&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Acessar o serviço &lt;strong&gt;Virtual machine&lt;/strong&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Sempre que for criar novos recursos, selecione como &lt;strong&gt;&lt;em&gt;subscription&lt;/em&gt;&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Azure for students&lt;/code&gt; e como &lt;strong&gt;&lt;em&gt;resource group&lt;/em&gt;&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;19net&lt;/code&gt;. Se o &lt;em&gt;resource group&lt;/em&gt; ainda não existe, como é o caso, criar ele:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Configurar um nome para a instãncia, escolher a &lt;strong&gt;imagem&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu Server&lt;/code&gt; e o &lt;strong&gt;&lt;em&gt;flavor&lt;/em&gt;&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Standard_B1&lt;/code&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Usaremos chave ssh como método de acesso à VM:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;A porta 22 no &lt;strong&gt;&lt;em&gt;security group&lt;/em&gt;&lt;/strong&gt; precisa estar aberta para poder acessar a instância via SSH:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Configurar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Standard HDD&lt;/code&gt; como tipo de disco:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Usaremos um &lt;em&gt;script&lt;/em&gt; de &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cloud-init&lt;/code&gt;&lt;/strong&gt; para customizar a instância:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Confirmar criaçao da instância uma vez validada:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fazer &lt;em&gt;download&lt;/em&gt; da &lt;strong&gt;chave&lt;/strong&gt; para poder acessar a instância via SSH de forma segura:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm09.png&quot; width=&quot;465&quot; height=&quot;342&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aguardar a criacao da instância:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;accessando-à-instancia&quot;&gt;Accessando à instancia&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Note-se o IP público da instância:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[&lt;strong&gt;Linux/MAC&lt;/strong&gt;] Seguiremos as próprias indicações do Azure:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-    &lt;p&gt;[&lt;strong&gt;Windows&lt;/strong&gt;] Usaremos o &lt;a href=&quot;https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html&quot;&gt;PuTTY&lt;/a&gt;, seguindo as seguintes &lt;a href=&quot;https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows&quot;&gt;instruções&lt;/a&gt;. Como alternativa ao PuTTy, o &lt;a href=&quot;https://mobaxterm.mobatek.net/&quot;&gt;MobaXterm&lt;/a&gt; é uma excelente opçao.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;[&lt;strong&gt;Linux/MAC&lt;/strong&gt;] Em um terminal local:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ chmod 400 aula1_key.pem 
-$ ssh -i aula1_key.pem  azureuser@168.61.32.71
-The authenticity of host '168.61.32.71 (168.61.32.71)' can't be established.
-ECDSA key fingerprint is SHA256:KASB7hYoy0WvdiE+zDEBlyFQ7eoO3bwco32davnUxCA.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '168.61.32.71' (ECDSA) to the list of known hosts.
-Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1039-azure x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Thu Feb 18 13:57:15 UTC 2021
-
-  System load:  0.0               Processes:           107
-  Usage of /:   4.5% of 28.90GB   Users logged in:     0
-  Memory usage: 44%               IP address for eth0: 10.0.0.4
-  Swap usage:   0%
-
-0 packages can be updated.
-0 of these updates are security updates.
-
-The programs included with the Ubuntu system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
-applicable law.
-
-To run a command as administrator (user &quot;root&quot;), use &quot;sudo &amp;lt;command&amp;gt;&quot;.
-See &quot;man sudo_root&quot; for details.
-
-azureuser@aula1:~$ 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;[&lt;strong&gt;Windows&lt;/strong&gt;] Seguir as instruções do PuTTY: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Uma vez logado na maquina virtual, confirmar que o script de &lt;strong&gt;cloud-init&lt;/strong&gt; rodou com sucesso:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ls /tmp/
-CloudInitFunciona
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;instalando-um-servidor-web&quot;&gt;Instalando um servidor web&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Instalar o pacote &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apache2&lt;/code&gt;:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;azureuser@aula1:~$ sudo apt install apache2
-Reading package lists... Done
-Building dependency tree       
-Reading state information... Done
-The following package was automatically installed and is no longer required:
-  linux-headers-4.15.0-135
-Use 'sudo apt autoremove' to remove it.
-The following additional packages will be installed:
-  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
-  liblua5.2-0 ssl-cert
-Suggested packages:
-  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom openssl-blacklist
-The following NEW packages will be installed:
-  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3
-  libaprutil1-ldap liblua5.2-0 ssl-cert
-0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
-Need to get 1729 kB of archives.
-After this operation, 6985 kB of additional disk space will be used.
-Do you want to continue? [Y/n] y
-Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
-Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
-Get:3 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
-Get:4 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
-Get:5 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
-Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.14 [1070 kB]
-Get:7 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.14 [83.9 kB]
-Get:8 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.14 [160 kB]
-Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.14 [95.1 kB]
-Get:10 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
-Fetched 1729 kB in 0s (28.4 MB/s)
-Preconfiguring packages ...
-Selecting previously unselected package libapr1:amd64.
-(Reading database ... 76706 files and directories currently installed.)
-Preparing to unpack .../0-libapr1_1.6.3-2_amd64.deb ...
-Unpacking libapr1:amd64 (1.6.3-2) ...
-Selecting previously unselected package libaprutil1:amd64.
-Preparing to unpack .../1-libaprutil1_1.6.1-2_amd64.deb ...
-Unpacking libaprutil1:amd64 (1.6.1-2) ...
-Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
-Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
-Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
-Selecting previously unselected package libaprutil1-ldap:amd64.
-Preparing to unpack .../3-libaprutil1-ldap_1.6.1-2_amd64.deb ...
-Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
-Selecting previously unselected package liblua5.2-0:amd64.
-Preparing to unpack .../4-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
-Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
-Selecting previously unselected package apache2-bin.
-Preparing to unpack .../5-apache2-bin_2.4.29-1ubuntu4.14_amd64.deb ...
-Unpacking apache2-bin (2.4.29-1ubuntu4.14) ...
-Selecting previously unselected package apache2-utils.
-Preparing to unpack .../6-apache2-utils_2.4.29-1ubuntu4.14_amd64.deb ...
-Unpacking apache2-utils (2.4.29-1ubuntu4.14) ...
-Selecting previously unselected package apache2-data.
-Preparing to unpack .../7-apache2-data_2.4.29-1ubuntu4.14_all.deb ...
-Unpacking apache2-data (2.4.29-1ubuntu4.14) ...
-Selecting previously unselected package apache2.
-Preparing to unpack .../8-apache2_2.4.29-1ubuntu4.14_amd64.deb ...
-Unpacking apache2 (2.4.29-1ubuntu4.14) ...
-Selecting previously unselected package ssl-cert.
-Preparing to unpack .../9-ssl-cert_1.0.39_all.deb ...
-Unpacking ssl-cert (1.0.39) ...
-Setting up libapr1:amd64 (1.6.3-2) ...
-Setting up apache2-data (2.4.29-1ubuntu4.14) ...
-Setting up ssl-cert (1.0.39) ...
-Setting up libaprutil1:amd64 (1.6.1-2) ...
-Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
-Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
-Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
-Setting up apache2-utils (2.4.29-1ubuntu4.14) ...
-Setting up apache2-bin (2.4.29-1ubuntu4.14) ...
-Setting up apache2 (2.4.29-1ubuntu4.14) ...
-Enabling module mpm_event.
-Enabling module authz_core.
-Enabling module authz_host.
-Enabling module authn_core.
-Enabling module auth_basic.
-Enabling module access_compat.
-Enabling module authn_file.
-Enabling module authz_user.
-Enabling module alias.
-Enabling module dir.
-Enabling module autoindex.
-Enabling module env.
-Enabling module mime.
-Enabling module negotiation.
-Enabling module setenvif.
-Enabling module filter.
-Enabling module deflate.
-Enabling module status.
-Enabling module reqtimeout.
-Enabling conf charset.
-Enabling conf localized-error-pages.
-Enabling conf other-vhosts-access-log.
-Enabling conf security.
-Enabling conf serve-cgi-bin.
-Enabling site 000-default.
-Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
-Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
-Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
-Processing triggers for systemd (237-3ubuntu10.44) ...
-Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
-Processing triggers for ufw (0.36-0ubuntu0.18.04.1) ...
-Processing triggers for ureadahead (0.100.0-21) ...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Criar um &lt;em&gt;site&lt;/em&gt; de teste, no arquivo &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/var/www/html/index.html&lt;/code&gt; (como usuário admin):
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;h1&amp;gt;
-   FIAP!!!
-&amp;lt;/h1&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Testar localmente o servidor web:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;azureuser@aula1:~$ curl localhost
-&amp;lt;h1&amp;gt;
-   FIAP!!!
-&amp;lt;/h1&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Obter o IP público da VM:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Testar accesso pelo IP público:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Como era esperado, o acesso web não funcionou pois a porta HTTP (TCP/80) deve ser liberada nos &lt;em&gt;security groups&lt;/em&gt;. Incluir uma liberação para esta porta no &lt;em&gt;security group&lt;/em&gt; associado à instância:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm14.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Validar a criação da regra: 
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Testar novamente o acesso pelo IP público:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 

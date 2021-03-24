@@ -736,4 +736,10 @@ var store = [{
         "tags": ["cert","classes","huawei","iot","networks","nfv","pt","sdn"],
         "url": "https://josecastillolema.github.io/hcia-5g-2/",
         "teaser": null
+      },{
+        "title": "Azure series VI: Azure Pipeline",
+        "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 6 - Azure Pipelines Em este lab sobre Azure Pipelines aprenderemos alguns conceitos importantes na criação de pipelines: Criação do pipeline Automação de deploy no Azure Pipelines Pre-reqs Um application service no ar, seguindo os passos do lab 05 - Application Services Criação...","categories": [],
+        "tags": ["azure","classes","fiap","pt","series"],
+        "url": "https://josecastillolema.github.io/azure6-pipeline/",
+        "teaser": null
       }]

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ) - GitOps</title>
-<meta name="description" content="     Arquitetura e Desenvolvimento Java com IoT   Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing   Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas   Cloud Development   Desenvolvimento de aplicações usando Cloud Computing   ">
+<!-- begin _includes/seo.html --><title>Azure series VI: Azure Pipeline - GitOps</title>
+<meta name="description" content="Serie de artigos sobre Microsoft Azure.  ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -19,32 +19,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)">
-<meta property="og:url" content="https://josecastillolema.github.io/fiap-scj/">
+<meta property="og:title" content="Azure series VI: Azure Pipeline">
+<meta property="og:url" content="https://josecastillolema.github.io/azure6-pipeline/">
 
 
-  <meta property="og:description" content="     Arquitetura e Desenvolvimento Java com IoT   Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing   Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas   Cloud Development   Desenvolvimento de aplicações usando Cloud Computing   ">
-
-
-
+  <meta property="og:description" content="Serie de artigos sobre Microsoft Azure.  ">
 
 
 
 
-  <meta property="article:published_time" content="2016-08-04T00:00:00-03:00">
 
 
 
-  <meta property="article:modified_time" content="2016-08-04T17:00:58-03:00">
+  <meta property="article:published_time" content="2021-03-23T00:00:00-03:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2021-03-23T17:00:58-03:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://josecastillolema.github.io/fiap-scj/">
+
+<link rel="canonical" href="https://josecastillolema.github.io/azure6-pipeline/">
 
 
 
@@ -355,15 +355,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)">
-    <meta itemprop="description" content="  Arquitetura e Desenvolvimento Java com IoT  Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing  Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas  Cloud Development  Desenvolvimento de aplicações usando Cloud Computing">
-    <meta itemprop="datePublished" content="2016-08-04T00:00:00-03:00">
-    <meta itemprop="dateModified" content="2016-08-04T17:00:58-03:00">
+    <meta itemprop="headline" content="Azure series VI: Azure Pipeline">
+    <meta itemprop="description" content="Serie de artigos sobre Microsoft Azure.">
+    <meta itemprop="datePublished" content="2021-03-23T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2021-03-23T17:00:58-03:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">FIAP MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)
+          <h1 id="page-title" class="page__title" itemprop="headline">Azure series VI: Azure Pipeline
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -371,7 +371,7 @@
 
 
 
-  less than 1 minute read
+  2 minute read
 
 </p>
           
@@ -380,16 +380,151 @@
 
       <section class="page__content" itemprop="text">
         
-        <p><a href="https://www.fiap.com.br/mba/mba-em-full-stack-developer-microservices-cloud-e-iot/" target="_blank" rel="noopener noreferrer"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/scj.png" alt="FIAP MBA"></a></p>
-
-<ul>
-  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/java" target="_blank" rel="noopener noreferrer">Arquitetura e Desenvolvimento Java com IoT</a></li>
-  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/java" target="_blank" rel="noopener noreferrer">Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing</a></li>
-  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/cloud" target="_blank" rel="noopener noreferrer">Arquitetura e Infraestrutura de <em>Cloud Computing</em> e Internet das Coisas</a></li>
-  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/cloud" target="_blank" rel="noopener noreferrer">Cloud Development</a></li>
-  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/cloud" target="_blank" rel="noopener noreferrer">Desenvolvimento de aplicações usando Cloud Computing</a></li>
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+  <li>
+<a href="#lab-6---azure-pipelines">Lab 6 - Azure Pipelines</a>
+    <ul>
+      <li><a href="#pre-reqs">Pre-reqs</a></li>
+      <li><a href="#acessando-e-criando-a-conta-no-azure-pipelines">Acessando e criando a conta no Azure Pipelines</a></li>
+      <li><a href="#cria%C3%A7%C3%A3o-do-pipeline">Criação do pipeline</a></li>
+      <li><a href="#invocando-o-pipeline">Invocando o pipeline</a></li>
+    </ul>
+  </li>
 </ul>
 
+            </nav>
+          </aside>
+        
+        <p><a href="/series/#azure">Serie de artigos</a> sobre Microsoft Azure.</p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="122" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-6---azure-pipelines">Lab 6 - Azure Pipelines</h1>
+
+<p>Em este lab sobre <a href="https://azure.microsoft.com/pt-br/services/devops/pipelines/" target="_blank" rel="noopener noreferrer"><strong>Azure Pipelines</strong></a> aprenderemos alguns conceitos importantes na criação de <em>pipelines</em>:</p>
+<ul>
+  <li>Criação do <em>pipeline</em>
+</li>
+  <li>Automação de deploy no Azure Pipelines</li>
+</ul>
+
+<h2 id="pre-reqs">Pre-reqs</h2>
+
+<ul>
+  <li>
+    <p>Um <em>application service</em> no ar, seguindo os passos do <a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app.md" target="_blank" rel="noopener noreferrer">lab 05 - Application Services</a></p>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app07.png" alt=""></p>
+  </li>
+  <li>
+    <p>Criação de um repositório no <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> com <a href="https://github.com/josecastillolema/fiap/tree/master/net/devops/lab05-paas-app" target="_blank" rel="noopener noreferrer">os arquivos do lab de Application Services</a>:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap00.png" alt=""></p>
+  </li>
+</ul>
+
+<h2 id="acessando-e-criando-a-conta-no-azure-pipelines">Acessando e criando a conta no Azure Pipelines</h2>
+
+<ol>
+  <li>
+    <p>Acessar o serviço <a href="https://azure.microsoft.com/pt-br/services/devops/pipelines/" target="_blank" rel="noopener noreferrer"><strong>Azure Pipelines</strong></a>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap01.png" alt=""></p>
+  </li>
+  <li>
+    <p>Logar e autorizar a conta:</p>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap02.png" alt=""></p>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap03.png" alt=""></p>
+  </li>
+</ol>
+
+<h2 id="criação-do-pipeline">Criação do <em>pipeline</em>
+</h2>
+
+<ol>
+  <li>
+    <p>Criar um novo projeto:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap04.png" alt=""></p>
+  </li>
+  <li>
+    <p>Escolher GitHub como repositório de código:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap05.png" alt=""></p>
+  </li>
+  <li>
+    <p>Autorizar o acesso do Azure Pipelines ao GitHub:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap06.png" alt=""></p>
+  </li>
+  <li>
+    <p>Selecionar o repositório dos pre-reqs (em este caso <code class="language-plaintext highlighter-rouge">azure-devops</code>):
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap07.png" alt=""></p>
+  </li>
+  <li>
+    <p>Autorizar o acesso do Azure Pipelines ao repositório selecionado:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap08.png" alt=""></p>
+  </li>
+  <li>
+    <p>Configurar um novo <em>pipeline</em>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap09.png" alt=""></p>
+  </li>
+  <li>
+    <p>Selecionar a <em>subscription</em> adecuada:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap10.png" alt=""></p>
+  </li>
+  <li>
+    <p>Selecionar o <em>application service</em> dos pre-reqs:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap11.png" alt=""></p>
+  </li>
+  <li>
+    <p>Revisar o template <code class="language-plaintext highlighter-rouge">yaml</code> que descreve o <em>pipeline</em>. <strong>Apontar para a versão 3.6 do Python</strong>. <em>Template</em> completo <a href="https://github.com/josecastillolema/fiap/tree/master/net/devops/lab06-paas-pipeline/azure-pipelines.yml" target="_blank" rel="noopener noreferrer">aqui</a>.
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap12.png" alt=""></p>
+  </li>
+  <li>
+    <p>Confirmar a criação do <em>template</em> no repositório do GitHub (automaticamente o <em>pipeline</em> será iniciado):
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap13.png" alt=""></p>
+  </li>
+  <li>
+    <p>Aguardar o término da execução do <em>pipeline</em>:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap14.png" alt=""></p>
+  </li>
+  <li>
+    <p>Confirmar o correto <em>deploy</em> da aplicação:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap15.png" alt=""></p>
+  </li>
+</ol>
+
+<h2 id="invocando-o-pipeline">Invocando o <em>pipeline</em>
+</h2>
+
+<ol>
+  <li>Atualizar o código da aplicaçao no GitHub:</li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap16.png" alt=""></p>
+
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap17.png" alt=""></p>
+
+<ol>
+  <li>
+    <p>Conferir que é criada uma nova execução do <em>pipeline</em>:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap18.png" alt=""></p>
+  </li>
+  <li>
+    <p>Aguardar o término da execução do <em>pipeline</em>:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap19.png" alt=""></p>
+  </li>
+  <li>
+    <p>Confirmar o correto <em>deploy</em> da nova versão da aplicação:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/ap20.png" alt=""></p>
+  </li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -410,10 +545,6 @@
     
       
       
-      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">aws</a><span class="sep">, </span>
-    
-      
-      
       <a href="/tags/#azure" class="page__taxonomy-item" rel="tag">azure</a><span class="sep">, </span>
     
       
@@ -426,7 +557,11 @@
     
       
       
-      <a href="/tags/#pt" class="page__taxonomy-item" rel="tag">pt</a>
+      <a href="/tags/#pt" class="page__taxonomy-item" rel="tag">pt</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#series" class="page__taxonomy-item" rel="tag">series</a>
     
     </span>
   </p>
@@ -435,7 +570,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-08-04">August 4, 2016</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-03-23">March 23, 2021</time></p>
         
       </footer>
 
@@ -444,23 +579,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=FIAP+MBA+em+Full+Stack+Developer+-+Microservices%2C+Cloud+e+IoT+%28SCJ%29%20https%3A%2F%2Fjosecastillolema.github.io%2Ffiap-scj%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Azure+series+VI%3A+Azure+Pipeline%20https%3A%2F%2Fjosecastillolema.github.io%2Fazure6-pipeline%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Ffiap-scj%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fazure6-pipeline%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Ffiap-scj%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fjosecastillolema.github.io%2Fazure6-pipeline%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/mswim15/" class="pagination--pager" title="MSWiM 2015
+      <a href="/hcia-5g-2/" class="pagination--pager" title="HCIA 5G - 2nd edition
 ">Previous</a>
     
     
-      <a href="/computer-networks/" class="pagination--pager" title="Computer Networks - Volume 107
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -493,36 +627,6 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/azure6-pipeline/" rel="permalink">Azure series VI: Azure Pipeline
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">Serie de artigos sobre Microsoft Azure.
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
         <a href="/hcia-5g-2/" rel="permalink">HCIA 5G - 2nd edition
 </a>
       
@@ -533,7 +637,7 @@
 
 
 
-  2 minute read
+  1 minute read
 
 </p>
     
@@ -563,7 +667,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 
 </p>
     
@@ -598,6 +702,36 @@
 </p>
     
     <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/azure5-app/" rel="permalink">Azure series V: App services
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Serie de artigos sobre Microsoft Azure.
 
 </p>
   </article>
@@ -708,8 +842,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/fiap-scj/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/fiap-scj"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/azure6-pipeline/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/azure6-pipeline"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
