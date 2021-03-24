@@ -53,6 +53,7 @@ toc: true
 
 ## Platform as a Service (PaaS)
 - Azure V: [App services](/azure5-app)
+- Azure VI: [Azure Pipelines](/azure6-pipeline)
 
 # Containers
 - Containers I: [Docker](/containers1-docker)
