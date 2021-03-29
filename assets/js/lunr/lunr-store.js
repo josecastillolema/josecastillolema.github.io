@@ -750,7 +750,7 @@ var store = [{
         "teaser": null
       },{
         "title": "HCIA-Routing & Switching - 15th edition",
-        "excerpt":"Informamos que estão abertas as inscrições do 15.º Treinamento em Tecnologia de Informação e Comunicação convênio USP e HUAWEI – HCIA – Routing &amp; Switching V2.5 até o dia 26/11/2020 às 12h, totalmente gratuito e virtual. As inscrições podem ser realizadas por este link O curso ocorrerá dos dias 27/03/21...","categories": [],
+        "excerpt":"Informamos que estão abertas as inscrições do 15.º Treinamento em Tecnologia de Informação e Comunicação convênio USP e HUAWEI – HCIA – Routing &amp; Switching V2.5 até o dia 26/11/2020 às 12h, totalmente gratuito e virtual. As inscrições podem ser realizadas por este link. O curso ocorrerá dos dias 27/03/21...","categories": [],
         "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hcia-15/",
         "teaser": null
