@@ -9,6 +9,3 @@ publish:
 	git checkout source
 	git push --all origin
 
-teste:
-	echo "ola `date +'%Y-%m-%d'`"
-
