@@ -754,4 +754,10 @@ var store = [{
         "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hcia-15/",
         "teaser": null
+      },{
+        "title": "Confluent Fundamentals Accreditation - Apache Kafka",
+        "excerpt":"I would like to strongly recomend the Confluent Fundamentals for Apache Kafka® course and Confluent Fundamentals Accreditation certification for anyone interested learning more about the Apache Kafka project. Training and exam certification are free. Course Objectives Gain an understanding of Apache Kafka® and the Confluent Platform Explore use cases Receive...","categories": [],
+        "tags": ["cert","en","iac","openshift","redhat"],
+        "url": "https://josecastillolema.github.io/kafka/",
+        "teaser": null
       }]
