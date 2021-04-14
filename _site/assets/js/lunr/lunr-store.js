@@ -755,6 +755,12 @@ var store = [{
         "url": "https://josecastillolema.github.io/hcia-15/",
         "teaser": null
       },{
+        "title": "Microsoft Azure/Data/AI Fundamentals vouchers",
+        "excerpt":"By participating in any of the following Microsoft Virtual Training Days: Microsoft Azure Virtual Training Day: Fundamentals Microsoft Azure Virtual Training Day: Data Fundamentals Microsoft Azure Virtual Training Day: AI Fundamentals You’ll be eligible to take the following certifications exam at no cost: Microsoft Azure Fundamentals (AZ-900) Microsoft Azure Data...","categories": [],
+        "tags": ["azure","cert","en"],
+        "url": "https://josecastillolema.github.io/azure-fundamentals/",
+        "teaser": null
+      },{
         "title": "Confluent Fundamentals Accreditation - Apache Kafka",
         "excerpt":"I would like to strongly recomend the Confluent Fundamentals for Apache Kafka® course and Confluent Fundamentals Accreditation certification for anyone interested learning more about the Apache Kafka project. Training and exam certification are free. Course Objectives Gain an understanding of Apache Kafka® and the Confluent Platform Explore use cases Receive...","categories": [],
         "tags": ["cert","en","iac","openshift","redhat"],

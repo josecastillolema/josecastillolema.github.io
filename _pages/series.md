@@ -1,4 +1,5 @@
 ---
+title:  "Series"
 permalink: /series/
 last_modified_at: 2020-07-10T16:00:58-04:00
 tags:
@@ -15,7 +16,6 @@ tags:
 toc: true
 ---
 
-
 # AWS
 
 ## Infrastructure as a Service (IaaS)
@@ -25,7 +25,6 @@ toc: true
 - AWS IV: [Auto Scaling](/aws4-autoscaling)
 - AWS V: [Elastic Container Service (ECS)](/aws5-ecs)
 - AWS VI: [CloudFormation](/aws6-cloudformation)
-
 
 ## Platform as a Service (PaaS)
 - AWS VII: [Elastic Beanstalk (EB)](/aws7-eb)

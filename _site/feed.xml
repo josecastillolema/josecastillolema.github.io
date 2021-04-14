@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-13T19:26:24-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Confluent Fundamentals Accreditation - Apache Kafka</title><link href="https://josecastillolema.github.io/kafka/" rel="alternate" type="text/html" title="Confluent Fundamentals Accreditation - Apache Kafka" /><published>2021-04-13T00:00:00-03:00</published><updated>2021-04-13T17:00:58-03:00</updated><id>https://josecastillolema.github.io/kafka</id><content type="html" xml:base="https://josecastillolema.github.io/kafka/">&lt;p&gt;&lt;a href=&quot;https://www.confluent.io/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-14T20:11:27-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Confluent Fundamentals Accreditation - Apache Kafka</title><link href="https://josecastillolema.github.io/kafka/" rel="alternate" type="text/html" title="Confluent Fundamentals Accreditation - Apache Kafka" /><published>2021-04-13T00:00:00-03:00</published><updated>2021-04-13T17:00:58-03:00</updated><id>https://josecastillolema.github.io/kafka</id><content type="html" xml:base="https://josecastillolema.github.io/kafka/">&lt;p&gt;&lt;a href=&quot;https://www.confluent.io/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://cloud.contentraven.com/confluent/self-userpackage&quot;&gt;Confluent Fundamentals for Apache Kafka®&lt;/a&gt; course and &lt;a href=&quot;https://cloud.contentraven.com/confluent/self-userpackage&quot;&gt;Confluent Fundamentals Accreditation&lt;/a&gt; certification for anyone interested learning more about the &lt;a href=&quot;https://kafka.apache.org/&quot;&gt;Apache Kafka project&lt;/a&gt;.&lt;/p&gt;
 
@@ -87,7 +87,98 @@
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;iframe src=&quot;https://www.credential.net/81d07551-5280-4adb-805b-e822b26dbf2d&quot; width=&quot;800&quot; height=&quot;600&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><category term="openshift" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 15th edition</title><link href="https://josecastillolema.github.io/hcia-15/" rel="alternate" type="text/html" title="HCIA-Routing &amp;amp; Switching - 15th edition" /><published>2021-03-26T00:00:00-03:00</published><updated>2021-03-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-15</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-15/">&lt;p&gt;&lt;a href=&quot;https://www.sympla.com.br/15-treinamento-em-tecnologia-da-informacao-e-comunicacao---conv-usp---huawei---hcia__1157952&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-26-hcia-15/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><category term="openshift" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">Microsoft Azure/Data/AI Fundamentals vouchers</title><link href="https://josecastillolema.github.io/azure-fundamentals/" rel="alternate" type="text/html" title="Microsoft Azure/Data/AI Fundamentals vouchers" /><published>2021-04-08T00:00:00-03:00</published><updated>2021-04-08T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/azure-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;By participating in any of the following &lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;Microsoft Virtual Training Days&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Microsoft Azure Virtual Training Day: &lt;strong&gt;Fundamentals&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Microsoft Azure Virtual Training Day: &lt;strong&gt;Data Fundamentals&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Microsoft Azure Virtual Training Day: &lt;strong&gt;AI Fundamentals&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You’ll be eligible to take the following certifications exam at no cost:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/az-900&quot;&gt;Microsoft Azure Fundamentals (AZ-900)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/dp-900&quot;&gt;Microsoft Azure Data Fundamentals (DP-900)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/ai-900&quot;&gt;Microsoft Azure AI Fundamentals (AI-900)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;azure-fundamentals&quot;&gt;Azure Fundamentals&lt;/h1&gt;
+
+&lt;p&gt;In this introductory course you will learn about cloud-computing concepts, models, and services, covering topics such as public, private, and hybrid cloud as well as infrastructure as a service, platform as a service, and software as a service.&lt;/p&gt;
+
+&lt;h2 id=&quot;course-objectives&quot;&gt;Course Objectives&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get started with Azure&lt;/li&gt;
+  &lt;li&gt;Integrate Azure with your existing networks&lt;/li&gt;
+  &lt;li&gt;Better understand key cloud concepts and core services, including pricing, support, and cloud security&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;Azure Cloud Concepts&lt;/li&gt;
+  &lt;li&gt;Core Azure Services&lt;/li&gt;
+  &lt;li&gt;Azure Solutions and Management Tools&lt;/li&gt;
+  &lt;li&gt;Azure Security and Network Security&lt;/li&gt;
+  &lt;li&gt;Identity, governance, privacy and compliance&lt;/li&gt;
+  &lt;li&gt;Azure Pricing and Lifestyle&lt;/li&gt;
+  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;data-fundamentals&quot;&gt;Data Fundamentals&lt;/h1&gt;
+
+&lt;p&gt;Learn the fundamentals of core database concepts in a cloud environment. Join us at Microsoft Azure Virtual Training Day: Data Fundamentals to build your foundational knowledge of cloud data services. Explore relational and non-relational data offerings as well as big data and modern data warehouse analytics solutions in Azure.&lt;/p&gt;
+
+&lt;h2 id=&quot;course-objectives-1&quot;&gt;Course Objectives&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Learn the roles, tasks, and responsibilities involved in managing data in a cloud environment.&lt;/li&gt;
+  &lt;li&gt;Gain basic skills for working with relational and non-relational cloud data services in Azure, including provisioning and deploying relational and non-relational databases.&lt;/li&gt;
+  &lt;li&gt;Explore processing options for building data analytics solutions, including Azure Synapse Analytics, Azure Databricks, and Azure HDInsight.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;content-1&quot;&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;Explore Core Data Concepts&lt;/li&gt;
+  &lt;li&gt;Explore Relational Data in Azure&lt;/li&gt;
+  &lt;li&gt;Explore Non-relational Data in Azure&lt;/li&gt;
+  &lt;li&gt;Explore modern data warehouse analytics in Azure&lt;/li&gt;
+  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;ai-fundamentals&quot;&gt;AI Fundamentals&lt;/h1&gt;
+
+&lt;p&gt;Discover the solutions it’s possible to create with AI and the Azure services that can help you build those solutions. Join the free Microsoft Azure Virtual Training Day: AI Fundamentals to explore fundamental AI concepts and learn how to get started with AI on Azure.&lt;/p&gt;
+
+&lt;h2 id=&quot;course-objectives-2&quot;&gt;Course Objectives&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Get an overview of basic AI concepts and applications.&lt;/li&gt;
+  &lt;li&gt;Create no-code predictive models with Azure Machine Learning.&lt;/li&gt;
+  &lt;li&gt;Learn more about conversational AI, natural language processing, and computer vision in Microsoft Azure.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;content-2&quot;&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;Introduction to AI&lt;/li&gt;
+  &lt;li&gt;Machine Learning&lt;/li&gt;
+  &lt;li&gt;Computer Vision&lt;/li&gt;
+  &lt;li&gt;Natural Language Processing&lt;/li&gt;
+  &lt;li&gt;Conversational AI&lt;/li&gt;
+  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
+
+&lt;p&gt;After completing tris free trainings you’ll be eligible to take the certifications exam at no cost.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;div data-iframe-width=&quot;600&quot; data-iframe-height=&quot;270&quot; data-share-badge-id=&quot;8d9a02d4-89f5-4bfa-a64d-471af8cb07b7&quot; data-share-badge-host=&quot;https://www.credly.com&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.credly.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="cert" /><category term="en" /><summary type="html"></summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 15th edition</title><link href="https://josecastillolema.github.io/hcia-15/" rel="alternate" type="text/html" title="HCIA-Routing &amp;amp; Switching - 15th edition" /><published>2021-03-26T00:00:00-03:00</published><updated>2021-03-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-15</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-15/">&lt;p&gt;&lt;a href=&quot;https://www.sympla.com.br/15-treinamento-em-tecnologia-da-informacao-e-comunicacao---conv-usp---huawei---hcia__1157952&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-26-hcia-15/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Informamos que estão abertas as inscrições do &lt;strong&gt;15.º Treinamento em Tecnologia de Informação e Comunicação&lt;/strong&gt; convênio USP e &lt;strong&gt;HUAWEI – HCIA – Routing &amp;amp; Switching V2.5&lt;/strong&gt; até o dia 26/11/2020 às 12h, totalmente gratuito e virtual.&lt;/p&gt;
 
@@ -719,192 +810,4 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">AWS series VII: Relational Database Service (RDS)</title><link href="https://josecastillolema.github.io/aws12-rds/" rel="alternate" type="text/html" title="AWS series VII: Relational Database Service (RDS)" /><published>2021-02-26T00:00:00-03:00</published><updated>2021-02-26T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws12-rds</id><content type="html" xml:base="https://josecastillolema.github.io/aws12-rds/">&lt;p&gt;&lt;a href=&quot;/series/#aws&quot;&gt;Serie de artigos&lt;/a&gt; sobre Amazon Web Services.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;lab-5---aws-rds&quot;&gt;Lab 5 - AWS RDS&lt;/h1&gt;
-
-&lt;p&gt;Em este lab sobre &lt;a href=&quot;https://aws.amazon.com/pt/rds/&quot;&gt;&lt;strong&gt;Relational Database Service (RDS)&lt;/strong&gt;&lt;/a&gt; aprenderemos alguns conceitos importantes na criação de serviços de DBaaS NoSQL:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Criação de instâncias RDS&lt;/li&gt;
-  &lt;li&gt;Plataformas/entornos disponíveis&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Logging&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Monitoramento&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;criação-da-instância-rds&quot;&gt;Criação da instância RDS&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Acessar o serviço &lt;strong&gt;RDS&lt;/strong&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar um novo &lt;em&gt;database&lt;/em&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Escolher &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MySQL&lt;/code&gt; como &lt;em&gt;backend&lt;/em&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Selecionar a camada gratuita, e configurar nome, usuário e senha para o banco:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Parametrizaçao de &lt;em&gt;storage&lt;/em&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Se formos acessar desde a nossa máquina local, habilitar o acesso público ao banco:&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Revisar as configurações e confirmar a criação da instância RDS:&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aguardar a correta criação da instância:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Na descrição da instância, note-se o &lt;em&gt;endpoint&lt;/em&gt; e a porta da mesma:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Testemos a conectividade com a instância:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com 3306         
-Trying 18.210.97.78...
-telnet: connect to address 18.210.97.78: Operation timed out
-telnet: Unable to connect to remote host
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Como vimos no passo anterior, a instância não está acessível na porta 3306. Precisamos criar um novo &lt;em&gt;security group&lt;/em&gt; e liberar a porta. Para isso, acessar o serviço Virtual Private Cloud (VPC):
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar um novo &lt;em&gt;security group&lt;/em&gt;:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Liberar a porta 3306 desde &lt;em&gt;anywhere&lt;/em&gt;:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;De volta no serviço RDS, vamos atualizar a instância com o novo &lt;em&gt;security group&lt;/em&gt;:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Nos ajustes de conetividade, incluir o novo &lt;em&gt;security group&lt;/em&gt;:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aguardar a configuraçao ser aplicada na instância:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/abd/dbaas/img/rds15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Testar novamente a conetividade:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ telnet fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com 3306
-Trying 18.210.97.78...
-Connected to ec2-18-210-97-78.compute-1.amazonaws.com.
-Escape character is '^]'.
-8.0.20a#Xm7w(?M:w{%Z-
-                     /mysql_native_password
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;testando-o-acesso-ao-banco&quot;&gt;Testando o acesso ao banco&lt;/h2&gt;
-
-&lt;h3 id=&quot;pre-reqs&quot;&gt;Pre-reqs&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt; (client)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Se não tiver os pre-reqs na máquina local pular para o &lt;a href=&quot;#deploy-em-uma-vm-no-ec2&quot;&gt;teste em uma VM no EC2&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;teste-local&quot;&gt;Teste local&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Usar o cliente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt; para acessar ao banco:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mysql -h fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com -u admin -p
-Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 26
-Server version: 8.0.20 Source distribution
-
-Copyright (c) 2000, 2021, Oracle and/or its affiliates.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql&amp;gt; show databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-+--------------------+
-3 rows in set (0.15 sec)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;teste-em-uma-vm-no-ec2&quot;&gt;Teste em uma VM no EC2&lt;/h2&gt;
-
-&lt;p&gt;Se tiver feito o deploy local pode pular esta seção.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar uma VM com a imagem &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 20.04&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Logar na VM&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Atualizar os repositorios:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo apt update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Instalar o cliente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt;:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo apt install mysql-client -y
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Usar o cliente &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mysql&lt;/code&gt; para acessar ao banco:
- ```
- $ mysql -h fiapdb.cpuzlc9blsa2.us-east-1.rds.amazonaws.com -u admin -p
- Enter password: 
- Welcome to the MySQL monitor.  Commands end with ; or \g.
- Your MySQL connection id is 26
- Server version: 8.0.20 Source distribution&lt;/p&gt;
-
-    &lt;p&gt;Copyright (c) 2000, 2021, Oracle and/or its affiliates.&lt;/p&gt;
-
-    &lt;p&gt;Oracle is a registered trademark of Oracle Corporation and/or its
- affiliates. Other names may be trademarks of their respective
- owners.&lt;/p&gt;
-
-    &lt;p&gt;Type ‘help;’ or ‘\h’ for help. Type ‘\c’ to clear the current input statement.&lt;/p&gt;
-
-    &lt;p&gt;mysql&amp;gt; show databases;
- +——————–+
- | Database           |
- +——————–+
- | information_schema |
- | mysql              |
- | performance_schema |
- +——————–+
- 3 rows in set (0.15 sec)&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Amazon Web Services.</summary></entry></feed>
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry></feed>
