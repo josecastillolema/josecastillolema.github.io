@@ -14,7 +14,7 @@ toc: true
 
 [![](/assets/images/posts/2021-04-17-onf-webinar-2.png)](https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/)
 
-Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.
+Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the [Open Networking Foundation (ONF)](https://opennetworking.org/), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.
 
 ## Agenda
 
