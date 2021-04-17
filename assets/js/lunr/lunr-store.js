@@ -766,4 +766,10 @@ var store = [{
         "tags": ["cert","en","iac","openshift","redhat"],
         "url": "https://josecastillolema.github.io/kafka/",
         "teaser": null
+      },{
+        "title": "Webinar: Working with ONF to transform mobile and broadband networks in LATAM",
+        "excerpt":"Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella...","categories": [],
+        "tags": ["en","events","networks","nfv","onf","sdn","webinar"],
+        "url": "https://josecastillolema.github.io/onf-webinar-2/",
+        "teaser": null
       }]
