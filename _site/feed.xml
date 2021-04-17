@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-14T20:11:27-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Confluent Fundamentals Accreditation - Apache Kafka</title><link href="https://josecastillolema.github.io/kafka/" rel="alternate" type="text/html" title="Confluent Fundamentals Accreditation - Apache Kafka" /><published>2021-04-13T00:00:00-03:00</published><updated>2021-04-13T17:00:58-03:00</updated><id>https://josecastillolema.github.io/kafka</id><content type="html" xml:base="https://josecastillolema.github.io/kafka/">&lt;p&gt;&lt;a href=&quot;https://www.confluent.io/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-17T14:42:21-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM</title><link href="https://josecastillolema.github.io/onf-webinar-2/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-2</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-2/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.&lt;/p&gt;
+
+&lt;h2 id=&quot;agenda&quot;&gt;Agenda&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Introduction
+    &lt;ul&gt;
+      &lt;li&gt;Who is ONF&lt;/li&gt;
+      &lt;li&gt;ONF CALA Team&lt;/li&gt;
+      &lt;li&gt;ONF Open Source Project Ecosystem&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/stratum/&quot;&gt;&lt;strong&gt;Stratum&lt;/strong&gt;&lt;/a&gt;: thin switch implementing next generation SDN interfaces&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/trellis/&quot;&gt;&lt;strong&gt;Trellis&lt;/strong&gt;&lt;/a&gt;: multi-purpose leaf-spine fabric supporting distributed access networks, NFV and edge cloud applications&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/odtn/&quot;&gt;&lt;strong&gt;ODTN&lt;/strong&gt;&lt;/a&gt;: open and disaggregated source data center interconnect solution&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/seba/&quot;&gt;&lt;strong&gt;SEBA&lt;/strong&gt;&lt;/a&gt;: lightweight platform that supports a multitude of virtualized access technologies at the edge of the carrier network, including PON, G.Fast and eventually DOCSIS and more&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/sd-ran/&quot;&gt;&lt;strong&gt;SD-RAN&lt;/strong&gt;&lt;/a&gt;: Complementary to the O-RAN architecture, it includes a near-real-time RIC (nRT-RIC) and a set of exemplar xApps for controlling the RAN.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/aether/&quot;&gt;&lt;strong&gt;Aether&lt;/strong&gt;&lt;/a&gt;: the first open source 5G Connected Edge platform for enabling enterprise digital transformation&lt;/li&gt;
+  &lt;li&gt;Q&amp;amp;As&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Join us to learn about ONF and these open source projects and how you can participate in the community. Note that the information covered in both of these webinars will be the same – one will be in Spanish and the other Portuguese.&lt;/p&gt;
+
+&lt;h2 id=&quot;sign-up-now-for-live-webinar&quot;&gt;Sign-up Now for Live Webinar&lt;/h2&gt;
+
+&lt;p&gt;May 11, 11:00am (GMT-5) – in Spanish – &lt;a href=&quot;https://onf.zoom.us/webinar/register/WN_xpGZAVp4QDGzWK68wiDDtw&quot;&gt;REGISTER NOW&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;May 13, 11:00am (GMT-3) – in Portuguese  – &lt;a href=&quot;https://onf.zoom.us/webinar/register/WN_qndVbNQFTe6BvmScb7LhDg&quot;&gt;REGISTER NOW&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cala-ambassador-speakers&quot;&gt;CALA Ambassador Speakers&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/fernando-cerioni/&quot;&gt;Fernando Cerioni&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/amanda-espindola/&quot;&gt;Amanda Espindola&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;Jose Lema&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/andres-madero/&quot;&gt;Andres Madero&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/rony-a-spada-pedroso/&quot;&gt;Rony Pedroso&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/ricardo-tombi/&quot;&gt;Ricardo Tombi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/freddy-turriaf/&quot;&gt;Freddy Turriaf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="onf" /><category term="sdn" /><category term="webinar" /><summary type="html"></summary></entry><entry><title type="html">Confluent Fundamentals Accreditation - Apache Kafka</title><link href="https://josecastillolema.github.io/kafka/" rel="alternate" type="text/html" title="Confluent Fundamentals Accreditation - Apache Kafka" /><published>2021-04-13T00:00:00-03:00</published><updated>2021-04-13T17:00:58-03:00</updated><id>https://josecastillolema.github.io/kafka</id><content type="html" xml:base="https://josecastillolema.github.io/kafka/">&lt;p&gt;&lt;a href=&quot;https://www.confluent.io/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://cloud.contentraven.com/confluent/self-userpackage&quot;&gt;Confluent Fundamentals for Apache Kafka®&lt;/a&gt; course and &lt;a href=&quot;https://cloud.contentraven.com/confluent/self-userpackage&quot;&gt;Confluent Fundamentals Accreditation&lt;/a&gt; certification for anyone interested learning more about the &lt;a href=&quot;https://kafka.apache.org/&quot;&gt;Apache Kafka project&lt;/a&gt;.&lt;/p&gt;
 
@@ -742,71 +783,6 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
   &lt;li&gt;
     &lt;p&gt;Para fazer o &lt;strong&gt;canary release&lt;/strong&gt;, ajustar as porcentagens conforme desejado (usar &lt;em&gt;browsers&lt;/em&gt; diferentes para testar):
    &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry><entry><title type="html">Azure series IV: Blob storage</title><link href="https://josecastillolema.github.io/azure4-blob/" rel="alternate" type="text/html" title="Azure series IV: Blob storage" /><published>2021-03-02T00:00:00-03:00</published><updated>2021-03-02T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure4-blob</id><content type="html" xml:base="https://josecastillolema.github.io/azure4-blob/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;lab-4---blob-storage&quot;&gt;Lab 4 - Blob storage&lt;/h1&gt;
-
-&lt;p&gt;Em este lab sobre &lt;strong&gt;Azure Blob Storage&lt;/strong&gt; aprenderemos alguns conceitos importantes do armazenamento de objetos:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Criação de &lt;em&gt;containers&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Criação de objetos (&lt;em&gt;blobs&lt;/em&gt;)&lt;/li&gt;
-  &lt;li&gt;Controle de permissões de acesso&lt;/li&gt;
-  &lt;li&gt;Hospedagem de sites estáticos&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;criação-do-container&quot;&gt;Criação do &lt;em&gt;container&lt;/em&gt;&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Accessar o serviço &lt;strong&gt;Storage account&lt;/strong&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar um novo &lt;em&gt;storage account&lt;/em&gt; de tipo &lt;em&gt;blob storage&lt;/em&gt; e com redundância local (o nome deve ser único na Azure):
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Habilitar acesso público:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Revisar e confirmar a criaçao da conta de armazenamento.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aguardar a criação da conta:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Na descriçao da conta, acessar a aba de &lt;strong&gt;&lt;em&gt;Containers&lt;/em&gt;&lt;/strong&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar um novo container, de nome &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;imgs&lt;/code&gt; e com acesso público:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Dentro do container, fazer upload de uma imagem qualquer:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;acessando-o-objeto&quot;&gt;Acessando o objeto&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Na descrição do objeto, copiar a URL:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Accessar a imagem pela URL do objeto:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 

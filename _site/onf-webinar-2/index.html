@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>AWS series V: Elastic Container Service (ECS) - GitOps</title>
-<meta name="description" content="Serie de artigos sobre Amazon Web Services.  ">
+<!-- begin _includes/seo.html --><title>Webinar: Working with ONF to transform mobile and broadband networks in LATAM - GitOps</title>
+<meta name="description" content="  ">
 
 
   <meta name="author" content="Jose Castillo Lema">
@@ -19,32 +19,32 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="AWS series V: Elastic Container Service (ECS)">
-<meta property="og:url" content="https://josecastillolema.github.io/aws5-ecs/">
+<meta property="og:title" content="Webinar: Working with ONF to transform mobile and broadband networks in LATAM">
+<meta property="og:url" content="https://josecastillolema.github.io/onf-webinar-2/">
 
 
-  <meta property="og:description" content="Serie de artigos sobre Amazon Web Services.  ">
-
-
-
+  <meta property="og:description" content="  ">
 
 
 
 
-  <meta property="article:published_time" content="2020-07-10T00:00:00-03:00">
 
 
 
-  <meta property="article:modified_time" content="2020-07-10T17:00:58-03:00">
+  <meta property="article:published_time" content="2021-04-17T00:00:00-03:00">
 
 
 
-  
+  <meta property="article:modified_time" content="2021-04-17T17:00:58-03:00">
+
+
 
   
 
+  
 
-<link rel="canonical" href="https://josecastillolema.github.io/aws5-ecs/">
+
+<link rel="canonical" href="https://josecastillolema.github.io/onf-webinar-2/">
 
 
 
@@ -353,15 +353,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="AWS series V: Elastic Container Service (ECS)">
-    <meta itemprop="description" content="Serie de artigos sobre Amazon Web Services.">
-    <meta itemprop="datePublished" content="2020-07-10T00:00:00-03:00">
-    <meta itemprop="dateModified" content="2020-07-10T17:00:58-03:00">
+    <meta itemprop="headline" content="Webinar: Working with ONF to transform mobile and broadband networks in LATAM">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2021-04-17T00:00:00-03:00">
+    <meta itemprop="dateModified" content="2021-04-17T17:00:58-03:00">
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">AWS series V: Elastic Container Service (ECS)
+          <h1 id="page-title" class="page__title" itemprop="headline">Webinar: Working with ONF to transform mobile and broadband networks in LATAM
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -369,7 +369,7 @@
 
 
 
-  1 minute read
+  2 minute read
 
 </p>
           
@@ -382,104 +382,57 @@
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
-  <li><a href="#lab-3---aws-ecs">Lab 3 - AWS ECS</a>
-    <ul>
-      <li><a href="#criando-a-instância">Criando a instância</a></li>
-      <li><a href="#acessando-a-instância">Acessando a instância</a></li>
-    </ul>
-  </li>
+  <li><a href="#agenda">Agenda</a></li>
+  <li><a href="#sign-up-now-for-live-webinar">Sign-up Now for Live Webinar</a></li>
+  <li><a href="#cala-ambassador-speakers">CALA Ambassador Speakers</a></li>
 </ul>
 
             </nav>
           </aside>
         
-        <p><a href="/series/#aws">Serie de artigos</a> sobre Amazon Web Services.</p>
+        <p><a href="https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/"><img src="/assets/images/posts/2021-04-17-onf-webinar-2.png" alt="" /></a></p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="122" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<p>Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.</p>
 
-<h1 id="lab-3---aws-ecs">Lab 3 - AWS ECS</h1>
+<h2 id="agenda">Agenda</h2>
 
-<h2 id="criando-a-instância">Criando a instância</h2>
-<p>Usaremos a imagem <code class="language-plaintext highlighter-rouge">josecastillolema/api</code> hospedada no <a href="https://hub.docker.com/r/josecastillolema/api">Docker Hub</a> para aprender alguns conceitos importantes do <a href="https://aws.amazon.com/pt/ecs/"><strong>Elastic Container Service</strong></a>:</p>
 <ul>
-  <li>Deploy de containers no ECS</li>
-  <li>Mapeamento de portas</li>
-  <li><strong><em>Memory limits</em></strong></li>
-</ul>
-
-<ol>
-  <li>
-    <p>Acessar o serviço <strong>ECS</strong>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs0.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Lançar o assistente de criaçao de containers:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs1.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Seleccionar o <a href="https://aws.amazon.com/pt/fargate/">Fargate</a> para hospedar o container:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs2.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Nomear o cluster:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs3.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Criar uma imagem customizada:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs4.png" alt="" /></p>
-  </li>
-  <li>Parametrização da imagem:
+  <li>Introduction
     <ul>
-      <li>Imagem: <code class="language-plaintext highlighter-rouge">josecastillolema/api</code> hospedada no <a href="https://hub.docker.com/r/josecastillolema/api">Docker Hub</a></li>
-      <li>Limite de memória: 512 MB</li>
-      <li>Mapeamento de porta: 5000
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs5.png" alt="" /></li>
+      <li>Who is ONF</li>
+      <li>ONF CALA Team</li>
+      <li>ONF Open Source Project Ecosystem</li>
     </ul>
   </li>
-  <li>
-    <p>Revisar as definições da <em>task</em>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs6.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Na configuração do serviço, desativar o balanceador de carga:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs7.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Manter as configurações padrão de rede:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs8.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Revisar as configurações:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs9.png" alt="" /></p>
-  </li>
-  <li>Confirmar a criação do cluster:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs10.png" alt="" /></li>
-</ol>
+  <li><a href="https://opennetworking.org/stratum/"><strong>Stratum</strong></a>: thin switch implementing next generation SDN interfaces</li>
+  <li><a href="https://opennetworking.org/trellis/"><strong>Trellis</strong></a>: multi-purpose leaf-spine fabric supporting distributed access networks, NFV and edge cloud applications</li>
+  <li><a href="https://opennetworking.org/odtn/"><strong>ODTN</strong></a>: open and disaggregated source data center interconnect solution</li>
+  <li><a href="https://opennetworking.org/seba/"><strong>SEBA</strong></a>: lightweight platform that supports a multitude of virtualized access technologies at the edge of the carrier network, including PON, G.Fast and eventually DOCSIS and more</li>
+  <li><a href="https://opennetworking.org/sd-ran/"><strong>SD-RAN</strong></a>: Complementary to the O-RAN architecture, it includes a near-real-time RIC (nRT-RIC) and a set of exemplar xApps for controlling the RAN.</li>
+  <li><a href="https://opennetworking.org/aether/"><strong>Aether</strong></a>: the first open source 5G Connected Edge platform for enabling enterprise digital transformation</li>
+  <li>Q&amp;As</li>
+</ul>
 
-<h2 id="acessando-a-instância">Acessando a instância</h2>
+<p>Join us to learn about ONF and these open source projects and how you can participate in the community. Note that the information covered in both of these webinars will be the same – one will be in Spanish and the other Portuguese.</p>
 
-<ol>
-  <li>
-    <p>Mostrar as informações do cluster:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs11.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Na aba <code class="language-plaintext highlighter-rouge">Tasks</code>, mostrar a informação da única <em>task</em> (em este exemplo <code class="language-plaintext highlighter-rouge">39bb35ae-615...</code>:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs12.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Conferir o IP público para acessar o container:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs13.png" alt="" /></p>
-  </li>
-  <li>
-    <p>Acessar o container pelo IP público:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ecs14.png" alt="" /></p>
-  </li>
-</ol>
+<h2 id="sign-up-now-for-live-webinar">Sign-up Now for Live Webinar</h2>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<p>May 11, 11:00am (GMT-5) – in Spanish – <a href="https://onf.zoom.us/webinar/register/WN_xpGZAVp4QDGzWK68wiDDtw">REGISTER NOW</a></p>
+
+<p>May 13, 11:00am (GMT-3) – in Portuguese  – <a href="https://onf.zoom.us/webinar/register/WN_qndVbNQFTe6BvmScb7LhDg">REGISTER NOW</a></p>
+
+<h2 id="cala-ambassador-speakers">CALA Ambassador Speakers</h2>
+
+<ul>
+  <li><a href="https://opennetworking.org/ambassadors/fernando-cerioni/">Fernando Cerioni</a></li>
+  <li><a href="https://opennetworking.org/ambassadors/amanda-espindola/">Amanda Espindola</a></li>
+  <li><a href="https://opennetworking.org/ambassadors/jose-castillo-lema/">Jose Lema</a></li>
+  <li><a href="https://opennetworking.org/ambassadors/andres-madero/">Andres Madero</a></li>
+  <li><a href="https://opennetworking.org/ambassadors/rony-a-spada-pedroso/">Rony Pedroso</a></li>
+  <li><a href="https://opennetworking.org/ambassadors/ricardo-tombi/">Ricardo Tombi</a></li>
+  <li><a href="https://opennetworking.org/ambassadors/freddy-turriaf/">Freddy Turriaf</a></li>
+</ul>
+
 
         
       </section>
@@ -500,23 +453,31 @@
     
       
       
-      <a href="/tags/#aws" class="page__taxonomy-item" rel="tag">aws</a><span class="sep">, </span>
+      <a href="/tags/#en" class="page__taxonomy-item" rel="tag">en</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#classes" class="page__taxonomy-item" rel="tag">classes</a><span class="sep">, </span>
+      <a href="/tags/#events" class="page__taxonomy-item" rel="tag">events</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#fiap" class="page__taxonomy-item" rel="tag">fiap</a><span class="sep">, </span>
+      <a href="/tags/#networks" class="page__taxonomy-item" rel="tag">networks</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#pt" class="page__taxonomy-item" rel="tag">pt</a><span class="sep">, </span>
+      <a href="/tags/#nfv" class="page__taxonomy-item" rel="tag">nfv</a><span class="sep">, </span>
     
       
       
-      <a href="/tags/#series" class="page__taxonomy-item" rel="tag">series</a>
+      <a href="/tags/#onf" class="page__taxonomy-item" rel="tag">onf</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#sdn" class="page__taxonomy-item" rel="tag">sdn</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#webinar" class="page__taxonomy-item" rel="tag">webinar</a>
     
     </span>
   </p>
@@ -525,7 +486,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-07-10">July 10, 2020</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2021-04-17">April 17, 2021</time></p>
         
       </footer>
 
@@ -534,23 +495,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=AWS+series+V%3A+Elastic+Container+Service+%28ECS%29%20https%3A%2F%2Fjosecastillolema.github.io%2Faws5-ecs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Webinar%3A+Working+with+ONF+to+transform+mobile+and+broadband+networks+in+LATAM%20https%3A%2F%2Fjosecastillolema.github.io%2Fonf-webinar-2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Faws5-ecs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fonf-webinar-2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Faws5-ecs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fonf-webinar-2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/aws4-autoscaling/" class="pagination--pager" title="AWS series IV: Auto Scaling
+      <a href="/kafka/" class="pagination--pager" title="Confluent Fundamentals Accreditation - Apache Kafka
 ">Previous</a>
     
     
-      <a href="/aws7-eb/" class="pagination--pager" title="AWS series VII: Elastic Beanstalk (EB)
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -573,36 +533,6 @@
     <div class="page__related">
       <h4 class="page__related-title">You may also enjoy</h4>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/onf-webinar-2/" rel="permalink">Webinar: Working with ONF to transform mobile and broadband networks in LATAM
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  2 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -653,7 +583,7 @@
 
 
 
-  4 minute read
+  3 minute read
 
 </p>
     
@@ -684,6 +614,36 @@
 
 
   1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/rh-summit21/" rel="permalink">Red Hat Summit 2021
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
 
 </p>
     
@@ -796,8 +756,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/aws5-ecs/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/aws5-ecs"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/onf-webinar-2/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/onf-webinar-2"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
