@@ -772,4 +772,10 @@ var store = [{
         "tags": ["en","events","networks","nfv","onf","sdn","webinar"],
         "url": "https://josecastillolema.github.io/onf-webinar-2/",
         "teaser": null
+      },{
+        "title": "GitLab Certified Associate",
+        "excerpt":"Usually priced at USD $650 it’s available for free until April 30, 2021. Steps required: Create account on the GitLab Learn platform 1.1 purple login button 1.2 purple signup button Add the associate test pathway to the basket In Payment step apply discount code E6B8A234458AE3D795 Once signed up you have...","categories": [],
+        "tags": ["cert","en","iac"],
+        "url": "https://josecastillolema.github.io/gitlab/",
+        "teaser": null
       }]
