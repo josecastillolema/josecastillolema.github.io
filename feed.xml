@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-21T16:12:59-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM</title><link href="https://josecastillolema.github.io/onf-webinar-2/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-2</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-2/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-23T15:55:43-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">GitLab Certified Associate</title><link href="https://josecastillolema.github.io/gitlab/" rel="alternate" type="text/html" title="GitLab Certified Associate" /><published>2021-04-23T00:00:00-03:00</published><updated>2021-04-23T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitlab</id><content type="html" xml:base="https://josecastillolema.github.io/gitlab/">&lt;p&gt;&lt;a href=&quot;https://gitlab.com/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-23-gitlab.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Usually priced at USD $650 it’s available for free until April 30, 2021.&lt;/p&gt;
+
+&lt;p&gt;Steps required:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create account on the &lt;a href=&quot;https://gitlab.edcast.com/&quot;&gt;GitLab Learn platform&lt;/a&gt; &lt;br /&gt;
+1.1 purple login button &lt;br /&gt;
+1.2 purple signup button&lt;/li&gt;
+  &lt;li&gt;Add the &lt;a href=&quot;https://gitlab.edcast.com/pathways/cy-test-pathway-associate-study-exam/&quot;&gt;associate test pathway&lt;/a&gt; to the basket&lt;/li&gt;
+  &lt;li&gt;In Payment step apply discount code &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;E6B8A234458AE3D795&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Once signed up you have one year time for completion.&lt;/p&gt;
+
+&lt;p&gt;More info &lt;a href=&quot;https://about.gitlab.com/blog/2021/04/20/everyone-can-get-certified/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;course-contents&quot;&gt;Course contents&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-1---introduction-to-gitlab&quot;&gt;Section 1 - Introduction to GitLab&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;GitLab Overview&lt;/li&gt;
+  &lt;li&gt;GitLab Comparison&lt;/li&gt;
+  &lt;li&gt;GitLab Components and Navigation&lt;/li&gt;
+  &lt;li&gt;Demos and Hands On Excercises&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2---self-study-using-git-and-gitlab&quot;&gt;Section 2 - Self Study using GIT and GitLab&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Git Basics&lt;/li&gt;
+  &lt;li&gt;Code Creation in GitLab&lt;/li&gt;
+  &lt;li&gt;GitLabs CI/CD features&lt;/li&gt;
+  &lt;li&gt;GitLabs Package and Release Functions&lt;/li&gt;
+  &lt;li&gt;GitLab Security Scanning&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3---certification-assesments&quot;&gt;Section 3 - Certification Assesments&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Knowledge Exam&lt;/li&gt;
+  &lt;li&gt;Hands On Exam&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><summary type="html"></summary></entry><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM</title><link href="https://josecastillolema.github.io/onf-webinar-2/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-2</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-2/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the &lt;a href=&quot;https://opennetworking.org/&quot;&gt;Open Networking Foundation (ONF)&lt;/a&gt;, a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.&lt;/p&gt;
 
@@ -469,321 +513,4 @@
   &lt;li&gt;Módulo 8: Bancos de dados&lt;/li&gt;
   &lt;li&gt;Módulo 9: Arquitetura de nuvem&lt;/li&gt;
   &lt;li&gt;Módulo 10: Auto scaling e monitoramento&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Azure series V: App services</title><link href="https://josecastillolema.github.io/azure5-app/" rel="alternate" type="text/html" title="Azure series V: App services" /><published>2021-03-09T00:00:00-03:00</published><updated>2021-03-09T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure5-app</id><content type="html" xml:base="https://josecastillolema.github.io/azure5-app/">&lt;p&gt;&lt;a href=&quot;/series/#azure&quot;&gt;Serie de artigos&lt;/a&gt; sobre Microsoft Azure.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;lab-5---app-service-plans&quot;&gt;Lab 5 - App Service Plans&lt;/h1&gt;
-
-&lt;p&gt;Em este lab sobre &lt;strong&gt;App Service Plans&lt;/strong&gt; aprenderemos alguns conceitos importantes da camada de plataforma da Azure:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Deploy&lt;/em&gt; de aplicações&lt;/li&gt;
-  &lt;li&gt;Plataformas/entornos de execução disponíveis&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Logging&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Monitoramento&lt;/li&gt;
-  &lt;li&gt;Estratégias de &lt;em&gt;release&lt;/em&gt;
-    &lt;ul&gt;
-      &lt;li&gt;Blue-Green&lt;/li&gt;
-      &lt;li&gt;Canary&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;pre-reqs&quot;&gt;Pre-reqs&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Uma VM com a imagem &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu Linux 18.04&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python3&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip3&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;deploy-em-uma-vm&quot;&gt;&lt;em&gt;Deploy&lt;/em&gt; em uma VM&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar uma VM com a imagem &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ubuntu 18.04&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Logar na VM&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Atualizar os repositorios:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo apt update
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Instalar o pip3 (gestor de pacotes do python3):
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo apt install python3-pip -y
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Clonar o repositório:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; git clone https://github.com/josecastillolema/fiap
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Navegar ate o diretorio &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fiap/net/devops/lab05-paas-app&lt;/code&gt;. O diretorio contem os &lt;a href=&quot;https://github.com/josecastillolema/fiap/tree/master/net/devops/lab05-paas-app&quot;&gt;seguintes arquivos&lt;/a&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app/application.py&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;application.py&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;: Um serviço web escrito em Python que usa a biblioteca &lt;a href=&quot;https://flask.palletsprojects.com/en/1.1.x/&quot;&gt;Flask&lt;/a&gt;.&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app/requirements.txt&quot;&gt;&lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;: As dependências da aplicação. Podem ser instaladas usando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;, o gestor de dependências do Python.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Instalar as dependências:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ sudo pip3 install -r requirements.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Executar a aplicação:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ FLASK_APP=./application.py FLASK_RUN_HOST=0.0.0.0 flask run &amp;amp;
-  Serving Flask app &quot;./application.py&quot;
-  Environment: production
-    WARNING: Do not use the development server in a production environment.
-    Use a production WSGI server instead.
-  Debug mode: off
-  Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Testar o acesso local:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ curl localhost:5000
- &amp;lt;h1&amp;gt;Hola FIAP!&amp;lt;/h1&amp;gt;
- MBA! o/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Testar o acesso remoto pela IP pública da VM (lembrando que é necessária a liberacão da porta 5000 no &lt;em&gt;security group&lt;/em&gt; da VM):&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;criaçao-do-serviço-na-azure&quot;&gt;Criaçao do serviço na Azure&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Acessar o serviço &lt;strong&gt;Web Application&lt;/strong&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Criar uma nova &lt;em&gt;web application&lt;/em&gt;.
-    &lt;ul&gt;
-      &lt;li&gt;Runtime: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python 3.6&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;SKU: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;S1&lt;/code&gt; ou algum outro SKU que tenha permissão para usar &lt;em&gt;deployment slots&lt;/em&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app03.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Revisar a configuração do serviço:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aguardar a criação do serviço:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Acessar a URL do serviço criado:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Foi desplegado automaticamente um site de teste:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app07.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;configuraçao-do-repositório-git&quot;&gt;Configuraçao do repositório &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/h2&gt;
-
-&lt;p&gt;Criaremos um repositório &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;git&lt;/code&gt; local para automatizar o &lt;em&gt;deploy&lt;/em&gt; da aplicação.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;No &lt;em&gt;Deployment center&lt;/em&gt;, na aba de configuraçao criar um repositório git local:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Na aba de credenciais configurar um usuário e senha para poder clonar o repositório:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;deploy-da-aplicaçao&quot;&gt;Deploy da aplicaçao&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;De volta na VM&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Clonar o repositório local criado nos passos anteriores (copiar a URI do repositorio git local no passo anterior) usando as credencias recém criadas:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ git clone https://fiap-app.scm.azurewebsites.net:443/fiap.git
- Cloning into 'fiap-app'...
- Username for 'https://fiap.scm.azurewebsites.net:443': jlema
- Password for 'https://jlema@fiap.scm.azurewebsites.net:443': 
- warning: You appear to have cloned an empty repository.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Copiar os 2 arquivos:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cp fiap/net/devops/lab05-paas-app/* fiap-app
-    
-$ ls fiap-app
-application.py  requirements.txt
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Comittar os novos arquivos no repositorio git local da app:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd fiap-app
-    
-$ git status
-On branch master
-
-No commits yet
-
-Untracked files:
-  (use &quot;git add &amp;lt;file&amp;gt;...&quot; to include in what will be committed)
-
- application.py
- requirements.txt
-
-nothing added to commit but untracked files present (use &quot;git add&quot; to track)
-    
-$ git add *
-    
-$ git commit -m &quot;v1&quot;
-[master (root-commit) a64c6ae] v1
- Committer: Ubuntu &amp;lt;jose@joselito.qzy1ejut0yhe3jyjrxopscm2pe.bx.internal.cloudapp.net&amp;gt;
-Your name and email address were configured automatically based
-on your username and hostname. Please check that they are accurate.
-You can suppress this message by setting them explicitly. Run the
-following command and follow the instructions in your editor to edit
-your configuration file:
-
-    git config --global --edit
-
-After doing this, you may fix the identity used for this commit with:
-
-    git commit --amend --reset-author
-
- 2 files changed, 13 insertions(+)
- create mode 100644 application.py
- create mode 100644 requirements.txt
-     
-$ git push origin master
-Username for 'https://fiap.scm.azurewebsites.net:443': jlema
-Password for 'https://jlema@fiap.scm.azurewebsites.net:443': 
-Counting objects: 4, done.
-Compressing objects: 100% (4/4), done.
-Writing objects: 100% (4/4), 487 bytes | 487.00 KiB/s, done.
-Total 4 (delta 0), reused 0 (delta 0)
-remote: Deploy Async
-remote: Updating branch 'master'.
-remote: Updating submodules.
-remote: Preparing deployment for commit id 'a64c6ae136'.
-remote: Repository path is /home/site/repository
-remote: Running oryx build...
-remote: Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
-remote: You can report issues at https://github.com/Microsoft/Oryx/issues
-remote: 
-remote: Oryx Version: 0.2.20210120.1, Commit: 66c7820d7df527aaffabd2563a49ad57930999c9, ReleaseTagName: 20210120.1
-remote: 
-remote: Build Operation ID: |Me5qumZrHLs=.51783a9b_
-remote: Repository Commit : a64c6ae136e87b9f9a83de6e1aa81a8145f997e5
-remote: 
-remote: Detecting platforms...
-remote: Detected following platforms:
-remote:   python: 3.6.12
-remote: Warning: An outdated version of python was detected (3.6.12). Consider updating.\nVersions supported by Oryx: https://github.com/microsoft/Oryx
-remote: 
-remote: 
-remote: Using intermediate directory '/tmp/8d8e34659c81cee'.
-remote: 
-remote: Copying files to the intermediate directory...
-remote: Done in 0 sec(s).
-remote: 
-remote: Source directory     : /tmp/8d8e34659c81cee
-remote: Destination directory: /home/site/wwwroot
-remote: 
-remote: Python Version: /opt/python/3.6.12/bin/python3.6
-remote: Python Virtual Environment: antenv3.6
-remote: Creating virtual environment...
-remote: ......
-remote: Activating virtual environment...
-remote: Running pip install...
-remote: [21:58:00+0000] Collecting click==6.7 (from -r requirements.txt (line 1))
-remote: [21:58:01+0000]   Downloading https://files.pythonhosted.org/packages/34/c1/8806f99713ddb993c5366c362b2f908f18269f8d792aff1abfd700775a77/click-6.7-py2.py3-none-any.whl (71kB)
-remote: [21:58:01+0000] Collecting Flask==1.0.2 (from -r requirements.txt (line 2))
-remote: [21:58:01+0000]   Downloading https://files.pythonhosted.org/packages/7f/e7/08578774ed4536d3242b14dacb4696386634607af824ea997202cd0edb4b/Flask-1.0.2-py2.py3-none-any.whl (91kB)
-remote: [21:58:02+0000] Collecting itsdangerous==0.24 (from -r requirements.txt (line 3))
-remote: [21:58:02+0000]   Downloading https://files.pythonhosted.org/packages/dc/b4/a60bcdba945c00f6d608d8975131ab3f25b22f2bcfe1dab221165194b2d4/itsdangerous-0.24.tar.gz (46kB)
-remote: [21:58:03+0000] Collecting Jinja2&amp;gt;=2.10.1 (from -r requirements.txt (line 4))
-remote: [21:58:03+0000]   Downloading https://files.pythonhosted.org/packages/7e/c2/1eece8c95ddbc9b1aeb64f5783a9e07a286de42191b7204d67b7496ddf35/Jinja2-2.11.3-py2.py3-none-any.whl (125kB)
-remote: [21:58:03+0000] Collecting MarkupSafe==1.0 (from -r requirements.txt (line 5))
-remote: [21:58:03+0000]   Downloading https://files.pythonhosted.org/packages/4d/de/32d741db316d8fdb7680822dd37001ef7a448255de9699ab4bfcbdf4172b/MarkupSafe-1.0.tar.gz
-remote: [21:58:04+0000] Collecting Werkzeug&amp;gt;=0.15.3 (from -r requirements.txt (line 6))
-remote: [21:58:04+0000]   Downloading https://files.pythonhosted.org/packages/cc/94/5f7079a0e00bd6863ef8f1da638721e9da21e5bacee597595b318f71d62e/Werkzeug-1.0.1-py2.py3-none-any.whl (298kB)
-remote: [21:58:04+0000] Building wheels for collected packages: itsdangerous, MarkupSafe
-remote: [21:58:04+0000]   Running setup.py bdist_wheel for itsdangerous: started
-remote: [21:58:06+0000]   Running setup.py bdist_wheel for itsdangerous: finished with status 'done'
-remote: [21:58:06+0000]   Stored in directory: /usr/local/share/pip-cache/wheels/2c/4a/61/5599631c1554768c6290b08c02c72d7317910374ca602ff1e5
-remote: [21:58:06+0000]   Running setup.py bdist_wheel for MarkupSafe: started
-remote: [21:58:09+0000]   Running setup.py bdist_wheel for MarkupSafe: finished with status 'done'
-remote: [21:58:09+0000]   Stored in directory: /usr/local/share/pip-cache/wheels/33/56/20/ebe49a5c612fffe1c5a632146b16596f9e64676768661e4e46
-remote: [21:58:09+0000] Successfully built itsdangerous MarkupSafe
-remote: [21:58:10+0000] Installing collected packages: click, itsdangerous, MarkupSafe, Jinja2, Werkzeug, Flas
-remote: [21:58:11+0000] Successfully installed Flask-1.0.2 Jinja2-2.11.3 MarkupSafe-1.0 Werkzeug-1.0.1 click-6.7 itsdangerous-0.24
-remote: You are using pip version 18.1, however version 21.0.1 is available.
-remote: You should consider upgrading via the 'pip install --upgrade pip' command.
-remote: 
-remote: Compressing existing 'antenv3.6' folder...
-remote: Done in 3 sec(s).
-remote: Preparing output...
-remote: 
-remote: Copying files to destination directory '/home/site/wwwroot'...
-remote: Done in 0 sec(s).
-remote: 
-remote: Removing existing manifest file
-remote: Creating a manifest file...
-remote: Manifest file created.
-remote: 
-remote: Done in 26 sec(s).
-remote: Running post deployment command(s)...
-remote: Triggering recycle (preview mode disabled).
-remote: Deployment successful.
-remote: Deployment Logs : 'https://fiap.scm.azurewebsites.net/newui/jsonviewer?view_url=/api/deployments/a64c6ae136e87b9f9a83de6e1aa81a8145f997e5/log'
-To https://fiap.scm.azurewebsites.net:443/fiap.git
- * [new branch]      master -&amp;gt; master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Confirmar que o deploy ocorreu com sucesso:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app10.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;logging-e-monitoramento&quot;&gt;&lt;em&gt;Logging&lt;/em&gt; e monitoramento&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Na descrição da aplicaçao podemos consultar algumas métricas básicas:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Para fazer &lt;em&gt;troubleshooting&lt;/em&gt; da aplicação, se o endereço da mesma for https://fiap.azurewebsites.net/, acessar https://fiap.scm.azurewebsites.net/:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;deployment-slots&quot;&gt;Deployment slots&lt;/h2&gt;
-
-&lt;p&gt;Para implementar algums estratégias de &lt;em&gt;release&lt;/em&gt; (blue-green e canary) usaremos &lt;em&gt;deployment slots&lt;/em&gt;:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Criar um novo &lt;em&gt;slot&lt;/em&gt; para o ambiente de homolgação:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Confirmar a URL do &lt;em&gt;slot&lt;/em&gt; de homologação. Se o endereço da app for https://fiap.azurewebsites.net/, o endereço do ambiente de homologação será https://fiap-homol.azurewebsites.net/
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Acessar o endereço de homologação e confirmar que Azure fez deploy da aplicação de teste:
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Para fazer &lt;strong&gt;blue-green&lt;/strong&gt;, escolher a opçao &lt;strong&gt;&lt;em&gt;Swap&lt;/em&gt;&lt;/strong&gt; (Intercambiar):
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Para fazer o &lt;strong&gt;canary release&lt;/strong&gt;, ajustar as porcentagens conforme desejado (usar &lt;em&gt;browsers&lt;/em&gt; diferentes para testar):
-   &lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Microsoft Azure.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
