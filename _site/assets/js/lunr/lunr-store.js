@@ -778,4 +778,10 @@ var store = [{
         "tags": ["cert","en","iac"],
         "url": "https://josecastillolema.github.io/gitlab/",
         "teaser": null
+      },{
+        "title": "Microsoft Power Platform Fundamentals voucher",
+        "excerpt":"By participating in the following Microsoft Virtual Training Days: Microsoft Power Platform Virtual Training Day: Fundamentals You’ll be eligible to take the following certification exam at no cost: Microsoft Certified: Power Platform Fundamentals (PL-900) Power Platform Fundamentals Microsoft Power Platform Virtual Training Day: Fundamentals will cover everything you need to...","categories": [],
+        "tags": ["azure","cert","en"],
+        "url": "https://josecastillolema.github.io/power-fundamentals/",
+        "teaser": null
       }]
