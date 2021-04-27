@@ -83,3 +83,7 @@ After completing tris free trainings you’ll be eligible to take the certificat
 ![](/assets/images/posts/2021-04-08-azure-fundamentals/3.png)
 
 <div data-iframe-width="600" data-iframe-height="270" data-share-badge-id="8d9a02d4-89f5-4bfa-a64d-471af8cb07b7" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+![](/assets/images/posts/2021-04-08-azure-fundamentals/4.png)
+
+<div data-iframe-width="600" data-iframe-height="270" data-share-badge-id="fd6913cb-4fc5-4dc5-9f69-cd585d1f100a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
