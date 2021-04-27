@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-27T10:46:16-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">GitLab Certified Associate</title><link href="https://josecastillolema.github.io/gitlab/" rel="alternate" type="text/html" title="GitLab Certified Associate" /><published>2021-04-23T00:00:00-03:00</published><updated>2021-04-23T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitlab</id><content type="html" xml:base="https://josecastillolema.github.io/gitlab/">&lt;p&gt;&lt;a href=&quot;https://gitlab.com/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-23-gitlab.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-27T11:33:20-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Microsoft Power Platform Fundamentals voucher</title><link href="https://josecastillolema.github.io/power-fundamentals/" rel="alternate" type="text/html" title="Microsoft Power Platform Fundamentals voucher" /><published>2021-04-27T00:00:00-03:00</published><updated>2021-04-27T17:00:58-03:00</updated><id>https://josecastillolema.github.io/power-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/power-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;By participating in the following &lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;Microsoft Virtual Training Days&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Microsoft Power Platform Virtual Training Day: Fundamentals&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You’ll be eligible to take the following certification exam at no cost:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/pl-900&quot;&gt;Microsoft Certified: Power Platform Fundamentals (PL-900)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;power-platform-fundamentals&quot;&gt;Power Platform Fundamentals&lt;/h1&gt;
+
+&lt;p&gt;Microsoft Power Platform Virtual Training Day: Fundamentals will cover everything you need to know about building and managing innovative business solutions so your organisation is ready for whatever comes next. You’ll discover how to connect your data to analyse real-time business performance, act on data and insights with custom-built apps, and automate workflows to improve how people work, both remotely and in the office. This training will teach you how to create innovative, future-proof solutions for an evolving business environment.&lt;/p&gt;
+
+&lt;h2 id=&quot;course-objectives&quot;&gt;Course Objectives&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Prepare for the Microsoft Power Platform Fundamentals certification exam&lt;/li&gt;
+  &lt;li&gt;Build and manage innovative business solutions with Power Platform&lt;/li&gt;
+  &lt;li&gt;Easily connect all your data to analyse business performance with custom-built apps&lt;/li&gt;
+  &lt;li&gt;Automate workflows to improve daily processes, regardless of your technical expertise&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Introduction&lt;/li&gt;
+  &lt;li&gt;Introduction to Microsoft Power Platform&lt;/li&gt;
+  &lt;li&gt;Introduction to Microsoft Power Apps and Common Data Services&lt;/li&gt;
+  &lt;li&gt;Build simple Power Apps&lt;/li&gt;
+  &lt;li&gt;Leverage Microsoft Power Automate&lt;/li&gt;
+  &lt;li&gt;Leverage Microsoft Power BI&lt;/li&gt;
+  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="cert" /><category term="en" /><summary type="html"></summary></entry><entry><title type="html">GitLab Certified Associate</title><link href="https://josecastillolema.github.io/gitlab/" rel="alternate" type="text/html" title="GitLab Certified Associate" /><published>2021-04-23T00:00:00-03:00</published><updated>2021-04-23T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitlab</id><content type="html" xml:base="https://josecastillolema.github.io/gitlab/">&lt;p&gt;&lt;a href=&quot;https://gitlab.com/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-23-gitlab.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Usually priced at USD $650 it’s available for free until April 30, 2021.&lt;/p&gt;
 
@@ -486,36 +519,4 @@
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Amazon Web Services.</summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-3/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition" /><published>2021-03-10T00:00:00-03:00</published><updated>2021-03-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-10-shift-aws-foundations-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.&lt;/p&gt;
-
-&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
-&lt;p&gt;Profissionais DevOps e Arquitetos de Plataformas/Soluções que querem ter certificação e experiência hands-on na AWS.&lt;/p&gt;
-
-&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
-&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
-
-&lt;h2 id=&quot;como-funciona&quot;&gt;Como funciona?&lt;/h2&gt;
-
-&lt;p&gt;Você vai ter acesso à plataforma AWS Academy, com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da Amazon e professor da FIAP.&lt;/p&gt;
-
-&lt;h2 id=&quot;digital--live&quot;&gt;Digital + Live&lt;/h2&gt;
-&lt;p&gt;Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios práticos e mais duas lives com o professor, visando à preparação para a prova, nos dias &lt;strong&gt;11/01&lt;/strong&gt; e &lt;strong&gt;15/02&lt;/strong&gt;, das 19h às 20h. No fim, você receberá um certificado oficial de conclusão de curso da AWS Academy e poderá aproveitar 50% OFF para fazer a prova de Certificação AWS Cloud Foundations.&lt;/p&gt;
-
-&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem&lt;/li&gt;
-  &lt;li&gt;Módulo 2: Economia e faturamento da nuvem&lt;/li&gt;
-  &lt;li&gt;Módulo 3: Visão geral da infraestrutura global da AWS&lt;/li&gt;
-  &lt;li&gt;Módulo 4: Segurança na nuvem AWS&lt;/li&gt;
-  &lt;li&gt;Módulo 5: Redes e entrega de conteúdo&lt;/li&gt;
-  &lt;li&gt;Módulo 6: Computação&lt;/li&gt;
-  &lt;li&gt;Módulo 7: Armazenamento&lt;/li&gt;
-  &lt;li&gt;Módulo 8: Bancos de dados&lt;/li&gt;
-  &lt;li&gt;Módulo 9: Arquitetura de nuvem&lt;/li&gt;
-  &lt;li&gt;Módulo 10: Auto scaling e monitoramento&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Amazon Web Services.</summary></entry></feed>
