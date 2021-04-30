@@ -1,6 +1,6 @@
 ---
 title:  "Microsoft Azure/Data/AI Fundamentals vouchers"
-last_modified_at: 2021-04-08T16:00:58-04:00
+last_modified_at: 2021-04-27T16:00:58-04:00
 tags:
   - azure
   - cert
