@@ -784,4 +784,10 @@ var store = [{
         "tags": ["azure","cert","en"],
         "url": "https://josecastillolema.github.io/power-fundamentals/",
         "teaser": null
+      },{
+        "title": "Notes for HCIA-IA",
+        "excerpt":"Some of the notes I prepared studying for the Huawei Certified ICT Associate - Artificial Intelligence (HCIA-IA) exam. Notes Deep learning I used the Coggle platform, a collaborative mind maps &amp; flow charts tool. Huawei Cloud Enterprise Intelligent (EI) Services These were made by my studying collegues using Miro, an...","categories": [],
+        "tags": ["cert","en","huawei"],
+        "url": "https://josecastillolema.github.io/hcia-ia-notes/",
+        "teaser": null
       }]
