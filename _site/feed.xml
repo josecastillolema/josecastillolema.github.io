@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-04-30T18:25:54-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Microsoft Power Platform Fundamentals voucher</title><link href="https://josecastillolema.github.io/power-fundamentals/" rel="alternate" type="text/html" title="Microsoft Power Platform Fundamentals voucher" /><published>2021-04-27T00:00:00-03:00</published><updated>2021-04-27T17:00:58-03:00</updated><id>https://josecastillolema.github.io/power-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/power-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-05-10T17:17:56-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Notes for HCIA-IA</title><link href="https://josecastillolema.github.io/hcia-ia-notes/" rel="alternate" type="text/html" title="Notes for HCIA-IA" /><published>2021-05-10T00:00:00-03:00</published><updated>2021-05-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-ia-notes</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-ia-notes/">&lt;p&gt;&lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Some of the notes I prepared studying for the &lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;Huawei Certified ICT Associate - Artificial Intelligence (HCIA-IA)&lt;/a&gt; exam.&lt;/p&gt;
+
+&lt;h1 id=&quot;notes&quot;&gt;Notes&lt;/h1&gt;
+
+&lt;h2 id=&quot;deep-learning&quot;&gt;Deep learning&lt;/h2&gt;
+
+&lt;p&gt;I used the &lt;a href=&quot;https://coggle.it&quot;&gt;Coggle platform&lt;/a&gt;, a collaborative mind maps &amp;amp; flow charts tool.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;huawei-cloud-enterprise-intelligent-ei-services&quot;&gt;Huawei Cloud Enterprise Intelligent (EI) Services&lt;/h2&gt;
+
+&lt;p&gt;These were made by my studying collegues using &lt;a href=&quot;https://miro.com/&quot;&gt;Miro&lt;/a&gt;, an online visual collaboration platform for teamwork.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;huawei-open-ai-hiai-platform-for-smart-devices&quot;&gt;Huawei Open AI (HiAI) Platform for Smart Devices&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;certification&quot;&gt;Certification&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="huawei" /><summary type="html"></summary></entry><entry><title type="html">Microsoft Power Platform Fundamentals voucher</title><link href="https://josecastillolema.github.io/power-fundamentals/" rel="alternate" type="text/html" title="Microsoft Power Platform Fundamentals voucher" /><published>2021-04-27T00:00:00-03:00</published><updated>2021-04-27T17:00:58-03:00</updated><id>https://josecastillolema.github.io/power-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/power-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;By participating in the following &lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;Microsoft Virtual Training Days&lt;/a&gt;:&lt;/p&gt;
 &lt;ul&gt;
@@ -455,68 +483,4 @@
 
 &lt;p&gt;A seleção consistirá em avaliação de documentação comprobatória. Dentre os quesitos a serem analisados, encontram-se experiência de atuação profissional, formação acadêmica e certificações diversas em tecnologia. O resultado final será divulgado a partir do dia 16 de abril, por meio do portal do IMD, na aba “Editais”. As matrículas estão previstas para acontecer até 23 de abril.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="iot" /><category term="networks" /><category term="nfv" /><category term="pt" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">AWS series VI: CloudFormation</title><link href="https://josecastillolema.github.io/aws6-cloudformation/" rel="alternate" type="text/html" title="AWS series VI: CloudFormation" /><published>2021-03-20T00:00:00-03:00</published><updated>2021-03-20T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws6-cloudformation</id><content type="html" xml:base="https://josecastillolema.github.io/aws6-cloudformation/">&lt;p&gt;&lt;a href=&quot;/series/#aws&quot;&gt;Serie de artigos&lt;/a&gt; sobre Amazon Web Services.&lt;/p&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;132&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;122&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=fiap&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
-
-&lt;h1 id=&quot;lab-14---aws-cloudformation&quot;&gt;Lab 14 - AWS CloudFormation&lt;/h1&gt;
-
-&lt;p&gt;Em este lab sobre &lt;a href=&quot;https://aws.amazon.com/pt/cloudformation/&quot;&gt;&lt;strong&gt;CloudFormation&lt;/strong&gt;&lt;/a&gt; aprenderemos alguns conceitos importantes do paradigma de Infrastructure as Code (IaC):&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Criação de &lt;em&gt;stacks&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Parametrização&lt;/li&gt;
-  &lt;li&gt;Monitoramento&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Criaremos um &lt;em&gt;stack&lt;/em&gt; que configura um servidor WordPress.&lt;/p&gt;
-
-&lt;h2 id=&quot;criação-do-stack&quot;&gt;Criação do &lt;em&gt;stack&lt;/em&gt;&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Accessar o serviço &lt;strong&gt;CloudFormation&lt;/strong&gt; e criar um novo &lt;em&gt;stack&lt;/em&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fazer &lt;em&gt;upload&lt;/em&gt; do &lt;em&gt;template&lt;/em&gt; &lt;a href=&quot;https://github.com/josecastillolema/fiap/blob/master/shift/multicloud/lab14-iaas-cloudformation/lab14-iaas-cloudformation.yaml&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lab14-iaas-cloudformation.yaml&lt;/code&gt;&lt;/a&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;No &lt;em&gt;designer&lt;/em&gt; podemos visualizar e editar graficamente o conteúdo do &lt;em&gt;template&lt;/em&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Parametrização do &lt;em&gt;stack&lt;/em&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Opçoes avançadas (sem mudanças):
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Revisar e confirmar a criação do &lt;em&gt;stack&lt;/em&gt;:&lt;/p&gt;
-
-    &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;accesso-ao-stack&quot;&gt;Accesso ao &lt;em&gt;stack&lt;/em&gt;&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Aguardar o &lt;em&gt;stack&lt;/em&gt; transicionar ao estado &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CREATE_COMPLETE&lt;/code&gt;:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Confirmar a URL do WordPress:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Accessar o WordPress:
-&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/cf09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><category term="series" /><summary type="html">Serie de artigos sobre Amazon Web Services.</summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-02-09-hcia-5g/2.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="iot" /><category term="networks" /><category term="nfv" /><category term="pt" /><category term="sdn" /><summary type="html"></summary></entry></feed>
