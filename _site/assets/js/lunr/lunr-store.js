@@ -796,4 +796,10 @@ var store = [{
         "tags": ["aws","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-multicloud-3/",
         "teaser": null
+      },{
+        "title": "HCIA-Routing & Switching - 16th edition",
+        "excerpt":"Informamos que estão abertas as inscrições do 16º Treinamento em Tecnologia de Informação e Comunicação convênio USP e HUAWEI – HCIA – Routing &amp; Switching V2.5, totalmente gratuito e virtual. As inscrições podem ser realizadas por este link. Vale ressaltar que serão distribuídos vouchers para o exame de certificação Huawei...","categories": [],
+        "tags": ["cert","classes","huawei","networks","pt"],
+        "url": "https://josecastillolema.github.io/hcia-16/",
+        "teaser": null
       }]
