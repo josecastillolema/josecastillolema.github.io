@@ -587,7 +587,7 @@ var store = [{
         "url": "https://josecastillolema.github.io/mycodeisopen/",
         "teaser": null
       },{
-        "title": "Webinar: Working with ONF to transform mobile and broadband networks in LATAM",
+        "title": "Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2020",
         "excerpt":"Don’t miss this virtual event sponsored by the ONF LATAM Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella...","categories": [],
         "tags": ["en","events","networks","nfv","onf","sdn","webinar"],
         "url": "https://josecastillolema.github.io/onf-webinar/",
@@ -767,10 +767,10 @@ var store = [{
         "url": "https://josecastillolema.github.io/kafka/",
         "teaser": null
       },{
-        "title": "Webinar: Working with ONF to transform mobile and broadband networks in LATAM",
+        "title": "Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021",
         "excerpt":"Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the Open Networking Foundation (ONF), a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella...","categories": [],
         "tags": ["en","events","networks","nfv","onf","sdn","webinar"],
-        "url": "https://josecastillolema.github.io/onf-webinar-2/",
+        "url": "https://josecastillolema.github.io/onf-webinar-21/",
         "teaser": null
       },{
         "title": "GitLab Certified Associate",
@@ -801,5 +801,11 @@ var store = [{
         "excerpt":"Informamos que estão abertas as inscrições do 16º Treinamento em Tecnologia de Informação e Comunicação convênio USP e HUAWEI – HCIA – Routing &amp; Switching V2.5, totalmente gratuito e virtual. As inscrições podem ser realizadas por este link. Vale ressaltar que serão distribuídos vouchers para o exame de certificação Huawei...","categories": [],
         "tags": ["cert","classes","huawei","networks","pt"],
         "url": "https://josecastillolema.github.io/hcia-16/",
+        "teaser": null
+      },{
+        "title": "AWS Community Builder",
+        "excerpt":"AWS Community Builders program I am glad to be part of the AWS Community Builders program. The program offers technical resources, mentorship, and networking opportunities to AWS enthusiasts and emerging thought leaders who are passionate about sharing knowledge and connecting with the technical community. Throughout the program, subject matter experts...","categories": [],
+        "tags": ["aws","en"],
+        "url": "https://josecastillolema.github.io/aws-community-builder/",
         "teaser": null
       }]
