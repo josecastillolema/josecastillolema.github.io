@@ -808,4 +808,10 @@ var store = [{
         "tags": ["aws","en"],
         "url": "https://josecastillolema.github.io/aws-community-builder/",
         "teaser": null
+      },{
+        "title": "GitOps Summit 2021",
+        "excerpt":"Virtual Experience June 22, 2021 #GitOpsSummit Cloud native technologies enable organizations to scale rapidly and deliver software faster than ever before. GitOps, operation by pull request, is a powerful developer workflow that enables organizations to unlock the promise of cloud native continuous delivery. The GitOps Summit brings together topflight talent...","categories": [],
+        "tags": ["en","events"],
+        "url": "https://josecastillolema.github.io/gitops-summit-21/",
+        "teaser": null
       }]

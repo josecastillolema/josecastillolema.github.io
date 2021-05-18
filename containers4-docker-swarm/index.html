@@ -385,6 +385,7 @@
   <li><a href="#lab-4---docker-swarm">Lab 4 - Docker Swarm</a>
     <ul>
       <li><a href="#orquestrando-containers">Orquestrando containers</a></li>
+      <li><a href="#requisitos">Requisitos</a></li>
       <li><a href="#criação-do-cluster">Criação do cluster</a></li>
       <li><a href="#uso">Uso</a></li>
       <li><a href="#clean-up">Clean-up</a></li>
@@ -412,6 +413,12 @@
 </ul>
 
 <p>Vamos trabalhar com duas máquinas virtuais (<strong>T1</strong> e <strong>T2</strong>). Se elas tiver rodando na nuvem, devem pertencer ao mesmo <em>security group</em> (ou ter um <em>security group</em> em común).</p>
+
+<h2 id="requisitos">Requisitos</h2>
+<ul>
+  <li>2 VMs Ubuntu 18.04 com Docker instalado</li>
+  <li>As duas VMs devem pertencer ao mesmo <em>security group</em> (ou ter um <em>security group</em> em común). Se nao for suficiente, liberar a porta 2377 no <em>security group</em>. Pode usar o comando <code class="language-plaintext highlighter-rouge">telnet</code> para testar a comunicaçao (<code class="language-plaintext highlighter-rouge">telnet $ip $porta</code>).</li>
+</ul>
 
 <h2 id="criação-do-cluster">Criação do <em>cluster</em></h2>
 
@@ -529,11 +536,6 @@
   <li><strong>[T1]</strong> Testar a API:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl localhost:3000
 Benvido a API FIAP!
-</code></pre></div>    </div>
-  </li>
-  <li><strong>[T1]</strong> Testar a conexão da API com o banco de dados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl localhost:3000/getDados
-[{"id": 1234, "name": "Jose Castillo Lema"}]
 </code></pre></div>    </div>
   </li>
   <li><strong>[T1]</strong> Conferir quais containers foram criados na primeira máquina virtual (em este caso o banco de dados e uma instância da API):
@@ -752,6 +754,36 @@ Removing network stackFiap_default
     
     <h2 class="archive__item-title" itemprop="headline">
       
+        <a href="/gitops-summit-21/" rel="permalink">GitOps Summit 2021
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
         <a href="/aws-community-builder/" rel="permalink">AWS Community Builder
 </a>
       
@@ -824,36 +856,6 @@ Removing network stackFiap_default
 
 
   3 minute read
-
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/hcia-ia-notes/" rel="permalink">Notes for HCIA-IA
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
 
 </p>
     
