@@ -514,6 +514,12 @@
  api    ClusterIP   10.152.183.40   &lt;none&gt;        3000/TCP   95s
 </code></pre></div>    </div>
   </li>
+  <li>Aguardar os pods ficar em estado <code class="language-plaintext highlighter-rouge">running</code>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl get pod api
+ NAME   READY   STATUS    RESTARTS   AGE
+ api    1/1     Running   0          2m52s
+</code></pre></div>    </div>
+  </li>
   <li>Testar a API:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ curl 10.152.183.40:3000
  Benvido a API FIAP!
