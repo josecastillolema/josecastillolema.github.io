@@ -515,7 +515,7 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
  default     service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   6m46s
 </code></pre></div>    </div>
   </li>
-  <li>Habilitar os <em>plugins</em> <strong><code class="language-plaintext highlighter-rouge">dns</code></strong> e <strong><code class="language-plaintext highlighter-rouge">dashboard</code></strong>:
+  <li>Habilitar o <em>plugins</em> <strong><code class="language-plaintext highlighter-rouge">dns</code></strong>:
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ microk8s.enable dns dashboard
  Enabling DNS
  Applying manifest
@@ -565,7 +565,7 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
     <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ microk8s.status
 microk8s is running
 addons:
-dashboard: enabled
+dashboard: disabled
 dns: enabled
 cilium: disabled
 fluentd: disabled
