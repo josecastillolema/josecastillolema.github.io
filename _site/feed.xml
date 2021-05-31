@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-05-26T14:30:58-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">GitOps Summit 2021</title><link href="https://josecastillolema.github.io/gitops-summit-21/" rel="alternate" type="text/html" title="GitOps Summit 2021" /><published>2021-05-18T00:00:00-03:00</published><updated>2021-05-18T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitops-summit-21</id><content type="html" xml:base="https://josecastillolema.github.io/gitops-summit-21/">&lt;p&gt;&lt;a href=&quot;https://events.linuxfoundation.org/gitops-summit/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-18-gitops-summit-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-05-31T20:44:14-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Meetup Kubernetes &amp;amp; Service Mesh</title><link href="https://josecastillolema.github.io/fiap-meetup/" rel="alternate" type="text/html" title="Meetup Kubernetes &amp;amp; Service Mesh" /><published>2021-05-31T00:00:00-03:00</published><updated>2021-05-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-meetup</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-meetup/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-31-fiap-meetup/0.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;descrição-do-evento&quot;&gt;Descrição do evento&lt;/h2&gt;
+
+&lt;p&gt;De acordo com o Gartner, mais de 85% das organizações executarão aplicativos em contêineres no Kubernetes até 2025. Por isso alguns profissionais definem que o Kubernetes será o “sistema operacional” da nuvem durante a transformação de aplicações para a Arquitetura de Microsserviços.&lt;/p&gt;
+
+&lt;p&gt;Práticas DevOps estão sendo adotadas, porém essa não é apenas uma mudança cultural, pois requer ótimas ferramentas para ser concretizada. Nessa jornada aparecem ferramentas populares de código aberto que apoiam a utilização de uma arquitetura nativa em nuvem. Seu uso permite desde construções de contêineres à orquestração, envolvendo a resiliência de microsserviços e automação de CI / CD.&lt;/p&gt;
+
+&lt;p&gt;Será um encontro técnico e hands-on, ao longo do qual serão discutidos diversos cenários inspirados nos ambientes de startups e grandes empresas. Vamos pensar juntos quais são os principais desafios enfrentados e suas possíveis soluções.&lt;/p&gt;
+
+&lt;h2 id=&quot;dados-de-acesso&quot;&gt;Dados de acesso&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;QUANDO&lt;/strong&gt;
+10 de junho de 2021&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;HORÁRIO&lt;/strong&gt;
+18h às 19:30h&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LOCAL&lt;/strong&gt;
+On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
+
+&lt;p&gt;Esperamos por você.&lt;/p&gt;
+
+&lt;p&gt;Inscrição gratuita.&lt;/p&gt;
+
+&lt;p&gt;FIAP &amp;amp; LuizaLabs &amp;amp; RedHat&lt;/p&gt;
+
+&lt;h2 id=&quot;participantes&quot;&gt;Participantes&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-31-fiap-meetup/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;André Pontes Sampaio&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Mestre em Engenharia de Telecomunicações, MBA em Gerenciamento de Projetos e formado em Ciência da Computação. Mais de 15 anos de experiência no mercado de TI. Experiência profissional como Diretor de Operações e Infraestrutura, além de ter atuado como Líder e Consultor técnico em instituição do Governo do Estado de SP e empresas do setor Financeiro e Telecomunicações. Professor de cursos de MBA da FIAP.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Cláudio Eduardo de Oliveira&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Sr Software Engineer na Luiza Labs. Trabalha com APIs, microservices e aplicativos centrados em nuvem e containers. Com mais de dez anos de experiência em desenvolvimento de software com linguagens Java e outras linguagens para JVM, é palestrante em alguns dos eventos mais importantes no Brasil sobre Arquitetura e Desenvolvimento de Software. Autor do Livro Spring 5.0 By Example, publicado pela editora Packt em Fevereiro de 2018.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;José Castillo Lema&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Consultor de infraestrutura cloud na Red Hat, tem trabalhado como arquiteto de plataformas de infraestrutura de nuvem pública e privada, práticas DevOps e temas de automação. Atua em provedores de Cloud e fornecedores de software de infraestrutura e plataforma. É mestre e doutor em engenharia elétrica, nas áreas de redes e telecomunicações. Professor de cursos de MBA da FIAP desde 2016.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="fiap" /><category term="iac" /><category term="openshift" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">GitOps Summit 2021</title><link href="https://josecastillolema.github.io/gitops-summit-21/" rel="alternate" type="text/html" title="GitOps Summit 2021" /><published>2021-05-18T00:00:00-03:00</published><updated>2021-05-18T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitops-summit-21</id><content type="html" xml:base="https://josecastillolema.github.io/gitops-summit-21/">&lt;p&gt;&lt;a href=&quot;https://events.linuxfoundation.org/gitops-summit/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-18-gitops-summit-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;virtual-experience&quot;&gt;Virtual Experience&lt;/h2&gt;
 
@@ -225,7 +266,7 @@
 
 &lt;h1 id=&quot;certification&quot;&gt;Certification&lt;/h1&gt;
 
-&lt;iframe src=&quot;https://api.badgr.io/public/assertions/idtr8gJ1S-6f93Xlvs33nQ?embedVersion=1&amp;amp;embedWidth=330&amp;amp;embedHeight=186&amp;amp;identity__email=josecastillolema%40gmail.com&quot; title=&quot;Badge: GitLab Certified Associate&quot; style=&quot;width: 330px; height: 186px; border: 0px;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><summary type="html"></summary></entry><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021</title><link href="https://josecastillolema.github.io/onf-webinar-21/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-21</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-21/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src=&quot;https://api.badgr.io/public/assertions/idtr8gJ1S-6f93Xlvs33nQ?embedVersion=1&amp;amp;embedWidth=330&amp;amp;embedHeight=186&amp;amp;identity__email=josecastillolema%40gmail.com&quot; title=&quot;Badge: GitLab Certified Associate&quot; style=&quot;width: 400px; height: 220px; border: 0px;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><summary type="html"></summary></entry><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021</title><link href="https://josecastillolema.github.io/onf-webinar-21/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-21</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-21/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the &lt;a href=&quot;https://opennetworking.org/&quot;&gt;Open Networking Foundation (ONF)&lt;/a&gt;, a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.&lt;/p&gt;
 
@@ -355,100 +396,4 @@
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;iframe src=&quot;https://www.credential.net/81d07551-5280-4adb-805b-e822b26dbf2d&quot; width=&quot;800&quot; height=&quot;600&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><category term="openshift" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">Microsoft Azure/Data/AI Fundamentals vouchers</title><link href="https://josecastillolema.github.io/azure-fundamentals/" rel="alternate" type="text/html" title="Microsoft Azure/Data/AI Fundamentals vouchers" /><published>2021-04-08T00:00:00-03:00</published><updated>2021-04-27T17:00:58-03:00</updated><id>https://josecastillolema.github.io/azure-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/azure-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;By participating in any of the following &lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;Microsoft Virtual Training Days&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Microsoft Azure Virtual Training Day: &lt;strong&gt;Fundamentals&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Microsoft Azure Virtual Training Day: &lt;strong&gt;Data Fundamentals&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;Microsoft Azure Virtual Training Day: &lt;strong&gt;AI Fundamentals&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You’ll be eligible to take the following certifications exam at no cost:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/az-900&quot;&gt;Microsoft Azure Fundamentals (AZ-900)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/dp-900&quot;&gt;Microsoft Azure Data Fundamentals (DP-900)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/ai-900&quot;&gt;Microsoft Azure AI Fundamentals (AI-900)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;azure-fundamentals&quot;&gt;Azure Fundamentals&lt;/h1&gt;
-
-&lt;p&gt;In this introductory course you will learn about cloud-computing concepts, models, and services, covering topics such as public, private, and hybrid cloud as well as infrastructure as a service, platform as a service, and software as a service.&lt;/p&gt;
-
-&lt;h2 id=&quot;course-objectives&quot;&gt;Course Objectives&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Get started with Azure&lt;/li&gt;
-  &lt;li&gt;Integrate Azure with your existing networks&lt;/li&gt;
-  &lt;li&gt;Better understand key cloud concepts and core services, including pricing, support, and cloud security&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction&lt;/li&gt;
-  &lt;li&gt;Azure Cloud Concepts&lt;/li&gt;
-  &lt;li&gt;Core Azure Services&lt;/li&gt;
-  &lt;li&gt;Azure Solutions and Management Tools&lt;/li&gt;
-  &lt;li&gt;Azure Security and Network Security&lt;/li&gt;
-  &lt;li&gt;Identity, governance, privacy and compliance&lt;/li&gt;
-  &lt;li&gt;Azure Pricing and Lifestyle&lt;/li&gt;
-  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;data-fundamentals&quot;&gt;Data Fundamentals&lt;/h1&gt;
-
-&lt;p&gt;Learn the fundamentals of core database concepts in a cloud environment. Join us at Microsoft Azure Virtual Training Day: Data Fundamentals to build your foundational knowledge of cloud data services. Explore relational and non-relational data offerings as well as big data and modern data warehouse analytics solutions in Azure.&lt;/p&gt;
-
-&lt;h2 id=&quot;course-objectives-1&quot;&gt;Course Objectives&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Learn the roles, tasks, and responsibilities involved in managing data in a cloud environment.&lt;/li&gt;
-  &lt;li&gt;Gain basic skills for working with relational and non-relational cloud data services in Azure, including provisioning and deploying relational and non-relational databases.&lt;/li&gt;
-  &lt;li&gt;Explore processing options for building data analytics solutions, including Azure Synapse Analytics, Azure Databricks, and Azure HDInsight.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;content-1&quot;&gt;Content&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction&lt;/li&gt;
-  &lt;li&gt;Explore Core Data Concepts&lt;/li&gt;
-  &lt;li&gt;Explore Relational Data in Azure&lt;/li&gt;
-  &lt;li&gt;Explore Non-relational Data in Azure&lt;/li&gt;
-  &lt;li&gt;Explore modern data warehouse analytics in Azure&lt;/li&gt;
-  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;ai-fundamentals&quot;&gt;AI Fundamentals&lt;/h1&gt;
-
-&lt;p&gt;Discover the solutions it’s possible to create with AI and the Azure services that can help you build those solutions. Join the free Microsoft Azure Virtual Training Day: AI Fundamentals to explore fundamental AI concepts and learn how to get started with AI on Azure.&lt;/p&gt;
-
-&lt;h2 id=&quot;course-objectives-2&quot;&gt;Course Objectives&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Get an overview of basic AI concepts and applications.&lt;/li&gt;
-  &lt;li&gt;Create no-code predictive models with Azure Machine Learning.&lt;/li&gt;
-  &lt;li&gt;Learn more about conversational AI, natural language processing, and computer vision in Microsoft Azure.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;content-2&quot;&gt;Content&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction&lt;/li&gt;
-  &lt;li&gt;Introduction to AI&lt;/li&gt;
-  &lt;li&gt;Machine Learning&lt;/li&gt;
-  &lt;li&gt;Computer Vision&lt;/li&gt;
-  &lt;li&gt;Natural Language Processing&lt;/li&gt;
-  &lt;li&gt;Conversational AI&lt;/li&gt;
-  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
-
-&lt;p&gt;After completing tris free trainings you’ll be eligible to take the certifications exam at no cost.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div data-iframe-width=&quot;600&quot; data-iframe-height=&quot;270&quot; data-share-badge-id=&quot;8d9a02d4-89f5-4bfa-a64d-471af8cb07b7&quot; data-share-badge-host=&quot;https://www.credly.com&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.credly.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;div data-iframe-width=&quot;600&quot; data-iframe-height=&quot;270&quot; data-share-badge-id=&quot;fd6913cb-4fc5-4dc5-9f69-cd585d1f100a&quot; data-share-badge-host=&quot;https://www.credly.com&quot;&gt;&lt;/div&gt;
-&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.credly.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="cert" /><category term="en" /><summary type="html"></summary></entry></feed>
+&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><category term="openshift" /><category term="redhat" /><summary type="html"></summary></entry></feed>
