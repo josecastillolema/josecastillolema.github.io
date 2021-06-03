@@ -820,4 +820,10 @@ var store = [{
         "tags": ["events","fiap","iac","openshift","pt"],
         "url": "https://josecastillolema.github.io/fiap-meetup/",
         "teaser": null
+      },{
+        "title": "edX: Introduction to Magma",
+        "excerpt":"Introduction to Magma: Cloud Native Wireless Networking Learn about the Magma project, an open source implementation of a mobile network core. Magma supports diverse radio technologies, including LTE, 5G and WiFi, and is particularly relevant for extending network access into remote, sparsely populated areas. DURATION 10 weeks DEDICATION 1-2 hours...","categories": [],
+        "tags": ["en","networks","nfv","sdn"],
+        "url": "https://josecastillolema.github.io/edx-magma/",
+        "teaser": null
       }]
