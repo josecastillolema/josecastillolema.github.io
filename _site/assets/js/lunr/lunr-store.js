@@ -815,7 +815,7 @@ var store = [{
         "url": "https://josecastillolema.github.io/gitops-summit-21/",
         "teaser": null
       },{
-        "title": "Meetup Kubernetes & Service Mesh",
+        "title": "FIAP Meetup #9 - Kubernetes & Service Mesh",
         "excerpt":"Descrição do evento De acordo com o Gartner, mais de 85% das organizações executarão aplicativos em contêineres no Kubernetes até 2025. Por isso alguns profissionais definem que o Kubernetes será o “sistema operacional” da nuvem durante a transformação de aplicações para a Arquitetura de Microsserviços. Práticas DevOps estão sendo adotadas,...","categories": [],
         "tags": ["events","fiap","iac","openshift","pt"],
         "url": "https://josecastillolema.github.io/fiap-meetup/",

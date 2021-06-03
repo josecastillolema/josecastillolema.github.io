@@ -1,5 +1,5 @@
 ---
-title:  "Meetup Kubernetes & Service Mesh"
+title:  "FIAP Meetup #9 - Kubernetes & Service Mesh"
 last_modified_at: 2021-05-31T16:00:58-04:00
 tags:
   - events
@@ -10,7 +10,7 @@ tags:
 toc: true
 ---
 
-![](/assets/images/posts/2021-05-31-fiap-meetup/0.png)
+[![](/assets/images/posts/2021-05-31-fiap-meetup/0.png)](https://www.meetup.com/pt-BR/fiapmeetups/events/278576296)
 
 ## Descrição do evento
 
@@ -33,7 +33,7 @@ On-line via Zoom (dados de acesso no dia do evento)
 
 Esperamos por você.
 
-Inscrição gratuita.
+[Inscrição gratuita.](https://www.meetup.com/pt-BR/fiapmeetups/events/278576296)
 
 FIAP & LuizaLabs & RedHat
  
