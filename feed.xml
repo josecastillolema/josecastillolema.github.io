@@ -1,4 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-06-03T09:08:25-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh</title><link href="https://josecastillolema.github.io/fiap-meetup/" rel="alternate" type="text/html" title="FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh" /><published>2021-05-31T00:00:00-03:00</published><updated>2021-05-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-meetup</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-meetup/">&lt;p&gt;&lt;a href=&quot;https://www.meetup.com/pt-BR/fiapmeetups/events/278576296&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-31-fiap-meetup/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-06-03T09:24:39-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">edX: Introduction to Magma</title><link href="https://josecastillolema.github.io/edx-magma/" rel="alternate" type="text/html" title="edX: Introduction to Magma" /><published>2021-06-03T00:00:00-03:00</published><updated>2021-06-03T17:00:58-03:00</updated><id>https://josecastillolema.github.io/edx-magma</id><content type="html" xml:base="https://josecastillolema.github.io/edx-magma/">&lt;p&gt;&lt;a href=&quot;https://www.magmacore.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-03-edx-magma.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction-to-magma-cloud-native-wireless-networking&quot;&gt;Introduction to Magma: Cloud Native Wireless Networking&lt;/h2&gt;
+
+&lt;p&gt;Learn about the &lt;a href=&quot;https://www.magmacore.org/&quot;&gt;Magma project&lt;/a&gt;, an open source implementation of a mobile network core. Magma supports diverse radio technologies, including LTE, 5G and WiFi, and is particularly relevant for extending network access into remote, sparsely populated areas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DURATION&lt;/strong&gt;
+10 weeks&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DEDICATION&lt;/strong&gt;
+1-2 hours per week&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;COST&lt;/strong&gt;
+Free (there is the possibility to add a paying certificate for $149)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;INSTITUTION&lt;/strong&gt;
+&lt;a href=&quot;https://linuxfoundation.org/&quot;&gt;Linux Foundation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;about&quot;&gt;About&lt;/h2&gt;
+
+&lt;p&gt;Magma leverages open source software and commodity hardware to help operators manage their networks efficiently. It provides a high level of automation, high reliability, and the ability to deliver new network services quickly. It is agnostic to the radio access network technology, supporting any cellular “generation” from 2G to 5G, as well as WiFi and CBRS for unlicensed spectrum. Magma can be federated with existing cellular networks to allow networks to be cost-effectively extended into remote areas.&lt;/p&gt;
+
+&lt;p&gt;This course is designed for technology strategists or decision makers at telcos looking to understand the applicability of Magma to their environment. This course is also aimed at rural ISP operators, systems integrators, and anyone looking to set up a lab environment to experiment with Magma or deploy it in production.&lt;/p&gt;
+
+&lt;p&gt;This course will help you gain an understanding of the overall Magma architecture and how it fits into the bigger picture of cellular network architectures, particularly 4G/LTE and 5G. You will learn to recognize and understand the main functions of a mobile wireless network, understand the key use cases and value proposition of Magma, the overall architecture of Magma at a functional block level, and the functions performed by each of the main Magma components (Access Gateway, Federation Gateway, and Orchestrator). The course will also provide resources to learn more to deploy Magma on standard hardware.&lt;/p&gt;
+
+&lt;p&gt;This course prepares you to fully explore the Magma project. It provides the necessary background to help you determine if Magma is appropriate for your setting, and equips you to start installing and experimenting with the system.&lt;/p&gt;
+
+&lt;h2 id=&quot;objectives&quot;&gt;Objectives&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Recognize and understand the main functions of a mobile wireless network&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understand the key use cases and value proposition of Magma&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Describe the overall architecture of Magma at a functional block level&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Understand the functions performed by each of the following main components: Access Gateway, Federation Gateway, Orchestrator&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Know how to learn more to deploy Magma on standard hardware&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;curriculum&quot;&gt;Curriculum&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 1. Introduction to Mobile Cellular Networking&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 2. Introduction to the Magma Architecture&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 3. The Orchestrator&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 4. The Access Gateway (AGW)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 5. The Federation Gateway&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 6. The Network Management System (NMS)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ch 7. Summary&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Final Exam (verified track only)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;registration&quot;&gt;Registration&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.edx.org/es/course/introduction-to-magma-cloud-native-wireless-networking&quot;&gt;Register now&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh</title><link href="https://josecastillolema.github.io/fiap-meetup/" rel="alternate" type="text/html" title="FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh" /><published>2021-05-31T00:00:00-03:00</published><updated>2021-05-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-meetup</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-meetup/">&lt;p&gt;&lt;a href=&quot;https://www.meetup.com/pt-BR/fiapmeetups/events/278576296&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-31-fiap-meetup/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;descrição-do-evento&quot;&gt;Descrição do evento&lt;/h2&gt;
 
@@ -266,7 +345,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
 
 &lt;h1 id=&quot;certification&quot;&gt;Certification&lt;/h1&gt;
 
-&lt;iframe src=&quot;https://api.badgr.io/public/assertions/idtr8gJ1S-6f93Xlvs33nQ?embedVersion=1&amp;amp;embedWidth=330&amp;amp;embedHeight=186&amp;amp;identity__email=josecastillolema%40gmail.com&quot; title=&quot;Badge: GitLab Certified Associate&quot; style=&quot;width: 450px; height: 250px; border: 0px;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><summary type="html"></summary></entry><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021</title><link href="https://josecastillolema.github.io/onf-webinar-21/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-21</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-21/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;iframe src=&quot;https://api.badgr.io/public/assertions/idtr8gJ1S-6f93Xlvs33nQ?embedVersion=1&amp;amp;embedWidth=330&amp;amp;embedHeight=186&amp;amp;identity__email=josecastillolema%40gmail.com&quot; title=&quot;Badge: GitLab Certified Associate&quot; style=&quot;width: 450px; height: 240px; border: 0px;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><summary type="html"></summary></entry><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021</title><link href="https://josecastillolema.github.io/onf-webinar-21/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-21</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-21/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the &lt;a href=&quot;https://opennetworking.org/&quot;&gt;Open Networking Foundation (ONF)&lt;/a&gt;, a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.&lt;/p&gt;
 
@@ -307,93 +386,4 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/rony-a-spada-pedroso/&quot;&gt;Rony Pedroso&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/ricardo-tombi/&quot;&gt;Ricardo Tombi&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/freddy-turriaf/&quot;&gt;Freddy Turriaf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="onf" /><category term="sdn" /><category term="webinar" /><summary type="html"></summary></entry><entry><title type="html">Confluent Fundamentals Accreditation - Apache Kafka</title><link href="https://josecastillolema.github.io/kafka/" rel="alternate" type="text/html" title="Confluent Fundamentals Accreditation - Apache Kafka" /><published>2021-04-13T00:00:00-03:00</published><updated>2021-04-13T17:00:58-03:00</updated><id>https://josecastillolema.github.io/kafka</id><content type="html" xml:base="https://josecastillolema.github.io/kafka/">&lt;p&gt;&lt;a href=&quot;https://www.confluent.io/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I would like to strongly recomend the &lt;a href=&quot;https://cloud.contentraven.com/confluent/self-userpackage&quot;&gt;Confluent Fundamentals for Apache Kafka®&lt;/a&gt; course and &lt;a href=&quot;https://cloud.contentraven.com/confluent/self-userpackage&quot;&gt;Confluent Fundamentals Accreditation&lt;/a&gt; certification for anyone interested learning more about the &lt;a href=&quot;https://kafka.apache.org/&quot;&gt;Apache Kafka project&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Training and exam certification are free.&lt;/p&gt;
-
-&lt;h1 id=&quot;course-objectives&quot;&gt;Course Objectives&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Gain an understanding of Apache Kafka® and the Confluent Platform&lt;/li&gt;
-  &lt;li&gt;Explore use cases&lt;/li&gt;
-  &lt;li&gt;Receive an overview of Kafka’s core concepts that enable it to power a highly scalable, highly available and resilient real-time event streaming platform&lt;/li&gt;
-  &lt;li&gt;Be introduced to the Confluent Platform, offering an enterprise-ready, real-time event streaming platform powered by Apache Kafka®&lt;/li&gt;
-  &lt;li&gt;Begin preparation to attend Apache Kafka® Administration by Confluent and/or the Confluent Developer Skills for Building Apache Kafka® training courses.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;content&quot;&gt;Content&lt;/h1&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Motivation and Customer Use Cases
-    &lt;ul&gt;
-      &lt;li&gt;Motivation for a paradigm change to “Event-driven”&lt;/li&gt;
-      &lt;li&gt;How Kafka is the backbone of real-time event streaming&lt;/li&gt;
-      &lt;li&gt;How other major players in the market use Kafka&lt;/li&gt;
-      &lt;li&gt;Customer Use Cases
-        &lt;ul&gt;
-          &lt;li&gt;Microservices, IoT and Edge Computing&lt;/li&gt;
-          &lt;li&gt;Core Banking, payments engine and fraud detection&lt;/li&gt;
-          &lt;li&gt;Cyber Data Collection and Dissemination&lt;/li&gt;
-          &lt;li&gt;ESB Replacement&lt;/li&gt;
-          &lt;li&gt;Data Pipelining&lt;/li&gt;
-          &lt;li&gt;eCommerce and Customer 360&lt;/li&gt;
-          &lt;li&gt;Mainframe offloading&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Apache Kafka® Fundamentals
-    &lt;ul&gt;
-      &lt;li&gt;Architecture&lt;/li&gt;
-      &lt;li&gt;ZooKeeper’s role&lt;/li&gt;
-      &lt;li&gt;Topics, Partitions and Segments&lt;/li&gt;
-      &lt;li&gt;The commit log and streams&lt;/li&gt;
-      &lt;li&gt;Brokers and Broker replication&lt;/li&gt;
-      &lt;li&gt;Producers Basics&lt;/li&gt;
-      &lt;li&gt;Consumers, Consumer groups and Offsets&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;How Kafka Works
-    &lt;ul&gt;
-      &lt;li&gt;High-level code overview for a basic producer and a basic consumer&lt;/li&gt;
-      &lt;li&gt;High Availability through Replication&lt;/li&gt;
-      &lt;li&gt;Data Retention Policies&lt;/li&gt;
-      &lt;li&gt;Producer Design and Producer Guarantees&lt;/li&gt;
-      &lt;li&gt;Delivery Guarantees, including Exactly Once Semantic&lt;/li&gt;
-      &lt;li&gt;Partition strategies&lt;/li&gt;
-      &lt;li&gt;Consumer group rebalances&lt;/li&gt;
-      &lt;li&gt;Compacted Topics&lt;/li&gt;
-      &lt;li&gt;Troubleshooting strategies&lt;/li&gt;
-      &lt;li&gt;Security overview&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Integrating Kafka into your Environment
-    &lt;ul&gt;
-      &lt;li&gt;Get streams of data into and out of Kafka with Kafka Connect and REST Proxy&lt;/li&gt;
-      &lt;li&gt;Maintain data formats and ensure compatibility with Schema Registry and Avro&lt;/li&gt;
-      &lt;li&gt;Build real-time streaming applications with Confluent ksqlDB &amp;amp; Kafka Streams&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;The Confluent Platform
-    &lt;ul&gt;
-      &lt;li&gt;The Streaming Platform as the Central Nervous System&lt;/li&gt;
-      &lt;li&gt;Deployment Models — on premise versus SaaS&lt;/li&gt;
-      &lt;li&gt;The Confluent Control Center&lt;/li&gt;
-      &lt;li&gt;Role Based Access Control (RBAC)&lt;/li&gt;
-      &lt;li&gt;The Confluent CLI&lt;/li&gt;
-      &lt;li&gt;Confluent Operator&lt;/li&gt;
-      &lt;li&gt;The Confluent Hub for Certified Connectors&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;free-certification&quot;&gt;Free certification&lt;/h1&gt;
-
-&lt;p&gt;At the end of the course, you can earn a badge by passing a final exam.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-04-13-kafka/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;iframe src=&quot;https://www.credential.net/81d07551-5280-4adb-805b-e822b26dbf2d&quot; width=&quot;800&quot; height=&quot;600&quot; frameborder=&quot;0&quot; allowfullscreen=&quot;&quot;&gt;
-&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><category term="openshift" /><category term="redhat" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="onf" /><category term="sdn" /><category term="webinar" /><summary type="html"></summary></entry></feed>
