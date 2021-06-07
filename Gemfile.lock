@@ -160,6 +160,9 @@ GEM
     jekyll-sitemap (1.4.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-swiss (1.0.0)
+    jekyll-target-blank (2.0.0)
+      jekyll (>= 3.0, < 5.0)
+      nokogiri (~> 1.10)
     jekyll-theme-architect (0.1.1)
       jekyll (~> 3.5)
       jekyll-seo-tag (~> 2.0)
@@ -275,9 +278,10 @@ DEPENDENCIES
   github-pages
   jekyll-include-cache
   jekyll-remote-include!
+  jekyll-target-blank
   kramdown (>= 2.3.1)
   rexml (>= 3.2.5)
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.14
+   2.2.15

@@ -271,7 +271,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
   #- jekyll-github-metadata
-  #- jemoji
+  - jemoji
   - jekyll-target-blank
   - jekyll-seo-tag
   #- jekyll-watch
