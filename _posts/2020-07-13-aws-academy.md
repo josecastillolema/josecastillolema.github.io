@@ -29,15 +29,17 @@ O curso é introdutório e oferece uma visão geral detalhada dos seguintes tóp
 * definição de preço
 * suporte
 
-O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [**certificação AWS Certified Cloud Practitioner**](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/).
+O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [**certificação AWS Certified Cloud Practitioner (CLF-C01)**](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/).
 
-Na FIAP ofertamos este curso ([1ª edição](/shift-aws-foundations), [2ª edição](/shift-aws-foundations-2) e [3ª edição](/shift-aws-foundations-3)), na modalidade [SHIFT](https://www.fiap.com.br/shift).
+Na FIAP ofertamos este curso ([1ª edição](/shift-aws-foundations), [2ª edição](/shift-aws-foundations-2), [3ª edição](/shift-aws-foundations-3) e [4ª edição](/shift-aws-foundations-4)), na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
 ![](/assets/images/posts/2020-07-09-aws-academy/05.png)
 
 ### AWS Academy Cloud Developing (ACD)
 
-Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
+Esse curso de nível intermediário ajudará os estudantes a ganharem experiência técnica em desenvolvimento com tecnologia de nuvens. Ele também os ajudará a se preparar para o exame de [**certificação AWS Certified Developer - Associate (DVA-C01)**](https://aws.amazon.com/pt/certification/certified-developer-associate/). Ao completar, os alunos estarão aptos a desenvolver com AWS SDK e identificar as melhores práticas para construir e implantar aplicativos na nuvem AWS. Esse curso tem aproximadamente **40 horas** de conteúdo fornecido por meio de palestras e laboratórios práticos.
+
+Na FIAP ofertamos este curso ([1ª edição](/shift-aws-dev)), na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
 ![](/assets/images/posts/2020-07-09-aws-academy/06.png)
 
