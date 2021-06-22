@@ -1,4 +1,164 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-06-06T21:18:50-03:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">edX: Introduction to Magma</title><link href="https://josecastillolema.github.io/edx-magma/" rel="alternate" type="text/html" title="edX: Introduction to Magma" /><published>2021-06-03T00:00:00-03:00</published><updated>2021-06-03T17:00:58-03:00</updated><id>https://josecastillolema.github.io/edx-magma</id><content type="html" xml:base="https://josecastillolema.github.io/edx-magma/">&lt;p&gt;&lt;a href=&quot;https://www.magmacore.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-03-edx-magma/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-06-22T12:27:05+02:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 2nd edition</title><link href="https://josecastillolema.github.io/shift-aws-dev/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 2nd edition" /><published>2021-06-22T00:00:00+02:00</published><updated>2021-06-22T22:00:58+02:00</updated><id>https://josecastillolema.github.io/shift-aws-dev</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-dev/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-developing&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-22-shift-aws-dev.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de Certificação AWS Certified Developer - Associate. Uma jornada com 40 horas de conteúdo, talks e laboratórios práticos.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
+&lt;p&gt;Desenvolvedores, profissionais DevOps e Arquitetos(as) de plataformas e soluções que querem ter Certificação e experiência hands-on em AWS.&lt;/p&gt;
+
+&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
+&lt;p&gt;Sugerimos que você se aprofunde no conteúdo do curso AWS Academy Cloud Foundations, disponível como um dos nossos benefícios ao adquirir esse curso.&lt;/p&gt;
+
+&lt;h2 id=&quot;shift-remoto&quot;&gt;SHIFT remoto&lt;/h2&gt;
+
+&lt;p&gt;Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.&lt;/p&gt;
+
+&lt;h2 id=&quot;benefício-fiap&quot;&gt;Benefício FIAP&lt;/h2&gt;
+&lt;p&gt;Você terá acesso a um voucher de 50% de desconto para o exame de Certificação AWS Certified Developer - Associate. O curso AWS Academy Cloud Foundations é pré-requisito para esse curso. Adquirindo o AWS Academy Cloud Developing, você terá acesso integral prévio e sem custo ao Cloud Foundations (incluso voucher de 50% de prova de Certificação AWS Cloud Foundations).&lt;/p&gt;
+
+&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Módulo 1: INTRODUCTION TO DEVELOPING ON AWS
+    &lt;ul&gt;
+      &lt;li&gt;Recognize the systems development life cycle, and describe how to start to developing on AWS.&lt;/li&gt;
+      &lt;li&gt;Indicate how to work with AWS SDKs.&lt;/li&gt;
+      &lt;li&gt;Identify why AWS X-Ray is a critical developer tool, and identify AWS management tools.&lt;/li&gt;
+      &lt;li&gt;Develop and run a simple program in AWS Cloud9.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 2: INTRODUCTION TO AWS IDENTITY AND ACCESS MANAGEMENT (IAM)
+    &lt;ul&gt;
+      &lt;li&gt;Recognize the shared responsibility model.&lt;/li&gt;
+      &lt;li&gt;Explain how IAM helps secure access to AWS resources.&lt;/li&gt;
+      &lt;li&gt;Describe IAM user authentication.&lt;/li&gt;
+      &lt;li&gt;Identify how to authorize an IAM user, group, or role.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 3: DEVELOPING STORAGE SOLUTIONS WITH AMAZON S3
+    &lt;ul&gt;
+      &lt;li&gt;Describe how Amazon S3 can be used as a storage solution.&lt;/li&gt;
+      &lt;li&gt;Identify Amazon S3 features and components.&lt;/li&gt;
+      &lt;li&gt;Describe two ways to protect data with Amazon S3.&lt;/li&gt;
+      &lt;li&gt;Describe the function of the S3 object operations (PUT, GET, SELECT, DELETE).&lt;/li&gt;
+      &lt;li&gt;Explain how to manage access to Amazon S3 resources developed with Amazon S3 using the AWS SDKs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 4: DEVELOPING NOSQL SOLUTIONS WITH AMAZON DYNAMODB
+    &lt;ul&gt;
+      &lt;li&gt;Identify Amazon DynamoDB features.&lt;/li&gt;
+      &lt;li&gt;Describe Amazon DynamoDB components.&lt;/li&gt;
+      &lt;li&gt;Explain how Amazon DynamoDB uses partitions.&lt;/li&gt;
+      &lt;li&gt;Indicate how indexes are used with Amazon DynamoDB.&lt;/li&gt;
+      &lt;li&gt;Describe how Amazon DynamoDB keeps data consistent.&lt;/li&gt;
+      &lt;li&gt;Recognize when streaming and global tables are used.&lt;/li&gt;
+      &lt;li&gt;Explain the backup and restoration process.&lt;/li&gt;
+      &lt;li&gt;Develop flexible NoSQL solutions with Amazon DynamoDB.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 5: CACHING INFORMATION FOR SALABILITY
+    &lt;ul&gt;
+      &lt;li&gt;Explain when caching is used.&lt;/li&gt;
+      &lt;li&gt;Describe caching with Amazon CloudFront.&lt;/li&gt;
+      &lt;li&gt;Describe caching with Amazon ElastiCache Apply caching strategies.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 6: INTRODUCTION TO CONTAINERS
+    &lt;ul&gt;
+      &lt;li&gt;Describe the history, technology, and terminology behind containers.&lt;/li&gt;
+      &lt;li&gt;Differentiate containers from bare-metal servers and virtual machines.&lt;/li&gt;
+      &lt;li&gt;Identify the characteristics of a microservices architecture.&lt;/li&gt;
+      &lt;li&gt;Recognize the drivers for using container-based workloads.&lt;/li&gt;
+      &lt;li&gt;Host a basic website by using Docker containers.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 7: DEVELOPING SOLUTIONS WITH AMAZON SQS AND AMAZON SNS
+    &lt;ul&gt;
+      &lt;li&gt;Recall how message queues works.&lt;/li&gt;
+      &lt;li&gt;Describe Amazon SQS.&lt;/li&gt;
+      &lt;li&gt;Send messages to an SQS queue.&lt;/li&gt;
+      &lt;li&gt;Describe Amazon SNS.&lt;/li&gt;
+      &lt;li&gt;Explain Amazon SNS concepts.&lt;/li&gt;
+      &lt;li&gt;Describe Amazon MQ.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 8: DEVELOPING EVENT-DRIVEN SOLUTIONS WITH AWS LAMBDA
+    &lt;ul&gt;
+      &lt;li&gt;Explain serverless computing.&lt;/li&gt;
+      &lt;li&gt;Describe how AWS Lambda works.&lt;/li&gt;
+      &lt;li&gt;Recognize AWS Lambda execution models.&lt;/li&gt;
+      &lt;li&gt;Identify how to use AWS IAM to grant Lambda permissions.&lt;/li&gt;
+      &lt;li&gt;Indicate the steps to author and configure a Lambda functions.&lt;/li&gt;
+      &lt;li&gt;Explain how to deploy serverless applications.&lt;/li&gt;
+      &lt;li&gt;Develop event-driven solutions with AWS Lambda.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 9: DEVELOPING SOLUTIONS WITH AMAZON API GATEWAY
+    &lt;ul&gt;
+      &lt;li&gt;Recognize application programming interfaces.&lt;/li&gt;
+      &lt;li&gt;Describe Amazon API Gateway.&lt;/li&gt;
+      &lt;li&gt;Indicate the steps for developing RESTful APIs with Amazon API Gateway.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 10: DEVELOPING SOLUTIONS WITH AWS STEP FUNCTIONS
+    &lt;ul&gt;
+      &lt;li&gt;Recognize the dynamics of workflow coordination in distributed applications.&lt;/li&gt;
+      &lt;li&gt;Describe AWS Step Functions.&lt;/li&gt;
+      &lt;li&gt;Identify state types.&lt;/li&gt;
+      &lt;li&gt;Indicate common use cases for AWS Step Functions.&lt;/li&gt;
+      &lt;li&gt;Recall AWS Step Functions APIs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 11: DEVELOPING SECURE APPLICATIONS ON AWS
+    &lt;ul&gt;
+      &lt;li&gt;Identity how to secure applications.&lt;/li&gt;
+      &lt;li&gt;Describe how to manage your application’s secrets.&lt;/li&gt;
+      &lt;li&gt;Recall how to authenticate with AWS Security Token Service.&lt;/li&gt;
+      &lt;li&gt;Describe how Amazon Cognito is used to build secure applications.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Módulo 12: DEPLOYING APPLICATIONS ON AWS
+    &lt;ul&gt;
+      &lt;li&gt;Describe DevOps&lt;/li&gt;
+      &lt;li&gt;Recognize AWS code services for CI/CD&lt;/li&gt;
+      &lt;li&gt;Summarize deployment strategies&lt;/li&gt;
+      &lt;li&gt;Describe how AWS Elastic Beanstalk is used to deploy applications&lt;/li&gt;
+      &lt;li&gt;Describe how AWS CloudFormation is used to deploy applications&lt;/li&gt;
+      &lt;li&gt;Describe how AWS SAM is used to deploy serverless applications.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-4-copy/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition" /><published>2021-06-21T00:00:00+02:00</published><updated>2021-06-21T22:00:58+02:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-4%20copy</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-4-copy/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-21-shift-aws-foundations-4.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.&lt;/p&gt;
+
+&lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
+&lt;p&gt;Profissionais DevOps e Arquitetos de Plataformas/Soluções que querem ter certificação e experiência hands-on na AWS.&lt;/p&gt;
+
+&lt;h2 id=&quot;pré-requisito&quot;&gt;Pré-requisito&lt;/h2&gt;
+&lt;p&gt;Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.&lt;/p&gt;
+
+&lt;h2 id=&quot;como-funciona&quot;&gt;Como funciona?&lt;/h2&gt;
+
+&lt;p&gt;Você vai ter acesso à plataforma AWS Academy, com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da Amazon e professor da FIAP.&lt;/p&gt;
+
+&lt;h2 id=&quot;digital--live&quot;&gt;Digital + Live&lt;/h2&gt;
+&lt;p&gt;Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios práticos e mais duas lives com o professor, visando à preparação para a prova, nos dias &lt;strong&gt;11/01&lt;/strong&gt; e &lt;strong&gt;15/02&lt;/strong&gt;, das 19h às 20h. No fim, você receberá um certificado oficial de conclusão de curso da AWS Academy e poderá aproveitar 50% OFF para fazer a prova de Certificação AWS Cloud Foundations.&lt;/p&gt;
+
+&lt;h2 id=&quot;conteúdo&quot;&gt;Conteúdo&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Módulo 1: Visão geral dos conceitos de nuvem&lt;/li&gt;
+  &lt;li&gt;Módulo 2: Economia e faturamento da nuvem&lt;/li&gt;
+  &lt;li&gt;Módulo 3: Visão geral da infraestrutura global da AWS&lt;/li&gt;
+  &lt;li&gt;Módulo 4: Segurança na nuvem AWS&lt;/li&gt;
+  &lt;li&gt;Módulo 5: Redes e entrega de conteúdo&lt;/li&gt;
+  &lt;li&gt;Módulo 6: Computação&lt;/li&gt;
+  &lt;li&gt;Módulo 7: Armazenamento&lt;/li&gt;
+  &lt;li&gt;Módulo 8: Bancos de dados&lt;/li&gt;
+  &lt;li&gt;Módulo 9: Arquitetura de nuvem&lt;/li&gt;
+  &lt;li&gt;Módulo 10: Auto scaling e monitoramento&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">edX: Introduction to Magma</title><link href="https://josecastillolema.github.io/edx-magma/" rel="alternate" type="text/html" title="edX: Introduction to Magma" /><published>2021-06-03T00:00:00+02:00</published><updated>2021-06-03T22:00:58+02:00</updated><id>https://josecastillolema.github.io/edx-magma</id><content type="html" xml:base="https://josecastillolema.github.io/edx-magma/">&lt;p&gt;&lt;a href=&quot;https://www.magmacore.org/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-03-edx-magma/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;introduction-to-magma-cloud-native-wireless-networking&quot;&gt;Introduction to Magma: Cloud Native Wireless Networking&lt;/h2&gt;
 
@@ -79,7 +239,7 @@ Free (there is the possibility to add a paying certificate for $149)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.edx.org/es/course/introduction-to-magma-cloud-native-wireless-networking&quot;&gt;Register now&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-06-03-edx-magma/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh</title><link href="https://josecastillolema.github.io/fiap-meetup/" rel="alternate" type="text/html" title="FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh" /><published>2021-05-31T00:00:00-03:00</published><updated>2021-05-31T17:00:58-03:00</updated><id>https://josecastillolema.github.io/fiap-meetup</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-meetup/">&lt;p&gt;&lt;a href=&quot;https://www.meetup.com/pt-BR/fiapmeetups/events/278576296&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-31-fiap-meetup/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-06-03-edx-magma/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="nfv" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh</title><link href="https://josecastillolema.github.io/fiap-meetup/" rel="alternate" type="text/html" title="FIAP Meetup #9 - Kubernetes &amp;amp; Service Mesh" /><published>2021-05-31T00:00:00+02:00</published><updated>2021-05-31T22:00:58+02:00</updated><id>https://josecastillolema.github.io/fiap-meetup</id><content type="html" xml:base="https://josecastillolema.github.io/fiap-meetup/">&lt;p&gt;&lt;a href=&quot;https://www.meetup.com/pt-BR/fiapmeetups/events/278576296&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-31-fiap-meetup/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;descrição-do-evento&quot;&gt;Descrição do evento&lt;/h2&gt;
 
@@ -120,7 +280,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;José Castillo Lema&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Consultor de infraestrutura cloud na Red Hat, tem trabalhado como arquiteto de plataformas de infraestrutura de nuvem pública e privada, práticas DevOps e temas de automação. Atua em provedores de Cloud e fornecedores de software de infraestrutura e plataforma. É mestre e doutor em engenharia elétrica, nas áreas de redes e telecomunicações. Professor de cursos de MBA da FIAP desde 2016.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="fiap" /><category term="iac" /><category term="openshift" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">GitOps Summit 2021</title><link href="https://josecastillolema.github.io/gitops-summit-21/" rel="alternate" type="text/html" title="GitOps Summit 2021" /><published>2021-05-18T00:00:00-03:00</published><updated>2021-05-18T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitops-summit-21</id><content type="html" xml:base="https://josecastillolema.github.io/gitops-summit-21/">&lt;p&gt;&lt;a href=&quot;https://events.linuxfoundation.org/gitops-summit/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-18-gitops-summit-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Consultor de infraestrutura cloud na Red Hat, tem trabalhado como arquiteto de plataformas de infraestrutura de nuvem pública e privada, práticas DevOps e temas de automação. Atua em provedores de Cloud e fornecedores de software de infraestrutura e plataforma. É mestre e doutor em engenharia elétrica, nas áreas de redes e telecomunicações. Professor de cursos de MBA da FIAP desde 2016.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="events" /><category term="fiap" /><category term="iac" /><category term="openshift" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">GitOps Summit 2021</title><link href="https://josecastillolema.github.io/gitops-summit-21/" rel="alternate" type="text/html" title="GitOps Summit 2021" /><published>2021-05-18T00:00:00+02:00</published><updated>2021-05-18T22:00:58+02:00</updated><id>https://josecastillolema.github.io/gitops-summit-21</id><content type="html" xml:base="https://josecastillolema.github.io/gitops-summit-21/">&lt;p&gt;&lt;a href=&quot;https://events.linuxfoundation.org/gitops-summit/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-18-gitops-summit-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;virtual-experience&quot;&gt;Virtual Experience&lt;/h2&gt;
 
@@ -156,7 +316,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.cvent.com/d/b7qylh/4W?ct=50221cf5-5496-4c34-9ec0-3b52b1bf1204&amp;amp;_ga=2.213519767.2069174923.1621350275-2006967682.1618230804&quot;&gt;Register now&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://events.linuxfoundation.org/gitops-summit/program/schedule/&quot;&gt;View the Schedule&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><summary type="html"></summary></entry><entry><title type="html">AWS Community Builder</title><link href="https://josecastillolema.github.io/aws-community-builder/" rel="alternate" type="text/html" title="AWS Community Builder" /><published>2021-05-15T00:00:00-03:00</published><updated>2021-05-15T17:00:58-03:00</updated><id>https://josecastillolema.github.io/aws-community-builder</id><content type="html" xml:base="https://josecastillolema.github.io/aws-community-builder/">&lt;h2 id=&quot;aws-community-builders-program&quot;&gt;AWS Community Builders program&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://events.linuxfoundation.org/gitops-summit/program/schedule/&quot;&gt;View the Schedule&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><summary type="html"></summary></entry><entry><title type="html">AWS Community Builder</title><link href="https://josecastillolema.github.io/aws-community-builder/" rel="alternate" type="text/html" title="AWS Community Builder" /><published>2021-05-15T00:00:00+02:00</published><updated>2021-05-15T22:00:58+02:00</updated><id>https://josecastillolema.github.io/aws-community-builder</id><content type="html" xml:base="https://josecastillolema.github.io/aws-community-builder/">&lt;h2 id=&quot;aws-community-builders-program&quot;&gt;AWS Community Builders program&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/developer/community/community-builders/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-15-aws-community-builder.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I am glad to be part of the &lt;a href=&quot;https://aws.amazon.com/developer/community/community-builders/&quot;&gt;AWS Community Builders program&lt;/a&gt;. The program offers technical resources, mentorship, and networking opportunities to AWS enthusiasts and emerging thought leaders who are passionate about sharing knowledge and connecting with the technical community.&lt;/p&gt;
@@ -172,7 +332,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
   &lt;li&gt;Mentorship from AWS subject matter experts on a variety of topics&lt;/li&gt;
   &lt;li&gt;AWS Promotional Credits and other helpful resources to support content creation&lt;/li&gt;
   &lt;li&gt;Opportunities to connect with and learn from like-minded developers&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="en" /><summary type="html">AWS Community Builders program</summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 16th edition</title><link href="https://josecastillolema.github.io/hcia-16/" rel="alternate" type="text/html" title="HCIA-Routing &amp;amp; Switching - 16th edition" /><published>2021-05-14T00:00:00-03:00</published><updated>2021-05-14T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-16</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-16/">&lt;p&gt;&lt;a href=&quot;https://www.sympla.com.br/16-treinamento-em-tecnologia-da-informacao-e-comunicacao---conv-usp---huawei---hcia__1215160&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-14-hcia-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="en" /><summary type="html">AWS Community Builders program</summary></entry><entry><title type="html">HCIA-Routing &amp;amp; Switching - 16th edition</title><link href="https://josecastillolema.github.io/hcia-16/" rel="alternate" type="text/html" title="HCIA-Routing &amp;amp; Switching - 16th edition" /><published>2021-05-14T00:00:00+02:00</published><updated>2021-05-14T22:00:58+02:00</updated><id>https://josecastillolema.github.io/hcia-16</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-16/">&lt;p&gt;&lt;a href=&quot;https://www.sympla.com.br/16-treinamento-em-tecnologia-da-informacao-e-comunicacao---conv-usp---huawei---hcia__1215160&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-14-hcia-16.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Informamos que estão abertas as inscrições do &lt;strong&gt;16º Treinamento em Tecnologia de Informação e Comunicação&lt;/strong&gt; convênio USP e &lt;strong&gt;HUAWEI – HCIA – Routing &amp;amp; Switching V2.5&lt;/strong&gt;, totalmente gratuito e virtual.&lt;/p&gt;
 
@@ -186,7 +346,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
 
 &lt;p&gt;Uma vez aprovado no processo seletivo seguir &lt;a href=&quot;/haina-talent&quot;&gt;as seguintes instruções&lt;/a&gt; para efetuar o cadastro na plataforma EaD &lt;a href=&quot;https://e.huawei.com/en/talent&quot;&gt;Huawei Talent Online&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://inova.usp.br/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-26-hcia-15/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 3rd edition</title><link href="https://josecastillolema.github.io/shift-multicloud-3/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 3rd edition" /><published>2021-05-11T00:00:00-03:00</published><updated>2021-05-11T17:00:58-03:00</updated><id>https://josecastillolema.github.io/shift-multicloud-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-11-shift-multicloud-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://inova.usp.br/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-03-26-hcia-15/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="classes" /><category term="huawei" /><category term="networks" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: Multicloud Architecture - 3rd edition</title><link href="https://josecastillolema.github.io/shift-multicloud-3/" rel="alternate" type="text/html" title="FIAP SHIFT: Multicloud Architecture - 3rd edition" /><published>2021-05-11T00:00:00+02:00</published><updated>2021-05-11T22:00:58+02:00</updated><id>https://josecastillolema.github.io/shift-multicloud-3</id><content type="html" xml:base="https://josecastillolema.github.io/shift-multicloud-3/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-11-shift-multicloud-3.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.&lt;/p&gt;
 
@@ -238,7 +398,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
       &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Notes for HCIA-IA</title><link href="https://josecastillolema.github.io/hcia-ia-notes/" rel="alternate" type="text/html" title="Notes for HCIA-IA" /><published>2021-05-10T00:00:00-03:00</published><updated>2021-05-10T17:00:58-03:00</updated><id>https://josecastillolema.github.io/hcia-ia-notes</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-ia-notes/">&lt;p&gt;&lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Notes for HCIA-IA</title><link href="https://josecastillolema.github.io/hcia-ia-notes/" rel="alternate" type="text/html" title="Notes for HCIA-IA" /><published>2021-05-10T00:00:00+02:00</published><updated>2021-05-10T22:00:58+02:00</updated><id>https://josecastillolema.github.io/hcia-ia-notes</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-ia-notes/">&lt;p&gt;&lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Some of the notes I prepared studying for the &lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;Huawei Certified ICT Associate - Artificial Intelligence (HCIA-IA)&lt;/a&gt; exam.&lt;/p&gt;
 
@@ -266,7 +426,7 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="huawei" /><summary type="html"></summary></entry><entry><title type="html">Microsoft Power Platform Fundamentals voucher</title><link href="https://josecastillolema.github.io/power-fundamentals/" rel="alternate" type="text/html" title="Microsoft Power Platform Fundamentals voucher" /><published>2021-04-27T00:00:00-03:00</published><updated>2021-04-27T17:00:58-03:00</updated><id>https://josecastillolema.github.io/power-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/power-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="huawei" /><summary type="html"></summary></entry><entry><title type="html">Microsoft Power Platform Fundamentals voucher</title><link href="https://josecastillolema.github.io/power-fundamentals/" rel="alternate" type="text/html" title="Microsoft Power Platform Fundamentals voucher" /><published>2021-04-27T00:00:00+02:00</published><updated>2021-04-27T22:00:58+02:00</updated><id>https://josecastillolema.github.io/power-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/power-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;By participating in the following &lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;Microsoft Virtual Training Days&lt;/a&gt;:&lt;/p&gt;
 &lt;ul&gt;
@@ -299,93 +459,4 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
   &lt;li&gt;Leverage Microsoft Power Automate&lt;/li&gt;
   &lt;li&gt;Leverage Microsoft Power BI&lt;/li&gt;
   &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="cert" /><category term="en" /><summary type="html"></summary></entry><entry><title type="html">GitLab Certified Associate</title><link href="https://josecastillolema.github.io/gitlab/" rel="alternate" type="text/html" title="GitLab Certified Associate" /><published>2021-04-23T00:00:00-03:00</published><updated>2021-04-23T17:00:58-03:00</updated><id>https://josecastillolema.github.io/gitlab</id><content type="html" xml:base="https://josecastillolema.github.io/gitlab/">&lt;p&gt;&lt;a href=&quot;https://gitlab.com/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-23-gitlab.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Usually priced at USD $650 it’s available for free until April 30, 2021.&lt;/p&gt;
-
-&lt;p&gt;Steps required:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Create account on the &lt;a href=&quot;https://gitlab.edcast.com/&quot;&gt;GitLab Learn platform&lt;/a&gt; &lt;br /&gt;
-1.1 purple login button &lt;br /&gt;
-1.2 purple signup button&lt;/li&gt;
-  &lt;li&gt;Add the &lt;a href=&quot;https://gitlab.edcast.com/pathways/cy-test-pathway-associate-study-exam/&quot;&gt;associate test pathway&lt;/a&gt; to the basket&lt;/li&gt;
-  &lt;li&gt;In Payment step apply discount code &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;E6B8A234458AE3D795&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Once signed up you have one year time for completion.&lt;/p&gt;
-
-&lt;p&gt;More info &lt;a href=&quot;https://about.gitlab.com/blog/2021/04/20/everyone-can-get-certified/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h1 id=&quot;course-contents&quot;&gt;Course contents&lt;/h1&gt;
-
-&lt;h2 id=&quot;section-1---introduction-to-gitlab&quot;&gt;Section 1 - Introduction to GitLab&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;GitLab Overview&lt;/li&gt;
-  &lt;li&gt;GitLab Comparison&lt;/li&gt;
-  &lt;li&gt;GitLab Components and Navigation&lt;/li&gt;
-  &lt;li&gt;Demos and Hands On Excercises&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-2---self-study-using-git-and-gitlab&quot;&gt;Section 2 - Self Study using GIT and GitLab&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Git Basics&lt;/li&gt;
-  &lt;li&gt;Code Creation in GitLab&lt;/li&gt;
-  &lt;li&gt;GitLabs CI/CD features&lt;/li&gt;
-  &lt;li&gt;GitLabs Package and Release Functions&lt;/li&gt;
-  &lt;li&gt;GitLab Security Scanning&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;section-3---certification-assesments&quot;&gt;Section 3 - Certification Assesments&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Knowledge Exam&lt;/li&gt;
-  &lt;li&gt;Hands On Exam&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;certification&quot;&gt;Certification&lt;/h1&gt;
-
-&lt;iframe src=&quot;https://api.badgr.io/public/assertions/idtr8gJ1S-6f93Xlvs33nQ?embedVersion=1&amp;amp;embedWidth=330&amp;amp;embedHeight=186&amp;amp;identity__email=josecastillolema%40gmail.com&quot; title=&quot;Badge: GitLab Certified Associate&quot; style=&quot;width: 450px; height: 240px; border: 0px;&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iac" /><summary type="html"></summary></entry><entry><title type="html">Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021</title><link href="https://josecastillolema.github.io/onf-webinar-21/" rel="alternate" type="text/html" title="Webinar: Working with ONF to transform mobile and broadband networks in LATAM 2021" /><published>2021-04-17T00:00:00-03:00</published><updated>2021-04-17T17:00:58-03:00</updated><id>https://josecastillolema.github.io/onf-webinar-21</id><content type="html" xml:base="https://josecastillolema.github.io/onf-webinar-21/">&lt;p&gt;&lt;a href=&quot;https://opennetworking.org/events/working-with-onf-to-transform-mobile-and-broadband-networks-in-latam-2/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-17-onf-webinar-21.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Don’t miss this virtual event sponsored by the ONF CALA Ambassador team. In this webinar you will learn about the &lt;a href=&quot;https://opennetworking.org/&quot;&gt;Open Networking Foundation (ONF)&lt;/a&gt;, a non-profit, operator-led consortium that is focused on driving transformation of network infrastructure and carrier business models around the world. The ONF serves as the umbrella for a number of projects building solutions for mobile and broadband operators by leveraging network disaggregation, white box economics and open source software to revolutionize the carrier industry.&lt;/p&gt;
-
-&lt;h2 id=&quot;agenda&quot;&gt;Agenda&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Introduction
-    &lt;ul&gt;
-      &lt;li&gt;Who is ONF&lt;/li&gt;
-      &lt;li&gt;ONF CALA Team&lt;/li&gt;
-      &lt;li&gt;ONF Open Source Project Ecosystem&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/stratum/&quot;&gt;&lt;strong&gt;Stratum&lt;/strong&gt;&lt;/a&gt;: thin switch implementing next generation SDN interfaces.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/trellis/&quot;&gt;&lt;strong&gt;Trellis&lt;/strong&gt;&lt;/a&gt;: multi-purpose leaf-spine fabric supporting distributed access networks, NFV and edge cloud applications.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/odtn/&quot;&gt;&lt;strong&gt;ODTN&lt;/strong&gt;&lt;/a&gt;: open and disaggregated source data center interconnect solution.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/seba/&quot;&gt;&lt;strong&gt;SEBA&lt;/strong&gt;&lt;/a&gt;: lightweight platform that supports a multitude of virtualized access technologies at the edge of the carrier network, including PON, G.Fast and eventually DOCSIS and more.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/sd-ran/&quot;&gt;&lt;strong&gt;SD-RAN&lt;/strong&gt;&lt;/a&gt;: Complementary to the O-RAN architecture, it includes a near-real-time RIC (nRT-RIC) and a set of exemplar xApps for controlling the RAN.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/aether/&quot;&gt;&lt;strong&gt;Aether&lt;/strong&gt;&lt;/a&gt;: the first open source 5G Connected Edge platform for enabling enterprise digital transformation.&lt;/li&gt;
-  &lt;li&gt;Q&amp;amp;As&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Join us to learn about ONF and these open source projects and how you can participate in the community. Note that the information covered in both of these webinars will be the same – one will be in Spanish and the other Portuguese.&lt;/p&gt;
-
-&lt;h2 id=&quot;sign-up-now-for-live-webinar&quot;&gt;Sign-up Now for Live Webinar&lt;/h2&gt;
-
-&lt;p&gt;May 11, 11:00am (GMT-5) – in Spanish – &lt;a href=&quot;https://onf.zoom.us/webinar/register/WN_xpGZAVp4QDGzWK68wiDDtw&quot;&gt;REGISTER NOW&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;May 13, 11:00am (GMT-3) – in Portuguese  – &lt;a href=&quot;https://onf.zoom.us/webinar/register/WN_qndVbNQFTe6BvmScb7LhDg&quot;&gt;REGISTER NOW&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;cala-ambassador-speakers&quot;&gt;CALA Ambassador Speakers&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/fernando-cerioni/&quot;&gt;Fernando Cerioni&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/amanda-espindola/&quot;&gt;Amanda Espindola&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/jose-castillo-lema/&quot;&gt;Jose Lema&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/andres-madero/&quot;&gt;Andres Madero&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/rony-a-spada-pedroso/&quot;&gt;Rony Pedroso&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/ricardo-tombi/&quot;&gt;Ricardo Tombi&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://opennetworking.org/ambassadors/freddy-turriaf/&quot;&gt;Freddy Turriaf&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="onf" /><category term="sdn" /><category term="webinar" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="cert" /><category term="en" /><summary type="html"></summary></entry></feed>

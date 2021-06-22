@@ -826,4 +826,16 @@ var store = [{
         "tags": ["en","networks","nfv","sdn"],
         "url": "https://josecastillolema.github.io/edx-magma/",
         "teaser": null
+      },{
+        "title": "FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition",
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "tags": ["aws","cert","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-aws-foundations-4-copy/",
+        "teaser": null
+      },{
+        "title": "FIAP SHIFT: Multicloud Architecture - 2nd edition",
+        "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de Certificação AWS Certified Developer - Associate. Uma jornada com 40 horas de...","categories": [],
+        "tags": ["aws","cert","classes","fiap","pt"],
+        "url": "https://josecastillolema.github.io/shift-aws-dev/",
+        "teaser": null
       }]
