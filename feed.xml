@@ -1,6 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-06-22T12:42:13+02:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Developing</title><link href="https://josecastillolema.github.io/shift-aws-dev/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Developing" /><published>2021-06-22T00:00:00+02:00</published><updated>2021-06-22T22:00:58+02:00</updated><id>https://josecastillolema.github.io/shift-aws-dev</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-dev/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-developing&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-22-shift-aws-dev.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-06-28T14:47:32+02:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Cognitive Class @ai</title><link href="https://josecastillolema.github.io/cognitive-class/" rel="alternate" type="text/html" title="Cognitive Class @ai" /><published>2021-06-28T00:00:00+02:00</published><updated>2021-06-21T22:00:58+02:00</updated><id>https://josecastillolema.github.io/cognitive-class</id><content type="html" xml:base="https://josecastillolema.github.io/cognitive-class/">&lt;p&gt;&lt;a href=&quot;https://cognitiveclass.ai/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-28-cognitive-class.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de Certificação AWS Certified Developer - Associate. Uma jornada com 40 horas de conteúdo, talks e laboratórios práticos.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://cognitiveclass.ai/&quot;&gt;Cognitive Class @ai&lt;/a&gt; is a platform for learning leading-edge technologies: blockchain, data science, AI, Cloud, Serverless, Docker, Kubernetes and more …&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Earn certificates and badges&lt;/li&gt;
+  &lt;li&gt;Free&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;learning-paths&quot;&gt;Learning paths&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Big data fundamentals&lt;/li&gt;
+  &lt;li&gt;Data science fundamentals&lt;/li&gt;
+  &lt;li&gt;Scala programming for data science&lt;/li&gt;
+  &lt;li&gt;Deep learning&lt;/li&gt;
+  &lt;li&gt;Hadoop fundamentals&lt;/li&gt;
+  &lt;li&gt;Spark fundamentals&lt;/li&gt;
+  &lt;li&gt;Containers, k8s and Istio on IBM Cloud&lt;/li&gt;
+  &lt;li&gt;Reactive architecture foundations&lt;/li&gt;
+  &lt;li&gt;Lightbend reactive architecture: advanced&lt;/li&gt;
+  &lt;li&gt;Data science with Python&lt;/li&gt;
+  &lt;li&gt;Blockchain for developers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div data-iframe-width=&quot;150&quot; data-iframe-height=&quot;270&quot; data-share-badge-id=&quot;70a23095-d411-4c41-a5cd-7ef695afbef6&quot; data-share-badge-host=&quot;https://www.credly.com&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.credly.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;
+
+&lt;div data-iframe-width=&quot;150&quot; data-iframe-height=&quot;270&quot; data-share-badge-id=&quot;a9f1c791-c4d8-4933-bd45-6084d68f6b3d&quot; data-share-badge-host=&quot;https://www.credly.com&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; async=&quot;&quot; src=&quot;//cdn.credly.com/assets/utilities/embed.js&quot;&gt;&lt;/script&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="iot" /><category term="networks" /><category term="openshift" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Developing</title><link href="https://josecastillolema.github.io/shift-aws-dev/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Developing" /><published>2021-06-22T00:00:00+02:00</published><updated>2021-06-22T22:00:58+02:00</updated><id>https://josecastillolema.github.io/shift-aws-dev</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-dev/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-developing&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-22-shift-aws-dev.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação &lt;strong&gt;&lt;a href=&quot;https://aws.amazon.com/pt/certification/certified-developer-associate/&quot;&gt;AWS Certified Developer - Associate (DVA-C01)&lt;/a&gt;&lt;/strong&gt;. Uma jornada com 40 horas de conteúdo, talks e laboratórios práticos.&lt;/p&gt;
 
 &lt;h2 id=&quot;para-quem&quot;&gt;Para quem?&lt;/h2&gt;
 &lt;p&gt;Desenvolvedores, profissionais DevOps e Arquitetos(as) de plataformas e soluções que querem ter Certificação e experiência hands-on em AWS.&lt;/p&gt;
@@ -128,7 +156,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="cert" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition</title><link href="https://josecastillolema.github.io/shift-aws-foundations-4/" rel="alternate" type="text/html" title="FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition" /><published>2021-06-21T00:00:00+02:00</published><updated>2021-06-21T22:00:58+02:00</updated><id>https://josecastillolema.github.io/shift-aws-foundations-4</id><content type="html" xml:base="https://josecastillolema.github.io/shift-aws-foundations-4/">&lt;p&gt;&lt;a href=&quot;https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-21-shift-aws-foundations-4.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;AWS Certified Cloud Practitioner&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;AWS Academy Cloud Foundations&lt;/strong&gt; (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – &lt;strong&gt;&lt;a href=&quot;https://aws.amazon.com/pt/certification/certified-cloud-practitioner/&quot;&gt;AWS Certified Cloud Practitioner (CLF-01)&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.&lt;/p&gt;
 
@@ -426,37 +454,4 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="huawei" /><summary type="html"></summary></entry><entry><title type="html">Microsoft Power Platform Fundamentals voucher</title><link href="https://josecastillolema.github.io/power-fundamentals/" rel="alternate" type="text/html" title="Microsoft Power Platform Fundamentals voucher" /><published>2021-04-27T00:00:00+02:00</published><updated>2021-04-27T22:00:58+02:00</updated><id>https://josecastillolema.github.io/power-fundamentals</id><content type="html" xml:base="https://josecastillolema.github.io/power-fundamentals/">&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-04-08-azure-fundamentals/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;By participating in the following &lt;a href=&quot;https://www.microsoft.com/en-us/trainingdays&quot;&gt;Microsoft Virtual Training Days&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Microsoft Power Platform Virtual Training Day: Fundamentals&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You’ll be eligible to take the following certification exam at no cost:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://docs.microsoft.com/en-us/learn/certifications/exams/pl-900&quot;&gt;Microsoft Certified: Power Platform Fundamentals (PL-900)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;power-platform-fundamentals&quot;&gt;Power Platform Fundamentals&lt;/h1&gt;
-
-&lt;p&gt;Microsoft Power Platform Virtual Training Day: Fundamentals will cover everything you need to know about building and managing innovative business solutions so your organisation is ready for whatever comes next. You’ll discover how to connect your data to analyse real-time business performance, act on data and insights with custom-built apps, and automate workflows to improve how people work, both remotely and in the office. This training will teach you how to create innovative, future-proof solutions for an evolving business environment.&lt;/p&gt;
-
-&lt;h2 id=&quot;course-objectives&quot;&gt;Course Objectives&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Prepare for the Microsoft Power Platform Fundamentals certification exam&lt;/li&gt;
-  &lt;li&gt;Build and manage innovative business solutions with Power Platform&lt;/li&gt;
-  &lt;li&gt;Easily connect all your data to analyse business performance with custom-built apps&lt;/li&gt;
-  &lt;li&gt;Automate workflows to improve daily processes, regardless of your technical expertise&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;content&quot;&gt;Content&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Introduction&lt;/li&gt;
-  &lt;li&gt;Introduction to Microsoft Power Platform&lt;/li&gt;
-  &lt;li&gt;Introduction to Microsoft Power Apps and Common Data Services&lt;/li&gt;
-  &lt;li&gt;Build simple Power Apps&lt;/li&gt;
-  &lt;li&gt;Leverage Microsoft Power Automate&lt;/li&gt;
-  &lt;li&gt;Leverage Microsoft Power BI&lt;/li&gt;
-  &lt;li&gt;Closing Q&amp;amp;A&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="azure" /><category term="cert" /><category term="en" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="huawei" /><summary type="html"></summary></entry></feed>

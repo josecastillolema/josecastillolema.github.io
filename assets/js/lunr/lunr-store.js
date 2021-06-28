@@ -570,7 +570,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Foundations",
-        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner (CLF-01). O curso oferece uma visão geral detalhada dos...","categories": [],
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations/",
         "teaser": null
@@ -630,7 +630,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition",
-        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner (CLF-01). O curso oferece uma visão geral detalhada dos...","categories": [],
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations-2/",
         "teaser": null
@@ -720,7 +720,7 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Foundations - 3rd edition",
-        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner (CLF-01). O curso oferece uma visão geral detalhada dos...","categories": [],
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations-3/",
         "teaser": null
@@ -828,14 +828,20 @@ var store = [{
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition",
-        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner. O curso oferece uma visão geral detalhada dos conceitos...","categories": [],
+        "excerpt":"O AWS Academy Cloud Foundations (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – AWS Certified Cloud Practitioner (CLF-01). O curso oferece uma visão geral detalhada dos...","categories": [],
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-foundations-4/",
         "teaser": null
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing",
-        "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de Certificação AWS Certified Developer - Associate. Uma jornada com 40 horas de...","categories": [],
+        "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
         "tags": ["aws","cert","classes","fiap","pt"],
         "url": "https://josecastillolema.github.io/shift-aws-dev/",
+        "teaser": null
+      },{
+        "title": "Cognitive Class @ai",
+        "excerpt":"Cognitive Class @ai is a platform for learning leading-edge technologies: blockchain, data science, AI, Cloud, Serverless, Docker, Kubernetes and more … Earn certificates and badges Free Learning paths Big data fundamentals Data science fundamentals Scala programming for data science Deep learning Hadoop fundamentals Spark fundamentals Containers, k8s and Istio on...","categories": [],
+        "tags": ["cert","en","iot","networks","openshift"],
+        "url": "https://josecastillolema.github.io/cognitive-class/",
         "teaser": null
       }]
