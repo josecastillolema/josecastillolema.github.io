@@ -36,7 +36,11 @@ Esperamos por você.
 [Inscrição gratuita.](https://www.meetup.com/pt-BR/fiapmeetups/events/278576296)
 
 FIAP & LuizaLabs & RedHat
- 
+
+## Material
+
+ - [Slides](https://github.com/tonanuvem/k8s-exemplos/blob/master/TALK_MEETUP_v3.pdf) 
+ - [Gravação](https://zoom.us/rec/share/8vzivOe-MtaDXOOGw3Ohnqa3bEXpw9Jh4TbnyZbL5VM--h7e53ter1qaeqYSJSTq.MLAt8caSC9QICm1q) (senha: `s=2c90K.`)
 
 ## Participantes
  
