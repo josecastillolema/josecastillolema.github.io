@@ -1,4 +1,201 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-07-08T10:58:34+02:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Cognitive Class @ai</title><link href="https://josecastillolema.github.io/cognitive-class/" rel="alternate" type="text/html" title="Cognitive Class @ai" /><published>2021-06-28T00:00:00+02:00</published><updated>2021-06-21T22:00:58+02:00</updated><id>https://josecastillolema.github.io/cognitive-class</id><content type="html" xml:base="https://josecastillolema.github.io/cognitive-class/">&lt;p&gt;&lt;a href=&quot;https://cognitiveclass.ai/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-28-cognitive-class.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2021-07-09T10:32:30+02:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><entry><title type="html">Running FRR in K8s/OpenShift</title><link href="https://josecastillolema.github.io/frr-k8s/" rel="alternate" type="text/html" title="Running FRR in K8s/OpenShift" /><published>2021-07-04T00:00:00+02:00</published><updated>2020-04-26T22:00:58+02:00</updated><id>https://josecastillolema.github.io/frr-k8s</id><content type="html" xml:base="https://josecastillolema.github.io/frr-k8s/">&lt;p&gt;&lt;a href=&quot;http://docs.frrouting.org/en/stable-7.5/&quot;&gt;FRR&lt;/a&gt; is a fully featured, high performance, free software IP routing suite &lt;a href=&quot;https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/configuring_and_managing_networking/setting-your-routing-protocols_configuring-and-managing-networking&quot;&gt;included in RHEL 8&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We will be using &lt;a href=&quot;https://quay.io/repository/fpaoline/ovnkbfdtest&quot;&gt;this FRR image&lt;/a&gt; for establishing Bidirectional Forwarding Detection (BFD) sessions.&lt;/p&gt;
+
+&lt;p&gt;First, let’s define the proper config map:&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;daemons&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bgpd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ospfd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ospf6d=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ripd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ripngd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;isisd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;pimd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ldpd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;nhrpd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;eigrpd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;babeld=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;sharpd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;pbrd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bfdd=yes&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;fabricd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;vrrpd=no&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;vtysh_enable=yes&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;zebra_options=&quot;  -A 127.0.0.1 -s 90000000&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bgpd_options=&quot;   -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ospfd_options=&quot;  -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ospf6d_options=&quot; -A ::1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ripd_options=&quot;   -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ripngd_options=&quot; -A ::1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;isisd_options=&quot;  -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;pimd_options=&quot;   -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;ldpd_options=&quot;   -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;nhrpd_options=&quot;  -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;eigrpd_options=&quot; -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;babeld_options=&quot; -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;sharpd_options=&quot; -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;pbrd_options=&quot;   -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;staticd_options=&quot;-A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bfdd_options=&quot;   -A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;fabricd_options=&quot;-A 127.0.0.1&quot;&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;vrrpd_options=&quot;  -A 127.0.0.1&quot;&lt;/span&gt;
+  &lt;span class=&quot;s&quot;&gt;frr.conf&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;|&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;password zebra&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;enable password zebra&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bfd&lt;/span&gt;
+     &lt;span class=&quot;s&quot;&gt;peer 192.168.216.14 interface net1&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;no shutdown&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;debug bfd network&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;debug bfd peer&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;debug bfd zebra&lt;/span&gt;
+     &lt;span class=&quot;s&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;bfd&lt;/span&gt;
+     &lt;span class=&quot;s&quot;&gt;peer 192.168.216.15 interface net1&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;no shutdown&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;debug bfd network&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;debug bfd peer&lt;/span&gt;
+       &lt;span class=&quot;s&quot;&gt;debug bfd zebra&lt;/span&gt;
+     &lt;span class=&quot;s&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;!&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;log file /var/log/frr/frr.log debugging&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ConfigMap&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;frr&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Peer entries must point to the peer(s) BFD endpoint(s) (we assume they are already configured). I am using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;net1&lt;/code&gt; as the pod will be created with two interfaces (the second one for establishing the L2 BFD connection).&lt;/p&gt;
+
+&lt;p&gt;Now let’s define the pod:&lt;/p&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;v1&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;Pod&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;frr-bfd&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;annotations&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;k8s.v1.cni.cncf.io/networks&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[{&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;name&quot;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;sriov-net&quot;,&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ips&quot;:&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;192.168.216.50/24&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;]}]&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;containers&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;bfd&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;quay.io/fpaoline/ovnkbfdtest:0.2&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/bin/sh&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-c&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;pi&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/usr/lib/frr/frrinit.sh&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;tail&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;-f&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/var/log/frr/frr.log&quot;&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;ports&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;containerPort&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3784&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;protocol&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;UDP&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;securityContext&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;privileged&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;volumeMounts&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;config-volume&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;mountPath&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/etc/frr&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;volumes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;config-volume&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;configMap&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;frr&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the pod gets created, let’s take a look to the logs:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ oc logs frr-bfd 
+Started watchfrr
+2021/07/04 21:14:17 ZEBRA: client 15 says hello and bids fair to announce only static routes vrf=0
+2021/07/04 21:14:17 ZEBRA: client 32 says hello and bids fair to announce only bfd routes vrf=0
+2021/07/04 21:14:18 BFD: zclient: add local address fe80::b0c5:acff:fe58:4c29/64
+2021/07/04 21:14:19 BFD:  peer 192.168.216.15 found, but loc-addr 192.168.217.1 ignored
+2021/07/04 21:14:20 BFD: state-change: [mhop:no peer:192.168.216.15 local:0.0.0.0 vrf:default ifname:net1] init -&amp;gt; up
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;From the last line, we can see the BFD session was properly established. Let’s do some tshooting from inside the container:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ oc rsh frr-bfd 
+sh-5.0# sudo yum install -y telnet
+sh-5.0# telnet localhost 2617
+Trying ::1...
+telnet: connect to address ::1: Connection refused
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is &apos;^]&apos;.
+
+Hello, this is FRRouting (version 7.5).
+Copyright 1996-2005 Kunihiro Ishiguro, et al.
+
+User Access Verification
+Password: zebra
+
+frr-bfd&amp;gt; enable
+Password: zebra
+
+frr-bfd# show bfd peers
+BFD Peers:
+    peer 192.168.216.14 vrf default interface net1
+        ID: 3380487267
+        Remote ID: 0
+        Active mode
+        Status: down
+        Downtime: 31 minute(s), 53 second(s)
+        Diagnostics: ok
+        Remote diagnostics: ok
+        Peer Type: configured
+        Local timers:
+            Detect-multiplier: 3
+            Receive interval: 300ms
+            Transmission interval: 300ms
+            Echo transmission interval: 50ms
+        Remote timers:
+            Detect-multiplier: 3
+            Receive interval: 1000ms
+            Transmission interval: 1000ms
+            Echo transmission interval: 0ms
+
+    peer 192.168.216.15 vrf default interface net1
+        ID: 1945828781
+        Remote ID: 3129413095
+        Active mode
+        Status: up
+        Uptime: 31 minute(s), 50 second(s)
+        Diagnostics: ok
+        Remote diagnostics: ok
+        Peer Type: configured
+        Local timers:
+            Detect-multiplier: 3
+            Receive interval: 300ms
+            Transmission interval: 300ms
+            Echo transmission interval: 50ms
+        Remote timers:
+            Detect-multiplier: 5
+            Receive interval: 1000ms
+            Transmission interval: 1000ms
+            Echo transmission interval: 0ms
+
+frr-bfd# show bfd peers brief
+Session count: 2
+SessionId  LocalAddress                             PeerAddress                             Status         
+=========  ============                             ===========                             ======         
+3380487267 unknown                                  192.168.216.14                          down           
+1945828781 192.168.216.50                           192.168.216.15                          up             
+
+frr-bfd# show bfd peers counters
+BFD Peers:
+    peer 192.168.216.14 vrf default interface net1
+        Control packet input: 0 packets
+        Control packet output: 2232 packets
+        Echo packet input: 0 packets
+        Echo packet output: 0 packets
+        Session up events: 0
+        Session down events: 0
+        Zebra notifications: 0
+
+    peer 192.168.216.15 vrf default interface net1
+        Control packet input: 2229 packets
+        Control packet output: 2234 packets
+        Echo packet input: 0 packets
+        Echo packet output: 0 packets
+        Session up events: 1
+        Session down events: 0
+        Zebra notifications: 1
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="en" /><category term="networks" /><category term="openshift" /><category term="redhat" /><summary type="html">FRR is a fully featured, high performance, free software IP routing suite included in RHEL 8.</summary></entry><entry><title type="html">Cognitive Class @ai</title><link href="https://josecastillolema.github.io/cognitive-class/" rel="alternate" type="text/html" title="Cognitive Class @ai" /><published>2021-06-28T00:00:00+02:00</published><updated>2021-06-21T22:00:58+02:00</updated><id>https://josecastillolema.github.io/cognitive-class</id><content type="html" xml:base="https://josecastillolema.github.io/cognitive-class/">&lt;p&gt;&lt;a href=&quot;https://cognitiveclass.ai/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-06-28-cognitive-class.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://cognitiveclass.ai/&quot;&gt;Cognitive Class @ai&lt;/a&gt; is a platform for learning leading-edge technologies: blockchain, data science, AI, Cloud, Serverless, Docker, Kubernetes and more …&lt;/p&gt;
 
@@ -457,32 +654,4 @@ On-line via Zoom (dados de acesso no dia do evento)&lt;/p&gt;
       &lt;li&gt;Arquiteturas serverless&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry><entry><title type="html">Notes for HCIA-IA</title><link href="https://josecastillolema.github.io/hcia-ia-notes/" rel="alternate" type="text/html" title="Notes for HCIA-IA" /><published>2021-05-10T00:00:00+02:00</published><updated>2021-05-10T22:00:58+02:00</updated><id>https://josecastillolema.github.io/hcia-ia-notes</id><content type="html" xml:base="https://josecastillolema.github.io/hcia-ia-notes/">&lt;p&gt;&lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/0.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Some of the notes I prepared studying for the &lt;a href=&quot;https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;amp;authenticationLevel=CTYPE_CARE_HCIA&amp;amp;technicalField=PSC&amp;amp;version=3.0&quot;&gt;Huawei Certified ICT Associate - Artificial Intelligence (HCIA-IA)&lt;/a&gt; exam.&lt;/p&gt;
-
-&lt;h1 id=&quot;notes&quot;&gt;Notes&lt;/h1&gt;
-
-&lt;h2 id=&quot;deep-learning&quot;&gt;Deep learning&lt;/h2&gt;
-
-&lt;p&gt;I used the &lt;a href=&quot;https://coggle.it&quot;&gt;Coggle platform&lt;/a&gt;, a collaborative mind maps &amp;amp; flow charts tool.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;huawei-cloud-enterprise-intelligent-ei-services&quot;&gt;Huawei Cloud Enterprise Intelligent (EI) Services&lt;/h2&gt;
-
-&lt;p&gt;These were made by my studying collegues using &lt;a href=&quot;https://miro.com/&quot;&gt;Miro&lt;/a&gt;, an online visual collaboration platform for teamwork.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;huawei-open-ai-hiai-platform-for-smart-devices&quot;&gt;Huawei Open AI (HiAI) Platform for Smart Devices&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/4.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;certification&quot;&gt;Certification&lt;/h1&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2021-05-10-hcia-ia-notes/6.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="cert" /><category term="en" /><category term="huawei" /><summary type="html"></summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name><email>josecastillolema@gmail.com</email></author><category term="aws" /><category term="classes" /><category term="fiap" /><category term="pt" /><summary type="html"></summary></entry></feed>

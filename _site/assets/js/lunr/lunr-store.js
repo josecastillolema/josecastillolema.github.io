@@ -844,4 +844,10 @@ var store = [{
         "tags": ["cert","en","iot","networks","openshift"],
         "url": "https://josecastillolema.github.io/cognitive-class/",
         "teaser": null
+      },{
+        "title": "Running FRR in K8s/OpenShift",
+        "excerpt":"FRR is a fully featured, high performance, free software IP routing suite included in RHEL 8. We will be using this FRR image for establishing Bidirectional Forwarding Detection (BFD) sessions. First, let’s define the proper config map: apiVersion: v1 data: daemons: | bgpd=no ospfd=no ospf6d=no ripd=no ripngd=no isisd=no pimd=no ldpd=no...","categories": [],
+        "tags": ["en","networks","openshift","redhat"],
+        "url": "https://josecastillolema.github.io/frr-k8s/",
+        "teaser": null
       }]
