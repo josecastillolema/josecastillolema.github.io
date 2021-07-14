@@ -1,6 +1,6 @@
 ---
 title:  "Cognitive Class @ai"
-last_modified_at: 2021-06-21T16:00:58-04:00
+last_modified_at: 2021-06-28T16:00:58-04:00
 tags:
   - cert
   - en
@@ -49,3 +49,5 @@ toc: true
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fa2c1a4e-e685-4843-ab95-62038106d4d0" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8313ed37-2cf2-4d2c-aaee-343c1a3563d3" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="42843349-a105-4b31-866f-e93ffc284a9f" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
