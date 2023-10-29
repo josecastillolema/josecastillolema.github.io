@@ -9,10 +9,6 @@
 ![jekyll](https://img.shields.io/badge/jekyll-3.8.7-blue)
 ![bundler](https://img.shields.io/badge/bundler-2.1.4-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/josecastillolema/josecastillolema.github.io)
-![Security Headers](https://img.shields.io/security-headers?url=https%3A%2F%2Fjosecastillolema.github.io)
-![Chromium HSTS preload](https://img.shields.io/hsts/preload/josecastillolema.github.io)
-![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/josecastillolema.github.io?publish)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/josecastillolema/josecastillolema.github.io?publish)
 
 Sources of the **GitOps project's website** (https://josecastillolema.github.io/). Built with [Jekyll](http://jekyllrb.com/) and [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/) as a static site.
 
