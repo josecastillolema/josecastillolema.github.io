@@ -1,0 +1,945 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>OpenShift 4.3 on RHOSP 13: Installation and Integrations - GitOps</title>
+<meta name="description" content="I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="OpenShift 4.3 on RHOSP 13: Installation and Integrations">
+<meta property="og:url" content="https://josecastillolema.github.io/ocp43-on-rhosp13/">
+
+
+  <meta property="og:description" content="I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-04-26T00:00:00-05:00">
+
+
+
+  <meta property="article:modified_time" content="2020-04-26T15:00:58-05:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/ocp43-on-rhosp13/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="OpenShift 4.3 on RHOSP 13: Installation and Integrations">
+    <meta itemprop="description" content="I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).">
+    <meta itemprop="datePublished" content="2020-04-26T00:00:00-05:00">
+    <meta itemprop="dateModified" content="2020-04-26T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/ocp43-on-rhosp13/" class="u-url" itemprop="url">OpenShift 4.3 on RHOSP 13: Installation and Integrations
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#installation">Installation</a></li><li><a href="#cinder-integration">Cinder Integration</a></li><li><a href="#swift-integration">Swift Integration</a></li><li><a href="#keystone-integration">Keystone Integration</a></li><li><a href="#neutronoctavia-integration-kuryr">Neutron/Octavia Integration (Kuryr)</a></li><li><a href="#references">References</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+  <li>This was not a disconnected environment. Note that virtual machines have to be born with proper DNS configuration for OpenShift to download proper CoreOS images (<code class="language-plaintext highlighter-rouge">NeutronDhcpAgentDnsmasqDnsServer</code> parameter from Director).</li>
+  <li>On Ceph RGW, the account in url option must be enabled (<code class="language-plaintext highlighter-rouge">rgw_swift_account_in_url: true</code> parameter from Director).</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+<p>Following official documentation: <a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/installing_on_openstack/index">https://access.redhat.com/documentation/en-us/openshift_container_platform/4.3/html-single/installing_on_openstack/index</a></p>
+
+<p>Prepared a bastion server within the OpenShift project for convenience, downloaded into it the OpenStack credentials file and added the password into it.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ ./openshift-install create install-config --dir=installationDoc
+? SSH Public Key /home/cloud-user/.ssh/id_rsa.pub
+? Platform openstack
+? Cloud openstack
+? ExternalNetwork public
+? APIFloatingIPAddress 192.168.226.42
+? FlavorName openshift
+? Base Domain openshift.com.br
+? Cluster Name lab01
+? Pull Secret [? for help] ‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+</code></pre></div></div>
+
+<p>The resulting configuration:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">[</span><span class="nv">cloud-user@bastion ~</span><span class="pi">]</span><span class="s">$ cat installationDoc/install-config.yaml</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">baseDomain</span><span class="pi">:</span> <span class="s">openshift.com.br</span>
+<span class="na">compute</span><span class="pi">:</span>
+<span class="pi">-</span> <span class="na">hyperthreading</span><span class="pi">:</span> <span class="s">Enabled</span>
+<span class="s">  name</span><span class="pi">:</span> <span class="s">worker</span>
+<span class="s">  platform</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="s">  replicas</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">controlPlane</span><span class="pi">:</span>
+<span class="s">  hyperthreading</span><span class="pi">:</span> <span class="s">Enabled</span>
+<span class="s">  name</span><span class="pi">:</span> <span class="s">master</span>
+<span class="s">  platform</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="s">  replicas</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">metadata</span><span class="pi">:</span>
+<span class="s">  creationTimestamp</span><span class="pi">:</span> <span class="no">null</span>
+<span class="s">  name</span><span class="pi">:</span> <span class="s">lab01</span>
+<span class="na">networking</span><span class="pi">:</span>
+<span class="s">  clusterNetwork</span><span class="pi">:</span>
+<span class="s">  - cidr</span><span class="pi">:</span> <span class="s">10.128.0.0/14</span>
+<span class="s">    hostPrefix</span><span class="pi">:</span> <span class="m">23</span>
+<span class="s">  machineCIDR</span><span class="pi">:</span> <span class="s">10.0.0.0/16</span>
+<span class="s">  networkType</span><span class="pi">:</span> <span class="s">OpenShiftSDN</span>
+<span class="s">  serviceNetwork</span><span class="pi">:</span>
+<span class="s">  - 172.30.0.0/16</span>
+<span class="na">platform</span><span class="pi">:</span>
+<span class="s">  openstack</span><span class="pi">:</span>
+<span class="s">    cloud</span><span class="pi">:</span> <span class="s">openstack</span>
+<span class="s">    computeFlavor</span><span class="pi">:</span> <span class="s">openshift</span>
+<span class="s">    externalDNS</span><span class="pi">:</span> <span class="no">null</span>
+<span class="s">    externalNetwork</span><span class="pi">:</span> <span class="s">public</span>
+<span class="s">    lbFloatingIP</span><span class="pi">:</span> <span class="s">192.168.226.42</span>
+<span class="s">    octaviaSupport</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0"</span>
+<span class="s">    region</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+<span class="s">    trunkSupport</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1"</span>
+<span class="na">publish</span><span class="pi">:</span> <span class="s">External</span>
+<span class="na">pullSecret</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{"auths":{"cloud.openshift.com":{"auth”:”abc==","email":"jlema@redhat.com"},"quay.io":{"auth”:”abc==","email":"jlema@redhat.com"},"registry.connect.redhat.com":{"auth”:”abc==”,”email":"jlema@redhat.com"},"registry.redhat.io":{"auth”:”abc==,”,”email":"jlema@redhat.com"}}}'</span>
+<span class="na">sshKey</span><span class="pi">:</span> <span class="pi">|</span>
+<span class="err"> </span><span class="s"> ssh-rsa abc== cloud-user@bastion‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
+</code></pre></div></div>
+
+<p>As opposed to what the documentation says regarding the number of replicas (a positive integer greater than or equal to 3 for control nodes and greater to 2 for worker nodes), the installation actually works with 1 control node and 1 worker.</p>
+
+<p>Proceed with the actual installation:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ ./openshift-install create cluster --dir=installationDoc --log-level=debug ‍‍‍‍‍‍‍
+First try we got this error:
+...
+INFO Creating infrastructure resources...
+...
+
+INFO Waiting up to 30m0s for the Kubernetes API at https://api.lab01.openshift.oss.timbrasil.com.br:6443...
+ERROR Attempted to gather ClusterOperator status after installation failure: listing
+INFO Pulling debug logs from the bootstrap machine
+ERROR Attempted to gather debug logs after installation failure: failed to create SSH client, ensure the proper ssh key is in your keyring or specify with --key: dial tcp 192.168.226.40:22: connect: connection refused
+FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline exceeded
+</code></pre></div></div>
+
+<p>It was a <a href="https://bugzilla.redhat.com/show_bug.cgi?id=1799078">MTU issue</a>, as our environment has jumbo frames as its default. Actually, there is no way to set MTU in IPI installations, and it was decided to wait to a future feature where you will be able to create your networking in OpenStack and then instruct the installer to use the existing networking resources while still installing with the IPI workflow (something like bring your own network).</p>
+
+<p>The (not very elegant) solution was to wait for the network creation, and manually configure the MTU, before the virtual machines are created:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ watch -n 10 openstack network list
+[cloud-user@bastion ~]$ openstack network set --mtu 1400 lab01-n67mh-openshift‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+</code></pre></div></div>
+
+<p>Another issue we found at this point it is that for some reason the openshift-installer does not use soft anti-affinity policies (different from AWS and from <a href="https://github.com/openshift/installer/blob/master/docs/user/openstack/install_upi.md">OpenStack UPI installation</a>), and may create all the masters/workers in the same server. The only option to accomplish this would be to define different regions for the nodes, which is not supported from RHOSP side.</p>
+
+<p>Finally, installation completed:
+<img src="/assets/images/posts/2020-04-26-osp43-on-rhosp13/0.png" alt="" /></p>
+
+<h2 id="cinder-integration">Cinder Integration</h2>
+<p>Worked out of the box:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">[</span><span class="nv">cloud-user@bastion ~</span><span class="pi">]</span><span class="s">$ oc get storageClass</span>
+<span class="s">NAME                 TYPE</span>
+<span class="s">standard (default)   kubernetes.io/cinder‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
+
+<span class="pi">[</span><span class="nv">cloud-user@bastion ~</span><span class="pi">]</span><span class="s">$ oc describe storageClass standard</span>
+<span class="s">Name:           standard</span>
+<span class="na">IsDefaultClass</span><span class="pi">:</span> <span class="s">Yes</span>
+<span class="s">Annotations:    storageclass.kubernetes.io/is-default-class=true</span>
+<span class="s">Provisioner:    kubernetes.io/cinder</span>
+<span class="s">Parameters:     &lt;none&gt;</span>
+<span class="s">Events:         &lt;none&gt;‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
+
+<span class="pi">[</span><span class="nv">cloud-user@bastion ~</span><span class="pi">]</span><span class="s">$ oc get -o yaml storageClass standard</span>
+<span class="na">allowVolumeExpansion</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">storage.k8s.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">StorageClass</span>
+<span class="na">metadata</span><span class="pi">:</span>
+<span class="s">  annotations</span><span class="pi">:</span>
+<span class="s">    storageclass.kubernetes.io/is-default-class</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+<span class="s">  creationTimestamp</span><span class="pi">:</span> <span class="s">2020-03-24T18:17:11Z</span>
+<span class="s">  name</span><span class="pi">:</span> <span class="s">standard</span>
+<span class="s">  ownerReferences</span><span class="pi">:</span>
+<span class="s">  - apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="s">    kind</span><span class="pi">:</span> <span class="s">clusteroperator</span>
+<span class="s">    name</span><span class="pi">:</span> <span class="s">storage</span>
+<span class="s">    uid</span><span class="pi">:</span> <span class="s">82643882-1e38-4fdd-98c2-fb19636ad003</span>
+<span class="s">  resourceVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">10307"</span>
+<span class="s">  selfLink</span><span class="pi">:</span> <span class="s">/apis/storage.k8s.io/v1/storageclasses/standard</span>
+<span class="s">  uid</span><span class="pi">:</span> <span class="s">7bb9919c-2ea7-4f1d-aedf-111b6c16e68c</span>
+<span class="na">provisioner</span><span class="pi">:</span> <span class="s">kubernetes.io/cinder</span>
+<span class="na">reclaimPolicy</span><span class="pi">:</span> <span class="s">Delete</span>
+<span class="na">volumeBindingMode</span><span class="pi">:</span> <span class="s">WaitForFirstConsumer‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
+</code></pre></div></div>
+
+<p>Create a persistent volume claim from this template:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">PersistentVolumeClaim</span>
+<span class="na">metadata</span><span class="pi">:</span>
+ <span class="na">name</span><span class="pi">:</span> <span class="s">vol-teste-vai</span>
+<span class="na">spec</span><span class="pi">:</span>
+ <span class="na">accessModes</span><span class="pi">:</span>
+<span class="s">  - ReadWriteOnce</span>
+ <span class="s">resources</span><span class="pi">:</span>
+<span class="s">   requests</span><span class="pi">:</span>
+<span class="s">     storage</span><span class="pi">:</span> <span class="s">10Gi</span>
+ <span class="s">storageClassName</span><span class="pi">:</span> <span class="s">standard‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
+</code></pre></div></div>
+
+<p>As the <code class="language-plaintext highlighter-rouge">volumeBindingMode</code> is set to <code class="language-plaintext highlighter-rouge">WaitForFirstConsumer</code>, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
+<img src="/assets/images/posts/2020-04-26-osp43-on-rhosp13/1.png" alt="" /></p>
+
+<p>From OpenShift side:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[cloud-user@bastion ~]$ oc get pv
+NAME                                       CAPACITY   ACCESSMODES   RECLAIMPOLICY   STATUS    CLAIM                   STORAGECLASS   REASON    AGE
+pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d   10Gi       RWO           Delete          Bound     default/vol-teste-vai   standard                 55s‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+</code></pre></div></div>
+
+<p>From OpenStack side, the actual Cinder volume created dynamically by OpenShift:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloudrc) [cloud-user@bastion ~]$ openstack volume list
++--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+
+| ID                                   | Name                                                         | Status    | Size | Attached to |
++--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+
+| b75c57b4-ea8f-4d73-b0d6-28ab02458842 | lab01-9v54g-dynamic-pvc-691a2bbb-0d5a-4d2f-94e2-f50708085c7d | available |   10 |             |
++--------------------------------------+--------------------------------------------------------------+-----------+------+-------------+‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+</code></pre></div></div>
+
+<h2 id="swift-integration">Swift Integration</h2>
+<p>Worked out of the box.</p>
+
+<p>From OpenStack side:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloud) [stack@manager ~]$ openstack container list
++----------------------------------------------------------------+
+| Name                                                           |
++----------------------------------------------------------------+
+| lab01-9v54g-image-registry-phbhqxrotxhvfkunvehpebfyeyajvoiirer |
++----------------------------------------------------------------+‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍
+</code></pre></div></div>
+<p>We can see the docker registry images inside the container:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(overcloud) [stack@manager ~]$ swift list lab01-9v54g-image-registry-phbhqxrotxhvfkunvehpebfyeyajvoiirer | grep registry
+files/docker/registry/v2/blobs/sha256/02/02c05272c8dd4f99d68e12066db506412bef3c460dbb4a587a7cafc8af593e35/data
+files/docker/registry/v2/blobs/sha256/45/455ea8ab06218495bbbcb14b750a0d644897b24f8c5dcf9e8698e27882583412/data
+files/docker/registry/v2/blobs/sha256/46/46fc24a071a44b29a3ba49c94f75a47514a56470d539c9204f3e7688973fc93a/data
+files/docker/registry/v2/blobs/sha256/4a/4abfcf58ff10724f3886be18423f80a481e90c4b258fbecad6ea06917a266003/data
+files/docker/registry/v2/blobs/sha256/56/566b3d0a5bcd5903e86174ab1551a402b1c0dade2aa918d86895516bd2d0dd43/data
+files/docker/registry/v2/blobs/sha256/6d/6d3329d5faa944944d54166b52dd7d11fcb99e6467950b5679095a44346c1cc8/data
+files/docker/registry/v2/blobs/sha256/81/8170b35922ece1799b004d6fe41e253808d47da894197d3c7fe2b49614336fa7/data
+files/docker/registry/v2/blobs/sha256/84/84e620d0abe585d05a7bed55144af0bc5efe083aed05eac1e88922034ddf1ed2/data
+files/docker/registry/v2/blobs/sha256/b5/b57725894ce17afd25fefcef7fdb2467837e85834bf482759b9ca67b261a3724/data
+files/docker/registry/v2/blobs/sha256/bb/bb13d92caffa705f32b8a7f9f661e07ddede310c6ccfa78fb53a49539740e29b/data
+files/docker/registry/v2/repositories/openshift/python/_layers/sha256/455ea8ab06218495bbbcb14b750a0d644897b24f8c5dcf9e8698e27882583412/link
+files/docker/registry/v2/repositories/openshift/python/_layers/sha256/46fc24a071a44b29a3ba49c94f75a47514a56470d539c9204f3e7688973fc93a/link
+files/docker/registry/v2/repositories/openshift/python/_layers/sha256/4abfcf58ff10724f3886be18423f80a481e90c4b258fbecad6ea06917a266003/link
+files/docker/registry/v2/repositories/openshift/python/_layers/sha256/8170b35922ece1799b004d6fe41e253808d47da894197d3c7fe2b49614336fa7/link
+files/docker/registry/v2/repositories/openshift/python/_layers/sha256/84e620d0abe585d05a7bed55144af0bc5efe083aed05eac1e88922034ddf1ed2/link
+files/docker/registry/v2/repositories/openshift/python/_layers/sha256/bb13d92caffa705f32b8a7f9f661e07ddede310c6ccfa78fb53a49539740e29b/link
+files/docker/registry/v2/repositories/openshift/python/_manifests/revisions/sha256/566b3d0a5bcd5903e86174ab1551a402b1c0dade2aa918d86895516bd2d0dd4/‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍link
+</code></pre></div></div>
+
+<h2 id="keystone-integration">Keystone Integration</h2>
+<p>Tricky when using self-signed certificates from OpenStack side. <a href="https://docs.openshift.com/container-platform/4.3/authentication/identity_providers/configuring-keystone-identity-provider.html">Openshift Keystone Identity Provider</a> only works with https keystone endpoints.</p>
+
+<p>From the other side, there are several issues for deploying OpenShift on top endpoints with self-signed certificates:</p>
+<ul>
+  <li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1735192">[OSP] allow retrieval of ignition files from behind an encrypted endpoint which uses a self-signed certificate</a> / target release 4.4.0</li>
+  <li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1769879">[IPI][OSP] Machine-api cannot create workers on osp envs installed with self-signed certs</a> / target release 4.4.0</li>
+  <li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1796822">[OSP] allow retrieval of ignition files from behind an encrypted endpoint which uses a self-signed certificate</a> / target release 4.3.z</li>
+  <li><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1788072">[IPI][OSP] Machine-api cannot create workers on osp envs installed with self-signed certs</a> / target release 4.3.z</li>
+</ul>
+
+<p>TBD</p>
+
+<h2 id="neutronoctavia-integration-kuryr">Neutron/Octavia Integration (Kuryr)</h2>
+<p>TBD</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://developers.redhat.com/blog/2020/02/06/red-hat-openshift-4-2-ipi-on-openstack-13-all-in-one-setup/">Red Hat OpenShift 4.2 IPI on OpenStack 13: All-in-one setup</a></li>
+  <li><a href="https://keithtenzer.com/2019/10/29/automated-infrastructure-in-the-on-premise-datacenter-openshift-4-2-on-openstack-15-stein/">Automated Infrastructure in the On-Premise Datacenter – OpenShift 4.2 on OpenStack 15 (Stein)</a></li>
+  <li><a href="https://kdjlab.com/openshift-4-2-on-red-hat-openstack-platform-13/">OpenShift 4.2 on Red Hat OpenStack Platform 13</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#openstack" class="page__taxonomy-item p-category" rel="tag">openstack</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-04-26">April 26, 2020</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=OpenShift+4.3+on+RHOSP+13%3A+Installation+and+Integrations%20https%3A%2F%2Fjosecastillolema.github.io%2Focp43-on-rhosp13%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Focp43-on-rhosp13%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Focp43-on-rhosp13%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/aws1-ec2/" class="pagination--pager" title="AWS series I: Elastic Computing (EC2)
+">Previous</a>
+    
+    
+      <a href="/ussuri/" class="pagination--pager" title="OpenStack Ussuri Contributor List
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/ocp43-on-rhosp13/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/ocp43-on-rhosp13"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

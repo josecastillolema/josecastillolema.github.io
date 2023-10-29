@@ -1,0 +1,683 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>GitOps</title>
+<meta name="description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="GitOps">
+<meta property="og:url" content="https://josecastillolema.github.io/classes/">
+
+
+  <meta property="og:description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/classes/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    
+    
+    <meta itemprop="dateModified" content="2022-03-21T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#iffe">IFFE</a><ul><li><a href="#máster-en-big-data-y-analítica-de-negocio-mbd">Máster en Big Data y Analítica de Negocio (MBD)</a><ul><li><a href="#herramientas-analíticas-en-aws">Herramientas analíticas en AWS</a></li></ul></li></ul></li><li><a href="#fiap">FIAP</a><ul><li><a href="#mba">MBA</a><ul><li><a href="#mba-em-engenharia-de-dados-abd">MBA em Engenharia de Dados (ABD)</a></li><li><a href="#mba-em-arquitetura-de-soluções-aso">MBA em Arquitetura de Soluções (ASO)</a></li><li><a href="#mba-em-big-data--data-science-bdt">MBA em Big Data / Data Science (BDT)</a></li><li><a href="#mba-em-blockchain-development--technologies-blc">MBA em Blockchain Development &amp; Technologies (BLC)</a></li><li><a href="#mba-em-cloud-computing-cld">MBA em Cloud Computing (CLD)</a></li><li><a href="#mba-em-artificial-intelligence--machine-learning-ia">MBA em Artificial Intelligence &amp; Machine Learning (IA)</a></li><li><a href="#mba-em-mobile-development-mob">MBA em Mobile Development (MOB)</a></li><li><a href="#mba-em-arquitetura-e-desenvolvimento-na-plataforma-net-net">MBA em Arquitetura e Desenvolvimento na Plataforma .NET (NET)</a></li><li><a href="#mba-em-full-stack-developer---microservices-cloud-e-iot-scj">MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)</a></li></ul></li><li><a href="#mba-online">MBA Online</a><ul><li><a href="#mba-em-engenharia-de-software---online-aojo">MBA em Engenharia de Software - Online (AOJO)</a></li><li><a href="#mba-em-arquitetura-de-soluções---online-asoo">MBA em Arquitetura de Soluções - Online (ASOO)</a></li></ul></li><li><a href="#shift">SHIFT</a><ul><li><a href="#aws-academy-cloud-foundations">AWS Academy Cloud Foundations</a></li><li><a href="#aws-academy-cloud-developing">AWS Academy Cloud Developing</a></li><li><a href="#multicloud-architecture-developments-solutions--service">Multicloud Architecture: Developments, Solutions &amp; Service</a></li></ul></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=iffe&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=iffe&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="110" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=iffe&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<p><img src="https://img.shields.io/github/license/josecastillolema/iffe" alt="GitHub" />
+<img src="https://img.shields.io/github/languages/count/josecastillolema/iffe" alt="GitHub language count" />
+<img src="https://img.shields.io/github/languages/top/josecastillolema/iffe" alt="GitHub top language" />
+<img src="https://visitor-badge.laobi.icu/badge?page_id=josecastillolema.iffe&amp;title=hits" alt="visitors" />
+<img src="https://img.shields.io/github/last-commit/josecastillolema/josecastillolema.github.io" alt="GitHub last commit" /></p>
+
+<h1 id="iffe">IFFE</h1>
+
+<p><a href="https://iffe.es/"><img src="https://raw.githubusercontent.com/josecastillolema/iffe/main/img/iffe.jpeg" alt="" /></a></p>
+
+<h2 id="máster-en-big-data-y-analítica-de-negocio-mbd">Máster en Big Data y Analítica de Negocio (MBD)</h2>
+
+<p><a href="https://iffe.es/master-big-data-analitica-negocio/"><img src="https://raw.githubusercontent.com/josecastillolema/iffe/main/img/mbd.jpg" alt="" /></a></p>
+
+<h3 id="herramientas-analíticas-en-aws">Herramientas analíticas en AWS</h3>
+
+<p>Cada proyecto se refiere a clases y/o <em>labs</em> realizados en aula.</p>
+
+<p>Siéntase libre de desarrollar estos ejemplos, mientras sean válidos, aceptaré <em>pull requests</em> 😄.</p>
+
+<ul>
+  <li><a href="https://github.com/josecastillolema/iffe/blob/main/lab01-iaas-s3.md">Lab 01: IaaS - Simple Storage Service (S3)</a></li>
+  <li><a href="https://github.com/josecastillolema/iffe/blob/main/lab02-paas-athena.md">Lab 02: PaaS - Athena</a></li>
+  <li><a href="https://github.com/josecastillolema/iffe/blob/main/lab03-paas-glue.md">Lab 03: PaaS - Glue</a></li>
+  <li><a href="https://github.com/josecastillolema/iffe/blob/main/lab04-paas-redshift.md">Lab 04: PaaS - Redshift</a></li>
+  <li><a href="https://github.com/josecastillolema/iffe/blob/main/lab05-paas-sagemaker.md">Lab 05: PaaS - SageMaker</a></li>
+</ul>
+
+<p><br /><br /></p>
+
+<p float="left">
+  <a href="https://josecastillolema.github.io/aws-academy/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/aws-academy-2.png" width="100" />
+  </a>
+  <a href="https://josecastillolema.github.io/aws-educate/">
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/aws_educate.jpg" width="100" /> 
+  </a>
+  <a href="https://josecastillolema.github.io/aws-community-builder/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/aws_community_builder.png" width="100" />
+  </a>
+  <a href="https://josecastillolema.github.io/mct/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/mct.png" width="100" />
+  </a>
+</p>
+
+<p float="left">
+  <a href="https://josecastillolema.github.io/mie/">
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/mie.png" width="100" /> 
+  </a>
+  <a href="https://josecastillolema.github.io/haina/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/hcai.png" width="100" />
+  </a>
+  <a href="https://josecastillolema.github.io/redhat-academy/">
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/rh_academy.png" width="100" /> 
+  </a>
+</p>
+
+<p><img src="https://raw.githubusercontent.com/josecastillolema/iffe/main/img/signature.png" alt="" /></p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="120" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<p><img src="https://img.shields.io/github/license/josecastillolema/fiap" alt="GitHub" />
+<img src="https://img.shields.io/github/languages/count/josecastillolema/fiap" alt="GitHub language count" />
+<img src="https://img.shields.io/github/languages/top/josecastillolema/fiap" alt="GitHub top language" />
+<img src="https://visitor-badge.laobi.icu/badge?page_id=josecastillolema.fiap&amp;title=hits" alt="visitors" />
+<img src="https://img.shields.io/github/last-commit/josecastillolema/josecastillolema.github.io" alt="GitHub last commit" /></p>
+
+<h1 id="fiap">FIAP</h1>
+
+<h2 id="mba">MBA</h2>
+
+<p><a href="https://www.fiap.com.br/mba/"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/mba.png" alt="FIAP MBA" /></a></p>
+
+<h3 id="mba-em-engenharia-de-dados-abd"><a href="https://github.com/josecastillolema/fiap/blob/master/abd/README.md">MBA em Engenharia de Dados (ABD)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/blob/master/abd/dbaas/README.md">DataBase as a Service - DBaaS</a></li>
+</ul>
+
+<h3 id="mba-em-arquitetura-de-soluções-aso"><a href="https://github.com/josecastillolema/fiap/blob/master/aso/README.md">MBA em Arquitetura de Soluções (ASO)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/blob/master/aso/microservices/README.md">Arquitetura de Storage / DataCenter / Virtualização e Microcontainers</a></li>
+  <li>Arquitetura em MultiCloud (AWS / GCP / Azure / IBM Cloud)</li>
+</ul>
+
+<h3 id="mba-em-big-data--data-science-bdt"><a href="https://github.com/josecastillolema/fiap/tree/master/bdt">MBA em Big Data / Data Science (BDT)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/blob/master/bdt/cloud/README.md">Cloud Computing</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/blob/master/bdt/microservices/README.md">Fast Data &amp; Microservices</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/bdt/iot">Internet das Coisas</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/blob/master/bdt/microservices/README.md">Microserviços</a></li>
+</ul>
+
+<h3 id="mba-em-blockchain-development--technologies-blc"><a href="https://github.com/josecastillolema/fiap/tree/master/blc">MBA em Blockchain Development &amp; Technologies (BLC)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/blc/devops">DevOps &amp; Cloud Oriented Architecture</a></li>
+</ul>
+
+<h3 id="mba-em-cloud-computing-cld"><a href="https://github.com/josecastillolema/fiap/tree/master/cld">MBA em Cloud Computing (CLD)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/cld/openstack">BootCamp OpenStack</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/cld/openstack">Implementação de Cloud</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/cld/openstack">Implementação OpenStack</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/cld/multicloud">Soluções MultiCloud</a></li>
+</ul>
+
+<h3 id="mba-em-artificial-intelligence--machine-learning-ia"><a href="https://github.com/josecastillolema/fiap/tree/master/ia">MBA em Artificial Intelligence &amp; Machine Learning (IA)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/ia/iot">Princípios de Robótica e IoT</a></li>
+</ul>
+
+<h3 id="mba-em-mobile-development-mob"><a href="https://github.com/josecastillolema/fiap/tree/master/mob">MBA em <em>Mobile Development</em> (MOB)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/mob/cloud">Cloud Foundation</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/mob/devops">DevOps &amp; Cloud Oriented Architecture</a></li>
+  <li>Segurança para Aplicações Móveis para Internet das Coisas e Cloud Computing</li>
+</ul>
+
+<h3 id="mba-em-arquitetura-e-desenvolvimento-na-plataforma-net-net"><a href="https://github.com/josecastillolema/fiap/tree/master/net">MBA em Arquitetura e Desenvolvimento na Plataforma .NET (NET)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/net/azure">Arquitetura Windows Azure Services</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/net/devops">Gestão de Configuração - ALM e DevOps</a></li>
+</ul>
+
+<h3 id="mba-em-full-stack-developer---microservices-cloud-e-iot-scj"><a href="https://github.com/josecastillolema/fiap/tree/master/scj">MBA em Full Stack Developer - Microservices, Cloud e IoT (SCJ)</a></h3>
+<ul>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/java">Arquitetura e Desenvolvimento Java com IoT</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/java">Arquitetura e Desenvolvimento Java de Alta Disponibilidade para Cloud Computing</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/cloud">Arquitetura e Infraestrutura de Cloud Computing e Internet das Coisas</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/cloud">Cloud Development</a></li>
+  <li><a href="https://github.com/josecastillolema/fiap/tree/master/scj/cloud">Desenvolvimento de aplicações usando Cloud Computing</a></li>
+</ul>
+
+<h2 id="mba-online">MBA Online</h2>
+
+<p><a href="https://www.fiap.com.br/online/mba/"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/mba-on.png" alt="" /></a></p>
+
+<h3 id="mba-em-engenharia-de-software---online-aojo"><a href="https://github.com/josecastillolema/fiap/blob/master/aojo/README.md">MBA em Engenharia de Software - Online (AOJO)</a></h3>
+<ul>
+  <li>Fase 4: <strong>Data Analytics</strong>
+    <ul>
+      <li>Data Engineering (Big Data &amp; Analytics)</li>
+      <li>Cloud Computing &amp; SRE</li>
+      <li>Leadership and Corporate Accountability</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="mba-em-arquitetura-de-soluções---online-asoo"><a href="https://github.com/josecastillolema/fiap/blob/master/asoo/README.md">MBA em Arquitetura de Soluções - Online (ASOO)</a></h3>
+<ul>
+  <li>Fase 4: <strong>On the Clouds</strong>
+    <ul>
+      <li>Gestão Financeira de TI</li>
+      <li>Bimodal IT &amp; Sourcing</li>
+      <li><a href="https://github.com/josecastillolema/fiap/blob/master/asoo/multicloud/README.md">Arquitetura em MultiCloud (AWS / Google Cloud / Azure / IBM Cloud)</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="shift"><a href="https://github.com/josecastillolema/fiap/blob/master/shift/README.md">SHIFT</a></h2>
+
+<p><a href="https://www.fiap.com.br/shift"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/shift.png" alt="SHIFT FIAP" /></a></p>
+
+<h3 id="aws-academy-cloud-foundations"><a href="https://github.com/josecastillolema/fiap/blob/master/shift/aws-foundations/README.md">AWS Academy Cloud Foundations</a></h3>
+
+<h3 id="aws-academy-cloud-developing"><a href="https://github.com/josecastillolema/fiap/blob/master/shift/aws-dev/README.md">AWS Academy Cloud Developing</a></h3>
+
+<h3 id="multicloud-architecture-developments-solutions--service"><a href="https://github.com/josecastillolema/fiap/blob/master/shift/multicloud/README.md">Multicloud Architecture: Developments, Solutions &amp; Service</a></h3>
+
+<p><br /><br /></p>
+
+<p float="left">
+  <a href="https://josecastillolema.github.io/aws-academy/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/aws-academy-2.png" width="100" />
+  </a>
+  <a href="https://josecastillolema.github.io/aws-educate/">
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/aws_educate.jpg" width="100" /> 
+  </a>
+  <a href="https://josecastillolema.github.io/aws-community-builder/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/aws_community_builder.png" width="100" />
+  </a>
+  <a href="https://josecastillolema.github.io/mct/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/mct.png" width="100" />
+  </a>
+</p>
+
+<p float="left">
+  <a href="https://josecastillolema.github.io/mie/">
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/mie.png" width="100" /> 
+  </a>
+  <a href="https://josecastillolema.github.io/haina/">  
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/hcai.png" width="100" />
+  </a>
+  <a href="https://josecastillolema.github.io/redhat-academy/">
+    <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/rh_academy.png" width="100" /> 
+  </a>
+</p>
+
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/img/signature.png" alt="" /></p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#aws" class="page__taxonomy-item p-category" rel="tag">aws</a><span class="sep">, </span>
+    
+      <a href="/tags/#azure" class="page__taxonomy-item p-category" rel="tag">azure</a><span class="sep">, </span>
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#es" class="page__taxonomy-item p-category" rel="tag">es</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#iffe" class="page__taxonomy-item p-category" rel="tag">iffe</a><span class="sep">, </span>
+    
+      <a href="/tags/#iot" class="page__taxonomy-item p-category" rel="tag">iot</a><span class="sep">, </span>
+    
+      <a href="/tags/#openstack" class="page__taxonomy-item p-category" rel="tag">openstack</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-21">March 21, 2022</time></p>
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,1300 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>OVN-Kubernetes Multiple External Gateway local setup - GitOps</title>
+<meta name="description" content="Steps to set up a local environment with OVN Kubernetes Multiple External Gateway capability (also known as Intelligent CNI 2.0 or iCNI2.0) and a FRRRouting (FRR) pod acting as external gateway.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="OVN-Kubernetes Multiple External Gateway local setup">
+<meta property="og:url" content="https://josecastillolema.github.io/icni2/">
+
+
+  <meta property="og:description" content="Steps to set up a local environment with OVN Kubernetes Multiple External Gateway capability (also known as Intelligent CNI 2.0 or iCNI2.0) and a FRRRouting (FRR) pod acting as external gateway.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-02-06T00:00:00-06:00">
+
+
+
+  <meta property="article:modified_time" content="2023-08-10T15:00:58-05:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/icni2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="OVN-Kubernetes Multiple External Gateway local setup">
+    <meta itemprop="description" content="Steps to set up a local environment with OVN Kubernetes Multiple External Gateway capability (also known as Intelligent CNI 2.0 or iCNI2.0) and a FRRRouting (FRR) pod acting as external gateway.">
+    <meta itemprop="datePublished" content="2023-02-06T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2023-08-10T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/icni2/" class="u-url" itemprop="url">OVN-Kubernetes Multiple External Gateway local setup
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          18 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#kind-setup">Kind setup</a></li><li><a href="#resource-creation">Resource creation</a></li><li><a href="#environment-check">Environment check</a><ul><li><a href="#pod-readiness-probes">Pod readiness probes</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>Steps to set up a local environment with OVN Kubernetes Multiple External Gateway capability (also known as Intelligent CNI 2.0 or iCNI2.0) and a <a href="https://frrouting.org/">FRRRouting (FRR)</a> pod acting as external gateway.</p>
+
+<p><img src="/assets/images/posts/2023-02-06-icni2.png" alt="" /></p>
+
+<h2 id="kind-setup">Kind setup</h2>
+
+<p>First let us create a local kind cluster with ONV-Kubernetes as CNI:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/ovn-org/ovn-kubernetes.git
+$ cd ovn-kubernetes/contrib
+$ ./kind.sh --disable-snat-multiple-gws --multi-network-enable
+</code></pre></div></div>
+
+<p>Let’s take a look at the options:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">disable-snat-multiple-gws</code>: Disable SNAT for multiple gws</li>
+  <li><code class="language-plaintext highlighter-rouge">multi-network-enable</code>: Installs <a href="https://github.com/k8snetworkplumbingwg/multus-cni">Multus-CNI</a> on the cluster</li>
+</ul>
+
+<p>After some minutes, we will have a three node cluster ready for use:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export KUBECONFIG=$HOME/ovn.conf
+$ kubectl get node
+NAME                STATUS   ROLES           AGE    VERSION
+ovn-control-plane   Ready    control-plane   4h2m   v1.24.0
+ovn-worker          Ready    &lt;none&gt;          4h1m   v1.24.0
+ovn-worker2         Ready    &lt;none&gt;          4h1m   v1.24.0
+</code></pre></div></div>
+
+<p>Let’s install some additional CNI networks plugins needed for the test (i.e.: macvlan):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/containernetworking/plugins.git
+$ cd plugins
+$ ./build_linux.sh
+$ cd bin
+$ for i in $(docker ps -aq); do for j in macvlan static tuning; do docker cp $j $i:/opt/cni/bin/; done; done
+</code></pre></div></div>
+
+<p>Alternativally, if you don’t want to manually compile the CNI plugins, submitted a <a href="https://github.com/ovn-org/ovn-kubernetes/pull/3417">PR</a> that adds an option to deploy additional CNI plugins (i.e.: macvlan, ipvlan, etc.) to the script <code class="language-plaintext highlighter-rouge">kind.sh</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget https://raw.githubusercontent.com/ovn-org/ovn-kubernetes/0123ad42d371223dc434b6af06a9ea4fd8336cda/contrib/kind.sh
+$ ./kind.sh --install-cni-plugins --disable-snat-multiple-gws --multi-network-enable
+</code></pre></div></div>
+
+<p>Let’s take a look at the new option introduced by the <a href="https://github.com/ovn-org/ovn-kubernetes/pull/3417">PR</a>:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">install-cni-plugins</code>: Installs additional CNI network plugins</li>
+</ul>
+
+<h2 id="resource-creation">Resource creation</h2>
+
+<p>Let’s create the namespaces:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Namespace</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">frr</span>
+<span class="na">spec</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="nn">---</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Namespace</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">bar</span>
+<span class="na">spec</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<p>Let’s create the network attachment definitions:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">k8s.cni.cncf.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">NetworkAttachmentDefinition</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">internal-net</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">frr</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">config</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="s">{</span>
+      <span class="s">"cniVersion": "0.3.1",</span>
+      <span class="s">"name": "internal-net",</span>
+      <span class="s">"plugins": [</span>
+        <span class="s">{</span>
+          <span class="s">"type": "macvlan",</span>
+          <span class="s">"master": "breth0",</span>
+          <span class="s">"mode": "bridge",</span>
+          <span class="s">"ipam": {</span>
+            <span class="s">"type": "static"</span>
+          <span class="s">}</span>
+        <span class="s">},</span>
+        <span class="s">{</span>
+          <span class="s">"capabilities": {</span>
+            <span class="s">"mac": true,</span>
+            <span class="s">"ips": true</span>
+          <span class="s">},</span>
+          <span class="s">"type": "tuning"</span>
+        <span class="s">}</span>
+      <span class="s">]</span>
+    <span class="s">}</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<p>Check for correct creation:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get net-attach-def -n frr
+NAME           AGE
+internal-net   2m
+</code></pre></div></div>
+
+<p>Create a dummy pod on the served namespace (<em>bar</em>) on the second worker:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">dummy</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">bar</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">dummy</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">centos</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">sleep</span>
+      <span class="pi">-</span> <span class="s">infinity</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<p>Let’s wait for the pod:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get po -n bar
+NAME     READY   STATUS    RESTARTS   AGE
+dummy    1/1     Running   0          2m
+</code></pre></div></div>
+
+<p>Let’s grab two important pieces of information for the FRR configuration, the IP of the <em>ovn-worker2</em> node where the <em>dummy</em> pod resides (for the BFD peer) and the static routes entries for nodes subnets:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get node -o wide | grep ovn-worker2
+ovn-worker2         Ready    &lt;none&gt;          11m   v1.24.0   172.18.0.4    &lt;none&gt;        Ubuntu 21.10   6.0.7-301.fc37.x86_64   containerd://1.6.4
+
+$ kubectl get nodes -o jsonpath='{range .items[*].metadata.annotations}{.k8s\.ovn\.org\/node\-subnets}{.k8s\.ovn\.org\/node\-primary\-ifaddr}{"\n"}{end}' | awk -F'["/]' '{print "ip route " $4"/"$5 " " $9}'
+ip route 10.244.0.0/24 172.18.0.3
+ip route 10.244.2.0/24 172.18.0.2
+ip route 10.244.1.0/24 172.18.0.4
+</code></pre></div></div>
+
+<p>Let’s create the FRR configuration:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">ConfigMap</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">frr-configs</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">frr</span>
+<span class="na">data</span><span class="pi">:</span>
+  <span class="na">daemons</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">bgpd=yes</span>
+    <span class="s">ospfd=no</span>
+    <span class="s">ospf6d=no</span>
+    <span class="s">ripd=no</span>
+    <span class="s">ripngd=no</span>
+    <span class="s">isisd=no</span>
+    <span class="s">pimd=no</span>
+    <span class="s">ldpd=no</span>
+    <span class="s">nhrpd=no</span>
+    <span class="s">eigrpd=no</span>
+    <span class="s">babeld=no</span>
+    <span class="s">sharpd=no</span>
+    <span class="s">pbrd=no</span>
+    <span class="s">bfdd=yes</span>
+    <span class="s">fabricd=no</span>
+    <span class="s">vrrpd=no</span>
+    <span class="s">vtysh_enable=yes</span>
+    <span class="s">zebra_options="  -A 127.0.0.1 -s 90000000"</span>
+    <span class="s">bgpd_options="   -A 127.0.0.1"</span>
+    <span class="s">ospfd_options="  -A 127.0.0.1"</span>
+    <span class="s">ospf6d_options=" -A ::1"</span>
+    <span class="s">ripd_options="   -A 127.0.0.1"</span>
+    <span class="s">ripngd_options=" -A ::1"</span>
+    <span class="s">isisd_options="  -A 127.0.0.1"</span>
+    <span class="s">pimd_options="   -A 127.0.0.1"</span>
+    <span class="s">ldpd_options="   -A 127.0.0.1"</span>
+    <span class="s">nhrpd_options="  -A 127.0.0.1"</span>
+    <span class="s">eigrpd_options=" -A 127.0.0.1"</span>
+    <span class="s">babeld_options=" -A 127.0.0.1"</span>
+    <span class="s">sharpd_options=" -A 127.0.0.1"</span>
+    <span class="s">pbrd_options="   -A 127.0.0.1"</span>
+    <span class="s">staticd_options="-A 127.0.0.1"</span>
+    <span class="s">bfdd_options="   -A 127.0.0.1"</span>
+    <span class="s">fabricd_options="-A 127.0.0.1"</span>
+    <span class="s">vrrpd_options="  -A 127.0.0.1"</span>
+  <span class="s">vtysh.conf</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">service integrated-vtysh-config</span>
+  <span class="s">frr.conf</span><span class="pi">:</span> <span class="pi">|</span>
+    <span class="s">hostname vrouter</span>
+    <span class="s">service integrated-vtysh-config</span>
+    <span class="s">password frr</span>
+    <span class="s">enable password frr</span>
+    <span class="s">!</span>
+    <span class="s">debug bfd peer</span>
+    <span class="s">debug bfd zebra</span>
+    <span class="s">debug bfd network</span>
+    <span class="s">!</span>
+    <span class="s">bfd</span>
+     <span class="s">peer 172.18.0.4</span>
+       <span class="s">no shutdown</span>
+     <span class="s">!</span>
+    <span class="s">!</span>
+    <span class="s">! subnets for each node</span>
+    <span class="s">ip route 10.244.0.0/24 172.18.0.3</span>
+    <span class="s">ip route 10.244.2.0/24 172.18.0.2</span>
+    <span class="s">ip route 10.244.1.0/24 172.18.0.4</span>
+    <span class="s">!</span>
+    <span class="s">log file /tmp/frr.log debugging</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<p>Finally let’s create the FRR pod:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">ext-gw</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">frr</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="s">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
+        <span class="s">{</span>
+          <span class="s">"name":</span><span class="nv"> </span><span class="s">"internal-net",</span>
+          <span class="s">"ips":</span><span class="nv"> </span><span class="s">[</span><span class="nv"> </span><span class="s">"172.18.0.10/16"</span><span class="nv"> </span><span class="s">]</span>
+        <span class="s">}</span>
+      <span class="s">]'</span>
+    <span class="s">k8s.v1.cni.cncf.io/network-status</span><span class="pi">:</span> <span class="pi">|-</span>
+      <span class="s">[{</span>
+          <span class="s">"name": "frr/internal-net",</span>
+          <span class="s">"ips": [</span>
+              <span class="s">"172.18.0.10"</span>
+          <span class="s">],</span>
+          <span class="s">"dns": {}</span>
+      <span class="s">}]</span>
+    <span class="s">k8s.ovn.org/routing-namespaces</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bar"</span>
+    <span class="s">k8s.ovn.org/bfd-enabled</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="s">k8s.ovn.org/routing-network</span><span class="pi">:</span> <span class="s2">"</span><span class="s">frr/internal-net"</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">frr</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">quay.io/wcaban/frr</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">/bin/sh"</span><span class="pi">,</span><span class="s2">"</span><span class="s">-c"</span><span class="pi">]</span>
+    <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">/usr/libexec/frr/frrinit.sh</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">tail</span><span class="nv"> </span><span class="s">-f</span><span class="nv"> </span><span class="s">/tmp/frr.log</span><span class="nv"> </span><span class="s">"</span><span class="pi">]</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">bfd</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">3784</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">bgp</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">179</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">rip</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">520</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">ripng</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">521</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">stats</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">9000</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+    <span class="na">securityContext</span><span class="pi">:</span>
+      <span class="na">privileged</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">volumeMounts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">config-volume</span>
+      <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/etc/frr</span>
+  <span class="na">volumes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">config-volume</span>
+      <span class="na">configMap</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">frr-configs</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<p>Let’s wait for the pod:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get po -n frr
+NAME     READY   STATUS    RESTARTS   AGE
+ext-gw   1/1     Running   0          2m
+</code></pre></div></div>
+
+<h2 id="environment-check">Environment check</h2>
+
+<p>The pod should have two interfaces, routes properly configured, be able to reach <em>ovn-worker2</em> and a BFD session established with the node <em>ovn-worker2</em>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl exec -n frr -it ext-gw -- sh
+sh-5.1# ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: eth0@if95: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1400 qdisc noqueue state UP group default
+    link/ether 0a:58:0a:f4:02:11 brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 10.244.2.17/24 brd 10.244.2.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::858:aff:fef4:211/64 scope link
+       valid_lft forever preferred_lft forever
+3: net1@if7: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default
+    link/ether 5a:1d:47:09:44:8e brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet 172.18.0.10/16 brd 172.18.255.255 scope global net1
+       valid_lft forever preferred_lft forever
+    inet6 fe80::581d:47ff:fe09:448e/64 scope link
+       valid_lft forever preferred_lft forever
+
+sh-5.1# ip r
+default via 10.244.2.1 dev eth0
+10.244.0.0/24 nhid 15 via 172.18.0.3 dev net1 proto 196 metric 20
+10.244.1.0/24 nhid 16 via 172.18.0.4 dev net1 proto 196 metric 20
+10.244.2.0/24 dev eth0 proto kernel scope link src 10.244.2.6
+172.18.0.0/16 dev net1 proto kernel scope link src 172.18.0.10
+
+sh-5.1# ping -c1 172.18.0.4
+PING 172.18.0.4 (172.18.0.4) 56(84) bytes of data.
+64 bytes from 172.18.0.4: icmp_seq=1 ttl=64 time=0.276 ms
+--- 172.18.0.4 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 0.276/0.276/0.276/0.000 ms
+
+sh-5.1# vtysh
+Hello, this is FRRouting (version 8.0).
+Copyright 1996-2005 Kunihiro Ishiguro, et al.
+ext-gw# show bfd peers brief
+Session count: 1
+SessionId  LocalAddress                             PeerAddress                             Status
+=========  ============                             ===========                             ======
+1866236061 172.18.0.10                              172.18.0.4                              up
+</code></pre></div></div>
+
+<p>Let’s check FRR logs:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ oc logs ext-gw -n frr
+Started watchfrr
+2023/02/23 10:34:31 ZEBRA: [VTVCM-Y2NW3] Configuration Read in Took: 00:00:00
+2023/02/23 10:34:31 BGP: [VTVCM-Y2NW3] Configuration Read in Took: 00:00:00
+2023/02/23 10:34:31 STATIC: [VTVCM-Y2NW3] Configuration Read in Took: 00:00:00
+2023/02/23 10:34:31 BFD: [VTVCM-Y2NW3] Configuration Read in Took: 00:00:00
+2023/02/23 10:34:33 BFD: [J1C6V-VMRW5] state-change: [mhop:no peer:172.18.0.4 local:0.0.0.0 vrf:default] init -&gt; up
+</code></pre></div></div>
+
+<p>Let’s check everything was properly created from the OVN perspective:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ POD=$(kubectl get pod -n ovn-kubernetes -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}' | grep ovnkube-db-) ; kubectl exec -ti $POD -n ovn-kubernetes -c nb-ovsdb -- bash
+
+[root@ovn-control-plane ~]# ovn-nbctl list bfd
+_uuid               : 6a5f6a73-df1f-4114-b36a-745cf3e9123b
+detect_mult         : []
+dst_ip              : "172.18.0.10"
+external_ids        : {}
+logical_port        : exgw-rtoe-GR_ovn-worker2
+min_rx              : []
+min_tx              : []
+options             : {}
+status              : up
+
+[root@ovn-control-plane ~]# ovn-nbctl lr-route-list GR_ovn-worker2
+IPv4 Routes
+Route Table &lt;main&gt;:
+               10.244.1.3               172.18.0.10 src-ip exgw-rtoe-GR_ovn-worker2 ecmp-symmetric-reply bfd
+         169.254.169.0/29             169.254.169.4 dst-ip rtoe-GR_ovn-worker2
+            10.244.0.0/16                100.64.0.1 dst-ip
+                0.0.0.0/0                172.18.0.1 dst-ip rtoe-GR_ovn-worker2
+
+[root@ovn-control-plane ~]# ovn-nbctl lr-route-list GR_ovn-worker
+IPv4 Routes
+Route Table &lt;main&gt;:
+         169.254.169.0/29             169.254.169.4 dst-ip rtoe-GR_ovn-worker
+            10.244.0.0/16                100.64.0.1 dst-ip
+                0.0.0.0/0                172.18.0.1 dst-ip rtoe-GR_ovn-worker
+</code></pre></div></div>
+
+<p>Let’s add a loopback address to the <em>ext-gw</em> pod to test the source routing entry:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl exec -n frr ext-gw -- ip a a 192.168.1.10/32 dev lo
+</code></pre></div></div>
+
+<p>Validate the <em>dummy</em> pod can reach the network running in <em>ext-gw</em> container’s looback address:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl exec -n bar dummy -- ping -c 1 192.168.1.10
+PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
+64 bytes from 192.168.1.10: icmp_seq=1 ttl=62 time=6.96 ms
+
+--- 192.168.1.10 ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 6.959/6.959/6.959/0.000 ms
+</code></pre></div></div>
+
+<p>Let’s create a “normal” pod in the default namespace (outside the <code class="language-plaintext highlighter-rouge">routing-namespaces</code> annotated namespaces):</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">normal</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">normal</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">centos</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">sleep</span>
+      <span class="pi">-</span> <span class="s">infinity</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<p>It should not be able to reach the network running in <em>ext-gw</em> container’s looback address:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl exec normal -- ping -c 1 192.168.1.10
+PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
+
+--- 192.168.1.10 ping statistics ---
+1 packets transmitted, 0 received, 100% packet loss, time 0ms
+
+command terminated with exit code 1
+</code></pre></div></div>
+
+<h3 id="pod-readiness-probes">Pod readiness probes</h3>
+
+<p>Now let’s convert this into pod readiness probes, both for the working and non-working cases. Let’s create another pair of dummy and “normal” pods.</p>
+
+<p>Let’s start with the second dummy pod:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">dummy2</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">bar</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">dummy2</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">centos</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">sleep</span>
+      <span class="pi">-</span> <span class="s">infinity</span>
+    <span class="na">securityContext</span><span class="pi">:</span>
+      <span class="na">privileged</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">readinessProbe</span><span class="pi">:</span>
+      <span class="na">exec</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">ping</span>
+          <span class="pi">-</span> <span class="s">-c1</span>
+          <span class="pi">-</span> <span class="s">192.168.1.10</span>
+      <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">5</span>
+      <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get po -n bar
+NAME     READY   STATUS    RESTARTS   AGE
+dummy    1/1     Running   0          115m
+dummy2   1/1     Running   0          5m12s
+
+$ kubectl describe po dummy2 -n bar | grep Ready
+    Ready:          True
+  Ready             True
+  ContainersReady   True
+</code></pre></div></div>
+
+<p>Finally, the second “normal” pod:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">normal2</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">normal2</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">centos</span>
+    <span class="na">command</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">sleep</span>
+      <span class="pi">-</span> <span class="s">infinity</span>
+    <span class="na">readinessProbe</span><span class="pi">:</span>
+      <span class="na">exec</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">ping</span>
+        <span class="pi">-</span> <span class="s">-c1</span>
+        <span class="pi">-</span> <span class="s">192.168.1.10</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get po
+NAME      READY   STATUS    RESTARTS   AGE
+normal    1/1     Running   0          95m
+normal2   0/1     Running   0          5m48s
+
+$ kubectl describe po normal2 | grep Ready
+    Ready:          False
+  Ready             False
+  ContainersReady   False
+
+$ kubectl describe po normal2
+...
+  Warning  Unhealthy       8s (x4 over 15s)  kubelet            Readiness probe failed: command "ping -c1 192.168.1.10" timed out
+</code></pre></div></div>
+
+<p>Lety’s also add a pod readiness probe to the FRR pods to check over the BFD session establishment:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">cat &lt;&lt;EOF | kubectl apply -f -</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">ext-gw2</span>
+  <span class="na">namespace</span><span class="pi">:</span> <span class="s">frr</span>
+  <span class="na">annotations</span><span class="pi">:</span>
+    <span class="s">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
+        <span class="s">{</span>
+          <span class="s">"name":</span><span class="nv"> </span><span class="s">"internal-net",</span>
+          <span class="s">"ips":</span><span class="nv"> </span><span class="s">[</span><span class="nv"> </span><span class="s">"172.18.0.11/16"</span><span class="nv"> </span><span class="s">]</span>
+        <span class="s">}</span>
+      <span class="s">]'</span>
+    <span class="s">k8s.v1.cni.cncf.io/network-status</span><span class="pi">:</span> <span class="pi">|-</span>
+      <span class="s">[{</span>
+          <span class="s">"name": "frr/internal-net",</span>
+          <span class="s">"ips": [</span>
+              <span class="s">"172.18.0.11"</span>
+          <span class="s">],</span>
+          <span class="s">"dns": {}</span>
+      <span class="s">}]</span>
+    <span class="s">k8s.ovn.org/routing-namespaces</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bar"</span>
+    <span class="s">k8s.ovn.org/bfd-enabled</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="s">k8s.ovn.org/routing-network</span><span class="pi">:</span> <span class="s2">"</span><span class="s">frr/internal-net"</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">containers</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">frr</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">quay.io/wcaban/frr</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">/bin/sh"</span><span class="pi">,</span><span class="s2">"</span><span class="s">-c"</span><span class="pi">]</span>
+    <span class="na">args</span><span class="pi">:</span> <span class="pi">[</span><span class="s2">"</span><span class="s">/usr/libexec/frr/frrinit.sh</span><span class="nv"> </span><span class="s">start</span><span class="nv"> </span><span class="s">&amp;&amp;</span><span class="nv"> </span><span class="s">tail</span><span class="nv"> </span><span class="s">-f</span><span class="nv"> </span><span class="s">/tmp/frr.log</span><span class="nv"> </span><span class="s">"</span><span class="pi">]</span>
+    <span class="na">ports</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">bfd</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">3784</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">bgp</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">179</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">rip</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">520</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">ripng</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">521</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">UDP</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">stats</span>
+      <span class="na">containerPort</span><span class="pi">:</span> <span class="m">9000</span>
+      <span class="na">protocol</span><span class="pi">:</span> <span class="s">TCP</span>
+    <span class="na">securityContext</span><span class="pi">:</span>
+      <span class="na">privileged</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">volumeMounts</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">config-volume</span>
+      <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/etc/frr</span>
+    <span class="na">readinessProbe</span><span class="pi">:</span>
+      <span class="na">exec</span><span class="pi">:</span>
+        <span class="na">command</span><span class="pi">:</span>
+          <span class="pi">-</span> <span class="s">sh</span>
+          <span class="pi">-</span> <span class="s">-c</span>
+          <span class="pi">-</span> <span class="pi">&gt;-</span>
+             <span class="s">vtysh -c 'show bfd peers brief' |</span>
+             <span class="s">grep up</span>
+      <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">5</span>
+      <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">5</span>
+  <span class="na">volumes</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">config-volume</span>
+      <span class="na">configMap</span><span class="pi">:</span>
+        <span class="na">name</span><span class="pi">:</span> <span class="s">frr-configs</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker</span>
+<span class="s">EOF</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get po -n frr
+NAME      READY   STATUS    RESTARTS   AGE
+ext-gw    1/1     Running   0          46m
+ext-gw2   1/1     Running   0          5m10s
+
+$ kubectl describe po ext-gw2 -n frr | grep Ready
+    Ready:          True
+  Ready             True
+  ContainersReady   True
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#networks" class="page__taxonomy-item p-category" rel="tag">networks</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-08-10">August 10, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=OVN-Kubernetes+Multiple+External+Gateway+local+setup%20https%3A%2F%2Fjosecastillolema.github.io%2Ficni2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Ficni2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Ficni2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/kubemark/" class="pagination--pager" title="Kubernetes control plane scale testing with Kubemark
+">Previous</a>
+    
+    
+      <a href="/linux-trivia/" class="pagination--pager" title="Legends of Linux Trivia
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/icni2/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/icni2"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

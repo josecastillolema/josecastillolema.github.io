@@ -13,14 +13,11 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
-email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+title: GitOps
+email: josecastillolema@gmail.com
+description: "Networks, SDN, NFVi, OpenStack, K8s/OpenShift."
+# twitter_username: username
+github_username: josecastillolema
 minimal_mistakes_skin: default
 search: true
 
@@ -28,7 +25,7 @@ search: true
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
-permalink: /:categories/:title/
+permalink: /:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -58,34 +55,65 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name    : "Jose Castillo Lema"
+  avatar  : "/assets/images/me.jpg"
+  bio     : "Software Engineer @ **RedHat**"
+  location: "Santiago, Spain"
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/josecastillolema"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/jose-castillo-lema"
+    - label: "Acclaim"
+      icon: "fas fa-fw fa-angle-double-up"
+      url: "https://www.youracclaim.com/users/jose-castillo-lema"
+    # - label: "Accredible"
+    #   icon: "fas fa-fw fa-credit-card"
+    #   url: "https://www.credential.net/profile/joscastillolema/wallet"
+    - label: "StackOverflow"
+      icon: "fab fa-fw fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema"
+    - label: "ResearchGate"
+      icon: "fab fa-fw fa-researchgate"
+      url: "https://www.researchgate.net/profile/Jose_Castillo-Lema"
+    - label: "GoogleScholar"
+      icon: "fab fa-fw fa-google"
+      url: "https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ"
+    #- label: "DockerHub"
+    #  icon: "fab fa-fw fa-docker"
+    #  url: "https://hub.docker.com/u/josecastillolema"
+    #- label: "Lattes"
+    #  icon: "fas fa-fw fa-university"
+    #  url: "http://lattes.cnpq.br/7955703023492257"
+    # - label: "Gravatar"
+    #   icon: "fas fa-fw fa-power-off"
+    #   url: "https://en.gravatar.com/josecastillolema"
+    - label: "ONF"
+      icon: "fab fa-fw fa-battle-net"
+      url: "https://www.opennetworking.org/ambassadors/jose-castillo-lema/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube-square"
+      url: "https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists"
+    - label: "RSS"
+      icon: "fas fa-fw fa-rss-square"
+      url: "https://josecastillolema.github.io/feed.xml"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:josecastillolema@gmail.com"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      url: "https://github.com/josecastillolema"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: https://www.linkedin.com/in/jose-castillo-lema
+    - label: "Stack Overflow"
+      icon: "fab fa-stack-overflow"
+      url: "https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema"
 
 defaults:
   # _posts
@@ -113,3 +141,32 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# Custom
+analytics:
+  provider               : "google" # false (default), "google", "google-universal", "custom"
+  google:
+    tracking_id          : "UA-169326084-1"
+    anonymize_ip         : # true, false (default)
+baseurl                  : ""
+comments:
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
+  disqus:
+    shortname            : https-josecastillolema-github-io
+destination              : docs
+google_site_verification : googled48a6d8a28aaa375.html
+logo                     : /assets/images/favicon_io/android-chrome-192x192.png
+og_image                 : /assets/images/favicon_io/android-chrome-512x512.png  # Open Graph/Twitter default site image
+repository               : josecastillolema/josecastillolema.github.io
+social:
+  links: # An array of links to social media profiles
+    - https://www.linkedin.com/in/jose-castillo-lema
+    - https://github.com/josecastillolema
+    - https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema
+    - https://www.researchgate.net/profile/Jose_Castillo-Lema
+    - https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ
+    - http://lattes.cnpq.br/7955703023492257
+    - https://www.opennetworking.org/ambassadors/jose-castillo-lema/
+teaser                   : /assets/images/favicon_io/android-chrome-512x512.png
+url                      : https://josecastillolema.github.io
+words_per_minute         : 100
