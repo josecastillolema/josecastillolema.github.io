@@ -1,0 +1,852 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Cognitive Class @ai - GitOps</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="Cognitive Class @ai">
+<meta property="og:url" content="https://josecastillolema.github.io/cognitive-class/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-06-28T00:00:00-05:00">
+
+
+
+  <meta property="article:modified_time" content="2022-05-06T15:00:58-05:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/cognitive-class/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Cognitive Class @ai">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2021-06-28T00:00:00-05:00">
+    <meta itemprop="dateModified" content="2022-05-06T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/cognitive-class/" class="u-url" itemprop="url">Cognitive Class @ai
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#learning-paths">Learning paths</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><a href="https://cognitiveclass.ai/"><img src="/assets/images/posts/2021-06-28-cognitive-class.png" alt="" /></a></p>
+
+<p><a href="https://cognitiveclass.ai/">Cognitive Class @ai</a> is a platform for learning leading-edge technologies: blockchain, data science, AI, Cloud, Serverless, Docker, Kubernetes and more …</p>
+
+<ul>
+  <li>Earn certificates and badges</li>
+  <li>Free</li>
+</ul>
+
+<h1 id="learning-paths">Learning paths</h1>
+<ul>
+  <li>Big data fundamentals</li>
+  <li>Data science fundamentals</li>
+  <li>Scala programming for data science</li>
+  <li>Deep learning</li>
+  <li>Hadoop fundamentals</li>
+  <li>Spark fundamentals</li>
+  <li>Containers, k8s and Istio on IBM Cloud</li>
+  <li>Reactive architecture foundations</li>
+  <li>Lightbend reactive architecture: advanced</li>
+  <li>Data science with Python</li>
+  <li>Blockchain for developers</li>
+</ul>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="70a23095-d411-4c41-a5cd-7ef695afbef6" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a9f1c791-c4d8-4933-bd45-6084d68f6b3d" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="a41cd218-77d3-4df2-9316-f7ea1eab8d8c" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="042ebb09-14f7-4ce1-9ea8-99d2d5639fc9" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5e445581-27d1-42bd-8820-50096ed7f3f8" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="97eb54ae-d74c-4c03-a5cb-39628319e1a0" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fb18cca8-300a-44ed-8e11-f30c4e29d4d4" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d54f7983-2ce6-401e-9a8d-41eaab368da1" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="fa2c1a4e-e685-4843-ab95-62038106d4d0" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8313ed37-2cf2-4d2c-aaee-343c1a3563d3" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="42843349-a105-4b31-866f-e93ffc284a9f" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2de2aa63-d224-4d9f-b407-ee180939df57" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="67e6e93b-3739-4488-8aae-6d1f3f6aa3c2" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="61a3f347-f364-45fa-bae7-71563f31e35d" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1f9e9458-4736-4886-91e4-66b026850a38" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="80b6bf63-ad4d-4ae1-9d98-b061876e8804" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5d0972b9-e33b-4b78-8f82-dc9f8ab7ce38" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="d47fe2bc-2a58-4350-82e5-81c61798188d" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9b0154c6-4248-488b-acb8-d4f9a693a7dc" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1e26438e-c90b-4dbb-8e2e-00c4b87e6822" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="64677c99-147e-416a-9268-fe0aa8ce3a83" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="27efe5a1-8e78-4875-8681-efa4673726ca" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="9c8c48ed-b6ad-48d5-b51c-7eb86aa294a1" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1fd90718-ecc1-446f-bb3d-f039ca20374e" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6bbe2cd6-92db-4e9a-a705-46b0af3318bc" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5d59e44b-b231-4845-a9ee-0350b3ac9d2a" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="91ac62fc-4870-448e-8350-70f4f425ca9a" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="491fb6f1-94c8-4881-a92d-b72e0454784b" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="78cda996-eeb6-44f7-8b0d-2624d6f6666c" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2f2305d5-4cf1-4baa-8573-6d8b2fd41ed8" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2aa39c44-dbc7-4b29-9854-2792c58c4ec6" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+<div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5d4e9433-6ff4-4c9b-9cc4-7b9fb4324f0e" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#cert" class="page__taxonomy-item p-category" rel="tag">cert</a><span class="sep">, </span>
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#iot" class="page__taxonomy-item p-category" rel="tag">iot</a><span class="sep">, </span>
+    
+      <a href="/tags/#networks" class="page__taxonomy-item p-category" rel="tag">networks</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-05-06">May 6, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Cognitive+Class+%40ai%20https%3A%2F%2Fjosecastillolema.github.io%2Fcognitive-class%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fcognitive-class%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fcognitive-class%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/shift-aws-dev/" class="pagination--pager" title="FIAP SHIFT: AWS Academy Cloud Developing
+">Previous</a>
+    
+    
+      <a href="/frr-k8s/" class="pagination--pager" title="Running FRR in K8s/OpenShift
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/cognitive-class/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/cognitive-class"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

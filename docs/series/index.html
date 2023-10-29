@@ -1,0 +1,569 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Series - GitOps</title>
+<meta name="description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="Series">
+<meta property="og:url" content="https://josecastillolema.github.io/series/">
+
+
+  <meta property="og:description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/series/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Series">
+    
+    
+    <meta itemprop="dateModified" content="2020-07-10T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/series/" class="u-url" itemprop="url">Series
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#aws">AWS</a><ul><li><a href="#infrastructure-as-a-service-iaas">Infrastructure as a Service (IaaS)</a></li><li><a href="#platform-as-a-service-paas">Platform as a Service (PaaS)</a><ul><li><a href="#database-as-a-service-dbaas">Database as a Service (DBaaS)</a></li><li><a href="#big-data-as-a-service-bdaas">Big Data as a Service (BDaaS)</a></li></ul></li><li><a href="#function-as-a-service-faas">Function as a Service (FaaS)</a></li></ul></li><li><a href="#azure">Azure</a><ul><li><a href="#infrastructure-as-a-service-iaas-1">Infrastructure as a Service (IaaS)</a></li><li><a href="#platform-as-a-service-paas-1">Platform as a Service (PaaS)</a></li></ul></li><li><a href="#containers">Containers</a><ul><li><a href="#orquestração">Orquestração</a></li></ul></li><li><a href="#openstack">OpenStack</a><ul><li><a href="#infrastructure-as-code-iac">Infrastructure as code (IaC)</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="aws">AWS</h1>
+
+<h2 id="infrastructure-as-a-service-iaas">Infrastructure as a Service (IaaS)</h2>
+<ul>
+  <li>AWS I: <a href="/aws1-ec2">Elastic Computing (EC2)</a></li>
+  <li>AWS II: <a href="/aws2-ebs">Elastic Block Service (EBS)</a></li>
+  <li>AWS III: <a href="/aws3-s3">Simple Storage Service (S3)</a></li>
+  <li>AWS IV: <a href="/aws4-autoscaling">Auto Scaling</a></li>
+  <li>AWS V: <a href="/aws5-ecs">Elastic Container Service (ECS)</a></li>
+  <li>AWS VI: <a href="/aws6-cloudformation">CloudFormation</a></li>
+</ul>
+
+<h2 id="platform-as-a-service-paas">Platform as a Service (PaaS)</h2>
+<ul>
+  <li>AWS VII: <a href="/aws7-eb">Elastic Beanstalk (EB)</a></li>
+  <li>AWS VIII: <a href="/aws8-eb-springboot">Elastic Beanstalk (EB) com Spring Boot</a></li>
+  <li>AWS IX: <a href="/aws9-cp">CodePipeline</a></li>
+  <li>AWS X: <a href="/aws10-apigw">API Gateway</a></li>
+  <li>AWS XI: <a href="/aws11-eks">Elastic Kubernetes Service (EKS)</a></li>
+</ul>
+
+<h3 id="database-as-a-service-dbaas">Database as a Service (DBaaS)</h3>
+<ul>
+  <li>AWS XII: <a href="/aws12-dynamodb">DynamoDB</a></li>
+  <li>AWS XIII: <a href="/aws13-rds">Relational Database Service (RDS)</a></li>
+</ul>
+
+<h3 id="big-data-as-a-service-bdaas">Big Data as a Service (BDaaS)</h3>
+<ul>
+  <li>AWS XIV: <a href="/aws14-emr">Elastic MapReduce (EMR)</a></li>
+</ul>
+
+<h2 id="function-as-a-service-faas">Function as a Service (FaaS)</h2>
+<ul>
+  <li>AWS XV: <a href="/aws15-lambda">Lambda</a></li>
+</ul>
+
+<h1 id="azure">Azure</h1>
+
+<h2 id="infrastructure-as-a-service-iaas-1">Infrastructure as a Service (IaaS)</h2>
+<ul>
+  <li>Azure I: <a href="/azure1-vm">Virtual machines</a></li>
+  <li>Azure II: <a href="/azure2-container">Containers</a></li>
+  <li>Azure III: <a href="/azure3-disk">Disks</a></li>
+  <li>Azure IV: <a href="/azure4-blob">Blob storage</a></li>
+</ul>
+
+<h2 id="platform-as-a-service-paas-1">Platform as a Service (PaaS)</h2>
+<ul>
+  <li>Azure V: <a href="/azure5-app">App services</a></li>
+  <li>Azure VI: <a href="/azure6-pipeline">Azure Pipelines</a></li>
+</ul>
+
+<h1 id="containers">Containers</h1>
+<ul>
+  <li>Containers I: <a href="/containers1-docker">Docker</a></li>
+  <li>Containers II: <a href="/containers2-docker2">Docker - continuação</a></li>
+  <li>Containers III: <a href="/containers3-docker-compose">Docker Compose</a></li>
+</ul>
+
+<h2 id="orquestração">Orquestração</h2>
+<ul>
+  <li>Containers IV: <a href="/containers4-docker-swarm">Docker Swarm</a></li>
+  <li>Containers V: <a href="/containers5-k8s-install">Kubernetes - Instalação</a></li>
+  <li>Containers VI: <a href="/containers6-kompose">Kompose</a></li>
+  <li>Containers VII: <a href="/containers7-k8s-use">Kubernetes - Uso</a></li>
+</ul>
+
+<h1 id="openstack">OpenStack</h1>
+<ul>
+  <li>OpenStack I: <a href="/openstack1-keystone">Keystone - Identity Manager</a></li>
+  <li>OpenStack II: <a href="/openstack2-glance">Glance - Image Service</a></li>
+  <li>OpenStack III: <a href="/openstack3-nova">Nova - Instance Service</a></li>
+  <li>OpenStack IV: <a href="/openstack4-neutron">Neutron - Network Service</a></li>
+  <li>OpenStack V: <a href="/openstack5-cinder">Cinder - Block Storage Service</a></li>
+  <li>OpenStack VI: <a href="/openstack6-swift">Swift - Object Storage Service</a></li>
+  <li>OpenStack VII: <a href="/openstack7-heat">Heat - Orquestration Service</a></li>
+  <li>OpenStack VIII: <a href="/openstack8-terraform">Terraform</a></li>
+</ul>
+
+<h2 id="infrastructure-as-code-iac">Infrastructure as code (IaC)</h2>
+<ul>
+  <li><a href="/terraformando-openstack">Terraform – IaC – Terraformando no OpenStack</a></li>
+  <li><a href="/openstack8-terraform">Terraform no OpenStack II</a></li>
+  <li><a href="/iac-terraform-aws">Terraform na AWS</a></li>
+  <li><a href="/heat-introducao">Heat - Introdução</a></li>
+  <li><a href="/openstack7-heat">Heat II</a></li>
+  <li><a href="/iac-ansible-aws">Ansible na AWS</a></li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#aws" class="page__taxonomy-item p-category" rel="tag">aws</a><span class="sep">, </span>
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#iac" class="page__taxonomy-item p-category" rel="tag">iac</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#openstack" class="page__taxonomy-item p-category" rel="tag">openstack</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a><span class="sep">, </span>
+    
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">series</a><span class="sep">, </span>
+    
+      <a href="/tags/#terraform" class="page__taxonomy-item p-category" rel="tag">terraform</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-07-10">July 10, 2020</time></p>
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

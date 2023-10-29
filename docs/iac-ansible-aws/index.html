@@ -1,0 +1,991 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>IaC series: Ansible na AWS - GitOps</title>
+<meta name="description" content="Serie de artigos sobre Infraestructure as a Code (IaC).">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="IaC series: Ansible na AWS">
+<meta property="og:url" content="https://josecastillolema.github.io/iac-ansible-aws/">
+
+
+  <meta property="og:description" content="Serie de artigos sobre Infraestructure as a Code (IaC).">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-03-21T00:00:00-05:00">
+
+
+
+  <meta property="article:modified_time" content="2022-03-21T15:00:58-05:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/iac-ansible-aws/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="IaC series: Ansible na AWS">
+    <meta itemprop="description" content="Serie de artigos sobre Infraestructure as a Code (IaC).">
+    <meta itemprop="datePublished" content="2022-03-21T00:00:00-05:00">
+    <meta itemprop="dateModified" content="2022-03-21T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/iac-ansible-aws/" class="u-url" itemprop="url">IaC series: Ansible na AWS
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#lab-15---ansible">Lab 15 - Ansible</a><ul><li><a href="#ansible">Ansible</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#instalação-no-terminal-do-aws-academy-learner-lab">Instalação (no terminal do AWS Academy Learner Lab)</a></li><li><a href="#uso-do-ansible">Uso do ansible</a></li><li><a href="#uso-do-ansible-playbook">Uso do ansible-playbook</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><a href="/series/#infrastructure-as-code-iac">Serie de artigos</a> sobre Infraestructure as a Code (IaC).</p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-15---ansible">Lab 15 - Ansible</h1>
+
+<h2 id="ansible">Ansible</h2>
+
+<h2 id="pre-reqs">Pre-reqs</h2>
+
+<ul>
+  <li>
+    <p>Uma VM com a imagem <code class="language-plaintext highlighter-rouge">Amazon Linux</code> que será usada como destino do playbook</p>
+  </li>
+  <li>
+    <p>O terminal do AWS Academy Learner Lab será usado como bastion para rodar os playbooks do Ansible
+  <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/multicloud/img/a1.png" alt="" /></p>
+  </li>
+</ul>
+
+<h2 id="instalação-no-terminal-do-aws-academy-learner-lab">Instalação (no terminal do AWS Academy Learner Lab)</h2>
+
+<ol>
+  <li>
+    <p>Instalar o <code class="language-plaintext highlighter-rouge">ansible</code> via <code class="language-plaintext highlighter-rouge">pip</code>:</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ pip install ansible
+ Defaulting to user installation because normal site-packages is not writeable
+ Collecting ansible
+   Downloading ansible-4.5.0.tar.gz (35.5 MB)
+      |████████████████████████████████| 35.5 MB 141 kB/s Collecting ansible-core&lt;2.12,&gt;=2.11.4
+   Downloading ansible-core-2.11.4.tar.gz (6.8 MB)     |████████████████████████████████| 6.8 MB 55.2 MB/s 
+ Requirement already satisfied: jinja2 in /usr/local/lib/python3.6/site-packages (from ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (2.10)
+ Requirement already satisfied: PyYAML in /usr/local/lib/python3.6/site-packages (from ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (3.12)
+ Requirement already satisfied: cryptography in /usr/local/lib/python3.6/site-packages (from ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (2.8)
+ Requirement already satisfied: packaging in /usr/local/lib/python3.6/site-packages (from ansible-
+ core&lt;2.12,&gt;=2.11.4-&gt;ansible) (17.1)
+ Collecting resolvelib&lt;0.6.0,&gt;=0.5.3  Downloading resolvelib-0.5.4-py2.py3-none-any.whl (12 kB)
+ Requirement already satisfied: cffi!=1.11.3,&gt;=1.8 in /usr/local/lib/python3.6/site-packages (from cryptography-&gt;ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (1.13.2)
+ Requirement already satisfied: six&gt;=1.4.1 in /usr/local/lib/python3.6/site-packages (from cryptog
+ raphy-&gt;ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (1.13.0)Requirement already satisfied: pycparser in /usr/local/lib/python3.6/site-packages (from cffi!=1.
+ 11.3,&gt;=1.8-&gt;cryptography-&gt;ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (2.18)Requirement already satisfied: MarkupSafe&gt;=0.23 in /usr/local/lib/python3.6/site-packages (from j
+ inja2-&gt;ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (1.0)
+ Requirement already satisfied: pyparsing&gt;=2.0.2 in /usr/local/lib/python3.6/site-packages (from packaging-&gt;ansible-core&lt;2.12,&gt;=2.11.4-&gt;ansible) (2.2.0)
+ Building wheels for collected packages: ansible, ansible-core
+   Building wheel for ansible (setup.py) ... done
+   Created wheel for ansible: filename=ansible-4.5.0-py3-none-any.whl size=58416593 sha256=cd10026
+ 1551b7e750f527df65a11e177a47a1bbceb758d2fc7ce4b83cb0d7d3f
+   Stored in directory: /mnt/data2/students/sub1/ddd_v1_w_KazC_645304/asn482177_1/asn482178_1/work
+ /.cache/pip/wheels/3d/07/88/485d832c1277b3e6c7a8ba90376b474265224c98cdb9897054
+   Building wheel for ansible-core (setup.py) ... done
+   Created wheel for ansible-core: filename=ansible_core-2.11.4-py3-none-any.whl size=1947298 sha2
+ 56=a8a14e920bd235e629bb692674593b7cce013f67391ae5882aed6441492dec76
+   Stored in directory: /mnt/data2/students/sub1/ddd_v1_w_KazC_645304/asn482177_1/asn482178_1/work
+ /.cache/pip/wheels/61/05/a3/cf0a0f377f42ddffae82582e0b563c6fc1bbd7feb0e6fc969a
+ Successfully built ansible ansible-core
+ Installing collected packages: resolvelib, ansible-core, ansible
+
+ Successfully installed ansible ansible-core resolvelib
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Testar a instalação:</p>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ansible -h
+ usage: ansible [-h] [--version] [-v] [-b] [--become-method BECOME_METHOD]
+                [--become-user BECOME_USER] [-K] [-i INVENTORY] [--list-hosts]
+                [-l SUBSET] [-P POLL_INTERVAL] [-B SECONDS] [-o] [-t TREE] [-k]
+                [--private-key PRIVATE_KEY_FILE] [-u REMOTE_USER]
+                [-c CONNECTION] [-T TIMEOUT]
+                [--ssh-common-args SSH_COMMON_ARGS]
+                [--sftp-extra-args SFTP_EXTRA_ARGS]
+                [--scp-extra-args SCP_EXTRA_ARGS]
+                [--ssh-extra-args SSH_EXTRA_ARGS] [-C] [--syntax-check] [-D]
+                [-e EXTRA_VARS] [--vault-id VAULT_IDS]
+                [--ask-vault-password | --vault-password-file VAULT_PASSWORD_FILES]
+                [-f FORKS] [-M MODULE_PATH] [--playbook-dir BASEDIR]
+                [--task-timeout TASK_TIMEOUT] [-a MODULE_ARGS] [-m MODULE_NAME]
+                pattern
+
+ Define and run a single task 'playbook' against a set of hosts
+
+ positional arguments:
+   pattern               host pattern
+
+ optional arguments:
+   --ask-vault-password, --ask-vault-pass
+                         ask for vault password
+   --list-hosts          outputs a list of matching hosts; does not execute
+                         anything else
+   --playbook-dir BASEDIR
+                         Since this tool does not use playbooks, use this as a
+                         substitute playbook directory.This sets the relative
+                         path for many features including roles/ group_vars/
+                         etc.
+   --syntax-check        perform a syntax check on the playbook, but do not
+                         execute it
+   --task-timeout TASK_TIMEOUT
+                         set task timeout limit in seconds, must be positive
+                         integer.
+   --vault-id VAULT_IDS  the vault identity to use
+   --vault-password-file VAULT_PASSWORD_FILES, --vault-pass-file VAULT_PASSWORD_FILES
+                         vault password file
+   --version             show program's version number, config file location,
+                         configured module search path, module location,
+                         executable location and exit
+   -B SECONDS, --background SECONDS
+                         run asynchronously, failing after X seconds
+                         (default=N/A)
+   -C, --check           don't make any changes; instead, try to predict some
+                         of the changes that may occur
+   -D, --diff            when changing (small) files and templates, show the
+                         differences in those files; works great with --check
+   -M MODULE_PATH, --module-path MODULE_PATH
+                         prepend colon-separated path(s) to module library (def
+                         ault=~/.ansible/plugins/modules:/usr/share/ansible/plu
+                         gins/modules)
+   -P POLL_INTERVAL, --poll POLL_INTERVAL
+                         set the poll interval if using -B (default=15)
+   -a MODULE_ARGS, --args MODULE_ARGS
+                         The action's options in space separated k=v format: -a
+                         'opt1=val1 opt2=val2'
+   -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                         set additional variables as key=value or YAML/JSON, if
+                         filename prepend with @
+   -f FORKS, --forks FORKS
+                         specify number of parallel processes to use
+                         (default=5)
+   -h, --help            show this help message and exit
+   -i INVENTORY, --inventory INVENTORY, --inventory-file INVENTORY
+                         specify inventory host path or comma separated host
+                         list. --inventory-file is deprecated
+   -l SUBSET, --limit SUBSET
+                         further limit selected hosts to an additional pattern
+   -m MODULE_NAME, --module-name MODULE_NAME
+                         Name of the action to execute (default=command)
+   -o, --one-line        condense output
+   -t TREE, --tree TREE  log output to this directory
+   -v, --verbose         verbose mode (-vvv for more, -vvvv to enable
+                         connection debugging)
+
+ Privilege Escalation Options:
+   control how and which user you become as on target hosts
+
+   --become-method BECOME_METHOD
+                         privilege escalation method to use (default=sudo), use
+                         `ansible-doc -t become -l` to list valid choices.
+   --become-user BECOME_USER
+                         run operations as this user (default=root)
+   -K, --ask-become-pass
+                         ask for privilege escalation password
+   -b, --become          run operations with become (does not imply password
+                         prompting)
+
+ Connection Options:
+   control as whom and how to connect to hosts
+
+   --private-key PRIVATE_KEY_FILE, --key-file PRIVATE_KEY_FILE
+                         use this file to authenticate the connection
+   --scp-extra-args SCP_EXTRA_ARGS
+                         specify extra arguments to pass to scp only (e.g. -l)
+   --sftp-extra-args SFTP_EXTRA_ARGS
+                         specify extra arguments to pass to sftp only (e.g. -f,
+                         -l)
+   --ssh-common-args SSH_COMMON_ARGS
+                         specify common arguments to pass to sftp/scp/ssh (e.g.
+                         ProxyCommand)
+   --ssh-extra-args SSH_EXTRA_ARGS
+                         specify extra arguments to pass to ssh only (e.g. -R)
+   -T TIMEOUT, --timeout TIMEOUT
+                         override the connection timeout in seconds
+                         (default=10)
+   -c CONNECTION, --connection CONNECTION
+                         connection type to use (default=smart)
+   -k, --ask-pass        ask for connection password
+   -u REMOTE_USER, --user REMOTE_USER
+                         connect as this user (default=None)
+
+ Some actions do not make sense in Ad-Hoc (include, meta, etc)
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="uso-do-ansible">Uso do <code class="language-plaintext highlighter-rouge">ansible</code></h2>
+
+<ol>
+  <li>Baixar os <em>templates</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap
+ Cloning into 'fiap'...
+ remote: Enumerating objects: 10, done.
+ remote: Counting objects: 100% (10/10), done.
+ remote: Compressing objects: 100% (10/10), done.
+ remote: Total 3716 (delta 4), reused 0 (delta 0), pack-reused 3706
+ Receiving objects: 100% (3716/3716), 44.63 MiB | 3.88 MiB/s, done.
+ Resolving deltas: 100% (1862/1862), done.
+ Checking connectivity... done.
+    
+ $ cd fiap/cld/multicloud/lab15-ansible/
+</code></pre></div>    </div>
+  </li>
+  <li>Atualizar o conteúdo do arquivo <a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/multicloud/lab15-ansible/hosts">hosts</a> com o endereço da máquina virtual <code class="language-plaintext highlighter-rouge">Amazon Linux</code> e testar o acesso a máquina virtual:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ansible all -m  ping -i hosts --key-file ~/.ssh/labsuser.pem
+ ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com | SUCCESS =&gt; {
+     "ansible_facts": {
+         "discovered_interpreter_python": "/usr/bin/python"
+     },
+     "changed": false,
+     "ping": "pong"
+ }
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="uso-do-ansible-playbook">Uso do <code class="language-plaintext highlighter-rouge">ansible-playbook</code></h2>
+
+<ol>
+  <li>Invocar o playbook <a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/multicloud/lab15-ansible/deploy-flask.yaml">template</a>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ansible-playbook deploy-flask.yaml -i hosts --key-file ~/.ssh/labsuser.pem
+ PLAY [webservers] *******************************************************************************
+
+ TASK [Gathering Facts] **************************************************************************
+ ok: [ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com]
+
+ TASK [install pip] ******************************************************************************
+ changed: [ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com]
+
+ PLAY RECAP **************************************************************************************
+ ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0  
+</code></pre></div>    </div>
+  </li>
+  <li>Na 1a execução do playbook, veja que o pip foi instalado (<code class="language-plaintext highlighter-rouge">changed=1</code>). Se rodar-mos o playbook outra vez, não haberá mudanças na VM (<code class="language-plaintext highlighter-rouge">changed=0</code>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ansible-playbook deploy-flask.yaml -i hosts --key-file ~/.ssh/labsuser.pem
+ PLAY [webservers] *******************************************************************************
+
+ TASK [Gathering Facts] **************************************************************************
+ ok: [ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com]
+
+ TASK [install pip] ******************************************************************************
+ ok: [ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com]
+
+ PLAY RECAP **************************************************************************************
+ ec2-user@ec2-54-145-72-182.compute-1.amazonaws.com : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+</code></pre></div>    </div>
+  </li>
+  <li>Concluir o playbook com os restantes passos para o correto deploy da aplicação (consultar o <a href="https://github.com/josecastillolema/fiap/blob/master/scj/cloud/lab06-paas-eb.md#deploy-em-uma-vm-no-ec2">lab de Beanstalk - deploy em uma VM do EC2</a>):
+    <ul>
+      <li>Copiar os arquivos da aplicação (ou clonar este repositório git)</li>
+      <li>Instalação das dependencias Python usando o <code class="language-plaintext highlighter-rouge">pip</code> (arquivo <code class="language-plaintext highlighter-rouge">requirements</code>)</li>
+      <li>Execução da aplicação</li>
+    </ul>
+  </li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#ansible" class="page__taxonomy-item p-category" rel="tag">ansible</a><span class="sep">, </span>
+    
+      <a href="/tags/#aws" class="page__taxonomy-item p-category" rel="tag">aws</a><span class="sep">, </span>
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#iac" class="page__taxonomy-item p-category" rel="tag">iac</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">series</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-21">March 21, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=IaC+series%3A+Ansible+na+AWS%20https%3A%2F%2Fjosecastillolema.github.io%2Fiac-ansible-aws%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fiac-ansible-aws%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fiac-ansible-aws%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/mct/" class="pagination--pager" title="Microsoft Certified Trainer (MCT) program
+">Previous</a>
+    
+    
+      <a href="/iac-terraform-aws/" class="pagination--pager" title="IaC series: Terraform na AWS
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/iac-ansible-aws/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/iac-ansible-aws"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

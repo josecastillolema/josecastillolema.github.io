@@ -1,0 +1,1098 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Kubernetes control plane scale testing with Kubemark - GitOps</title>
+<meta name="description" content="Continuation of Michael McCune (@elmiko) notes on Setting Up a Development Environment for the Cluster API Kubemark Provider, Automating My Hollow Kubernetes Test Rig and DevConf.cz 2022 Testing at Scale with Cluster API and Kubemark (demo).">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="Kubernetes control plane scale testing with Kubemark">
+<meta property="og:url" content="https://josecastillolema.github.io/kubemark/">
+
+
+  <meta property="og:description" content="Continuation of Michael McCune (@elmiko) notes on Setting Up a Development Environment for the Cluster API Kubemark Provider, Automating My Hollow Kubernetes Test Rig and DevConf.cz 2022 Testing at Scale with Cluster API and Kubemark (demo).">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2023-01-18T00:00:00-06:00">
+
+
+
+  <meta property="article:modified_time" content="2023-01-26T14:00:58-06:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/kubemark/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Kubernetes control plane scale testing with Kubemark">
+    <meta itemprop="description" content="  Continuation of Michael McCune (@elmiko) notes on Setting Up a Development Environment for the Cluster API Kubemark Provider, Automating My Hollow Kubernetes Test Rig and DevConf.cz 2022 Testing at Scale with Cluster API and Kubemark (demo).">
+    <meta itemprop="datePublished" content="2023-01-18T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2023-01-26T14:00:58-06:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/kubemark/" class="u-url" itemprop="url">Kubernetes control plane scale testing with Kubemark
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#architecture">Architecture</a></li><li><a href="#integration-with-cluster-api">Integration with Cluster API</a></li><li><a href="#hands-to-work">Hands to work</a><ul><li><a href="#environment-setup">Environment setup</a></li><li><a href="#creating-the-cluster">Creating the cluster</a></li><li><a href="#creating-resources-on-the-workload-cluster">Creating resources on the workload cluster</a></li><li><a href="#scaling-the-cluster">Scaling the cluster</a></li><li><a href="#stressing-the-cluster">Stressing the cluster</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <blockquote>
+  <p>Continuation of Michael McCune (@elmiko) notes on <a href="https://notes.elmiko.dev/2021/10/11/setup-dev-capi-kubemark.html">Setting Up a Development Environment for the Cluster API Kubemark Provider</a>, <a href="https://notes.elmiko.dev/2023/01/21/automating-my-hollow-kubernetes-test-rig.html">Automating My Hollow Kubernetes Test Rig</a> and <a href="https://vimeo.com/671479117">DevConf.cz 2022 Testing at Scale with Cluster API and Kubemark (demo)</a>.</p>
+</blockquote>
+
+<p><a href="https://github.com/kubernetes/kubernetes/tree/master/cmd/kubemark">Kubemark</a> is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is that the nodes do not actually run containers or attach storage, but they do behave like they did, with updates to etcd and all the trimmings. At the same time, <strong>hollow nodes are extremely light (&lt;30 MiB)</strong>.</p>
+
+<p>The primary use case of Kubemark is scalability testing, as simulated clusters can be much bigger than the real ones. The objective is to expose problems with the master components (API server, controller manager or scheduler) that appear only on bigger clusters (e.g. small memory leaks).</p>
+
+<h2 id="architecture">Architecture</h2>
+
+<p>On a very high level Kubemark cluster consists of two parts: real master components and a set of “hollow” nodes. The prefix hollow means an implementation/instantiation of a component with all moving parts mocked out. The best example is HollowKubelet, which pretends to be an ordinary Kubelet, but does not start anything, nor mount any volumes -it just lies it does.</p>
+
+<p>Currently master components run on a dedicated machine(s), and HollowNodes run on an external management Kubernetes cluster. This design has the advantage of completely isolating master resources from everything else.</p>
+
+<h2 id="integration-with-cluster-api">Integration with Cluster API</h2>
+
+<p><a href="https://cluster-api.sigs.k8s.io/">Kubernetes Cluster API (CAPI)</a> is a project focused on  providing declarative APIs and tooling to simplify provisioning, upgrading, and operating multiple Kubernetes clusters. It uses Kubernetes-style APIs and patterns to automate cluster lifecycle management for platform operators. The supporting infrastructure, like virtual machines, networks, load balancers, and VPCs, as well as the Kubernetes cluster configuration are all defined in the same way that application developers operate deploying and managing their workloads. This enables consistent and repeatable cluster deployments across a wide variety of infrastructure environments.</p>
+
+<p>The Cluster API community has developed a <a href="https://github.com/kubernetes-sigs/cluster-api-provider-kubemark/">Cluster API Kubemark Provider</a>, allowing users to deploy fake, Kubemark-backed machines to their clusters. This is useful in a variety of scenarios, such load-testing and simulation testing.</p>
+
+<h2 id="hands-to-work">Hands to work</h2>
+
+<p>On the host docker (we will be using a fresh Ubuntu 22.04 virtual machine) we will use <a href="https://kind.sigs.k8s.io/">kind</a> (Kubernetes in Docker, a container running the necessary kubernetes pieces) to create the CAPI Management Cluster. Next, we will use the <code class="language-plaintext highlighter-rouge">clusterctl</code> tool to create a second cluster (using kind as well) for the Kubemark workload (the cluster under test). Lastly, we want to create new nodes for the Kubemark Control Plane Cluster (the cluster under test) and Kubemark requires that we create these hollow nodes as pods running on a cluster that can join the control plane. The Cluster API Kubemark provider then creates pods within the CAPI Management Cluster which will join the Kubemark Control Plane Cluster (the cluster under test/worload cluster) as nodes.</p>
+
+<p><img src="/assets/images/posts/2023-01-18-kubemark.svg" alt="" /></p>
+
+<p>For the demo we will be using a Ubuntu 22.04 virtual machine with 4 vCPUs, 4 GiB of memory and 100 GiB disk.</p>
+
+<h3 id="environment-setup">Environment setup</h3>
+
+<p>I will be using <a href="https://github.com/lima-vm/lima">Lima</a> (Linux virtual machines) to create and manage the VM:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ limactl start --name=ubuntu22.04 template://ubuntu-lts
+$ limactl shell ubuntu22.04
+</code></pre></div></div>
+
+<p>We will use <a href="https://github.com/elmiko/cluster-api-kubemark-ansible">cluster-apikubemark-ansible</a> playbooks to automate the deploy of:</p>
+<ul>
+  <li>Golang</li>
+  <li>Build tools</li>
+  <li>Docker</li>
+  <li>Docker local registry</li>
+  <li>Kind</li>
+  <li>Kubectl</li>
+  <li>Kustomize</li>
+  <li>Kubebuilder</li>
+  <li>Cluster API</li>
+  <li>Cluster API Kubemark provider</li>
+</ul>
+
+<p>Prepare the host to run ansible:</p>
+<ul>
+  <li>Install <code class="language-plaintext highlighter-rouge">ansible</code> (not <code class="language-plaintext highlighter-rouge">ansible-core</code>)
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt install ansible
+ $ ssh-keygen
+ $ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
+</code></pre></div>    </div>
+  </li>
+  <li>Clone and and prepare the playbooks:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/elmiko/cluster-api-kubemark-ansible.git
+ $ cd cluster-api-kubemark-ansible
+ $ echo -e "[defaults]\nallow_world_readable_tmpfiles=true" &gt; ansible.cfg
+</code></pre></div>    </div>
+  </li>
+  <li>Update <code class="language-plaintext highlighter-rouge">inventory/hosts</code> if you need to change addresses and/or users and run the first playbook:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ansible-playbook -i inventory/hosts setup_devel_environment.yaml
+</code></pre></div>    </div>
+    <p>Once it is finished you will be able to login to the host as the devel user listed in the hosts file. All the development tools should be ready for access.</p>
+  </li>
+  <li>Run the second playbook to build the <code class="language-plaintext highlighter-rouge">clusterctl</code> binary, all the controller images and push the images to the local registry.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible-playbook -i inventory/hosts build_clusterctl_and_images.yaml
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h3 id="creating-the-cluster">Creating the cluster</h3>
+
+<p>We will use the <a href="https://github.com/elmiko/capi-hacks">capi-hacks repo</a> playbooks to aid with Kubemark deployment.</p>
+
+<p>Ensure the docker local registry was created in the previous steps, if not use the <code class="language-plaintext highlighter-rouge">00-start-localregistry.sh</code> script:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID   IMAGE                  COMMAND                  CREATED      STATUS          PORTS                                  NAMES
+7064a4208e15   registry:2             "/entrypoint.sh /etc…"   4 days ago   Up 46 minutes   127.0.0.1:5000-&gt;5000/tcp               kind-registry
+</code></pre></div></div>
+
+<p>Clone the capi-hacks repo:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/elmiko/capi-hacks.git
+$ cd capi-hacks
+</code></pre></div></div>
+
+<p>Create the CAPI management cluster. This cluster will host the CAPI components and Kubemark hollow nodes:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./01-start-mgmt-cluster.sh
+$ kind get clusters
+mgmt
+</code></pre></div></div>
+
+<p>Wait for the node to become ready and configure the management cluster to use the local registry:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get node
+NAME                 STATUS   ROLES                  AGE   VERSION
+mgmt-control-plane   Ready    control-plane,master   44s   v1.23.6
+
+$ ./02-apply-localregistryhosting-configmap.sh
+</code></pre></div></div>
+
+<p>Deploy the Cluster API (capi) and Cluster API Kubemark Provider (capk) components and wait for their pods to become ready:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./03-clusterctl-init.sh
+
+$ kubectl get deploy -A | grep cap
+capd-system                         capd-controller-manager                         1/1     1            1           10m
+capi-kubeadm-bootstrap-system       capi-kubeadm-bootstrap-controller-manager       1/1     1            1           11m
+capi-kubeadm-control-plane-system   capi-kubeadm-control-plane-controller-manager   1/1     1            1           11m
+capi-system                         capi-controller-manager                         1/1     1            1           11m
+capk-system                         capk-controller-manager                         1/1     1            1           10m
+</code></pre></div></div>
+
+<p>Create the a new kind (docker provider) cluster for the control plane under test:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl apply -f kubemark/kubemark-workload-control-plane.yaml
+</code></pre></div></div>
+
+<p>Wait for the machine to transition from provisioning to running state:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get machine
+NAME                                    CLUSTER             NODENAME                                PROVIDERID                                         PHASE     AGE     VERSION
+kubemark-workload-control-plane-lvkcv   kubemark-workload   kubemark-workload-control-plane-lvkcv   docker:////kubemark-workload-control-plane-lvkcv   Running   3m31s   v1.23.6
+
+$ kubectl get clusters
+NAME                PHASE         AGE     VERSION
+kubemark-workload   Provisioned   4m4s
+
+$ kind get clusters
+kubemark-workload
+mgmt
+</code></pre></div></div>
+
+<p>Let’s take a look to the new <code class="language-plaintext highlighter-rouge">kubemark-workload</code> kind cluster that will host the control plane under test. As you can see the node is in <code class="language-plaintext highlighter-rouge">NotReady</code> state (because there is no CNI deployed) and the CNI dependant pods are in <code class="language-plaintext highlighter-rouge">Pending</code> state:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./get-kubeconfig.sh kubemark-workload
+
+$ kubectl get node --kubeconfig=kubeconfig.kubemark-workload
+NAME                                    STATUS     ROLES                  AGE   VERSION
+kubemark-workload-control-plane-lvkcv   NotReady   control-plane,master   46m   v1.23.6
+
+$ kubectl get po -A --kubeconfig=kubeconfig.kubemark-workload
+NAMESPACE     NAME                                                            READY   STATUS    RESTARTS   AGE
+kube-system   coredns-79dc848587-8qbgk                                        0/1     Pending   0          6m31s
+kube-system   coredns-79dc848587-n9428                                        0/1     Pending   0          6m31s
+kube-system   etcd-kubemark-workload-control-plane-lvkcv                      1/1     Running   0          6m39s
+kube-system   kube-apiserver-kubemark-workload-control-plane-lvkcv            1/1     Running   0          6m39s
+kube-system   kube-controller-manager-kubemark-workload-control-plane-lvkcv   1/1     Running   0          6m39s
+kube-system   kube-proxy-skgc9                                                1/1     Running   0          6m31s
+kube-system   kube-scheduler-kubemark-workload-control-plane-lvkcv            1/1     Running   0          6m39s
+</code></pre></div></div>
+
+<p>Let’s deploy <a href="https://github.com/ovn-org/ovn-kubernetes/">OVN-Kubernetes</a> on the cluster (more information on how to deploy OVN-K on a preexisting kind cluster in this <a href="/ovnk8s-kind">past blog post</a>. OVN-Kubernetes is a CNI for Kubernetes based on the <a href="https://www.ovn.org/en/">Open Virtual Network (OVN)</a> project:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./deploy-cni-ovn.sh $(pwd)/kubeconfig.kubemark-workload kubemark-workload
+</code></pre></div></div>
+
+<p>Check if the nodes and the CNI dependant pods have transitioned to <code class="language-plaintext highlighter-rouge">Ready</code> state and the OVN pods are present:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get node --kubeconfig=kubeconfig.kubemark-workload
+NAME                                    STATUS   ROLES                  AGE   VERSION
+kubemark-workload-control-plane-lvkcv   Ready    control-plane,master   78m   v1.23.6
+
+$ kubectl get po -A --kubeconfig=kubeconfig.kubemark-workload
+NAMESPACE        NAME                                                            READY   STATUS    RESTARTS   AGE
+default          test2                                                           1/1     Running   0          3m4s
+kube-system      coredns-79dc848587-8qbgk                                        1/1     Running   0          78m
+kube-system      coredns-79dc848587-n9428                                        1/1     Running   0          78m
+kube-system      etcd-kubemark-workload-control-plane-lvkcv                      1/1     Running   0          78m
+kube-system      kube-apiserver-kubemark-workload-control-plane-lvkcv            1/1     Running   0          78m
+kube-system      kube-controller-manager-kubemark-workload-control-plane-lvkcv   1/1     Running   0          78m
+kube-system      kube-proxy-skgc9                                                1/1     Running   0          78m
+kube-system      kube-scheduler-kubemark-workload-control-plane-lvkcv            1/1     Running   0          78m
+ovn-kubernetes   ovnkube-db-7d8fdc7dfb-2pf8m                                     2/2     Running   0          6m42s
+ovn-kubernetes   ovnkube-master-6dbd568bb5-89s7c                                 2/2     Running   0          6m41s
+ovn-kubernetes   ovnkube-node-7s7r5                                              3/3     Running   0          6m33s
+ovn-kubernetes   ovs-node-gnpv9                                                  1/1     Running   0          6m41s
+</code></pre></div></div>
+
+<p>At this point we are ready to deploy Kubemark hollow nodes in the managment cluster. This step will create 4 Kubemark hollow nodes:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>kubectl apply -f kubemark/kubemark-workload-md0.yaml
+</code></pre></div></div>
+
+<p>Let’s check things from the managment cluster perspective first:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get machine
+NAME                                     CLUSTER             NODENAME                                PROVIDERID                                         PHASE     AGE   VERSION
+kubemark-workload-control-plane-lvkcv    kubemark-workload   kubemark-workload-control-plane-lvkcv   docker:////kubemark-workload-control-plane-lvkcv   Running   84m   v1.23.6
+kubemark-workload-md-0-764cb59d5-8c62j   kubemark-workload   kubemark-workload-md-0-v7592            kubemark://kubemark-workload-md-0-v7592            Running   57s   v1.23.6
+kubemark-workload-md-0-764cb59d5-bb2p4   kubemark-workload   kubemark-workload-md-0-4955k            kubemark://kubemark-workload-md-0-4955k            Running   57s   v1.23.6
+kubemark-workload-md-0-764cb59d5-hwlh7   kubemark-workload   kubemark-workload-md-0-m82cf            kubemark://kubemark-workload-md-0-m82cf            Running   57s   v1.23.6
+kubemark-workload-md-0-764cb59d5-jrmgt   kubemark-workload   kubemark-workload-md-0-82m9j            kubemark://kubemark-workload-md-0-82m9j            Running   57s   v1.23.6
+
+$ kubectl get po
+NAME                           READY   STATUS    RESTARTS   AGE
+kubemark-workload-md-0-4955k   1/1     Running   0          90s
+kubemark-workload-md-0-82m9j   1/1     Running   0          90s
+kubemark-workload-md-0-m82cf   1/1     Running   0          90s
+kubemark-workload-md-0-v7592   1/1     Running   0          90s
+</code></pre></div></div>
+
+<p>Finally, let’s check things from the cluster under test perspective:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get node --kubeconfig=kubeconfig.kubemark-workload
+NAME                                    STATUS   ROLES                  AGE     VERSION
+kubemark-workload-control-plane-lvkcv   Ready    control-plane,master   84m     v1.23.6
+kubemark-workload-md-0-4955k            Ready    &lt;none&gt;                 2m11s   v1.23.6
+kubemark-workload-md-0-82m9j            Ready    &lt;none&gt;                 2m6s    v1.23.6
+kubemark-workload-md-0-m82cf            Ready    &lt;none&gt;                 2m10s   v1.23.6
+kubemark-workload-md-0-v7592            Ready    &lt;none&gt;                 2m9s    v1.23.6
+</code></pre></div></div>
+
+<h3 id="creating-resources-on-the-workload-cluster">Creating resources on the workload cluster</h3>
+
+<p>Let’s create a simple pod and service:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl run test --image nginx --kubeconfig=kubeconfig.kubemark-workload
+pod/test created
+
+$ kubectl get po -o wide --kubeconfig=kubeconfig.kubemark-workload
+NAME   READY   STATUS    RESTARTS   AGE    IP                NODE                           NOMINATED NODE   READINESS GATES
+test   1/1     Running   0          100s   192.168.192.168   kubemark-workload-md-0-m82cf   &lt;none&gt;           &lt;none&gt;
+
+$ kubectl expose po/test --port 5000 --kubeconfig=kubeconfig.kubemark-workload
+service/test exposed
+
+$ kubectl get service --kubeconfig=kubeconfig.kubemark-workload
+NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)    AGE
+kubernetes   ClusterIP   192.168.122.1    &lt;none&gt;        443/TCP    87m
+test         ClusterIP   192.168.122.93   &lt;none&gt;        5000/TCP   7s
+</code></pre></div></div>
+
+<p>Let’s check OVN databases:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ POD=$(kubectl get pod -n ovn-kubernetes -o jsonpath='{range .items[*]}{.metadata.name}{"\n"}{end}' --kubeconfig=kubeconfig.kubemark-workload | grep ovnkube-db-) ; kubectl exec -ti $POD -n ovn-kubernetes -c nb-ovsdb --kubeconfig=kubeconfig.kubemark-workload -- bash
+
+[root@kubemark-workload-control-plane-lvkcv ~]# ovn-nbctl ls-list
+712ca431-ff74-4aef-af8d-00acee6e40dd (ext_kubemark-workload-control-plane-lvkcv)
+95755675-c275-4d04-bd35-713ba7597c0c (join)
+d7264e2c-4e4e-44fe-9eae-5b99facca098 (kubemark-workload-control-plane-lvkcv)
+ee3c0a20-7df2-421b-8e9e-b676080d6976 (kubemark-workload-md-0-4955k)
+b4f230a6-9151-44cd-8fa9-4f489799274e (kubemark-workload-md-0-82m9j)
+a27e961a-6aaf-4e33-999c-9e7fd73611fa (kubemark-workload-md-0-m82cf)
+48b096d8-42c5-4d18-b226-924ec60af0c5 (kubemark-workload-md-0-v7592)
+
+[root@kubemark-workload-control-plane-lvkcv ~]# ovn-nbctl lb-list
+UUID                                    LB                  PROTO      VIP                    IPs
+8ffbeb8b-c2ba-4549-9a5b-5ac9577c4271    Service_default/    tcp        192.168.122.1:443      172.18.0.5:6443
+e4b5bceb-3b51-48e9-be67-7b45fb966caf    Service_default/    tcp        192.168.122.93:5000    192.168.192.168:5000
+654c5590-a2b7-4a6e-bf04-d8c1c78b0267    Service_default/    tcp        192.168.122.1:443      169.254.169.2:6443
+ca23b927-4b87-4fdd-b16c-f8c3d824e6e6    Service_kube-sys    tcp        192.168.122.10:53      10.244.0.3:53,10.244.0.4:53
+                                                            tcp        192.168.122.10:9153    10.244.0.3:9153,10.244.0.4:9153
+699e0b39-1be8-4db7-953f-dbc836d42faf    Service_kube-sys    udp        192.168.122.10:53      10.244.0.3:53,10.244.0.4:53
+
+[root@kubemark-workload-control-plane-lvkcv ~]# ovn-sbctl list port_binding default_test
+_uuid               : 26050c0d-0e5d-4496-b0ee-0b3df1bb40c9
+additional_chassis  : []
+additional_encap    : []
+chassis             : []
+datapath            : 1ac0b646-9d4d-432e-9e59-64db6520973f
+encap               : []
+external_ids        : {namespace=default, pod="true"}
+gateway_chassis     : []
+ha_chassis_group    : []
+logical_port        : default_test
+mac                 : ["0a:58:0a:f4:02:03 10.244.2.3"]
+mirror_rules        : []
+nat_addresses       : []
+options             : {iface-id-ver="b505da18-8294-41ac-a25e-ffeeb5d3b7fb", requested-chassis=kubemark-workload-md-0-m82cf}
+parent_port         : []
+port_security       : ["0a:58:0a:f4:02:03 10.244.2.3"]
+requested_additional_chassis: []
+requested_chassis   : []
+tag                 : []
+tunnel_key          : 2
+type                : ""
+up                  : false
+virtual_parent      : []
+</code></pre></div></div>
+
+<h3 id="scaling-the-cluster">Scaling the cluster</h3>
+
+<p>Let’s check how many resources Kubemark hollow nodes consume (&lt;30 MiB, compared to 650 MiB of a normal ovnkube worker):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl top pod
+NAME                           CPU(cores)   MEMORY(bytes)
+kubemark-workload-md-0-4955k   38m          28Mi
+kubemark-workload-md-0-82m9j   36m          28Mi
+kubemark-workload-md-0-m82cf   45m          29Mi
+kubemark-workload-md-0-v7592   41m          28Mi
+</code></pre></div></div>
+
+<p>In our 4 GiB VM we have 1GiB available:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       2.5Gi       170Mi        25Mi       1.2Gi       1.0Gi
+</code></pre></div></div>
+
+<p>Lets create a total of 30 Kubemark hollow nodes:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl patch --type merge MachineDeployment kubemark-workload-md-0 -p '{"spec":{"replicas":30}}'
+
+$ kubectl get machine | grep kubemark-workload-md-0 | grep Running | wc -l
+30
+
+$ kubectl get po | grep kubemark-workload | grep Running | wc -l
+30
+
+$ free -h
+               total        used        free      shared  buff/cache   available
+Mem:           3.8Gi       3.2Gi       112Mi        28Mi       548Mi       347Mi
+</code></pre></div></div>
+
+<h3 id="stressing-the-cluster">Stressing the cluster</h3>
+
+<p>Let’s use <a href="https://kube-burner.readthedocs.io/">kube-burner</a> to stress our workload cluster. Kube-burner is a tool aimed at stressing kubernetes clusters, by creating/deleting objects declared in jobs.</p>
+
+<p>Let’s install kube-burner:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ wget https://github.com/cloud-bulldozer/kube-burner/releases/download/v1.2/kube-burner-1.2-Linux-x86_64.tar.gz
+
+$ sudo install -o root -g root -m 0755 kube-burner /usr/local/bin/kube-burner
+
+$ kube-burner version
+Version: 1.2
+Git Commit: 563bc92b9262582391e5dffb8941b914ca19d2d3
+Build Date: 2023-01-13T10:18:17Z
+Go Version: go1.19.4
+OS/Arch: linux amd64
+</code></pre></div></div>
+
+<p>Let’s take a look at the configuration file <code class="language-plaintext highlighter-rouge">kubeburner/cfg.yaml</code>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">global</span><span class="pi">:</span>
+  <span class="na">writeToFile</span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">indexerConfig</span><span class="pi">:</span>
+    <span class="na">enabled</span><span class="pi">:</span> <span class="no">false</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">kubelet-density</span>
+    <span class="na">preLoadImages</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">jobIterations</span><span class="pi">:</span> <span class="m">100</span>
+    <span class="na">qps</span><span class="pi">:</span> <span class="m">20</span>
+    <span class="na">burst</span><span class="pi">:</span> <span class="m">20</span>
+    <span class="na">namespacedIterations</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">namespace</span><span class="pi">:</span> <span class="s">kubelet-density</span>
+    <span class="na">waitWhenFinished</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">podWait</span><span class="pi">:</span> <span class="no">false</span>
+    <span class="na">objects</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">objectTemplate</span><span class="pi">:</span> <span class="s">pod.yaml</span>
+        <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+        <span class="na">inputVars</span><span class="pi">:</span>
+          <span class="na">containerImage</span><span class="pi">:</span> <span class="s">gcr.io/google_containers/pause-amd64:3.0</span>
+</code></pre></div></div>
+
+<p>Let’s create some pods on the cluster:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ KUBECONFIG=kubeconfig.kubemark-workload kube-burner init -c kubeburner/cfg.yaml
+INFO[2023-01-17 15:21:25] 🔥 Starting kube-burner (1.2@563bc92b9262582391e5dffb8941b914ca19d2d3) with UUID def1da7b-a5db-4c05-bb17-167d889ef33b
+INFO[2023-01-17 15:21:25] 📈 Creating measurement factory
+INFO[2023-01-17 15:21:25] Job kubelet-density: 100 iterations with 1 Pod replicas
+INFO[2023-01-17 15:21:25] QPS: 20
+INFO[2023-01-17 15:21:25] Burst: 20
+INFO[2023-01-17 15:21:25] Triggering job: kubelet-density
+INFO[2023-01-17 15:21:26] Running job kubelet-density
+INFO[2023-01-17 15:21:32] Waiting up to 3h0m0s for actions to be completed
+INFO[2023-01-17 15:21:51] Actions in namespace kubelet-density completed
+INFO[2023-01-17 15:21:51] Finished the create job in 23s
+INFO[2023-01-17 15:21:51] Verifying created objects
+INFO[2023-01-17 15:21:52] pods found: 100 Expected: 100
+INFO[2023-01-17 15:21:52] Job kubelet-density took 26.88 seconds
+INFO[2023-01-17 15:21:52] Finished execution with UUID: def1da7b-a5db-4c05-bb17-167d889ef33b
+INFO[2023-01-17 15:21:52] 👋 Exiting kube-burner def1da7b-a5db-4c05-bb17-167d889ef33b
+
+$ kubectl get po -n kubelet-density | grep Running | wc -l
+100
+</code></pre></div></div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#networks" class="page__taxonomy-item p-category" rel="tag">networks</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2023-01-26">January 26, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Kubernetes+control+plane+scale+testing+with+Kubemark%20https%3A%2F%2Fjosecastillolema.github.io%2Fkubemark%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fkubemark%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fkubemark%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/codeco-kickoff/" class="pagination--pager" title="CODECO project kick off
+">Previous</a>
+    
+    
+      <a href="/icni2/" class="pagination--pager" title="OVN-Kubernetes Multiple External Gateway local setup
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/kubemark/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/kubemark"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

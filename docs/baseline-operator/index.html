@@ -1,0 +1,904 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>baseline-operator - GitOps</title>
+<meta name="description" content="">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="baseline-operator">
+<meta property="og:url" content="https://josecastillolema.github.io/baseline-operator/">
+
+
+  <meta property="og:description" content="">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2022-07-01T00:00:00-05:00">
+
+
+
+  <meta property="article:modified_time" content="2022-07-01T15:00:58-05:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/baseline-operator/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="baseline-operator">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="2022-07-01T00:00:00-05:00">
+    <meta itemprop="dateModified" content="2022-07-01T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/baseline-operator/" class="u-url" itemprop="url">baseline-operator
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          7 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#baseline-operator">baseline-operator</a><ul><li><a href="#use">Use</a><ul><li><a href="#updating-the-crd">Updating the CRD</a></li><li><a href="#node-placement">Node placement</a></li><li><a href="#custom-image">Custom image</a></li></ul></li><li><a href="#installation">Installation</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=baseline-operator&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=baseline-operator&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=baseline-operator&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<p><img src="https://img.shields.io/github/license/josecastillolema/baseline-operator" alt="GitHub" />
+<img src="https://img.shields.io/github/languages/count/josecastillolema/baseline-operator" alt="GitHub language count" />
+<img src="https://img.shields.io/github/languages/top/josecastillolema/baseline-operator" alt="GitHub top language" />
+<a href="https://goreportcard.com/report/github.com/josecastillolema/baseline-operator"><img src="https://goreportcard.com/badge/github.com/josecastillolema/baseline-operator" alt="Go Report Card" /></a>
+<a href="https://github.com/josecastillolema/baseline-operator/actions/workflows/docker-image.yml"><img src="https://github.com/josecastillolema/baseline-operator/actions/workflows/docker-image.yml/badge.svg" alt="Docker Image CI" /></a></p>
+
+<h1 id="baseline-operator">baseline-operator</h1>
+
+<p>The baseline-operator provides a way to run <a href="https://wiki.ubuntu.com/Kernel/Reference/stress-ng">stress-ng</a> workloads on Kubernetes in various deployment configurations.</p>
+
+<p>It is intended to create an artificial baseline load in a Kubernetes cluster in order to be able to run other Kubernetes tests in more realistic conditions (performance, cluster upgrade, etc.).</p>
+
+<h2 id="use">Use</h2>
+
+<p>Create a baseline CRD, i.e.:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">perf.baseline.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Baseline</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">baseline-sample</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">cpu</span><span class="pi">:</span> <span class="m">1</span>                                             <span class="c1"># Cores</span>
+  <span class="na">mem</span><span class="pi">:</span> <span class="s">1G</span>                                            <span class="c1"># Size of the virtual memory. Can be defined as a % of the available memory</span>
+  <span class="na">io</span><span class="pi">:</span> <span class="m">1</span>                                              <span class="c1"># Workers continuously calling sync to commit buffer cache to disk</span>
+  <span class="na">sock</span><span class="pi">:</span> <span class="m">1</span>                                            <span class="c1"># Workers exercising socket I/O networking</span>
+  <span class="na">custom</span><span class="pi">:</span> <span class="s2">"</span><span class="s">--timer</span><span class="nv"> </span><span class="s">1"</span>                                <span class="c1"># Other custom params</span>
+  <span class="c1"># image: quay.io/cloud-bulldozer/stressng          # Custom image</span>
+  <span class="c1"># hostNetwork: true                                # Directly use host network</span>
+  <span class="c1"># nodeSelector:                                    # Filter nodes with labels</span>
+  <span class="c1">#   stress: "true"</span>
+  <span class="c1"># tolerations:                                     # Use the control plane nodes</span>
+  <span class="c1"># - key: node-role.kubernetes.io/control-plane</span>
+  <span class="c1">#   operator: Exists</span>
+  <span class="c1">#   effect: NoSchedule</span>
+  <span class="c1"># - key: node-role.kubernetes.io/master</span>
+  <span class="c1">#   operator: Exists</span>
+  <span class="c1">#   effect: NoSchedule</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl apply -f config/samples/perf_v1_baseline.yaml
+baseline.perf.baseline.io/baseline-sample configured
+
+$ kubectl get baseline
+NAME              COMMAND                                                                                AGE
+baseline-sample   stress-ng -t 0 --cpu 1 --vm 1 --vm-bytes 1G --io 1 --sock 1 --sock-if eth0 --timer 1   3s
+</code></pre></div></div>
+
+<p>Check for the DaemonSet:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get daemonset
+NAME              DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+baseline-sample   1         1         1       1            1           &lt;none&gt;          1m
+</code></pre></div></div>
+
+<p>Check for the Pods:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get pods
+NAME                    READY   STATUS    RESTARTS   AGE
+baseline-sample-nnq5b   1/1     Running   0          1m
+
+$ kubectl logs baseline-sample-nnq5b 
+stress-ng: info:  [1] setting to a 0 second run per stressor
+stress-ng: info:  [1] dispatching hogs: 1 cpu, 1 vm, 1 io, 1 sock, 1 timer
+</code></pre></div></div>
+
+<h3 id="updating-the-crd">Updating the CRD</h3>
+
+<p>Update or remove parameters from the CRD:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl patch baseline baseline-sample --type merge -p '{"spec":{"cpu":2}}'
+baseline.perf.baseline.io/baseline-sample patched
+
+$ kubectl get po
+NAME                    READY   STATUS              RESTARTS   AGE
+baseline-sample-nnq5b   1/1     Terminating         0          5m
+baseline-sample-xvxc9   0/1     ContainerCreating   0          1s
+
+$ kubectl logs baseline-sample-xvxc9
+stress-ng: info:  [1] setting to a 0 second run per stressor
+stress-ng: info:  [1] dispatching hogs: 2 cpu, 1 vm, 1 io, 1 sock, 1 timer
+</code></pre></div></div>
+
+<p>Some updates (like the above) that get translated into a new command cause the DaemonSet to be recreated.</p>
+
+<p>Check for the CRD events:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl describe baseline baseline-sample
+...
+Events:
+  Type    Reason     Age    From      Message
+  ----    ------     ----   ----      -------
+  Normal  Created    5m20s  Baseline  Created daemonset default/baseline-sample
+  Normal  Recreated  4s     Baseline  Rereated daemonset default/baseline-sample
+</code></pre></div></div>
+
+<p>Other fields of the CRD can be updated without the need of a DaemonSet recreation, like i.e.: <code class="language-plaintext highlighter-rouge">image</code>, <code class="language-plaintext highlighter-rouge">hostNetwork</code>, <code class="language-plaintext highlighter-rouge">nodeSelector</code> and <code class="language-plaintext highlighter-rouge">tolerations</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl patch baseline baseline-sample --type merge -p '{"spec":{"nodeSelector":{"stress":"true"}}}'
+baseline.perf.baseline.io/baseline-sample patched
+
+$ kubects get daemonset
+NAME              DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+baseline-sample   0         0         0       0            0           stress=true     3m9s
+
+$ kubectl describe baseline baseline-sample
+...
+Events:
+  Type    Reason     Age    From      Message
+  ----    ------     ----   ----      -------
+  Normal  Created    6m20s  Baseline  Created daemonset default/baseline-sample
+  Normal  Recreated  1m10s  Baseline  Rereated daemonset default/baseline-sample
+  Normal  Updated    7s     Baseline  Updated daemonset default/baseline-sample
+</code></pre></div></div>
+
+<h3 id="node-placement">Node placement</h3>
+
+<p>If you specify node selector(s), then the DaemonSet controller will create Pods on nodes which match that node selector(s):</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">perf.baseline.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Baseline</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">baseline-sample</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">cpu</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">nodeSelector</span><span class="pi">:</span>
+    <span class="na">stress</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get daemonset
+NAME              DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+baseline-sample   1         1         1       1            1           stress=true     1m
+</code></pre></div></div>
+
+<p>By default, DaemonSet Pods only run in worker nodes. If you want to run <em>stress-ng</em> loads in control plane nodes you can use tolerations:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">perf.baseline.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Baseline</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">baseline-sample</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">cpu</span><span class="pi">:</span> <span class="s">1</span><span class="err">			</span>            
+  <span class="na">tolerations</span><span class="pi">:</span>
+  <span class="c1"># these tolerations are to have the daemonset runnable on control plane nodes</span>
+  <span class="c1"># remove them if your control plane nodes should not run pods</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/control-plane</span>
+    <span class="na">operator</span><span class="pi">:</span> <span class="s">Exists</span>
+    <span class="na">effect</span><span class="pi">:</span> <span class="s">NoSchedule</span>
+  <span class="pi">-</span> <span class="na">key</span><span class="pi">:</span> <span class="s">node-role.kubernetes.io/master</span>
+    <span class="na">operator</span><span class="pi">:</span> <span class="s">Exists</span>
+    <span class="na">effect</span><span class="pi">:</span> <span class="s">NoSchedule</span>
+</code></pre></div></div>
+
+<h3 id="custom-image">Custom image</h3>
+
+<p>It is possible to select a custom image for <em>stress-ng</em> using the <code class="language-plaintext highlighter-rouge">image</code> property:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">apiVersion</span><span class="pi">:</span> <span class="s">perf.baseline.io/v1</span>
+<span class="na">kind</span><span class="pi">:</span> <span class="s">Baseline</span>
+<span class="na">metadata</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">baseline-sample</span>
+<span class="na">spec</span><span class="pi">:</span>
+  <span class="na">cpu</span><span class="pi">:</span> <span class="m">1</span>
+  <span class="na">image</span><span class="pi">:</span> <span class="s">quay.io/cloud-bulldozer/stressng</span>
+</code></pre></div></div>
+
+<p>If not defined, defaults to <code class="language-plaintext highlighter-rouge">quay.io/jcastillolema/stressng:0.14.01</code>. For network workloads is important for <em>stress-ng</em> version to be &gt;= 0.14.01, which allows to choose the network interface via <code class="language-plaintext highlighter-rouge">--sock-if</code>, <code class="language-plaintext highlighter-rouge">sockmany-if</code>, <code class="language-plaintext highlighter-rouge">--udp-if</code> and <code class="language-plaintext highlighter-rouge">udp-flood-if</code>. The default image was compiled through this Dockerfile:</p>
+<div class="language-Dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">FROM</span><span class="s"> quay.io/centos/centos:stream8</span>
+
+<span class="k">WORKDIR</span><span class="s"> /root</span>
+<span class="k">RUN </span>yum <span class="nb">install</span> <span class="nt">-y</span> libaio-devel libattr-devel libcap-devel libgcrypt-devel libjpeg-devel keyutils-libs-devel lksctp-tools-devel libatomic zlib-devel cmake gcc
+<span class="k">RUN </span>curl <span class="nt">-L</span> https://github.com/ColinIanKing/stress-ng/archive/refs/tags/V0.14.01.tar.gz <span class="nt">-o</span> V0.14.01.tar.gz <span class="o">&amp;&amp;</span> <span class="nb">tar</span> <span class="nt">-xzvf</span> V0.14.01.tar.gz <span class="nt">-C</span> /root <span class="nt">--strip-components</span><span class="o">=</span>1
+<span class="k">RUN </span>make clean <span class="o">&amp;&amp;</span> make <span class="o">&amp;&amp;</span> <span class="nb">mv </span>stress-ng /usr/local/bin
+</code></pre></div></div>
+
+<h2 id="installation">Installation</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/josecastillolema/baseline-operator
+$ cd baseline-operator
+$ make deploy
+</code></pre></div></div>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-07-01">July 1, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=baseline-operator%20https%3A%2F%2Fjosecastillolema.github.io%2Fbaseline-operator%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fbaseline-operator%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fbaseline-operator%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/educate-relaunch/" class="pagination--pager" title="AWS Educate relaunch
+">Previous</a>
+    
+    
+      <a href="/shift-aws-foundations-8/" class="pagination--pager" title="FIAP SHIFT: AWS Academy Cloud Foundations - 8th edition
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/baseline-operator/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/baseline-operator"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

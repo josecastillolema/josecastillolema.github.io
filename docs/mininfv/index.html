@@ -1,0 +1,1070 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>GitOps</title>
+<meta name="description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="GitOps">
+<meta property="og:url" content="https://josecastillolema.github.io/mininfv/">
+
+
+  <meta property="og:description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/mininfv/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    
+    
+    <meta itemprop="dateModified" content="2020-07-10T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#mini-nfv">mini-nfv</a><ul>
+<li><a href="#publications">Publications</a></li>
+<li>
+<a href="#use-cases">Use cases</a><ul><li><a href="#automation--jinja2-support">Automation / Jinja2 support</a></li></ul>
+</li>
+<li><a href="#characteristics">Characteristics</a></li>
+<li><a href="#network-definition">Network definition</a></li>
+<li><a href="#ipmac-definition">IP/MAC definition</a></li>
+<li><a href="#flavor-and-number-of-cpus">Flavor and number of cpus</a></li>
+<li><a href="#cloud-init">Cloud-init</a></li>
+<li>
+<a href="#dependencies">Dependencies</a><ul>
+<li><a href="#via-pip">Via pip</a></li>
+<li><a href="#via-pipenv">Via pipenv</a></li>
+</ul>
+</li>
+<li><a href="#mini-nfv-1">mini-nfv</a></li>
+<li><a href="#mini-nfv-debugging">mini-nfv debugging</a></li>
+<li><a href="#vnf-manager">VNF Manager</a></li>
+<li><a href="#nfv-orchestrator">NFV Orchestrator</a></li>
+</ul>
+</li></ul>
+
+            </nav>
+          </aside>
+        
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="125" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=mini-nfv&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<p><a href="https://zenodo.org/badge/latestdoi/116139340"><img src="https://zenodo.org/badge/116139340.svg" alt="DOI"></a>
+<img src="https://img.shields.io/github/v/release/josecastillolema/mini-nfv" alt="GitHub release (latest by date)">
+<img src="https://img.shields.io/github/v/tag/josecastillolema/mini-nfv" alt="GitHub tag (latest by date)">
+<img src="https://img.shields.io/github/languages/top/josecastillolema/mini-nfv" alt="GitHub top language">
+<img src="https://visitor-badge.laobi.icu/badge?page_id=josecastillolema.mini-nfv&amp;title=hits" alt="visitors">
+<img src="https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/mini-nfv" alt="GitHub Pipenv locked Python version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/mini-nfv/netaddr" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/mini-nfv/pyyaml" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/mini-nfv/jinja2" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/license/josecastillolema/mini-nfv" alt="GitHub">
+<img src="https://github.com/josecastillolema/mini-nfv/workflows/Python%20application/badge.svg" alt="Python application"></p>
+
+<h1 id="mini-nfv">mini-nfv</h1>
+<p>Mini-nfv is a framework for NFV Orchestration with a general purpose VNF Manager to deploy and operate Virtual Network Functions (VNFs) and Network Services on Mininet. It is based on ETSI MANO Architectural Framework.</p>
+
+<p>Mini-nfv manages the life-cycle of a Virtual Network Function (VNF). Mini-nfv takes care of deployment, monitoring, scaling and removal of VNFs on Mininet.</p>
+
+<p>Mini-nfv allows loading <a href="http://docs.oasis-open.org/tosca/TOSCA/v1.0/TOSCA-v1.0.html">OASIS TOSCA</a> templates (V1.0 CSD 03) into Mininet, following an <a href="https://docs.openstack.org/tacker/pike/index.html">OpenStack Tacker</a>’s alike workflow. Within Tacker’s documentation it can be found a comprehensive <a href="https://docs.openstack.org/tacker/pike/contributor/vnfd_template_description.html">VNF Descriptor Template Guide</a>.</p>
+
+<p>Mini-nfv uses TOSCA for VNF meta-data definition. Within TOSCA, mini-nfv uses NFV profile schema:</p>
+<ul>
+  <li>TOSCA YAML
+    <ul>
+      <li>YAML Simple Profile: <a href="http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.1/csprd02/TOSCA-Simple-Profile-YAML-v1.1-csprd02.html">http://docs.oasis-open.org/tosca/TOSCA-Simple-Profile-YAML/v1.1/csprd02/TOSCA-Simple-Profile-YAML-v1.1-csprd02.html</a>
+</li>
+    </ul>
+  </li>
+  <li>TOSCA NFV Profile:
+    <ul>
+      <li>Spec is available here: <a href="https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca">https://www.oasis-open.org/committees/document.php?document_id=56577&amp;wg_abbrev=tosca</a>
+</li>
+      <li>Download: <a href="https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc">https://www.oasis-open.org/committees/download.php/56577/tosca-nfv-v1.0-wd02-rev03.doc</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="publications">Publications</h2>
+<ul>
+  <li>
+<a href="https://ieeexplore.ieee.org/document/8806686">J. Castillo-Lema, A. Venâncio Neto, F. de Oliveira and S. Takeo Kofuji, “<strong>Mininet-NFV: Evolving Mininet with OASIS TOSCA NVF profiles towards reproducible NFV prototyping</strong>”, <em>2019 IEEE Conference on Network Softwarization (NetSoft)</em>, Paris, France, 2019, pp. 506-512, doi: 10.1109/NETSOFT.2019.8806686.</a>
+<a href="https://doi.org/10.1109/NETSOFT.2019.8806686"><img src="https://zenodo.org/badge/DOI/10.1109/NETSOFT.2019.8806686.svg" alt="DOI:10.1109/NETSOFT.2019.8806686"></a>
+</li>
+  <li>
+<a href="https://teses.usp.br/teses/disponiveis/3/3142/tde-23102019-120559/pt-br.php">CASTILLO LEMA, José. <strong>A generic Network Function Virtualization Manager and Orchestrator for Content-Centric Networks</strong> [doi:10.11606/T.3.2019.tde-23102019-120559]. São Paulo : Polytechnic School of the University of São Paulo, 2019. PhD. Thesis in Electronic Systems. [last accessed 2020-06-01].</a> <a href="https://doi.org/10.11606/T.3.2019.tde-23102019-120559"><img src="https://zenodo.org/badge/DOI/10.11606/T.3.2019.tde-23102019-120559.svg" alt="DOI:10.11606/T.3.2019.tde-23102019-120559"></a>
+</li>
+</ul>
+
+<h2 id="use-cases">Use cases</h2>
+<p>In the OpenStack world, Tacker is the project implementing a generic VNFM and NFVO. At the input consumes Tosca-based templates, which are then used to spin up VMs on OpenStack. While it is true that today exist various tools that simplify the deployment of an OpenStack cloud (i.e.: devstack), deploying, configuring and managing OpenStack environments is still a time-consuming process with a considerable learning curve.</p>
+
+<p>On the other hand, Mininet has shown itself as a great tool for agile network/SDN/NFV experimentation. The goal of mini-nfv is to alleviate the developers’ tedious task of setting up a whole service chaining environment and let them focus on their own work (e.g., developing a particular VNF, prototyping, implementing an orchestration algorithm or a customized traffic steering).</p>
+
+<h3 id="automation--jinja2-support">Automation / Jinja2 support</h3>
+
+<p>On top of that, mini-nfv supports <a href="http://jinja.pocoo.org/docs/2.10/">Jinja2</a>, a full featured and designer-friendly template engine for Python, with an integrated sandboxed execution environment. This way, developers can easily automate the scale-out of vNF deployments and NFV orquestration graphs within the TOSCA templates. Inside the TOSCA templates, variables or expressions can be defined, as in for example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ip_dst_prefix: ’{{ ip_dst }}’
+</code></pre></div></div>
+<p>It is also possible to define tags, which control the logic of the template:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% ip_masq == 24 %}
+</code></pre></div></div>
+<p>Variables will then be replaced with values when the templates are rendered. This can be done interactively through mini-nfv CLI, as in:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>px import yaml; net.values=yaml.load (’---\nip_dst: 10.0.40.10/24’)
+</code></pre></div></div>
+<p>Like this, using only one parametrized template it is possible to deploy any number of VNFs/VNFDs/VNFFGs with varying parameters.</p>
+
+<h2 id="characteristics">Characteristics</h2>
+<p>NFV Catalog</p>
+<ul>
+  <li>VNF Descriptors</li>
+  <li>Network Services Decriptors</li>
+  <li>VNF Forwarding Graph Descriptors</li>
+</ul>
+
+<p>VNF Manager</p>
+<ul>
+  <li>Basic life-cycle of VNF (create/update/delete)</li>
+  <li>Facilitate initial configuration of VNF</li>
+</ul>
+
+<p>NFVO Orquestrator</p>
+<ul>
+  <li>Templatized end-to-end Network Service deployment using decomposed VNFs</li>
+  <li>VNF placement policy – ensure efficient placement of VNFs</li>
+  <li>VNFs connected using an Service Function Chain (SFC) - described in a VNF Forwarding Graph Descriptor</li>
+  <li>Symmetrical and asymmetrical traffic from and to the VNFs! (currently Tacker/OpenStack VIM driver only support asymmetrical unidirectional traffic)</li>
+</ul>
+
+<p>Mini-nfv supports:</p>
+<ul>
+  <li>Jinja2 templating, to automate the scale-out of vNF deplyments and NFV orquestration graphs within the TOSCA templates <a href="#automation--jinja2-support">↵</a>
+</li>
+  <li>network definition via VL <a href="#network-definition">↵</a>
+</li>
+  <li>IP/mac definition via CP <a href="#ipmac-definition">↵</a>
+</li>
+  <li>emulation of num CPUs and flavor properties through Mininet’s CPULimitedHost <a href="#flavor-and-number-of-cpus">↵</a>
+</li>
+  <li>cloud-init scripts <a href="#cloud-init">↵</a>
+</li>
+</ul>
+
+<p>Mini-nfv ignores:</p>
+<ul>
+  <li>RAM and disk properties</li>
+  <li>Floating IPs</li>
+  <li>NUMA topology</li>
+  <li>SR-IOV</li>
+</ul>
+
+<p>Mini-nfv has not implemented (yet):</p>
+<ul>
+  <li>Monitoring/autoscaling of VNFs</li>
+  <li>Network Service Descriptors (NSDs)</li>
+  <li>Explicit support for containers/NETCONF/Click-based VNFs</li>
+</ul>
+
+<h2 id="network-definition">Network definition</h2>
+<p>If not specified otherwise, mini-nfv will create 3 standards networks:</p>
+<ul>
+  <li>net_mgmt: 192.168.120.0/24</li>
+  <li>net0: 10.10.0.0/24</li>
+  <li>net1: 10.10.1.0/24</li>
+</ul>
+
+<p>It is also possible to manually define the networks, within the Virtual Link (VL) definition, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-network.yaml">tosca-vnfd-network.yaml</a>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VL2</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VL</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">network_name</span><span class="pi">:</span> <span class="s">custom_net0</span>
+    <span class="na">vendor</span><span class="pi">:</span> <span class="s">Tacker</span>
+    <span class="na">ip_version</span><span class="pi">:</span> <span class="m">4</span>
+    <span class="na">cidr</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.0/24'</span>
+    <span class="na">start_ip</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.50'</span>
+    <span class="na">end_ip</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.200'</span>
+    <span class="na">gateway_ip</span><span class="pi">:</span> <span class="s1">'</span><span class="s">20.0.0.1'</span>
+</code></pre></div></div>
+
+<h2 id="ipmac-definition">IP/MAC definition</h2>
+<p>If not specified otherwise, mini-nfv will assign random IPs within the defined networks.
+However, it is also possibly to manually define IP/MAC for a VNF, within the Connection Point (CP) definition, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-mac-ip.yaml">tosca-vnfd-mac-ip.yaml</a>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">CP1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.CP.Tacker</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">management</span><span class="pi">:</span> <span class="no">true</span>
+    <span class="na">mac_address</span><span class="pi">:</span> <span class="s">6c:40:08:a0:de:0a</span>
+    <span class="na">ip_address</span><span class="pi">:</span> <span class="s">10.10.1.12</span>
+    <span class="na">order</span><span class="pi">:</span> <span class="m">0</span>
+    <span class="na">anti_spoofing_protection</span><span class="pi">:</span> <span class="no">false</span>
+  <span class="na">requirements</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">virtualLink</span><span class="pi">:</span>
+        <span class="na">node</span><span class="pi">:</span> <span class="s">VL1</span>
+    <span class="pi">-</span> <span class="na">virtualBinding</span><span class="pi">:</span>
+        <span class="na">node</span><span class="pi">:</span> <span class="s">VDU1</span>
+</code></pre></div></div>
+
+<h2 id="flavor-and-number-of-cpus">Flavor and number of cpus</h2>
+<p>Mini-nfv emulates VNF resource configuration defined via <code class="language-plaintext highlighter-rouge">num_cpus</code> properties:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VDU1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VDU.Tacker</span>
+  <span class="na">capabilities</span><span class="pi">:</span>
+    <span class="na">nfv_compute</span><span class="pi">:</span>
+      <span class="na">properties</span><span class="pi">:</span>
+        <span class="na">num_cpus</span><span class="pi">:</span> <span class="m">1</span>
+        <span class="na">mem_size</span><span class="pi">:</span> <span class="s">512 MB</span>
+        <span class="na">disk_size</span><span class="pi">:</span> <span class="s">1 GB</span>
+</code></pre></div></div>
+<p>or through flavor:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VDU1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VDU.Tacker</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">flavor</span><span class="pi">:</span> <span class="s">m1.tiny</span>
+</code></pre></div></div>
+<p>Mini-nfv maps flavors and number of cpus property configuration into <a href="http://mininet.org/api/classmininet_1_1node_1_1CPULimitedHost.html">Mininet’s CPULimitedHost</a>.
+Currently, mini-nfv support the folowing flavors:</p>
+<ul>
+  <li>m1.tiny: 1 cpu</li>
+  <li>m1.small: 1 cpu</li>
+  <li>m1.medium: 2 cpus</li>
+  <li>m1.large: 4 cpus</li>
+  <li>m1.xlargue: 8 cpus</li>
+</ul>
+
+<p>Mini-nfv will assign 1/(8-num_cpus))) to each VNF.</p>
+
+<h2 id="cloud-init">Cloud-init</h2>
+<p>Mini-nfv supports VNFs configuration through user-data, see <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/vnfd/tosca-vnfd-userdata.yaml">tosca-vnfd-userdata.yaml</a>:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">VDU1</span><span class="pi">:</span>
+  <span class="na">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VDU.Tacker</span>
+  <span class="na">properties</span><span class="pi">:</span>
+    <span class="na">user_data_format</span><span class="pi">:</span> <span class="s">RAW</span>
+    <span class="na">user_data</span><span class="pi">:</span> <span class="pi">|</span>
+      <span class="s">#!/bin/sh</span>
+      <span class="s">echo "my hostname is `hostname`" &gt; /tmp/hostname</span>
+      <span class="s">df -h &gt; /tmp/diskinfo</span>
+</code></pre></div></div>
+
+<h2 id="dependencies">Dependencies</h2>
+<p>Mini-nfv was tested on Ubuntu 14.04, 16.04 and 18.04.</p>
+
+<p>APT dependencies:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">mininet</code></li>
+  <li>
+<code class="language-plaintext highlighter-rouge">openvswitch-testcontroller</code> (in Ubuntu 16.04 and 18.04)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">python-netaddr</code> (it can also be installed via <code class="language-plaintext highlighter-rouge">pip</code>)</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">python-yaml</code> (it can also be installed via <code class="language-plaintext highlighter-rouge">pip</code>)</li>
+</ul>
+
+<h3 id="via-pip">Via pip</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip install -r ./requirements.txt
+</code></pre></div></div>
+
+<h3 id="via-pipenv">Via pipenv</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pipenv install
+</code></pre></div></div>
+
+<p>If you are running Ubuntu 16.04, the <code class="language-plaintext highlighter-rouge">openvswitch-ovscontroller</code> was recently renamed to <code class="language-plaintext highlighter-rouge">openvswitch-testcontroller</code>.
+To solve it, you need to create a symbolic link to <code class="language-plaintext highlighter-rouge">ovs-testcontroller</code> that is called <code class="language-plaintext highlighter-rouge">ovs-controller</code>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ln /usr/bin/ovs-testcontroller /usr/bin/ovs-controller
+</code></pre></div></div>
+<p>In Ubuntu 18.04 <code class="language-plaintext highlighter-rouge">openvswitch-testcontroller</code> must be stopped before running mini-nfv in standalone mode.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo systemctl stop openvswitch-testcontroller.service
+</code></pre></div></div>
+
+<h2 id="mini-nfv-1">mini-nfv</h2>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Usage: mininfv [options]
+
+The mininfv utility loads vNFs into Mininet networks from the command line.
+It can create parametrized topologies, invoke the mininfv CLI, and run tests.
+
+Options:
+  -h, --help            show this help message and exit
+  --controller=CONTROLLER
+                        remote=RemoteController
+</code></pre></div></div>
+<p>Whithou any explicit options mininfv runs mininet with its default controller. This way can be usefull to test the VNF Manager functionality with full connectivity between VNFs hosts and NFV Orchestration capabilities without the need of running POX, Ryu or other SDN controller. However, if you wish to include a SDN controller into your experiments mininfv must be run with the <code class="language-plaintext highlighter-rouge">--controller=remote</code> option alongside with the controller running in the background, for example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./pox.py pox.forwarding.l3_learning openflow.discovery                              or
+$ ./pox.py log.level --DEBUG pox.forwarding.l3_learning openflow.discovery           (debug mode)
+</code></pre></div></div>
+
+<h2 id="mini-nfv-debugging">mini-nfv debugging</h2>
+<p>During a mini-nfv session, the openvswitch status can be debugging using the following commands (from outside mininfv CLI):</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl show 
+bece8326-e719-4b6f-abee-a422f6904808
+    Bridge "s192.168.1"
+        Controller "tcp:127.0.0.1:6633"
+            is_connected: true
+        fail_mode: secure
+        Port "s192.168.1"
+            Interface "s192.168.1"
+                type: internal
+        Port "s192.168.1-eth1"
+            Interface "s192.168.1-eth1"
+    ovs_version: "2.5.4"
+</code></pre></div></div>
+
+<p>To show the ports attached to a specific switch:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ovs-ofctl show s192.168.1
+OFPT_FEATURES_REPLY (xid=0x2): dpid:00000000000000c0
+n_tables:254, n_buffers:256
+capabilities: FLOW_STATS TABLE_STATS PORT_STATS QUEUE_STATS ARP_MATCH_IP
+actions: output enqueue set_vlan_vid set_vlan_pcp strip_vlan mod_dl_src mod_dl_dst mod_nw_src mod_nw_dst mod_nw_tos mod_tp_src mod_tp_dst
+ 1(s192.168.1-eth1): addr:72:cb:47:5b:23:ec
+     config:     0
+     state:      0
+     current:    10GB-FD COPPER
+     speed: 10000 Mbps now, 0 Mbps max
+ LOCAL(s192.168.1): addr:ae:89:9f:63:e5:47
+     config:     PORT_DOWN
+     state:      LINK_DOWN
+     speed: 0 Mbps now, 0 Mbps max
+OFPT_GET_CONFIG_REPLY (xid=0x4): frags=normal miss_send_len=0
+</code></pre></div></div>
+
+<p>To dump the flows of a specific switch:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ovs-ofctl dump-flows s192.168.1
+NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=244.774s, table=0, n_packets=9, n_bytes=434, idle_age=0, priority=0 actions=CONTROLLER:128
+</code></pre></div></div>
+
+<p>From inside the mini-nfv session CLI, there are some commands that could also be usefull for debugging purposes:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mininfv&gt; dump
+&lt;Host http_cl: http_cl-eth0:192.168.120.1 pid=26425&gt; 
+&lt;OVSSwitch s192.168.1: lo:127.0.0.1,s192.168.1-eth1:None pid=26420&gt; 
+&lt;OVSController c0: 127.0.0.1:6633 pid=26409&gt; 
+
+mininfv&gt; dpctl dump-flows
+*** s192.168.1 ------------------------------------------------------------------------
+NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=682.379s, table=0, n_packets=14, n_bytes=644, idle_age=432, priority=0 actions=CONTROLLER:128
+</code></pre></div></div>
+
+<h2 id="vnf-manager">VNF Manager</h2>
+
+<ul>
+  <li>
+    <p><strong>VNFD creation/listing/removal/template show</strong></p>
+
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; vnfd_&lt;TAB&gt;
+ vnfd_create         vnfd_delete         vnfd_list           vnfd_template_show  
+
+ mininfv&gt; vnfd_create
+ Use: vnfd_create --vnfd-file &lt;yaml file path&gt; &lt;VNFD-NAME&gt;
+
+ mininfv&gt; vnfd_create --vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfd-userdata
+
+ mininfv&gt; vnfd_create --vnfd-file samples/vnfd/tosca-vnfd-hello-world.yaml vnfd-helloworld
+
+ mininfv&gt; vnfd_list
+ vnfd-helloworld: Demo example
+ vnfd-userdata: Demo with user-data
+
+ mininfv&gt; vnfd_template_show vnfd-userdata
+ {'VDU1': {'type': 'tosca.nodes.nfv.VDU.Tacker', 'properties': {'image': 'cirros-0.3.5-x86_64-disk', 'user_data_format': 'RAW', 'config': 'param0: key1\nparam1: key2\n', 'user_data': '#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n', 'mgmt_driver': 'noop'}, 'capabilities': {'nfv_compute': {'properties': {'mem_size': '512 MB', 'num_cpus': 1, 'disk_size': '1 GB'}}}}, 'CP1': {'type': 'tosca.nodes.nfv.CP.Tacker', 'requirements': [{'virtualLink': {'node': 'VL1'}}, {'virtualBinding': {'node': 'VDU1'}}], 'properties': {'anti_spoofing_protection': False, 'management': True, 'order': 0}}, 'VL1': {'type': 'tosca.nodes.nfv.VL', 'properties': {'network_name': 'net_mgmt', 'vendor': 'ACME'}}}
+
+ mininfv&gt; vnfd_delete vnfd-userdata
+
+ mininfv&gt; vnfd_list
+ vnfd-helloworld: Demo example
+</code></pre></div>    </div>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/vnfd_test"><code class="language-plaintext highlighter-rouge">vnfd_test</code></a> from mininfv:</p>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/vnfd_test
+ *** Creating vnfds userdata and hello-world ...
+ *** Listing vnfds ...
+ vnfd-helloworld: Demo example
+ vnfd-userdata: Demo with user-data
+
+ *** Showing vnf template ...
+ {'tosca_definitions_version': 'tosca_simple_profile_for_nfv_1_0_0', 'metadata': {'template_name': 'sample-vnfd-userdata'}, 'description': 'Demo with user-data', 'topology_template': {'node_templates': {'VDU1': {'type': 'tosca.nodes.nfv.VDU.Tacker', 'properties': {'image': 'cirros-0.3.5-x86_64-disk', 'user_data_format': 'RAW', 'config': 'param0: key1\nparam1: key2\n', 'user_data': '#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\necho 1 &gt; /proc/sys/net/ipv4/ip_forward\nip route add default via 192.168.120.10\n', 'mgmt_driver': 'noop'}, 'capabilities': {'nfv_compute': {'properties': {'mem_size': '512 MB', 'num_cpus': 1, 'disk_size': '1 GB'}}}}, 'CP1': {'type': 'tosca.nodes.nfv.CP.Tacker', 'requirements': [{'virtualLink': {'node': 'VL1'}}, {'virtualBinding': {'node': 'VDU1'}}], 'properties': {'anti_spoofing_protection': False, 'management': True, 'order': 0}}, 'VL1': {'type': 'tosca.nodes.nfv.VL', 'properties': {'network_name': 'net_mgmt', 'vendor': 'ACME'}}}}}
+
+</code></pre></div>    </div>
+  </li>
+  <li>
+<strong>VNF creation/listing/removal</strong>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; vnf_&lt;TAB&gt;
+ vnf_create  vnf_delete  vnf_list
+
+ mininfv&gt; vnf_create
+ Use: vnf_create --vnfd-name &lt;VNFD-NAME&gt; &lt;VNF-NAME&gt;
+      vnf_create --vnfd-file &lt;yaml file path&gt; &lt;VNFD-NAME&gt;
+      vnf_create --vnfd-template &lt;yaml file path&gt; &lt;VNFD-NAME&gt;
+
+ mininfv&gt; vnf_create --vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfUD
+ *** Initializing VDU vnf-userdata ...
+ *** user-data : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n',)
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 s192.168.1 vnfUD
+
+ mininfv&gt; vnf_list
+ ['vnfUD']
+
+ mininfv&gt; vnfUD ifconfig
+ ud-eth0   Link encap:Ethernet  HWaddr 76:2c:90:f5:72:13  
+           inet addr:192.168.120.10  Bcast:192.168.120.255  Mask:255.255.255.0
+           inet6 addr: fe80::742c:90ff:fef5:7213/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:41 errors:0 dropped:10 overruns:0 frame:0
+           TX packets:8 errors:0 dropped:0 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000 
+           RX bytes:6751 (6.7 KB)  TX bytes:648 (648.0 B)
+
+ mininfv&gt; vnf_delete vnf-userdata
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 s192.168.1
+
+ mininfv&gt; vnf_list
+ []
+</code></pre></div>    </div>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/vnf_test"><code class="language-plaintext highlighter-rouge">vnf_test</code></a> from mininfv:</p>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/vnf_test
+ *** Starting vnf &lt;tosca-vnfd-userdata.yaml&gt; ...
+ *** Initializing VDU vnfUD ...
+ *** vnfUD : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\necho 1 &gt; /proc/sys/net/ipv4/ip_forward\nip route add default via 192.168.120.10\n',)
+
+ *** Listing vNF interfaces:
+ vnfUD-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+         inet 192.168.120.10  netmask 255.255.255.0  broadcast 192.168.120.255
+         inet6 fe80::7032:2dff:fe89:175e  prefixlen 64  scopeid 0x20&lt;link&gt;
+         ether 72:32:2d:89:17:5e  txqueuelen 1000  (Ethernet)
+         RX packets 0  bytes 0 (0.0 B)
+         RX errors 0  dropped 0  overruns 0  frame 0
+         TX packets 0  bytes 0 (0.0 B)
+         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ *** Listing nodes:
+ available nodes are: 
+ c0 s192.168.1 vnfUD
+</code></pre></div>    </div>
+  </li>
+  <li>
+<strong>Adding hosts to the topology</strong>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; add_host
+ Use: add_host &lt;HOST-NAME&gt; [&lt;IP1/masc&gt; &lt;IP2/masc&gt; ...]
+
+ mininfv&gt; add_host h1 10.0.0.11/24 20.0.0.11/24
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 h1 s10.0.0.0 s20.0.0.0 ud
+
+ mininfv&gt; h1 ifconfig
+ h1-eth0   Link encap:Ethernet  HWaddr 3e:b2:ba:99:4e:dc  
+           inet addr:10.0.0.11  Bcast:10.255.255.255  Mask:255.255.255.0
+           inet6 addr: fe80::3cb2:baff:fe99:4edc/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:24 errors:0 dropped:1 overruns:0 frame:0
+           TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000 
+           RX bytes:3445 (3.4 KB)  TX bytes:578 (578.0 B)
+
+ h1-eth1   Link encap:Ethernet  HWaddr aa:08:cf:38:e8:d5  
+           inet addr:20.0.0.10  Bcast:20.255.255.255  Mask:255.255.255.0
+           inet6 addr: fe80::a808:cfff:fe38:e8d5/64 Scope:Link
+           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+           RX packets:25 errors:0 dropped:1 overruns:0 frame:0
+           TX packets:7 errors:0 dropped:0 overruns:0 carrier:0
+           collisions:0 txqueuelen:1000 
+           RX bytes:3515 (3.5 KB)  TX bytes:578 (578.0 B)
+
+ mininfv&gt; add_host h2 10.0.0.12/24
+
+ mininfv&gt; switch s10.0.0.0 start
+
+ mininfv&gt; h1 ping -c3 h2
+ PING 10.0.0.12 (10.0.0.12) 56(84) bytes of data.
+ 64 bytes from 10.0.0.12: icmp_seq=1 ttl=64 time=2.93 ms
+ 64 bytes from 10.0.0.12: icmp_seq=2 ttl=64 time=0.736 ms
+ 64 bytes from 10.0.0.12: icmp_seq=3 ttl=64 time=0.142 ms
+
+ --- 10.0.0.12 ping statistics ---
+ 3 packets transmitted, 3 received, 0% packet loss, time 2032ms
+ rtt min/avg/max/mdev = 0.142/1.270/2.934/1.201 ms
+</code></pre></div>    </div>
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/host_test"><code class="language-plaintext highlighter-rouge">host_test</code></a> from mininfv:</p>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> mininfv&gt; source samples/topology/host_test
+ *** Creating host h1 with two interfaces ...
+ *** Listing interfaces of the host:
+ h1-eth0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+         inet 10.0.0.11  netmask 255.255.255.0  broadcast 10.0.0.255
+         inet6 fe80::609d:6fff:fe6e:eae8  prefixlen 64  scopeid 0x20&lt;link&gt;
+         ether 62:9d:6f:6e:ea:e8  txqueuelen 1000  (Ethernet)
+         RX packets 1  bytes 90 (90.0 B)
+         RX errors 0  dropped 0  overruns 0  frame 0
+         TX packets 1  bytes 90 (90.0 B)
+         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ h1-eth1: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500
+         inet 20.0.0.11  netmask 255.255.255.0  broadcast 20.0.0.255
+         inet6 fe80::bc42:45ff:fee1:6e0b  prefixlen 64  scopeid 0x20&lt;link&gt;
+         ether be:42:45:e1:6e:0b  txqueuelen 1000  (Ethernet)
+         RX packets 0  bytes 0 (0.0 B)
+         RX errors 0  dropped 0  overruns 0  frame 0
+         TX packets 0  bytes 0 (0.0 B)
+         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+ *** Creating host h2
+ *** Starting switch ...
+ *** Listing nodes:
+ available nodes are: 
+ c0 h1 h2 s10.0.0.0 s192.168.1 s20.0.0.0 vnfUD
+
+ *** Testing conectivity ...
+ PING 10.0.0.12 (10.0.0.12) 56(84) bytes of data.
+ 64 bytes from 10.0.0.12: icmp_seq=1 ttl=64 time=3.43 ms
+ 64 bytes from 10.0.0.12: icmp_seq=2 ttl=64 time=0.716 ms
+ 64 bytes from 10.0.0.12: icmp_seq=3 ttl=64 time=0.111 ms
+
+ --- 10.0.0.12 ping statistics ---
+ 3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+ rtt min/avg/max/mdev = 0.111/1.419/3.430/1.443 ms
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="nfv-orchestrator">NFV Orchestrator</h2>
+
+<ul>
+  <li>
+<strong>VNFFG creation/listing/removal</strong>
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo ./mininfv.py
+ *** Configuring hosts
+ *** Starting controller
+ *** Starting 0 switches
+ *** Starting CLI:
+
+ mininfv&gt; vnf_create --vnfd-file samples/vnfd/tosca-vnfd-userdata.yaml vnfUD
+ *** Initializing VDU vnf-userdata ...
+ *** user-data : ('#!/bin/sh\necho "my hostname is `hostname`" &gt; /tmp/hostname\ndf -h &gt; /tmp/diskinfo\n',)
+
+ mininfv&gt; add_host http_cl 192.168.120.1/24
+
+ mininfv&gt; add_host http_sr 192.168.120.2/24
+
+ mininfv&gt; nodes
+ available nodes are: 
+ c0 http_cl http_sr s192.168.1 vnfUD
+
+ mininfv&gt; switch s192.168.1 start
+
+ mininfv&gt; py http_sr.cmdPrint('python -m SimpleHTTPServer 80 &amp;')
+
+ mininfv&gt; vnffg_&lt;TAB&gt;
+ vnffg_create  vnffg_delete  vnffg_list
+
+ mininfv&gt; vnffg_create
+ Use: vnffg-create --vnffgd-name &lt;vnffgd-name&gt; --vnf-mapping &lt;vnf-mapping&gt;
+                   --symmetrical &lt;boolean&gt; &lt;vnffg-name&gt;
+      vnffg-create --vnffgd-template &lt;vnffgd-template&gt; --vnf-mapping &lt;vnf-mapping&gt;
+                   --symmetrical &lt;boolean&gt; &lt;vnffg-name&gt;
+
+ mininfv&gt; vnffg_create --vnffgd-template samples/vnffgd/tosca-vnffgd-helloworld.yaml --vnf-mapping vnfd-helloworld:'vnfUD' --symmetrical false vnffg-sample
+
+ mininfv&gt; vnffg_list
+ ['vnffg-sample']
+
+ mininfv&gt; xterm vnfUD
+
+ mininfv&gt; http_cl curl http_sr
+ &lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;&lt;html&gt;
+ ...
+
+ mininfv&gt; vnffg_delete vnffg-sample
+
+ mininfv&gt; vnffg_list
+ []
+</code></pre></div>    </div>
+
+    <p>Or just source  <a href="https://github.com/josecastillolema/mini-nfv/blob/master/samples/topology/vnffg_test"><code class="language-plaintext highlighter-rouge">vnffg_test</code></a> from mininfv:
+ <code class="language-plaintext highlighter-rouge">mininfv&gt; source samples/topology/vnffg_test</code></p>
+
+    <p>In the xterm window of the vnfUD we opened at step 11, if we sniff the interface we can see the http and icmp traffic corresponding to the curl and ping passing through the VNF interface:
+<img src="https://raw.githubusercontent.com/josecastillolema/mini-nfv/master/doc/img/screendshot_vnfUD.png" alt="Screenshot of the VNF xterm"></p>
+  </li>
+</ul>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#iac" class="page__taxonomy-item p-category" rel="tag">iac</a><span class="sep">, </span>
+    
+      <a href="/tags/#networks" class="page__taxonomy-item p-category" rel="tag">networks</a><span class="sep">, </span>
+    
+      <a href="/tags/#nfv" class="page__taxonomy-item p-category" rel="tag">nfv</a><span class="sep">, </span>
+    
+      <a href="/tags/#sdn" class="page__taxonomy-item p-category" rel="tag">sdn</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-07-10">July 10, 2020</time></p>
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
+  </form>
+  <div id="results" class="results"></div>
+</div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

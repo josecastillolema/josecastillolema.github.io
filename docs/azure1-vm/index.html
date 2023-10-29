@@ -1,0 +1,1000 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Azure series I: Virtual machines - GitOps</title>
+<meta name="description" content="Serie de artigos sobre Microsoft Azure.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="Azure series I: Virtual machines">
+<meta property="og:url" content="https://josecastillolema.github.io/azure1-vm/">
+
+
+  <meta property="og:description" content="Serie de artigos sobre Microsoft Azure.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2021-02-18T00:00:00-06:00">
+
+
+
+  <meta property="article:modified_time" content="2021-02-18T14:00:58-06:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/azure1-vm/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Azure series I: Virtual machines">
+    <meta itemprop="description" content="Serie de artigos sobre Microsoft Azure.">
+    <meta itemprop="datePublished" content="2021-02-18T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2021-02-18T14:00:58-06:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/azure1-vm/" class="u-url" itemprop="url">Azure series I: Virtual machines
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#lab-1---virtual-machines">Lab 1 - Virtual Machines</a><ul><li><a href="#criando-a-instancia">Criando a instancia</a></li><li><a href="#accessando-à-instancia">Accessando à instancia</a></li><li><a href="#instalando-um-servidor-web">Instalando um servidor web</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><a href="/series/#azure">Serie de artigos</a> sobre Microsoft Azure.</p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-1---virtual-machines">Lab 1 - Virtual Machines</h1>
+
+<h2 id="criando-a-instancia">Criando a instancia</h2>
+<p>Usaremos a imagem oficial <code class="language-plaintext highlighter-rouge">Ubuntu Server</code> para aprender alguns conceitos importantes de máquinas virtuais:</p>
+<ul>
+  <li><strong><em>flavors</em></strong></li>
+  <li><strong><em>security groups</em></strong></li>
+  <li><strong><a href="https://cloud-init.io/">cloud-init</a></strong></li>
+</ul>
+
+<ol>
+  <li>
+    <p>Acessar o serviço <strong>Virtual machine</strong>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm00.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Sempre que for criar novos recursos, selecione como <strong><em>subscription</em></strong> <code class="language-plaintext highlighter-rouge">Azure for students</code> e como <strong><em>resource group</em></strong> <code class="language-plaintext highlighter-rouge">19net</code>. Se o <em>resource group</em> ainda não existe, como é o caso, criar ele:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm01.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Configurar um nome para a instãncia, escolher a <strong>imagem</strong> <code class="language-plaintext highlighter-rouge">Ubuntu Server</code> e o <strong><em>flavor</em></strong> <code class="language-plaintext highlighter-rouge">Standard_B1</code>:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm03.png" alt="" /></p>
+
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm02.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Usaremos chave ssh como método de acesso à VM:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm04.png" alt="" /></p>
+  </li>
+  <li>
+    <p>A porta 22 no <strong><em>security group</em></strong> precisa estar aberta para poder acessar a instância via SSH:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm05.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Configurar <code class="language-plaintext highlighter-rouge">Standard HDD</code> como tipo de disco:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm06.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Usaremos um <em>script</em> de <strong><code class="language-plaintext highlighter-rouge">cloud-init</code></strong> para customizar a instância:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm07.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Confirmar criaçao da instância uma vez validada:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm08.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Fazer <em>download</em> da <strong>chave</strong> para poder acessar a instância via SSH de forma segura:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm09.png" width="465" height="342" /></p>
+  </li>
+  <li>
+    <p>Aguardar a criacao da instância:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm10.png" alt="" /></p>
+  </li>
+</ol>
+
+<h2 id="accessando-à-instancia">Accessando à instancia</h2>
+
+<ol>
+  <li>
+    <p>Note-se o IP público da instância:
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png" alt="" /></p>
+  </li>
+  <li>
+    <p>[<strong>Linux/MAC</strong>] Seguiremos as próprias indicações do Azure:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm12.png" alt="" /></p>
+
+    <p>[<strong>Windows</strong>] Usaremos o <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>, seguindo as seguintes <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows">instruções</a>. Como alternativa ao PuTTy, o <a href="https://mobaxterm.mobatek.net/">MobaXterm</a> é uma excelente opçao.</p>
+  </li>
+  <li>[<strong>Linux/MAC</strong>] Em um terminal local:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 400 aula1_key.pem 
+$ ssh -i aula1_key.pem  azureuser@168.61.32.71
+The authenticity of host '168.61.32.71 (168.61.32.71)' can't be established.
+ECDSA key fingerprint is SHA256:KASB7hYoy0WvdiE+zDEBlyFQ7eoO3bwco32davnUxCA.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '168.61.32.71' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 18.04.5 LTS (GNU/Linux 5.4.0-1039-azure x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Thu Feb 18 13:57:15 UTC 2021
+
+  System load:  0.0               Processes:           107
+  Usage of /:   4.5% of 28.90GB   Users logged in:     0
+  Memory usage: 44%               IP address for eth0: 10.0.0.4
+  Swap usage:   0%
+
+0 packages can be updated.
+0 of these updates are security updates.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo &lt;command&gt;".
+See "man sudo_root" for details.
+
+azureuser@aula1:~$ 
+</code></pre></div>    </div>
+
+    <p>[<strong>Windows</strong>] Seguir as instruções do PuTTY: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/ssh-from-windows</p>
+  </li>
+  <li>Uma vez logado na maquina virtual, confirmar que o script de <strong>cloud-init</strong> rodou com sucesso:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /tmp/
+CloudInitFunciona
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="instalando-um-servidor-web">Instalando um servidor web</h2>
+
+<ol>
+  <li>Instalar o pacote <code class="language-plaintext highlighter-rouge">apache2</code>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>azureuser@aula1:~$ sudo apt install apache2
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following package was automatically installed and is no longer required:
+  linux-headers-4.15.0-135
+Use 'sudo apt autoremove' to remove it.
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  liblua5.2-0 ssl-cert
+Suggested packages:
+  www-browser apache2-doc apache2-suexec-pristine | apache2-suexec-custom openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap liblua5.2-0 ssl-cert
+0 upgraded, 10 newly installed, 0 to remove and 0 not upgraded.
+Need to get 1729 kB of archives.
+After this operation, 6985 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libapr1 amd64 1.6.3-2 [90.9 kB]
+Get:2 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1 amd64 1.6.1-2 [84.4 kB]
+Get:3 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-2 [10.6 kB]
+Get:4 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 libaprutil1-ldap amd64 1.6.1-2 [8764 B]
+Get:5 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 liblua5.2-0 amd64 5.2.4-1.1build1 [108 kB]
+Get:6 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-bin amd64 2.4.29-1ubuntu4.14 [1070 kB]
+Get:7 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-utils amd64 2.4.29-1ubuntu4.14 [83.9 kB]
+Get:8 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2-data all 2.4.29-1ubuntu4.14 [160 kB]
+Get:9 http://azure.archive.ubuntu.com/ubuntu bionic-updates/main amd64 apache2 amd64 2.4.29-1ubuntu4.14 [95.1 kB]
+Get:10 http://azure.archive.ubuntu.com/ubuntu bionic/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+Fetched 1729 kB in 0s (28.4 MB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libapr1:amd64.
+(Reading database ... 76706 files and directories currently installed.)
+Preparing to unpack .../0-libapr1_1.6.3-2_amd64.deb ...
+Unpacking libapr1:amd64 (1.6.3-2) ...
+Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../1-libaprutil1_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../2-libaprutil1-dbd-sqlite3_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../3-libaprutil1-ldap_1.6.1-2_amd64.deb ...
+Unpacking libaprutil1-ldap:amd64 (1.6.1-2) ...
+Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../4-liblua5.2-0_5.2.4-1.1build1_amd64.deb ...
+Unpacking liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Selecting previously unselected package apache2-bin.
+Preparing to unpack .../5-apache2-bin_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2-bin (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2-utils.
+Preparing to unpack .../6-apache2-utils_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2-utils (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2-data.
+Preparing to unpack .../7-apache2-data_2.4.29-1ubuntu4.14_all.deb ...
+Unpacking apache2-data (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package apache2.
+Preparing to unpack .../8-apache2_2.4.29-1ubuntu4.14_amd64.deb ...
+Unpacking apache2 (2.4.29-1ubuntu4.14) ...
+Selecting previously unselected package ssl-cert.
+Preparing to unpack .../9-ssl-cert_1.0.39_all.deb ...
+Unpacking ssl-cert (1.0.39) ...
+Setting up libapr1:amd64 (1.6.3-2) ...
+Setting up apache2-data (2.4.29-1ubuntu4.14) ...
+Setting up ssl-cert (1.0.39) ...
+Setting up libaprutil1:amd64 (1.6.1-2) ...
+Setting up liblua5.2-0:amd64 (5.2.4-1.1build1) ...
+Setting up libaprutil1-ldap:amd64 (1.6.1-2) ...
+Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-2) ...
+Setting up apache2-utils (2.4.29-1ubuntu4.14) ...
+Setting up apache2-bin (2.4.29-1ubuntu4.14) ...
+Setting up apache2 (2.4.29-1ubuntu4.14) ...
+Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+Processing triggers for libc-bin (2.27-3ubuntu1.4) ...
+Processing triggers for systemd (237-3ubuntu10.44) ...
+Processing triggers for man-db (2.8.3-2ubuntu0.1) ...
+Processing triggers for ufw (0.36-0ubuntu0.18.04.1) ...
+Processing triggers for ureadahead (0.100.0-21) ...
+</code></pre></div>    </div>
+  </li>
+  <li>Criar um <em>site</em> de teste, no arquivo <code class="language-plaintext highlighter-rouge">/var/www/html/index.html</code> (como usuário admin):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1&gt;
+   FIAP!!!
+&lt;/h1&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>Testar localmente o servidor web:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>azureuser@aula1:~$ curl localhost
+&lt;h1&gt;
+   FIAP!!!
+&lt;/h1&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Obter o IP público da VM:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm11.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Testar accesso pelo IP público:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm13.png" alt="" /></p>
+  </li>
+  <li>Como era esperado, o acesso web não funcionou pois a porta HTTP (TCP/80) deve ser liberada nos <em>security groups</em>. Incluir uma liberação para esta porta no <em>security group</em> associado à instância:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm14.png" alt="" /></li>
+</ol>
+
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm15.png" alt="" /></p>
+
+<ol>
+  <li>
+    <p>Validar a criação da regra: 
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm16.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Testar novamente o acesso pelo IP público:
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/vm17.png" alt="" /></p>
+  </li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#azure" class="page__taxonomy-item p-category" rel="tag">azure</a><span class="sep">, </span>
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">series</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-02-18">February 18, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Azure+series+I%3A+Virtual+machines%20https%3A%2F%2Fjosecastillolema.github.io%2Fazure1-vm%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fazure1-vm%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fazure1-vm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/hcia-5g/" class="pagination--pager" title="HCIA 5G - 1st edition
+">Previous</a>
+    
+    
+      <a href="/azure2-container/" class="pagination--pager" title="Azure series II: Containers
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/azure1-vm/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/azure1-vm"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

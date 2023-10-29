@@ -1,0 +1,1511 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>OpenStack series III: Nova - Compute Service - GitOps</title>
+<meta name="description" content="Serie de artigos sobre OpenStack.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="OpenStack series III: Nova - Compute Service">
+<meta property="og:url" content="https://josecastillolema.github.io/openstack3-nova/">
+
+
+  <meta property="og:description" content="Serie de artigos sobre OpenStack.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-03-22T00:00:00-05:00">
+
+
+
+  <meta property="article:modified_time" content="2018-03-22T15:00:58-05:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/openstack3-nova/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="OpenStack series III: Nova - Compute Service">
+    <meta itemprop="description" content="Serie de artigos sobre OpenStack.">
+    <meta itemprop="datePublished" content="2018-03-22T00:00:00-05:00">
+    <meta itemprop="dateModified" content="2018-03-22T15:00:58-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/openstack3-nova/" class="u-url" itemprop="url">OpenStack series III: Nova - Compute Service
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          27 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#lab-3---openstack-nova">Lab 3 - OpenStack Nova</a><ul><li><a href="#compute-service">Compute Service</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#hypervisors">Hypervisors</a></li><li><a href="#flavors">Flavors</a></li><li><a href="#chaves-ssh">Chaves SSH</a></li><li><a href="#instâncias">Instâncias</a></li><li><a href="#snapshots">Snapshots</a></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-3---openstack-nova">Lab 3 - OpenStack Nova</h1>
+
+<h2 id="compute-service">Compute Service</h2>
+<p>Usaremos o serviço <a href="https://docs.openstack.org/nova/latest/">Nova</a> para aprender alguns conceitos importantes sobre máquinas virtuais:</p>
+<ul>
+  <li><strong><em>flavors</em></strong></li>
+  <li><strong><em>security groups</em></strong></li>
+  <li><strong><a href="https://cloud-init.io/">cloud-init</a></strong></li>
+</ul>
+
+<h2 id="pre-reqs">Pre-reqs</h2>
+
+<ol>
+  <li>Conferir se as extensões de virtualizações estão presentes no processador:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ grep -E ' svm | vmx ' /proc/cpuinfo
+</code></pre></div>    </div>
+  </li>
+  <li>Listar os serviços Linux que compõem o Nova:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@n
+devstack@n-api-meta.service                                                                      loaded active running   Devstack devstack@n-api-meta.service
+devstack@n-api.service                                                                           loaded active running   Devstack devstack@n-api.service
+devstack@n-cauth.service                                                                         loaded active running   Devstack devstack@n-cauth.service
+devstack@n-cond-cell1.service                                                                    loaded active running   Devstack devstack@n-cond-cell1.service
+devstack@n-cpu.service                                                                           loaded active running   Devstack devstack@n-cpu.service
+devstack@n-novnc.service                                                                         loaded active running   Devstack devstack@n-novnc.service
+devstack@n-sch.service                                                                           loaded active running   Devstack devstack@n-sch.service
+devstack@n-super-cond.service                                                                    loaded active running   Devstack devstack@n-super-cond.service
+</code></pre></div>    </div>
+  </li>
+  <li>Conferir a saúde dos serviços:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@n*
+● devstack@n-cauth.service - Devstack devstack@n-cauth.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-cauth.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 798 (nova-consoleaut)
+   CGroup: /system.slice/system-devstack.slice/devstack@n-cauth.service
+           └─798 /usr/bin/python /usr/local/bin/nova-consoleauth --config-file /etc/nova/nova.conf
+               
+● devstack@n-sch.service - Devstack devstack@n-sch.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-sch.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 848 (nova-scheduler)
+   CGroup: /system.slice/system-devstack.slice/devstack@n-sch.service
+           └─848 /usr/bin/python /usr/local/bin/nova-scheduler --config-file /etc/nova/nova.conf
+               
+● devstack@n-novnc.service - Devstack devstack@n-novnc.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-novnc.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 861 (nova-novncproxy)
+   CGroup: /system.slice/system-devstack.slice/devstack@n-novnc.service
+           └─861 /usr/bin/python /usr/local/bin/nova-novncproxy --config-file /etc/nova/nova.conf --web /opt/stack/noV
+               
+● devstack@n-super-cond.service - Devstack devstack@n-super-cond.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-super-cond.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 749 (nova-conductor)
+   CGroup: /system.slice/system-devstack.slice/devstack@n-super-cond.service
+           ├─ 749 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova.conf
+           ├─2363 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova.conf
+           └─2368 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova.conf
+               
+● devstack@n-cond-cell1.service - Devstack devstack@n-cond-cell1.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-cond-cell1.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 752 (nova-conductor)
+   CGroup: /system.slice/system-devstack.slice/devstack@n-cond-cell1.service
+           ├─ 752 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova_cell1.conf
+           ├─2365 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova_cell1.conf
+           └─2370 /usr/bin/python /usr/local/bin/nova-conductor --config-file /etc/nova/nova_cell1.conf
+               
+● devstack@n-api-meta.service - Devstack devstack@n-api-meta.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-api-meta.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 770 (uwsgi)
+   Status: "uWSGI is ready"
+   CGroup: /system.slice/system-devstack.slice/devstack@n-api-meta.service
+           ├─770 nova-api-metauWSGI maste
+           ├─877 nova-api-metauWSGI worker
+           ├─878 nova-api-metauWSGI worker
+           └─879 nova-api-metauWSGI http
+    
+● devstack@n-api.service - Devstack devstack@n-api.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-api.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 746 (uwsgi)
+   Status: "uWSGI is ready"
+   CGroup: /system.slice/system-devstack.slice/devstack@n-api.service
+           ├─746 nova-apiuWSGI maste
+           ├─839 nova-apiuWSGI worker
+           └─841 nova-apiuWSGI worker
+               
+● devstack@n-cpu.service - Devstack devstack@n-cpu.service
+   Loaded: loaded (/etc/systemd/system/devstack@n-cpu.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
+ Main PID: 769 (nova-compute)
+   CGroup: /system.slice/system-devstack.slice/devstack@n-cpu.service
+           └─769 /usr/bin/python /usr/local/bin/nova-compute --config-file /etc/nova/nova-cpu.conf
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar os <em>logs</em> do serviço:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ journalctl -u devstack@n*
+</code></pre></div>    </div>
+  </li>
+  <li>Carregar as credenciais de OpenStack:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
+ WARNING: setting legacy OS_TENANT_NAME to support cli tools.
+    
+ $ env | grep OS_
+ OS_PROJECT_DOMAIN_ID=default
+ OS_REGION_NAME=RegionOne
+ OS_USER_DOMAIN_ID=default
+ OS_PROJECT_NAME=demo
+ OS_IDENTITY_API_VERSION=3
+ OS_PASSWORD=nomoresecret
+ OS_AUTH_TYPE=password
+ OS_AUTH_URL=http://192.168.17.131/identity
+ OS_USERNAME=admin
+ OS_TENANT_NAME=demo
+ OS_VOLUME_API_VERSION=2
+</code></pre></div>    </div>
+  </li>
+  <li>Listar os módulos do OpenStack:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack service list
++----------------------------------+-------------+----------------+
+| ID                               | Name        | Type           |
++----------------------------------+-------------+----------------+
+| 14776d964367470ea97ae0f0395be6de | neutron     | network        |
+| 23dbf9f8ad1345e5b4d6d781c4b88e03 | cinder      | volume         |
+| 40301ed3d9744979a9e481d025cd3c9c | nova_legacy | compute_legacy |
+| 46a7ce69fbfd4e7691839b9442eafbbd | placement   | placement      |
+| 5d8f64102deb4f62a559776a899cb63e | keystone    | identity       |
+| 5f271b049588412d8e0a11b2fea5469c | nova        | compute        |
+| 7cd558d4608647569509bf34b794c59f | cinderv2    | volumev2       |
+| 7e447465286a4560a661a31297e9d45d | cinderv3    | volumev3       |
+| 82020edd889243c2ac97416014376f12 | swift       | object-store   |
+| cba857956e2349a5b4f6e1161862f340 | heat-cfn    | cloudformation |
+| d8b098869281469bbd90bbc762aad340 | glance      | image          |
+| fc980824a1954be882a9af7591f78e99 | heat        | orchestration  |
++----------------------------------+-------------+----------------+
+
+$ openstack service show nova
++-------------+----------------------------------+
+| Field       | Value                            |
++-------------+----------------------------------+
+| description | Nova Compute Service             |
+| enabled     | True                             |
+| id          | 5f271b049588412d8e0a11b2fea5469c |
+| name        | nova                             |
+| type        | compute                          |
++-------------+----------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar o arquivo de configuração:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ less /etc/nova/nova.conf
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="hypervisors"><em>Hypervisors</em></h2>
+
+<ol>
+  <li>Mostrar os <em>hypervisors</em> disponíveis:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack hypervisor list
++----+---------------------+-----------------+----------------+-------+
+| ID | Hypervisor Hostname | Hypervisor Type | Host IP        | State |
++----+---------------------+-----------------+----------------+-------+
+|  1 | ubuntu              | QEMU            | 192.168.17.131 | up    |
++----+---------------------+-----------------+----------------+-------+
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar a descrição do <em>hypervisor</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack hypervisor show ubuntu
++----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field                | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
++----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| aggregates           | []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| cpu_info             | {"vendor": "Intel", "model": "IvyBridge", "arch": "x86_64", "features": ["pge", "avx", "clflush", "sep", "syscall", "tsc_adjust", "vme", "tsc", "sse", "xsave", "erms", "cmov", "smep", "nx", "pat", "osxsave", "lm", "msr", "fpu", "fxsr", "sse4.1", "pae", "sse4.2", "pclmuldq", "pcid", "tsc-deadline", "mmx", "arat", "cx8", "mce", "de", "aes", "mca", "pse", "pni", "popcnt", "apic", "fsgsbase", "f16c", "invtsc", "lahf_lm", "rdtscp", "sse2", "ss", "hypervisor", "ssse3", "cx16", "pse36", "mtrr", "rdrand", "x2apic"], "topology": {"cores": 1, "cells": 1, "threads": 1, "sockets": 4}} |
+| current_workload     | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| disk_available_least | 84                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| free_disk_gb         | 97                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| free_ram_mb          | 11485                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| host_ip              | 192.168.17.131                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| host_time            | 11:39:34                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| hypervisor_hostname  | ubuntu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| hypervisor_type      | QEMU                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| hypervisor_version   | 2008000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| id                   | 1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| load_average         | 0.25, 0.33, 0.60                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| local_gb             | 97                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| local_gb_used        | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| memory_mb            | 11997                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| memory_mb_used       | 512                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| running_vms          | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| service_host         | ubuntu                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| service_id           | 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| state                | up                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| status               | enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| uptime               | 16 min                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| users                | 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| vcpus                | 4                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| vcpus_used           | 0                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
++----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar estatísticas de uso dos <em>hypervisors</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack hypervisor stats show
++----------------------+-------+
+| Field                | Value |
++----------------------+-------+
+| count                | 1     |
+| current_workload     | 0     |
+| disk_available_least | 84    |
+| free_disk_gb         | 97    |
+| free_ram_mb          | 11485 |
+| local_gb             | 97    |
+| local_gb_used        | 0     |
+| memory_mb            | 11997 |
+| memory_mb_used       | 512   |
+| running_vms          | 0     |
+| vcpus                | 4     |
+| vcpus_used           | 0     |
++----------------------+-------+
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="flavors"><em>Flavors</em></h2>
+
+<ol>
+  <li>Listar os <em>flavors</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack flavor list
++--------------------------------------+-----------+-------+------+-----------+-------+-----------+
+| ID                                   | Name      |   RAM | Disk | Ephemeral | VCPUs | Is Public |
++--------------------------------------+-----------+-------+------+-----------+-------+-----------+
+| 1                                    | m1.tiny   |   512 |    1 |         0 |     1 | True      |
+| 2                                    | m1.small  |  2048 |   20 |         0 |     1 | True      |
+| 3                                    | m1.medium |  4096 |   40 |         0 |     2 | True      |
+| 4                                    | m1.large  |  8192 |   80 |         0 |     4 | True      |
+| 42                                   | m1.nano   |    64 |    0 |         0 |     1 | True      |
+| 4e4c0fe2-bf78-448b-bab9-e5b186d313d8 | mini      |    64 |    1 |         0 |     1 | True      |
+| 5                                    | m1.xlarge | 16384 |  160 |         0 |     8 | True      |
+| 84                                   | m1.micro  |   128 |    0 |         0 |     1 | True      |
+| c1                                   | cirros256 |   256 |    0 |         0 |     1 | True      |
+| d1                                   | ds512M    |   512 |    5 |         0 |     1 | True      |
+| d2                                   | ds1G      |  1024 |   10 |         0 |     1 | True      |
+| d3                                   | ds2G      |  2048 |   10 |         0 |     2 | True      |
+| d4                                   | ds4G      |  4096 |   20 |         0 |     4 | True      |
++--------------------------------------+-----------+-------+------+-----------+-------+-----------+
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar informações sobre um <em>flavor</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack flavor show m1.tiny
++----------------------------+---------+
+| Field                      | Value   |
++----------------------------+---------+
+| OS-FLV-DISABLED:disabled   | False   |
+| OS-FLV-EXT-DATA:ephemeral  | 0       |
+| access_project_ids         | None    |
+| disk                       | 1       |
+| id                         | 1       |
+| name                       | m1.tiny |
+| os-flavor-access:is_public | True    |
+| properties                 |         |
+| ram                        | 512     |
+| rxtx_factor                | 1.0     |
+| swap                       |         |
+| vcpus                      | 1       |
++----------------------------+---------+
+</code></pre></div>    </div>
+  </li>
+  <li>Criar um <em>flavor</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack flavor create --public --ram 64 --vcpus 1 --disk 1 m.fiap
++----------------------------+--------------------------------------+
+| Field                      | Value                                |
++----------------------------+--------------------------------------+
+| OS-FLV-DISABLED:disabled   | False                                |
+| OS-FLV-EXT-DATA:ephemeral  | 0                                    |
+| disk                       | 1                                    |
+| id                         | a0683bcb-b937-4c75-be19-7641eceeff78 |
+| name                       | m.fiap                               |
+| os-flavor-access:is_public | True                                 |
+| properties                 |                                      |
+| ram                        | 64                                   |
+| rxtx_factor                | 1.0                                  |
+| swap                       |                                      |
+| vcpus                      | 1                                    |
++----------------------------+--------------------------------------+
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="chaves-ssh">Chaves SSH</h2>
+
+<ol>
+  <li>Criar uma chave:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack keypair create chave-fiap &gt; chave-fiap.pem
+</code></pre></div>    </div>
+  </li>
+  <li>Conferir o conteúdo da chave:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat chave-fiap.pem
+-----BEGIN RSA PRIVATE KEY-----
+MIIEpAIBAAKCAQEAv2niqYsP2O0LE8OUVyFSUDuLPnrIHy8TDBqg0iy8MVEBL6F1
+I3lRBl8F2qPU9Xb2JAkfaqxgd+nBc9dykh166Q1TYc6+sPau6GymUGlmAvknUcqU
+Ojs2DbNEctEgKb2FIxJfTxlv+DOxOnkp2yNS1120VXKSTZaSwWkNLhzeNI3L4ijh
+Aenemwt4k7U94PTVEmZfYLD7i+JmdOeJpXIaJrQIw1IqYoQdIW+GXet83ldDcVeM
+BK6YtnlXv2c34Sf5DwiejofT8K7STSwpYkeP7uO6k76RtNcZYoqBZWNs+/Lm0+KL
+pGfs02fIH4OR1XwUnHqTtcHE1POWQ8OQIT28EQIDAQABAoIBAQCX9HwvMilrgYro
+rrwFi3toHE0HVbunHdzWIBGJqF/iGreBU4DFn5qWHztrfeIi18TBiMh7C8sthtG/
+n8rheivH9X87R0CVBdCGzTIe5f1I4Pi48sRHkhfwOl9dcu1Alaaq1/v3tG7yMD9C
+90smH121gTsXFnRUyfNJPZdsAxjXyFSAKbnrELNH2JHLNVj4qNrVWHYwqhJZSx5p
+a9wqtPKCjZcqhDq4cRdvcgTNMr16N72OV6sw0v6cbzjGjXAonyy/lMt/ecN2soh+
+tNdpAgru7/vMMWjhR+0lVvCqCrIw/2ZuE1Lkzulkf3Ih2N+gg1fWIGnX9Lw7B4Of
+5HcxuU5NAoGBAPOIajs5em4RBcQMVMWNcT7P56Q6mQOAnpECRzAxTudnz7HGn6wF
+IWFbYKakUzGUJgbmJXO8H8U0yUlbdc82yOBbYd13WS4WkAz7EFsgkPTGbSTaZsG9
+33L+E13C1bmeqBnjGkKt1qaHZVDTzQ8OWg6ay7i/byv+4ki0BZnD3KkfAoGBAMk2
+bdPenS3X/Rsbp/RZEzbttobyRPePW+gLb899QTFSOMM352hhqt5za629wonTLvql
+z0c/VL4BuHRaxSUvZ+6SzeHBrpOp3BeDD60QR44b4wPJDaATJe4oLcEn3k10/c6Z
+8jpKHS3Go8HyzxTkD5CbA94JJAsEoHeev8rYw4TPAoGARGZRJ/c52sYvL2QjPyU9
+5F1yex72MRSj9KiGJBQFTFtM62qVGDSMrpKCr+tBbpBkqdVkOYBiD/qGenMUwLFr
+dBBWiWRnCNnPdcXiTyXzcLx2lT4+VDYnF14jRFdfvfXA0xyFGKtIuZcXrr7+PjdS
+tf1mMKqb5+h7192wIQLw7BMCgYEAnwfr6ibqqA8sNz62koPMkf9z4liddeTSySYw
+6xeebTMFNhZ7SZ7YBBXJp3pxxakqWmSu3SsK+Vo2xY/wfaFoTcGuA56nMoJwOA0Y
+WLqjM4iK9rTzle9MbV1IPIAcTbAH4kD+mF93jHSRfXtBfMt8GdjLR7SFzkeL5L+N
+6u9EKTUCgYBUwwXRr+rrRtxKeO0iVmcyMyNtXWEhSXvfxR3zAdXYJ2z++wS1tPUU
+7nyFI8L2LrAiHLs0D8e1SmbvkUkVQ9jn9+W52BH9I3s3Z/15VfOkNPNCPeZHTh3l
+N0O5xtIRsj1V33eQf6j8eaUXPqofXshHjCkI8/9osjx9rB5+L/gjAw==
+-----END RSA PRIVATE KEY-----
+</code></pre></div>    </div>
+  </li>
+  <li>Listar as chaves disponíveis:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack keypair list
++------------+-------------------------------------------------+
+| Name       | Fingerprint                                     |
++------------+-------------------------------------------------+
+| chave-fiap | 83:d4:98:bf:8a:06:b2:87:68:4e:72:a4:d2:a0:b9:07 |
++------------+-------------------------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Assignar as permissões certas na chave e conferir que foram aplicadas:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 600 chave-fiap.pem
+    
+$ ll chave-fiap.pem
+-rw------- 1 os os 1680 Oct 19 11:41 chave-fiap.pem
+</code></pre></div>    </div>
+  </li>
+  <li>Listar as imagens:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack image list
++--------------------------------------+--------------------------+--------+
+| ID                                   | Name                     | Status |
++--------------------------------------+--------------------------+--------+
+| cd992dd3-2197-49fe-9f0e-43d783d18a5c | cirros-0.3.5-x86_64-disk | active |
++--------------------------------------+--------------------------+--------+
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="instâncias">Instâncias</h2>
+
+<ol>
+  <li>Criar a VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server create --flavor m.fiap --image cirros-0.3.5-x86_64-disk --key-name chave-fiap vmfiap01
++-------------------------------------+-----------------------------------------------------------------+
+| Field                               | Value                                                           |
++-------------------------------------+-----------------------------------------------------------------+
+| OS-DCF:diskConfig                   | MANUAL                                                          |
+| OS-EXT-AZ:availability_zone         |                                                                 |
+| OS-EXT-SRV-ATTR:host                | None                                                            |
+| OS-EXT-SRV-ATTR:hypervisor_hostname | None                                                            |
+| OS-EXT-SRV-ATTR:instance_name       |                                                                 |
+| OS-EXT-STS:power_state              | NOSTATE                                                         |
+| OS-EXT-STS:task_state               | scheduling                                                      |
+| OS-EXT-STS:vm_state                 | building                                                        |
+| OS-SRV-USG:launched_at              | None                                                            |
+| OS-SRV-USG:terminated_at            | None                                                            |
+| accessIPv4                          |                                                                 |
+| accessIPv6                          |                                                                 |
+| addresses                           |                                                                 |
+| adminPass                           | ov2dNjfSTpjX                                                    |
+| config_drive                        |                                                                 |
+| created                             | 2020-10-19T18:42:32Z                                            |
+| flavor                              | m.fiap (a0683bcb-b937-4c75-be19-7641eceeff78)                   |
+| hostId                              |                                                                 |
+| id                                  | fd676d99-1d15-4690-b69e-02d71947d1c5                            |
+| image                               | cirros-0.3.5-x86_64-disk (cd992dd3-2197-49fe-9f0e-43d783d18a5c) |
+| key_name                            | chave-fiap                                                      |
+| name                                | vmfiap01                                                        |
+| progress                            | 0                                                               |
+| project_id                          | faac34f01fb2464295bcea501b18b741                                |
+| properties                          |                                                                 |
+| security_groups                     | name='default'                                                  |
+| status                              | BUILD                                                           |
+| updated                             | 2020-10-19T18:42:32Z                                            |
+| user_id                             | fe2d2a5507ed4ad2919258d7252cebc6                                |
+| volumes_attached                    |                                                                 |
++-------------------------------------+-----------------------------------------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Listar as VMs:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
++--------------------------------------+----------+--------+-------------------------------------------------------+--------------------------+--------+
+| ID                                   | Name     | Status | Networks                                              | Image                    | Flavor |
++--------------------------------------+----------+--------+-------------------------------------------------------+--------------------------+--------+
+| fd676d99-1d15-4690-b69e-02d71947d1c5 | vmfiap01 | ACTIVE | private=fdb5:7432:9bc4:0:f816:3eff:fe7f:435, 10.0.0.3 | cirros-0.3.5-x86_64-disk | m.fiap |
++--------------------------------------+----------+--------+-------------------------------------------------------+--------------------------+--------+
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar a URL do console:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack console url show vmfiap01
++-------+-------------------------------------------------------------------------------------+
+| Field | Value                                                                               |
++-------+-------------------------------------------------------------------------------------+
+| type  | novnc                                                                               |
+| url   | http://192.168.17.131:6080/vnc_auto.html?token=3875ba97-5bce-41c9-a4ba-9df2579fe389 |
++-------+-------------------------------------------------------------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Acessar por console à VM e criar uma pasta ou um arquivo qualquer:
+    <ul>
+      <li>Pela URL do console (ou)</li>
+      <li>Directo pelo <em>hypervisor</em>:</li>
+    </ul>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh list
+ Id    Name                           State
+----------------------------------------------------
+ 1     instance-00000005              running
+
+$ virsh console 1
+Connected to domain instance-00000005
+Escape character is ^]
+
+login as 'cirros' user. default password: 'cubswin:)'. use 'sudo' for root.
+vmfiap01 login: cirros
+Password:
+$ touch teste-fiap
+$ ls
+teste-fiap
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar o <em>log</em> da VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack console log show vmfiap01
+[    0.000000] Initializing cgroup subsys cpuset
+[    0.000000] Initializing cgroup subsys cpu
+[    0.000000] Linux version 3.2.0-80-virtual (buildd@batsu) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #116-Ubuntu SMP Mon Mar 23 17:28:52 UTC 2015 (Ubuntu 3.2.0-80.116-virtual 3.2.68)
+[    0.000000] Command line: LABEL=cirros-rootfs ro console=tty1 console=ttyS0
+[    0.000000] KERNEL supported cpus:
+[    0.000000]   Intel GenuineIntel
+[    0.000000]   AMD AuthenticAMD
+[    0.000000]   Centaur CentaurHauls
+[    0.000000] BIOS-provided physical RAM map:
+[    0.000000]  BIOS-e820: 0000000000000000 - 000000000009fc00 (usable)
+[    0.000000]  BIOS-e820: 000000000009fc00 - 00000000000a0000 (reserved)
+[    0.000000]  BIOS-e820: 00000000000f0000 - 0000000000100000 (reserved)
+[    0.000000]  BIOS-e820: 0000000000100000 - 0000000003fdc000 (usable)
+[    0.000000]  BIOS-e820: 0000000003fdc000 - 0000000004000000 (reserved)
+[    0.000000]  BIOS-e820: 00000000fffc0000 - 0000000100000000 (reserved)
+[    0.000000] NX (Execute Disable) protection: active
+[    0.000000] SMBIOS 2.8 present.
+[    0.000000] No AGP bridge found
+[    0.000000] last_pfn = 0x3fdc max_arch_pfn = 0x400000000
+[    0.000000] x86 PAT enabled: cpu 0, old 0x7040600070406, new 0x7010600070106
+[    0.000000] found SMP MP-table at [ffff8800000f6a40] f6a40
+[    0.000000] init_memory_mapping: 0000000000000000-0000000003fdc000
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar os eventos relacionados à VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server event list vmfiap01
++------------------------------------------+--------------------------------------+--------+----------------------------+
+| Request ID                               | Server ID                            | Action | Start Time                 |
++------------------------------------------+--------------------------------------+--------+----------------------------+
+| req-83d22008-bdbd-41b4-8aae-e9ba807b6aba | fd676d99-1d15-4690-b69e-02d71947d1c5 | create | 2020-10-19T18:42:31.000000 |
++------------------------------------------+--------------------------------------+--------+----------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Desligar a VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server stop vmfiap01
+</code></pre></div>    </div>
+  </li>
+  <li>Listar as VMs e conferir que foi desligada:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
++--------------------------------------+----------+---------+-------------------------------------------------------+--------------------------+--------+
+| ID                                   | Name     | Status  | Networks                                              | Image                    | Flavor |
++--------------------------------------+----------+---------+-------------------------------------------------------+--------------------------+--------+
+| fd676d99-1d15-4690-b69e-02d71947d1c5 | vmfiap01 | SHUTOFF | private=fdb5:7432:9bc4:0:f816:3eff:fe7f:435, 10.0.0.3 | cirros-0.3.5-x86_64-disk | m.fiap |
++--------------------------------------+----------+---------+-------------------------------------------------------+--------------------------+--------+
+</code></pre></div>    </div>
+  </li>
+  <li>Listar novamente os eventos relacionados à VM e conferir que foi registrado o evento de <em>shutdown</em> da mesma:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server event list vmfiap01
++------------------------------------------+--------------------------------------+--------+----------------------------+
+| Request ID                               | Server ID                            | Action | Start Time                 |
++------------------------------------------+--------------------------------------+--------+----------------------------+
+| req-a407d6cc-cb7d-41b0-92c3-2eea58fe0b53 | fd676d99-1d15-4690-b69e-02d71947d1c5 | stop   | 2020-10-19T18:48:22.000000 |
+| req-83d22008-bdbd-41b4-8aae-e9ba807b6aba | fd676d99-1d15-4690-b69e-02d71947d1c5 | create | 2020-10-19T18:42:31.000000 |
++------------------------------------------+--------------------------------------+--------+----------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Ligar novamente a VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server start vmfiap01
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="snapshots"><strong>Snapshots</strong></h2>
+
+<ol>
+  <li>Criar um snapshot da VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server image create vmfiap01 --name vmfiap01_snap
++------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field            | Value                                                                                                                                                                                                                                                  |
++------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| checksum         | None                                                                                                                                                                                                                                                   |
+| container_format | None                                                                                                                                                                                                                                                   |
+| created_at       | 2020-10-19T18:49:32Z                                                                                                                                                                                                                                   |
+| disk_format      | None                                                                                                                                                                                                                                                   |
+| file             | /v2/images/7b29041a-73f6-438e-91f9-09ff7423a585/file                                                                                                                                                                                                   |
+| id               | 7b29041a-73f6-438e-91f9-09ff7423a585                                                                                                                                                                                                                   |
+| min_disk         | 1                                                                                                                                                                                                                                                      |
+| min_ram          | 0                                                                                                                                                                                                                                                      |
+| name             | vmfiap01_snap                                                                                                                                                                                                                                         |
+| owner            | faac34f01fb2464295bcea501b18b741                                                                                                                                                                                                                       |
+| properties       | base_image_ref='cd992dd3-2197-49fe-9f0e-43d783d18a5c', boot_roles='admin', image_type='snapshot', instance_uuid='fd676d99-1d15-4690-b69e-02d71947d1c5', owner_project_name='demo', owner_user_name='admin', user_id='fe2d2a5507ed4ad2919258d7252cebc6' |
+| protected        | False                                                                                                                                                                                                                                                  |
+| schema           | /v2/schemas/image                                                                                                                                                                                                                                      |
+| size             | None                                                                                                                                                                                                                                                   |
+| status           | queued                                                                                                                                                                                                                                                 |
+| tags             |                                                                                                                                                                                                                                                        |
+| updated_at       | 2020-10-19T18:49:32Z                                                                                                                                                                                                                                   |
+| virtual_size     | None                                                                                                                                                                                                                                                   |
+| visibility       | private                                                                                                                                                                                                                                                |
++------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Listar as imagens (aguardar que fique em estado <code class="language-plaintext highlighter-rouge">active</code>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack image list
++--------------------------------------+--------------------------+--------+
+| ID                                   | Name                     | Status |
++--------------------------------------+--------------------------+--------+
+| cd992dd3-2197-49fe-9f0e-43d783d18a5c | cirros-0.3.5-x86_64-disk | active |
+| 7b29041a-73f6-438e-91f9-09ff7423a585 | vmfiap01_snap            | queued |
++--------------------------------------+--------------------------+--------+
+    
+$ openstack image list
++--------------------------------------+--------------------------+--------+
+| ID                                   | Name                     | Status |
++--------------------------------------+--------------------------+--------+
+| cd992dd3-2197-49fe-9f0e-43d783d18a5c | cirros-0.3.5-x86_64-disk | active |
+| 7b29041a-73f6-438e-91f9-09ff7423a585 | vmfiap01_snap            | active |
++--------------------------------------+--------------------------+--------+
+</code></pre></div>    </div>
+  </li>
+  <li>Instanciar o <code class="language-plaintext highlighter-rouge">snapshot</code>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server create --flavor m.fiap --image vmfiap01_snap vmfiap02
++-------------------------------------+-------------------------------------------------------+
+| Field                               | Value                                                 |
++-------------------------------------+-------------------------------------------------------+
+| OS-DCF:diskConfig                   | MANUAL                                                |
+| OS-EXT-AZ:availability_zone         |                                                       |
+| OS-EXT-SRV-ATTR:host                | None                                                  |
+| OS-EXT-SRV-ATTR:hypervisor_hostname | None                                                  |
+| OS-EXT-SRV-ATTR:instance_name       |                                                       |
+| OS-EXT-STS:power_state              | NOSTATE                                               |
+| OS-EXT-STS:task_state               | scheduling                                            |
+| OS-EXT-STS:vm_state                 | building                                              |
+| OS-SRV-USG:launched_at              | None                                                  |
+| OS-SRV-USG:terminated_at            | None                                                  |
+| accessIPv4                          |                                                       |
+| accessIPv6                          |                                                       |
+| addresses                           |                                                       |
+| adminPass                           | 4VVPhyX8EXk6                                          |
+| config_drive                        |                                                       |
+| created                             | 2020-10-19T18:50:58Z                                  |
+| flavor                              | m.fiap (a0683bcb-b937-4c75-be19-7641eceeff78)         |
+| hostId                              |                                                       |
+| id                                  | 24731592-0fa0-4ecc-8c1e-8ebe8ec2249e                  |
+| image                               | vmfiap01_snap (7b29041a-73f6-438e-91f9-09ff7423a585)  |
+| key_name                            | None                                                  |
+| name                                | vmfiap02                                              |
+| progress                            | 0                                                     |
+| project_id                          | faac34f01fb2464295bcea501b18b741                      |
+| properties                          |                                                       |
+| security_groups                     | name='default'                                        |
+| status                              | BUILD                                                 |
+| updated                             | 2020-10-19T18:50:58Z                                  |
+| user_id                             | fe2d2a5507ed4ad2919258d7252cebc6                      |
+| volumes_attached                    |                                                       |
++-------------------------------------+-------------------------------------------------------+
+</code></pre></div>    </div>
+  </li>
+  <li>Listar as VMs usando o comando <code class="language-plaintext highlighter-rouge">virsh</code>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh list
+ Id    Name                           State
+----------------------------------------------------
+ 3     instance-00000005              running
+ 4     instance-00000006              running
+</code></pre></div>    </div>
+  </li>
+  <li>Logar na nova VM e confirmar que o arquivo criado previamente existe:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh console 4
+Connected to domain instance-00000006
+Escape character is ^]
+
+login as 'cirros' user. default password: 'cubswin:)'. use 'sudo' for root.
+vmfiap02 login: cirros
+Password:
+$ ls
+teste-fiap
+</code></pre></div>    </div>
+  </li>
+  <li>Mostrar as informações da definição da VM:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh dumpxml 3
+&lt;domain type='qemu' id='3'&gt;
+  &lt;name&gt;instance-00000005&lt;/name&gt;
+  &lt;uuid&gt;fd676d99-1d15-4690-b69e-02d71947d1c5&lt;/uuid&gt;
+  &lt;metadata&gt;
+    &lt;nova:instance xmlns:nova="http://openstack.org/xmlns/libvirt/nova/1.0"&gt;
+      &lt;nova:package version="16.1.1"/&gt;
+      &lt;nova:name&gt;vmfiap01&lt;/nova:name&gt;
+      &lt;nova:creationTime&gt;2020-10-19 18:49:00&lt;/nova:creationTime&gt;
+      &lt;nova:flavor name="m.fiap"&gt;
+        &lt;nova:memory&gt;64&lt;/nova:memory&gt;
+        &lt;nova:disk&gt;1&lt;/nova:disk&gt;
+        &lt;nova:swap&gt;0&lt;/nova:swap&gt;
+        &lt;nova:ephemeral&gt;0&lt;/nova:ephemeral&gt;
+        &lt;nova:vcpus&gt;1&lt;/nova:vcpus&gt;
+      &lt;/nova:flavor&gt;
+      &lt;nova:owner&gt;
+        &lt;nova:user uuid="fe2d2a5507ed4ad2919258d7252cebc6"&gt;admin&lt;/nova:user&gt;
+        &lt;nova:project uuid="faac34f01fb2464295bcea501b18b741"&gt;demo&lt;/nova:project&gt;
+      &lt;/nova:owner&gt;
+      &lt;nova:root type="image" uuid="cd992dd3-2197-49fe-9f0e-43d783d18a5c"/&gt;
+    &lt;/nova:instance&gt;
+  &lt;/metadata&gt;
+  &lt;memory unit='KiB'&gt;65536&lt;/memory&gt;
+  &lt;currentMemory unit='KiB'&gt;65536&lt;/currentMemory&gt;
+  &lt;vcpu placement='static'&gt;1&lt;/vcpu&gt;
+  &lt;cputune&gt;
+    &lt;shares&gt;1024&lt;/shares&gt;
+  &lt;/cputune&gt;
+  &lt;resource&gt;
+    &lt;partition&gt;/machine&lt;/partition&gt;
+  &lt;/resource&gt;
+  &lt;sysinfo type='smbios'&gt;
+    &lt;system&gt;
+      &lt;entry name='manufacturer'&gt;OpenStack Foundation&lt;/entry&gt;
+      &lt;entry name='product'&gt;OpenStack Nova&lt;/entry&gt;
+      &lt;entry name='version'&gt;16.1.1&lt;/entry&gt;
+      &lt;entry name='serial'&gt;311453db-b8d5-3f93-65ff-6fca5aa96025&lt;/entry&gt;
+      &lt;entry name='uuid'&gt;fd676d99-1d15-4690-b69e-02d71947d1c5&lt;/entry&gt;
+      &lt;entry name='family'&gt;Virtual Machine&lt;/entry&gt;
+    &lt;/system&gt;
+  &lt;/sysinfo&gt;
+  &lt;os&gt;
+    &lt;type arch='x86_64' machine='pc-i440fx-zesty'&gt;hvm&lt;/type&gt;
+    &lt;boot dev='hd'/&gt;
+    &lt;smbios mode='sysinfo'/&gt;
+  &lt;/os&gt;
+  &lt;features&gt;
+    &lt;acpi/&gt;
+    &lt;apic/&gt;
+  &lt;/features&gt;
+  &lt;cpu&gt;
+    &lt;topology sockets='1' cores='1' threads='1'/&gt;
+  &lt;/cpu&gt;
+  &lt;clock offset='utc'/&gt;
+  &lt;on_poweroff&gt;destroy&lt;/on_poweroff&gt;
+  &lt;on_reboot&gt;restart&lt;/on_reboot&gt;
+  &lt;on_crash&gt;destroy&lt;/on_crash&gt;
+  &lt;devices&gt;
+    &lt;emulator&gt;/usr/bin/qemu-system-x86_64&lt;/emulator&gt;
+    &lt;disk type='file' device='disk'&gt;
+      &lt;driver name='qemu' type='qcow2' cache='none'/&gt;
+      &lt;source file='/opt/stack/data/nova/instances/fd676d99-1d15-4690-b69e-02d71947d1c5/disk'/&gt;
+      &lt;backingStore type='file' index='1'&gt;
+        &lt;format type='raw'/&gt;
+        &lt;source file='/opt/stack/data/nova/instances/_base/ca55405a2b972c659cab9c6fc7fb9fb060ebe7d1'/&gt;
+        &lt;backingStore/&gt;
+      &lt;/backingStore&gt;
+      &lt;target dev='vda' bus='virtio'/&gt;
+      &lt;alias name='virtio-disk0'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/&gt;
+    &lt;/disk&gt;
+    &lt;controller type='usb' index='0' model='piix3-uhci'&gt;
+      &lt;alias name='usb'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x2'/&gt;
+    &lt;/controller&gt;
+    &lt;controller type='pci' index='0' model='pci-root'&gt;
+      &lt;alias name='pci.0'/&gt;
+    &lt;/controller&gt;
+    &lt;interface type='bridge'&gt;
+      &lt;mac address='fa:16:3e:7f:04:35'/&gt;
+      &lt;source bridge='qbree2ccd25-fb'/&gt;
+      &lt;target dev='tapee2ccd25-fb'/&gt;
+      &lt;model type='virtio'/&gt;
+      &lt;driver name='qemu'/&gt;
+      &lt;alias name='net0'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/&gt;
+    &lt;/interface&gt;
+    &lt;serial type='pty'&gt;
+      &lt;source path='/dev/pts/2'/&gt;
+      &lt;log file='/opt/stack/data/nova/instances/fd676d99-1d15-4690-b69e-02d71947d1c5/console.log' append='off'/&gt;
+      &lt;target port='0'/&gt;
+      &lt;alias name='serial0'/&gt;
+    &lt;/serial&gt;
+    &lt;console type='pty' tty='/dev/pts/2'&gt;
+      &lt;source path='/dev/pts/2'/&gt;
+      &lt;log file='/opt/stack/data/nova/instances/fd676d99-1d15-4690-b69e-02d71947d1c5/console.log' append='off'/&gt;
+      &lt;target type='serial' port='0'/&gt;
+      &lt;alias name='serial0'/&gt;
+    &lt;/console&gt;
+    &lt;input type='mouse' bus='ps2'&gt;
+      &lt;alias name='input0'/&gt;
+    &lt;/input&gt;
+    &lt;input type='keyboard' bus='ps2'&gt;
+      &lt;alias name='input1'/&gt;
+    &lt;/input&gt;
+    &lt;graphics type='vnc' port='5900' autoport='yes' listen='127.0.0.1' keymap='en-us'&gt;
+      &lt;listen type='address' address='127.0.0.1'/&gt;
+    &lt;/graphics&gt;
+    &lt;video&gt;
+      &lt;model type='cirrus' vram='16384' heads='1' primary='yes'/&gt;
+      &lt;alias name='video0'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/&gt;
+    &lt;/video&gt;
+    &lt;memballoon model='virtio'&gt;
+      &lt;stats period='10'/&gt;
+      &lt;alias name='balloon0'/&gt;
+      &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/&gt;
+    &lt;/memballoon&gt;
+  &lt;/devices&gt;
+  &lt;seclabel type='dynamic' model='apparmor' relabel='yes'&gt;
+    &lt;label&gt;libvirt-fd676d99-1d15-4690-b69e-02d71947d1c5&lt;/label&gt;
+    &lt;imagelabel&gt;libvirt-fd676d99-1d15-4690-b69e-02d71947d1c5&lt;/imagelabel&gt;
+  &lt;/seclabel&gt;
+  &lt;seclabel type='dynamic' model='dac' relabel='yes'&gt;
+    &lt;label&gt;+64055:+123&lt;/label&gt;
+    &lt;imagelabel&gt;+64055:+123&lt;/imagelabel&gt;
+  &lt;/seclabel&gt;
+&lt;/domain&gt;
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="clean-up"><em>Clean-up</em></h2>
+
+<ol>
+  <li>Deletar as vms:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server delete vmfiap01
+$ openstack server delete vmfiap02
+$ openstack image delete vmfiap01_snap
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="horizon">Horizon</h2>
+
+<ol>
+  <li>Recriar desde o Horizon Dashboard:
+    <ul>
+      <li>Criação de <em>flavor</em></li>
+      <li>Criação de VM</li>
+      <li>Criação de <em>snapshot</em></li>
+      <li>Criação de VM a partir de <em>snapshot</em>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova1.png" alt="" />
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova2.png" alt="" />
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova3.png" alt="" /></li>
+    </ul>
+  </li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#openstack" class="page__taxonomy-item p-category" rel="tag">openstack</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a><span class="sep">, </span>
+    
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">series</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2018-03-22">March 22, 2018</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=OpenStack+series+III%3A+Nova+-+Compute+Service%20https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack3-nova%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack3-nova%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack3-nova%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/openstack2-glance/" class="pagination--pager" title="OpenStack series II: Glance - Image Service
+">Previous</a>
+    
+    
+      <a href="/hntd-13/" class="pagination--pager" title="HCNA-HNTD Training - 13th edition
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/openstack3-nova/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/openstack3-nova"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

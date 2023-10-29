@@ -1,0 +1,969 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Containers series IV: Docker Swarm - GitOps</title>
+<meta name="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="Containers series IV: Docker Swarm">
+<meta property="og:url" content="https://josecastillolema.github.io/containers4-docker-swarm/">
+
+
+  <meta property="og:description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-02-02T00:00:00-06:00">
+
+
+
+  <meta property="article:modified_time" content="2019-02-02T14:00:58-06:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/containers4-docker-swarm/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Containers series IV: Docker Swarm">
+    <meta itemprop="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
+    <meta itemprop="datePublished" content="2019-02-02T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2019-02-02T14:00:58-06:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/containers4-docker-swarm/" class="u-url" itemprop="url">Containers series IV: Docker Swarm
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          10 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#lab-4---docker-swarm">Lab 4 - Docker Swarm</a><ul><li><a href="#orquestrando-containers">Orquestrando containers</a></li><li><a href="#requisitos">Requisitos</a></li><li><a href="#criação-do-cluster">Criação do cluster</a></li><li><a href="#uso">Uso</a></li><li><a href="#clean-up">Clean-up</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-4---docker-swarm">Lab 4 - Docker Swarm</h1>
+
+<h2 id="orquestrando-containers">Orquestrando containers</h2>
+<p><a href="https://docs.docker.com/engine/swarm/">Docker Swarm</a> permite orquestrar containers em um cluster formado por vários servidores. De esta forma conseguimos garantir as seguintes propriedades nos containers gerenciados pelo orquestrador:</p>
+<ul>
+  <li><strong>tolerância a falhas</strong>: se um dos servidores do cluster cair, o container automaticamente será iniciado em outro servidor do cluster</li>
+  <li><strong>alta disponibilidade</strong>: várias réplicas de cada container podem ser executadas em vários servidores do cluster</li>
+  <li><strong>escalabilidade</strong>: o número de réplicas de cada container pode ser aumentado a qualquer momento em funçao da demanda</li>
+</ul>
+
+<p>Vamos trabalhar com duas máquinas virtuais (<strong>T1</strong> e <strong>T2</strong>). Se elas tiver rodando na nuvem, devem pertencer ao mesmo <em>security group</em> (ou ter um <em>security group</em> em común).</p>
+
+<h2 id="requisitos">Requisitos</h2>
+<ul>
+  <li>2 VMs <code class="language-plaintext highlighter-rouge">Ubuntu 18.04</code> ou <code class="language-plaintext highlighter-rouge">Amazon Linux</code> com Docker instalado com no mínimo 2 GB de memória cada (na AWS usar flavor <strong>t2.small</strong> ou maior)</li>
+  <li>As duas VMs devem pertencer ao mesmo <em>security group</em> (ou ter um <em>security group</em> em común). Se nao for suficiente, liberar a porta 2377 no <em>security group</em> da VM que for ser <em>manager</em> do cluster. Pode usar o comando <code class="language-plaintext highlighter-rouge">telnet</code> para testar a comunicaçao (<code class="language-plaintext highlighter-rouge">telnet $ip $porta</code>). Um exemplo de <em>security group</em> para o <em>manager</em>:
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/mob/cloud/img/docker1.png" alt="" /></li>
+</ul>
+
+<h2 id="criação-do-cluster">Criação do <em>cluster</em></h2>
+
+<ol>
+  <li><strong>[T1]</strong> Inicialização do <strong><em>manager</em></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker swarm init
+ Swarm initialized: current node (1y4bix4oby6nq2jxx5ft4rhd0) is now a manager.
+
+ To add a worker to this swarm, run the following command:
+
+     docker swarm join --token SWMTKN-1-5it2k13vtptja3tl2xpgjywr856a4r7siuve20r2ev9h98gfrj-498uqdu6x8o74b816orz6s5gn 172.31.47.198:2377
+
+ To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T2]</strong> Na segunda maquina virtual, inicialização do <strong><em>worker</em></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker swarm join --token SWMTKN-1-5it2k13vtptja3tl2xpgjywr856a4r7siuve20r2ev9h98gfrj-498uqdu6x8o74b816orz6s5gn 172.31.47.198:2377
+ This node joined a swarm as a worker.
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Listar os servidores que fazem parte do cluster Docker Swarm desde o <em>manager</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker node ls
+ ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+ 4hx9zm7docinufxy1mm62yynm     ip-172-31-32-255    Ready               Active                                  19.03.6
+ 1y4bix4oby6nq2jxx5ft4rhd0 *   ip-172-31-47-198    Ready               Active              Leader              19.03.6
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T2]</strong> Desde o <em>worker</em> não é possível executar nenhum comando do Docker Swarm, p.ex.:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker node ls
+ Error response from daemon: This node is not a swarm manager. Worker nodes can't be used to view or modify cluster state. Please run this command on a manager node or promote the current node to a manager.
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="uso">Uso</h2>
+
+<ol>
+  <li><strong>[T1]</strong> Navegar até a pasta <strong><code class="language-plaintext highlighter-rouge">fiap/bdt/microservices/swarm/v1</code></strong> de este repositório <em>git</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd fiap/aso/microservices/swarm/v1
+ $ pwd
+ /home/ubuntu/fiap/aso/microservices/swarm/v1
+ $ ls
+ docker-compose.yaml
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Mostrar o conteúdo do arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yaml</code></strong>. São definidos dois serviços:
+    <ul>
+      <li><strong>api</strong>: a API escrita em Python, que tem dependência (consulta) o serviço <em>mysql</em>, com <strong>3 réplicas</strong></li>
+      <li><strong>mysql</strong>: o servidor MySQL, com mapeamento de portas (porta 3306), persistência de dados (pasta <code class="language-plaintext highlighter-rouge">/var/lib/mysql</code>) e algumas variáveis de entorno, com <strong>1 réplica</strong></li>
+    </ul>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ cat docker-compose.yaml</span> 
+ <span class="s">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3'</span>
+
+ <span class="na">services</span><span class="pi">:</span>
+
+   <span class="na">api</span><span class="pi">:</span>
+     <span class="na">image</span><span class="pi">:</span> <span class="s">josecastillolema/api</span>
+     <span class="na">ports</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="s2">"</span><span class="s">3000:5000"</span>
+     <span class="na">depends_on</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="s">mysql</span>
+     <span class="na">deploy</span><span class="pi">:</span>
+       <span class="na">replicas</span><span class="pi">:</span> <span class="m">3</span>
+       <span class="c1"># update_config:</span>
+       <span class="c1">#   parallelism: 1</span>
+       <span class="c1">#   delay: 10is</span>
+       <span class="na">mode</span><span class="pi">:</span> <span class="s">replicated</span>
+       <span class="na">restart_policy</span><span class="pi">:</span>
+         <span class="na">condition</span><span class="pi">:</span> <span class="s">on-failure</span>
+
+   <span class="na">mysql</span><span class="pi">:</span>
+     <span class="na">image</span><span class="pi">:</span> <span class="s">josecastillolema/mysql</span>
+     <span class="na">ports</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="s2">"</span><span class="s">3306:3306"</span>
+     <span class="na">volumes</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="s">db-data:/var/lib/mysql</span>
+     <span class="na">environment</span><span class="pi">:</span>
+       <span class="na">MYSQL_USER</span><span class="pi">:</span> <span class="s">root</span>
+       <span class="na">MYSQL_DATABASE</span><span class="pi">:</span> <span class="s">fiapdb</span>
+       <span class="na">MYSQL_ROOT_PASSWORD</span><span class="pi">:</span> <span class="s">senhaFiap</span>
+     <span class="na">deploy</span><span class="pi">:</span>
+       <span class="na">replicas</span><span class="pi">:</span> <span class="m">1</span>
+       <span class="c1"># resources:</span>
+       <span class="c1">#   limits:</span>
+       <span class="c1">#     cpus: "0.1"</span>
+       <span class="c1">#     memory: 50M</span>
+       <span class="na">restart_policy</span><span class="pi">:</span>
+         <span class="na">condition</span><span class="pi">:</span> <span class="s">on-failure</span>
+
+ <span class="na">volumes</span><span class="pi">:</span>
+   <span class="na">db-data</span><span class="pi">:</span>
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Criar o <em>stack</em> definido no arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker stack deploy -c docker-compose.yaml stackFiap
+ Creating network stackFiap_default
+ Creating service stackFiap_api
+ Creating service stackFiap_mysql
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Conferir que o <em>stack</em> foi criado corretamente:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker stack ls
+ NAME                SERVICES            ORCHESTRATOR
+ stackFiap           2                   Swarm
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Conferir que os serviços foram criados corretamente:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker service ls
+ ID                  NAME                MODE                REPLICAS            IMAGE                           PORTS
+ vlh0cjv5nd65        stackFiap_api       replicated          3/3                 josecastillolema/api:latest     *:3000-&gt;5000/tcp
+ tmns8lwyrb9f        stackFiap_mysql     replicated          1/1                 josecastillolema/mysql:latest   *:3306-&gt;3306/tcp
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Testar a API:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl localhost:3000
+Benvido a API FIAP!
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Conferir quais containers foram criados na primeira máquina virtual (em este caso o banco de dados e uma instância da API):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS                   PORTS                 NAMES
+44cfaf700b20        josecastillolema/mysql:latest   "docker-entrypoint.s…"   2 minutes ago       Up 2 minutes             3306/tcp, 33060/tcp   stackFiap_mysql.1.wr5ia70abxco05ypimayagrm0
+2239ae187e86        josecastillolema/api:latest     "./api.py"               2 minutes ago       Up 2 minutes (healthy)   5000/tcp              stackFiap_api.1.qedwp50z4l5dhskg66txj91d7
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T2]</strong> Conferir quais containers foram criados na segunda máquina virtual (em este caso duas instâncias da API):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID        IMAGE                         COMMAND             CREATED             STATUS                   PORTS               NAMES
+48fdb1fb8cb7        josecastillolema/api:latest   "./api.py"          2 minutes ago       Up 2 minutes (healthy)   5000/tcp            stackFiap_api.3.rpl9ggawgeo7edietartr7ca0
+3201f87fc015        josecastillolema/api:latest   "./api.py"          2 minutes ago       Up 2 minutes (healthy)   5000/tcp            stackFiap_api.2.rt2zby2s1s8igdzysd3gbmv9w
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Aumentar o numero de replicas da API (<strong><em>scale out</em></strong>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker service scale stackFiap_api=5
+stackFiap_api scaled to 5
+overall progress: 5 out of 5 tasks 
+1/5: running   [==================================================&gt;] 
+2/5: running   [==================================================&gt;] 
+3/5: running   [==================================================&gt;] 
+4/5: running   [==================================================&gt;] 
+5/5: running   [==================================================&gt;]  
+verify: Service converged
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Confirmar o novo numero de replicas:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker service ls
+ID                  NAME                MODE                REPLICAS            IMAGE                           PORTS
+vlh0cjv5nd65        stackFiap_api       replicated          5/5                 josecastillolema/api:latest     *:3000-&gt;5000/tcp
+tmns8lwyrb9f        stackFiap_mysql     replicated          1/1                 josecastillolema/mysql:latest   *:3306-&gt;3306/tcp
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Diminuir o numero de replicas da API (<strong><em>scale in</em></strong>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker service scale stackFiap_api=4
+stackFiap_api scaled to 4
+overall progress: 4 out of 4 tasks 
+1/4: running   [==================================================&gt;] 
+2/4: running   [==================================================&gt;] 
+3/4: running   [==================================================&gt;] 
+4/4: running   [==================================================&gt;] 
+verify: Service converged 
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Vamos desligar o <em>worker</em> (servidor <strong>T2</strong>). Antes disso, conferir os containers que estão rodando no <em>manager</em> (neste caso, o banco de dados e 2 replicas da API):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED             STATUS                    PORTS                 NAMES
+325de1e84b51        josecastillolema/api:latest     "./api.py"               4 minutes ago       Up 4 minutes (healthy)    5000/tcp              stackFiap_api.4.vciwnzaxakavsj2t3p2tlaekc
+44cfaf700b20        josecastillolema/mysql:latest   "docker-entrypoint.s…"   11 minutes ago      Up 11 minutes             3306/tcp, 33060/tcp   stackFiap_mysql.1.wr5ia70abxco05ypimayagrm0
+2239ae187e86        josecastillolema/api:latest     "./api.py"               11 minutes ago      Up 11 minutes (healthy)   5000/tcp              stackFiap_api.1.qedwp50z4l5dhskg66txj91d7
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T2]</strong> Desligar o <em>worker</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo shutdown -h now
+Connection to ec2-3-85-40-189.compute-1.amazonaws.com closed by remote host.
+Connection to ec2-3-85-40-189.compute-1.amazonaws.com closed.
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Apos uns instantes, confirmar que o <em>worker</em> aparece como <strong><code class="language-plaintext highlighter-rouge">down</code></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker node ls
+ID                            HOSTNAME            STATUS              AVAILABILITY        MANAGER STATUS      ENGINE VERSION
+4hx9zm7docinufxy1mm62yynm     ip-172-31-32-255    Down                Active                                  19.03.6
+1y4bix4oby6nq2jxx5ft4rhd0 *   ip-172-31-47-198    Ready               Active              Leader              19.03.6
+</code></pre></div>    </div>
+  </li>
+  <li><strong>[T1]</strong> Confirmar que os containers que estavam rodando no <em>worker</em> (servidor <strong>T2</strong>), foram recriados no <em>manager</em> (neste caso, 2 réplicas da API):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+CONTAINER ID        IMAGE                           COMMAND                  CREATED              STATUS                        PORTS                 NAMES
+2bbcefe6fc28        josecastillolema/api:latest     "./api.py"               About a minute ago   Up About a minute (healthy)   5000/tcp              stackFiap_api.3.15hrsir7ac5a2eun79wbp6ftf
+41067e32567d        josecastillolema/api:latest     "./api.py"               About a minute ago   Up About a minute (healthy)   5000/tcp              stackFiap_api.7.ldetjf1ykn7kyaokadcaod0di
+325de1e84b51        josecastillolema/api:latest     "./api.py"               7 minutes ago        Up 7 minutes (healthy)        5000/tcp              stackFiap_api.4.vciwnzaxakavsj2t3p2tlaekc
+44cfaf700b20        josecastillolema/mysql:latest   "docker-entrypoint.s…"   14 minutes ago       Up 14 minutes                 3306/tcp, 33060/tcp   stackFiap_mysql.1.wr5ia70abxco05ypimayagrm0
+2239ae187e86        josecastillolema/api:latest     "./api.py"               15 minutes ago       Up 15 minutes (healthy)       5000/tcp              stackFiap_api.1.qedwp50z4l5dhskg66txj91d7
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="clean-up"><em>Clean-up</em></h2>
+
+<ol>
+  <li><strong>[T1]</strong> Remover o <em>stack</em>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker stack rm stackFiap
+Removing service stackFiap_api
+Removing service stackFiap_mysql
+Removing network stackFiap_default
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#iac" class="page__taxonomy-item p-category" rel="tag">iac</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a><span class="sep">, </span>
+    
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">series</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2019-02-02">February 2, 2019</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Containers+series+IV%3A+Docker+Swarm%20https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers4-docker-swarm%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers4-docker-swarm%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers4-docker-swarm%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/containers3-docker-compose/" class="pagination--pager" title="Containers series III: Docker Compose
+">Previous</a>
+    
+    
+      <a href="/containers5-k8s-install/" class="pagination--pager" title="Containers series V: Kubernetes - Instalação
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/containers4-docker-swarm/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/containers4-docker-swarm"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,930 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Containers series V: Kubernetes - Instalação - GitOps</title>
+<meta name="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+  <meta property="article:author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="Containers series V: Kubernetes - Instalação">
+<meta property="og:url" content="https://josecastillolema.github.io/containers5-k8s-install/">
+
+
+  <meta property="og:description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-02-04T00:00:00-06:00">
+
+
+
+  <meta property="article:modified_time" content="2019-02-04T14:00:58-06:00">
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/containers5-k8s-install/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "https://josecastillolema.github.io/",
+      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
+    
+  }
+</script>
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li><li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mininfv/">mini-nfv</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Containers series V: Kubernetes - Instalação">
+    <meta itemprop="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
+    <meta itemprop="datePublished" content="2019-02-04T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2019-02-04T14:00:58-06:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://josecastillolema.github.io/containers5-k8s-install/" class="u-url" itemprop="url">Containers series V: Kubernetes - Instalação
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#lab-5---kubernetes---instalação">Lab 5 - Kubernetes - Instalação</a><ul><li><a href="#orquestrando-containers">Orquestrando containers</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#instalação">Instalação</a></li><li><a href="#validação">Validação</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="lab-5---kubernetes---instalação">Lab 5 - Kubernetes - Instalação</h1>
+
+<h2 id="orquestrando-containers">Orquestrando containers</h2>
+<p><a href="https://kubernetes.io/pt/"><strong>Kubernetes</strong> (k8s)</a>, da mesma forma que o Docker Swarm, permite orquestrar containers em um cluster formado por vários servidores. De esta forma conseguimos garantir as seguintes propriedades nos containers gerenciados pelo orquestrador:</p>
+<ul>
+  <li><strong>tolerância a falhas</strong>: se um dos servidores do cluster cair, o container automaticamente será iniciado em outro servidor do cluster</li>
+  <li><strong>alta disponibilidade</strong>: várias réplicas de cada container podem ser executadas em vários servidores do cluster</li>
+  <li><strong>escalabilidade</strong>: o número de réplicas de cada container pode ser aumentado a qualquer momento em funçao da demanda</li>
+</ul>
+
+<p><a href="https://microk8s.io/"><strong>Microk8s</strong></a> é um Kubernetes pequeno, rápido, seguro e com um único nó (<em>all-in-one</em>) que é instalado em praticamente qualquer computador com Linux. Usado para desenvolvimento <em>off-line</em>, criação de protótipos, testes ou uso em uma VM como um k8s pequeno, barato e confiável para CI/CD.</p>
+
+<h2 id="pre-reqs">Pre-reqs</h2>
+
+<ul>
+  <li>
+    <p>Uma VM com a imagem <code class="language-plaintext highlighter-rouge">Ubuntu Linux 18.04</code></p>
+  </li>
+  <li>
+    <p>Flavor <code class="language-plaintext highlighter-rouge">t2.medium</code> (2 vcpus, 4 GB de memória) ou maior</p>
+  </li>
+</ul>
+
+<h2 id="instalação">Instalação</h2>
+
+<ol>
+  <li>Instalação do <strong>microk8s</strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo snap install microk8s --classic
+ microk8s v1.18.0 from Canonical✓ installed
+</code></pre></div>    </div>
+  </li>
+  <li>Ajuste de permissões do usuário <strong><code class="language-plaintext highlighter-rouge">ubuntu</code></strong> no grupo <strong><code class="language-plaintext highlighter-rouge">microk8s</code></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo usermod -a -G microk8s ubuntu
+ $ sudo reboot
+</code></pre></div>    </div>
+  </li>
+  <li>Após o <em>reboot</em>, confirmar que o usuário pertence ao grupo <strong><code class="language-plaintext highlighter-rouge">microk8s</code></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ groups
+ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="validação">Validação</h2>
+
+<ol>
+  <li>Conferir instalação:
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.status</span>
+ <span class="s">microk8s is running</span>
+ <span class="s">addons</span><span class="pi">:</span>
+ <span class="na">cilium</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">dashboard</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">dns</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">fluentd</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">gpu</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">helm</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">helm3</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">ingress</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">istio</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">jaeger</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">knative</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">kubeflow</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">linkerd</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">metallb</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">metrics-server</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">prometheus</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">rbac</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">registry</span><span class="pi">:</span> <span class="s">disabled</span>
+ <span class="na">storage</span><span class="pi">:</span> <span class="s">disabled</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Usar o cliente interno do microk8s (<strong><code class="language-plaintext highlighter-rouge">microk8s.kubectl</code></strong>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ microk8s.kubectl get all
+ NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+ service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   4m5s
+</code></pre></div>    </div>
+  </li>
+  <li>Instalação do cliente externo (<strong><code class="language-plaintext highlighter-rouge">kubectl</code></strong>):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo snap install kubectl --classic
+ kubectl 1.18.0 from Canonical✓ installed
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Configuracão dos parámetros de acesso (URL, credenciais, etc.) do cliente externo:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.config &gt; .kube/config</span>
+ <span class="s">$ cat .kube/config</span> 
+ <span class="s">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+ <span class="na">clusters</span><span class="pi">:</span>
+ <span class="pi">-</span> <span class="na">cluster</span><span class="pi">:</span>
+     <span class="na">certificate-authority-data</span><span class="pi">:</span> <span class="s">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURBVENDQWVtZ0F3SUJBZ0lKQUx5UmJTeUd2NjRLTUEwR0NTcUdTSWIzRFFFQkN3VUFNQmN4RlRBVEJnTlYKQkFNTURERXdMakUxTWk0eE9ETXVNVEFlRncweU1EQTBNVFV5TURBek1URmFGdzB5TURBMU1UVXlNREF6TVRGYQpNQmN4RlRBVEJnTlZCQU1NRERFd0xqRTFNaTR4T0RNdU1UQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQCkFEQ0NBUW9DZ2dFQkFNODM5REltV1VLN2JNMWQ1OVR1SThITnRBbVlOQ2hqSStFa0txa2g5T1lPaWV0c0xjbDIKS2p5Ym5nRTJyOHp4M21YeEtGSmhnZGJxVzNmVHpGOGtxNGNKbVdFc0UxKzFtdFRaRUNFU0lrVmFlK3NUbjMvMwo0VWRYckV3SW5tQjJsMDlCRFNXblRBTHBaVUhnSFRvcUhOQmVzTlVlQ3h6Z0dzUWgranRGSlEzMWp4QnNqQnFNCk1EM1ZNRlFCK2FMUW5pSTM0UTZrNm8zZmR5dTArQlhJNHVYR3hldWFBVzViZStidWlPUlQ3a3hhdnZ4bmNsOE4KTFd0aG4wK2hjKzNEUE1DdXhxT2dra0UvRFZCV2trdklsbHBMeG5RLzU3b1BxUHVFVXRzd1hJeGZRMi9EUTBNdwpzZ1pLT0trNzYrby9nakhmaTNtRjArYTJWaUZPcm9FVTVBTUNBd0VBQWFOUU1FNHdIUVlEVlIwT0JCWUVGUE1LCkMyaXl0QkZxVTM3VU1uRXJHZEYrZnoyeU1COEdBMVVkSXdRWU1CYUFGUE1LQzJpeXRCRnFVMzdVTW5FckdkRisKZnoyeU1Bd0dBMVVkRXdRRk1BTUJBZjh3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUpRdG5HbGZPVTk5VGdyZgpUNDkxc3hCSUUydVdEVG9Pc3BMVC9hcEFjK1JSdGtlWk1tS1NQNjYzNTFhQnJEamFCem9nblZ6WVNDQWxEU3Y1Cm95bVN3MTBQUms2SGt0QW44YzlFOGFFTHpyOHowZytOVE1sazRDRHNtQTcrN3hpMm1UaEM3bitzMWpXd1Ztd08KUzdRWG05dTIyS2g4MFk4aU1qVHRDdDBTY2I1TFdFVmwyLzRzWHhyQnZiSFBpbllRdjZSdFhvQWxlODFGMmZZLwpjVDg0L0dHNHRJdXd0VlB2b09hS0lKTzZLT1l6a0VzcU81SFdiTnltZ2xpVGxlMEFBLzdEUUprd1c0M0h4clF1CmdoMThrVURtQXpJa2Z0dDV0M1pKVnNJR2xGUnprZXRJK25TVnVYbjhHN0l5NEd5aWdiNmlZcE1EeE9CblhXWG0KbG43L09YZz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=</span>
+     <span class="na">server</span><span class="pi">:</span> <span class="s">https://172.31.47.198:16443</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">microk8s-cluster</span>
+ <span class="na">contexts</span><span class="pi">:</span>
+ <span class="pi">-</span> <span class="na">context</span><span class="pi">:</span>
+     <span class="na">cluster</span><span class="pi">:</span> <span class="s">microk8s-cluster</span>
+     <span class="na">user</span><span class="pi">:</span> <span class="s">admin</span>
+   <span class="na">name</span><span class="pi">:</span> <span class="s">microk8s</span>
+ <span class="na">current-context</span><span class="pi">:</span> <span class="s">microk8s</span>
+ <span class="na">kind</span><span class="pi">:</span> <span class="s">Config</span>
+ <span class="na">preferences</span><span class="pi">:</span> <span class="pi">{}</span>
+ <span class="na">users</span><span class="pi">:</span>
+ <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">admin</span>
+   <span class="na">user</span><span class="pi">:</span>
+     <span class="na">username</span><span class="pi">:</span> <span class="s">admin</span>
+     <span class="na">password</span><span class="pi">:</span> <span class="s">NldvWW5rZGFzY3I4Tkw4SVY4Y25kV3YrR1lXcnZNek1tc2Z2a2prVStEQT0K\</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Testar o cliente externo:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl get all --all-namespaces
+ NAMESPACE   NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
+ default     service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   6m46s
+</code></pre></div>    </div>
+  </li>
+  <li>Habilitar o <em>plugins</em> <strong><code class="language-plaintext highlighter-rouge">dns</code></strong>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ microk8s.enable dns
+ Enabling DNS
+ Applying manifest
+ serviceaccount/coredns created
+ configmap/coredns created
+ deployment.apps/coredns created
+ service/kube-dns created
+ clusterrole.rbac.authorization.k8s.io/coredns created
+ clusterrolebinding.rbac.authorization.k8s.io/coredns created
+ Restarting kubelet
+ DNS is enabled
+ Applying manifest
+ serviceaccount/kubernetes-dashboard created
+ service/kubernetes-dashboard created
+ secret/kubernetes-dashboard-certs created
+ secret/kubernetes-dashboard-csrf created
+ secret/kubernetes-dashboard-key-holder created
+ configmap/kubernetes-dashboard-settings created
+ role.rbac.authorization.k8s.io/kubernetes-dashboard created
+ clusterrole.rbac.authorization.k8s.io/kubernetes-dashboard created
+ rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+ clusterrolebinding.rbac.authorization.k8s.io/kubernetes-dashboard created
+ deployment.apps/kubernetes-dashboard created
+ service/dashboard-metrics-scraper created
+ deployment.apps/dashboard-metrics-scraper created
+ service/monitoring-grafana created
+ service/monitoring-influxdb created
+ service/heapster created
+ deployment.apps/monitoring-influxdb-grafana-v4 created
+ serviceaccount/heapster created
+ clusterrolebinding.rbac.authorization.k8s.io/heapster created
+ configmap/heapster-config created
+ configmap/eventer-config created
+ deployment.apps/heapster-v1.5.2 created
+
+ If RBAC is not enabled access the dashboard using the default token retrieved with:
+
+ token=$(microk8s kubectl -n kube-system get secret | grep default-token | cut -d " " -f1)
+ microk8s kubectl -n kube-system describe secret $token
+
+ In an RBAC enabled setup (microk8s enable RBAC) you need to create a user with restricted
+ permissions as shown in:
+ https://github.com/kubernetes/dashboard/blob/master/docs/user/access-control/creating-sample-user.md
+</code></pre></div>    </div>
+  </li>
+  <li>Confirmar que os <em>plugins</em> estão habilitados:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ microk8s.status
+microk8s is running
+addons:
+dashboard: disabled
+dns: enabled
+cilium: disabled
+fluentd: disabled
+gpu: disabled
+helm: disabled
+helm3: disabled
+ingress: disabled
+istio: disabled
+jaeger: disabled
+knative: disabled
+kubeflow: disabled
+linkerd: disabled
+metallb: disabled
+metrics-server: disabled
+prometheus: disabled
+rbac: disabled
+registry: disabled
+storage: disabled
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
+    
+      <a href="/tags/#iac" class="page__taxonomy-item p-category" rel="tag">iac</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a><span class="sep">, </span>
+    
+      <a href="/tags/#series" class="page__taxonomy-item p-category" rel="tag">series</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2019-02-04">February 4, 2019</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Containers+series+V%3A+Kubernetes+-+Instala%C3%A7%C3%A3o%20https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers5-k8s-install%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers5-k8s-install%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fcontainers5-k8s-install%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/containers4-docker-swarm/" class="pagination--pager" title="Containers series IV: Docker Swarm
+">Previous</a>
+    
+    
+      <a href="/containers6-kompose/" class="pagination--pager" title="Containers series VI: Kompose
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+      <h4 class="page__comments-title">Comments</h4>
+      <section id="disqus_thread"></section>
+    
+</div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You May Also Enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          15 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/dotfiles/" rel="permalink">My Linux desktop
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/imdea/" rel="permalink">Telecom cloud-native development: an industry point of view
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "https://josecastillolema.github.io/containers5-k8s-install/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/containers5-k8s-install"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
