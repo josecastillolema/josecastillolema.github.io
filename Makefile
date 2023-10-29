@@ -2,7 +2,7 @@ prepare:
 	touch Gemfile.lock
 	mkdir docs
 	chmod a+w Gemfile.lock
-	chmod a+w _site
+	chmod a+w docs
 
 serve:
 	docker run -e JEKYLL_ENV=production -p 4000:4000 --rm -v=.:/srv/jekyll:Z -it jekyll/builder sh -c 'while :; do jekyll serve; done'
