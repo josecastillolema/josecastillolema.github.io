@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2023-10-28T15:32:31-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Development workflows on inmutable distros: rootless setup</title><link href="https://josecastillolema.github.io/dev-inmutable-distros/" rel="alternate" type="text/html" title="Development workflows on inmutable distros: rootless setup" /><published>2023-10-21T00:00:00-05:00</published><updated>2023-10-21T15:00:58-05:00</updated><id>https://josecastillolema.github.io/dev-inmutable-distros</id><content type="html" xml:base="https://josecastillolema.github.io/dev-inmutable-distros/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2023-11-01T06:22:59-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">diff.blog</title><link href="https://josecastillolema.github.io/diff-blog/" rel="alternate" type="text/html" title="diff.blog" /><published>2023-10-29T00:00:00-05:00</published><updated>2023-10-29T15:00:58-05:00</updated><id>https://josecastillolema.github.io/diff-blog</id><content type="html" xml:base="https://josecastillolema.github.io/diff-blog/">&lt;p&gt;&lt;a href=&quot;https://diff.blog/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2023-10-29-diff-blog/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://diff.blog/&quot;&gt;diff.blog&lt;/a&gt; is a platform that helps you discover and follow amazing developer blogs. Whether your interests are in Python, Rust, AI, Distributed Systems or XYZ diff.blog has got amazing blogs for you to follow!&lt;/p&gt;
+
+&lt;h3 id=&quot;how-is-it-different-from-medium&quot;&gt;How is it different from Medium?&lt;/h3&gt;
+
+&lt;p&gt;diff.blog unlike Medium does not host any blogs. diff.blog merely acts as a platform that makes it easier to discover and subscribe to blogs. So you own your own blog and content. You can host your blog in a Wordpress site, GitHub pages, Ghost, or wherever you want. This means even if diff.blog shut downs one day it won’t affect your blog at all.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-diffblog&quot;&gt;Why diff.blog?&lt;/h3&gt;
+
+&lt;p&gt;There are a lot of amazing developer blogs in the Internet. But very few of them gets visibility. Because of this visibility issue a lot of the developers blogs are shutting down or is moving to Medium in search of views. Developers should be able to own their blog without having to compromise on the views. Blogs are probably the last remaining bits of Internet, a network that was supposed to be decentralized and not owned by a few companies. diff.blog’s mission is to bring the audience back to the blogs and make blogs popular again.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-does-it-work&quot;&gt;How does it work?&lt;/h3&gt;
+
+&lt;p&gt;The underlying engine of diff.blog is similar to an RSS reader. All most all the blogs have RSS feed. RSS feeds makes it really easy to keep updated with the posts of a blog. No blockchain. Nothing fancy. It’s just a file. You can read more about RSS feeds at https://www.youneedfeeds.com/.&lt;/p&gt;
+
+&lt;h3 id=&quot;profile&quot;&gt;Profile&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://diff.blog/josecastillolema/&quot;&gt;https://diff.blog/josecastillolema/&lt;/a&gt;
+&lt;a href=&quot;https://diff.blog/josecastillolema/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2023-10-29-diff-blog/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><summary type="html"></summary></entry><entry><title type="html">Development workflows on inmutable distros: rootless setup</title><link href="https://josecastillolema.github.io/dev-inmutable-distros/" rel="alternate" type="text/html" title="Development workflows on inmutable distros: rootless setup" /><published>2023-10-21T00:00:00-05:00</published><updated>2023-10-21T15:00:58-05:00</updated><id>https://josecastillolema.github.io/dev-inmutable-distros</id><content type="html" xml:base="https://josecastillolema.github.io/dev-inmutable-distros/">&lt;blockquote&gt;
   &lt;p&gt;Continuation of &lt;a href=&quot;https://samsai.eu/&quot;&gt;Samsai&lt;/a&gt; notes on &lt;a href=&quot;https://samsai.eu/post/toolbox-based-emacs-flatpak-workflow/&quot;&gt;Toolbox-based Emacs Flatpak workflow&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -511,6 +530,11 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
       &lt;li&gt;Unable to create pods in kind with ephemeral storage requests &lt;a href=&quot;https://github.com/kubernetes-sigs/kind/issues/3359&quot;&gt;kubernetes-sigs/kind#3359&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Emacs Flatpak
+    &lt;ul&gt;
+      &lt;li&gt;Pure-GTK (wayland) support &lt;a href=&quot;https://github.com/flathub/org.gnu.emacs/issues/58&quot;&gt;flathub/org.gnu.emacs#58&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;Firefox
     &lt;ul&gt;
       &lt;li&gt;Slack huddles are not available &lt;a href=&quot;https://github.com/webcompat/web-bugs/issues/82623&quot;&gt;webcompat/web-bugs#82623&lt;/a&gt;&lt;/li&gt;
@@ -550,8 +574,16 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
       &lt;li&gt;Support for custom commands upon entering container &lt;a href=&quot;https://github.com/containers/toolbox/issues/1302&quot;&gt;containers/toolbox#1302&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Vim Flatpak
+    &lt;ul&gt;
+      &lt;li&gt;Wayland support &lt;a href=&quot;https://github.com/vim/vim/issues/4727&quot;&gt;vim/vim#4727&lt;/a&gt;, &lt;a href=&quot;https://github.com/vim/vim/pull/9639&quot;&gt;vim/vim#9639&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;Visual Studio Code
     &lt;ul&gt;
+      &lt;li&gt;Exit Vim Insert Mode on Save &lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/2411&quot;&gt;VSCodeVim/Vim#2411&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;JetBrains Mono ligatures not working&lt;/li&gt;
+      &lt;li&gt;Reset to normal mode when leaving file focus &lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/7553&quot;&gt;VSCodeVim/Vim#7553&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Small/giant mouse cursor &lt;a href=&quot;https://github.com/microsoft/vscode/issues/136390&quot;&gt;microsoft/vscode#136390&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1207,18 +1239,4 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
 &lt;h2 id=&quot;speakers&quot;&gt;Speakers&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://perfconfspring2022.sched.com/speaker/jlema&quot;&gt;Jose Castillo Lema&lt;/a&gt; - Software Engineer at &lt;strong&gt;Red Hat&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><category term="sdn" /><summary type="html">Proceedings</summary></entry><entry><title type="html">Legends of Linux Trivia</title><link href="https://josecastillolema.github.io/linux-trivia/" rel="alternate" type="text/html" title="Legends of Linux Trivia" /><published>2023-03-20T00:00:00-05:00</published><updated>2022-03-20T15:00:58-05:00</updated><id>https://josecastillolema.github.io/linux-trivia</id><content type="html" xml:base="https://josecastillolema.github.io/linux-trivia/">&lt;p&gt;How well do you know Linux?&lt;/p&gt;
-
-&lt;p&gt;Red Hat &lt;a href=&quot;https://redhatdg.co1.qualtrics.com/jfe/form/SV_bjRFSHqPdTpIjoa&quot;&gt;is offering&lt;/a&gt; three nifty badges for Linux lovers and badge collectors alike. Successfully complete a single Red Hat quiz to earn the badge of your choice below. Or complete them all to earn all three. Sounds pretty easy, right? Well, there is a catch … you have to score 100% on the quiz.&lt;/p&gt;
-
-&lt;h3 id=&quot;red-hat-enterprise-linux-trivia---red-hat-titan&quot;&gt;Red Hat Enterprise Linux Trivia - Red Hat Titan&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2023-03-20-linux-trivia/RedHatTitan.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;linux-command-line-trivia---command-line-captain&quot;&gt;Linux Command-Line Trivia - Command-Line Captain&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2023-03-20-linux-trivia/Command-LineCaptain.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;linux-open-source-trivia---open-sourcer-er&quot;&gt;Linux Open Source Trivia - Open Sourcer-er&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2023-03-20-linux-trivia/OpenSourcer-er.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><category term="redhat" /><summary type="html">How well do you know Linux?</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><category term="sdn" /><summary type="html">Proceedings</summary></entry></feed>

@@ -846,7 +846,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Running FRR in K8s/OpenShift",
-        "excerpt":"FRR is a fully featured, high performance, free software IP routing suite included in RHEL 8. We will be using this FRR image for establishing Bidirectional Forwarding Detection (BFD) sessions. First, let’s define the proper config map: apiVersion: v1 data: daemons: | bgpd=no ospfd=no ospf6d=no ripd=no ripngd=no isisd=no pimd=no ldpd=no...","categories": [],
+        "excerpt":"FRR is a fully featured, high performance, free software IP routing suite included in RHEL 8. We will be using this FRR image for establishing Bidirectional Forwarding Detection (BFD) sessions. Config map definition First, let’s define the proper config map: apiVersion: v1 data: daemons: | bgpd=no ospfd=no ospf6d=no ripd=no ripngd=no...","categories": [],
         "tags": ["en","networks","openshift","redhat"],
         "url": "/frr-k8s/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1371,5 +1371,11 @@ var store = [{
         "excerpt":"Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow. I have been using inmutable OS distributions for a while (Fedora Silverblue and Sericea, see my dotfiles). They have the following characteristics: System root (baseOS) is mostly immutable System software installation/updates are handled as images and applied on reboot For installing...","categories": [],
         "tags": ["en","redhat"],
         "url": "/dev-inmutable-distros/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "diff.blog",
+        "excerpt":"diff.blog is a platform that helps you discover and follow amazing developer blogs. Whether your interests are in Python, Rust, AI, Distributed Systems or XYZ diff.blog has got amazing blogs for you to follow! How is it different from Medium? diff.blog unlike Medium does not host any blogs. diff.blog merely...","categories": [],
+        "tags": ["en"],
+        "url": "/diff-blog/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
