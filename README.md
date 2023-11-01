@@ -14,6 +14,8 @@ Sources of the **GitOps project's website** (https://josecastillolema.github.io/
 
 With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. This allows for easier installation and updating as you don’t have to manage any of the theme files. Remote themes are similar to Gem-based themes, but do not require Gemfile changes or whitelisting making them ideal for sites hosted with GitHub Pages.
 
+The site is generated locally and then the site static files are pushed to GitHub because the site depends on an [unsupported plugins](https://pages.github.com/versions/), [`jekyll-remote-include`](https://github.com/netrics/jekyll-remote-include).
+
 # Minimal Mistakes remote theme starter
 
 Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes), replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
