@@ -84,6 +84,8 @@ EOF
 pod/kubemark-node created
 ```
 
+## Validation
+
 Let's check the if new node was properly registered:
 ```
 ❯ oc get po
@@ -156,6 +158,7 @@ NAME   READY   STATUS    RESTARTS   AGE   IP                NODE            NOMI
 test   1/1     Running   0          36s   192.168.192.168   kubemark-node   <none>           <none>
 ```
 
+## Scale out
 
 Finally, bear in mind that in order to create new hollow nodes you will have to change two fields in the pod definition:
  - The pod name: `metadata.name`
