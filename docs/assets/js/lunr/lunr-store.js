@@ -1378,4 +1378,10 @@ var store = [{
         "tags": ["en"],
         "url": "/diff-blog/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "PHYSICS 8th General Assembly",
+        "excerpt":"The PHYSICS project, held its 8th General Assembly meeting on November 8th – 9th, 2023, in Florence, Italy. Hosted by GFT, the meeting provided an opportunity for partners to present updates on task progress and deliverables, as well as discuss upcoming project results. The coordinator and leaders of the work...","categories": [],
+        "tags": ["en","networks","redhat","research"],
+        "url": "/physics-ga8/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
