@@ -3,6 +3,7 @@ title:  "Containers series III: Docker Compose"
 last_modified_at: 2019-01-29T16:00:58-04:00
 tags:
   - classes
+  - dev
   - fiap
   - iac
   - openshift

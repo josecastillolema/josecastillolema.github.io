@@ -5,6 +5,7 @@ tags:
   - aws
   - azure
   - classes
+  - dev
   - es
   - fiap
   - iffe

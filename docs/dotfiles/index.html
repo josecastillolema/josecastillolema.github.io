@@ -365,9 +365,6 @@
 
     <p>Only use wayland applications; xwayland apps are not properly scaled <a href="https://github.com/swaywm/sway/issues/2966">swaywm/sway#2966</a>, drag and drop does not work <a href="https://github.com/swaywm/sway/issues/6460">swaywm/sway#6460</a> and have a glitched behaviour uppon minimized on system tray <a href="https://github.com/swaywm/sway/issues/6905">swaywm/sway#6905</a>.</p>
   </li>
-  <li>
-    <p>Display setup: wdisplays via rpm-ostree</p>
-  </li>
   <li>Browser
     <ul>
       <li>Primary: Firefox via baseOS</li>
@@ -381,31 +378,32 @@
   <li>
     <p>Terminal: <a href="https://wezfurlong.org/wezterm/">WezTerm</a> via <a href="https://flathub.org/apps/org.wezfurlong.wezterm">Flatpak</a></p>
 
-    <p>Wayland, grabbable scrollbar and ligature support.</p>
+    <p>Amazing terminal with wayland, grabbable scrollbar and ligature support.</p>
 
     <p>Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: <em>$mod + scroll wheel</em>) but I have not been able to configure it correctly (if anyone has please let me know <a href="#issues">↵</a>). Also Foot does not support ligatures <a href="https://codeberg.org/dnkl/foot/issues/57">dnkl/foot#57</a>.</p>
   </li>
-  <li>
-    <p>IDE: Visual Studio Code via <a href="https://flathub.org/apps/com.visualstudio.code">Flatpak</a></p>
+  <li>IDE:
+    <ul>
+      <li>
+        <p>Primary: Visual Studio Code via <a href="https://flathub.org/apps/com.visualstudio.code">Flatpak</a></p>
 
-    <p>With flags <code class="language-plaintext highlighter-rouge">--socket=wayland</code> and <code class="language-plaintext highlighter-rouge">--ozone-platform-hint=wayland</code>.</p>
+        <p>With flags <code class="language-plaintext highlighter-rouge">--socket=wayland</code> and <code class="language-plaintext highlighter-rouge">--ozone-platform-hint=wayland</code>.</p>
 
-    <p>With <a href="https://github.com/tonsky/FiraCode">Fira Code font</a> with programming ligatures installed via rpm-ostree.</p>
+        <p>With <a href="https://github.com/JetBrains/JetBrainsMono">JetBrains Mono font</a> with programming ligatures installed via rpm-ostree.</p>
 
-    <p>Instead of using SDK extensions tend to opt for local language installs (golang, ocaml, etc.).</p>
+        <p>Instead of using SDK extensions <a href="https://josecastillolema.github.io/dev-inmutable-distros/">tend to opt for local language installs (golang, ocaml, etc.)</a>.</p>
 
-    <p><a href="https://github.com/owtaylor/toolbox-vscode">toolbox-vscode</a> to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.</p>
+        <p><a href="https://github.com/owtaylor/toolbox-vscode">toolbox-vscode</a> to integrate VSCode and toolbx.</p>
+      </li>
+      <li>
+        <p>Secundary: Neovim via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a></p>
+      </li>
+    </ul>
   </li>
   <li>
     <p>File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)</p>
 
     <p>Would prefer Thunar or PCMan FM but miss the preview feature.</p>
-  </li>
-  <li>File sync
-    <ul>
-      <li>Dropbox via <a href="https://flathub.org/apps/com.dropbox.Client">Flatpak</a></li>
-      <li>Gdrive with rclone via rpm-ostree</li>
-    </ul>
   </li>
   <li>
     <p>Text editor: Gnome Text Editor via <a href="https://flathub.org/apps/org.gnome.TextEditor">Flatpak</a></p>
@@ -428,12 +426,21 @@
   <li>
     <p>Torrent client: Transmission via <a href="https://flathub.org/apps/com.transmissionbt.Transmission">Flatpak</a></p>
   </li>
+  <li>File sync
+    <ul>
+      <li>Dropbox via <a href="https://flathub.org/apps/com.dropbox.Client">Flatpak</a></li>
+      <li>Gdrive with rclone via rpm-ostree</li>
+    </ul>
+  </li>
   <li>
     <p>WhatsApp client: WhatsApp for Linux via <a href="https://flathub.org/apps/com.github.eneshecan.WhatsAppForLinux">Flatpak</a></p>
 
     <p>Supports wayland.</p>
   </li>
-  <li>Office suite: LibreOffice via <a href="https://flathub.org/apps/org.libreoffice.LibreOffice">Flatpak</a></li>
+  <li>
+    <p>Office suite: LibreOffice via <a href="https://flathub.org/apps/org.libreoffice.LibreOffice">Flatpak</a></p>
+  </li>
+  <li>Display setup: wdisplays via rpm-ostree</li>
 </ul>
 
 <h2 id="tools">Tools</h2>
@@ -519,12 +526,11 @@
   </li>
   <li>Sway
     <ul>
-      <li>Share a specific window on Google Meet <a href="https://github.com/swaywm/sway/issues/3282">swaywm/sway#3282</a></li>
       <li>
         <s>Drag &amp; Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
       </li>
       <li>
-        <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
+        <s>Differentiate between *app_ids* that start the same [swaywm/sway#7838](https://github.com/swaywm/sway/issues/7838)</s>
       </li>
       <li>Fast scroll using <em>$mod + ScrollWheel</em>. Tried with:
         <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> bindsym --whole-window $mod+button4 exec "wtype -M shift -k Prior"
@@ -536,6 +542,10 @@
         </ul>
       </li>
       <li>Persistent workspaces <a href="https://github.com/swaywm/sway/pull/7631">swaywm/sway#7631</a></li>
+      <li>Share a specific window on Google Meet <a href="https://github.com/swaywm/sway/issues/3282">swaywm/sway#3282</a></li>
+      <li>
+        <s>XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)</s>
+      </li>
     </ul>
   </li>
   <li>Toolbx
@@ -551,7 +561,10 @@
   <li>Visual Studio Code
     <ul>
       <li>Exit Vim Insert Mode on Save <a href="https://github.com/VSCodeVim/Vim/issues/2411">VSCodeVim/Vim#2411</a></li>
-      <li>JetBrains Mono ligatures not working</li>
+      <li>
+        <s>JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)</s>
+      </li>
+      <li>Paste through mouse middle button does not insert text at cursor position<a href="https://github.com/VSCodeVim/Vim/issues/5065">VSCodeVim/Vim#5065</a></li>
       <li>Reset to normal mode when leaving file focus <a href="https://github.com/VSCodeVim/Vim/issues/7553">VSCodeVim/Vim#7553</a></li>
       <li>Small/giant mouse cursor <a href="https://github.com/microsoft/vscode/issues/136390">microsoft/vscode#136390</a></li>
     </ul>
@@ -643,6 +656,53 @@
     <div class="page__related">
       <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/flatpak-ocaml/" rel="permalink">How to Flatpak OCaml applications
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -777,49 +837,6 @@
 
 
 </p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/kubemark-ocp/" rel="permalink">Kubemark on OpenShift
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          4 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is...</p>
   </article>
 </div>
 

@@ -1,6 +1,544 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2023-11-19T07:09:10-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">PHYSICS 8th General Assembly</title><link href="https://josecastillolema.github.io/physics-ga8/" rel="alternate" type="text/html" title="PHYSICS 8th General Assembly" /><published>2023-11-19T00:00:00-06:00</published><updated>2023-11-19T14:00:58-06:00</updated><id>https://josecastillolema.github.io/physics-ga8</id><content type="html" xml:base="https://josecastillolema.github.io/physics-ga8/">&lt;p&gt;&lt;a href=&quot;/physics&quot;&gt;&lt;img src=&quot;/assets/images/posts/2022-09-20-physics-ga4/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2023-12-19T05:54:28-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">How to Flatpak OCaml applications</title><link href="https://josecastillolema.github.io/flatpak-ocaml/" rel="alternate" type="text/html" title="How to Flatpak OCaml applications" /><published>2023-12-19T00:00:00-06:00</published><updated>2023-12-19T14:00:58-06:00</updated><id>https://josecastillolema.github.io/flatpak-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/flatpak-ocaml/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=flatpak-ocaml-examples&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=flatpak-ocaml-examples&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=flatpak-ocaml-examples&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 
-&lt;p&gt;The PHYSICS project, held its 8th General Assembly meeting on November 8th – 9th, 2023, in Florence, Italy. Hosted by GFT, the meeting provided an opportunity for partners to present updates on task progress and deliverables, as well as discuss upcoming project results. The coordinator and leaders of the work packages (WP) led discussions on any outstanding issues, fostering active participation and constructive feedback.&lt;/p&gt;
+&lt;h1 id=&quot;how-to-flatpak-an-ocaml-application&quot;&gt;How to Flatpak an OCaml application&lt;/h1&gt;
+
+&lt;p&gt;Let’s take a couple &lt;a href=&quot;https://ocaml.org/&quot;&gt;OCaml&lt;/a&gt; applications to illustrate &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; distributing and packaging leveraging the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;a hello world CLI application&lt;/li&gt;
+  &lt;li&gt;a simple GTK program from the &lt;a href=&quot;https://v2.ocaml.org/learn/tutorials/introduction_to_gtk.html&quot;&gt;Introduction to Gtk&lt;/a&gt; OCaml tutorial&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The SDK is only needed during the building phase.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Table of contents&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#how-to-flatpak-an-ocaml-application&quot;&gt;How to Flatpak an OCaml application&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#creating-a-hello-world-cli-application&quot;&gt;Creating a hello world CLI application&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#flatpak-manifest&quot;&gt;Flatpak manifest&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#install-and-run-the-application&quot;&gt;Install and run the application&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#creating-a-simple-gtk-program&quot;&gt;Creating a simple GTK program&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#preparations&quot;&gt;Preparations&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#import-gtk2-library&quot;&gt;Import GTK2 library&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#wrapper-script&quot;&gt;Wrapper script&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#building-from-sources&quot;&gt;Building from sources&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#flatpak-manifest-1&quot;&gt;Flatpak manifest&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#install-and-run-the-application-1&quot;&gt;Install and run the application&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#building-with-opam&quot;&gt;Building with opam&lt;/a&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;a href=&quot;#source-files&quot;&gt;Source files&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#generate-flatpak-manifest-code&quot;&gt;Generate Flatpak manifest code&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#flatpak-manifest-2&quot;&gt;Flatpak manifest&lt;/a&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;a href=&quot;#install-and-run-the-application-2&quot;&gt;Install and run the application&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#publish-the-application&quot;&gt;Publish the application&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;creating-a-hello-world-cli-application&quot;&gt;Creating a hello world CLI application&lt;/h2&gt;
+
+&lt;p&gt;Create a hello world &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;example.ml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-ocaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;print_endline&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;hello world&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can compile your code with the OCaml compiler &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ocamlopt&lt;/code&gt; (no need to do so at this point):&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ocamlopt -o example example.ml
+$ ./example
+hello world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;flatpak-manifest&quot;&gt;Flatpak manifest&lt;/h3&gt;
+
+&lt;p&gt;Some things to note in the following manifest:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The build options setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L13-L14&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Build some pre-requisistes using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dune&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L17-L24&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Installing the application to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/app/bin&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L33&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;app-id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;flatpak.ocaml.example&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;runtime&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;runtime-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;22.08&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;sdk&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;sdk-extensions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk.Extension.ocaml&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;build-options&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;append-path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/usr/lib/sdk/ocaml/bin&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;camlp-streams&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;git&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/camlp-streams&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;trunk&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dune build&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;file&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;example.ml&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ocamlopt -o example example.ml&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;install -Dm755 example -t /app/bin/&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;install-and-run-the-application&quot;&gt;Install and run the application&lt;/h3&gt;
+
+&lt;p&gt;Build and install the Flatpak package locally using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatpak-builder&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak-builder --force-clean build-dir flatpak.ocaml.example.yaml
+$ flatpak-builder --user --install --force-clean build-dir flatpak.ocaml.example.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the application:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak run flatpak.ocaml.example
+hello world
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The application has an installed size of 369.2 kB:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak info flatpak.ocaml.example
+          ID: flatpak.ocaml.example
+         Ref: app/flatpak.ocaml.example/x86_64/master
+        Arch: x86_64
+      Branch: master
+      Origin: example-origin
+  Collection:
+Installation: user
+   Installed: 368.3 kB
+     Runtime: org.freedesktop.Sdk/x86_64/22.08
+         Sdk: org.freedesktop.Sdk/x86_64/22.08
+      Commit: 02386f983e23b6d991651e86c1b1a55531fd4fa6504c730c938bc06033c19f40
+     Subject: Export flatpak.ocaml.example
+        Date: 2023-10-09 12:34:32 +0000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;creating-a-simple-gtk-program&quot;&gt;Creating a simple GTK program&lt;/h2&gt;
+
+&lt;p&gt;Let’s use the simple &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; program from the &lt;a href=&quot;https://v2.ocaml.org/learn/tutorials/introduction_to_gtk.html&quot;&gt;Introduction to Gtk&lt;/a&gt; OCaml tutorial &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;simple.ml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-ocaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GMain&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;open&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GdkKeysyms&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locale&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GtkMain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;init&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GWindow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;320&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;height&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;
+                              &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Simple lablgtk program&quot;&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vbox&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GPack&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vbox&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;destroy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nn&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c&quot;&gt;(* Menu bar *)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menubar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GMenu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;menu_bar&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vbox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pack&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GMenu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menubar&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accel_group&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accel_group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_menu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_submenu&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;File&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+
+  &lt;span class=&quot;c&quot;&gt;(* File menu *)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GMenu&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;file_menu&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;accel_group&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_item&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Quit&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:_&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Q&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;quit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;c&quot;&gt;(* Button *)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;GButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;label&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Push me!&quot;&lt;/span&gt;
+                              &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;packing&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vbox&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;connect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;clicked&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;callback&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;fun&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prerr_endline&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Ouch!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;c&quot;&gt;(* Display the windows and enter Gtk+ main loop *)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_accel_group&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;accel_group&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;show&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nn&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;main&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You can install the dependencies and compile your code (no need to do so at this point):&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ opam install lablgtk
+$ ocamlfind ocamlopt -package lablgtk2 -linkpkg simple.ml -o simple
+$ ./simple
+Ouch!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is what you should see when you run it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;preparations&quot;&gt;Preparations&lt;/h3&gt;
+
+&lt;h4 id=&quot;import-gtk2-library&quot;&gt;Import GTK2 library&lt;/h4&gt;
+
+&lt;p&gt;We need the GTK2 library, let’s grab it from &lt;a href=&quot;https://github.com/flathub/shared-modules&quot;&gt;Flathub shared-modules repo&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git submodule add https://github.com/flathub/shared-modules.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;wrapper-script&quot;&gt;Wrapper script&lt;/h4&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LD_LIBRARY_PATH&lt;/code&gt; is empty by default when running Flatpak applications (&lt;a href=&quot;https://github.com/flatpak/flatpak-builder/issues/474&quot;&gt;flatpak/flatpak-builder#474&lt;/a&gt;) so we will need a wrapper script &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;simple.sh&lt;/code&gt; around the application:&lt;/p&gt;
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;LD_LIBRARY_PATH&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/app/lib
+&lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt; /app/bin/simple
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;building-from-sources&quot;&gt;Building from sources&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; can be built from its &lt;a href=&quot;https://github.com/garrigue/lablgtk/archive/refs/tags/2.18.13.tar.gz&quot;&gt;sources&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;flatpak-manifest-1&quot;&gt;Flatpak manifest&lt;/h4&gt;
+
+&lt;p&gt;Some things to note in the following manifest:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Permissions for the Flatpak app to access X11 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--share=ipc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--socket=fallback-x11&lt;/code&gt;) &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L12-L14&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The build options setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; and some OCaml related environment variables &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L16-L19&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;For some reason &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;debuginfo&lt;/code&gt; was breaking &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ocamlfind&lt;/code&gt;, so it has been disabled &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L20&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;We are importing GTK2 from the shared modules repository &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L23&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Installing some &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; pre-requisites: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ocamlfind&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;camlp-streams&lt;/code&gt; (required only with OCaml&amp;gt;=5) &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L25-L49&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; is build from its &lt;a href=&quot;https://github.com/garrigue/lablgtk/archive/refs/tags/2.18.13.tar.gz&quot;&gt;sources&lt;/a&gt; instead of using opam &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L51-L60&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Installing the application to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/app/bin&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; library to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/app/lib&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L70-L71&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Removal of the build files at the post-install phase to limit the size of the resulting Flatpak application &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L72-L73&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wrapper setup &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L75-L81&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;app-id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;flatpak.ocaml.lablgtk.build&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;runtime&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;runtime-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;22.08&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;sdk&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;sdk-extensions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk.Extension.ocaml&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple.sh&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;finish-args&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;--share=ipc&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;--socket=fallback-x11&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;build-options&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;append-path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/usr/lib/sdk/ocaml/bin:/app/share/runtime/ocaml&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;CAML_LD_LIBRARY_PATH&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/lib:/usr/lib/sdk/ocaml/lib/ocaml:/usr/lib/sdk/ocaml/lib/ocaml/stublibs&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;OCAMLFIND_CONF&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/findlib.conf&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;no-debuginfo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;shared-modules/gtk2/gtk2.json&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ocamlfind&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;git&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/ocamlfind&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mkdir -p ${FLATPAK_DEST}/share/runtime/ocaml&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./configure -bindir ${FLATPAK_DEST}/share/runtime/ocaml -config ${FLATPAK_DEST}/share/runtime/ocaml -no-topfind -sitelib ${FLATPAK_DEST}/share/runtime/ocaml/lib&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;make all&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;make install&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ocamlfind printconf&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;camlp-streams&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;git&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/camlp-streams&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;trunk&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dune build&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;dune install --prefix /app/share/runtime/ocaml&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ocamlfind query camlp-streams&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lablgtk&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;archive&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/garrigue/lablgtk/archive/refs/tags/2.18.13.tar.gz&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;7b9e680452458fd351cf8622230d62c3078db528446384268cd0dc37be82143c&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;./configure&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;make world&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;make old-install DESTDIR=/app/share/runtime/ocaml&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;file&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple.ml&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mv /app/share/runtime/ocaml/usr/lib/sdk/ocaml/lib/ocaml/lablgtk2 /app/share/runtime/ocaml/lib&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ocamlfind ocamlopt -package lablgtk2 -linkpkg simple.ml -o simple&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;install -Dm755 simple -t /app/bin/&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mv /app/share/runtime/ocaml/usr/lib/sdk/ocaml/lib/ocaml/stublibs/dlllablgtk2.so /app/lib&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rm -rf /app/share/runtime/ocaml&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple-wrapper&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;file&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple.sh&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cp simple.sh /app/bin&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-and-run-the-application-1&quot;&gt;Install and run the application&lt;/h4&gt;
+
+&lt;p&gt;Build and install the Flatpak package locally using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatpak-builder&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak-builder --force-clean build-dir flatpak.ocaml.lablgtk.build.yaml
+$ flatpak-builder --user --install --force-clean build-dir flatpak.ocaml.lablgtk.build.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the application:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak run flatpak.ocaml.lablgtk.build
+Ouch!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is what you should see when you run it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The application has an installed size of 34.8 MB:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak info flatpak.ocaml.lablgtk.build
+          ID: flatpak.ocaml.lablgtk.build
+         Ref: app/flatpak.ocaml.lablgtk.build/x86_64/master
+        Arch: x86_64
+      Branch: master
+      Origin: build-origin
+  Collection:
+Installation: user
+   Installed: 34.8 MB
+     Runtime: org.freedesktop.Sdk/x86_64/22.08
+         Sdk: org.freedesktop.Sdk/x86_64/22.08
+      Commit: 6acda68f932e9728d942e976b6d6b94cab2929eb4c91b087f58792028f18d536
+     Subject: Export flatpak.ocaml.lablgtk.build
+        Date: 2023-12-19 09:29:13 +0000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;building-with-opam&quot;&gt;Building with opam&lt;/h3&gt;
+
+&lt;h4 id=&quot;source-files&quot;&gt;Source files&lt;/h4&gt;
+
+&lt;p&gt;We can leverage the &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;OCaml Package Manager (opam)&lt;/a&gt; to install &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; into the Flatpak. For that, let’s leverage &lt;a href=&quot;https://github.com/josecastillolema/flatpak-opam-generator&quot;&gt;flatpak-opam-generator&lt;/a&gt;, a helper tool to automatically generate flatpak-builder source files from a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.json&lt;/code&gt; generated by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opam tree&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ opam tree --json=lablgtk.json lablgtk
+$ ./flatpak-opam-generator.py lablgtk.json &amp;gt; sources/lablgtk.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The output sources file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sources/lablgtk.json&lt;/code&gt; should look something like this:&lt;/p&gt;
+&lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/garrigue/lablgtk/archive/2.18.13.tar.gz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;lablgtk.2.18.13&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;md5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;d0a326b99475216cc22232e72c89415f&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cache/md5/d0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest-filename&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;d0a326b99475216cc22232e72c89415f&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/ocaml/camlp-streams/archive/v5.0.1.tar.gz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;camlp-streams.5.0.1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;md5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;afc874b25f7a1f13e8f5cfc1182b51a7&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cache/md5/af&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest-filename&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;afc874b25f7a1f13e8f5cfc1182b51a7&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;https://github.com/ocaml/dune/releases/download/3.10.0/dune-3.10.0.tbz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;dune.3.10.0&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;sha256&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;9ff03384a98a8df79852cc674f0b4738ba8aec17029b6e2eeb514f895e710355&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cache/sha256/9f&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest-filename&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;9ff03384a98a8df79852cc674f0b4738ba8aec17029b6e2eeb514f895e710355&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;type&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;file&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;url&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;http://download.camlcity.org/download/findlib-1.9.6.tar.gz&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ocamlfind.1.9.6&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;md5&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;96c6ee50a32cca9ca277321262dbec57&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cache/md5/96&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dest-filename&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;96c6ee50a32cca9ca277321262dbec57&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;generate-flatpak-manifest-code&quot;&gt;Generate Flatpak manifest code&lt;/h4&gt;
+
+&lt;p&gt;Let’s use the helper tool to generate the corresponding Flatpak manifest code:&lt;/p&gt;
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;$ ./flatpak-opam-generator.py --generate lablgtk lablgtk.json&lt;/span&gt;
+&lt;span class=&quot;nn&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# Manifest code generated by flatpak-opam-generator&lt;/span&gt;
+&lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lablgtk&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build-options&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;append-path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/usr/lib/sdk/ocaml/bin&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;OPAMROOT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/usr/lib/sdk/ocaml&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;OPAMSWITCH&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/usr/lib/sdk/ocaml/switch&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;sources/lablgtk.json&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;git&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/opam-repository&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ls -A --color=never | grep -Ev &quot;cache|packages|repo&quot; | xargs rm -rf&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam admin filter -y lablgtk.2.18.13 camlp-streams.5.0.1 dune.3.10.0 ocamlfind.1.9.6&lt;/span&gt; 
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam admin cache&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam repo add lablgtk .&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam install -y lablgtk.2.18.13 camlp-streams.5.0.1 dune.3.10.0 ocamlfind.1.9.6&lt;/span&gt; 
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam repo remove --all lablgtk&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam info --field name,all-installed-versions lablgtk&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;flatpak-manifest-2&quot;&gt;Flatpak manifest&lt;/h4&gt;
+
+&lt;p&gt;Some things to note in the following manifest:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Permissions for the Flatpak app to access X11 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--share=ipc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--socket=fallback-x11&lt;/code&gt;) &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L12-L14&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The build options setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; and some OCaml related environment variables &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L15-L22&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;We are importing GTK2 from the shared modules repository &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L25&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Creation of a new switch for installing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L27-L44&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The manifest code generated by flatpak-opam-generator for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L46-L62&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Installing the application to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/app/bin&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lablgtk&lt;/code&gt; library to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/app/lib&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L71-L72&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Removal of the ocaml switch at the post-install phase to limit the size of the resulting Flatpak application &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L73-L74&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Wrapper setup &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L76-L82&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;app-id&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;flatpak.ocaml.lablgtk.switch&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;runtime&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;runtime-version&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;22.08&apos;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;sdk&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;sdk-extensions&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;org.freedesktop.Sdk.Extension.ocaml&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple.sh&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;finish-args&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;--share=ipc&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;--socket=fallback-x11&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;build-options&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;append-path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/bin:/app/share/runtime/ocaml/switch/_opam/bin:/usr/lib/sdk/ocaml/bin&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;CAML_LD_LIBRARY_PATH&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/switch/_opam/lib/stublibs:/app/share/runtime/ocaml/switch/_opam/lib/ocaml/stublibs:/app/share/runtime/ocaml/switch/_opam/lib/ocaml&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;OCAML_TOPLEVEL_PATH&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/switch/_opam/lib/toplevel&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;OPAMROOT&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;OPAMSWITCH&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/switch&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;OPAM_SWITCH_PREFIX&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;/app/share/runtime/ocaml/switch/_opam&lt;/span&gt;
+
+&lt;span class=&quot;na&quot;&gt;modules&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;shared-modules/gtk2/gtk2.json&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;switch&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;git&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/opam-repository&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;archive&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/ocaml/archive/refs/tags/5.1.0.tar.gz&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;switch&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;sha256&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;43a3ac7aab7f8880f2bb6221317be55319b356e517622fdc28359fe943e6a450&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mkdir -p ${FLATPAK_DEST}/share/runtime/ocaml&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;mv switch ${FLATPAK_DEST}/share/runtime/ocaml&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam init -y --bare --disable-sandboxing .&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam switch create -y --deps-only ${FLATPAK_DEST}/share/runtime/ocaml/switch&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam pin -y ${FLATPAK_DEST}/share/runtime/ocaml/switch&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam switch list&lt;/span&gt;
+
+  &lt;span class=&quot;c1&quot;&gt;# Manifest code generated by flatpak-opam-generator&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;lablgtk&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;sources/lablgtk.json&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;git&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;branch&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;master&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;https://github.com/ocaml/opam-repository&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ls -A --color=never | grep -Ev &quot;cache|packages|repo&quot; | xargs rm -rf&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam admin filter -y lablgtk.2.18.13 camlp-streams.5.0.1 dune.3.10.0 ocamlfind.1.9.6&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam admin cache&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam repo add lablgtk .&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam install -y lablgtk.2.18.13 camlp-streams.5.0.1 dune.3.10.0 ocamlfind.1.9.6&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam repo remove --all lablgtk&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;opam info --field name,all-installed-versions lablgtk&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;file&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple.ml&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;ocamlfind ocamlopt -package lablgtk2 -linkpkg simple.ml -o simple&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;install -Dm755 simple -t /app/bin/&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cp /app/share/runtime/ocaml/switch/_opam/lib/stublibs/dlllablgtk2.so /app/lib&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;post-install&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;rm -rf /app/share/runtime/ocaml&lt;/span&gt;
+
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple-wrapper&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;buildsystem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;sources&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;file&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;simple.sh&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;build-commands&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;cp simple.sh /app/bin&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;install-and-run-the-application-2&quot;&gt;Install and run the application&lt;/h4&gt;
+
+&lt;p&gt;Build and install the Flatpak package locally using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;flatpak-builder&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak-builder --force-clean build-dir flatpak.ocaml.lablgtk.switch.yaml
+$ flatpak-builder --user --install --force-clean build-dir flatpak.ocaml.lablgtk.switch.yaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the application:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak run flatpak.ocaml.lablgtk.switch
+Ouch!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is what you should see when you run it:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The application has an installed size of 11.3 MB:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak info flatpak.ocaml.lablgtk.switch
+          ID: flatpak.ocaml.lablgtk.switch
+         Ref: app/flatpak.ocaml.lablgtk.switch/x86_64/master
+        Arch: x86_64
+      Branch: master
+      Origin: lablgtk-origin
+  Collection:
+Installation: user
+   Installed: 11.3 MB
+     Runtime: org.freedesktop.Sdk/x86_64/22.08
+         Sdk: org.freedesktop.Sdk/x86_64/22.08
+      Commit: b3159cf05f2d89d7caaae3bc7bc6fd6a2ab70d5195374b4222a3cbedf8f635b0
+      Parent: 499a0892394a54c93976d422aa533563b6a1b1212fd9036fbc4fcbdd023f87dd
+     Subject: Export flatpak.ocaml.lablgtk.switch
+        Date: 2023-10-16 12:01:01 +0000
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;publish-the-application&quot;&gt;Publish the application&lt;/h2&gt;
+
+&lt;p&gt;Info on how to later publish the application on &lt;a href=&quot;https://flathub.org/&quot;&gt;Flathub&lt;/a&gt; can be found &lt;a href=&quot;https://docs.flathub.org/docs/for-app-authors/submission/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><summary type="html"></summary></entry><entry><title type="html">PHYSICS 8th General Assembly</title><link href="https://josecastillolema.github.io/physics-ga8/" rel="alternate" type="text/html" title="PHYSICS 8th General Assembly" /><published>2023-11-19T00:00:00-06:00</published><updated>2023-11-19T14:00:58-06:00</updated><id>https://josecastillolema.github.io/physics-ga8</id><content type="html" xml:base="https://josecastillolema.github.io/physics-ga8/">&lt;p&gt;&lt;a href=&quot;/physics&quot;&gt;&lt;img src=&quot;/assets/images/posts/2022-09-20-physics-ga4/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;/physics&quot;&gt;PHYSICS project&lt;/a&gt;, held its 8th General Assembly meeting on November 8th – 9th, 2023, in Florence, Italy. Hosted by GFT, the meeting provided an opportunity for partners to present updates on task progress and deliverables, as well as discuss upcoming project results. The coordinator and leaders of the work packages (WP) led discussions on any outstanding issues, fostering active participation and constructive feedback.&lt;/p&gt;
 
 &lt;p&gt;The meeting was conducted using a hybrid format, accommodating both in-person and remote attendees. Among the meeting’s key objectives were the status of PHYSICS’ 2nd Iteration Pilot Implementation, the finalization of the Final Review demo, and the definition of the Final Review agenda and logistics.&lt;/p&gt;
 
@@ -10,7 +548,7 @@
 
 &lt;h3 id=&quot;how-is-it-different-from-medium&quot;&gt;How is it different from Medium?&lt;/h3&gt;
 
-&lt;p&gt;diff.blog unlike Medium does not host any blogs. diff.blog merely acts as a platform that makes it easier to discover and subscribe to blogs. So you own your own blog and content. You can host your blog in a Wordpress site, GitHub pages, Ghost, or wherever you want. This means even if diff.blog shut downs one day it won’t affect your blog at all.&lt;/p&gt;
+&lt;p&gt;Unlike Medium does not host any blogs, merely acts as a platform that makes it easier to discover and subscribe to blogs. So you own your own blog and content. You can host your blog in a Wordpress site, GitHub pages, Ghost, or wherever you want. This means even if diff.blog shut downs one day it won’t affect your blog at all.&lt;/p&gt;
 
 &lt;h3 id=&quot;why-diffblog&quot;&gt;Why diff.blog?&lt;/h3&gt;
 
@@ -242,7 +780,7 @@ $ sudo flatpak override --env=PATH=&apos;/app/bin:/usr/bin:/home/$USER/.local/bi
 
 &lt;p&gt;Installed the Ansible extension by Red Hat in VSCode and &lt;a href=&quot;https://developers.redhat.com/articles/2023/08/22/enhance-ansible-development-experience-lightspeed&quot;&gt;enabled Lightspeed&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;When opening VSCode it should automatically detect the local Ansible installation.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html">Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.</summary></entry><entry><title type="html">Kubemark on OpenShift</title><link href="https://josecastillolema.github.io/kubemark-ocp/" rel="alternate" type="text/html" title="Kubemark on OpenShift" /><published>2023-09-19T00:00:00-05:00</published><updated>2023-09-19T15:00:58-05:00</updated><id>https://josecastillolema.github.io/kubemark-ocp</id><content type="html" xml:base="https://josecastillolema.github.io/kubemark-ocp/">&lt;p&gt;&lt;a href=&quot;https://github.com/kubernetes/kubernetes/tree/master/cmd/kubemark&quot;&gt;Kubemark&lt;/a&gt; is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is that the nodes do not actually run containers or attach storage, but they do behave like they did, with updates to etcd and all the trimmings. At the same time, &lt;strong&gt;hollow nodes are extremely light (&amp;lt;30 MiB)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;When opening VSCode it should automatically detect the local Ansible installation.&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html">Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.</summary></entry><entry><title type="html">Kubemark on OpenShift</title><link href="https://josecastillolema.github.io/kubemark-ocp/" rel="alternate" type="text/html" title="Kubemark on OpenShift" /><published>2023-09-19T00:00:00-05:00</published><updated>2023-09-19T15:00:58-05:00</updated><id>https://josecastillolema.github.io/kubemark-ocp</id><content type="html" xml:base="https://josecastillolema.github.io/kubemark-ocp/">&lt;p&gt;&lt;a href=&quot;https://github.com/kubernetes/kubernetes/tree/master/cmd/kubemark&quot;&gt;Kubemark&lt;/a&gt; is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is that the nodes do not actually run containers or attach storage, but they do behave like they did, with updates to etcd and all the trimmings. At the same time, &lt;strong&gt;hollow nodes are extremely light (&amp;lt;30 MiB)&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;The primary use case of Kubemark is scalability testing, as simulated clusters can be much bigger than the real ones. The objective is to expose problems with the master components (API server, controller manager or scheduler) that appear only on bigger clusters (e.g. small memory leaks).&lt;/p&gt;
 
@@ -313,6 +851,8 @@ clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: &qu
 &lt;span class=&quot;s&quot;&gt;pod/kubemark-node created&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h2 id=&quot;validation&quot;&gt;Validation&lt;/h2&gt;
+
 &lt;p&gt;Let’s check the if new node was properly registered:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;❯ oc get po
 NAME             READY   STATUS    RESTARTS   AGE
@@ -381,6 +921,8 @@ NAME   READY   STATUS    RESTARTS   AGE   IP                NODE            NOMI
 test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp;lt;none&amp;gt;           &amp;lt;none&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
+&lt;h2 id=&quot;scale-out&quot;&gt;Scale out&lt;/h2&gt;
+
 &lt;p&gt;Finally, bear in mind that in order to create new hollow nodes you will have to change two fields in the pod definition:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;The pod name: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata.name&lt;/code&gt;&lt;/li&gt;
@@ -403,9 +945,6 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
 
     &lt;p&gt;Only use wayland applications; xwayland apps are not properly scaled &lt;a href=&quot;https://github.com/swaywm/sway/issues/2966&quot;&gt;swaywm/sway#2966&lt;/a&gt;, drag and drop does not work &lt;a href=&quot;https://github.com/swaywm/sway/issues/6460&quot;&gt;swaywm/sway#6460&lt;/a&gt; and have a glitched behaviour uppon minimized on system tray &lt;a href=&quot;https://github.com/swaywm/sway/issues/6905&quot;&gt;swaywm/sway#6905&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Display setup: wdisplays via rpm-ostree&lt;/p&gt;
-  &lt;/li&gt;
   &lt;li&gt;Browser
     &lt;ul&gt;
       &lt;li&gt;Primary: Firefox via baseOS&lt;/li&gt;
@@ -419,31 +958,32 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;li&gt;
     &lt;p&gt;Terminal: &lt;a href=&quot;https://wezfurlong.org/wezterm/&quot;&gt;WezTerm&lt;/a&gt; via &lt;a href=&quot;https://flathub.org/apps/org.wezfurlong.wezterm&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;Wayland, grabbable scrollbar and ligature support.&lt;/p&gt;
+    &lt;p&gt;Amazing terminal with wayland, grabbable scrollbar and ligature support.&lt;/p&gt;
 
     &lt;p&gt;Would prefer Foot but having a grabbable scrollbar is a must for now. One workaround would be to setup fast scroll (i.e.: &lt;em&gt;$mod + scroll wheel&lt;/em&gt;) but I have not been able to configure it correctly (if anyone has please let me know &lt;a href=&quot;#issues&quot;&gt;↵&lt;/a&gt;). Also Foot does not support ligatures &lt;a href=&quot;https://codeberg.org/dnkl/foot/issues/57&quot;&gt;dnkl/foot#57&lt;/a&gt;.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;IDE: Visual Studio Code via &lt;a href=&quot;https://flathub.org/apps/com.visualstudio.code&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
+  &lt;li&gt;IDE:
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;Primary: Visual Studio Code via &lt;a href=&quot;https://flathub.org/apps/com.visualstudio.code&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
 
-    &lt;p&gt;With flags &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--socket=wayland&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--ozone-platform-hint=wayland&lt;/code&gt;.&lt;/p&gt;
+        &lt;p&gt;With flags &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--socket=wayland&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--ozone-platform-hint=wayland&lt;/code&gt;.&lt;/p&gt;
 
-    &lt;p&gt;With &lt;a href=&quot;https://github.com/tonsky/FiraCode&quot;&gt;Fira Code font&lt;/a&gt; with programming ligatures installed via rpm-ostree.&lt;/p&gt;
+        &lt;p&gt;With &lt;a href=&quot;https://github.com/JetBrains/JetBrainsMono&quot;&gt;JetBrains Mono font&lt;/a&gt; with programming ligatures installed via rpm-ostree.&lt;/p&gt;
 
-    &lt;p&gt;Instead of using SDK extensions tend to opt for local language installs (golang, ocaml, etc.).&lt;/p&gt;
+        &lt;p&gt;Instead of using SDK extensions &lt;a href=&quot;https://josecastillolema.github.io/dev-inmutable-distros/&quot;&gt;tend to opt for local language installs (golang, ocaml, etc.)&lt;/a&gt;.&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;https://github.com/owtaylor/toolbox-vscode&quot;&gt;toolbox-vscode&lt;/a&gt; to integrate VSCode and toolbx for some SDKs that are not present in Flathub, i.e.: ansible.&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&quot;https://github.com/owtaylor/toolbox-vscode&quot;&gt;toolbox-vscode&lt;/a&gt; to integrate VSCode and toolbx.&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;Secundary: Neovim via &lt;a href=&quot;https://flathub.org/es/apps/io.neovim.nvim&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)&lt;/p&gt;
 
     &lt;p&gt;Would prefer Thunar or PCMan FM but miss the preview feature.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;File sync
-    &lt;ul&gt;
-      &lt;li&gt;Dropbox via &lt;a href=&quot;https://flathub.org/apps/com.dropbox.Client&quot;&gt;Flatpak&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Gdrive with rclone via rpm-ostree&lt;/li&gt;
-    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Text editor: Gnome Text Editor via &lt;a href=&quot;https://flathub.org/apps/org.gnome.TextEditor&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
@@ -466,12 +1006,21 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;li&gt;
     &lt;p&gt;Torrent client: Transmission via &lt;a href=&quot;https://flathub.org/apps/com.transmissionbt.Transmission&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
+  &lt;li&gt;File sync
+    &lt;ul&gt;
+      &lt;li&gt;Dropbox via &lt;a href=&quot;https://flathub.org/apps/com.dropbox.Client&quot;&gt;Flatpak&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Gdrive with rclone via rpm-ostree&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;WhatsApp client: WhatsApp for Linux via &lt;a href=&quot;https://flathub.org/apps/com.github.eneshecan.WhatsAppForLinux&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
 
     &lt;p&gt;Supports wayland.&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;Office suite: LibreOffice via &lt;a href=&quot;https://flathub.org/apps/org.libreoffice.LibreOffice&quot;&gt;Flatpak&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Office suite: LibreOffice via &lt;a href=&quot;https://flathub.org/apps/org.libreoffice.LibreOffice&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Display setup: wdisplays via rpm-ostree&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;tools&quot;&gt;Tools&lt;/h2&gt;
@@ -557,12 +1106,11 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;/li&gt;
   &lt;li&gt;Sway
     &lt;ul&gt;
-      &lt;li&gt;Share a specific window on Google Meet &lt;a href=&quot;https://github.com/swaywm/sway/issues/3282&quot;&gt;swaywm/sway#3282&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;
         &lt;s&gt;Drag &amp;amp; Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)&lt;/s&gt;
       &lt;/li&gt;
       &lt;li&gt;
-        &lt;s&gt;XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)&lt;/s&gt;
+        &lt;s&gt;Differentiate between *app_ids* that start the same [swaywm/sway#7838](https://github.com/swaywm/sway/issues/7838)&lt;/s&gt;
       &lt;/li&gt;
       &lt;li&gt;Fast scroll using &lt;em&gt;$mod + ScrollWheel&lt;/em&gt;. Tried with:
         &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; bindsym --whole-window $mod+button4 exec &quot;wtype -M shift -k Prior&quot;
@@ -574,6 +1122,10 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;Persistent workspaces &lt;a href=&quot;https://github.com/swaywm/sway/pull/7631&quot;&gt;swaywm/sway#7631&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Share a specific window on Google Meet &lt;a href=&quot;https://github.com/swaywm/sway/issues/3282&quot;&gt;swaywm/sway#3282&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;XWayland windows gets tiled uppong being reopened from system tray [swaywm/sway#6905](https://github.com/swaywm/sway/issues/6905)&lt;/s&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Toolbx
@@ -589,7 +1141,10 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;li&gt;Visual Studio Code
     &lt;ul&gt;
       &lt;li&gt;Exit Vim Insert Mode on Save &lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/2411&quot;&gt;VSCodeVim/Vim#2411&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;JetBrains Mono ligatures not working&lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Paste through mouse middle button does not insert text at cursor position&lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/5065&quot;&gt;VSCodeVim/Vim#5065&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Reset to normal mode when leaving file focus &lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/7553&quot;&gt;VSCodeVim/Vim#7553&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Small/giant mouse cursor &lt;a href=&quot;https://github.com/microsoft/vscode/issues/136390&quot;&gt;microsoft/vscode#136390&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
@@ -1144,7 +1699,7 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
   &lt;li&gt;&lt;a href=&quot;https://github.com/operator-framework/operator-sdk/tree/master/testdata/go/v3/memcached-operator&quot;&gt;Example memcached operator&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://sdk.operatorframework.io/docs/building-operators/golang/tutorial/&quot;&gt;Operator SDK - Go Operator tutorial&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://courses.course-dev.skills.network/courses/course-v1:IBMSkillsNetwork+CO0201EN+2021T1/course/&quot;&gt;Intermediate Kubernetes Operators on IBM Developer Skills Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"></summary></entry><entry><title type="html">IFFE Máster en Big Data y Analítica de Negocio (MBD)</title><link href="https://josecastillolema.github.io/iffe-mbd/" rel="alternate" type="text/html" title="IFFE Máster en Big Data y Analítica de Negocio (MBD)" /><published>2023-04-21T00:00:00-05:00</published><updated>2023-04-21T15:00:58-05:00</updated><id>https://josecastillolema.github.io/iffe-mbd</id><content type="html" xml:base="https://josecastillolema.github.io/iffe-mbd/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=iffe&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"></summary></entry><entry><title type="html">IFFE Máster en Big Data y Analítica de Negocio (MBD)</title><link href="https://josecastillolema.github.io/iffe-mbd/" rel="alternate" type="text/html" title="IFFE Máster en Big Data y Analítica de Negocio (MBD)" /><published>2023-04-21T00:00:00-05:00</published><updated>2023-04-21T15:00:58-05:00</updated><id>https://josecastillolema.github.io/iffe-mbd</id><content type="html" xml:base="https://josecastillolema.github.io/iffe-mbd/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=iffe&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=iffe&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=iffe&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 
@@ -1207,28 +1762,4 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/iffe/main/img/signature.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name></author><category term="aws" /><category term="classes" /><category term="es" /><category term="iffe" /><summary type="html"></summary></entry><entry><title type="html">RHR talks: Fluid Network Control and Data Plane Research</title><link href="https://josecastillolema.github.io/rhr-talks/" rel="alternate" type="text/html" title="RHR talks: Fluid Network Control and Data Plane Research" /><published>2023-04-19T00:00:00-05:00</published><updated>2023-04-19T15:00:58-05:00</updated><id>https://josecastillolema.github.io/rhr-talks</id><content type="html" xml:base="https://josecastillolema.github.io/rhr-talks/">&lt;p&gt;&lt;a href=&quot;https://research.redhat.com/events/fluid-network-control-and-data-plane-research/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2023-04-19-physics-rhr-talks.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Join &lt;a href=&quot;https://research.redhat.com/&quot;&gt;Red Hat Research&lt;/a&gt; for the next Research Days event, &lt;strong&gt;Fluid Network Control and Data Plane Research&lt;/strong&gt; on April 19, 2023 from 17PM to 18:30PM CEST.&lt;/p&gt;
-
-&lt;p&gt;New 5G and 6G technologies are raising the top speed for a wireless device up to 1 Tbps, and experts predict 6G will be available to consumers by 2030.  What will our core networks look like then, and how will we engineer them to support diverse dynamic services that range from slow text to fast autonomous vehicles? Join us for a peek into the challenges of driving on the edge as envisioned by researchers from Latin America.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://research.redhat.com/blog/project_member/christian-esteve-rothenberg/&quot;&gt;Christian Rothenberg&lt;/a&gt;, Professor, University of Campinas, and head of &lt;a href=&quot;https://intrig.dca.fee.unicamp.br/&quot;&gt;INTRIG Lab&lt;/a&gt;, will be our speaker and &lt;a href=&quot;https://research.redhat.com/blog/project_member/simone-ferlin-reiter/&quot;&gt;Simone Ferlin-Reiter&lt;/a&gt;, Red Hat, will lead the conversation.&lt;/p&gt;
-
-&lt;h2 id=&quot;abstract&quot;&gt;Abstract&lt;/h2&gt;
-&lt;p&gt;Prof. Christian Rothenberg will  introduce the &lt;a href=&quot;https://smartness2030.tech/&quot;&gt;SMARTNESS 2030&lt;/a&gt; research center initiative and present selected ongoing research tracks around network softwarization leveraging state-of-the-art open source and open hardware technologies:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Hybrid-p4-5G: Hybrid P4 Programmable Pipelines for 5G gNodeB and User Plane Functions&lt;/li&gt;
-  &lt;li&gt;P7 – P4 Programmable Patch Panel: an instant 100G emulated network testbed in a Tofino pizza box&lt;/li&gt;
-  &lt;li&gt;EFFECTOR: Encrypted DASH QoE Performance Evaluation Framework with 5G Datasets&lt;/li&gt;
-  &lt;li&gt;QoEyes: Virtual Reality Streaming QoE Estimation through ML techniques and Programmable Data Planes&lt;/li&gt;
-  &lt;li&gt;PoD acceleration: Offloading K8 container networking functions and service mesh crypto functions (eg. kTLS) to programmable SmartNICs/IPUs&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The recording and materials will be available following the talk. Learn more about Red Hat Research Days Events and watch the recordings from previous events at &lt;a href=&quot;https://research.redhat.com/research-talks/&quot;&gt;research.redhat.com/research-talks&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/Kd5BiDYD0M4&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://img.shields.io/youtube/views/Kd5BiDYD0M4?style=social&quot; alt=&quot;YouTube Video Views&quot; /&gt;
-&lt;img src=&quot;https://img.shields.io/youtube/likes/Kd5BiDYD0M4?style=social&quot; alt=&quot;YouTube Video Likes&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"></summary></entry></feed>
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name></author><category term="aws" /><category term="classes" /><category term="es" /><category term="iffe" /><summary type="html"></summary></entry></feed>
