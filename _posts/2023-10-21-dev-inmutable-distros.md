@@ -2,6 +2,7 @@
 title:  "Development workflows on inmutable distros: rootless setup"
 last_modified_at: 2023-10-21T16:00:58-04:00
 tags:
+  - dev
   - en
   - redhat
 toc: true

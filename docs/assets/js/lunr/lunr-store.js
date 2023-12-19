@@ -61,7 +61,7 @@ var store = [{
       },{
         "title": "Support of Mobile Sessions with High Transport Network Resource Demand",
         "excerpt":"smart-OF-controller This project aims to design and develop a clean-slate Future Internet framework called SMART (Support of Mobile Sessions with High Transport Network Resource Demand). In this framework, Software-Defined Networking mechanisms will be applied and fitted in vital aspects of the RNP (Brazilian National Research and Education Network) infrastructure, to...","categories": [],
-        "tags": ["en","networks","papers","research","sdn"],
+        "tags": ["dev","en","networks","papers","research","sdn"],
         "url": "/smart/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -73,7 +73,7 @@ var store = [{
       },{
         "title": "Smart Campus SP",
         "excerpt":"Smart Campus SP SmartCampus is a FI-Ware software prototype to measure the contamination levels in the University of São Paulo (USP) Campus with a group of Android, Arduino and Galileo sensors. Below you can find a diagram of all the system components and a brief explanation of their functions. The...","categories": [],
-        "tags": ["en","fiware","iot"],
+        "tags": ["dev","en","fiware","iot"],
         "url": "/smartcampus/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -259,7 +259,7 @@ var store = [{
       },{
         "title": "Red Hat Academy",
         "excerpt":"Benefícios Aproveite os descontos (voucher 50% off) nos exames de certificação. Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático. Adquiria uma experiência valiosa com os ambientes de laboratório hands-on. Conecte-se com outros estudantes e os instrutores da Red Hat que fazem parte...","categories": [],
-        "tags": ["cert","classes","fiap","openshift","openstack","pt","redhat"],
+        "tags": ["cert","classes","dev","fiap","openshift","openstack","pt","redhat"],
         "url": "/redhat-academy/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -313,7 +313,7 @@ var store = [{
       },{
         "title": "Converting ETSI NFV templates into TOSCA profile",
         "excerpt":"etsi2tosca Converts ETSI NFV templates into TOSCA profile. Use Usage: etsi2tosca FILE Converts ETSI NFV templates into TOSCA profile Options: -h, --help show this help message and exit Examples Example 1: $ ./etsi2tosca.py samples/opencv_transcoder_vnfd.yaml tosca_definitions_version: tosca_simple_profile_for_nfv_1_0_0 description: OpenCV Transcoder VNF metadata: template_name: opencv_transcoder_vnf topology_template: inputs: ssh-hostname: type: string default: &lt;rw_mgmt_ip&gt;...","categories": [],
-        "tags": ["en","networks","nfv"],
+        "tags": ["dev","en","networks","nfv"],
         "url": "/etsi2tosca/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -337,7 +337,7 @@ var store = [{
       },{
         "title": "Containers series III: Docker Compose",
         "excerpt":"Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes). Lab 3 - Docker Compose Executando servicos Docker Compose permite definir serviços (que a sua vez são formados por containers) e a comunicação entre os mesmos. Esta comunicação é implementada via DNS nos containers. Além disso, no arquivo...","categories": [],
-        "tags": ["classes","fiap","iac","openshift","pt","redhat","series"],
+        "tags": ["classes","dev","fiap","iac","openshift","pt","redhat","series"],
         "url": "/containers3-docker-compose/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -367,7 +367,7 @@ var store = [{
       },{
         "title": "Locust CCN client",
         "excerpt":"          locust-ccnclient   A Locust CCN client compatible with ccn-lite.   It allows the execution of load test experiments againts a CCN network.            ","categories": [],
-        "tags": ["ccn","en","networks"],
+        "tags": ["ccn","dev","en","networks"],
         "url": "/locust-ccnclient/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -451,7 +451,7 @@ var store = [{
       },{
         "title": "ComputeHCISriov role for Director/TripleO",
         "excerpt":"Hyper-converged SR-IOV role for compute nodes. Change 700887 proposed and merged upstream: https://review.opendev.org/#/c/700887/ ############################################################################### # Role: ComputeHCISriov # ############################################################################### - name: ComputeHCISriov description: | Compute Node with SR-IOV role hosting Ceph OSD too networks: - InternalApi - Tenant - Storage - StorageMgmt - Management default_route_networks: ['Management'] disable_upgrade_deployment: True RoleParametersDefault: TunedProfileName:...","categories": [],
-        "tags": ["en","nfv","openstack","redhat"],
+        "tags": ["dev","en","nfv","openstack","redhat"],
         "url": "/computehcisriov-role/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -481,7 +481,7 @@ var store = [{
       },{
         "title": "Importing alarms from OpenStack Aodh into Sensu Core",
         "excerpt":"aodh2sensu Imports OpenStack Aodh alarms into Sensu Core Server. Install Via requirements file $ pip3 install -r ./requirements.txt Via pipenv pipfile $ pipenv install Use Usage: aodh2sensu.py [options] Imports OpenStack Aodh alarms into Sensu Core Server. Options: -h, --help show this help message and exit --sensu-url URL if not specified,...","categories": [],
-        "tags": ["en","openstack","monitoring","redhat"],
+        "tags": ["dev","en","openstack","monitoring","redhat"],
         "url": "/aodh2sensu/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -517,7 +517,7 @@ var store = [{
       },{
         "title": "AWS series VII: Elastic Beanstalk (EB)",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 6 - AWS Elastic Beanstalk Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Pre-reqs git python3 pip3 Se não tiver os pre-reqs na máquina...","categories": [],
-        "tags": ["aws","classes","fiap","pt","series"],
+        "tags": ["aws","classes","dev","fiap","pt","series"],
         "url": "/aws7-eb/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -529,19 +529,19 @@ var store = [{
       },{
         "title": "AWS series VIII: Elastic Beanstalk (EB) com Spring Boot",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 10 - AWS Elastic Beanstalk com Spring Boot Em este lab sobre Elastic Beanstalk (EB) aprenderemos alguns conceitos importantes da camada de plataforma da AWS: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Deploy local Clonar o repositório: git clone https://github.com/josecastillolema/fiap...","categories": [],
-        "tags": ["aws","classes","fiap","pt","series"],
+        "tags": ["aws","classes","dev","fiap","pt","series"],
         "url": "/aws8-eb-springboot/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "AWS series XII: DynamoDB",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 8 - AWS DynamoDB Em este lab sobre DynamoDB aprenderemos alguns conceitos importantes na criação de DBaaS NoSQL: Criação de tabelas Inserção/consulta de dados via console Inserção/consulta via código python Aproveitaremos para ver alguns conceitos importantes sobre Identity and Access Management (IAM):...","categories": [],
-        "tags": ["aws","classes","fiap","pt","series"],
+        "tags": ["aws","classes","dev","fiap","pt","series"],
         "url": "/aws12-dynamodb/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "AWS series IX: CodePipeline",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 7 - AWS CP Em este lab sobre Code Pipeline aprenderemos alguns conceitos importantes da criação de pipelines: Criação do pipeline Automação de deploy no Beanstalk Pre-reqs A aplicação do lab de Beanstalk precisa estar no ar: Criação de um repositório no...","categories": [],
-        "tags": ["aws","classes","fiap","pt","series"],
+        "tags": ["aws","classes","dev","fiap","pt","series"],
         "url": "/aws9-cp/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -565,7 +565,7 @@ var store = [{
       },{
         "title": "AWS series XV: Lambda",
         "excerpt":"Serie de artigos sobre Amazon Web Services. Lab 13 - Amazon Lambda Em este lab sobre Lambda aprenderemos alguns conceitos do modulo de Function as a Service (FaaS) / serverless da plataforma da AWS: Criação de funções Lambda Teste de funções Criação de triggers (via API Gateway) Pre-reqs A seguinte...","categories": [],
-        "tags": ["aws","classes","fiap","pt","series"],
+        "tags": ["aws","classes","dev","fiap","pt","series"],
         "url": "/aws15-lambda/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -715,7 +715,7 @@ var store = [{
       },{
         "title": "Azure series V: App services",
         "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 5 - App Service Plans Em este lab sobre App Service Plans aprenderemos alguns conceitos importantes da camada de plataforma da Azure: Deploy de aplicações Plataformas/entornos de execução disponíveis Logging Monitoramento Estratégias de release Blue-Green Canary Pre-reqs Uma VM com a imagem Ubuntu...","categories": [],
-        "tags": ["azure","classes","fiap","pt","series"],
+        "tags": ["azure","classes","dev","fiap","pt","series"],
         "url": "/azure5-app/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -739,7 +739,7 @@ var store = [{
       },{
         "title": "Azure series VI: Azure Pipeline",
         "excerpt":"Serie de artigos sobre Microsoft Azure. Lab 6 - Azure Pipelines Em este lab sobre Azure Pipelines aprenderemos alguns conceitos importantes na criação de pipelines: Criação do pipeline Automação de deploy no Azure Pipelines Pre-reqs Um application service no ar, seguindo os passos do lab 05 - Application Services Criação...","categories": [],
-        "tags": ["azure","classes","fiap","pt","series"],
+        "tags": ["azure","classes","dev","fiap","pt","series"],
         "url": "/azure6-pipeline/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -775,7 +775,7 @@ var store = [{
       },{
         "title": "GitLab Certified Associate",
         "excerpt":"Usually priced at USD $650 it’s available for free until April 30, 2021. Steps required: Create account on the GitLab Learn platform 1.1 purple login button 1.2 purple signup button Add the associate test pathway to the basket In Payment step apply discount code E6B8A234458AE3D795 Once signed up you have...","categories": [],
-        "tags": ["cert","en","iac"],
+        "tags": ["cert","dev","en","iac"],
         "url": "/gitlab/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -835,7 +835,7 @@ var store = [{
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing",
         "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","dev","fiap","pt"],
         "url": "/shift-aws-dev/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -889,7 +889,7 @@ var store = [{
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing - 2nd edition",
         "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","dev","fiap","pt"],
         "url": "/shift-aws-dev-2/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1027,7 +1027,7 @@ var store = [{
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing - 3rd edition",
         "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","dev","fiap","pt"],
         "url": "/shift-aws-dev-3/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1117,7 +1117,7 @@ var store = [{
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing - 4th edition",
         "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","dev","fiap","pt"],
         "url": "/shift-aws-dev-4/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1153,7 +1153,7 @@ var store = [{
       },{
         "title": "Programa EU CAPACITO",
         "excerpt":"Em conjunto com o EU CAPACITO, programa liderado pelo Instituto IT Mídia, a FIAP oferece 20 Nano Courses gratuitos. São cursos de 40 a 160 horas nas áreas de Tecnologia, Inovação e Negócios. Cadastre-se e escolha os seus. Blockchain Advanced (100 horas) Business Intelligence (40 horas) Customer Experience Management (40...","categories": [],
-        "tags": ["classes","fiap","pt"],
+        "tags": ["classes","dev","fiap","pt"],
         "url": "/eu-capacito/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1201,7 +1201,7 @@ var store = [{
       },{
         "title": "baseline-operator",
         "excerpt":"baseline-operator The baseline-operator provides a way to run stress-ng workloads on Kubernetes in various deployment configurations. It is intended to create an artificial baseline load in a Kubernetes cluster in order to be able to run other Kubernetes tests in more realistic conditions (performance, cluster upgrade, etc.). Use Create a...","categories": [],
-        "tags": ["en","openshift"],
+        "tags": ["dev","en","openshift"],
         "url": "/baseline-operator/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1219,7 +1219,7 @@ var store = [{
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing - 5th edition",
         "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","dev","fiap","pt"],
         "url": "/shift-aws-dev-5/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1255,7 +1255,7 @@ var store = [{
       },{
         "title": "FIAP SHIFT: AWS Academy Cloud Developing - 6th edition",
         "excerpt":"Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação AWS Certified Developer - Associate (DVA-C01). Uma jornada com 40 horas...","categories": [],
-        "tags": ["aws","cert","classes","fiap","pt"],
+        "tags": ["aws","cert","classes","dev","fiap","pt"],
         "url": "/shift-aws-dev-6/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1339,7 +1339,7 @@ var store = [{
       },{
         "title": "DevConf.CZ 2023 - Writing a K8s Operator for Knative Functions",
         "excerpt":"About DevConf.CZ is an annual, free, Red Hat sponsored community conference for developers, admins, DevOps engineers, testers, documentation writers and other contributors to open source technologies. At DevConf.CZ, FLOSS communities sync, share, and hack on upstream projects together. DevConf.cz Mini is a bi-annual, highly focused, local, in-person version of DevConf.cz....","categories": [],
-        "tags": ["en","events","openshift","redhat","research"],
+        "tags": ["dev","en","events","openshift","redhat","research"],
         "url": "/devconf23/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1356,7 +1356,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "My Linux desktop",
-        "excerpt":"dotfiles My Linux desktop setup on Fedora Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Display setup: wdisplays via rpm-ostree Browser Primary:...","categories": [],
+        "excerpt":"dotfiles My Linux desktop setup on Fedora Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Browser Primary: Firefox via baseOS Secondary: Chrome...","categories": [],
         "tags": ["en","redhat"],
         "url": "/dotfiles/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1369,12 +1369,12 @@ var store = [{
       },{
         "title": "Development workflows on inmutable distros: rootless setup",
         "excerpt":"Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow. I have been using inmutable OS distributions for a while (Fedora Silverblue and Sericea, see my dotfiles). They have the following characteristics: System root (baseOS) is mostly immutable System software installation/updates are handled as images and applied on reboot For installing...","categories": [],
-        "tags": ["en","redhat"],
+        "tags": ["dev","en","redhat"],
         "url": "/dev-inmutable-distros/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "diff.blog",
-        "excerpt":"diff.blog is a platform that helps you discover and follow amazing developer blogs. Whether your interests are in Python, Rust, AI, Distributed Systems or XYZ diff.blog has got amazing blogs for you to follow! How is it different from Medium? diff.blog unlike Medium does not host any blogs. diff.blog merely...","categories": [],
+        "excerpt":"diff.blog is a platform that helps you discover and follow amazing developer blogs. Whether your interests are in Python, Rust, AI, Distributed Systems or XYZ diff.blog has got amazing blogs for you to follow! How is it different from Medium? Unlike Medium does not host any blogs, merely acts as...","categories": [],
         "tags": ["en"],
         "url": "/diff-blog/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1383,5 +1383,11 @@ var store = [{
         "excerpt":"The PHYSICS project, held its 8th General Assembly meeting on November 8th – 9th, 2023, in Florence, Italy. Hosted by GFT, the meeting provided an opportunity for partners to present updates on task progress and deliverables, as well as discuss upcoming project results. The coordinator and leaders of the work...","categories": [],
         "tags": ["en","networks","redhat","research"],
         "url": "/physics-ga8/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "How to Flatpak OCaml applications",
+        "excerpt":"How to Flatpak an OCaml application Let’s take a couple OCaml applications to illustrate Flatpak distributing and packaging leveraging the Flatpak SDK Extension for OCaml: a hello world CLI application a simple GTK program from the Introduction to Gtk OCaml tutorial The SDK is only needed during the building phase....","categories": [],
+        "tags": ["dev","en"],
+        "url": "/flatpak-ocaml/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

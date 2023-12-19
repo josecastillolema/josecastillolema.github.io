@@ -4,6 +4,7 @@ last_modified_at: 2020-07-14T16:00:58-04:00
 tags:
   - aws
   - classes
+  - dev
   - fiap
   - pt
   - series

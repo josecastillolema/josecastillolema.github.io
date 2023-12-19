@@ -2,6 +2,7 @@
 title:  "ComputeHCISriov role for Director/TripleO"
 last_modified_at: 2020-01-06T16:00:58-04:00
 tags:
+  - dev
   - en
   - nfv
   - openstack

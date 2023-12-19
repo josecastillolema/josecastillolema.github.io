@@ -350,7 +350,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#hands-to-work">Hands to work</a></li></ul>
+              <ul class="toc__menu"><li><a href="#hands-to-work">Hands to work</a></li><li><a href="#validation">Validation</a></li><li><a href="#scale-out">Scale out</a></li></ul>
 
             </nav>
           </aside>
@@ -426,6 +426,8 @@ clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "de
 <span class="s">pod/kubemark-node created</span>
 </code></pre></div></div>
 
+<h2 id="validation">Validation</h2>
+
 <p>Let’s check the if new node was properly registered:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc get po
 NAME             READY   STATUS    RESTARTS   AGE
@@ -493,6 +495,8 @@ pod/test created
 NAME   READY   STATUS    RESTARTS   AGE   IP                NODE            NOMINATED NODE   READINESS GATES
 test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &lt;none&gt;           &lt;none&gt;
 </code></pre></div></div>
+
+<h2 id="scale-out">Scale out</h2>
 
 <p>Finally, bear in mind that in order to create new hollow nodes you will have to change two fields in the pod definition:</p>
 <ul>
@@ -577,6 +581,53 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &lt;
     <div class="page__related">
       <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/flatpak-ocaml/" rel="permalink">How to Flatpak OCaml applications
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -708,53 +759,6 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &lt;
 
     <p class="archive__item-excerpt" itemprop="description">
   Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
-
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/dotfiles/" rel="permalink">My Linux desktop
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          6 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
 
 
 </p>
