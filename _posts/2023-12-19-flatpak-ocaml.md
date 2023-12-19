@@ -5,6 +5,7 @@ tags:
   - dev
   - en
 toc: true
+toc_sticky: true
 ---
 
 <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=flatpak-ocaml-examples&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
