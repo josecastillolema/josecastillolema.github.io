@@ -1356,7 +1356,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "My Linux desktop",
-        "excerpt":"dotfiles My Linux desktop setup on Fedora Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Browser Primary: Firefox via baseOS Secondary: Chrome...","categories": [],
+        "excerpt":"dotfiles My Linux desktop setup on Fedora Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Browser Primary: Firefox via Flatpak Secondary: Chrome...","categories": [],
         "tags": ["en","redhat"],
         "url": "/dotfiles/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1389,5 +1389,11 @@ var store = [{
         "excerpt":"How to Flatpak an OCaml application Let’s take a couple OCaml applications to illustrate Flatpak distributing and packaging leveraging the Flatpak SDK Extension for OCaml: a hello world CLI application a simple GTK program from the Introduction to Gtk OCaml tutorial The SDK is only needed during the building phase....","categories": [],
         "tags": ["dev","en"],
         "url": "/flatpak-ocaml/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Happy new year!",
+        "excerpt":"        ","categories": [],
+        "tags": ["en","es","redhat","pt"],
+        "url": "/newyear24/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

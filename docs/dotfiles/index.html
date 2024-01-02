@@ -367,7 +367,7 @@
   </li>
   <li>Browser
     <ul>
-      <li>Primary: Firefox via baseOS</li>
+      <li>Primary: Firefox via <a href="https://flathub.org/apps/org.mozilla.firefox">Flatpak</a></li>
       <li>
         <p>Secondary: Chrome via <a href="https://flathub.org/apps/com.google.Chrome">Flatpak</a></p>
 
@@ -408,11 +408,8 @@
   <li>
     <p>Text editor: Gnome Text Editor via <a href="https://flathub.org/apps/org.gnome.TextEditor">Flatpak</a></p>
   </li>
-  <li>PDF reader
-    <ul>
-      <li>Primary: Zathura via rpm-ostree</li>
-      <li>Secondary (when I need to annotate PDFs): Evince (GNOME Document Viewer) via <a href="https://flathub.org/apps/org.gnome.Evince">Flatpak</a></li>
-    </ul>
+  <li>
+    <p>PDF reader: Evince (GNOME Document Viewer) via <a href="https://flathub.org/apps/org.gnome.Evince">Flatpak</a></p>
   </li>
   <li>
     <p>Image viewer: imv via baseOS</p>
@@ -433,11 +430,6 @@
     </ul>
   </li>
   <li>
-    <p>WhatsApp client: WhatsApp for Linux via <a href="https://flathub.org/apps/com.github.eneshecan.WhatsAppForLinux">Flatpak</a></p>
-
-    <p>Supports wayland.</p>
-  </li>
-  <li>
     <p>Office suite: LibreOffice via <a href="https://flathub.org/apps/org.libreoffice.LibreOffice">Flatpak</a></p>
   </li>
   <li>Display setup: wdisplays via rpm-ostree</li>
@@ -449,11 +441,7 @@
   <li>Shell: bash via baseOS</li>
   <li>Terminal multiplexer: tmux in remote systems</li>
   <li>Configuration management: Ansible via <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16">toolbx</a></li>
-  <li>
-    <p>Text editor: neovim via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a>, emacs via <a href="https://flathub.org/es/apps/org.gnu.emacs">Flatpak</a></p>
-
-    <p>With <a href="https://www.jetbrains.com/lp/mono/">JetBrains Mono font</a> with programming ligatures installed via rpm-ostree.</p>
-  </li>
+  <li>Text editor: neovim via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a></li>
   <li>Prompt: Starship via local install</li>
   <li>Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
     <ul>
@@ -519,6 +507,12 @@
       </li>
     </ul>
   </li>
+  <li>Nautilus
+    <ul>
+      <li>Extract files to current folder <a href="https://www.reddit.com/r/gnome/comments/112a3jq/extract_files_to_current_folder/">r/gnome/112a3jq</a></li>
+      <li>Nautilus on Flathub <a href="https://gitlab.gnome.org/GNOME/nautilus/-/issues/946">GNOME/nautilus#946</a></li>
+    </ul>
+  </li>
   <li>Starship
     <ul>
       <li>Conditional styling for Toolbx symbol <a href="https://github.com/starship/starship/issues/2724">starship/starship#2724</a></li>
@@ -560,6 +554,8 @@
   </li>
   <li>Visual Studio Code
     <ul>
+      <li>Add optional Wayland support <a href="https://github.com/flathub/com.visualstudio.code/issues/471">flathub/com.visualstudio.code#471</a></li>
+      <li>Crash when rebuilding application menu on wayland <a href="https://github.com/microsoft/vscode/issues/184124">microsoft/vscode#184124</a></li>
       <li>Exit Vim Insert Mode on Save <a href="https://github.com/VSCodeVim/Vim/issues/2411">VSCodeVim/Vim#2411</a></li>
       <li>
         <s>JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)</s>
@@ -567,6 +563,11 @@
       <li>Paste through mouse middle button does not insert text at cursor position<a href="https://github.com/VSCodeVim/Vim/issues/5065">VSCodeVim/Vim#5065</a></li>
       <li>Reset to normal mode when leaving file focus <a href="https://github.com/VSCodeVim/Vim/issues/7553">VSCodeVim/Vim#7553</a></li>
       <li>Small/giant mouse cursor <a href="https://github.com/microsoft/vscode/issues/136390">microsoft/vscode#136390</a></li>
+    </ul>
+  </li>
+  <li>Zathura
+    <ul>
+      <li>Add Flatpak manifest <a href="https://git.pwmt.org/pwmt/zathura/-/merge_requests/25">pwmt/zathura#25</a></li>
     </ul>
   </li>
 </ul>
@@ -656,6 +657,51 @@
     <div class="page__related">
       <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/newyear24/" rel="permalink">Happy new year!
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -794,53 +840,6 @@
 </div>
 
         
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          15 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
-
-
-</p>
-  </article>
-</div>
-
-        
       </div>
     </div>
   
@@ -893,7 +892,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2023 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2024 GitOps. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
