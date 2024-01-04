@@ -1396,4 +1396,10 @@ var store = [{
         "tags": ["en","es","redhat","pt"],
         "url": "/newyear24/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Flatpak SDK Extension for OCaml",
+        "excerpt":"SDK Extension for OCaml stable This extension contains various components of the OCaml stable toolchain. Includes the Dune build system and the OCaml Package Manager opam. Create Flatpak OCaml applications Several examples on how to Flatpak OCaml applications leveraging this SDK can be found here. Debugging In order to use...","categories": [],
+        "tags": ["dev","en","redhat"],
+        "url": "/org-freedesktop-sdk-ext-ocaml/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

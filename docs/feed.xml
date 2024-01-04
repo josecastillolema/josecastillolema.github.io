@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-01-02T03:11:49-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear24/" rel="alternate" type="text/html" title="Happy new year!" /><published>2024-01-01T00:00:00-06:00</published><updated>2024-01-01T14:00:58-06:00</updated><id>https://josecastillolema.github.io/newyear24</id><content type="html" xml:base="https://josecastillolema.github.io/newyear24/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2024-01-01-newyear24/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-01-04T04:24:14-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Flatpak SDK Extension for OCaml</title><link href="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/" rel="alternate" type="text/html" title="Flatpak SDK Extension for OCaml" /><published>2024-01-04T00:00:00-06:00</published><updated>2024-01-04T14:00:58-06:00</updated><id>https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=flathub&amp;amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=flathub&amp;amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=flathub&amp;amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&quot;sdk-extension-for-ocaml-stable&quot;&gt;SDK Extension for OCaml stable&lt;/h1&gt;
+
+&lt;p&gt;This extension contains various components of the &lt;a href=&quot;https://ocaml.org/&quot;&gt;OCaml&lt;/a&gt; stable toolchain.&lt;/p&gt;
+
+&lt;p&gt;Includes the &lt;a href=&quot;https://dune.build/&quot;&gt;Dune build system&lt;/a&gt; and the OCaml Package Manager &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;opam&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;create-flatpak-ocaml-applications&quot;&gt;Create Flatpak OCaml applications&lt;/h2&gt;
+
+&lt;p&gt;Several examples on how to Flatpak OCaml applications leveraging this SDK can be found &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;debugging&quot;&gt;Debugging&lt;/h2&gt;
+
+&lt;p&gt;In order to use this extension in a Flatpak SDK environment you may add all provided tools in your PATH by executing first:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source /usr/lib/sdk/ocaml/enable.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;install-packages-interactivelly&quot;&gt;Install packages interactivelly&lt;/h2&gt;
+
+&lt;p&gt;In order to interactivelly install &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;OCaml Package Manager (opam)&lt;/a&gt; packages in a Flatpak environmment you will need to inicialize a new environment:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ opam init --disable-sandboxing --no-setup --root $XDG_DATA_HOME/ocaml
+$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
+
+$ opam switch
+#  switch   compiler     description
+→  default  ocaml.5.1.0  default
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
+&lt;p&gt;To use the SDK with your favourite editor:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml com.visualstudio.code
+$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml org.gnu.emacs
+$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml io.neovim.nvim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or just use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;FLATPAK_ENABLE_SDK_EXT=*&lt;/code&gt; to load every SDK available in your system:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;When running your editor you should see something like this, i.e.:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak run com.visualstudio.code
+flatpak-vscode: Enabling SDK extension &quot;ocaml&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear24/" rel="alternate" type="text/html" title="Happy new year!" /><published>2024-01-01T00:00:00-06:00</published><updated>2024-01-01T14:00:58-06:00</updated><id>https://josecastillolema.github.io/newyear24</id><content type="html" xml:base="https://josecastillolema.github.io/newyear24/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2024-01-01-newyear24/1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2024-01-01-newyear24/2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -8,7 +54,7 @@
 
 &lt;h1 id=&quot;how-to-flatpak-an-ocaml-application&quot;&gt;How to Flatpak an OCaml application&lt;/h1&gt;
 
-&lt;p&gt;Let’s take a couple &lt;a href=&quot;https://ocaml.org/&quot;&gt;OCaml&lt;/a&gt; applications to illustrate &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; distributing and packaging leveraging the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Let’s take a couple &lt;a href=&quot;https://ocaml.org/&quot;&gt;OCaml&lt;/a&gt; applications to illustrate &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; distributing and packaging leveraging the &lt;a href=&quot;https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt;:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;a hello world CLI application&lt;/li&gt;
   &lt;li&gt;a simple GTK program from the &lt;a href=&quot;https://v2.ocaml.org/learn/tutorials/introduction_to_gtk.html&quot;&gt;Introduction to Gtk&lt;/a&gt; OCaml tutorial&lt;/li&gt;
@@ -71,7 +117,7 @@ hello world
 
 &lt;p&gt;Some things to note in the following manifest:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;The build options setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L13-L14&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Build some pre-requisistes using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dune&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L17-L24&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Installing the application to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/app/bin&lt;/code&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L33&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
@@ -208,7 +254,7 @@ Ouch!
 
 &lt;p&gt;Some things to note in the following manifest:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Permissions for the Flatpak app to access X11 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--share=ipc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--socket=fallback-x11&lt;/code&gt;) &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L12-L14&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;The build options setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; and some OCaml related environment variables &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L16-L19&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;For some reason &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;debuginfo&lt;/code&gt; was breaking &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ocamlfind&lt;/code&gt;, so it has been disabled &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L20&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
@@ -406,7 +452,7 @@ $ ./flatpak-opam-generator.py lablgtk.json &amp;gt; sources/lablgtk.json
 
 &lt;p&gt;Some things to note in the following manifest:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;The SDK extension pointing to the &lt;a href=&quot;https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml&quot;&gt;Flatpak SDK Extension for OCaml&lt;/a&gt; &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Permissions for the Flatpak app to access X11 (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--share=ipc&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--socket=fallback-x11&lt;/code&gt;) &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L12-L14&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;The build options setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PATH&lt;/code&gt; and some OCaml related environment variables &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L15-L22&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;We are importing GTK2 from the shared modules repository &lt;a href=&quot;https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L25&quot;&gt;↵&lt;/a&gt;&lt;/li&gt;
@@ -1208,495 +1254,4 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;li&gt;Walter Cerroni, University of Bologna, Italy&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2023-05-25-netsoft23/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="redhat" /><category term="research" /><category term="sdn" /><summary type="html"></summary></entry><entry><title type="html">DevConf.CZ 2023 - Writing a K8s Operator for Knative Functions</title><link href="https://josecastillolema.github.io/devconf23/" rel="alternate" type="text/html" title="DevConf.CZ 2023 - Writing a K8s Operator for Knative Functions" /><published>2023-05-23T00:00:00-05:00</published><updated>2023-07-05T15:00:58-05:00</updated><id>https://josecastillolema.github.io/devconf23</id><content type="html" xml:base="https://josecastillolema.github.io/devconf23/">&lt;p&gt;&lt;a href=&quot;https://www.devconf.info/cz/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2023-05-23-devconf23/1.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;about&quot;&gt;About&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.devconf.info/cz/&quot;&gt;DevConf.CZ&lt;/a&gt; is an annual, free, Red Hat sponsored community conference for developers, admins, DevOps engineers, testers, documentation writers and other contributors to open source technologies. At DevConf.CZ, FLOSS communities sync, share, and hack on upstream projects together.&lt;/p&gt;
-
-&lt;p&gt;DevConf.cz Mini is a bi-annual, highly focused, local, in-person version of DevConf.cz. It offers an opportunity to return to our conference themes in a smaller setting and establishes a platform for the Czech Republic and EMEA based community to sync, share and hack on upstream projects together.&lt;/p&gt;
-
-&lt;p&gt;There is no admission or ticket charge for DevConf.CZ events. However, you are required to complete a free registration. Watch this site for updates about registration.&lt;/p&gt;
-
-&lt;p&gt;We are committed to fostering an open and welcoming environment at our conference. We set expectations for inclusive behavior through our code of conduct and media policies, and are prepared to enforce these.&lt;/p&gt;
-
-&lt;h2 id=&quot;schedule&quot;&gt;&lt;a href=&quot;https://devconfcz2023.sched.com/&quot;&gt;Schedule&lt;/a&gt;&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://devconfcz2023.sched.com/event/1MYpJ/writing-a-k8s-operator-for-knative-functions&quot;&gt;&lt;strong&gt;Writing a K8s Operator for Knative Functions&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://research.redhat.com/blog/2023/06/09/red-hat-research-engineers-will-lead-the-workshop-on-k8s-operator-for-faas-at-devconf-cz-2023/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2023-05-23-devconf23/2.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Serverless and Function as a Service (FaaS) are getting more and more attention from customers and developers as a way to develop, run and manage applications functionality without the burden of infrastructure related knowledge. All big cloud providers offer them already, e.g., AWS Lambda, Google Cloud Functions or Microsoft Azure Functions. One of the most relevant upstream projects for serverless is Knative, which recently added support for functions (create, build, and deploy) on top of K8s clusters.&lt;/p&gt;
-
-&lt;p&gt;This workshop will introduce you to the the &lt;a href=&quot;/physics&quot;&gt;PHYSICS European project&lt;/a&gt; and its FaaS model, as well as to building Kubernetes operators. You will implement a K8s Operator, using the operatorsdk framework, to provide the functionality of the Knative CLI. This will allow easier creation, build and deployment of functions with Knative just by creating Kubernetes (CR) objects, and will help you learn the internals about how K8s Operators work in a real life example.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;Friday June 16, 2023 • 2:15pm - 3:35pm CEST&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2023-05-23-devconf23/3.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;speakers&quot;&gt;Speakers&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://devconfcz2023.sched.com/speaker/ltomasbo&quot;&gt;Luis Tomas Bolivar&lt;/a&gt; - Software Engineer at &lt;strong&gt;Red Hat&lt;/strong&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://devconfcz2023.sched.com/speaker/jlema&quot;&gt;Jose Castillo Lema&lt;/a&gt; - Software Engineer at &lt;strong&gt;Red Hat&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://devconfcz2023.sched.com/event/1MYpJ/writing-a-k8s-operator-for-knative-functions&quot;&gt;DevConf&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://research.redhat.com/blog/2023/06/09/red-hat-research-engineers-will-lead-the-workshop-on-k8s-operator-for-faas-at-devconf-cz-2023/&quot;&gt;Red Hat Research (RHR) blog&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://physics-faas.eu/event/future-tech-and-open-research-hackathon/&quot;&gt;Physics blog&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;workshop&quot;&gt;Workshop&lt;/h2&gt;
-
-&lt;h1 id=&quot;physics-devconf&quot;&gt;physics-devconf&lt;/h1&gt;
-
-&lt;p&gt;This repository provides an easy way to deploy a &lt;a href=&quot;https://kind.sigs.k8s.io/&quot;&gt;KinD&lt;/a&gt; cluster with &lt;a href=&quot;https://knative.dev/&quot;&gt;Knative&lt;/a&gt; (using &lt;a href=&quot;https://github.com/knative/func/blob/main/hack/allocate.sh&quot;&gt;this script&lt;/a&gt;) on top of a Fedora 37 VM.&lt;/p&gt;
-
-&lt;p&gt;It also provides a couple of sample scripts to deploy a Knative service and a function.&lt;/p&gt;
-
-&lt;h2 id=&quot;index&quot;&gt;Index&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;#physics-devconf&quot;&gt;physics-devconf&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#index&quot;&gt;Index&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#goals&quot;&gt;Goals&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#deploy-the-environment-vm&quot;&gt;Deploy the environment (VM)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#access-the-environment&quot;&gt;Access the environment&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#create-a-new-python-function-and-invoke-it&quot;&gt;Create a new (python) function and invoke it&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#fork-the-base-operator-github-repository-and-deploy-locally&quot;&gt;Fork the base operator github repository and deploy locally&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#solution&quot;&gt;Solution&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#links&quot;&gt;Links&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;goals&quot;&gt;Goals&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Get familiar on how to create/test Knative functions&lt;/li&gt;
-  &lt;li&gt;Get familiar with the operator SDK&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;deploy-the-environment-vm&quot;&gt;Deploy the environment (VM)&lt;/h2&gt;
-
-&lt;p&gt;The VM requires 4 vCPUs and 6GB of memory. It takes approximately 10 minutes to come up:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vagrant up
-Bringing machine &apos;default&apos; up with &apos;libvirt&apos; provider...
-==&amp;gt; default: Checking if box &apos;fedora/37-cloud-base&apos; version &apos;37.20221105.0&apos; is up to date...
-==&amp;gt; default: Creating image (snapshot of base box volume).
-==&amp;gt; default: Creating domain with the following settings...
-...
-    default: configmap/config-br-defaults configured
-    default: ⑦ Dapr
-    default: ./allocate.sh: line 251: dapr: command not found
-    default: popd
-    default: ~/go/src/github.com/knative/func
-    default:
-    default: cat &amp;lt;&amp;lt;EOF | sudo tee /etc/docker/daemon.json
-    default: {&quot;insecure-registries&quot;: [&quot;localhost:50000&quot;]}
-    default: EOF
-    default: {&quot;insecure-registries&quot;: [&quot;localhost:50000&quot;]}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The provision script installs:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Docker&lt;/li&gt;
-  &lt;li&gt;Golang&lt;/li&gt;
-  &lt;li&gt;Pip&lt;/li&gt;
-  &lt;li&gt;Git&lt;/li&gt;
-  &lt;li&gt;Curl&lt;/li&gt;
-  &lt;li&gt;Wget&lt;/li&gt;
-  &lt;li&gt;Cosign&lt;/li&gt;
-  &lt;li&gt;Kubectl&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://knative.dev/docs/client/install-kn/&quot;&gt;Kn&lt;/a&gt; - the Knative client&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://knative.dev/docs/functions/install-func/&quot;&gt;Func&lt;/a&gt; - Knative functions&lt;/li&gt;
-  &lt;li&gt;Kind&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://sdk.operatorframework.io/docs/installation/&quot;&gt;Operator-sdk&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;access-the-environment&quot;&gt;Access the environment&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Login into the virtual machine just created:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ vagrant ssh
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Check if all the pods are running:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ kubectl get pods -A
- NAMESPACE            NAME                                         READY   STATUS    RESTARTS   AGE
- contour-external     contour-56cfd44877-gmzdd                     1/1     Running     0          2m30s
- contour-external     contour-56cfd44877-wj844                     1/1     Running     0          2m30s
- contour-external     contour-certgen-v1.22.0-qbbx6                0/1     Completed   0          2m30s
- contour-external     envoy-4j2vr                                  2/2     Running     0          2m30s
- contour-internal     contour-865fdc98f9-48vv9                     1/1     Running     0          2m29s
- contour-internal     contour-865fdc98f9-l22kw                     1/1     Running     0          2m29s
- contour-internal     contour-certgen-v1.22.0-5t52p                0/1     Completed   0          2m30s
- contour-internal     envoy-vlxrb                                  2/2     Running     0          2m29s
- knative-eventing     eventing-controller-64b4b79c45-bxk6f         1/1     Running     0          4m5s
- knative-eventing     eventing-webhook-86f7dd95db-phc9x            1/1     Running     0          4m5s
- knative-eventing     imc-controller-769d8b7f66-hx2lj              1/1     Running     0          3m33s
- knative-eventing     imc-dispatcher-55979cf74b-8n2w9              1/1     Running     0          3m33s
- knative-eventing     mt-broker-controller-f97f8747-r7nnr          1/1     Running     0          3m21s
- knative-eventing     mt-broker-filter-77c75d69fb-j4972            1/1     Running     0          3m21s
- knative-eventing     mt-broker-ingress-d96f6d8b5-g4ng6            1/1     Running     0          3m21s
- knative-serving      activator-75777fd57c-hwsth                   1/1     Running     0          4m49s
- knative-serving      autoscaler-57d647d6ff-cs2bx                  1/1     Running     0          4m49s
- knative-serving      controller-677995dc7b-9tbmj                  1/1     Running     0          4m48s
- knative-serving      domain-mapping-5676fb7bcf-92xmf              1/1     Running     0          4m48s
- knative-serving      domainmapping-webhook-fcbd7dff4-5v26r        1/1     Running     0          4m48s
- knative-serving      net-contour-controller-847758c4bf-kltdx      1/1     Running     0          2m
- knative-serving      webhook-544b958c69-h7vmz                     1/1     Running     0          4m48s
- kube-system          coredns-6d4b75cb6d-btqsp                     1/1     Running     0          5m16s
- kube-system          coredns-6d4b75cb6d-shbkf                     1/1     Running     0          5m16s
- kube-system          etcd-func-control-plane                      1/1     Running     0          5m35s
- kube-system          kindnet-mr2xx                                1/1     Running     0          5m16s
- kube-system          kube-apiserver-func-control-plane            1/1     Running     0          5m30s
- kube-system          kube-controller-manager-func-control-plane   1/1     Running     0          5m30s
- kube-system          kube-proxy-vpb8z                             1/1     Running     0          5m16s
- kube-system          kube-scheduler-func-control-plane            1/1     Running     0          5m32s
- local-path-storage   local-path-provisioner-6b84c5c67f-575j5      1/1     Running     0          5m16s
- metallb-system       controller-6c58495cbb-j52ls                  1/1     Running     0          3m3s
- metallb-system       speaker-v5hd2                                1/1     Running     0          3m3s
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Check if the local registry is running:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ docker ps
- CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                                                                          NAMES
- 59be051ba43c   registry:2             &quot;/entrypoint.sh /etc…&quot;   2 minutes ago   Up 2 minutes   127.0.0.1:50000-&amp;gt;5000/tcp                                                      func-registry
- caf78811a6a9   kindest/node:v1.24.6   &quot;/usr/local/bin/entr…&quot;   4 minutes ago   Up 4 minutes   127.0.0.1:39609-&amp;gt;6443/tcp, 127.0.0.1:80-&amp;gt;30080/tcp, 127.0.0.1:443-&amp;gt;30443/tcp   func-control-plane
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;create-a-new-python-function-and-invoke-it&quot;&gt;Create a new (python) function and invoke it&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Create the Knative function:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ func create -l python test-hw
- Created python function in /home/vagrant/test-hw
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Take a look around and change the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;func.py&lt;/code&gt; code as follows:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ cd test-hw
-
- $ ls
- app.sh  func.py  func.yaml  Procfile  README.md  requirements.txt  test_func.py
-
- $ cat func.py
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;parliament&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;
- &lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;flask&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;
- &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;json&lt;/span&gt;
-
- &lt;span class=&quot;c1&quot;&gt;# parse request body, json data or URL query parameters
-&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;payload_print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;DevConf.cz 2023!&quot;&lt;/span&gt;
-
- &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-     &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
-     Function template
-     The context parameter contains the Flask request object and any
-     CloudEvent received with the request.
-     &quot;&quot;&quot;&lt;/span&gt;
-
-     &lt;span class=&quot;c1&quot;&gt;# Add your business logic here
-&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Received request&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&apos;request&apos;&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;payload_print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;
-     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Empty request&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;flush&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-         &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;{}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Build (and push) the function to the internal registry:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ export FUNC_REGISTRY=localhost:50000/kn-user
- $ func build --push
- 🙌 Function image built: localhost:50000/kn-user/test-hw:latest
- 🕕 Pushing function image to the registry &quot;localhost:50000&quot; using the &quot;&quot; user credentials
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Check that the image has been correctly pushed into the internal registry:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ curl localhost:50000/v2/_catalog
- {&quot;repositories&quot;:[&quot;kn-user/test-hw&quot;]}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Deploy the function to the kind cluster:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ func deploy --build=false --push=false
- ✅ Function deployed in namespace &quot;default&quot; and exposed at URL:
-      http://test-hw.default.127.0.0.1.sslip.io
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Check that the function has been correctly deployed. A new &lt;strong&gt;Knative service (ksvc)&lt;/strong&gt; object is created, which triggers the Knative controllers to create the other k8s objects (deployment and route). After approximately one minute minute the deployment is scaled down to 0 replicas if not used to spare resources:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; $ kubectl get ksvc
- NAME      URL                                         LATESTCREATED   LATESTREADY     READY   REASON
- test-hw   http://test-hw.default.127.0.0.1.sslip.io   test-hw-00001   test-hw-00001   True
-
- $ kubectl get deploy
- NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
- test-hw-00001-deployment   0/0     0            0           104s
-
- $ kubectl get route
- NAME      URL                                         READY   REASON
- test-hw   http://test-hw.default.127.0.0.1.sslip.io   True
-
- $ kubectl get pods
- (empty if more than a minute has passed)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Invoke the function:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ curl http://test-hw.default.127.0.0.1.sslip.io
-DevConf.cz 2023!
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Check that the deployment has been scaled up:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl get deploy
-NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
-test-hw-00001-deployment   1/1     1            1           3s
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;fork-the-base-operator-github-repository-and-deploy-locally&quot;&gt;Fork the base operator github repository and deploy locally&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Fork &lt;a href=&quot;https://github.com/luis5tb/devconf-knative-operator&quot;&gt;this github repository&lt;/a&gt; into your github account: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://github.com/luis5tb/devconf-knative-operator&lt;/code&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Clone your fork locally inside the VM (change &lt;strong&gt;YOUR_USER&lt;/strong&gt; by yours):
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone https://github.com/YOUR_USER/devconf-knative-operator.git
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;In case you want to start an operator from scratch do the next instead (change &lt;strong&gt;YOUR_USER&lt;/strong&gt; by yours):&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir devconf-knative-operator
-$ cd devconf-knative-operator
-
-# Create base operator
-$ operator-sdk init --domain example.com --repo github.com/YOUR_USER/devconf-knative-operator
-
-# Add API
-$ operator-sdk create api --group knf --version v1alpha1 --kind KnativeFunction --resource --controller
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;There are three important files to consider:
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;controllers/knativefunction_controller.go&lt;/strong&gt;: implements the operator reconcile loop&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;api/v1alpha1/knativefunction_types.go&lt;/strong&gt;: the KnativeFunction CRD definition&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;config/samples/knf_v1alpha1_knativefunction.yaml&lt;/strong&gt;: an example KnativeFunction CRD&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Let’s take a look at &lt;strong&gt;api/v1alpha1/knativefunction_types.go&lt;/strong&gt;, as you can see it defines an example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Foo&lt;/code&gt; field:
-    &lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;type&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;KnativeFunctionSpec&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;// Foo is an example field of KnativeFunction. Edit knativefunction_types.go to remove/update&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;`json:&quot;foo,omitempty&quot;`&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Let’s modify the operator reconcyle loop in &lt;strong&gt;controllers/knativefunction_controller.go&lt;/strong&gt;:&lt;/p&gt;
-
-    &lt;p&gt;Before:&lt;/p&gt;
-    &lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KnativeFunctionReconciler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Reconcile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;_&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FromContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;c&quot;&gt;// TODO(user): your logic here&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-    &lt;p&gt;After:&lt;/p&gt;
-    &lt;div class=&quot;language-golang highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;r&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KnativeFunctionReconciler&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Reconcile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;req&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FromContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;knfv1alpha1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;KnativeFunction&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Info&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Received a request to create a new knativefunction&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Foo =&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Spec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ctrl&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;nil&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd devconf-knative-operator
-
-# Make code modifications
-$ go mod tidy
-$ make manifests
-$ make generate
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Test your code by deploying it. You will need two terminals, &lt;strong&gt;T1&lt;/strong&gt; and &lt;strong&gt;T2&lt;/strong&gt;.&lt;/p&gt;
-
-    &lt;p&gt;[&lt;strong&gt;T1&lt;/strong&gt;] First option is simply doing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make install run&lt;/code&gt;:&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ make install run
-test -s /home/vagrant/devconf-knative-operator/bin/controller-gen &amp;amp;&amp;amp; /home/vagrant/devconf-knative-operator/bin/controller-gen --version | grep -q v0.11.1 || \
-GOBIN=/home/vagrant/devconf-knative-operator/bin go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.11.1
-/home/vagrant/devconf-knative-operator/bin/controller-gen rbac:roleName=manager-role crd webhook paths=&quot;./...&quot; output:crd:artifacts:config=config/crd/bases
-/home/vagrant/devconf-knative-operator/bin/kustomize build config/crd | kubectl apply -f -
-Warning: Detected changes to resource knativefunctions.knf.example.com which is currently being deleted.
-customresourcedefinition.apiextensions.k8s.io/knativefunctions.knf.example.com configured
-/home/vagrant/devconf-knative-operator/bin/controller-gen object:headerFile=&quot;hack/boilerplate.go.txt&quot; paths=&quot;./...&quot;
-go fmt ./...
-go vet ./...
-go run ./main.go
-I0616 08:11:27.582792   10567 request.go:682] Waited for 1.041837981s due to client-side throttling, not priority and fairness, request: GET:https://127.0.0.1:44399/apis/networking.internal.knative.dev/v1alpha1?timeout=32s
-2023-06-16T08:11:27Z	INFO	controller-runtime.metrics	Metrics server is starting to listen	{&quot;addr&quot;: &quot;:8080&quot;}
-2023-06-16T08:11:27Z	INFO	setup	starting manager
-2023-06-16T08:11:27Z	INFO	Starting server	{&quot;path&quot;: &quot;/metrics&quot;, &quot;kind&quot;: &quot;metrics&quot;, &quot;addr&quot;: &quot;[::]:8080&quot;}
-2023-06-16T08:11:27Z	INFO	Starting server	{&quot;kind&quot;: &quot;health probe&quot;, &quot;addr&quot;: &quot;[::]:8081&quot;}
-2023-06-16T08:11:27Z	INFO	Starting EventSource	{&quot;controller&quot;: &quot;knativefunction&quot;, &quot;controllerGroup&quot;: &quot;knf.example.com&quot;, &quot;controllerKind&quot;: &quot;KnativeFunction&quot;, &quot;source&quot;: &quot;kind source: *v1alpha1.KnativeFunction&quot;}
-2023-06-16T08:11:27Z	INFO	Starting Controller	{&quot;controller&quot;: &quot;knativefunction&quot;, &quot;controllerGroup&quot;: &quot;knf.example.com&quot;, &quot;controllerKind&quot;: &quot;KnativeFunction&quot;}
-2023-06-16T08:11:27Z	INFO	Starting workers	{&quot;controller&quot;: &quot;knativefunction&quot;, &quot;controllerGroup&quot;: &quot;knf.example.com&quot;, &quot;controllerKind&quot;: &quot;KnativeFunction&quot;, &quot;worker count&quot;: 1}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;[&lt;strong&gt;T1&lt;/strong&gt;] Second option, if you want to deploy your controller as a container too:&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# First time only
-# Edit config/manager/manager.yaml so that it does not try to download the image if present
-# Add, after &quot;image: controller:latest&quot;: imagePullPolicy: IfNotPresent
-
-# Then every time you have new code to check do the next
-# Increase the version (v0.0.X) as neeeded
-$ make docker-build IMG=&quot;example.com/devconf-knative-operator:v0.0.X&quot;
-$ kind load docker-image example.com/devconf-knative-operator:v0.0.X --name func
-$ make deploy IMG=&quot;example.com/devconf-knative-operator:v0.0.X&quot;
-
-# Check the deployment
-$ kubectl get deployment -n devconf-knative-operator-system
-
-# Check the pod
-$ kubectl get pod -n devconf-knative-operator-system
-$ kubectl logs -f -n devconf-knative-operator-system POD
-
-# Check the logs
-$ kubectl logs -f -n devconf-knative-operator-system POD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;[&lt;strong&gt;T2&lt;/strong&gt;] In a &lt;strong&gt;second terminal&lt;/strong&gt; create a sample CRD:
-    &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;s&quot;&gt;$ cat &amp;lt;&amp;lt;EOF | kubectl apply -f -&lt;/span&gt;
-&lt;span class=&quot;nn&quot;&gt;---&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;knf.example.com/v1alpha1&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;KnativeFunction&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;app.kubernetes.io/name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;knativefunction&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;app.kubernetes.io/instance&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;knativefunction-sample&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;app.kubernetes.io/part-of&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;devconf-knative-operator&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;app.kubernetes.io/managed-by&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;kustomize&lt;/span&gt;
-    &lt;span class=&quot;s&quot;&gt;app.kubernetes.io/created-by&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;devconf-knative-operator&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;knativefunction-sample&lt;/span&gt;
-&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-   &lt;span class=&quot;na&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;test&lt;/span&gt;
-&lt;span class=&quot;s&quot;&gt;EOF&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;[&lt;strong&gt;T1&lt;/strong&gt;] In the &lt;strong&gt;first terminal&lt;/strong&gt; you should see something like:
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2023-06-16T08:12:54Z	INFO	Received a request to create a new knativefunction	{&quot;controller&quot;: &quot;knativefunction&quot;, &quot;controllerGroup&quot;: &quot;knf.example.com&quot;, &quot;controllerKind&quot;: &quot;KnativeFunction&quot;, &quot;KnativeFunction&quot;: {&quot;name&quot;:&quot;knativefunction-sample&quot;,&quot;namespace&quot;:&quot;default&quot;}, &quot;namespace&quot;: &quot;default&quot;, &quot;name&quot;: &quot;knativefunction-sample&quot;, &quot;reconcileID&quot;: &quot;9be34733-bca6-4134-bf6d-8f0ed69106bd&quot;, &quot;Foo =&quot;: &quot;test&quot;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;[&lt;strong&gt;Challenge&lt;/strong&gt;] The goal now is to extend the operator to deploy the existing Knative function (from step 6). Once this is accomplished, extend the operator to build, push and deploy any function located on a given github repository.&lt;/p&gt;
-
-    &lt;p&gt;You will need to interact with the K8s API from the controller (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;knativefunction_controller.go&lt;/code&gt;). &lt;a href=&quot;https://github.com/operator-framework/operator-sdk/tree/master/testdata/go/v3/memcached-operator&quot;&gt;This example repo&lt;/a&gt; contains a Memcached operator that ilustrates how to create K8s objects from the controller (i.e. a Deployment).&lt;/p&gt;
-
-    &lt;p&gt;Make code changes, undeploy and iterate (looping between step 14 and 19 until needed). If the first option was used, just stop the make install run, if the containerized option was chosen, then the next:&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl delete -f config/samples/knf_v1alpha1_knativefunction.yaml
-$ make undeploy
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;Deploy a CR to force the controller to reconcile and get the function deployed. First you need to edit the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;config/samples/knf_v1alpha1_knativefunction.yaml&lt;/code&gt; with the desired options:&lt;/p&gt;
-
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Get the previously created function docker image information, with digest
-$ kubectl get nodes -oyaml | grep test-hw
-  - localhost:50000/kn-user/test-hw@sha256:79c4568eedb9f3366c6ee6b72980eec2aff9a80796328888e10f834c00beb51f
-
-# Modify the config/samples/knf_v1alpha1_knativefunction.yaml using the above as image
-$ cat config/samples/knf_v1alpha1_knativefunction.yaml
-apiVersion: knf.example.com/v1alpha1
-kind: KnativeFunction
-metadata:
-  labels:
-    app.kubernetes.io/name: knativefunction
-    app.kubernetes.io/instance: knativefunction-sample
-    app.kubernetes.io/part-of: devconf-knative-operator
-    app.kubernetes.io/managed-by: kustomize
-    app.kubernetes.io/created-by: devconf-knative-operator
-  name: knativefunction-sample
-spec:
-  name: test-function
-  image: localhost:50000/kn-user/test-hw@sha256:79c4568eedb9f3366c6ee6b72980eec2aff9a80796328888e10f834c00beb51f
-  maxscale: &quot;2&quot;
-  minscale: &quot;1&quot;
-  concurrency: 1
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-
-    &lt;p&gt;And then deploy/update/remote it with:&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Create the CR to force reconcile loop for function registration
-$ kubectl apply -f config/samples/knf_v1alpha1_knativefunction.yaml
-
-# Update the config/samples/knf_v1alpha1_knativefunction.yaml, for instance changing the minScale to 0 and re-apply:
-$ kubectl apply -f config/samples/knf_v1alpha1_knativefunction.yaml
-
-# Delete the CR to remove the function
-$ kubectl delete -f config/samples/knf_v1alpha1_knativefunction.yaml
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;To check the operator did its job, beside seeing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make install run&lt;/code&gt; logs, you can check as before:&lt;/p&gt;
-    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ kubectl get ksvc
-NAME           URL                                                LATESTCREATED        LATESTREADY     READY   REASON
-test-hw        http://test-hw.default.127.0.0.1.sslip.io          test-hw-00001        test-hw-00001   True
-test-function  http://test-function.default.127.0.0.1.sslip.io    test-function-00001  test-function-00001      True 
-
-$ kubectl get deploy
-NAME                             READY   UP-TO-DATE   AVAILABLE   AGE
-test-hw-00001-deployment         0/0     0            0           20m
-test-function-00001-deployment   0/0     0            0           1m38s
-
-$ kubectl get route
-NAME           URL                                              READY   REASON
-test-hw        http://test-hw.default.127.0.0.1.sslip.io        True
-test-function  http://test-function.default.127.0.0.1.sslip.io  True 
-    
-$ kubectl get knativefunction
-NAME                     AGE
-knativefunction-sample   5m8s
-    
-$ kubectl get knativefunction knativefunction-sample -o yaml
-...
-...
-status:
-  deployed: true
-  route:  http://test-function.default.127.0.0.1.sslip.io
-
-$ kubectl get pods
-(empty if more than a minute has passed)
-    
-$ curl http://test-function.default.127.0.0.1.sslip.io
-DevConf.cz 2023!
-    
-$ kubectl get pods
-NAME                                              READY   STATUS    RESTARTS   AGE
-test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6s
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&quot;links-1&quot;&gt;Links&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://knative.dev/docs/&quot;&gt;Knative documentation&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://pkg.go.dev/knative.dev/client&quot;&gt;Knative.dev/client Golang API&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/operator-framework/operator-sdk/tree/master/testdata/go/v3/memcached-operator&quot;&gt;Example memcached operator&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://sdk.operatorframework.io/docs/building-operators/golang/tutorial/&quot;&gt;Operator SDK - Go Operator tutorial&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://courses.course-dev.skills.network/courses/course-v1:IBMSkillsNetwork+CO0201EN+2021T1/course/&quot;&gt;Intermediate Kubernetes Operators on IBM Developer Skills Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"></summary></entry></feed>
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2023-05-25-netsoft23/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="redhat" /><category term="research" /><category term="sdn" /><summary type="html"></summary></entry></feed>

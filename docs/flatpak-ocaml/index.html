@@ -361,7 +361,7 @@
 
 <h1 id="how-to-flatpak-an-ocaml-application">How to Flatpak an OCaml application</h1>
 
-<p>Let’s take a couple <a href="https://ocaml.org/">OCaml</a> applications to illustrate <a href="https://flatpak.org/">Flatpak</a> distributing and packaging leveraging the <a href="https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a>:</p>
+<p>Let’s take a couple <a href="https://ocaml.org/">OCaml</a> applications to illustrate <a href="https://flatpak.org/">Flatpak</a> distributing and packaging leveraging the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a>:</p>
 <ul>
   <li>a hello world CLI application</li>
   <li>a simple GTK program from the <a href="https://v2.ocaml.org/learn/tutorials/introduction_to_gtk.html">Introduction to Gtk</a> OCaml tutorial</li>
@@ -424,7 +424,7 @@ hello world
 
 <p>Some things to note in the following manifest:</p>
 <ul>
-  <li>The SDK extension pointing to the <a href="https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10">↵</a></li>
+  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10">↵</a></li>
   <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L13-L14">↵</a></li>
   <li>Build some pre-requisistes using <code class="language-plaintext highlighter-rouge">dune</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L17-L24">↵</a></li>
   <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L33">↵</a></li>
@@ -561,7 +561,7 @@ Ouch!
 
 <p>Some things to note in the following manifest:</p>
 <ul>
-  <li>The SDK extension pointing to the <a href="https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10">↵</a></li>
+  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10">↵</a></li>
   <li>Permissions for the Flatpak app to access X11 (<code class="language-plaintext highlighter-rouge">--share=ipc</code> and <code class="language-plaintext highlighter-rouge">--socket=fallback-x11</code>) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L12-L14">↵</a></li>
   <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> and some OCaml related environment variables <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L16-L19">↵</a></li>
   <li>For some reason <code class="language-plaintext highlighter-rouge">debuginfo</code> was breaking <code class="language-plaintext highlighter-rouge">ocamlfind</code>, so it has been disabled <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L20">↵</a></li>
@@ -759,7 +759,7 @@ $ ./flatpak-opam-generator.py lablgtk.json &gt; sources/lablgtk.json
 
 <p>Some things to note in the following manifest:</p>
 <ul>
-  <li>The SDK extension pointing to the <a href="https://github.com/josecastillolema/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10">↵</a></li>
+  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10">↵</a></li>
   <li>Permissions for the Flatpak app to access X11 (<code class="language-plaintext highlighter-rouge">--share=ipc</code> and <code class="language-plaintext highlighter-rouge">--socket=fallback-x11</code>) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L12-L14">↵</a></li>
   <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> and some OCaml related environment variables <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L15-L22">↵</a></li>
   <li>We are importing GTK2 from the shared modules repository <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L25">↵</a></li>
@@ -977,6 +977,53 @@ Installation: user
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/org-freedesktop-sdk-ext-ocaml/" rel="permalink">Flatpak SDK Extension for OCaml
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/newyear24/" rel="permalink">Happy new year!
 </a>
       
@@ -1093,53 +1140,6 @@ Installation: user
 
 
     <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/dev-inmutable-distros/" rel="permalink">Development workflows on inmutable distros: rootless setup
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          14 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.
-
 
 </p>
   </article>
