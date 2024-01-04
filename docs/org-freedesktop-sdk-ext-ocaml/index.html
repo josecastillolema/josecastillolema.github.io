@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Notes for HCIA-IA - GitOps</title>
+<!-- begin _includes/seo.html --><title>Flatpak SDK Extension for OCaml - GitOps</title>
 <meta name="description" content="">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="Notes for HCIA-IA">
-<meta property="og:url" content="https://josecastillolema.github.io/hcia-ia-notes/">
+<meta property="og:title" content="Flatpak SDK Extension for OCaml">
+<meta property="og:url" content="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/">
 
 
   <meta property="og:description" content="">
@@ -36,16 +36,16 @@
 
 
 
-  <meta property="article:published_time" content="2021-05-10T00:00:00-05:00">
+  <meta property="article:published_time" content="2024-01-04T00:00:00-06:00">
 
 
 
-  <meta property="article:modified_time" content="2021-05-10T15:00:58-05:00">
+  <meta property="article:modified_time" content="2024-01-04T14:00:58-06:00">
 
 
 
 
-<link rel="canonical" href="https://josecastillolema.github.io/hcia-ia-notes/">
+<link rel="canonical" href="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/">
 
 
 
@@ -309,16 +309,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Notes for HCIA-IA">
+    <meta itemprop="headline" content="Flatpak SDK Extension for OCaml">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2021-05-10T00:00:00-05:00">
-    <meta itemprop="dateModified" content="2021-05-10T15:00:58-05:00">
+    <meta itemprop="datePublished" content="2024-01-04T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2024-01-04T14:00:58-06:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://josecastillolema.github.io/hcia-ia-notes/" class="u-url" itemprop="url">Notes for HCIA-IA
+            <a href="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/" class="u-url" itemprop="url">Flatpak SDK Extension for OCaml
 </a>
           </h1>
           
@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -347,43 +347,53 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#notes">Notes</a><ul><li><a href="#deep-learning">Deep learning</a></li><li><a href="#huawei-cloud-enterprise-intelligent-ei-services">Huawei Cloud Enterprise Intelligent (EI) Services</a></li><li><a href="#huawei-open-ai-hiai-platform-for-smart-devices">Huawei Open AI (HiAI) Platform for Smart Devices</a></li></ul></li><li><a href="#certification">Certification</a></li></ul>
+        <iframe src="https://ghbtns.com/github-btn.html?user=flathub&amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=flathub&amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=flathub&amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-            </nav>
-          </aside>
-        
-        <p><a href="https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;authenticationLevel=CTYPE_CARE_HCIA&amp;technicalField=PSC&amp;version=3.0"><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/0.png" alt="" /></a></p>
+<h1 id="sdk-extension-for-ocaml-stable">SDK Extension for OCaml stable</h1>
 
-<p>Some of the notes I prepared studying for the <a href="https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&amp;authenticationLevel=CTYPE_CARE_HCIA&amp;technicalField=PSC&amp;version=3.0">Huawei Certified ICT Associate - Artificial Intelligence (HCIA-IA)</a> exam.</p>
+<p>This extension contains various components of the <a href="https://ocaml.org/">OCaml</a> stable toolchain.</p>
 
-<h1 id="notes">Notes</h1>
+<p>Includes the <a href="https://dune.build/">Dune build system</a> and the OCaml Package Manager <a href="https://opam.ocaml.org/">opam</a>.</p>
+<h2 id="create-flatpak-ocaml-applications">Create Flatpak OCaml applications</h2>
 
-<h2 id="deep-learning">Deep learning</h2>
+<p>Several examples on how to Flatpak OCaml applications leveraging this SDK can be found <a href="https://github.com/josecastillolema/flatpak-ocaml-examples">here</a>.</p>
 
-<p>I used the <a href="https://coggle.it">Coggle platform</a>, a collaborative mind maps &amp; flow charts tool.</p>
+<h2 id="debugging">Debugging</h2>
 
-<p><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/1.png" alt="" /></p>
+<p>In order to use this extension in a Flatpak SDK environment you may add all provided tools in your PATH by executing first:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source /usr/lib/sdk/ocaml/enable.sh
+</code></pre></div></div>
 
-<h2 id="huawei-cloud-enterprise-intelligent-ei-services">Huawei Cloud Enterprise Intelligent (EI) Services</h2>
+<h2 id="install-packages-interactivelly">Install packages interactivelly</h2>
 
-<p>These were made by my studying collegues using <a href="https://miro.com/">Miro</a>, an online visual collaboration platform for teamwork.</p>
+<p>In order to interactivelly install <a href="https://opam.ocaml.org/">OCaml Package Manager (opam)</a> packages in a Flatpak environmment you will need to inicialize a new environment:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ opam init --disable-sandboxing --no-setup --root $XDG_DATA_HOME/ocaml
+$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
 
-<p><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/2.png" alt="" /></p>
+$ opam switch
+#  switch   compiler     description
+→  default  ocaml.5.1.0  default
+</code></pre></div></div>
 
-<p><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/3.png" alt="" /></p>
+<h2 id="development">Development</h2>
+<p>To use the SDK with your favourite editor:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml com.visualstudio.code
+$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml org.gnu.emacs
+$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml io.neovim.nvim
+</code></pre></div></div>
 
-<h2 id="huawei-open-ai-hiai-platform-for-smart-devices">Huawei Open AI (HiAI) Platform for Smart Devices</h2>
+<p>or just use <code class="language-plaintext highlighter-rouge">FLATPAK_ENABLE_SDK_EXT=*</code> to load every SDK available in your system:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
+</code></pre></div></div>
 
-<p><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/4.png" alt="" /></p>
+<p>When running your editor you should see something like this, i.e.:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ flatpak run com.visualstudio.code
+flatpak-vscode: Enabling SDK extension "ocaml"
+</code></pre></div></div>
 
-<h1 id="certification">Certification</h1>
-
-<p><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/5.png" alt="" /></p>
-
-<p><img src="/assets/images/posts/2021-05-10-hcia-ia-notes/6.png" alt="" /></p>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -400,11 +410,11 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#cert" class="page__taxonomy-item p-category" rel="tag">cert</a><span class="sep">, </span>
+      <a href="/tags/#dev" class="page__taxonomy-item p-category" rel="tag">dev</a><span class="sep">, </span>
     
       <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
     
-      <a href="/tags/#huawei" class="page__taxonomy-item p-category" rel="tag">huawei</a>
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a>
     
     </span>
   </p>
@@ -414,30 +424,29 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-05-10">May 10, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-01-04">January 4, 2024</time></p>
 
       </footer>
 
       <section class="page__share">
   
 
-  <a href="https://twitter.com/intent/tweet?text=Notes+for+HCIA-IA%20https%3A%2F%2Fjosecastillolema.github.io%2Fhcia-ia-notes%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Flatpak+SDK+Extension+for+OCaml%20https%3A%2F%2Fjosecastillolema.github.io%2Forg-freedesktop-sdk-ext-ocaml%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fhcia-ia-notes%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Forg-freedesktop-sdk-ext-ocaml%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Fhcia-ia-notes%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fjosecastillolema.github.io%2Forg-freedesktop-sdk-ext-ocaml%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/power-fundamentals/" class="pagination--pager" title="Microsoft Power Platform Virtual Training Day
+      <a href="/newyear24/" class="pagination--pager" title="Happy new year!
 ">Previous</a>
     
     
-      <a href="/shift-multicloud-3/" class="pagination--pager" title="FIAP SHIFT: Multicloud Architecture - 3rd edition
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -460,53 +469,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/org-freedesktop-sdk-ext-ocaml/" rel="permalink">Flatpak SDK Extension for OCaml
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-
-
-</p>
-  </article>
-</div>
-
         
           
 
@@ -584,7 +546,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          15 minute read
         
       </span>
     
@@ -632,6 +594,51 @@
         <i class="far fa-clock" aria-hidden="true"></i>
         
           1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/diff-blog/" rel="permalink">diff.blog
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
         
       </span>
     
@@ -736,8 +743,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/hcia-ia-notes/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/hcia-ia-notes"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/org-freedesktop-sdk-ext-ocaml"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
