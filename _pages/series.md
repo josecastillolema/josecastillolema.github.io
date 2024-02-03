@@ -6,6 +6,8 @@ tags:
   - aws
   - classes
   - dev
+  - en
+  - es
   - fiap
   - iac
   - openstack
@@ -18,10 +20,25 @@ toc: true
 toc_sticky: true
 ---
 
+# en
 
-# AWS
+## Containers
+- Containers I: [Docker](/codethedream)
 
-## Infrastructure as a Service (IaaS)
+# es
+
+## Big data
+- Lab 1: [IaaS - Simple Storage Service (S3)](/iffe-mbd)
+- Lab 2: [PaaS - Athena](/iffe-mbd)
+- Lab 3: [PaaS - Glue](/iffe-mbd)
+- Lab 4: [PaaS - Redshift](/iffe-mbd)
+- Lab 5: [PaaS - SageMaker](/iffe-mbd)
+
+# pt
+
+## AWS
+
+### Infrastructure as a Service (IaaS)
 - AWS I: [Elastic Computing (EC2)](/aws1-ec2)
 - AWS II: [Elastic Block Service (EBS)](/aws2-ebs)
 - AWS III: [Simple Storage Service (S3)](/aws3-s3)
@@ -29,47 +46,47 @@ toc_sticky: true
 - AWS V: [Elastic Container Service (ECS)](/aws5-ecs)
 - AWS VI: [CloudFormation](/aws6-cloudformation)
 
-## Platform as a Service (PaaS)
+### Platform as a Service (PaaS)
 - AWS VII: [Elastic Beanstalk (EB)](/aws7-eb)
 - AWS VIII: [Elastic Beanstalk (EB) com Spring Boot](/aws8-eb-springboot)
 - AWS IX: [CodePipeline](/aws9-cp)
 - AWS X: [API Gateway](/aws10-apigw)
 - AWS XI: [Elastic Kubernetes Service (EKS)](/aws11-eks)
 
-### Database as a Service (DBaaS)
+#### Database as a Service (DBaaS)
 - AWS XII: [DynamoDB](/aws12-dynamodb)
 - AWS XIII: [Relational Database Service (RDS)](/aws13-rds)
 
-### Big Data as a Service (BDaaS)
+#### Big Data as a Service (BDaaS)
 - AWS XIV: [Elastic MapReduce (EMR)](/aws14-emr)
 
-## Function as a Service (FaaS)
+### Function as a Service (FaaS)
 - AWS XV: [Lambda](/aws15-lambda)
 
-# Azure
+## Azure
 
-## Infrastructure as a Service (IaaS)
+### Infrastructure as a Service (IaaS)
 - Azure I: [Virtual machines](/azure1-vm)
 - Azure II: [Containers](/azure2-container)
 - Azure III: [Disks](/azure3-disk)
 - Azure IV: [Blob storage](/azure4-blob)
 
-## Platform as a Service (PaaS)
+### Platform as a Service (PaaS)
 - Azure V: [App services](/azure5-app)
 - Azure VI: [Azure Pipelines](/azure6-pipeline)
 
-# Containers
+## Containers
 - Containers I: [Docker](/containers1-docker)
 - Containers II: [Docker - continuação](/containers2-docker2)
 - Containers III: [Docker Compose](/containers3-docker-compose)
 
-## Orquestração
+### Orquestração
 - Containers IV: [Docker Swarm](/containers4-docker-swarm)
 - Containers V: [Kubernetes - Instalação](/containers5-k8s-install)
 - Containers VI: [Kompose](/containers6-kompose)
 - Containers VII: [Kubernetes - Uso](/containers7-k8s-use)
 
-# OpenStack
+## OpenStack
 - OpenStack I: [Keystone - Identity Manager](/openstack1-keystone)
 - OpenStack II: [Glance - Image Service](/openstack2-glance)
 - OpenStack III: [Nova - Instance Service](/openstack3-nova)
@@ -79,7 +96,7 @@ toc_sticky: true
 - OpenStack VII: [Heat - Orquestration Service](/openstack7-heat)
 - OpenStack VIII: [Terraform](/openstack8-terraform)
 
-## Infrastructure as code (IaC)
+### Infrastructure as code (IaC)
 - [Terraform – IaC – Terraformando no OpenStack](/terraformando-openstack)
 - [Terraform no OpenStack II](/openstack8-terraform)
 - [Terraform na AWS](/iac-terraform-aws)

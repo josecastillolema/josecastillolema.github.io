@@ -1333,7 +1333,7 @@ var store = [{
       },{
         "title": "IFFE Máster en Big Data y Analítica de Negocio (MBD)",
         "excerpt":"IFFE Máster en Big Data y Analítica de Negocio (MBD) Herramientas analíticas en AWS Cada proyecto se refiere a clases y/o labs realizados en aula. Siéntase libre de desarrollar estos ejemplos, mientras sean válidos, aceptaré pull requests 😄. Lab 01: IaaS - Simple Storage Service (S3) Lab 02: PaaS -...","categories": [],
-        "tags": ["aws","classes","es","iffe"],
+        "tags": ["aws","classes","es"],
         "url": "/iffe-mbd/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1401,5 +1401,11 @@ var store = [{
         "excerpt":"SDK Extension for OCaml stable This extension contains various components of the OCaml stable toolchain. Includes the Dune build system and the OCaml Package Manager opam. Create Flatpak OCaml applications Several examples on how to Flatpak OCaml applications leveraging this SDK can be found here. Debugging In order to use...","categories": [],
         "tags": ["dev","en","redhat"],
         "url": "/org-freedesktop-sdk-ext-ocaml/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Code the Dream Skill-IT workshops",
+        "excerpt":"    Code the dream      Classes for Code the Dream Skill-IT workshops.      Docker Hands-on Practice    ","categories": [],
+        "tags": ["classes","en","openshift","redhat"],
+        "url": "/codethedream/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
