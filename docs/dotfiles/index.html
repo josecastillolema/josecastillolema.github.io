@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          6 minute read
+          7 minute read
         
       </span>
     
@@ -353,7 +353,7 @@
 
 <h1 id="dotfiles">dotfiles</h1>
 
-<p>My Linux desktop setup on <a href="https://fedoraproject.org/sericea/">Fedora Sericea</a>.</p>
+<p>My Linux desktop setup on <a href="https://fedoraproject.org/atomic-desktops/sway/">Fedora Sway Atomic</a>, previously known as Sericea.</p>
 
 <p><img src="https://raw.githubusercontent.com/josecastillolema/dotfiles/master/img/screenshot.png" alt="" /></p>
 
@@ -401,6 +401,11 @@
     </ul>
   </li>
   <li>
+    <p>Messaging application: Ferdium via <a href="https://flathub.org/apps/org.ferdium.Ferdium">Flatpak</a></p>
+
+    <p>Use it as client for Gmail, Outlook, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.</p>
+  </li>
+  <li>
     <p>File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)</p>
 
     <p>Would prefer Thunar or PCMan FM but miss the preview feature.</p>
@@ -413,6 +418,9 @@
   </li>
   <li>
     <p>Image viewer: imv via baseOS</p>
+  </li>
+  <li>
+    <p>PDF editing: Xournal++ via <a href="https://flathub.org/apps/com.github.xournalpp.xournalpp">Flatpak</a></p>
   </li>
   <li>
     <p>Basic photo editing: Drawing via <a href="https://flathub.org/apps/com.github.maoschanz.drawing">Flatpak</a></p>
@@ -439,10 +447,11 @@
 
 <ul>
   <li>Shell: bash via baseOS</li>
+  <li>Prompt: Starship via local install</li>
+  <li>Text editor: neovim via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a></li>
+  <li>Application management: rpm-ostree and Flatpak via baseOS</li>
   <li>Terminal multiplexer: tmux in remote systems</li>
   <li>Configuration management: Ansible via <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16">toolbx</a></li>
-  <li>Text editor: neovim via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a></li>
-  <li>Prompt: Starship via local install</li>
   <li>Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
     <ul>
       <li><a href="https://github.com/josecastillolema/toolbox-images">Toolbx images</a></li>
@@ -454,7 +463,6 @@
     </ul>
   </li>
   <li>Kubernetes: Kind and kube-burner via local install</li>
-  <li>Application management: rpm-ostree and Flatpak via baseOS</li>
   <li>Keyboard input: wtype via rpm-ostree</li>
 </ul>
 
@@ -499,12 +507,33 @@
       <li>Pure-GTK (wayland) support <a href="https://github.com/flathub/org.gnu.emacs/issues/58">flathub/org.gnu.emacs#58</a></li>
     </ul>
   </li>
+  <li>Ferdium
+    <ul>
+      <li>
+        <s>Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)</s>
+      </li>
+      <li>Credentials autocomplete <a href="https://github.com/ferdium/ferdium-app/issues/1425">ferdium/ferdium-app#1425</a></li>
+      <li>Feature: Ability to add Chrome extensions like password managers <a href="https://github.com/ferdium/ferdium-app/issues/135">ferdium/ferdium-app#135</a></li>
+      <li>Unable to print from Gmail view <a href="https://github.com/ferdium/ferdium-app/issues/1573">ferdium/ferdium-app#1573</a></li>
+      <li>
+        <s>Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)</s>
+      </li>
+      <li>
+        <s>Zoom resets after service change [ferdium/ferdium-app#1419](https://github.com/ferdium/ferdium-app/issues/1419)</s>
+      </li>
+    </ul>
+  </li>
   <li>Firefox
     <ul>
       <li>Slack huddles are not available <a href="https://github.com/webcompat/web-bugs/issues/82623">webcompat/web-bugs#82623</a></li>
       <li>
         <s>Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y</s>
       </li>
+    </ul>
+  </li>
+  <li>GNOME
+    <ul>
+      <li>gvfsd-recent preventing system suspension <a href="https://gitlab.gnome.org/GNOME/gvfs/-/issues/715">GNOME/gvfs#715</a></li>
     </ul>
   </li>
   <li>Nautilus
@@ -544,6 +573,7 @@
   </li>
   <li>Toolbx
     <ul>
+      <li>Load completions from the host <a href="https://github.com/containers/toolbox/issues/1472">containers/toolbox#1302</a></li>
       <li>Support for custom commands upon entering container <a href="https://github.com/containers/toolbox/issues/1302">containers/toolbox#1302</a></li>
     </ul>
   </li>
@@ -555,14 +585,18 @@
   <li>Visual Studio Code
     <ul>
       <li>Add optional Wayland support <a href="https://github.com/flathub/com.visualstudio.code/issues/471">flathub/com.visualstudio.code#471</a></li>
-      <li>Crash when rebuilding application menu on wayland <a href="https://github.com/microsoft/vscode/issues/184124">microsoft/vscode#184124</a></li>
+      <li>
+        <s>Crash when rebuilding application menu on wayland [microsoft/vscode#184124](https://github.com/microsoft/vscode/issues/184124)</s>
+      </li>
       <li>Exit Vim Insert Mode on Save <a href="https://github.com/VSCodeVim/Vim/issues/2411">VSCodeVim/Vim#2411</a></li>
       <li>
         <s>JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)</s>
       </li>
       <li>Paste through mouse middle button does not insert text at cursor position<a href="https://github.com/VSCodeVim/Vim/issues/5065">VSCodeVim/Vim#5065</a></li>
       <li>Reset to normal mode when leaving file focus <a href="https://github.com/VSCodeVim/Vim/issues/7553">VSCodeVim/Vim#7553</a></li>
-      <li>Small/giant mouse cursor <a href="https://github.com/microsoft/vscode/issues/136390">microsoft/vscode#136390</a></li>
+      <li>
+        <s>Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)</s>
+      </li>
     </ul>
   </li>
   <li>Zathura
@@ -657,6 +691,51 @@
     <div class="page__related">
       <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/industriosa-ocaml/" rel="permalink">Descubre el poder de la programación funcional a través de OCaml
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -791,53 +870,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/flatpak-ocaml/" rel="permalink">How to Flatpak OCaml applications
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-
 
 </p>
   </article>
