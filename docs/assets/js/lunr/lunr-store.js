@@ -1410,7 +1410,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Descubre el poder de la programación funcional a través de OCaml",
-        "excerpt":"![](/assets/images/posts/2024-03-30-industriosa-ocaml/1.webp) La **programación funcional** es un paradigma que enfatiza el uso de funciones en lugar de modificar el estado o los datos directamente. Promueve un código declarativo conciso y se centra en la inmutabilidad, lo que hace que su código sea más fácil de leer, depurar y razonar. Esta reunión...","categories": [],
+        "excerpt":"La programación funcional es un paradigma que enfatiza el uso de funciones en lugar de modificar el estado o los datos directamente. Promueve un código declarativo conciso y se centra en la inmutabilidad, lo que hace que su código sea más fácil de leer, depurar y razonar. Esta reunión tiene...","categories": [],
         "tags": ["es","events"],
         "url": "/industriosa-ocaml/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
