@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          2 minute read
         
       </span>
     
@@ -350,7 +350,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#sdk-extension-for-ocaml-stable">SDK Extension for OCaml stable</a><ul><li><a href="#create-flatpak-ocaml-applications">Create Flatpak OCaml applications</a></li><li><a href="#debugging">Debugging</a></li><li><a href="#install-packages-interactivelly">Install packages interactivelly</a></li><li><a href="#development">Development</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#sdk-extension-for-ocaml-stable">SDK Extension for OCaml stable</a><ul><li><a href="#create-flatpak-ocaml-applications">Create Flatpak OCaml applications</a></li><li><a href="#debugging">Debugging</a></li><li><a href="#install-packages-interactivelly">Install packages interactivelly</a><ul><li><a href="#initializing-the-environment">Initializing the Environment</a></li><li><a href="#load-the-environment-per-session">Load the Environment Per Session</a></li><li><a href="#load-the-environment-permanently">Load the Environment Permanently</a></li></ul></li><li><a href="#development">Development</a></li></ul></li></ul>
 
             </nav>
           </aside>
@@ -376,14 +376,36 @@
 
 <h2 id="install-packages-interactivelly">Install packages interactivelly</h2>
 
-<p>In order to interactivelly install <a href="https://opam.ocaml.org/">OCaml Package Manager (opam)</a> packages in a Flatpak environmment you will need to inicialize a new environment:</p>
+<h3 id="initializing-the-environment">Initializing the Environment</h3>
+
+<p>In order to interactivelly install <a href="https://opam.ocaml.org/">OCaml Package Manager (opam)</a> packages in a Flatpak environmment you will need to initialize a new environment:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ opam init --disable-sandboxing --no-setup --root $XDG_DATA_HOME/ocaml
-$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
+</code></pre></div></div>
+
+<h3 id="load-the-environment-per-session">Load the Environment Per Session</h3>
+
+<p><em>The environment will be forgotten after you restart the app, if you use this method</em></p>
+
+<p>Run the following command to load the create the environment</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
 
 $ opam switch
 #  switch   compiler     description
 →  default  ocaml.5.1.0  default
 </code></pre></div></div>
+
+<h3 id="load-the-environment-permanently">Load the Environment Permanently</h3>
+
+<p>Run the following command to get the path of your environment, using vscodium as an example</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ flatpak run --command=bash com.vscodium.codium
+
+[📦 com.vscodium.codium ~]$ echo $XDG_DATA_HOME/ocaml
+/var/home/&lt;username&gt;/.var/app/com.vscodium.codium/data/ocaml
+</code></pre></div></div>
+
+<p>Copy the output <code class="language-plaintext highlighter-rouge">/var/home/&lt;username&gt;/.var/app/com.vscodium.codium/data/ocaml</code>, 
+and add <code class="language-plaintext highlighter-rouge">OPAMROOT=/var/home/&lt;username&gt;/.var/app/com.vscodium.codium/data/ocaml</code> 
+as a environment variable for the app in <a href="https://flathub.org/apps/com.github.tchx84.Flatseal">flatseal</a></p>
 
 <h2 id="development">Development</h2>
 <p>To use the SDK with your favourite editor:</p>
@@ -478,6 +500,51 @@ flatpak-vscode: Enabling SDK extension "ocaml"
     <div class="page__related">
       <h2 class="page__related-title">You May Also Enjoy</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/industriosa-ocaml/" rel="permalink">Descubre el poder de la programación funcional a través de OCaml
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
         
           
 
@@ -612,51 +679,6 @@ flatpak-vscode: Enabling SDK extension "ocaml"
     <p class="archive__item-excerpt" itemprop="description">
 
 
-
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/physics-ga8/" rel="permalink">PHYSICS 8th General Assembly
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 
 </p>
   </article>

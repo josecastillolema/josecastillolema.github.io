@@ -1356,7 +1356,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "My Linux desktop",
-        "excerpt":"dotfiles My Linux desktop setup on Fedora Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Browser Primary: Firefox via Flatpak Secondary: Chrome...","categories": [],
+        "excerpt":"dotfiles My Linux desktop setup on Fedora Sway Atomic, previously known as Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Browser Primary:...","categories": [],
         "tags": ["en","redhat"],
         "url": "/dotfiles/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1407,5 +1407,11 @@ var store = [{
         "excerpt":"    Code the dream      Classes for Code the Dream Skill-IT workshops.      Docker Hands-on Practice    ","categories": [],
         "tags": ["classes","en","openshift","redhat"],
         "url": "/codethedream/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Descubre el poder de la programación funcional a través de OCaml",
+        "excerpt":"![](/assets/images/posts/2024-03-30-industriosa-ocaml/1.webp) La **programación funcional** es un paradigma que enfatiza el uso de funciones en lugar de modificar el estado o los datos directamente. Promueve un código declarativo conciso y se centra en la inmutabilidad, lo que hace que su código sea más fácil de leer, depurar y razonar. Esta reunión...","categories": [],
+        "tags": ["es","events"],
+        "url": "/industriosa-ocaml/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

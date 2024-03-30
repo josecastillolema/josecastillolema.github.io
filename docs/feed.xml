@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-02-03T04:11:05-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Code the Dream Skill-IT workshops</title><link href="https://josecastillolema.github.io/codethedream/" rel="alternate" type="text/html" title="Code the Dream Skill-IT workshops" /><published>2024-02-03T00:00:00-06:00</published><updated>2024-02-03T14:00:58-06:00</updated><id>https://josecastillolema.github.io/codethedream</id><content type="html" xml:base="https://josecastillolema.github.io/codethedream/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=codethedream&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-03-30T04:47:04-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Descubre el poder de la programación funcional a través de OCaml</title><link href="https://josecastillolema.github.io/industriosa-ocaml/" rel="alternate" type="text/html" title="Descubre el poder de la programación funcional a través de OCaml" /><published>2024-03-30T00:00:00-05:00</published><updated>2024-03-30T15:00:58-05:00</updated><id>https://josecastillolema.github.io/industriosa-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/industriosa-ocaml/">![](/assets/images/posts/2024-03-30-industriosa-ocaml/1.webp)
+
+La **programación funcional** es un paradigma que enfatiza el uso de funciones en lugar de modificar el estado o los datos directamente. Promueve un código declarativo conciso y se centra en la inmutabilidad, lo que hace que su código sea más fácil de leer, depurar y razonar. Esta reunión tiene como objetivo presentar [OCaml](https://ocaml.org/), un lenguaje de programación funcional de propósito general y tipado estático con un fuerte soporte para los principios de programación funcional.
+
+En este evento abordaremos los siguientes temas:
+
+ - Introducción a los conceptos de programación funcional (funciones de primera clase, funciones puras, inmutabilidad, recursividad)
+ - Comprender los fundamentos de OCaml (tipos de datos, sintaxis, operaciones básicas)
+ - Librería principal de OCaml y las funciones de la librería estándar
+ - Ejemplos del mundo real de programación funcional con OCaml (analizadores, intérpretes, etc.)
+
+Esta reunión brindará una oportunidad para que los asistentes tengan conocimientos prácticos.
+
+El ponente será José Castillo, desarrollador de software en Red Hat. José tiene amplia experiencia trabajando con herramientas nativas de la nube dentro de Red Hat y muy vinculado al mundo Telco, trabajando anteriormente en tecnologías 4G y 5G.
+
+No te pierdas esta oportunidad de obtener información valiosa sobre la programación funcional a través de OCaml. Inscripciones via [Meetup](https://www.meetup.com/es-ES/aindustriosa/events/299611775/).
+
+Esta actividad cuenta con el patrocinio de la Xunta de Galicia y la Axencia Para a Modernización Tecnolóxica (AMTEGA).
+
+[A Industriosa](https://aindustriosa.org/) es una asociación sin ánimo de lucro que gestiona y promociona un medialab en la ciudad de Vigo. Un espacio donde makers, comunidades tecnológicas y empresas cuentan con el equipamiento necesario para llevar a cabo sus proyectos. Un punto de encuentro donde aprender, compartir y construir. [Link](https://aindustriosa.org/Descubre-o-poder-da-programacion-funcional-a-traves-de-OCaml/) del evento.
+
+[![](/assets/images/posts/2024-03-30-industriosa-ocaml/2.jpg)](https://www.meetup.com/es-ES/aindustriosa/events/299611775/)</content><author><name>Jose Castillo Lema</name></author><category term="es" /><category term="events" /><summary type="html"></summary></entry><entry><title type="html">Code the Dream Skill-IT workshops</title><link href="https://josecastillolema.github.io/codethedream/" rel="alternate" type="text/html" title="Code the Dream Skill-IT workshops" /><published>2024-02-03T00:00:00-06:00</published><updated>2024-02-03T14:00:58-06:00</updated><id>https://josecastillolema.github.io/codethedream</id><content type="html" xml:base="https://josecastillolema.github.io/codethedream/">&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=codethedream&amp;amp;type=watch&amp;amp;count=true&amp;amp;size=large&amp;amp;v=2&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;130&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=codethedream&amp;amp;type=star&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;115&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 &lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;repo=codethedream&amp;amp;type=fork&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;170&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;
 
@@ -33,14 +54,36 @@
 
 &lt;h2 id=&quot;install-packages-interactivelly&quot;&gt;Install packages interactivelly&lt;/h2&gt;
 
-&lt;p&gt;In order to interactivelly install &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;OCaml Package Manager (opam)&lt;/a&gt; packages in a Flatpak environmment you will need to inicialize a new environment:&lt;/p&gt;
+&lt;h3 id=&quot;initializing-the-environment&quot;&gt;Initializing the Environment&lt;/h3&gt;
+
+&lt;p&gt;In order to interactivelly install &lt;a href=&quot;https://opam.ocaml.org/&quot;&gt;OCaml Package Manager (opam)&lt;/a&gt; packages in a Flatpak environmment you will need to initialize a new environment:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ opam init --disable-sandboxing --no-setup --root $XDG_DATA_HOME/ocaml
-$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;load-the-environment-per-session&quot;&gt;Load the Environment Per Session&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;The environment will be forgotten after you restart the app, if you use this method&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Run the following command to load the create the environment&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
 
 $ opam switch
 #  switch   compiler     description
 →  default  ocaml.5.1.0  default
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;load-the-environment-permanently&quot;&gt;Load the Environment Permanently&lt;/h3&gt;
+
+&lt;p&gt;Run the following command to get the path of your environment, using vscodium as an example&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ flatpak run --command=bash com.vscodium.codium
+
+[📦 com.vscodium.codium ~]$ echo $XDG_DATA_HOME/ocaml
+/var/home/&amp;lt;username&amp;gt;/.var/app/com.vscodium.codium/data/ocaml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Copy the output &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/var/home/&amp;lt;username&amp;gt;/.var/app/com.vscodium.codium/data/ocaml&lt;/code&gt;, 
+and add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;OPAMROOT=/var/home/&amp;lt;username&amp;gt;/.var/app/com.vscodium.codium/data/ocaml&lt;/code&gt; 
+as a environment variable for the app in &lt;a href=&quot;https://flathub.org/apps/com.github.tchx84.Flatseal&quot;&gt;flatseal&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;development&quot;&gt;Development&lt;/h2&gt;
 &lt;p&gt;To use the SDK with your favourite editor:&lt;/p&gt;
@@ -994,7 +1037,7 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
 
 &lt;h1 id=&quot;dotfiles&quot;&gt;dotfiles&lt;/h1&gt;
 
-&lt;p&gt;My Linux desktop setup on &lt;a href=&quot;https://fedoraproject.org/sericea/&quot;&gt;Fedora Sericea&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;My Linux desktop setup on &lt;a href=&quot;https://fedoraproject.org/atomic-desktops/sway/&quot;&gt;Fedora Sway Atomic&lt;/a&gt;, previously known as Sericea.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/josecastillolema/dotfiles/master/img/screenshot.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1042,6 +1085,11 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
+    &lt;p&gt;Messaging application: Ferdium via &lt;a href=&quot;https://flathub.org/apps/org.ferdium.Ferdium&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;Use it as client for Gmail, Outlook, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
     &lt;p&gt;File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)&lt;/p&gt;
 
     &lt;p&gt;Would prefer Thunar or PCMan FM but miss the preview feature.&lt;/p&gt;
@@ -1054,6 +1102,9 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Image viewer: imv via baseOS&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;PDF editing: Xournal++ via &lt;a href=&quot;https://flathub.org/apps/com.github.xournalpp.xournalpp&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Basic photo editing: Drawing via &lt;a href=&quot;https://flathub.org/apps/com.github.maoschanz.drawing&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
@@ -1080,10 +1131,11 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
 
 &lt;ul&gt;
   &lt;li&gt;Shell: bash via baseOS&lt;/li&gt;
+  &lt;li&gt;Prompt: Starship via local install&lt;/li&gt;
+  &lt;li&gt;Text editor: neovim via &lt;a href=&quot;https://flathub.org/es/apps/io.neovim.nvim&quot;&gt;Flatpak&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Application management: rpm-ostree and Flatpak via baseOS&lt;/li&gt;
   &lt;li&gt;Terminal multiplexer: tmux in remote systems&lt;/li&gt;
   &lt;li&gt;Configuration management: Ansible via &lt;a href=&quot;https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16&quot;&gt;toolbx&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Text editor: neovim via &lt;a href=&quot;https://flathub.org/es/apps/io.neovim.nvim&quot;&gt;Flatpak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Prompt: Starship via local install&lt;/li&gt;
   &lt;li&gt;Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
     &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;https://github.com/josecastillolema/toolbox-images&quot;&gt;Toolbx images&lt;/a&gt;&lt;/li&gt;
@@ -1095,7 +1147,6 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Kubernetes: Kind and kube-burner via local install&lt;/li&gt;
-  &lt;li&gt;Application management: rpm-ostree and Flatpak via baseOS&lt;/li&gt;
   &lt;li&gt;Keyboard input: wtype via rpm-ostree&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1140,12 +1191,33 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
       &lt;li&gt;Pure-GTK (wayland) support &lt;a href=&quot;https://github.com/flathub/org.gnu.emacs/issues/58&quot;&gt;flathub/org.gnu.emacs#58&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
+  &lt;li&gt;Ferdium
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;s&gt;Allow setting default zoom level per service [ferdium/ferdium-app#1556](https://github.com/ferdium/ferdium-app/issues/1556)&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Credentials autocomplete &lt;a href=&quot;https://github.com/ferdium/ferdium-app/issues/1425&quot;&gt;ferdium/ferdium-app#1425&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Feature: Ability to add Chrome extensions like password managers &lt;a href=&quot;https://github.com/ferdium/ferdium-app/issues/135&quot;&gt;ferdium/ferdium-app#135&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Unable to print from Gmail view &lt;a href=&quot;https://github.com/ferdium/ferdium-app/issues/1573&quot;&gt;ferdium/ferdium-app#1573&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)&lt;/s&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Zoom resets after service change [ferdium/ferdium-app#1419](https://github.com/ferdium/ferdium-app/issues/1419)&lt;/s&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;Firefox
     &lt;ul&gt;
       &lt;li&gt;Slack huddles are not available &lt;a href=&quot;https://github.com/webcompat/web-bugs/issues/82623&quot;&gt;webcompat/web-bugs#82623&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;
         &lt;s&gt;Prime Video does not work (neither Chrome nor Firefox) https://www.primevideo.com/region/na/help?nodeId=GU85HKX66NVFNQ9Y&lt;/s&gt;
       &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;GNOME
+    &lt;ul&gt;
+      &lt;li&gt;gvfsd-recent preventing system suspension &lt;a href=&quot;https://gitlab.gnome.org/GNOME/gvfs/-/issues/715&quot;&gt;GNOME/gvfs#715&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Nautilus
@@ -1185,6 +1257,7 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;/li&gt;
   &lt;li&gt;Toolbx
     &lt;ul&gt;
+      &lt;li&gt;Load completions from the host &lt;a href=&quot;https://github.com/containers/toolbox/issues/1472&quot;&gt;containers/toolbox#1302&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Support for custom commands upon entering container &lt;a href=&quot;https://github.com/containers/toolbox/issues/1302&quot;&gt;containers/toolbox#1302&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -1196,14 +1269,18 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;li&gt;Visual Studio Code
     &lt;ul&gt;
       &lt;li&gt;Add optional Wayland support &lt;a href=&quot;https://github.com/flathub/com.visualstudio.code/issues/471&quot;&gt;flathub/com.visualstudio.code#471&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Crash when rebuilding application menu on wayland &lt;a href=&quot;https://github.com/microsoft/vscode/issues/184124&quot;&gt;microsoft/vscode#184124&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Crash when rebuilding application menu on wayland [microsoft/vscode#184124](https://github.com/microsoft/vscode/issues/184124)&lt;/s&gt;
+      &lt;/li&gt;
       &lt;li&gt;Exit Vim Insert Mode on Save &lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/2411&quot;&gt;VSCodeVim/Vim#2411&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;
         &lt;s&gt;JetBrains Mono font ligatures not working [JetBrains/JetBrainsMono#655](https://github.com/JetBrains/JetBrainsMono/issues/655)&lt;/s&gt;
       &lt;/li&gt;
       &lt;li&gt;Paste through mouse middle button does not insert text at cursor position&lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/5065&quot;&gt;VSCodeVim/Vim#5065&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Reset to normal mode when leaving file focus &lt;a href=&quot;https://github.com/VSCodeVim/Vim/issues/7553&quot;&gt;VSCodeVim/Vim#7553&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Small/giant mouse cursor &lt;a href=&quot;https://github.com/microsoft/vscode/issues/136390&quot;&gt;microsoft/vscode#136390&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;s&gt;Small/giant mouse cursor [microsoft/vscode#136390](https://github.com/microsoft/vscode/issues/136390)&lt;/s&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Zathura
@@ -1223,16 +1300,4 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html"></summary></entry><entry><title type="html">Telecom cloud-native development: an industry point of view</title><link href="https://josecastillolema.github.io/imdea/" rel="alternate" type="text/html" title="Telecom cloud-native development: an industry point of view" /><published>2023-06-02T00:00:00-05:00</published><updated>2023-06-02T15:00:58-05:00</updated><id>https://josecastillolema.github.io/imdea</id><content type="html" xml:base="https://josecastillolema.github.io/imdea/">&lt;p&gt;&lt;a href=&quot;https://networks.imdea.org/whatsnew/events-agenda/&quot;&gt;&lt;img src=&quot;/assets/images/posts/2023-06-02-imdea.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Telcos are increasingly moving from physical/virtual to cloud-native network functions in the context of 5G adoption. In this talk we will describe the telecom network transformation journey, benefits of cloud-native deployments, technical requirements/constraints of the underlying cloud service managers, the role of open source technologies and the use of the operator pattern in telecom contexts.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Event&lt;/strong&gt;: &lt;a href=&quot;https://networks.imdea.org/whatsnew/events-agenda/telecom-cloud-native-development-an-industry-point-of-view/&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Date&lt;/strong&gt;: 9 Jun 2023&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Location&lt;/strong&gt;: MR-A1 [Ramón] &amp;amp; MR-A2 [Cajal], IMDEA Networks Institute, Avda. del Mar Mediterráneo 22, 28918 Leganés – Madrid&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Time&lt;/strong&gt;: 12:00&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Add to Calendar&lt;/strong&gt;: &lt;a href=&quot;https://networks.imdea.org/whatsnew/events-agenda/telecom-cloud-native-development-an-industry-point-of-view/#&quot;&gt;iCalendar&lt;/a&gt; &lt;a href=&quot;https://networks.imdea.org/whatsnew/events-agenda/telecom-cloud-native-development-an-industry-point-of-view/#&quot;&gt;Outlook&lt;/a&gt; &lt;a href=&quot;https://www.google.com/calendar/render?action=TEMPLATE&amp;amp;text=Telecom+cloud-native+development%3A+an+industry+point+of+view&amp;amp;dates=20230609T100000Z/20230609T120000Z&amp;amp;details=&amp;amp;location=MR-A1+%5BRam%C3%B3n%5D+%26+MR-A2+%5BCajal%5D%2C+IMDEA+Networks+Institute%2C+Avda.+del+Mar+Mediterr%C3%A1neo+22%2C+28918+Legan%C3%A9s+%E2%80%93+Madrid&amp;amp;sf=true&amp;amp;output=xml&quot;&gt;Google&lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="nfv" /><category term="research" /><category term="sdn" /><summary type="html"></summary></entry></feed>
+&lt;iframe src=&quot;https://ghbtns.com/github-btn.html?user=josecastillolema&amp;amp;type=follow&amp;amp;count=true&amp;amp;size=large&quot; frameborder=&quot;0&quot; scrolling=&quot;0&quot; width=&quot;230&quot; height=&quot;30&quot; title=&quot;GitHub&quot;&gt;&lt;/iframe&gt;</content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html"></summary></entry></feed>
