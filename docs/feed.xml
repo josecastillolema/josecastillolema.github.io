@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-03-30T04:52:33-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Descubre el poder de la programación funcional a través de OCaml</title><link href="https://josecastillolema.github.io/industriosa-ocaml/" rel="alternate" type="text/html" title="Descubre el poder de la programación funcional a través de OCaml" /><published>2024-03-30T00:00:00-05:00</published><updated>2024-03-30T15:00:58-05:00</updated><id>https://josecastillolema.github.io/industriosa-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/industriosa-ocaml/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2024-03-30-industriosa-ocaml/1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-05-01T11:27:49-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Descubre el poder de la programación funcional a través de OCaml</title><link href="https://josecastillolema.github.io/industriosa-ocaml/" rel="alternate" type="text/html" title="Descubre el poder de la programación funcional a través de OCaml" /><published>2024-03-30T00:00:00-05:00</published><updated>2024-03-30T15:00:58-05:00</updated><id>https://josecastillolema.github.io/industriosa-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/industriosa-ocaml/">&lt;p&gt;&lt;img src=&quot;/assets/images/posts/2024-03-30-industriosa-ocaml/1.webp&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;La &lt;strong&gt;programación funcional&lt;/strong&gt; es un paradigma que enfatiza el uso de funciones en lugar de modificar el estado o los datos directamente. Promueve un código declarativo conciso y se centra en la inmutabilidad, lo que hace que su código sea más fácil de leer, depurar y razonar. Esta reunión tiene como objetivo presentar &lt;a href=&quot;https://ocaml.org/&quot;&gt;OCaml&lt;/a&gt;, un lenguaje de programación funcional de propósito general y tipado estático con un fuerte soporte para los principios de programación funcional.&lt;/p&gt;
 
@@ -847,14 +847,14 @@ go version go1.21.3 linux/amd64
 &lt;h4 id=&quot;local-install&quot;&gt;Local install&lt;/h4&gt;
 &lt;p&gt;Install both &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;python&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; in the local user environment.&lt;/p&gt;
 
-&lt;p&gt;From a toolbx container with proper development tools, i.e.: &lt;a href=&quot;https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile&quot;&gt;this one&lt;/a&gt; download and compile Python:&lt;/p&gt;
+&lt;p&gt;From a toolbx container with proper development tools (and readline and sqlite dev dependencies), i.e.: &lt;a href=&quot;https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/40/Containerfile&quot;&gt;this one&lt;/a&gt; download and compile Python:&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
 ⬢ $ tar -xf Python-3.?.?.tar.xz
 ⬢ $ cd Python-3.?.?.tar.xz
-⬢ $ ./configure --prefix=$HOME
+⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions
 ⬢ $ make install
 ⬢ $ ln -s ~/bin/python3 ~/bin/python
-⬢ $ pip install readline
+⬢ $ pip install ipython readline
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;~/bin/python&lt;/code&gt;. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.&lt;/p&gt;
@@ -1105,8 +1105,11 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
   &lt;li&gt;
     &lt;p&gt;Image viewer: imv via baseOS&lt;/p&gt;
   &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;PDF editing: Xournal++ via &lt;a href=&quot;https://flathub.org/apps/com.github.xournalpp.xournalpp&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
+  &lt;li&gt;PDF editing
+    &lt;ul&gt;
+      &lt;li&gt;Basic editing via Firefox&lt;/li&gt;
+      &lt;li&gt;Xournal++ via &lt;a href=&quot;https://flathub.org/apps/com.github.xournalpp.xournalpp&quot;&gt;Flatpak&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Basic photo editing: Drawing via &lt;a href=&quot;https://flathub.org/apps/com.github.maoschanz.drawing&quot;&gt;Flatpak&lt;/a&gt;&lt;/p&gt;
@@ -1261,6 +1264,11 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &amp
     &lt;ul&gt;
       &lt;li&gt;Load completions from the host &lt;a href=&quot;https://github.com/containers/toolbox/issues/1472&quot;&gt;containers/toolbox#1302&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;Support for custom commands upon entering container &lt;a href=&quot;https://github.com/containers/toolbox/issues/1302&quot;&gt;containers/toolbox#1302&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Transmission
+    &lt;ul&gt;
+      &lt;li&gt;Support running in the background on Linux &lt;a href=&quot;https://github.com/transmission/transmission/issues/5484&quot;&gt;transmission/transmission#5484&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Vim Flatpak
