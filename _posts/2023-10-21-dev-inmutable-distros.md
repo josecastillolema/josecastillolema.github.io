@@ -177,15 +177,15 @@ Finally, open VSCode (it should automatically detect the local Golang installati
 #### Local install
 Install both `python` and `pip` in the local user environment.
 
-From a toolbx container with proper development tools, i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile) download and compile Python:
+From a toolbx container with proper development tools (and readline and sqlite dev dependencies), i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/40/Containerfile) download and compile Python:
 ```
 ⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
 ⬢ $ tar -xf Python-3.?.?.tar.xz
 ⬢ $ cd Python-3.?.?.tar.xz
-⬢ $ ./configure --prefix=$HOME
+⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions
 ⬢ $ make install
 ⬢ $ ln -s ~/bin/python3 ~/bin/python
-⬢ $ pip install readline
+⬢ $ pip install ipython readline
 ```
 
 Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment `~/bin/python`. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.

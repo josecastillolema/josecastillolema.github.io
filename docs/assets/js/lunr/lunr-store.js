@@ -1332,7 +1332,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "IFFE Máster en Big Data y Analítica de Negocio (MBD)",
-        "excerpt":"IFFE Máster en Big Data y Analítica de Negocio (MBD) Herramientas analíticas en AWS Cada proyecto se refiere a clases y/o labs realizados en aula. Siéntase libre de desarrollar estos ejemplos, mientras sean válidos, aceptaré pull requests 😄. Lab 01: IaaS - Simple Storage Service (S3) Lab 02: PaaS -...","categories": [],
+        "excerpt":"IFFE Máster en Big Data y Analítica de Negocio (MBD) Herramientas analíticas en AWS Cada proyecto se refiere a clases y/o labs realizados en aula. Siéntase libre de desarrollar estos ejemplos, mientras sean válidos, aceptaré pull requests 😄. Lab 01: IaaS - Simple Storage Service (S3) Lab 02: IaaS -...","categories": [],
         "tags": ["aws","classes","es"],
         "url": "/iffe-mbd/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
