@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack Day SP 2018"
-last_modified_at: 2018-07-28T16:00:58-04:00
+last_modified_at: 2018-07-28
 tags:
   - events
   - openstack

@@ -1,6 +1,6 @@
 ---
 title:  "Ultra Challenge Saint-Gobain"
-last_modified_at: 2017-09-26T16:00:58-04:00
+last_modified_at: 2017-09-26
 tags:
   - events
   - hackathon

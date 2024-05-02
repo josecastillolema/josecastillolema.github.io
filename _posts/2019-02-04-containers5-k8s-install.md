@@ -1,6 +1,6 @@
 ---
 title:  "Containers series V: Kubernetes - Instalação"
-last_modified_at: 2019-02-04T16:00:58-04:00
+last_modified_at: 2019-02-04
 tags:
   - classes
   - fiap

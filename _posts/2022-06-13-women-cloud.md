@@ -1,6 +1,6 @@
 ---
 title:  "AWS - Mulheres em Cloud"
-last_modified_at: 2022-06-13T16:00:58-04:00
+last_modified_at: 2022-06-13
 tags:
   - aws
   - classes

@@ -1,6 +1,6 @@
 ---
 title:  "CODECO project kick off"
-last_modified_at: 2023-01-18T16:00:58-04:00
+last_modified_at: 2023-01-18
 tags:
   - en
   - networks

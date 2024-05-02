@@ -1414,4 +1414,10 @@ var store = [{
         "tags": ["es","events"],
         "url": "/industriosa-ocaml/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Introduction to Nephio (LSF179)",
+        "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between. Earn certificates and badges Free Introduction to Nephio (LSF179) Learners will understand the scope, goals and benefits of Nephio’s new approach to automation....","categories": [],
+        "tags": ["cert","en","iac","networks","nfv","openshift","redhat","sdn"],
+        "url": "/lf-nephio/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

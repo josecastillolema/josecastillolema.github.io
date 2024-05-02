@@ -1,6 +1,6 @@
 ---
 title:  "Essentials for Istio by Solo.io"
-last_modified_at: 2021-09-16T16:00:58-04:00
+last_modified_at: 2021-09-16
 tags:
   - cert
   - en

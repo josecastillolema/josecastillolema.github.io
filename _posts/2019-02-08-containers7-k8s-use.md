@@ -1,6 +1,6 @@
 ---
 title:  "Containers series VII: Kubernetes - Uso"
-last_modified_at: 2019-02-08T16:00:58-04:00
+last_modified_at: 2019-02-08
 tags:
   - classes
   - fiap

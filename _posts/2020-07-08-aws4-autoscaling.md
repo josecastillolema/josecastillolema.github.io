@@ -1,6 +1,6 @@
 ---
 title:  "AWS series IV: Auto Scaling"
-last_modified_at: 2020-07-08T16:00:58-04:00
+last_modified_at: 2020-07-08
 tags:
   - aws
   - classes

@@ -1,6 +1,6 @@
 ---
 title:  "Microsoft Power Platform Virtual Training Day"
-last_modified_at: 2022-04-14T16:00:58-04:00
+last_modified_at: 2022-04-14
 tags:
   - azure
   - cert

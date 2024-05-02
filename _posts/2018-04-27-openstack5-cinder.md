@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack series V: Cinder - Block Storage Service"
-last_modified_at: 2018-04-27T16:00:58-04:00
+last_modified_at: 2018-04-27
 tags:
   - classes
   - fiap

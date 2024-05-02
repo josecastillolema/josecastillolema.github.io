@@ -1,6 +1,6 @@
 ---
 title:  "Huawei Talent: Cadastro na plataforma"
-last_modified_at: 2020-11-13T16:00:58-04:00
+last_modified_at: 2020-11-13
 tags:
   - cert
   - classes

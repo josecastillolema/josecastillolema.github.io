@@ -1,6 +1,6 @@
 ---
 title:  "Cognitive Class @ai"
-last_modified_at: 2022-05-06T16:00:58-04:00
+last_modified_at: 2022-05-06
 tags:
   - cert
   - en

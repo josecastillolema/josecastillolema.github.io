@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack series I: Keystone - Identity Manager"
-last_modified_at: 2018-03-18T16:00:58-04:00
+last_modified_at: 2018-03-18
 tags:
   - classes
   - fiap

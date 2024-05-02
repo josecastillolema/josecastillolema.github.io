@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Developing - 6th edition"
-last_modified_at: 2022-11-07T16:00:58-04:00
+last_modified_at: 2022-11-07
 tags:
   - aws
   - cert

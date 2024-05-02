@@ -1,6 +1,6 @@
 ---
 title:  "AWS Educate relaunch"
-last_modified_at: 2022-06-22T16:00:58-04:00
+last_modified_at: 2022-06-22
 tags:
   - aws
   - cert

@@ -1,6 +1,6 @@
 ---
 title:  "baseline-operator"
-last_modified_at: 2022-07-01T16:00:58-04:00
+last_modified_at: 2022-07-01
 tags:
   - dev
   - en

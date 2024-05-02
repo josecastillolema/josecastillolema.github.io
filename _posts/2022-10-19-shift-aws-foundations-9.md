@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Foundations - 9th edition"
-last_modified_at: 2022-10-19T16:00:58-04:00
+last_modified_at: 2022-10-19
 tags:
   - aws
   - cert

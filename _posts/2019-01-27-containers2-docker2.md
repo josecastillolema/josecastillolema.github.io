@@ -1,6 +1,6 @@
 ---
 title:  "Containers series II: Docker - continuação"
-last_modified_at: 2019-01-27T16:00:58-04:00
+last_modified_at: 2019-01-27
 tags:
   - classes
   - fiap

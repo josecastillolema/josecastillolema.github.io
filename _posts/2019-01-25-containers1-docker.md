@@ -1,6 +1,6 @@
 ---
 title:  "Containers series I: Docker"
-last_modified_at: 2019-01-25T16:00:58-04:00
+last_modified_at: 2019-01-25
 tags:
   - classes
   - fiap

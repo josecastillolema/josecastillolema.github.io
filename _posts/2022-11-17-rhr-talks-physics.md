@@ -1,6 +1,6 @@
 ---
 title:  "RHR talks: PHYSICS EU project"
-last_modified_at: 2022-11-17T16:00:58-04:00
+last_modified_at: 2022-11-17
 tags:
   - en
   - networks

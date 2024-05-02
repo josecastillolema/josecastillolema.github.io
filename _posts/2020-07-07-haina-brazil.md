@@ -1,6 +1,6 @@
 ---
 title:  "Huawei Certificate Training Program"
-last_modified_at: 2020-07-07T16:00:58-04:00
+last_modified_at: 2020-07-07
 tags:
   - cert
   - huawei

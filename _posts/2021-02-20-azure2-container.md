@@ -1,6 +1,6 @@
 ---
 title:  "Azure series II: Containers"
-last_modified_at: 2021-02-20T16:00:58-04:00
+last_modified_at: 2021-02-20
 tags:
   - azure
   - classes

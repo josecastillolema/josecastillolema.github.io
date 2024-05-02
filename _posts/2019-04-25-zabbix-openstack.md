@@ -1,6 +1,6 @@
 ---
 title:  "Zabbix templates for OpenStack"
-last_modified_at: 2019-04-25T16:00:58-04:00
+last_modified_at: 2019-04-25
 tags:
   - ansible
   - monitoring

@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack series IV: Neutron - Network Service"
-last_modified_at: 2018-04-25T16:00:58-04:00
+last_modified_at: 2018-04-25
 tags:
   - classes
   - fiap

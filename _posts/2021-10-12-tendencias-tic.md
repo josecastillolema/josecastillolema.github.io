@@ -1,6 +1,6 @@
 ---
 title:  "Tendências de mercado na área de TIC"
-last_modified_at: 2021-10-12T16:00:58-04:00
+last_modified_at: 2021-10-12
 tags:
   - cert
   - classes

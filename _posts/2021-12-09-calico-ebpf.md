@@ -1,6 +1,6 @@
 ---
 title:  "Certified Calico Operator: eBPF"
-last_modified_at: 2021-12-09T16:00:58-04:00
+last_modified_at: 2021-12-09
 tags:
   - cert
   - en
