@@ -7,6 +7,7 @@ tags:
   - pt
   - youtube
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2020-10-31-caio-youtube.png)](https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos)

@@ -5,6 +5,7 @@ tags:
   - en
   - redhat
 toc: false
+toc_sticky: true
 ---
 
 The Red Hat Giveback Program is an incentive program to recognize an associate who goes above-and-beyond their role-based responsibilities and makes contributions which impact Red Hat.

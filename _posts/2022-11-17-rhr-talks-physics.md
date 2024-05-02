@@ -7,6 +7,7 @@ tags:
   - redhat
   - research
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-11-17-rhr-talks-physics.png)](https://research.redhat.com/events/research-days-physics/)

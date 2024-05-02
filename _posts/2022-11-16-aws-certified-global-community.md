@@ -6,6 +6,7 @@ tags:
   - cert
   - en
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-11-16-aws-certified-global-community/1.png)](https://aws-certification.influitive.com/users/sign_in)

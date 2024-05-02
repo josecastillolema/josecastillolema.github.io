@@ -8,6 +8,7 @@ tags:
   - openshift
   - redhat
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2021-11-28-gremlin-caos/1.png)](https://www.gremlin.com/)

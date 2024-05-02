@@ -8,6 +8,7 @@ tags:
   - fiap
   - pt
 toc: yes
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2019-04-30-aws-educate/0.png)](https://aws.amazon.com/pt/education/awseducate/)

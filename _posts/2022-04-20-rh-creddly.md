@@ -10,6 +10,7 @@ tags:
   - redhat
   - sds
 toc: false
+toc_sticky: true
 ---
 
 [Red Hat Digital Credentials](https://www.redhat.com/en/about/digital-credential-program) recognize and reward learning achievements, community contributions and ecosystem engagement to drive the adoption of Red Hat technologies and to support customer success. A digital credential is earned upon meeting defined criteria, and Red Hat digital credentials can represent many types of achievements. A Red Hat digital badge is a sharable, verified, portable, data-rich form of that record.

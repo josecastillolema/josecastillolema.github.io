@@ -2,9 +2,11 @@
 title:  "Descubre el poder de la programación funcional a través de OCaml"
 last_modified_at: 2024-03-30
 tags:
+  - dev
   - es
   - events
 toc: false
+toc_sticky: true
 ---
 
 ![](/assets/images/posts/2024-03-30-industriosa-ocaml/1.webp)

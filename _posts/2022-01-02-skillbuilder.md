@@ -6,6 +6,7 @@ tags:
   - cert
   - en
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-01-02-skillbuilder.png)](https://explore.skillbuilder.aws/)

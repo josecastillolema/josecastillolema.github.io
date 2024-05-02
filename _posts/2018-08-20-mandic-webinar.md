@@ -6,6 +6,7 @@ tags:
   - pt
   - webinar
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2018-08-20-mandic-webinar.jpeg)](https://labs.mandic.com.br/webinars/ipv6-openstack)
