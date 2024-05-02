@@ -1,6 +1,6 @@
 ---
 title:  "AWS Global Certification Challenge"
-last_modified_at: 2020-10-12T16:00:58-04:00
+last_modified_at: 2020-10-12
 tags:
   - aws
   - cert

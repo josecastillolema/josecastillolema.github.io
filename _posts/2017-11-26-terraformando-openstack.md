@@ -1,6 +1,6 @@
 ---
 title:  "[PT] Terraform – IaC – Terraformando no OpenStack"
-last_modified_at: 2017-11-26T16:00:58-04:00
+last_modified_at: 2017-11-26
 tags:
   - openstack
   - iac

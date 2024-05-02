@@ -1,6 +1,6 @@
 ---
 title:  "GitOps Summit 2021"
-last_modified_at: 2021-05-18T16:00:58-04:00
+last_modified_at: 2021-05-18
 tags:
   - en
   - events

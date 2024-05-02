@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2019-02-04T14:00:58-06:00">
+  <meta property="article:modified_time" content="2019-02-04T00:00:00-06:00">
 
 
 
@@ -312,7 +312,7 @@
     <meta itemprop="headline" content="Containers series V: Kubernetes - Instalação">
     <meta itemprop="description" content="Serie de artigos sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).">
     <meta itemprop="datePublished" content="2019-02-04T00:00:00-06:00">
-    <meta itemprop="dateModified" content="2019-02-04T14:00:58-06:00">
+    <meta itemprop="dateModified" content="2019-02-04T00:00:00-06:00">
 
     <div class="page__inner-wrap">
       
@@ -409,7 +409,7 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
   <li>Conferir instalação:
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.status</span>
  <span class="s">microk8s is running</span>
- <span class="s">addons</span><span class="pi">:</span>
+ <span class="s">addons</span><span class="err">:</span>
  <span class="na">cilium</span><span class="pi">:</span> <span class="s">disabled</span>
  <span class="na">dashboard</span><span class="pi">:</span> <span class="s">disabled</span>
  <span class="na">dns</span><span class="pi">:</span> <span class="s">disabled</span>
@@ -447,8 +447,8 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
 
     <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.config &gt; .kube/config</span>
  <span class="s">$ cat .kube/config</span> 
- <span class="s">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
- <span class="na">clusters</span><span class="pi">:</span>
+ <span class="s">apiVersion</span><span class="err">:</span> <span class="s">v1</span>
+ <span class="s">clusters</span><span class="err">:</span>
  <span class="pi">-</span> <span class="na">cluster</span><span class="pi">:</span>
      <span class="na">certificate-authority-data</span><span class="pi">:</span> <span class="s">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURBVENDQWVtZ0F3SUJBZ0lKQUx5UmJTeUd2NjRLTUEwR0NTcUdTSWIzRFFFQkN3VUFNQmN4RlRBVEJnTlYKQkFNTURERXdMakUxTWk0eE9ETXVNVEFlRncweU1EQTBNVFV5TURBek1URmFGdzB5TURBMU1UVXlNREF6TVRGYQpNQmN4RlRBVEJnTlZCQU1NRERFd0xqRTFNaTR4T0RNdU1UQ0NBU0l3RFFZSktvWklodmNOQVFFQkJRQURnZ0VQCkFEQ0NBUW9DZ2dFQkFNODM5REltV1VLN2JNMWQ1OVR1SThITnRBbVlOQ2hqSStFa0txa2g5T1lPaWV0c0xjbDIKS2p5Ym5nRTJyOHp4M21YeEtGSmhnZGJxVzNmVHpGOGtxNGNKbVdFc0UxKzFtdFRaRUNFU0lrVmFlK3NUbjMvMwo0VWRYckV3SW5tQjJsMDlCRFNXblRBTHBaVUhnSFRvcUhOQmVzTlVlQ3h6Z0dzUWgranRGSlEzMWp4QnNqQnFNCk1EM1ZNRlFCK2FMUW5pSTM0UTZrNm8zZmR5dTArQlhJNHVYR3hldWFBVzViZStidWlPUlQ3a3hhdnZ4bmNsOE4KTFd0aG4wK2hjKzNEUE1DdXhxT2dra0UvRFZCV2trdklsbHBMeG5RLzU3b1BxUHVFVXRzd1hJeGZRMi9EUTBNdwpzZ1pLT0trNzYrby9nakhmaTNtRjArYTJWaUZPcm9FVTVBTUNBd0VBQWFOUU1FNHdIUVlEVlIwT0JCWUVGUE1LCkMyaXl0QkZxVTM3VU1uRXJHZEYrZnoyeU1COEdBMVVkSXdRWU1CYUFGUE1LQzJpeXRCRnFVMzdVTW5FckdkRisKZnoyeU1Bd0dBMVVkRXdRRk1BTUJBZjh3RFFZSktvWklodmNOQVFFTEJRQURnZ0VCQUpRdG5HbGZPVTk5VGdyZgpUNDkxc3hCSUUydVdEVG9Pc3BMVC9hcEFjK1JSdGtlWk1tS1NQNjYzNTFhQnJEamFCem9nblZ6WVNDQWxEU3Y1Cm95bVN3MTBQUms2SGt0QW44YzlFOGFFTHpyOHowZytOVE1sazRDRHNtQTcrN3hpMm1UaEM3bitzMWpXd1Ztd08KUzdRWG05dTIyS2g4MFk4aU1qVHRDdDBTY2I1TFdFVmwyLzRzWHhyQnZiSFBpbllRdjZSdFhvQWxlODFGMmZZLwpjVDg0L0dHNHRJdXd0VlB2b09hS0lKTzZLT1l6a0VzcU81SFdiTnltZ2xpVGxlMEFBLzdEUUprd1c0M0h4clF1CmdoMThrVURtQXpJa2Z0dDV0M1pKVnNJR2xGUnprZXRJK25TVnVYbjhHN0l5NEd5aWdiNmlZcE1EeE9CblhXWG0KbG43L09YZz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=</span>
      <span class="na">server</span><span class="pi">:</span> <span class="s">https://172.31.47.198:16443</span>
@@ -653,6 +653,55 @@ storage: disabled
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/lf-nephio/" rel="permalink">Introduction to Nephio (LSF179)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+      
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/industriosa-ocaml/" rel="permalink">Descubre el poder de la programación funcional a través de OCaml
 </a>
       
@@ -781,55 +830,6 @@ storage: disabled
     <p class="archive__item-excerpt" itemprop="description">
 
 
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-      
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/newyear24/" rel="permalink">Happy new year!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 
 </p>
   </article>

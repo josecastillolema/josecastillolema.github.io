@@ -1,6 +1,6 @@
 ---
 title:  "FIAP Meetup #9 - Kubernetes & Service Mesh"
-last_modified_at: 2021-07-08T16:00:58-04:00
+last_modified_at: 2021-07-08
 tags:
   - events
   - fiap

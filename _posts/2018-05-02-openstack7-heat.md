@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack series VII: Heat - Orchestration Service"
-last_modified_at: 2018-05-02T16:00:58-04:00
+last_modified_at: 2018-05-02
 tags:
   - classes
   - fiap

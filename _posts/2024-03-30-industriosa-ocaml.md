@@ -1,6 +1,6 @@
 ---
 title:  "Descubre el poder de la programación funcional a través de OCaml"
-last_modified_at: 2024-03-30T16:00:58-04:00
+last_modified_at: 2024-03-30
 tags:
   - es
   - events

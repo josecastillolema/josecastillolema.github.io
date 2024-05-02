@@ -1,6 +1,6 @@
 ---
 title:  "GitOps certified for Argo"
-last_modified_at: 2021-12-13T16:00:58-04:00
+last_modified_at: 2021-12-13
 tags:
   - cert
   - en

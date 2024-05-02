@@ -1,6 +1,6 @@
 ---
 title:  "[PT] Heat - Introdução"
-last_modified_at: 2017-10-28T16:00:58-04:00
+last_modified_at: 2017-10-28
 tags:
   - iac
   - openstack

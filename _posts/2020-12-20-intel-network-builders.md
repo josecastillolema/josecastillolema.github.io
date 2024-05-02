@@ -1,6 +1,6 @@
 ---
 title:  "Intel Network Builders University"
-last_modified_at: 2020-12-20T16:00:58-04:00
+last_modified_at: 2020-12-20
 tags:
   - en
   - networks

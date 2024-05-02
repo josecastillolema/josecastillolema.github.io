@@ -1,6 +1,6 @@
 ---
 title:  "Flatpak SDK Extension for OCaml"
-last_modified_at: 2024-01-04T16:00:58-04:00
+last_modified_at: 2024-01-04
 tags:
   - dev
   - en

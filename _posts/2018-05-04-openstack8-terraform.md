@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack series VIII: Terraform"
-last_modified_at: 2018-05-04T16:00:58-04:00
+last_modified_at: 2018-05-04
 tags:
   - classes
   - fiap

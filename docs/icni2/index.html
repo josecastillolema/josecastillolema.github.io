@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2023-08-10T15:00:58-05:00">
+  <meta property="article:modified_time" content="2023-08-10T00:00:00-05:00">
 
 
 
@@ -312,7 +312,7 @@
     <meta itemprop="headline" content="OVN-Kubernetes Multiple External Gateway local setup">
     <meta itemprop="description" content="Steps to set up a local environment with OVN Kubernetes Multiple External Gateway capability (also known as Intelligent CNI 2.0 or iCNI2.0) and a FRRRouting (FRR) pod acting as external gateway.">
     <meta itemprop="datePublished" content="2023-02-06T00:00:00-06:00">
-    <meta itemprop="dateModified" content="2023-08-10T15:00:58-05:00">
+    <meta itemprop="dateModified" content="2023-08-10T00:00:00-05:00">
 
     <div class="page__inner-wrap">
       
@@ -474,7 +474,7 @@ internal-net   2m
       <span class="pi">-</span> <span class="s">sleep</span>
       <span class="pi">-</span> <span class="s">infinity</span>
   <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+    <span class="na">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
 <span class="s">EOF</span>
 </code></pre></div></div>
 
@@ -538,9 +538,9 @@ ip route 10.244.1.0/24 172.18.0.4
     <span class="s">bfdd_options="   -A 127.0.0.1"</span>
     <span class="s">fabricd_options="-A 127.0.0.1"</span>
     <span class="s">vrrpd_options="  -A 127.0.0.1"</span>
-  <span class="s">vtysh.conf</span><span class="pi">:</span> <span class="pi">|</span>
+  <span class="na">vtysh.conf</span><span class="pi">:</span> <span class="pi">|</span>
     <span class="s">service integrated-vtysh-config</span>
-  <span class="s">frr.conf</span><span class="pi">:</span> <span class="pi">|</span>
+  <span class="na">frr.conf</span><span class="pi">:</span> <span class="pi">|</span>
     <span class="s">hostname vrouter</span>
     <span class="s">service integrated-vtysh-config</span>
     <span class="s">password frr</span>
@@ -572,13 +572,13 @@ ip route 10.244.1.0/24 172.18.0.4
   <span class="na">name</span><span class="pi">:</span> <span class="s">ext-gw</span>
   <span class="na">namespace</span><span class="pi">:</span> <span class="s">frr</span>
   <span class="na">annotations</span><span class="pi">:</span>
-    <span class="s">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
+    <span class="na">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
         <span class="s">{</span>
           <span class="s">"name":</span><span class="nv"> </span><span class="s">"internal-net",</span>
           <span class="s">"ips":</span><span class="nv"> </span><span class="s">[</span><span class="nv"> </span><span class="s">"172.18.0.10/16"</span><span class="nv"> </span><span class="s">]</span>
         <span class="s">}</span>
       <span class="s">]'</span>
-    <span class="s">k8s.v1.cni.cncf.io/network-status</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="na">k8s.v1.cni.cncf.io/network-status</span><span class="pi">:</span> <span class="pi">|-</span>
       <span class="s">[{</span>
           <span class="s">"name": "frr/internal-net",</span>
           <span class="s">"ips": [</span>
@@ -586,9 +586,9 @@ ip route 10.244.1.0/24 172.18.0.4
           <span class="s">],</span>
           <span class="s">"dns": {}</span>
       <span class="s">}]</span>
-    <span class="s">k8s.ovn.org/routing-namespaces</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bar"</span>
-    <span class="s">k8s.ovn.org/bfd-enabled</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-    <span class="s">k8s.ovn.org/routing-network</span><span class="pi">:</span> <span class="s2">"</span><span class="s">frr/internal-net"</span>
+    <span class="na">k8s.ovn.org/routing-namespaces</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bar"</span>
+    <span class="na">k8s.ovn.org/bfd-enabled</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">k8s.ovn.org/routing-network</span><span class="pi">:</span> <span class="s2">"</span><span class="s">frr/internal-net"</span>
 <span class="na">spec</span><span class="pi">:</span>
   <span class="na">containers</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">frr</span>
@@ -621,7 +621,7 @@ ip route 10.244.1.0/24 172.18.0.4
       <span class="na">configMap</span><span class="pi">:</span>
         <span class="na">name</span><span class="pi">:</span> <span class="s">frr-configs</span>
   <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker</span>
+    <span class="na">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker</span>
 <span class="s">EOF</span>
 </code></pre></div></div>
 
@@ -747,7 +747,7 @@ rtt min/avg/max/mdev = 6.959/6.959/6.959/0.000 ms
       <span class="pi">-</span> <span class="s">sleep</span>
       <span class="pi">-</span> <span class="s">infinity</span>
   <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+    <span class="na">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
 <span class="s">EOF</span>
 </code></pre></div></div>
 
@@ -790,7 +790,7 @@ command terminated with exit code 1
       <span class="na">initialDelaySeconds</span><span class="pi">:</span> <span class="m">5</span>
       <span class="na">periodSeconds</span><span class="pi">:</span> <span class="m">5</span>
   <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+    <span class="na">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get po -n bar
@@ -824,7 +824,7 @@ $ kubectl describe po dummy2 -n bar | grep Ready
         <span class="pi">-</span> <span class="s">-c1</span>
         <span class="pi">-</span> <span class="s">192.168.1.10</span>
   <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
+    <span class="na">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker2</span>
 <span class="s">EOF</span>
 </code></pre></div></div>
 
@@ -851,13 +851,13 @@ $ kubectl describe po normal2
   <span class="na">name</span><span class="pi">:</span> <span class="s">ext-gw2</span>
   <span class="na">namespace</span><span class="pi">:</span> <span class="s">frr</span>
   <span class="na">annotations</span><span class="pi">:</span>
-    <span class="s">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
+    <span class="na">k8s.v1.cni.cncf.io/networks</span><span class="pi">:</span> <span class="s1">'</span><span class="s">[</span>
         <span class="s">{</span>
           <span class="s">"name":</span><span class="nv"> </span><span class="s">"internal-net",</span>
           <span class="s">"ips":</span><span class="nv"> </span><span class="s">[</span><span class="nv"> </span><span class="s">"172.18.0.11/16"</span><span class="nv"> </span><span class="s">]</span>
         <span class="s">}</span>
       <span class="s">]'</span>
-    <span class="s">k8s.v1.cni.cncf.io/network-status</span><span class="pi">:</span> <span class="pi">|-</span>
+    <span class="na">k8s.v1.cni.cncf.io/network-status</span><span class="pi">:</span> <span class="pi">|-</span>
       <span class="s">[{</span>
           <span class="s">"name": "frr/internal-net",</span>
           <span class="s">"ips": [</span>
@@ -865,9 +865,9 @@ $ kubectl describe po normal2
           <span class="s">],</span>
           <span class="s">"dns": {}</span>
       <span class="s">}]</span>
-    <span class="s">k8s.ovn.org/routing-namespaces</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bar"</span>
-    <span class="s">k8s.ovn.org/bfd-enabled</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-    <span class="s">k8s.ovn.org/routing-network</span><span class="pi">:</span> <span class="s2">"</span><span class="s">frr/internal-net"</span>
+    <span class="na">k8s.ovn.org/routing-namespaces</span><span class="pi">:</span> <span class="s2">"</span><span class="s">bar"</span>
+    <span class="na">k8s.ovn.org/bfd-enabled</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+    <span class="na">k8s.ovn.org/routing-network</span><span class="pi">:</span> <span class="s2">"</span><span class="s">frr/internal-net"</span>
 <span class="na">spec</span><span class="pi">:</span>
   <span class="na">containers</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">frr</span>
@@ -910,7 +910,7 @@ $ kubectl describe po normal2
       <span class="na">configMap</span><span class="pi">:</span>
         <span class="na">name</span><span class="pi">:</span> <span class="s">frr-configs</span>
   <span class="na">nodeSelector</span><span class="pi">:</span>
-    <span class="s">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker</span>
+    <span class="na">kubernetes.io/hostname</span><span class="pi">:</span> <span class="s">ovn-worker</span>
 <span class="s">EOF</span>
 </code></pre></div></div>
 
@@ -1005,6 +1005,55 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
   <div class="grid__wrapper">
     
     
+    
+      
+      
+      
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/lf-nephio/" rel="permalink">Introduction to Nephio (LSF179)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
     
       
       
@@ -1151,55 +1200,6 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
     <p class="archive__item-excerpt" itemprop="description">
 
 
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-      
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/newyear24/" rel="permalink">Happy new year!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 
 </p>
   </article>

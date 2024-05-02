@@ -1,6 +1,6 @@
 ---
 title:  "Microsoft Ignite Cloud Skills Challenge"
-last_modified_at: 2022-03-17T16:00:58-04:00
+last_modified_at: 2022-03-17
 tags:
   - azure
   - cert

@@ -1,6 +1,6 @@
 ---
 title:  "AWS Skill Builder"
-last_modified_at: 2022-02-02T16:00:58-04:00
+last_modified_at: 2022-02-02
 tags:
   - aws
   - cert

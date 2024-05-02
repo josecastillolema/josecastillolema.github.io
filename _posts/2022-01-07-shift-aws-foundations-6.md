@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Foundations - 6th edition"
-last_modified_at: 2022-01-07T16:00:58-04:00
+last_modified_at: 2022-01-07
 tags:
   - aws
   - cert

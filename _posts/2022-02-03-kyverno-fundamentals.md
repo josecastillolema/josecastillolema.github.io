@@ -1,6 +1,6 @@
 ---
 title:  "Kyverno Fundamentals Certification"
-last_modified_at: 2022-02-03T16:00:58-04:00
+last_modified_at: 2022-02-03
 tags:
   - cert
   - en

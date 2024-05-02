@@ -1,6 +1,6 @@
 ---
 title:  "AWS Community Day Brasil 2021"
-last_modified_at: 2021-11-03T16:00:58-04:00
+last_modified_at: 2021-11-03
 tags:
   - aws
   - events

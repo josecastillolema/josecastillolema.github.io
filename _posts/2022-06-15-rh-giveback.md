@@ -1,6 +1,6 @@
 ---
 title:  "Red Hat Giveback Program"
-last_modified_at: 2022-06-15T16:00:58-04:00
+last_modified_at: 2022-06-15
 tags:
   - en
   - redhat

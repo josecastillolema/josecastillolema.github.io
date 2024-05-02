@@ -1,6 +1,6 @@
 ---
 title:  "AWS Training and Certification - AWS Certified Global Community"
-last_modified_at: 2022-11-16T16:00:58-04:00
+last_modified_at: 2022-11-16
 tags:
   - aws
   - cert

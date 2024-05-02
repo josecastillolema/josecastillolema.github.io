@@ -1,6 +1,6 @@
 ---
 title:  "AWS Educate"
-last_modified_at: 2021-07-25T16:00:58-04:00
+last_modified_at: 2021-07-25
 tags:
   - aws
   - cert

@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: Multicloud Architecture - 2nd edition"
-last_modified_at: 2021-01-09T16:00:58-04:00
+last_modified_at: 2021-01-09
 tags:
   - aws
   - classes

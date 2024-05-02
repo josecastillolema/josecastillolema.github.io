@@ -1,6 +1,6 @@
 ---
 title:  "Istio and Envoy Fundamentals by Tetrate"
-last_modified_at: 2022-01-12T16:00:58-04:00
+last_modified_at: 2022-01-12
 tags:
   - cert
   - en

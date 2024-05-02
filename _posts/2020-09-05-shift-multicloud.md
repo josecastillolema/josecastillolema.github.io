@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: Multicloud Architecture"
-last_modified_at: 2020-09-05T16:00:58-04:00
+last_modified_at: 2020-09-05
 tags:
   - aws
   - classes

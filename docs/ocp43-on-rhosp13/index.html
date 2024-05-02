@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2020-04-26T15:00:58-05:00">
+  <meta property="article:modified_time" content="2020-04-26T00:00:00-05:00">
 
 
 
@@ -312,7 +312,7 @@
     <meta itemprop="headline" content="OpenShift 4.3 on RHOSP 13: Installation and Integrations">
     <meta itemprop="description" content="I would like to share my experience installing and integrating OpenShift with various OpenStack services, namely Cinder, Swift and Keystone (Neutron and Octavia TBD).">
     <meta itemprop="datePublished" content="2020-04-26T00:00:00-05:00">
-    <meta itemprop="dateModified" content="2020-04-26T15:00:58-05:00">
+    <meta itemprop="dateModified" content="2020-04-26T00:00:00-05:00">
 
     <div class="page__inner-wrap">
       
@@ -384,35 +384,35 @@
 <span class="na">baseDomain</span><span class="pi">:</span> <span class="s">openshift.com.br</span>
 <span class="na">compute</span><span class="pi">:</span>
 <span class="pi">-</span> <span class="na">hyperthreading</span><span class="pi">:</span> <span class="s">Enabled</span>
-<span class="s">  name</span><span class="pi">:</span> <span class="s">worker</span>
-<span class="s">  platform</span><span class="pi">:</span> <span class="pi">{}</span>
-<span class="s">  replicas</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">  name</span><span class="pi">:</span> <span class="s">worker</span>
+<span class="na">  platform</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="na">  replicas</span><span class="pi">:</span> <span class="m">1</span>
 <span class="na">controlPlane</span><span class="pi">:</span>
-<span class="s">  hyperthreading</span><span class="pi">:</span> <span class="s">Enabled</span>
-<span class="s">  name</span><span class="pi">:</span> <span class="s">master</span>
-<span class="s">  platform</span><span class="pi">:</span> <span class="pi">{}</span>
-<span class="s">  replicas</span><span class="pi">:</span> <span class="m">1</span>
+<span class="na">  hyperthreading</span><span class="pi">:</span> <span class="s">Enabled</span>
+<span class="na">  name</span><span class="pi">:</span> <span class="s">master</span>
+<span class="na">  platform</span><span class="pi">:</span> <span class="pi">{}</span>
+<span class="na">  replicas</span><span class="pi">:</span> <span class="m">1</span>
 <span class="na">metadata</span><span class="pi">:</span>
-<span class="s">  creationTimestamp</span><span class="pi">:</span> <span class="no">null</span>
-<span class="s">  name</span><span class="pi">:</span> <span class="s">lab01</span>
+<span class="na">  creationTimestamp</span><span class="pi">:</span> <span class="no">null</span>
+<span class="na">  name</span><span class="pi">:</span> <span class="s">lab01</span>
 <span class="na">networking</span><span class="pi">:</span>
-<span class="s">  clusterNetwork</span><span class="pi">:</span>
-<span class="s">  - cidr</span><span class="pi">:</span> <span class="s">10.128.0.0/14</span>
-<span class="s">    hostPrefix</span><span class="pi">:</span> <span class="m">23</span>
-<span class="s">  machineCIDR</span><span class="pi">:</span> <span class="s">10.0.0.0/16</span>
-<span class="s">  networkType</span><span class="pi">:</span> <span class="s">OpenShiftSDN</span>
-<span class="s">  serviceNetwork</span><span class="pi">:</span>
+<span class="na">  clusterNetwork</span><span class="pi">:</span>
+<span class="na">  - cidr</span><span class="pi">:</span> <span class="s">10.128.0.0/14</span>
+<span class="na">    hostPrefix</span><span class="pi">:</span> <span class="m">23</span>
+<span class="na">  machineCIDR</span><span class="pi">:</span> <span class="s">10.0.0.0/16</span>
+<span class="na">  networkType</span><span class="pi">:</span> <span class="s">OpenShiftSDN</span>
+<span class="na">  serviceNetwork</span><span class="pi">:</span>
 <span class="s">  - 172.30.0.0/16</span>
 <span class="na">platform</span><span class="pi">:</span>
-<span class="s">  openstack</span><span class="pi">:</span>
-<span class="s">    cloud</span><span class="pi">:</span> <span class="s">openstack</span>
-<span class="s">    computeFlavor</span><span class="pi">:</span> <span class="s">openshift</span>
-<span class="s">    externalDNS</span><span class="pi">:</span> <span class="no">null</span>
-<span class="s">    externalNetwork</span><span class="pi">:</span> <span class="s">public</span>
-<span class="s">    lbFloatingIP</span><span class="pi">:</span> <span class="s">192.168.226.42</span>
-<span class="s">    octaviaSupport</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0"</span>
-<span class="s">    region</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
-<span class="s">    trunkSupport</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1"</span>
+<span class="na">  openstack</span><span class="pi">:</span>
+<span class="na">    cloud</span><span class="pi">:</span> <span class="s">openstack</span>
+<span class="na">    computeFlavor</span><span class="pi">:</span> <span class="s">openshift</span>
+<span class="na">    externalDNS</span><span class="pi">:</span> <span class="no">null</span>
+<span class="na">    externalNetwork</span><span class="pi">:</span> <span class="s">public</span>
+<span class="na">    lbFloatingIP</span><span class="pi">:</span> <span class="s">192.168.226.42</span>
+<span class="na">    octaviaSupport</span><span class="pi">:</span> <span class="s2">"</span><span class="s">0"</span>
+<span class="na">    region</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+<span class="na">    trunkSupport</span><span class="pi">:</span> <span class="s2">"</span><span class="s">1"</span>
 <span class="na">publish</span><span class="pi">:</span> <span class="s">External</span>
 <span class="na">pullSecret</span><span class="pi">:</span> <span class="s1">'</span><span class="s">{"auths":{"cloud.openshift.com":{"auth”:”abc==","email":"jlema@redhat.com"},"quay.io":{"auth”:”abc==","email":"jlema@redhat.com"},"registry.connect.redhat.com":{"auth”:”abc==”,”email":"jlema@redhat.com"},"registry.redhat.io":{"auth”:”abc==,”,”email":"jlema@redhat.com"}}}'</span>
 <span class="na">sshKey</span><span class="pi">:</span> <span class="pi">|</span>
@@ -466,18 +466,18 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
 <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">storage.k8s.io/v1</span>
 <span class="na">kind</span><span class="pi">:</span> <span class="s">StorageClass</span>
 <span class="na">metadata</span><span class="pi">:</span>
-<span class="s">  annotations</span><span class="pi">:</span>
-<span class="s">    storageclass.kubernetes.io/is-default-class</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
-<span class="s">  creationTimestamp</span><span class="pi">:</span> <span class="s">2020-03-24T18:17:11Z</span>
-<span class="s">  name</span><span class="pi">:</span> <span class="s">standard</span>
-<span class="s">  ownerReferences</span><span class="pi">:</span>
-<span class="s">  - apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
-<span class="s">    kind</span><span class="pi">:</span> <span class="s">clusteroperator</span>
-<span class="s">    name</span><span class="pi">:</span> <span class="s">storage</span>
-<span class="s">    uid</span><span class="pi">:</span> <span class="s">82643882-1e38-4fdd-98c2-fb19636ad003</span>
-<span class="s">  resourceVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">10307"</span>
-<span class="s">  selfLink</span><span class="pi">:</span> <span class="s">/apis/storage.k8s.io/v1/storageclasses/standard</span>
-<span class="s">  uid</span><span class="pi">:</span> <span class="s">7bb9919c-2ea7-4f1d-aedf-111b6c16e68c</span>
+<span class="na">  annotations</span><span class="pi">:</span>
+<span class="na">    storageclass.kubernetes.io/is-default-class</span><span class="pi">:</span> <span class="s2">"</span><span class="s">true"</span>
+<span class="na">  creationTimestamp</span><span class="pi">:</span> <span class="s">2020-03-24T18:17:11Z</span>
+<span class="na">  name</span><span class="pi">:</span> <span class="s">standard</span>
+<span class="na">  ownerReferences</span><span class="pi">:</span>
+<span class="na">  - apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
+<span class="na">    kind</span><span class="pi">:</span> <span class="s">clusteroperator</span>
+<span class="na">    name</span><span class="pi">:</span> <span class="s">storage</span>
+<span class="na">    uid</span><span class="pi">:</span> <span class="s">82643882-1e38-4fdd-98c2-fb19636ad003</span>
+<span class="na">  resourceVersion</span><span class="pi">:</span> <span class="s2">"</span><span class="s">10307"</span>
+<span class="na">  selfLink</span><span class="pi">:</span> <span class="s">/apis/storage.k8s.io/v1/storageclasses/standard</span>
+<span class="na">  uid</span><span class="pi">:</span> <span class="s">7bb9919c-2ea7-4f1d-aedf-111b6c16e68c</span>
 <span class="na">provisioner</span><span class="pi">:</span> <span class="s">kubernetes.io/cinder</span>
 <span class="na">reclaimPolicy</span><span class="pi">:</span> <span class="s">Delete</span>
 <span class="na">volumeBindingMode</span><span class="pi">:</span> <span class="s">WaitForFirstConsumer‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
@@ -491,10 +491,10 @@ FATAL Bootstrap failed to complete: waiting for Kubernetes API: context deadline
 <span class="na">spec</span><span class="pi">:</span>
  <span class="na">accessModes</span><span class="pi">:</span>
 <span class="s">  - ReadWriteOnce</span>
- <span class="s">resources</span><span class="pi">:</span>
-<span class="s">   requests</span><span class="pi">:</span>
-<span class="s">     storage</span><span class="pi">:</span> <span class="s">10Gi</span>
- <span class="s">storageClassName</span><span class="pi">:</span> <span class="s">standard‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
+ <span class="s">resources</span><span class="err">:</span>
+<span class="na">   requests</span><span class="pi">:</span>
+<span class="na">     storage</span><span class="pi">:</span> <span class="s">10Gi</span>
+ <span class="s">storageClassName</span><span class="err">:</span> <span class="s">standard‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍‍</span>
 </code></pre></div></div>
 
 <p>As the <code class="language-plaintext highlighter-rouge">volumeBindingMode</code> is set to <code class="language-plaintext highlighter-rouge">WaitForFirstConsumer</code>, we had to actually attach the PV to a deployment in order to the Cinder volume to be created. For that, we used OpenShift GUI:
@@ -668,6 +668,55 @@ files/docker/registry/v2/repositories/openshift/python/_manifests/revisions/sha2
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/lf-nephio/" rel="permalink">Introduction to Nephio (LSF179)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
+      
+      
+      
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/industriosa-ocaml/" rel="permalink">Descubre el poder de la programación funcional a través de OCaml
 </a>
       
@@ -796,55 +845,6 @@ files/docker/registry/v2/repositories/openshift/python/_manifests/revisions/sha2
     <p class="archive__item-excerpt" itemprop="description">
 
 
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-      
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/newyear24/" rel="permalink">Happy new year!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 
 </p>
   </article>

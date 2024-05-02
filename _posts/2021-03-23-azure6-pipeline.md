@@ -1,6 +1,6 @@
 ---
 title:  "Azure series VI: Azure Pipeline"
-last_modified_at: 2021-03-23T16:00:58-04:00
+last_modified_at: 2021-03-23
 tags:
   - azure
   - classes

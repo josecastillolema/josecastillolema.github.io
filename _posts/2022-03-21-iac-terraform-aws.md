@@ -1,6 +1,6 @@
 ---
 title:  "IaC series: Terraform na AWS"
-last_modified_at: 2022-03-21T16:00:58-04:00
+last_modified_at: 2022-03-21
 tags:
   - aws
   - classes

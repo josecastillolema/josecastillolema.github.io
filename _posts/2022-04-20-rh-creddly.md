@@ -1,6 +1,6 @@
 ---
 title:  "Digital credentials for Red Hat Certified Professionals"
-last_modified_at: 2022-05-02T16:00:58-04:00
+last_modified_at: 2022-05-02
 tags:
   - ansible
   - cert

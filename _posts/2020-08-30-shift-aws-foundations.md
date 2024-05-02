@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Foundations"
-last_modified_at: 2020-08-30T16:00:58-04:00
+last_modified_at: 2020-08-30
 tags:
   - aws
   - cert

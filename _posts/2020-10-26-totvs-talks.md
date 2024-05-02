@@ -1,6 +1,6 @@
 ---
 title:  "TOTVS TALKS #09 - A computação em nuvem no Brasil"
-last_modified_at: 2020-10-26T16:00:58-04:00
+last_modified_at: 2020-10-26
 tags:
   - events
   - podcast

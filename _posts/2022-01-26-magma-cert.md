@@ -1,6 +1,6 @@
 ---
 title:  "MT101x: Magma Technical Certification Exam"
-last_modified_at: 2022-01-26T16:00:58-04:00
+last_modified_at: 2022-01-26
 tags:
   - cert
   - en

@@ -1,6 +1,6 @@
 ---
 title:  "Locust CCN client"
-last_modified_at: 2019-03-10T16:00:58-04:00
+last_modified_at: 2019-03-10
 tags:
   - ccn
   - dev

@@ -1,6 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Developing - 4th edition"
-last_modified_at: 2022-04-12T16:00:58-04:00
+last_modified_at: 2022-04-12
 tags:
   - aws
   - cert

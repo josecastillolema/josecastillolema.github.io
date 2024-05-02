@@ -1,6 +1,6 @@
 ---
 title:  "Gremlin Certified Chaos Engineering Practitioner (GCCEP)"
-last_modified_at: 2021-11-28T16:00:58-04:00
+last_modified_at: 2021-11-28
 tags:
   - cert
   - en

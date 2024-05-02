@@ -1,6 +1,6 @@
 ---
 title:  "OpenStack series III: Nova - Compute Service"
-last_modified_at: 2018-03-22T16:00:58-04:00
+last_modified_at: 2018-03-22
 tags:
   - classes
   - fiap

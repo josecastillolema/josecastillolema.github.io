@@ -1,6 +1,6 @@
 ---
 title:  "Huawei Routing & Switching vs Datacom"
-last_modified_at: 2022-03-18T16:00:58-04:00
+last_modified_at: 2022-03-18
 tags:
   - cert
   - classes

@@ -1,6 +1,6 @@
 ---
 title:  "Exames de Certificação AWS com desconto"
-last_modified_at: 2022-04-12T17:00:58-04:00
+last_modified_at: 2022-04-12
 tags:
   - aws
   - cert

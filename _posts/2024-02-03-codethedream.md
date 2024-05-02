@@ -1,6 +1,6 @@
 ---
 title:  "Code the Dream Skill-IT workshops"
-last_modified_at: 2024-02-03T16:00:58-04:00
+last_modified_at: 2024-02-03
 tags:
   - classes
   - en

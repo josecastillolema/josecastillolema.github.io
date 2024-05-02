@@ -40,7 +40,7 @@
 
 
 
-  <meta property="article:modified_time" content="2018-12-16T14:00:58-06:00">
+  <meta property="article:modified_time" content="2018-12-16T00:00:00-06:00">
 
 
 
@@ -312,7 +312,7 @@
     <meta itemprop="headline" content="Converting ETSI NFV templates into TOSCA profile">
     <meta itemprop="description" content="">
     <meta itemprop="datePublished" content="2018-12-16T00:00:00-06:00">
-    <meta itemprop="dateModified" content="2018-12-16T14:00:58-06:00">
+    <meta itemprop="dateModified" content="2018-12-16T00:00:00-06:00">
 
     <div class="page__inner-wrap">
       
@@ -389,15 +389,15 @@ Options:
   <span class="na">inputs</span><span class="pi">:</span>
    <span class="na">ssh-hostname</span><span class="pi">:</span>
      <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-      <span class="s">default</span><span class="pi">:</span> <span class="s">&lt;rw_mgmt_ip&gt;</span>
+      <span class="s">default</span><span class="err">:</span> <span class="s">&lt;rw_mgmt_ip&gt;</span>
 
    <span class="na">ssh-username</span><span class="pi">:</span>
      <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-      <span class="s">default</span><span class="pi">:</span> <span class="s">ubuntu</span>
+      <span class="s">default</span><span class="err">:</span> <span class="s">ubuntu</span>
 
    <span class="na">ssh-password</span><span class="pi">:</span>
      <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
-      <span class="s">default</span><span class="pi">:</span> <span class="s">5ginfire</span>
+      <span class="s">default</span><span class="err">:</span> <span class="s">5ginfire</span>
 
    <span class="na">ssh-private-key</span><span class="pi">:</span>
      <span class="na">type</span><span class="pi">:</span> <span class="s">string</span>
@@ -425,8 +425,8 @@ Options:
             <span class="na">template</span><span class="pi">:</span> <span class="pi">{</span><span class="nv">get_file</span><span class="pi">:</span> <span class="nv">transcoder_cloud_init.cfg</span><span class="pi">}</span>
 
     <span class="s">CP0</span>
-      <span class="s">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.CP.Tacker</span>
-      <span class="s">properties</span><span class="pi">:</span>
+      <span class="s">type</span><span class="err">:</span> <span class="s">tosca.nodes.nfv.CP.Tacker</span>
+      <span class="s">properties</span><span class="err">:</span>
         <span class="na">management</span><span class="pi">:</span> <span class="no">false</span>
         <span class="na">order</span><span class="pi">:</span> <span class="m">0</span>
         <span class="na">anti_spoofing_protection</span><span class="pi">:</span> <span class="no">false</span>
@@ -436,8 +436,8 @@ Options:
         <span class="pi">-</span> <span class="na">virtualBinding</span><span class="pi">:</span>
             <span class="na">node</span><span class="pi">:</span> <span class="s">VDU1</span>
     <span class="s">CP1</span>
-      <span class="s">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.CP.Tacker</span>
-      <span class="s">properties</span><span class="pi">:</span>
+      <span class="s">type</span><span class="err">:</span> <span class="s">tosca.nodes.nfv.CP.Tacker</span>
+      <span class="s">properties</span><span class="err">:</span>
         <span class="na">management</span><span class="pi">:</span> <span class="no">false</span>
         <span class="na">order</span><span class="pi">:</span> <span class="m">1</span>
         <span class="na">anti_spoofing_protection</span><span class="pi">:</span> <span class="no">false</span>
@@ -448,14 +448,14 @@ Options:
             <span class="na">node</span><span class="pi">:</span> <span class="s">VDU1</span>
 
     <span class="s">VL0</span>
-      <span class="s">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VL</span>
-      <span class="s">properties</span><span class="pi">:</span>
+      <span class="s">type</span><span class="err">:</span> <span class="s">tosca.nodes.nfv.VL</span>
+      <span class="s">properties</span><span class="err">:</span>
         <span class="na">network_name</span><span class="pi">:</span> <span class="s">eth0</span>
         <span class="na">vendor</span><span class="pi">:</span> <span class="s">5GinFIRE</span>
 
     <span class="s">VL1</span>
-      <span class="s">type</span><span class="pi">:</span> <span class="s">tosca.nodes.nfv.VL</span>
-      <span class="s">properties</span><span class="pi">:</span>
+      <span class="s">type</span><span class="err">:</span> <span class="s">tosca.nodes.nfv.VL</span>
+      <span class="s">properties</span><span class="err">:</span>
         <span class="na">network_name</span><span class="pi">:</span> <span class="s">eth1</span>
         <span class="na">vendor</span><span class="pi">:</span> <span class="s">5GinFIRE</span>
 </code></pre></div></div>
@@ -546,6 +546,55 @@ Options:
   <div class="grid__wrapper">
     
     
+    
+      
+      
+      
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/lf-nephio/" rel="permalink">Introduction to Nephio (LSF179)
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
     
       
       
@@ -692,55 +741,6 @@ Options:
     <p class="archive__item-excerpt" itemprop="description">
 
 
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-      
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/newyear24/" rel="permalink">Happy new year!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
 
 </p>
   </article>
