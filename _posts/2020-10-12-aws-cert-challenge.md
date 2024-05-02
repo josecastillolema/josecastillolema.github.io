@@ -6,6 +6,7 @@ tags:
   - cert
   - pt
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2020-10-12-aws-cert-challenge.jpg)](https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/)

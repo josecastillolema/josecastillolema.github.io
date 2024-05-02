@@ -6,6 +6,7 @@ tags:
   - podcast
   - pt
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2020-10-26-totvs-talks/0.jpeg)](https://bandnewsfm.band.uol.com.br/totvs-talks/)

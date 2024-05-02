@@ -7,6 +7,7 @@ tags:
   - fiap
   - pt
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-06-13-women-cloud.jpeg)](https://aws-mulheres-em-cloud-2022.splashthat.com/)

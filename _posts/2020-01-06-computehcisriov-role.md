@@ -8,6 +8,7 @@ tags:
   - openstack
   - redhat
 toc: false
+toc_sticky: true
 ---
 
 

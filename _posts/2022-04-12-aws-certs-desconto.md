@@ -6,6 +6,7 @@ tags:
   - cert
   - pt
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-04-12-aws-certs-desconto/1.png)](https://pages.awscloud.com/LATAM-launch-STR-aws-certification-disc-br-2022-interest.html)

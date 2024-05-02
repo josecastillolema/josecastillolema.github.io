@@ -6,6 +6,7 @@ tags:
   - cert
   - en
 toc: false
+toc_sticky: true
 ---
 
 ## What is an AWS Learning Badge?

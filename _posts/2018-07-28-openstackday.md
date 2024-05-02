@@ -7,6 +7,7 @@ tags:
   - pt
   - youtube
 toc: false
+toc_sticky: true
 ---
 
 IPv6 no OpenStack

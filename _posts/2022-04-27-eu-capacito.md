@@ -7,6 +7,7 @@ tags:
   - fiap
   - pt
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-04-27-eu-capacito.png)](https://www.institutoitmidia.com.br/eu-capacito/)

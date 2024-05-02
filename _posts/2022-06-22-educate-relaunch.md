@@ -6,6 +6,7 @@ tags:
   - cert
   - en
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2022-06-22-educate-relaunch.png)](https://aws.amazon.com/education/awseducate/)

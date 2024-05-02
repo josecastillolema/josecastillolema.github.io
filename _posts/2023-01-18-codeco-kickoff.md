@@ -7,6 +7,7 @@ tags:
   - redhat
   - research
 toc: false
+toc_sticky: true
 ---
 
 [![](/assets/images/posts/2023-01-18-codeco-kickoff/1.png)](https://he-codeco.eu/)
