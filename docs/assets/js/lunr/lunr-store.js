@@ -1337,6 +1337,12 @@ var store = [{
         "url": "/iffe-mbd/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
+        "title": "Red Hat Summit 2023",
+        "excerpt":"   Red Hat Summit and AnsibleFest are just a few days away and we know you won’t want to miss out on any of the activities, sessions or events we have planned.     ","categories": [],
+        "tags": ["ansible","en","events","openshift","redhat"],
+        "url": "/rh-summit23/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
         "title": "DevConf.CZ 2023 - Writing a K8s Operator for Knative Functions",
         "excerpt":"About DevConf.CZ is an annual, free, Red Hat sponsored community conference for developers, admins, DevOps engineers, testers, documentation writers and other contributors to open source technologies. At DevConf.CZ, FLOSS communities sync, share, and hack on upstream projects together. DevConf.cz Mini is a bi-annual, highly focused, local, in-person version of DevConf.cz....","categories": [],
         "tags": ["dev","en","events","openshift","redhat","research"],
@@ -1419,5 +1425,11 @@ var store = [{
         "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between. Earn certificates and badges Free Introduction to Nephio (LSF179) Learners will understand the scope, goals and benefits of Nephio’s new approach to automation....","categories": [],
         "tags": ["cert","en","iac","networks","nfv","openshift","redhat","sdn"],
         "url": "/lf-nephio/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Red Hat Summit 2024",
+        "excerpt":"   Red Hat Summit and AnsibleFest 2024 is just a few days away and we know you won’t want to miss out on any of the activities, sessions or events we have planned.     ","categories": [],
+        "tags": ["ansible","en","events","openshift","redhat"],
+        "url": "/rh-summit24/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

@@ -335,7 +335,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          14 minute read
+          15 minute read
         
       </span>
     
@@ -350,7 +350,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install">Local install</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install---easy">Local install - easy</a></li><li><a href="#local-install---custom-version">Local install - custom version</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
             </nav>
           </aside>
         
@@ -531,8 +531,17 @@ go version go1.21.3 linux/amd64
 
 <h3 id="python">Python</h3>
 
-<h4 id="local-install">Local install</h4>
-<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment.</p>
+<h4 id="local-install---easy">Local install - easy</h4>
+<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment, just copying the preinstalled <code class="language-plaintext highlighter-rouge">python</code> package.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp /usr/bin/python ~/bin
+$ ln -s ~/bin/python ~/bin/python3
+$ python -m ensurepip --upgrade
+$ ln -s ~/.local/bin/pip3 ~/.local/bin/pip
+$ pip install ipython readline
+</code></pre></div></div>
+
+<h4 id="local-install---custom-version">Local install - custom version</h4>
+<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment, compiling an specific version.</p>
 
 <p>From a toolbx container with proper development tools (and readline and sqlite dev dependencies), i.e.: <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/40/Containerfile">this one</a> download and compile Python:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
@@ -560,7 +569,7 @@ go version go1.21.3 linux/amd64
 
 <h3 id="ansible">Ansible</h3>
 
-<p>Python local install is a pre-requisite.</p>
+<p>Python is a pre-requisite.</p>
 
 <p>Local ansible installation:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m pip install --user ansible ansible-lint
@@ -654,6 +663,55 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
   <div class="grid__wrapper">
     
     
+    
+      
+      
+      
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/rh-summit24/" rel="permalink">Red Hat Summit 2024
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
     
       
       
@@ -771,57 +829,6 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/codethedream/" rel="permalink">Code the Dream Skill-IT workshops
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-      
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/org-freedesktop-sdk-ext-ocaml/" rel="permalink">Flatpak SDK Extension for OCaml
 </a>
       
     </h2>

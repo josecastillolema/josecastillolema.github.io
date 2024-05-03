@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-05-02T04:45:21-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Introduction to Nephio (LSF179)</title><link href="https://josecastillolema.github.io/lf-nephio/" rel="alternate" type="text/html" title="Introduction to Nephio (LSF179)" /><published>2024-05-02T00:00:00-05:00</published><updated>2024-05-02T00:00:00-05:00</updated><id>https://josecastillolema.github.io/lf-nephio</id><content type="html" xml:base="https://josecastillolema.github.io/lf-nephio/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-05-03T02:22:52-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Red Hat Summit 2024</title><link href="https://josecastillolema.github.io/rh-summit24/" rel="alternate" type="text/html" title="Red Hat Summit 2024" /><published>2024-05-03T00:00:00-05:00</published><updated>2024-05-03T00:00:00-05:00</updated><id>https://josecastillolema.github.io/rh-summit24</id><content type="html" xml:base="https://josecastillolema.github.io/rh-summit24/"><![CDATA[<p><a href="https://www.redhat.com/en/summit"><img src="/assets/images/posts/2024-05-03-rh-summit24.png" alt="" /></a></p>
+
+<p><a href="https://www.redhat.com/en/summit">Red Hat Summit</a> and AnsibleFest 2024 is just a few days away and we know you won’t want to miss out on any of the activities, sessions or events we have planned.</p>
+
+<p><img src="/assets/images/posts/2022-04-25-rh-summit22/2.png" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="ansible" /><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Introduction to Nephio (LSF179)</title><link href="https://josecastillolema.github.io/lf-nephio/" rel="alternate" type="text/html" title="Introduction to Nephio (LSF179)" /><published>2024-05-02T00:00:00-05:00</published><updated>2024-05-02T00:00:00-05:00</updated><id>https://josecastillolema.github.io/lf-nephio</id><content type="html" xml:base="https://josecastillolema.github.io/lf-nephio/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
 
 <p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between.</p>
 
@@ -858,8 +862,17 @@ go version go1.21.3 linux/amd64
 
 <h3 id="python">Python</h3>
 
-<h4 id="local-install">Local install</h4>
-<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment.</p>
+<h4 id="local-install---easy">Local install - easy</h4>
+<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment, just copying the preinstalled <code class="language-plaintext highlighter-rouge">python</code> package.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp /usr/bin/python ~/bin
+$ ln -s ~/bin/python ~/bin/python3
+$ python -m ensurepip --upgrade
+$ ln -s ~/.local/bin/pip3 ~/.local/bin/pip
+$ pip install ipython readline
+</code></pre></div></div>
+
+<h4 id="local-install---custom-version">Local install - custom version</h4>
+<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment, compiling an specific version.</p>
 
 <p>From a toolbx container with proper development tools (and readline and sqlite dev dependencies), i.e.: <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/40/Containerfile">this one</a> download and compile Python:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
@@ -887,7 +900,7 @@ go version go1.21.3 linux/amd64
 
 <h3 id="ansible">Ansible</h3>
 
-<p>Python local install is a pre-requisite.</p>
+<p>Python is a pre-requisite.</p>
 
 <p>Local ansible installation:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python -m pip install --user ansible ansible-lint
@@ -900,151 +913,4 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
 
 <p>Installed the Ansible extension by Red Hat in VSCode and <a href="https://developers.redhat.com/articles/2023/08/22/enhance-ansible-development-experience-lightspeed">enabled Lightspeed</a>.</p>
 
-<p>When opening VSCode it should automatically detect the local Ansible installation.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.]]></summary></entry><entry><title type="html">Kubemark on OpenShift</title><link href="https://josecastillolema.github.io/kubemark-ocp/" rel="alternate" type="text/html" title="Kubemark on OpenShift" /><published>2023-09-19T00:00:00-05:00</published><updated>2023-09-19T00:00:00-05:00</updated><id>https://josecastillolema.github.io/kubemark-ocp</id><content type="html" xml:base="https://josecastillolema.github.io/kubemark-ocp/"><![CDATA[<p><a href="https://github.com/kubernetes/kubernetes/tree/master/cmd/kubemark">Kubemark</a> is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is that the nodes do not actually run containers or attach storage, but they do behave like they did, with updates to etcd and all the trimmings. At the same time, <strong>hollow nodes are extremely light (&lt;30 MiB)</strong>.</p>
-
-<p>The primary use case of Kubemark is scalability testing, as simulated clusters can be much bigger than the real ones. The objective is to expose problems with the master components (API server, controller manager or scheduler) that appear only on bigger clusters (e.g. small memory leaks).</p>
-
-<h2 id="hands-to-work">Hands to work</h2>
-
-<p>We won’t be using the <a href="https://github.com/kubernetes-sigs/cluster-api-provider-kubemark/">Cluster API Kubemark Provider</a> for this demo, and instead we will be using directly Kubemark itself.</p>
-
-<p>Let’s assume we have a <strong>working OpenShift cluster</strong> available. We will be leveraging a <a href="https://developers.redhat.com/products/openshift-local/overview">Red Hat OpenShift Local instance</a> (formerly Red Hat CodeReady Containers) for this demo:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc version
-Client Version: 4.13.6
-Kustomize Version: v4.5.7
-Server Version: 4.13.6
-Kubernetes Version: v1.26.6+73ac561
-
-❯ oc get node
-NAME                 STATUS   ROLES                         AGE     VERSION
-crc-2zx29-master-0   Ready    control-plane,master,worker   54d     v1.26.6+73ac561
-</code></pre></div></div>
-
-<p>Let’s create a new <strong>project</strong>, <strong>secret</strong> and corresponding <strong>permissions</strong>:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc new-project kubemark
-Now using project "kubemark" on server "https://api.crc.testing:6443".
-
-❯ oc create secret generic kubeconfig --from-file=kubeconfig=$KUBECONFIG
-secret/kubeconfig created
-
-❯ oc adm policy add-scc-to-user privileged -z default
-clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "default"
-</code></pre></div></div>
-
-<p>Let’s create the <strong>Kubemark pod</strong> (which in turn will automatically instantiate a new node):</p>
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">❯ cat &lt;&lt;EOF | oc apply -f -</span>
-<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
-<span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
-<span class="na">metadata</span><span class="pi">:</span>
-  <span class="na">labels</span><span class="pi">:</span>
-    <span class="na">app</span><span class="pi">:</span> <span class="s">hollow-node</span>
-  <span class="na">name</span><span class="pi">:</span> <span class="s">kubemark-node</span>
-  <span class="na">namespace</span><span class="pi">:</span> <span class="s">kubemark</span>
-<span class="na">spec</span><span class="pi">:</span>
-  <span class="na">containers</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">args</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">--v=3</span>
-        <span class="pi">-</span> <span class="s">--morph=kubelet</span>
-        <span class="pi">-</span> <span class="s">--name=kubemark-node</span>
-        <span class="pi">-</span> <span class="s">--extended-resources=cpu=1,memory=4G</span>
-      <span class="na">command</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="s">/kubemark</span>
-      <span class="na">image</span><span class="pi">:</span> <span class="s">quay.io/cluster-api-provider-kubemark/kubemark:v1.26.7</span>
-      <span class="na">name</span><span class="pi">:</span> <span class="s">hollow-node</span>
-      <span class="na">securityContext</span><span class="pi">:</span>
-        <span class="na">privileged</span><span class="pi">:</span> <span class="no">true</span>
-      <span class="na">volumeMounts</span><span class="pi">:</span>
-        <span class="pi">-</span> <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/kubeconfig</span>
-          <span class="na">name</span><span class="pi">:</span> <span class="s">kubeconfig</span>
-        <span class="pi">-</span> <span class="na">mountPath</span><span class="pi">:</span> <span class="s">/run/containerd/containerd.sock</span>
-          <span class="na">name</span><span class="pi">:</span> <span class="s">containerd-sock</span>
-  <span class="na">volumes</span><span class="pi">:</span>
-    <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">kubeconfig</span>
-      <span class="na">secret</span><span class="pi">:</span>
-        <span class="na">defaultMode</span><span class="pi">:</span> <span class="m">420</span>
-        <span class="na">secretName</span><span class="pi">:</span> <span class="s">kubeconfig</span>
-    <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span>
-        <span class="na">path</span><span class="pi">:</span> <span class="s">/run/crio/crio.sock</span>
-        <span class="na">type</span><span class="pi">:</span> <span class="s">Socket</span>
-      <span class="na">name</span><span class="pi">:</span> <span class="s">containerd-sock</span>
-<span class="s">EOF</span>
-<span class="s">pod/kubemark-node created</span>
-</code></pre></div></div>
-
-<h2 id="validation">Validation</h2>
-
-<p>Let’s check the if new node was properly registered:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc get po
-NAME             READY   STATUS    RESTARTS   AGE
-kubemark-node    1/1     Running   0          5s
-
-❯ oc get node
-NAME                 STATUS   ROLES                         AGE     VERSION
-crc-2zx29-master-0   Ready    control-plane,master,worker   54d     v1.26.6+73ac561
-kubemark-node        Ready    &lt;none&gt;                        4s      v1.26.7
-</code></pre></div></div>
-
-<p>The cluster should be healthy:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc get co
-NAME                                       VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
-authentication                             4.13.6    True        False         False      12d
-cluster-api                                4.13.6    True        False         False      13d
-config-operator                            4.13.6    True        False         False      54d
-console                                    4.13.6    True        False         False      12d
-control-plane-machine-set                  4.13.6    True        False         False      54d
-dns                                        4.13.6    True        False         False      12d
-etcd                                       4.13.6    True        False         False      54d
-image-registry                             4.13.6    True        False         False      12d
-ingress                                    4.13.6    True        False         False      54d
-kube-apiserver                             4.13.6    True        False         False      54d
-kube-controller-manager                    4.13.6    True        False         False      54d
-kube-scheduler                             4.13.6    True        False         False      54d
-kube-storage-version-migrator              4.13.6    True        False         False      12d
-machine-api                                4.13.6    True        False         False      54d
-machine-approver                           4.13.6    True        False         False      54d
-machine-config                             4.13.6    True        False         False      54d
-marketplace                                4.13.6    True        False         False      54d
-network                                    4.13.6    True        False         False      54d
-openshift-apiserver                        4.13.6    True        False         False      12d
-openshift-controller-manager               4.13.6    True        False         False      12d
-openshift-samples                          4.13.6    True        False         False      54d
-operator-lifecycle-manager                 4.13.6    True        False         False      54d
-operator-lifecycle-manager-catalog         4.13.6    True        False         False      54d
-operator-lifecycle-manager-packageserver   4.13.6    True        False         False      119m
-platform-operators-aggregated              4.13.6    True        False         False      119m
-service-ca                                 4.13.6    True        False         False      54d
-</code></pre></div></div>
-
-<p>And there should a few pods already “running” in the new hollow node:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc get pods -A --field-selector spec.nodeName=kubemark-node
-NAMESPACE                           NAME                                  READY   STATUS     RESTARTS   AGE
-hostpath-provisioner                csi-hostpathplugin-8p9j5              4/4     Running    0          17m
-openshift-dns                       dns-default-lt7g8                     2/2     Running    0          17m
-openshift-dns                       node-resolver-9plz7                   1/1     Running    0          17m
-openshift-image-registry            node-ca-x7hq7                         1/1     Running    0          17m
-openshift-ingress-canary            ingress-canary-l2mlx                  1/1     Running    0          17m
-openshift-machine-config-operator   machine-config-daemon-smq5z           2/2     Running    0          17m
-openshift-multus                    multus-7xp8p                          1/1     Running    0          17m
-openshift-multus                    multus-additional-cni-plugins-rv6j7   0/1     Init:0/6   0          17m
-openshift-multus                    network-metrics-daemon-zh2vz          2/2     Running    0          17m
-openshift-network-diagnostics       network-check-target-l85xq            1/1     Running    0          17m
-openshift-sdn                       sdn-rv9mb                             2/2     Running    0          17m
-
-</code></pre></div></div>
-
-<p>Let’s try to create some pods on the new hollow node:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc run test --image nginx --overrides='{"spec": { "nodeSelector": {"kubernetes.io/hostname": "kubemark-node"}}}'
-pod/test created
-
-❯ oc get po -o wide test
-NAME   READY   STATUS    RESTARTS   AGE   IP                NODE            NOMINATED NODE   READINESS GATES
-test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &lt;none&gt;           &lt;none&gt;
-</code></pre></div></div>
-
-<h2 id="scale-out">Scale out</h2>
-
-<p>Finally, bear in mind that in order to create new hollow nodes you will have to change two fields in the pod definition:</p>
-<ul>
-  <li>The pod name: <code class="language-plaintext highlighter-rouge">metadata.name</code></li>
-  <li>The name of the hollow node: <code class="language-plaintext highlighter-rouge">spec.containers.args.--name</code></li>
-</ul>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[Kubemark is a performance testing tool which allows users to run experiments on simulated clusters, by creating “hollow” Kubernetes nodes. What this means is that the nodes do not actually run containers or attach storage, but they do behave like they did, with updates to etcd and all the trimmings. At the same time, hollow nodes are extremely light (&lt;30 MiB).]]></summary></entry></feed>
+<p>When opening VSCode it should automatically detect the local Ansible installation.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.]]></summary></entry></feed>
