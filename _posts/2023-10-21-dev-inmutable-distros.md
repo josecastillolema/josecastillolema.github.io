@@ -174,8 +174,18 @@ Finally, open VSCode (it should automatically detect the local Golang installati
 
 ### Python
 
-#### Local install
-Install both `python` and `pip` in the local user environment.
+#### Local install - easy
+Install both `python` and `pip` in the local user environment, just copying the preinstalled `python` package.
+```
+$ cp /usr/bin/python ~/bin
+$ ln -s ~/bin/python ~/bin/python3
+$ python -m ensurepip --upgrade
+$ ln -s ~/.local/bin/pip3 ~/.local/bin/pip
+$ pip install ipython readline
+```
+
+#### Local install - custom version
+Install both `python` and `pip` in the local user environment, compiling an specific version.
 
 From a toolbx container with proper development tools (and readline and sqlite dev dependencies), i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/40/Containerfile) download and compile Python:
 ```
@@ -205,7 +215,7 @@ Then open the project in VSCode and choose the local virtual environment.
 
 ### Ansible
 
-Python local install is a pre-requisite.
+Python is a pre-requisite.
 
 Local ansible installation:
 ```
