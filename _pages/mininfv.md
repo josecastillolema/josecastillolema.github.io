@@ -1,6 +1,6 @@
 ---
 permalink: /mininfv/
-last_modified_at: 2020-07-10T16:00:58-04:00
+last_modified_at: 2020-07-10
 tags:
   - dev
   - en

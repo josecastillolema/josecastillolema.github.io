@@ -50,17 +50,7 @@
 
 
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    
-      "@type": "Person",
-      "name": null,
-      "url": "https://josecastillolema.github.io/",
-      "sameAs": ["https://www.linkedin.com/in/jose-castillo-lema","https://github.com/josecastillolema","https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema","https://www.researchgate.net/profile/Jose_Castillo-Lema","https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ","http://lattes.cnpq.br/7955703023492257","https://www.opennetworking.org/ambassadors/jose-castillo-lema/"]
-    
-  }
-</script>
+
 
 
   <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
@@ -123,15 +113,35 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/series/">series</a>
+              <a
+                href="/series/"
+                
+                
+              >series</a>
             </li><li class="masthead__menu-item">
-              <a href="/classes/">classes</a>
+              <a
+                href="/classes/"
+                
+                
+              >classes</a>
             </li><li class="masthead__menu-item">
-              <a href="/mininfv/">mini-nfv</a>
+              <a
+                href="/talks/"
+                
+                
+              >talks</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/">tags</a>
+              <a
+                href="/tags/"
+                
+                
+              >tags</a>
             </li><li class="masthead__menu-item">
-              <a href="/about/">about</a>
+              <a
+                href="/about/"
+                
+                
+              >about</a>
             </li></ul>
         
         <button class="search__toggle" type="button">
@@ -308,7 +318,7 @@
 
 
 
-  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Development workflows on inmutable distros: rootless setup">
     <meta itemprop="description" content="  Continuation of Samsai notes on Toolbox-based Emacs Flatpak workflow.">
     <meta itemprop="datePublished" content="2023-10-21T00:00:00-05:00">
@@ -317,8 +327,8 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="https://josecastillolema.github.io/dev-inmutable-distros/" class="u-url" itemprop="url">Development workflows on inmutable distros: rootless setup
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://josecastillolema.github.io/dev-inmutable-distros/" itemprop="url">Development workflows on inmutable distros: rootless setup
 </a>
           </h1>
           
@@ -345,12 +355,12 @@
         </header>
       
 
-      <section class="page__content e-content" itemprop="text">
+      <section class="page__content" itemprop="text">
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install---easy">Local install - easy</a></li><li><a href="#local-install---custom-version">Local install - custom version</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install---custom-version">Local install - custom version</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
             </nav>
           </aside>
         
@@ -531,15 +541,6 @@ go version go1.21.3 linux/amd64
 
 <h3 id="python">Python</h3>
 
-<h4 id="local-install---easy">Local install - easy</h4>
-<p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment, just copying the preinstalled <code class="language-plaintext highlighter-rouge">python</code> package.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp /usr/bin/python ~/bin
-$ ln -s ~/bin/python ~/bin/python3
-$ python -m ensurepip --upgrade
-$ ln -s ~/.local/bin/pip3 ~/.local/bin/pip
-$ pip install ipython readline
-</code></pre></div></div>
-
 <h4 id="local-install---custom-version">Local install - custom version</h4>
 <p>Install both <code class="language-plaintext highlighter-rouge">python</code> and <code class="language-plaintext highlighter-rouge">pip</code> in the local user environment, compiling an specific version.</p>
 
@@ -547,10 +548,16 @@ $ pip install ipython readline
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
 ⬢ $ tar -xf Python-3.?.?.tar.xz
 ⬢ $ cd Python-3.?.?.tar.xz
-⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions
+⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions --with-ensurepip=install
 ⬢ $ make install
 ⬢ $ ln -s ~/bin/python3 ~/bin/python
-⬢ $ pip install ipython readline
+</code></pre></div></div>
+
+<p>And then install <code class="language-plaintext highlighter-rouge">pip</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl -O https://bootstrap.pypa.io/get-pip.py
+$ chmod +x get-pip.py
+$ ./get-pip.py
+$ pip install ipython jinjanator
 </code></pre></div></div>
 
 <p>Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment <code class="language-plaintext highlighter-rouge">~/bin/python</code>. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.</p>
@@ -657,16 +664,12 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
 
   
   
-    <div class="page__related">
+    
+<div class="page__related">
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
     
-    
-    
-      
-      
-      
       
       
 
@@ -715,9 +718,6 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
     
       
       
-      
-      
-      
 
 
 
@@ -762,9 +762,6 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
 </div>
 
     
-      
-      
-      
       
       
 
@@ -813,9 +810,6 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
     
       
       
-      
-      
-      
 
 
 
@@ -862,9 +856,6 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
 </div>
 
     
-      
-      
-      
   </div>
 </div>
 

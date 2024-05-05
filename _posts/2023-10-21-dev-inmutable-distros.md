@@ -174,16 +174,6 @@ Finally, open VSCode (it should automatically detect the local Golang installati
 
 ### Python
 
-#### Local install - easy
-Install both `python` and `pip` in the local user environment, just copying the preinstalled `python` package.
-```
-$ cp /usr/bin/python ~/bin
-$ ln -s ~/bin/python ~/bin/python3
-$ python -m ensurepip --upgrade
-$ ln -s ~/.local/bin/pip3 ~/.local/bin/pip
-$ pip install ipython readline
-```
-
 #### Local install - custom version
 Install both `python` and `pip` in the local user environment, compiling an specific version.
 
@@ -192,10 +182,17 @@ From a toolbx container with proper development tools (and readline and sqlite d
 ⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
 ⬢ $ tar -xf Python-3.?.?.tar.xz
 ⬢ $ cd Python-3.?.?.tar.xz
-⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions
+⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions --with-ensurepip=install
 ⬢ $ make install
 ⬢ $ ln -s ~/bin/python3 ~/bin/python
-⬢ $ pip install ipython readline
+```
+
+And then install `pip`:
+```
+$ curl -O https://bootstrap.pypa.io/get-pip.py
+$ chmod +x get-pip.py
+$ ./get-pip.py
+$ pip install ipython jinjanator
 ```
 
 Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment `~/bin/python`. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.

@@ -1,0 +1,569 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>GitOps - GitOps</title>
+<meta name="description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+  <meta name="author" content="Jose Castillo Lema">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="GitOps">
+<meta property="og:title" content="GitOps">
+<meta property="og:url" content="https://josecastillolema.github.io/talks/">
+
+
+  <meta property="og:description" content="Networks, SDN, NFVi, OpenStack, K8s/OpenShift.">
+
+
+
+  <meta property="og:image" content="https://josecastillolema.github.io/assets/images/favicon_io/android-chrome-512x512.png">
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="https://josecastillolema.github.io/talks/">
+
+
+
+
+
+
+
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="GitOps Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" type="image/png" href="/assets/images/favicon.ico">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/favicon_io/android-chrome-192x192.png" alt="GitOps"></a>
+        
+        <a class="site-title" href="/">
+          GitOps
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/series/"
+                
+                
+              >series</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/classes/"
+                
+                
+              >classes</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/talks/"
+                
+                
+              >talks</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/tags/"
+                
+                
+              >tags</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >about</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <script lang="javascript" src="/assets/js/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+      backgroundColor: '#6F777D',
+      textColor: '#fff'
+    })</script>
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="https://josecastillolema.github.io/">
+        <img src="/assets/images/me.jpg" alt="Jose Castillo Lema" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="https://josecastillolema.github.io/" itemprop="url">Jose Castillo Lema</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Software Engineer @ <strong>RedHat</strong></p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Santiago, Spain</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">LinkedIn</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youracclaim.com/users/jose-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-angle-double-up" aria-hidden="true"></i><span class="label">Acclaim</span></a></li>
+          
+        
+          
+            <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
+          
+        
+          
+            <li><a href="https://www.researchgate.net/profile/Jose_Castillo-Lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-researchgate" aria-hidden="true"></i><span class="label">ResearchGate</span></a></li>
+          
+        
+          
+            <li><a href="https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-google" aria-hidden="true"></i><span class="label">GoogleScholar</span></a></li>
+          
+        
+          
+            <li><a href="https://www.opennetworking.org/ambassadors/jose-castillo-lema/" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-battle-net" aria-hidden="true"></i><span class="label">ONF</span></a></li>
+          
+        
+          
+            <li><a href="https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-youtube-square" aria-hidden="true"></i><span class="label">YouTube</span></a></li>
+          
+        
+          
+            <li><a href="https://josecastillolema.github.io/feed.xml" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i><span class="label">RSS</span></a></li>
+          
+        
+          
+            <li><a href="mailto:josecastillolema@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    
+    
+    <meta itemprop="dateModified" content="2024-05-05T00:00:00-05:00">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#talks">talks</a><ul><li><a href="#2024">2024</a></li><li><a href="#2023">2023</a></li><li><a href="#2022">2022</a></li><li><a href="#2021">2021</a></li><li><a href="#2020">2020</a></li><li><a href="#2018">2018</a></li><li><a href="#2017">2017</a></li><li><a href="#2013">2013</a></li><li><a href="#2012">2012</a></li></ul></li></ul></li></ul></li></ul></li></ul></li></ul>
+            </nav>
+          </aside>
+        
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=talks&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=talks&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="125" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=talks&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
+<h1 id="talks">talks</h1>
+
+<p>Talks at conferences, meetups, hackathons, etc., some using <a href="https://marp.app/">Marp</a>.</p>
+
+<h6 id="2024">2024</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">es</code> <a href="https://josecastillolema.github.io/industriosa-ocaml/">Descubre el poder de la programación funcional a través de OCaml</a> - A Industriosa - Vigo</li>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/codethedream/">Docker hands-on</a> - Code the Dream Skill-IT workshops</li>
+</ul>
+
+<h6 id="2023">2023</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/netsoft23/">Network Softwarization in the Era of Complexity</a> - Distinguished Expert Panel at NetSoft’23 - Madrid</li>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/devconf23/">Writing a Kubernetes Operator for Knative Functions</a> - DevConf.cz - Brno</li>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/imdea/">Telecom cloud-native development: an industry point of view</a> - IMDEA Networks Institute - Madrid</li>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/perfcon23/">(Control-plane) testing at scale with Cluster API and Kubemark</a> - PerfConf spring ‘23 - Brno</li>
+</ul>
+
+<h6 id="2022">2022</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/perfcon22/">MetalLB perf &amp; scale testing</a> - PerfConf spring ‘22</li>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/cati22/">Nuvens híbridas e soluções Red Hat</a> - Congresso acadêmico de tecnologia da informação II CATI - São Paulo</li>
+</ul>
+
+<h6 id="2021">2021</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/seminf21/">5G, 6G e a verifição de possíveis problemas relativos a implementações futuras</a> - II Semana Acadêmica de informática SEMINF ‘21 - Palmas</li>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/perfcon21/">OVN Intelligent Container Network Interface 2 perf &amp; scale testing</a> - PerfConf fall ‘21</li>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/fiap-meetup/">Kubernetes &amp; Service Mesh</a> - FIAP Meetup #9 - São Paulo</li>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/onf-webinar-21/">Working with ONF to transform mobile and broadband networks in LATAM</a> - ONF webinar</li>
+  <li><code class="language-plaintext highlighter-rouge">es</code> <a href="https://josecastillolema.github.io/onf-webinar-21/">Working with ONF to transform mobile and broadband networks in LATAM</a> - ONF webinar</li>
+</ul>
+
+<h6 id="2020">2020</h6>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/onf-webinar/">Working with ONF to transform mobile and broadband networks in LATAM</a> - ONF webinar</li>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/totvs-talks/">A computação em nuvem no Brasil</a> - TOTVS talks #09</li>
+</ul>
+
+<h6 id="2018">2018</h6>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/openstackday/">IPv6 no OpenStack</a> - OpenStack day SP ‘18 - São Paulo</li>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/mandic-webinar/">IPv6 no OpenStack</a> - Webinar Mandic - São Paulo</li>
+</ul>
+
+<h6 id="2017">2017</h6>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/futurecom17/">Tour IoT</a> - Futurecom ‘17 - São Paulo</li>
+  <li><code class="language-plaintext highlighter-rouge">pt</code> <a href="https://josecastillolema.github.io/apicon/">IoT hands-on lab</a> - API Connect Conference APICON ‘17 - São Paulo</li>
+</ul>
+
+<h6 id="2013">2013</h6>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/iscc13/">Over-provisioning centric network resource control in Future Internet systems</a> - IEEE Symposium on Computers and Communications ‘13 - Split</li>
+</ul>
+
+<h6 id="2012">2012</h6>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">en</code> <a href="https://josecastillolema.github.io/icccn12/">Context-driven resource over-provisioning approach for rich networking</a> - International Conference on Computer Communication Networks ‘12 - Munich</li>
+</ul>
+
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#cert" class="page__taxonomy-item p-category" rel="tag">cert</a><span class="sep">, </span>
+    
+      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
+    
+      <a href="/tags/#dev" class="page__taxonomy-item p-category" rel="tag">dev</a><span class="sep">, </span>
+    
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a><span class="sep">, </span>
+    
+      <a href="/tags/#es" class="page__taxonomy-item p-category" rel="tag">es</a><span class="sep">, </span>
+    
+      <a href="/tags/#events" class="page__taxonomy-item p-category" rel="tag">events</a><span class="sep">, </span>
+    
+      <a href="/tags/#iac" class="page__taxonomy-item p-category" rel="tag">iac</a><span class="sep">, </span>
+    
+      <a href="/tags/#iot" class="page__taxonomy-item p-category" rel="tag">iot</a><span class="sep">, </span>
+    
+      <a href="/tags/#networks" class="page__taxonomy-item p-category" rel="tag">networks</a><span class="sep">, </span>
+    
+      <a href="/tags/#nfv" class="page__taxonomy-item p-category" rel="tag">nfv</a><span class="sep">, </span>
+    
+      <a href="/tags/#openshift" class="page__taxonomy-item p-category" rel="tag">openshift</a><span class="sep">, </span>
+    
+      <a href="/tags/#papers" class="page__taxonomy-item p-category" rel="tag">papers</a><span class="sep">, </span>
+    
+      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a><span class="sep">, </span>
+    
+      <a href="/tags/#redhat" class="page__taxonomy-item p-category" rel="tag">redhat</a><span class="sep">, </span>
+    
+      <a href="/tags/#sdn" class="page__taxonomy-item p-category" rel="tag">sdn</a><span class="sep">, </span>
+    
+      <a href="/tags/#webinar" class="page__taxonomy-item p-category" rel="tag">webinar</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-05-05">May 5, 2024</time></p>
+
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/josecastillolema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/jose-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+        
+      
+        
+          <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer"><i class="fab fa-stack-overflow" aria-hidden="true"></i> Stack Overflow</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-169326084-1']);
+  
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
