@@ -12,8 +12,10 @@ main:
     url: /series/  
   - title: "classes"
     url: /classes/
-  - title: "mini-nfv"
-    url: /mininfv/
+  - title: "talks"
+    url: /talks/
+  #- title: "mini-nfv"
+  #  url: /mininfv/
   #- title: "posts"
   #  url: /posts/
   #- title: "Categories"
