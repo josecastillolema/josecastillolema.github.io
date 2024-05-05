@@ -59,3 +59,6 @@ Sr Software Engineer na Luiza Labs. Trabalha com APIs, microservices e aplicativ
 
 Consultor de infraestrutura cloud na Red Hat, tem trabalhado como arquiteto de plataformas de infraestrutura de nuvem pública e privada, práticas DevOps e temas de automação. Atua em provedores de Cloud e fornecedores de software de infraestrutura e plataforma. É mestre e doutor em engenharia elétrica, nas áreas de redes e telecomunicações. Professor de cursos de MBA da FIAP desde 2016.
 
+## Slides
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/master/2021-fiap-meetup9/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>

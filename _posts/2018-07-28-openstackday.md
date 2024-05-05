@@ -10,7 +10,7 @@ toc: false
 toc_sticky: true
 ---
 
-IPv6 no OpenStack
+## IPv6 no OpenStack
 
 [![](/assets/images/posts/2018-07-28-openstackday.jpeg)](https://openstackbr.com.br/)
 
@@ -18,3 +18,5 @@ IPv6 no OpenStack
 
 ![YouTube Video Views](https://img.shields.io/youtube/views/z-hQnrt2_88?style=social)
 ![YouTube Video Likes](https://img.shields.io/youtube/likes/z-hQnrt2_88?style=social)
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/master/2018-ospday.sp/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
