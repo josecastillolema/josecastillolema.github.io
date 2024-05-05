@@ -144,7 +144,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "APICON 2017 - IoT HandsOn Lab",
-        "excerpt":"API Connect Conference 2017          ","categories": [],
+        "excerpt":"API Connect Conference 2017           Slides      ","categories": [],
         "tags": ["events","iot","pt"],
         "url": "/apicon/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -294,7 +294,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "OpenStack Day SP 2018",
-        "excerpt":"IPv6 no OpenStack           ","categories": [],
+        "excerpt":"IPv6 no OpenStack             ","categories": [],
         "tags": ["events","openstack","pt","youtube"],
         "url": "/openstackday/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1158,7 +1158,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "II CATI: Congresso acadêmico de tecnologia da informação",
-        "excerpt":"Nuvens híbridas e soluções Red Hat     ","categories": [],
+        "excerpt":"Nuvens híbridas e soluções Red Hat       ","categories": [],
         "tags": ["events","pt","webinar"],
         "url": "/cati22/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"

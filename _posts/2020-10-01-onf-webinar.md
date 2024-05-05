@@ -24,3 +24,5 @@ Join us to learn about the exciting organization, its open source projects and h
 This webinar will be delivered in Portuguese, Oct 23, 2020 10:00AM BRT. Register [here](https://onf.zoom.us/webinar/register/WN_pJWEXMWASSqIPmDyZ9H9AQ).
 
 ![](/assets/images/posts/2020-10-01-onf-webinar/1.png)
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/master/2020-onf-webinar/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
