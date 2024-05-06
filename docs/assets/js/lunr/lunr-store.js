@@ -300,7 +300,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Webinar Mandic Cloud - IPv6 no OpenStack",
-        "excerpt":"   ","categories": [],
+        "excerpt":"    ","categories": [],
         "tags": ["events","pt","webinar"],
         "url": "/mandic-webinar/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
