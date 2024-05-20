@@ -1362,7 +1362,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "My Linux desktop",
-        "excerpt":"dotfiles My Linux desktop setup on Fedora Sway Atomic, previously known as Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. Browser Primary:...","categories": [],
+        "excerpt":"dotfiles My Linux desktop setup on Fedora Sway Atomic, previously known as Sericea. Desktop Window manager: Sway via baseOS Only use wayland applications; xwayland apps are not properly scaled swaywm/sway#2966, drag and drop does not work swaywm/sway#6460 and have a glitched behaviour uppon minimized on system tray swaywm/sway#6905. All flatpak...","categories": [],
         "tags": ["en","redhat"],
         "url": "/dotfiles/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1431,5 +1431,11 @@ var store = [{
         "excerpt":"   Red Hat Summit and AnsibleFest 2024 is just a few days away and we know you won’t want to miss out on any of the activities, sessions or events we have planned.     ","categories": [],
         "tags": ["ansible","en","events","openshift","redhat"],
         "url": "/rh-summit24/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Management orchestrator for a Content-Centric Network in a 6G network",
+        "excerpt":"Management orchestrator for a Content-Centric Network in a 6G network Inventors Jose Castillo Lema Publication date 2024/5/16 Patent office US Application number 17985750 Description A management orchestrator for a content-centric network in a 6G network is described herein according to some aspects. For example, the management orchestrator can receive, from...","categories": [],
+        "tags": ["ccn","en","networks","nfv","papers","research"],
+        "url": "/dnfa6/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
