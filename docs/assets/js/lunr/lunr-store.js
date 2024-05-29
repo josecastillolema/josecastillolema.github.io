@@ -1428,7 +1428,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Red Hat Summit 2024",
-        "excerpt":"   Red Hat Summit and AnsibleFest 2024 is just a few days away and we know you won’t want to miss out on any of the activities, sessions or events we have planned.     ","categories": [],
+        "excerpt":"   Red Hat Summit and AnsibleFest 2024 are just a few days away and we know you won’t want to miss out on any of the activities, sessions or events we have planned.     ","categories": [],
         "tags": ["ansible","en","events","openshift","redhat"],
         "url": "/rh-summit24/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
