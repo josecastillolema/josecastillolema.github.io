@@ -1438,4 +1438,10 @@ var store = [{
         "tags": ["ccn","en","networks","nfv","papers","research"],
         "url": "/dnfa6/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Unleashing the potential of Function as a Service in the cloud continuum",
+        "excerpt":"Excited to share the article: Unleashing the potential of Function as a Service in the cloud continuum The PHYSICS project has successfully concluded, highlighting remarkable collaboration and innovation. Red Hat engineers and partners have made significant strides in evolving Function-as-a-Service (FaaS) in the cloud continuum, advancing multicluster automation, energy efficiency...","categories": [],
+        "tags": ["en","networks","redhat","research"],
+        "url": "/physics-rhr-blog/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
