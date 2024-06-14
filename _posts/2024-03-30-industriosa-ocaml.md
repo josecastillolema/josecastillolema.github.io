@@ -31,3 +31,5 @@ Esta actividad cuenta con el patrocinio de la Xunta de Galicia y la Axencia Para
 [A Industriosa](https://aindustriosa.org/) es una asociación sin ánimo de lucro que gestiona y promociona un medialab en la ciudad de Vigo. Un espacio donde makers, comunidades tecnológicas y empresas cuentan con el equipamiento necesario para llevar a cabo sus proyectos. Un punto de encuentro donde aprender, compartir y construir. [Link](https://aindustriosa.org/Descubre-o-poder-da-programacion-funcional-a-traves-de-OCaml/) del evento.
 
 [![](/assets/images/posts/2024-03-30-industriosa-ocaml/2.jpg)](https://www.meetup.com/es-ES/aindustriosa/events/299611775/)
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2024-aindustriosa/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
