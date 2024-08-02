@@ -1444,4 +1444,10 @@ var store = [{
         "tags": ["en","networks","redhat","research"],
         "url": "/physics-rhr-blog/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Red Hat OpenShift AI learning",
+        "excerpt":"OpenShift AI gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.                     ","categories": [],
+        "tags": ["cert","en","iac","openshift","redhat"],
+        "url": "/openshift-ai-learning/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
