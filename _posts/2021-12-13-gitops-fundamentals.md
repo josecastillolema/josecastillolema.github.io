@@ -33,3 +33,5 @@ After you finish this course you will know the fundamentals of GitOps and have p
 At the end of the course, you can earn a certificate by passing a final exam.
 
 ![](/assets/images/posts/2021-12-13-gitops-fundamentals/1.png)
+
+<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="0adbdae2-f61d-4b08-8331-a5f50176b4c0" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>

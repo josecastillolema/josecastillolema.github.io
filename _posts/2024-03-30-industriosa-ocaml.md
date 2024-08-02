@@ -33,3 +33,8 @@ Esta actividad cuenta con el patrocinio de la Xunta de Galicia y la Axencia Para
 [![](/assets/images/posts/2024-03-30-industriosa-ocaml/2.jpg)](https://www.meetup.com/es-ES/aindustriosa/events/299611775/)
 
 <iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2024-aindustriosa/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w40F9WOatq4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+![YouTube Video Views](https://img.shields.io/youtube/views/w40F9WOatq4?style=social)
+![YouTube Video Likes](https://img.shields.io/youtube/likes/w40F9WOatq4?style=social)
