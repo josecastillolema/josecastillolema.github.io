@@ -144,7 +144,7 @@ tag_archive:
 analytics:
   provider               : "google" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-169326084-1"
+    tracking_id          : "G-1EBHNQEGXG"
     anonymize_ip         : # true, false (default)
 baseurl                  : ""
 comments:
