@@ -48,3 +48,5 @@ This is a level 2 course, which means that you should probably complete the [exi
 At the end of the course, you can earn a certificate by passing a final exam.
 
 [![](/assets/images/posts/2021-12-09-calico-ebpf.png)](https://courses.academy.tigera.io/certificates/5b2d3af1a265456f85c8e41dbef83598)
+
+<div data-iframe-width="300" data-iframe-height="270" data-share-badge-id="bd4fb82c-0049-4a8e-80d7-96f5411b3a5d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
