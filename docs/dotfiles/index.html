@@ -345,7 +345,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          7 minute read
+          8 minute read
         
       </span>
     
@@ -414,18 +414,18 @@ All flatpak applications installed in user mode.</p>
   <li>
     <p>Messaging application: Ferdium via <a href="https://flathub.org/apps/org.ferdium.Ferdium">Flatpak</a></p>
 
-    <p>Use it as client for Gcalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, ChatGPT and Bard.</p>
+    <p>Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, ChatGPT and Bard.</p>
   </li>
   <li>
     <p>File manager: Nautilus via rpm-ostree with NautilusPreviewer (GNOME Sushi) via Flatpak (org.gnome.NautilusPreviewer)</p>
 
-    <p>Would prefer Thunar or PCMan FM but miss the preview feature.</p>
+    <p>Would prefer Thunar (via baseOS) or PCMan FM but miss the preview feature.</p>
   </li>
   <li>
     <p>Text editor: Gnome Text Editor via <a href="https://flathub.org/apps/org.gnome.TextEditor">Flatpak</a></p>
   </li>
   <li>
-    <p>Image viewer: imv via baseOS</p>
+    <p>Image viewer: <code class="language-plaintext highlighter-rouge">imv</code> via baseOS</p>
   </li>
   <li>PDF
     <ul>
@@ -443,7 +443,7 @@ All flatpak applications installed in user mode.</p>
     <p>Basic photo editing: Drawing via <a href="https://flathub.org/apps/com.github.maoschanz.drawing">Flatpak</a></p>
   </li>
   <li>
-    <p>Video player: mpv via <a href="https://flathub.org/apps/io.mpv.Mpv">Flatpak</a></p>
+    <p>Video player: `mpv via <a href="https://flathub.org/apps/io.mpv.Mpv">Flatpak</a></p>
   </li>
   <li>
     <p>Torrent client: Transmission via <a href="https://flathub.org/apps/com.transmissionbt.Transmission">Flatpak</a></p>
@@ -451,36 +451,47 @@ All flatpak applications installed in user mode.</p>
   <li>File sync
     <ul>
       <li>Dropbox via <a href="https://flathub.org/apps/com.dropbox.Client">Flatpak</a></li>
-      <li>Gdrive with rclone via rpm-ostree</li>
+      <li>Gdrive with Celeste via <a href="https://flathub.org/apps/com.hunterwittenborn.Celeste">Flatpak</a></li>
     </ul>
   </li>
   <li>
     <p>Office suite: LibreOffice via <a href="https://flathub.org/apps/org.libreoffice.LibreOffice">Flatpak</a></p>
   </li>
-  <li>Display setup: wdisplays via rpm-ostree</li>
+  <li>Display setup
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">wdisplays</code> via rpm-ostree</li>
+      <li><code class="language-plaintext highlighter-rouge">wl-mirror</code> via rpm-ostree</li>
+    </ul>
+  </li>
+  <li>Screen recording: Kooha via <a href="https://flathub.org/apps/io.github.seadve.Kooha">Flatpak</a></li>
 </ul>
 
 <h2 id="tools">Tools</h2>
 
 <ul>
-  <li>Shell: bash via baseOS</li>
-  <li>Prompt: Starship via local install</li>
-  <li>Text editor: neovim via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a></li>
-  <li>Application management: rpm-ostree and Flatpak via baseOS</li>
-  <li>Terminal multiplexer: tmux in remote systems</li>
-  <li>Configuration management: Ansible via <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16">toolbx</a></li>
-  <li>Containers: Podman and Toolbx via base OS, Docker in rootless mode via local install
+  <li>Shell: <code class="language-plaintext highlighter-rouge">bash</code> via baseOS</li>
+  <li>Prompt: <code class="language-plaintext highlighter-rouge">starship</code> via local install</li>
+  <li>Text editor: <code class="language-plaintext highlighter-rouge">neovim</code> via <a href="https://flathub.org/es/apps/io.neovim.nvim">Flatpak</a></li>
+  <li>Application management: <code class="language-plaintext highlighter-rouge">rpm-ostree</code> and <code class="language-plaintext highlighter-rouge">flatpak</code> via baseOS</li>
+  <li>Terminal multiplexer: <code class="language-plaintext highlighter-rouge">tmux</code> in remote systems</li>
+  <li>Configuration management: <code class="language-plaintext highlighter-rouge">ansible</code> via <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L16">toolbx</a></li>
+  <li>Containers: <code class="language-plaintext highlighter-rouge">podman</code> and <code class="language-plaintext highlighter-rouge">toolbox</code> via base OS, <code class="language-plaintext highlighter-rouge">docker</code> in rootless mode via local install
     <ul>
       <li><a href="https://github.com/josecastillolema/toolbox-images">Toolbx images</a></li>
     </ul>
   </li>
-  <li>Virtualization: <a href="https://kcli.readthedocs.io/en/latest/">kcli</a> via <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21">toolbx</a>
+  <li>Keyboard input: <code class="language-plaintext highlighter-rouge">wtype</code> via rpm-ostree</li>
+  <li>Power management: <code class="language-plaintext highlighter-rouge">tlp</code> via rpm-ostree.</li>
+  <li>Virtualization: <a href="https://kcli.readthedocs.io/en/latest/"><code class="language-plaintext highlighter-rouge">kcli</code></a> via <a href="https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile#L19-L21">toolbx</a>
     <ul>
       <li><a href="https://github.com/josecastillolema/kcli-plans">Kcli plans</a></li>
     </ul>
   </li>
-  <li>Kubernetes: Kind and kube-burner via local install</li>
-  <li>Keyboard input: wtype via rpm-ostree</li>
+  <li>
+    <p>Kubernetes: <code class="language-plaintext highlighter-rouge">kind</code> and <code class="language-plaintext highlighter-rouge">kube-burner</code> via local install</p>
+
+    <p>Tried out <code class="language-plaintext highlighter-rouge">tuned-ppd</code> but it needs an external controller (i.e.: gnome-settings-daemon), see <a href="https://github.com/redhat-performance/tuned/issues/708">redhat-performance/tuned#708</a>, or manually creating a <a href="https://github.com/josecastillolema/dotfiles/tree/main/systemd">user systemd controller service</a>.</p>
+  </li>
 </ul>
 
 <h2 id="tricks">Tricks</h2>
@@ -698,14 +709,13 @@ All flatpak applications installed in user mode.</p>
       
   <nav class="pagination">
     
-      <a href="/imdea/" class="pagination--pager" title="Telecom cloud-native development: an industry point of view
-">Previous</a>
+      <a href="/imdea/" class="pagination--pager" title="Telecom cloud-native development: an industry point of view">Previous</a>
     
     
-      <a href="/kubemark-ocp/" class="pagination--pager" title="Kubemark on OpenShift
-">Next</a>
+      <a href="/kubemark-ocp/" class="pagination--pager" title="Kubemark on OpenShift">Next</a>
     
   </nav>
+
 
     </div>
 
