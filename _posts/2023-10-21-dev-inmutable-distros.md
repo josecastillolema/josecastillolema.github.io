@@ -177,7 +177,7 @@ Finally, open VSCode (it should automatically detect the local Golang installati
 #### Local install - custom version
 Install both `python` and `pip` in the local user environment, compiling an specific version.
 
-From a toolbx container with proper development tools (and readline and sqlite dev dependencies), i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/40/Containerfile) download and compile Python:
+From a toolbx container with proper development tools (and readline, sqlite and libffi dev dependencies), i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/41/Containerfile) download and compile Python:
 ```
 ⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
 ⬢ $ tar -xf Python-3.?.?.tar.xz
@@ -216,7 +216,7 @@ Python is a pre-requisite.
 
 Local ansible installation:
 ```
-python -m pip install --user ansible ansible-lint
+$ pip install ansible ansible-lint
 ```
 Ansible will be installed on ~/.local/bin, so we need to add this path to our editor of choice (i.e.: VSCode):
 ```
