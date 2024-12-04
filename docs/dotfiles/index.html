@@ -225,6 +225,10 @@
           
         
           
+            <li><a href="https://certdirectory.io/profile/6843f5c7-cf26-40ab-81fc-4fe4971d767d" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-contao" aria-hidden="true"></i><span class="label">CertDirectory</span></a></li>
+          
+        
+          
             <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
           
         
@@ -528,11 +532,6 @@ All flatpak applications installed in user mode.</p>
 
 <p>If you have managed to get working any of the following please let me know:</p>
 <ul>
-  <li>Docker/Podman in rootless mode
-    <ul>
-      <li>Unable to create pods in kind with ephemeral storage requests <a href="https://github.com/kubernetes-sigs/kind/issues/3359">kubernetes-sigs/kind#3359</a></li>
-    </ul>
-  </li>
   <li>Emacs Flatpak
     <ul>
       <li>^G detaches text-mode emacs from terminal <a href="https://github.com/flathub/org.gnu.emacs/issues/6">flathub/org.gnu.emacs#6</a></li>
@@ -568,6 +567,14 @@ All flatpak applications installed in user mode.</p>
       <li>gvfsd-recent preventing system suspension <a href="https://gitlab.gnome.org/GNOME/gvfs/-/issues/715">GNOME/gvfs#715</a></li>
     </ul>
   </li>
+  <li>
+    <s>Kind</s>
+    <ul>
+      <li>
+        <s>Unable to create pods in rootless mode with ephemeral storage requests [kubernetes-sigs/kind#3359](https://github.com/kubernetes-sigs/kind/issues/3359)</s>
+      </li>
+    </ul>
+  </li>
   <li>Nautilus
     <ul>
       <li>Extract files to current folder <a href="https://www.reddit.com/r/gnome/comments/112a3jq/extract_files_to_current_folder/">r/gnome/112a3jq</a></li>
@@ -588,6 +595,7 @@ All flatpak applications installed in user mode.</p>
   </li>
   <li>Sway
     <ul>
+      <li>Allow all glob patterns in output configs <a href="https://github.com/swaywm/sway/pull/5629">swaywm/sway#5629</a></li>
       <li>
         <s>Drag &amp; Drop from XWayland apps to Wayland ones: it only works occasionally [swaywm/sway#6460](https://github.com/swaywm/sway/issues/6460)</s>
       </li>

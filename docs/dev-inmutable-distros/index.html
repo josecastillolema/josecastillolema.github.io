@@ -225,6 +225,10 @@
           
         
           
+            <li><a href="https://certdirectory.io/profile/6843f5c7-cf26-40ab-81fc-4fe4971d767d" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-contao" aria-hidden="true"></i><span class="label">CertDirectory</span></a></li>
+          
+        
+          
             <li><a href="https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-stack-overflow" aria-hidden="true"></i><span class="label">StackOverflow</span></a></li>
           
         
@@ -360,7 +364,7 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install---custom-version">Local install - custom version</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install---custom-version">Local install - custom version</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#rust">Rust</a></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
             </nav>
           </aside>
         
@@ -573,6 +577,13 @@ $ pip install ipython jinjanator
 ()[📦] pip install -r requirements.txt
 </code></pre></div></div>
 <p>Then open the project in VSCode and choose the local virtual environment.</p>
+
+<h3 id="rust">Rust</h3>
+
+<p>To download Rustup and install Rust, run the following in your terminal, then follow the on-screen instructions.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre></div></div>
 
 <h3 id="ansible">Ansible</h3>
 
