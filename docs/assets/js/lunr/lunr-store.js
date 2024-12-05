@@ -870,7 +870,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Linux Foundation Training & Certification courses",
-        "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between. Earn certificates and badges Free Learning path Inclusive Speaker Orientation (LFC101) Inclusive Open Source Community Orientation (LFC102) A Beginner’s Guide to Open Source...","categories": [],
+        "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges. Learning path Inclusive Speaker Orientation (LFC101) Inclusive Open Source Community Orientation (LFC102) A Beginner’s Guide...","categories": [],
         "tags": ["cert","en"],
         "url": "/lf-courses/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1449,5 +1449,11 @@ var store = [{
         "excerpt":"OpenShift AI gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.                     ","categories": [],
         "tags": ["cert","en","iac","openshift","redhat"],
         "url": "/openshift-ai-learning/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Securing Your Software Supply Chain with Sigstore (LFS182)",
+        "excerpt":"[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/) [Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges. # LFS182 Building and distributing software that is secure throughout its entire lifecycle can...","categories": [],
+        "tags": ["cert","en"],
+        "url": "/lf-sigstore/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

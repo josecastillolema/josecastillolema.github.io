@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition - GitOps</title>
+<!-- begin _includes/seo.html --><title>Securing Your Software Supply Chain with Sigstore (LFS182) - GitOps</title>
 <meta name="description" content="">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="GitOps">
-<meta property="og:title" content="FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition">
-<meta property="og:url" content="https://josecastillolema.github.io/shift-aws-foundations-2/">
+<meta property="og:title" content="Securing Your Software Supply Chain with Sigstore (LFS182)">
+<meta property="og:url" content="https://josecastillolema.github.io/lf-sigstore/">
 
 
   <meta property="og:description" content="">
@@ -36,16 +36,16 @@
 
 
 
-  <meta property="article:published_time" content="2020-11-17T00:00:00-06:00">
+  <meta property="article:published_time" content="2024-12-05T00:00:00-06:00">
 
 
 
-  <meta property="article:modified_time" content="2020-11-17T00:00:00-06:00">
+  <meta property="article:modified_time" content="2022-05-19T00:00:00-05:00">
 
 
 
 
-<link rel="canonical" href="https://josecastillolema.github.io/shift-aws-foundations-2/">
+<link rel="canonical" href="https://josecastillolema.github.io/lf-sigstore/">
 
 
 
@@ -319,16 +319,16 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition">
+    <meta itemprop="headline" content="Securing Your Software Supply Chain with Sigstore (LFS182)">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2020-11-17T00:00:00-06:00">
-    <meta itemprop="dateModified" content="2020-11-17T00:00:00-06:00">
+    <meta itemprop="datePublished" content="2024-12-05T00:00:00-06:00">
+    <meta itemprop="dateModified" content="2022-05-19T00:00:00-05:00">
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title" itemprop="headline">
-            <a href="https://josecastillolema.github.io/shift-aws-foundations-2/" itemprop="url">FIAP SHIFT: AWS Academy Cloud Foundations - 2nd edition
+            <a href="https://josecastillolema.github.io/lf-sigstore/" itemprop="url">Securing Your Software Supply Chain with Sigstore (LFS182)
 </a>
           </h1>
           
@@ -345,7 +345,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          3 minute read
+          2 minute read
         
       </span>
     
@@ -360,43 +360,32 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#para-quem">Para quem?</a></li><li><a href="#pré-requisito">Pré-requisito</a></li><li><a href="#como-funciona">Como funciona?</a></li><li><a href="#digital--live">Digital + Live</a></li><li><a href="#conteúdo">Conteúdo</a></li></ul>
+              <ul class="toc__menu"><li><a href="#lfs182">LFS182</a></li></ul>
             </nav>
           </aside>
         
-        <p><a href="https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online"><img src="/assets/images/posts/2020-11-17-shift-aws-foundations-2.png" alt="" /></a></p>
+        <p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
 
-<p>O <strong>AWS Academy Cloud Foundations</strong> (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – <strong><a href="https://aws.amazon.com/pt/certification/certified-cloud-practitioner/">AWS Certified Cloud Practitioner (CLF-01)</a></strong>.</p>
+<p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.</p>
 
-<p>O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.</p>
+<h1 id="lfs182">LFS182</h1>
 
-<h2 id="para-quem">Para quem?</h2>
-<p>Profissionais DevOps e Arquitetos de Plataformas/Soluções que querem ter certificação e experiência hands-on na AWS.</p>
+<p>Building and distributing software that is secure throughout its entire lifecycle can be challenging, leaving many projects unprepared to build securely by default. Attacks and vulnerabilities can emerge at any step of the chain, from writing to packaging and distributing software to end users.</p>
 
-<h2 id="pré-requisito">Pré-requisito</h2>
-<p>Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.</p>
+<p>Recently, several innovative technologies have emerged to improve the integrity of the software supply chain, reducing the friction developers face in implementing security within their daily work. <a href="https://www.sigstore.dev/">Sigstore</a>, a free and open source project, offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more. These signed materials persist in a tamper-resistant publicly auditable log, so anyone can check for authenticity.</p>
 
-<h2 id="como-funciona">Como funciona?</h2>
+<p>This course will provide you with the knowledge you need to build more securely by default, introducing you to some of the tools under Sigstore’s umbrella: Cosign, Fulcio, and Rekor. Once you complete this course, you will understand how to use Sigstore to secure your software development lifecycle.</p>
 
-<p>Você vai ter acesso à plataforma <a href="/aws-academy">AWS Academy</a>, com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da AWS Academy e professor da FIAP.</p>
-
-<h2 id="digital--live">Digital + Live</h2>
-<p>Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios práticos e mais duas lives com o professor, visando à preparação para a prova, nos dias <strong>11/01</strong> e <strong>15/02</strong>, das 19h às 20h. No fim, você receberá um certificado oficial de conclusão de curso da AWS Academy e poderá aproveitar 50% OFF para fazer a prova de Certificação AWS Cloud Practitioner.</p>
-
-<h2 id="conteúdo">Conteúdo</h2>
-
+<p>By the end of this course, you should be able to:</p>
 <ul>
-  <li>Módulo 1: Visão geral dos conceitos de nuvem</li>
-  <li>Módulo 2: Economia e faturamento da nuvem</li>
-  <li>Módulo 3: Visão geral da infraestrutura global da AWS</li>
-  <li>Módulo 4: Segurança na nuvem AWS</li>
-  <li>Módulo 5: Redes e entrega de conteúdo</li>
-  <li>Módulo 6: Computação</li>
-  <li>Módulo 7: Armazenamento</li>
-  <li>Módulo 8: Bancos de dados</li>
-  <li>Módulo 9: Arquitetura de nuvem</li>
-  <li>Módulo 10: Auto scaling e monitoramento</li>
+  <li>Describe the components of Sigstore and how they support a more secure software supply chain.</li>
+  <li>Be able to sign and verify software artifacts with Sigstore.</li>
+  <li>Understand how to implement Sigstore within the software development lifecycle.</li>
 </ul>
+
+<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="e835f1aa-ece8-4c7a-ad64-a5bd91cc06bc" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
+
 
         
       </section>
@@ -413,15 +402,9 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#aws" class="page__taxonomy-item p-category" rel="tag">aws</a><span class="sep">, </span>
-    
       <a href="/tags/#cert" class="page__taxonomy-item p-category" rel="tag">cert</a><span class="sep">, </span>
     
-      <a href="/tags/#classes" class="page__taxonomy-item p-category" rel="tag">classes</a><span class="sep">, </span>
-    
-      <a href="/tags/#fiap" class="page__taxonomy-item p-category" rel="tag">fiap</a><span class="sep">, </span>
-    
-      <a href="/tags/#pt" class="page__taxonomy-item p-category" rel="tag">pt</a>
+      <a href="/tags/#en" class="page__taxonomy-item p-category" rel="tag">en</a>
     
     </span>
   </p>
@@ -431,28 +414,28 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2020-11-17">November 17, 2020</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-05-19">May 19, 2022</time></p>
 
       </footer>
 
       <section class="page__share">
   <h4 class="page__share-title">Share on</h4>
 
-  <a href="https://twitter.com/intent/tweet?text=FIAP+SHIFT%3A+AWS+Academy+Cloud+Foundations+-+2nd+edition%20https%3A%2F%2Fjosecastillolema.github.io%2Fshift-aws-foundations-2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Securing+Your+Software+Supply+Chain+with+Sigstore+%28LFS182%29%20https%3A%2F%2Fjosecastillolema.github.io%2Flf-sigstore%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Fshift-aws-foundations-2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fjosecastillolema.github.io%2Flf-sigstore%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://josecastillolema.github.io/shift-aws-foundations-2/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://josecastillolema.github.io/lf-sigstore/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/haina-talent/" class="pagination--pager" title="Huawei Talent: Cadastro na plataforma">Previous</a>
+      <a href="/openshift-ai-learning/" class="pagination--pager" title="Red Hat OpenShift AI learning">Previous</a>
     
     
-      <a href="/intel-network-builders/" class="pagination--pager" title="Intel Network Builders University">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -478,52 +461,6 @@
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          2 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
     
       
       
@@ -661,6 +598,52 @@
 </div>
 
     
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/rh-summit24/" rel="permalink">Red Hat Summit 2024
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+</p>
+  </article>
+</div>
+
+    
   </div>
 </div>
 
@@ -753,8 +736,8 @@
     
   <script>
     var disqus_config = function () {
-      this.page.url = "https://josecastillolema.github.io/shift-aws-foundations-2/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/shift-aws-foundations-2"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "https://josecastillolema.github.io/lf-sigstore/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/lf-sigstore"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
