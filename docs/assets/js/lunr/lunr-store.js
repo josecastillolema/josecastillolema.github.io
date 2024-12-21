@@ -1452,8 +1452,20 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Securing Your Software Supply Chain with Sigstore (LFS182)",
-        "excerpt":"[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/) [Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges. # LFS182 Building and distributing software that is secure throughout its entire lifecycle can...","categories": [],
+        "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges. I would like to recommend the Securing Your Software Supply Chain with Sigstore course which...","categories": [],
         "tags": ["cert","en"],
         "url": "/lf-sigstore/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "OCaml (vs Python) y Unikernels con MirageOS",
+        "excerpt":"Empezamos el nuevo año con OCaml como protagonista. Este lenguaje, a pesar de ser relativamente desconocido en nuestra comunidad, ha tenido un gran impacto en el diseño de lenguajes como Rust y Scala, también ha sido muy relevante en el mundo académico. En esta charla, José nos introducirá en el...","categories": [],
+        "tags": ["dev","es","events"],
+        "url": "/fp-madrid-ocaml/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "InstructLab: Democratizing AI Models at Scale (DL01001G)",
+        "excerpt":"[![](/assets/images/posts/2024-12-21-instructlab.jpg)](https://www.ibm.com/training/) [IBM Training](https://www.ibm.com/training/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges. I would like to recommend the [InstructLab: Democratizing AI Models at Scale](https://www.ibm.com/training/course/instructlab-democratizing-ai-models-at-scale-DL01001G) course which helps to understand...","categories": [],
+        "tags": ["cert","en"],
+        "url": "/instructlab/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

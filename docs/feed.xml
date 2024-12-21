@@ -1,21 +1,54 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-12-05T06:46:13-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Securing Your Software Supply Chain with Sigstore (LFS182)</title><link href="https://josecastillolema.github.io/lf-sigstore/" rel="alternate" type="text/html" title="Securing Your Software Supply Chain with Sigstore (LFS182)" /><published>2024-12-05T00:00:00-06:00</published><updated>2022-05-19T00:00:00-05:00</updated><id>https://josecastillolema.github.io/lf-sigstore</id><content type="html" xml:base="https://josecastillolema.github.io/lf-sigstore/"><![CDATA[[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/)
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.5">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2024-12-21T05:18:48-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">InstructLab: Democratizing AI Models at Scale (DL01001G)</title><link href="https://josecastillolema.github.io/instructlab/" rel="alternate" type="text/html" title="InstructLab: Democratizing AI Models at Scale (DL01001G)" /><published>2024-12-21T00:00:00-06:00</published><updated>2022-12-21T00:00:00-06:00</updated><id>https://josecastillolema.github.io/instructlab</id><content type="html" xml:base="https://josecastillolema.github.io/instructlab/"><![CDATA[[![](/assets/images/posts/2024-12-21-instructlab.jpg)](https://www.ibm.com/training/)
 
-[Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.
+[IBM Training](https://www.ibm.com/training/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.
 
-# LFS182
+I would like to recommend the [InstructLab: Democratizing AI Models at Scale](https://www.ibm.com/training/course/instructlab-democratizing-ai-models-at-scale-DL01001G) course which helps to understand InstructLab and its applications in customizing AI Language Models (SLMs and LLMs).
 
-Building and distributing software that is secure throughout its entire lifecycle can be challenging, leaving many projects unprepared to build securely by default. Attacks and vulnerabilities can emerge at any step of the chain, from writing to packaging and distributing software to end users.
+# Course Overview
 
-Recently, several innovative technologies have emerged to improve the integrity of the software supply chain, reducing the friction developers face in implementing security within their daily work. [Sigstore](https://www.sigstore.dev/), a free and open source project, offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more. These signed materials persist in a tamper-resistant publicly auditable log, so anyone can check for authenticity.
+Unlock the full potential of both Large Language Models (LLMs) and Small Language Models (SLMs) and transform your expertise into actionable insights. Have you ever felt that Language Models fall short in understanding your domain-specific knowledge? InstructLab bridges this gap, enabling you to contribute your expertise and enhance the model’s capabilities. This course will guide you through the process of democratizing AI with InstructLab, providing a deep dive into the underlying technology and hands-on tutorials to get you started. By the end of this course, you’ll be equipped to synthesize your domain specific data, fine-tune, align, and customize AI Language Models. Amplify your AI expertise, and earn a Credly digital badge to showcase your skills.
 
-This course will provide you with the knowledge you need to build more securely by default, introducing you to some of the tools under Sigstore’s umbrella: Cosign, Fulcio, and Rekor. Once you complete this course, you will understand how to use Sigstore to secure your software development lifecycle.
 
-By the end of this course, you should be able to:
- - Describe the components of Sigstore and how they support a more secure software supply chain.
- - Be able to sign and verify software artifacts with Sigstore.
- - Understand how to implement Sigstore within the software development lifecycle.
+# Course details
 
-<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="e835f1aa-ece8-4c7a-ad64-a5bd91cc06bc" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Red Hat OpenShift AI learning</title><link href="https://josecastillolema.github.io/openshift-ai-learning/" rel="alternate" type="text/html" title="Red Hat OpenShift AI learning" /><published>2024-08-02T00:00:00-05:00</published><updated>2024-08-02T00:00:00-05:00</updated><id>https://josecastillolema.github.io/openshift-ai-learning</id><content type="html" xml:base="https://josecastillolema.github.io/openshift-ai-learning/"><![CDATA[<p><a href="https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai">OpenShift AI</a> gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.</p>
+Objectives
+
+ - Understand the LAB Methodology (Large-Scale Alignment for ChatBots) including taxonomy, synthetic data generation, and fine-tuning.
+ - Demonstrate InstructLab capabilities and its use cases.
+ - Contribute knowledge, skills, and the triage process for InstructLab through hands-on tutorials.
+ - Get InstructLab foundational badge through completing the course and passing the quiz with a minimum score of 80%.
+
+<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="2c7e4052-7eee-4467-bdc6-d4695cb24d13" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">OCaml (vs Python) y Unikernels con MirageOS</title><link href="https://josecastillolema.github.io/fp-madrid-ocaml/" rel="alternate" type="text/html" title="OCaml (vs Python) y Unikernels con MirageOS" /><published>2024-12-20T00:00:00-06:00</published><updated>2024-12-20T00:00:00-06:00</updated><id>https://josecastillolema.github.io/fp-madrid-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/fp-madrid-ocaml/"><![CDATA[<p><a href="https://www.meetup.com/es-ES/fp-madrid/events/305145445"><img src="/assets/images/posts/2024-12-20-fp-madrid-ocaml.png" alt="" /></a></p>
+
+<p>Empezamos el nuevo año con <strong>OCaml</strong> como protagonista. Este lenguaje, a pesar de ser relativamente desconocido en nuestra comunidad, ha tenido un gran impacto en el diseño de lenguajes como Rust y Scala, también ha sido muy relevante en el mundo académico. En esta charla, José nos introducirá en el mundo de OCaml apoyándose en Python para hacer comparativas.</p>
+
+<h2 id="abstract">Abstract</h2>
+<p><a href="https://ocaml.org/">OCaml</a> es un lenguaje de programación funcional de propósito general y tipado estático, con inferencia de tipos, tipos inductivos, pattern matching, variantes, etc. además de ser muy eficiente. En esta charla veremos las principales características del lenguaje (comparadas con código Python equivalente) y hablaremos sobre el tooling y futuro del lenguaje y la posibilidad de crear (memory safe) unikernels usando la biblioteca de <a href="https://mirage.io/">MirageOS</a>.</p>
+
+<h2 id="bio">Bio</h2>
+<p>José trabaja como ingeniero de software en el equipo de Performance &amp; Scale de Red Hat, con tecnologías cloud-native y plataformas de orquestación de containers. Imparte cursos de Cloud, DevOps, Networking e IoT desde 2016 en cursos de grado y posgrado.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="es" /><category term="events" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Securing Your Software Supply Chain with Sigstore (LFS182)</title><link href="https://josecastillolema.github.io/lf-sigstore/" rel="alternate" type="text/html" title="Securing Your Software Supply Chain with Sigstore (LFS182)" /><published>2024-12-05T00:00:00-06:00</published><updated>2022-12-05T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-sigstore</id><content type="html" xml:base="https://josecastillolema.github.io/lf-sigstore/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
+
+<p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.</p>
+
+<p>I would like to recommend the <a href="hhttps://trainingportal.linuxfoundation.org/courses/securing-your-software-supply-chain-with-sigstore-lfs182">Securing Your Software Supply Chain with Sigstore</a> course which provides knowledge and skills necessary to secure the integrity of your software by leveraging the <a href="https://www.sigstore.dev/">Sigstore</a> toolkit, a free and open source project that offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more.</p>
+
+<h1 id="lfs182">LFS182</h1>
+
+<p>Building and distributing software that is secure throughout its entire lifecycle can be challenging, leaving many projects unprepared to build securely by default. Attacks and vulnerabilities can emerge at any step of the chain, from writing to packaging and distributing software to end users.</p>
+
+<p>Recently, several innovative technologies have emerged to improve the integrity of the software supply chain, reducing the friction developers face in implementing security within their daily work. <a href="https://www.sigstore.dev/">Sigstore</a>, a free and open source project, offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more. These signed materials persist in a tamper-resistant publicly auditable log, so anyone can check for authenticity.</p>
+
+<p>This course will provide you with the knowledge you need to build more securely by default, introducing you to some of the tools under Sigstore’s umbrella: Cosign, Fulcio, and Rekor. Once you complete this course, you will understand how to use Sigstore to secure your software development lifecycle.</p>
+
+<p>By the end of this course, you should be able to:</p>
+<ul>
+  <li>Describe the components of Sigstore and how they support a more secure software supply chain.</li>
+  <li>Be able to sign and verify software artifacts with Sigstore.</li>
+  <li>Understand how to implement Sigstore within the software development lifecycle.</li>
+</ul>
+
+<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="e835f1aa-ece8-4c7a-ad64-a5bd91cc06bc" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Red Hat OpenShift AI learning</title><link href="https://josecastillolema.github.io/openshift-ai-learning/" rel="alternate" type="text/html" title="Red Hat OpenShift AI learning" /><published>2024-08-02T00:00:00-05:00</published><updated>2024-08-02T00:00:00-05:00</updated><id>https://josecastillolema.github.io/openshift-ai-learning</id><content type="html" xml:base="https://josecastillolema.github.io/openshift-ai-learning/"><![CDATA[<p><a href="https://www.redhat.com/en/technologies/cloud-computing/openshift/openshift-ai">OpenShift AI</a> gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.</p>
 
 <div data-iframe-width="500" data-iframe-height="270" data-share-badge-id="858b6f70-edda-4c93-a117-e7b143f9cb0a" data-share-badge-host="https://www.credly.com"></div>
 <script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>
@@ -135,76 +168,4 @@ Castillo Lema, Jose (Sao Paulo, BR)	2024	MANAGEMENT ORCHESTRATOR FOR A CONTENT-C
   <li><a href="https://github.com/josecastillolema/codethedream/blob/main/lab01-docker.md">Docker Hands-on Practice</a></li>
 </ul>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="classes" /><category term="en" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Flatpak SDK Extension for OCaml</title><link href="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/" rel="alternate" type="text/html" title="Flatpak SDK Extension for OCaml" /><published>2024-01-04T00:00:00-06:00</published><updated>2024-01-04T00:00:00-06:00</updated><id>https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml</id><content type="html" xml:base="https://josecastillolema.github.io/org-freedesktop-sdk-ext-ocaml/"><![CDATA[<iframe src="https://ghbtns.com/github-btn.html?user=flathub&amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=flathub&amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=flathub&amp;repo=org.freedesktop.Sdk.Extension.ocaml&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-
-<h1 id="sdk-extension-for-ocaml-stable">SDK Extension for OCaml stable</h1>
-
-<p>This extension contains various components of the <a href="https://ocaml.org/">OCaml</a> stable toolchain.</p>
-
-<p>Includes the <a href="https://dune.build/">Dune build system</a> and the OCaml Package Manager <a href="https://opam.ocaml.org/">opam</a>.</p>
-<h2 id="create-flatpak-ocaml-applications">Create Flatpak OCaml applications</h2>
-
-<p>Several examples on how to Flatpak OCaml applications leveraging this SDK can be found <a href="https://github.com/josecastillolema/flatpak-ocaml-examples">here</a>.</p>
-
-<h2 id="debugging">Debugging</h2>
-
-<p>In order to use this extension in a Flatpak SDK environment you may add all provided tools in your PATH by executing first:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source /usr/lib/sdk/ocaml/enable.sh
-</code></pre></div></div>
-
-<h2 id="install-packages-interactivelly">Install packages interactivelly</h2>
-
-<h3 id="initializing-the-environment">Initializing the Environment</h3>
-
-<p>In order to interactivelly install <a href="https://opam.ocaml.org/">OCaml Package Manager (opam)</a> packages in a Flatpak environmment you will need to initialize a new environment:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ opam init --disable-sandboxing --no-setup --root $XDG_DATA_HOME/ocaml
-</code></pre></div></div>
-
-<h3 id="load-the-environment-per-session">Load the Environment Per Session</h3>
-
-<p><em>The environment will be forgotten after you restart the app, if you use this method</em></p>
-
-<p>Run the following command to load the create the environment</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ eval $(opam env --root=$XDG_DATA_HOME/ocaml --switch=default --set-root --set-switch)
-
-$ opam switch
-#  switch   compiler     description
-→  default  ocaml.5.1.0  default
-</code></pre></div></div>
-
-<h3 id="load-the-environment-permanently">Load the Environment Permanently</h3>
-
-<p>Run the following command to get the path of your environment, using vscodium as an example</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ flatpak run --command=bash com.vscodium.codium
-
-[📦 com.vscodium.codium ~]$ echo $XDG_DATA_HOME/ocaml
-/var/home/&lt;username&gt;/.var/app/com.vscodium.codium/data/ocaml
-</code></pre></div></div>
-
-<p>Copy the output <code class="language-plaintext highlighter-rouge">/var/home/&lt;username&gt;/.var/app/com.vscodium.codium/data/ocaml</code>, 
-and add <code class="language-plaintext highlighter-rouge">OPAMROOT=/var/home/&lt;username&gt;/.var/app/com.vscodium.codium/data/ocaml</code> 
-as a environment variable for the app in <a href="https://flathub.org/apps/com.github.tchx84.Flatseal">flatseal</a></p>
-
-<h2 id="development">Development</h2>
-<p>To use the SDK with your favourite editor:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml com.visualstudio.code
-$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml org.gnu.emacs
-$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=ocaml io.neovim.nvim
-</code></pre></div></div>
-
-<p>or just use <code class="language-plaintext highlighter-rouge">FLATPAK_ENABLE_SDK_EXT=*</code> to load every SDK available in your system:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo flatpak override --env=FLATPAK_ENABLE_SDK_EXT=* com.visualstudio.code
-</code></pre></div></div>
-
-<p>When running your editor you should see something like this, i.e.:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ flatpak run com.visualstudio.code
-flatpak-vscode: Enabling SDK extension "ocaml"
-</code></pre></div></div>
-
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear24/" rel="alternate" type="text/html" title="Happy new year!" /><published>2024-01-01T00:00:00-06:00</published><updated>2024-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear24</id><content type="html" xml:base="https://josecastillolema.github.io/newyear24/"><![CDATA[<p><img src="/assets/images/posts/2024-01-01-newyear24/1.png" alt="" /></p>
-
-<p><img src="/assets/images/posts/2024-01-01-newyear24/2.png" alt="" /></p>
-
-<p><img src="/assets/images/posts/2024-01-01-newyear24/3.png" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="es" /><category term="redhat" /><category term="pt" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="classes" /><category term="en" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry></feed>
