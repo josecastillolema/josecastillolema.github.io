@@ -1464,7 +1464,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "InstructLab: Democratizing AI Models at Scale (DL01001G)",
-        "excerpt":"[![](/assets/images/posts/2024-12-21-instructlab.jpg)](https://www.ibm.com/training/) [IBM Training](https://www.ibm.com/training/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges. I would like to recommend the [InstructLab: Democratizing AI Models at Scale](https://www.ibm.com/training/course/instructlab-democratizing-ai-models-at-scale-DL01001G) course which helps to understand...","categories": [],
+        "excerpt":"IBM Training provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges. I would like to recommend the InstructLab: Democratizing AI Models at Scale course which helps to understand InstructLab...","categories": [],
         "tags": ["cert","en"],
         "url": "/instructlab/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
