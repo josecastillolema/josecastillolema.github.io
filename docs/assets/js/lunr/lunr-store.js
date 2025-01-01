@@ -1468,4 +1468,10 @@ var store = [{
         "tags": ["cert","en"],
         "url": "/instructlab/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Happy new year!",
+        "excerpt":"  ","categories": [],
+        "tags": ["en","es","redhat","pt"],
+        "url": "/newyear25/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
