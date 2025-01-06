@@ -970,7 +970,7 @@
 </url>
 <url>
 <loc>https://josecastillolema.github.io/lf-sigstore/</loc>
-<lastmod>2022-12-05T00:00:00-06:00</lastmod>
+<lastmod>2024-12-05T00:00:00-06:00</lastmod>
 </url>
 <url>
 <loc>https://josecastillolema.github.io/fp-madrid-ocaml/</loc>
@@ -987,6 +987,14 @@
 <url>
 <loc>https://josecastillolema.github.io/podman-wasm-libkrun/</loc>
 <lastmod>2025-01-02T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>https://josecastillolema.github.io/lf-opentelemetry/</loc>
+<lastmod>2025-01-04T00:00:00-06:00</lastmod>
+</url>
+<url>
+<loc>https://josecastillolema.github.io/lf-backstage/</loc>
+<lastmod>2025-01-05T00:00:00-06:00</lastmod>
 </url>
 <url>
 <loc>https://josecastillolema.github.io/about/</loc>
