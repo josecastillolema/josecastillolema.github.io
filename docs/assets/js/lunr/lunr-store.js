@@ -1480,4 +1480,16 @@ var store = [{
         "tags": ["dev","en","redhat"],
         "url": "/podman-wasm-libkrun/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Getting Started with OpenTelemetry (LFS148)",
+        "excerpt":"[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/) [Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges. I would like to recommend the [Getting Started with OpenTelemetry](https://trainingportal.linuxfoundation.org/courses/getting-started-with-opentelemetry-lfs148/) course to learn how...","categories": [],
+        "tags": ["cert","en"],
+        "url": "/lf-opentelemetry/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Introduction to Backstage - Developer Portals Made Easy (LFS142)",
+        "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges. I would like to recommend the Introduction to Backstage - Developer Portals Made Easy course...","categories": [],
+        "tags": ["cert","en"],
+        "url": "/lf-backstage/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

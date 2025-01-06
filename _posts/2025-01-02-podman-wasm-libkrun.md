@@ -266,7 +266,7 @@ xychart-beta
     bar [0, 4, 0]
 ```
 
-##### Summary
+#### Summary
 
 The **podman** native container solution presented the best overall results as expected.
 

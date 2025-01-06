@@ -1,6 +1,6 @@
 ---
 title:  "Securing Your Software Supply Chain with Sigstore (LFS182)"
-last_modified_at: 2022-12-05
+last_modified_at: 2024-12-05
 tags:
   - cert
   - en
@@ -12,7 +12,7 @@ toc_sticky: true
 
 [Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.
 
-I would like to recommend the [Securing Your Software Supply Chain with Sigstore](hhttps://trainingportal.linuxfoundation.org/courses/securing-your-software-supply-chain-with-sigstore-lfs182) course which provides knowledge and skills necessary to secure the integrity of your software by leveraging the [Sigstore](https://www.sigstore.dev/) toolkit, a free and open source project that offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more.
+I would like to recommend the [Securing Your Software Supply Chain with Sigstore](https://trainingportal.linuxfoundation.org/courses/securing-your-software-supply-chain-with-sigstore-lfs182) course which provides knowledge and skills necessary to secure the integrity of your software by leveraging the [Sigstore](https://www.sigstore.dev/) toolkit, a free and open source project that offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more.
 
 # LFS182
 
