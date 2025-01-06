@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OpenStack series III: Nova - Compute Service - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,29 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-3---openstack-nova">Lab 3 - OpenStack Nova</a><ul><li><a href="#compute-service">Compute Service</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#hypervisors">Hypervisors</a></li><li><a href="#flavors">Flavors</a></li><li><a href="#chaves-ssh">Chaves SSH</a></li><li><a href="#instâncias">Instâncias</a></li><li><a href="#snapshots">Snapshots</a></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-3---openstack-nova">Lab 3 - OpenStack Nova</a><ul>
+<li><a href="#compute-service">Compute Service</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#hypervisors">Hypervisors</a></li>
+<li><a href="#flavors">Flavors</a></li>
+<li><a href="#chaves-ssh">Chaves SSH</a></li>
+<li><a href="#inst%C3%A2ncias">Instâncias</a></li>
+<li><a href="#snapshots">Snapshots</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+<li><a href="#horizon">Horizon</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-3---openstack-nova">Lab 3 - OpenStack Nova</h1>
 
@@ -384,11 +383,13 @@
 
 <ol>
   <li>Conferir se as extensões de virtualizações estão presentes no processador:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ grep -E ' svm | vmx ' /proc/cpuinfo
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ grep -E ' svm | vmx ' /proc/cpuinfo
 </code></pre></div>    </div>
   </li>
   <li>Listar os serviços Linux que compõem o Nova:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@n
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@n
 devstack@n-api-meta.service                                                                      loaded active running   Devstack devstack@n-api-meta.service
 devstack@n-api.service                                                                           loaded active running   Devstack devstack@n-api.service
 devstack@n-cauth.service                                                                         loaded active running   Devstack devstack@n-cauth.service
@@ -400,7 +401,8 @@ devstack@n-super-cond.service                                                   
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@n*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@n*
 ● devstack@n-cauth.service - Devstack devstack@n-cauth.service
    Loaded: loaded (/etc/systemd/system/devstack@n-cauth.service; enabled; vendor preset: enabled)
    Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 15min ago
@@ -470,11 +472,13 @@ devstack@n-super-cond.service                                                   
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os <em>logs</em> do serviço:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ journalctl -u devstack@n*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ journalctl -u devstack@n*
 </code></pre></div>    </div>
   </li>
   <li>Carregar as credenciais de OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
  WARNING: setting legacy OS_TENANT_NAME to support cli tools.
 
  $ env | grep OS_
@@ -492,7 +496,8 @@ devstack@n-super-cond.service                                                   
 </code></pre></div>    </div>
   </li>
   <li>Listar os módulos do OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack service list
 +----------------------------------+-------------+----------------+
 | ID                               | Name        | Type           |
 +----------------------------------+-------------+----------------+
@@ -523,7 +528,8 @@ $ openstack service show nova
 </code></pre></div>    </div>
   </li>
   <li>Mostrar o arquivo de configuração:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ less /etc/nova/nova.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ less /etc/nova/nova.conf
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -532,7 +538,8 @@ $ openstack service show nova
 
 <ol>
   <li>Mostrar os <em>hypervisors</em> disponíveis:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack hypervisor list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack hypervisor list
 +----+---------------------+-----------------+----------------+-------+
 | ID | Hypervisor Hostname | Hypervisor Type | Host IP        | State |
 +----+---------------------+-----------------+----------------+-------+
@@ -541,7 +548,8 @@ $ openstack service show nova
 </code></pre></div>    </div>
   </li>
   <li>Mostrar a descrição do <em>hypervisor</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack hypervisor show ubuntu
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack hypervisor show ubuntu
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field                | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 +----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -575,7 +583,8 @@ $ openstack service show nova
 </code></pre></div>    </div>
   </li>
   <li>Mostrar estatísticas de uso dos <em>hypervisors</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack hypervisor stats show
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack hypervisor stats show
 +----------------------+-------+
 | Field                | Value |
 +----------------------+-------+
@@ -600,7 +609,8 @@ $ openstack service show nova
 
 <ol>
   <li>Listar os <em>flavors</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack flavor list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack flavor list
 +--------------------------------------+-----------+-------+------+-----------+-------+-----------+
 | ID                                   | Name      |   RAM | Disk | Ephemeral | VCPUs | Is Public |
 +--------------------------------------+-----------+-------+------+-----------+-------+-----------+
@@ -621,7 +631,8 @@ $ openstack service show nova
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informações sobre um <em>flavor</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack flavor show m1.tiny
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack flavor show m1.tiny
 +----------------------------+---------+
 | Field                      | Value   |
 +----------------------------+---------+
@@ -641,7 +652,8 @@ $ openstack service show nova
 </code></pre></div>    </div>
   </li>
   <li>Criar um <em>flavor</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack flavor create --public --ram 64 --vcpus 1 --disk 1 m.fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack flavor create --public --ram 64 --vcpus 1 --disk 1 m.fiap
 +----------------------------+--------------------------------------+
 | Field                      | Value                                |
 +----------------------------+--------------------------------------+
@@ -665,15 +677,18 @@ $ openstack service show nova
 
 <ol>
   <li>Criar uma chave:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack keypair create chave-fiap &gt; chave-fiap.pem
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack keypair create chave-fiap &gt; chave-fiap.pem
 </code></pre></div>    </div>
   </li>
   <li>Conferir o conteúdo da chave:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cat chave-fiap.pem
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ cat chave-fiap.pem
 </code></pre></div>    </div>
   </li>
   <li>Listar as chaves disponíveis:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack keypair list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack keypair list
 +------------+-------------------------------------------------+
 | Name       | Fingerprint                                     |
 +------------+-------------------------------------------------+
@@ -682,14 +697,16 @@ $ openstack service show nova
 </code></pre></div>    </div>
   </li>
   <li>Assignar as permissões certas na chave e conferir que foram aplicadas:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 600 chave-fiap.pem
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ chmod 600 chave-fiap.pem
 
 $ ll chave-fiap.pem
 -rw------- 1 os os 1680 Oct 19 11:41 chave-fiap.pem
 </code></pre></div>    </div>
   </li>
   <li>Listar as imagens:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack image list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack image list
 +--------------------------------------+--------------------------+--------+
 | ID                                   | Name                     | Status |
 +--------------------------------------+--------------------------+--------+
@@ -703,7 +720,8 @@ $ ll chave-fiap.pem
 
 <ol>
   <li>Criar a VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server create --flavor m.fiap --image cirros-0.3.5-x86_64-disk --key-name chave-fiap vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server create --flavor m.fiap --image cirros-0.3.5-x86_64-disk --key-name chave-fiap vmfiap01
 +-------------------------------------+-----------------------------------------------------------------+
 | Field                               | Value                                                           |
 +-------------------------------------+-----------------------------------------------------------------+
@@ -741,7 +759,8 @@ $ ll chave-fiap.pem
 </code></pre></div>    </div>
   </li>
   <li>Listar as VMs:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server list
 +--------------------------------------+----------+--------+-------------------------------------------------------+--------------------------+--------+
 | ID                                   | Name     | Status | Networks                                              | Image                    | Flavor |
 +--------------------------------------+----------+--------+-------------------------------------------------------+--------------------------+--------+
@@ -750,7 +769,8 @@ $ ll chave-fiap.pem
 </code></pre></div>    </div>
   </li>
   <li>Mostrar a URL do console:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack console url show vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack console url show vmfiap01
 +-------+-------------------------------------------------------------------------------------+
 | Field | Value                                                                               |
 +-------+-------------------------------------------------------------------------------------+
@@ -765,7 +785,8 @@ $ ll chave-fiap.pem
       <li>Directo pelo <em>hypervisor</em>:</li>
     </ul>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ virsh list
  Id    Name                           State
 ----------------------------------------------------
  1     instance-00000005              running
@@ -783,7 +804,8 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Mostrar o <em>log</em> da VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack console log show vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack console log show vmfiap01
 [    0.000000] Initializing cgroup subsys cpuset
 [    0.000000] Initializing cgroup subsys cpu
 [    0.000000] Linux version 3.2.0-80-virtual (buildd@batsu) (gcc version 4.6.3 (Ubuntu/Linaro 4.6.3-1ubuntu5) ) #116-Ubuntu SMP Mon Mar 23 17:28:52 UTC 2015 (Ubuntu 3.2.0-80.116-virtual 3.2.68)
@@ -809,7 +831,8 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os eventos relacionados à VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server event list vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server event list vmfiap01
 +------------------------------------------+--------------------------------------+--------+----------------------------+
 | Request ID                               | Server ID                            | Action | Start Time                 |
 +------------------------------------------+--------------------------------------+--------+----------------------------+
@@ -818,11 +841,13 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Desligar a VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server stop vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server stop vmfiap01
 </code></pre></div>    </div>
   </li>
   <li>Listar as VMs e conferir que foi desligada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server list
 +--------------------------------------+----------+---------+-------------------------------------------------------+--------------------------+--------+
 | ID                                   | Name     | Status  | Networks                                              | Image                    | Flavor |
 +--------------------------------------+----------+---------+-------------------------------------------------------+--------------------------+--------+
@@ -831,7 +856,8 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Listar novamente os eventos relacionados à VM e conferir que foi registrado o evento de <em>shutdown</em> da mesma:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server event list vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server event list vmfiap01
 +------------------------------------------+--------------------------------------+--------+----------------------------+
 | Request ID                               | Server ID                            | Action | Start Time                 |
 +------------------------------------------+--------------------------------------+--------+----------------------------+
@@ -841,7 +867,8 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Ligar novamente a VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server start vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server start vmfiap01
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -850,7 +877,8 @@ teste-fiap
 
 <ol>
   <li>Criar um snapshot da VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server image create vmfiap01 --name vmfiap01_snap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server image create vmfiap01 --name vmfiap01_snap
 +------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field            | Value                                                                                                                                                                                                                                                  |
 +------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -877,7 +905,8 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Listar as imagens (aguardar que fique em estado <code class="language-plaintext highlighter-rouge">active</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack image list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack image list
 +--------------------------------------+--------------------------+--------+
 | ID                                   | Name                     | Status |
 +--------------------------------------+--------------------------+--------+
@@ -895,7 +924,8 @@ $ openstack image list
 </code></pre></div>    </div>
   </li>
   <li>Instanciar o <code class="language-plaintext highlighter-rouge">snapshot</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server create --flavor m.fiap --image vmfiap01_snap vmfiap02
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server create --flavor m.fiap --image vmfiap01_snap vmfiap02
 +-------------------------------------+-------------------------------------------------------+
 | Field                               | Value                                                 |
 +-------------------------------------+-------------------------------------------------------+
@@ -933,7 +963,8 @@ $ openstack image list
 </code></pre></div>    </div>
   </li>
   <li>Listar as VMs usando o comando <code class="language-plaintext highlighter-rouge">virsh</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ virsh list
  Id    Name                           State
 ----------------------------------------------------
  3     instance-00000005              running
@@ -941,7 +972,8 @@ $ openstack image list
 </code></pre></div>    </div>
   </li>
   <li>Logar na nova VM e confirmar que o arquivo criado previamente existe:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh console 4
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ virsh console 4
 Connected to domain instance-00000006
 Escape character is ^]
 
@@ -953,7 +985,8 @@ teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Mostrar as informações da definição da VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh dumpxml 3
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ virsh dumpxml 3
 &lt;domain type='qemu' id='3'&gt;
   &lt;name&gt;instance-00000005&lt;/name&gt;
   &lt;uuid&gt;fd676d99-1d15-4690-b69e-02d71947d1c5&lt;/uuid&gt;
@@ -1090,7 +1123,8 @@ teste-fiap
 
 <ol>
   <li>Deletar as vms:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server delete vmfiap01
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server delete vmfiap01
 $ openstack server delete vmfiap02
 $ openstack image delete vmfiap01_snap
 </code></pre></div>    </div>
@@ -1102,18 +1136,21 @@ $ openstack image delete vmfiap01_snap
 <ol>
   <li>Recriar desde o Horizon Dashboard:
     <ul>
-      <li>Criação de <em>flavor</em></li>
+      <li>Criação de <em>flavor</em>
+</li>
       <li>Criação de VM</li>
-      <li>Criação de <em>snapshot</em></li>
+      <li>Criação de <em>snapshot</em>
+</li>
       <li>Criação de VM a partir de <em>snapshot</em>
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova1.png" alt="" />
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova2.png" alt="" />
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova3.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova1.png" alt="">
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova2.png" alt="">
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/nova3.png" alt="">
+</li>
     </ul>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -1199,6 +1236,53 @@ $ openstack image delete vmfiap01_snap
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1337,52 +1421,6 @@ $ openstack image delete vmfiap01_snap
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1394,13 +1432,15 @@ $ openstack image delete vmfiap01_snap
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1436,7 +1476,7 @@ $ openstack image delete vmfiap01_snap
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1485,7 +1525,8 @@ $ openstack image delete vmfiap01_snap
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>AWS series I: Elastic Computing (EC2) - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,23 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-1---aws-ec2">Lab 1 - AWS EC2</a><ul><li><a href="#criando-a-instancia">Criando a instancia</a></li><li><a href="#accessando-à-instancia">Accessando à instancia</a></li><li><a href="#instalando-um-servidor-web">Instalando um servidor web</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-1---aws-ec2">Lab 1 - AWS EC2</a><ul>
+<li><a href="#criando-a-instancia">Criando a instancia</a></li>
+<li><a href="#accessando-%C3%A0-instancia">Accessando à instancia</a></li>
+<li><a href="#instalando-um-servidor-web">Instalando um servidor web</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#aws">Serie de artigos</a> sobre Amazon Web Services.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-1---aws-ec2">Lab 1 - AWS EC2</h1>
 
@@ -383,35 +376,35 @@
 <ol>
   <li>
     <p>Acessar o serviço <strong>EC2</strong>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-0.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-0.png" alt=""></p>
   </li>
   <li>
     <p>Lançar o assistente de criaçao de instancias:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-1.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-1.png" alt=""></p>
   </li>
   <li>
     <p>Escolher a <strong>imagem</strong> do <code class="language-plaintext highlighter-rouge">Amazon Linux 2 AMI</code>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-2.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-2.png" alt=""></p>
   </li>
   <li>
     <p>Escolher o <strong><em>flavor</em></strong> <code class="language-plaintext highlighter-rouge">t2.micro</code>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-3.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-3.png" alt=""></p>
   </li>
   <li>
     <p>Usaremos um <em>script</em> de <strong><code class="language-plaintext highlighter-rouge">cloud-init</code></strong> para customizar a instância:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-4.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-4.png" alt=""></p>
   </li>
   <li>
     <p>Confirmar criaçao da instância:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-5.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-5.png" alt=""></p>
   </li>
   <li>
     <p>Criaçao da <strong>chave</strong> para poder acessar a instância via SSH de forma segura:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-6.png" width="465" height="342" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-6.png" width="465" height="342"></p>
   </li>
   <li>
     <p>Validar a criacao da instância:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-7.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-7.png" alt=""></p>
   </li>
 </ol>
 
@@ -420,12 +413,13 @@
 <ol>
   <li>
     <p>[<strong>Linux/MAC</strong>] Seguiremos as próprias indicações do EC2:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-8.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-8.png" alt=""></p>
 
     <p>[<strong>Windows</strong>] Usaremos o <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>, seguindo as seguintes <a href="https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/putty.html">instruções</a>. Como alternativa ao PuTTy, o <a href="https://mobaxterm.mobatek.net/">MobaXterm</a> é uma excelente opçao.</p>
   </li>
   <li>[<strong>Linux/MAC</strong>] Em um terminal local:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ chmod 400 fiap.pem
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ chmod 400 fiap.pem
 $ ssh -i "fiap.pem" ec2-user@ec2-52-91-146-116.compute-1.amazonaws.com
 
    __|  __|_  )
@@ -439,7 +433,8 @@ https://aws.amazon.com/amazon-linux-2/
     <p>[<strong>Windows</strong>] Seguir as instruções do PuTTY: https://docs.aws.amazon.com/pt_br/AWSEC2/latest/UserGuide/putty.html</p>
   </li>
   <li>Uma vez logado na maquina virtual, confirmar que o script de <strong>cloud-init</strong> rodou com sucesso:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /tmp/
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ ls /tmp/
 CloudInitFunciona
 </code></pre></div>    </div>
   </li>
@@ -449,7 +444,8 @@ CloudInitFunciona
 
 <ol>
   <li>Instalar o pacote <code class="language-plaintext highlighter-rouge">httpd</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ec2-user@ip-172-31-50-1 ~]$ sudo yum install -y httpd
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>[ec2-user@ip-172-31-50-1 ~]$ sudo yum install -y httpd
 Failed to set locale, defaulting to C
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
 amzn2-core                                                                                                                     | 2.4 kB  00:00:00     
@@ -547,18 +543,21 @@ Complete!
 </code></pre></div>    </div>
   </li>
   <li>Habilitar o serviço <code class="language-plaintext highlighter-rouge">httpd</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ec2-user@ip-172-31-50-1 ~]$ sudo service httpd start  
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>[ec2-user@ip-172-31-50-1 ~]$ sudo service httpd start  
 Redirecting to /bin/systemctl start httpd.service
 </code></pre></div>    </div>
   </li>
   <li>Criar um <em>site</em> de teste, no arquivo <code class="language-plaintext highlighter-rouge">/var/www/html/index.html</code> (como usuário admin):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;h1&gt;
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>&lt;h1&gt;
    FIAP!!!
 &lt;/h1&gt;
 </code></pre></div>    </div>
   </li>
   <li>Testar localmente o servidor web:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ec2-user@ip-172-31-50-1 ~]$ curl localhost
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>[ec2-user@ip-172-31-50-1 ~]$ curl localhost
 &lt;h1&gt;
         FIAP!!!
 &lt;/h1&gt;
@@ -566,21 +565,22 @@ Redirecting to /bin/systemctl start httpd.service
   </li>
   <li>
     <p>Obter o IP público da VM:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-9.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-9.png" alt=""></p>
   </li>
   <li>
     <p>Testar accesso pelo IP público:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-10.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-10.png" alt=""></p>
   </li>
   <li>
     <p>Como era esperado, o acesso web não funcionou pois a porta HTTP (TCP/80) deve ser liberada nos <em>security groups</em>. Incluir uma liberação para esta porta no <em>security group</em> associado à instância:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-11.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-11.png" alt=""></p>
   </li>
   <li>Testar novamente o acesso pelo IP público:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-12.png" alt="" /></li>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/ec2-12.png" alt="">
+</li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -664,6 +664,53 @@ Redirecting to /bin/systemctl start httpd.service
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -802,52 +849,6 @@ Redirecting to /bin/systemctl start httpd.service
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -859,13 +860,15 @@ Redirecting to /bin/systemctl start httpd.service
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -901,7 +904,7 @@ Redirecting to /bin/systemctl start httpd.service
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -950,7 +953,8 @@ Redirecting to /bin/systemctl start httpd.service
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Containers series V: Kubernetes - Instalação - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,25 +345,36 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-5---kubernetes---instalação">Lab 5 - Kubernetes - Instalação</a><ul><li><a href="#orquestrando-containers">Orquestrando containers</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#instalação">Instalação</a></li><li><a href="#validação">Validação</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-5---kubernetes---instala%C3%A7%C3%A3o">Lab 5 - Kubernetes - Instalação</a><ul>
+<li><a href="#orquestrando-containers">Orquestrando containers</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#instala%C3%A7%C3%A3o">Instalação</a></li>
+<li><a href="#valida%C3%A7%C3%A3o">Validação</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-5---kubernetes---instalação">Lab 5 - Kubernetes - Instalação</h1>
 
 <h2 id="orquestrando-containers">Orquestrando containers</h2>
 <p><a href="https://kubernetes.io/pt/"><strong>Kubernetes</strong> (k8s)</a>, da mesma forma que o Docker Swarm, permite orquestrar containers em um cluster formado por vários servidores. De esta forma conseguimos garantir as seguintes propriedades nos containers gerenciados pelo orquestrador:</p>
 <ul>
-  <li><strong>tolerância a falhas</strong>: se um dos servidores do cluster cair, o container automaticamente será iniciado em outro servidor do cluster</li>
-  <li><strong>alta disponibilidade</strong>: várias réplicas de cada container podem ser executadas em vários servidores do cluster</li>
-  <li><strong>escalabilidade</strong>: o número de réplicas de cada container pode ser aumentado a qualquer momento em funçao da demanda</li>
+  <li>
+<strong>tolerância a falhas</strong>: se um dos servidores do cluster cair, o container automaticamente será iniciado em outro servidor do cluster</li>
+  <li>
+<strong>alta disponibilidade</strong>: várias réplicas de cada container podem ser executadas em vários servidores do cluster</li>
+  <li>
+<strong>escalabilidade</strong>: o número de réplicas de cada container pode ser aumentado a qualquer momento em funçao da demanda</li>
 </ul>
 
 <p><a href="https://microk8s.io/"><strong>Microk8s</strong></a> é um Kubernetes pequeno, rápido, seguro e com um único nó (<em>all-in-one</em>) que é instalado em praticamente qualquer computador com Linux. Usado para desenvolvimento <em>off-line</em>, criação de protótipos, testes ou uso em uma VM como um k8s pequeno, barato e confiável para CI/CD.</p>
@@ -397,17 +394,20 @@
 
 <ol>
   <li>Instalação do <strong>microk8s</strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo snap install microk8s --classic
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo snap install microk8s --classic
  microk8s v1.18.0 from Canonical✓ installed
 </code></pre></div>    </div>
   </li>
   <li>Ajuste de permissões do usuário <strong><code class="language-plaintext highlighter-rouge">ubuntu</code></strong> no grupo <strong><code class="language-plaintext highlighter-rouge">microk8s</code></strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo usermod -a -G microk8s ubuntu
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo usermod -a -G microk8s ubuntu
  $ sudo reboot
 </code></pre></div>    </div>
   </li>
   <li>Após o <em>reboot</em>, confirmar que o usuário pertence ao grupo <strong><code class="language-plaintext highlighter-rouge">microk8s</code></strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ groups
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ groups
 ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
 </code></pre></div>    </div>
   </li>
@@ -417,7 +417,8 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
 
 <ol>
   <li>Conferir instalação:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.status</span>
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.status</span>
  <span class="s">microk8s is running</span>
  <span class="s">addons</span><span class="err">:</span>
  <span class="na">cilium</span><span class="pi">:</span> <span class="s">disabled</span>
@@ -442,20 +443,23 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
 </code></pre></div>    </div>
   </li>
   <li>Usar o cliente interno do microk8s (<strong><code class="language-plaintext highlighter-rouge">microk8s.kubectl</code></strong>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ microk8s.kubectl get all
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ microk8s.kubectl get all
  NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
  service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   4m5s
 </code></pre></div>    </div>
   </li>
   <li>Instalação do cliente externo (<strong><code class="language-plaintext highlighter-rouge">kubectl</code></strong>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo snap install kubectl --classic
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo snap install kubectl --classic
  kubectl 1.18.0 from Canonical✓ installed
 </code></pre></div>    </div>
   </li>
   <li>
     <p>Configuracão dos parámetros de acesso (URL, credenciais, etc.) do cliente externo:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.config &gt; .kube/config</span>
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ microk8s.config &gt; .kube/config</span>
  <span class="s">$ cat .kube/config</span> 
  <span class="s">apiVersion</span><span class="err">:</span> <span class="s">v1</span>
  <span class="s">clusters</span><span class="err">:</span>
@@ -479,13 +483,15 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
 </code></pre></div>    </div>
   </li>
   <li>Testar o cliente externo:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl get all --all-namespaces
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl get all --all-namespaces
  NAMESPACE   NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE
  default     service/kubernetes   ClusterIP   10.152.183.1   &lt;none&gt;        443/TCP   6m46s
 </code></pre></div>    </div>
   </li>
   <li>Habilitar o <em>plugins</em> <strong><code class="language-plaintext highlighter-rouge">dns</code></strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ microk8s.enable dns
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ microk8s.enable dns
  Enabling DNS
  Applying manifest
  serviceaccount/coredns created
@@ -531,7 +537,8 @@ ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev microk8s
 </code></pre></div>    </div>
   </li>
   <li>Confirmar que os <em>plugins</em> estão habilitados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ microk8s.status
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ microk8s.status
 microk8s is running
 addons:
 dashboard: disabled
@@ -557,7 +564,7 @@ storage: disabled
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -645,6 +652,53 @@ storage: disabled
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -783,52 +837,6 @@ storage: disabled
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -840,13 +848,15 @@ storage: disabled
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -882,7 +892,7 @@ storage: disabled
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -931,7 +941,8 @@ storage: disabled
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Azure series V: App services - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,22 +345,34 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-5---app-service-plans">Lab 5 - App Service Plans</a><ul><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#deploy-em-uma-vm">Deploy em uma VM</a></li><li><a href="#criaçao-do-serviço-na-azure">Criaçao do serviço na Azure</a></li><li><a href="#configuraçao-do-repositório-git">Configuraçao do repositório git</a></li><li><a href="#deploy-da-aplicaçao">Deploy da aplicaçao</a></li><li><a href="#logging-e-monitoramento">Logging e monitoramento</a></li><li><a href="#deployment-slots">Deployment slots</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-5---app-service-plans">Lab 5 - App Service Plans</a><ul>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#deploy-em-uma-vm">Deploy em uma VM</a></li>
+<li><a href="#cria%C3%A7ao-do-servi%C3%A7o-na-azure">Criaçao do serviço na Azure</a></li>
+<li><a href="#configura%C3%A7ao-do-reposit%C3%B3rio-git">Configuraçao do repositório git</a></li>
+<li><a href="#deploy-da-aplica%C3%A7ao">Deploy da aplicaçao</a></li>
+<li><a href="#logging-e-monitoramento">Logging e monitoramento</a></li>
+<li><a href="#deployment-slots">Deployment slots</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#azure">Serie de artigos</a> sobre Microsoft Azure.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-5---app-service-plans">Lab 5 - App Service Plans</h1>
 
 <p>Em este lab sobre <strong>App Service Plans</strong> aprenderemos alguns conceitos importantes da camada de plataforma da Azure:</p>
 <ul>
-  <li><em>Deploy</em> de aplicações</li>
+  <li>
+<em>Deploy</em> de aplicações</li>
   <li>Plataformas/entornos de execução disponíveis</li>
   <li><em>Logging</em></li>
   <li>Monitoramento</li>
@@ -389,13 +387,15 @@
 <h2 id="pre-reqs">Pre-reqs</h2>
 
 <ul>
-  <li>Uma VM com a imagem <code class="language-plaintext highlighter-rouge">Ubuntu Linux 18.04</code></li>
+  <li>Uma VM com a imagem <code class="language-plaintext highlighter-rouge">Ubuntu Linux 18.04</code>
+</li>
   <li><code class="language-plaintext highlighter-rouge">git</code></li>
   <li><code class="language-plaintext highlighter-rouge">python3</code></li>
   <li><code class="language-plaintext highlighter-rouge">pip3</code></li>
 </ul>
 
-<h2 id="deploy-em-uma-vm"><em>Deploy</em> em uma VM</h2>
+<h2 id="deploy-em-uma-vm">
+<em>Deploy</em> em uma VM</h2>
 
 <ol>
   <li>
@@ -405,29 +405,36 @@
     <p>Logar na VM</p>
   </li>
   <li>Atualizar os repositorios:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt update
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt update
 </code></pre></div>    </div>
   </li>
   <li>Instalar o pip3 (gestor de pacotes do python3):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt install python3-pip -y
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt install python3-pip -y
 </code></pre></div>    </div>
   </li>
   <li>Clonar o repositório:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone https://github.com/josecastillolema/fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> git clone https://github.com/josecastillolema/fiap
 </code></pre></div>    </div>
   </li>
   <li>Navegar ate o diretorio <code class="language-plaintext highlighter-rouge">fiap/net/devops/lab05-paas-app</code>. O diretorio contem os <a href="https://github.com/josecastillolema/fiap/tree/master/net/devops/lab05-paas-app">seguintes arquivos</a>:
     <ul>
-      <li><a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app/application.py"><strong><code class="language-plaintext highlighter-rouge">application.py</code></strong></a>: Um serviço web escrito em Python que usa a biblioteca <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>.</li>
-      <li><a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app/requirements.txt"><strong><code class="language-plaintext highlighter-rouge">requirements.txt</code></strong></a>: As dependências da aplicação. Podem ser instaladas usando <code class="language-plaintext highlighter-rouge">pip</code>, o gestor de dependências do Python.</li>
+      <li>
+<a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app/application.py"><strong><code class="language-plaintext highlighter-rouge">application.py</code></strong></a>: Um serviço web escrito em Python que usa a biblioteca <a href="https://flask.palletsprojects.com/en/1.1.x/">Flask</a>.</li>
+      <li>
+<a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab05-paas-app/requirements.txt"><strong><code class="language-plaintext highlighter-rouge">requirements.txt</code></strong></a>: As dependências da aplicação. Podem ser instaladas usando <code class="language-plaintext highlighter-rouge">pip</code>, o gestor de dependências do Python.</li>
     </ul>
   </li>
   <li>Instalar as dependências:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo pip3 install -r requirements.txt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo pip3 install -r requirements.txt
 </code></pre></div>    </div>
   </li>
   <li>Executar a aplicação:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ FLASK_APP=./application.py FLASK_RUN_HOST=0.0.0.0 flask run &amp;
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ FLASK_APP=./application.py FLASK_RUN_HOST=0.0.0.0 flask run &amp;
   Serving Flask app "./application.py"
   Environment: production
     WARNING: Do not use the development server in a production environment.
@@ -437,7 +444,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Testar o acesso local:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ curl localhost:5000
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ curl localhost:5000
  &lt;h1&gt;Hola FIAP!&lt;/h1&gt;
  MBA! o/
 </code></pre></div>    </div>
@@ -445,7 +453,7 @@
   <li>
     <p>Testar o acesso remoto pela IP pública da VM (lembrando que é necessária a liberacão da porta 5000 no <em>security group</em> da VM):</p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app01.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app01.png" alt=""></p>
   </li>
 </ol>
 
@@ -454,43 +462,47 @@
 <ol>
   <li>
     <p>Acessar o serviço <strong>Web Application</strong>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app02.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app02.png" alt=""></p>
   </li>
   <li>Criar uma nova <em>web application</em>.
     <ul>
-      <li>Runtime: <code class="language-plaintext highlighter-rouge">Python 3.6</code></li>
+      <li>Runtime: <code class="language-plaintext highlighter-rouge">Python 3.6</code>
+</li>
       <li>SKU: <code class="language-plaintext highlighter-rouge">S1</code> ou algum outro SKU que tenha permissão para usar <em>deployment slots</em>
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app03.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app03.png" alt="">
+</li>
     </ul>
   </li>
   <li>
     <p>Revisar a configuração do serviço:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app04.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app04.png" alt=""></p>
   </li>
   <li>
     <p>Aguardar a criação do serviço:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app05.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app05.png" alt=""></p>
   </li>
   <li>
     <p>Acessar a URL do serviço criado:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app06.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app06.png" alt=""></p>
   </li>
   <li>Foi desplegado automaticamente um site de teste:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app07.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app07.png" alt="">
+</li>
 </ol>
 
-<h2 id="configuraçao-do-repositório-git">Configuraçao do repositório <code class="language-plaintext highlighter-rouge">git</code></h2>
+<h2 id="configuraçao-do-repositório-git">Configuraçao do repositório <code class="language-plaintext highlighter-rouge">git</code>
+</h2>
 
 <p>Criaremos um repositório <code class="language-plaintext highlighter-rouge">git</code> local para automatizar o <em>deploy</em> da aplicação.</p>
 
 <ol>
   <li>
     <p>No <em>Deployment center</em>, na aba de configuraçao criar um repositório git local:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app08.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app08.png" alt=""></p>
   </li>
   <li>
     <p>Na aba de credenciais configurar um usuário e senha para poder clonar o repositório:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app09.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app09.png" alt=""></p>
   </li>
 </ol>
 
@@ -500,7 +512,8 @@
 
 <ol>
   <li>Clonar o repositório local criado nos passos anteriores (copiar a URI do repositorio git local no passo anterior) usando as credencias recém criadas:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://fiap-app.scm.azurewebsites.net:443/fiap.git
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ git clone https://fiap-app.scm.azurewebsites.net:443/fiap.git
  Cloning into 'fiap-app'...
  Username for 'https://fiap.scm.azurewebsites.net:443': jlema
  Password for 'https://jlema@fiap.scm.azurewebsites.net:443': 
@@ -508,14 +521,16 @@
 </code></pre></div>    </div>
   </li>
   <li>Copiar os 2 arquivos:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cp fiap/net/devops/lab05-paas-app/* fiap-app
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ cp fiap/net/devops/lab05-paas-app/* fiap-app
     
 $ ls fiap-app
 application.py  requirements.txt
 </code></pre></div>    </div>
   </li>
   <li>Comittar os novos arquivos no repositorio git local da app:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd fiap-app
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ cd fiap-app
     
 $ git status
 On branch master
@@ -638,19 +653,21 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
 </code></pre></div>    </div>
   </li>
   <li>Confirmar que o deploy ocorreu com sucesso:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app10.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app10.png" alt="">
+</li>
 </ol>
 
-<h2 id="logging-e-monitoramento"><em>Logging</em> e monitoramento</h2>
+<h2 id="logging-e-monitoramento">
+<em>Logging</em> e monitoramento</h2>
 
 <ol>
   <li>
     <p>Na descrição da aplicaçao podemos consultar algumas métricas básicas:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app11.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app11.png" alt=""></p>
   </li>
   <li>
     <p>Para fazer <em>troubleshooting</em> da aplicação, se o endereço da mesma for https://fiap.azurewebsites.net/, acessar https://fiap.scm.azurewebsites.net/:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app12.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app12.png" alt=""></p>
   </li>
 </ol>
 
@@ -661,27 +678,27 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
 <ol>
   <li>
     <p>Criar um novo <em>slot</em> para o ambiente de homolgação:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app13.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app13.png" alt=""></p>
   </li>
   <li>
     <p>Confirmar a URL do <em>slot</em> de homologação. Se o endereço da app for https://fiap.azurewebsites.net/, o endereço do ambiente de homologação será https://fiap-homol.azurewebsites.net/
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app14.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app14.png" alt=""></p>
   </li>
   <li>
     <p>Acessar o endereço de homologação e confirmar que Azure fez deploy da aplicação de teste:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app15.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app15.png" alt=""></p>
   </li>
   <li>
     <p>Para fazer <strong>blue-green</strong>, escolher a opçao <strong><em>Swap</em></strong> (Intercambiar):
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app16.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app16.png" alt=""></p>
   </li>
   <li>
     <p>Para fazer o <strong>canary release</strong>, ajustar as porcentagens conforme desejado (usar <em>browsers</em> diferentes para testar):
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app17.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/app17.png" alt=""></p>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -767,6 +784,53 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -905,52 +969,6 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -962,13 +980,15 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1004,7 +1024,7 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1053,7 +1073,8 @@ To https://fiap.scm.azurewebsites.net:443/fiap.git
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

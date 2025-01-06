@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Containers series VII: Kubernetes - Uso - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,25 +345,33 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-7---kubernetes---uso">Lab 7 - Kubernetes - Uso</a><ul><li><a href="#orquestrando-containers">Orquestrando containers</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-7---kubernetes---uso">Lab 7 - Kubernetes - Uso</a><ul><li><a href="#orquestrando-containers">Orquestrando containers</a></li></ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-7---kubernetes---uso">Lab 7 - Kubernetes - Uso</h1>
 
 <h2 id="orquestrando-containers">Orquestrando containers</h2>
 <p>Existem vários recursos dentro de um cluster Kubernetes:</p>
 <ul>
-  <li><strong>pod</strong>: conjunto de um ou mais <em>containers</em></li>
-  <li><strong>service</strong>: cria um <em>endpoint</em> para acessar os <em>pods</em> de uma determinada <em>app</em></li>
-  <li><strong>deployment</strong>: define as propriedades desejadas de uma <em>app</em>
+  <li>
+<strong>pod</strong>: conjunto de um ou mais <em>containers</em>
+</li>
+  <li>
+<strong>service</strong>: cria um <em>endpoint</em> para acessar os <em>pods</em> de uma determinada <em>app</em>
+</li>
+  <li>
+<strong>deployment</strong>: define as propriedades desejadas de uma <em>app</em>
     <ul>
       <li>imagem</li>
       <li>variáveis de entorno</li>
@@ -398,7 +392,8 @@
  </pre>
   </li>
   <li>Conferir as definições do volume persistente:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ cat mysql-pv.yaml</span> 
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat mysql-pv.yaml</span> 
  <span class="s">kind</span><span class="err">:</span> <span class="s">PersistentVolume</span>
  <span class="s">apiVersion</span><span class="err">:</span> <span class="s">v1</span>
  <span class="s">metadata</span><span class="err">:</span>
@@ -428,13 +423,15 @@
 </code></pre></div>    </div>
   </li>
   <li>Criar o volume persistente do banco de dados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl create -f mysql-pv.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl create -f mysql-pv.yaml
  persistentvolume/mysql-pv-volume created
  persistentvolumeclaim/mysql-pv-claim created
 </code></pre></div>    </div>
   </li>
   <li>Conferir as definições do serviço <code class="language-plaintext highlighter-rouge">api-deployment</code>:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ cat api-service.yaml</span>
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat api-service.yaml</span>
  <span class="s">apiVersion</span><span class="err">:</span> <span class="s">v1</span>
  <span class="s">kind</span><span class="err">:</span> <span class="s">Service</span>
  <span class="s">metadata</span><span class="err">:</span>
@@ -448,14 +445,16 @@
 </code></pre></div>    </div>
   </li>
   <li>Criar os serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl create -f mysql-service.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl create -f mysql-service.yaml
  service/mysql created
  $ kubectl create -f api-service.yaml
  service/api-deployment created
 </code></pre></div>    </div>
   </li>
   <li>Conferir as definições do <em>deployment</em> <code class="language-plaintext highlighter-rouge">api-deployment</code>:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ cat api-deployment.yaml</span> 
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat api-deployment.yaml</span> 
  <span class="s">apiVersion</span><span class="err">:</span> <span class="s">apps/v1</span>
  <span class="s">kind</span><span class="err">:</span> <span class="s">Deployment</span>
  <span class="s">metadata</span><span class="err">:</span>
@@ -479,14 +478,16 @@
 </code></pre></div>    </div>
   </li>
   <li>Criar os <em>deployments</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl create -f api-deployment.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl create -f api-deployment.yaml
  deployment.apps/api-deployment created
  $ kubectl create -f mysql-deployment.yaml
  deployment.apps/mysql created
 </code></pre></div>    </div>
   </li>
   <li>Confirmar a criação dos recursos:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get all
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl get all
 NAME                                  READY   STATUS    RESTARTS   AGE
 pod/api-deployment-7bcb964d7c-bmwmx   1/1     Running   0          2m26s
 pod/api-deployment-7bcb964d7c-n6svh   1/1     Running   0          2m26s
@@ -508,17 +509,20 @@ replicaset.apps/mysql-59f74f847d            1         1         1       2m20s
 </code></pre></div>    </div>
   </li>
   <li>Testar a API:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ curl 10.152.183.144:5000
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ curl 10.152.183.144:5000
  Benvido a API FIAP!
 </code></pre></div>    </div>
   </li>
   <li>Testar a conexão da API com o banco de dados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl 10.152.183.144:5000/getDados
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ curl 10.152.183.144:5000/getDados
 [{"id": 1234, "name": "Jose Castillo Lema"}]
 </code></pre></div>    </div>
   </li>
   <li>Escalar o número de replicas da API (<strong><em>scale-up</em></strong>). Para iso, editar o arquivo <strong><em>api-deployment.yaml</em></strong> da seguinte forma:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat api-deployment.yaml</span> 
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="s">$ cat api-deployment.yaml</span> 
 <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">apps/v1</span>
 <span class="na">kind</span><span class="pi">:</span> <span class="s">Deployment</span>
 <span class="na">metadata</span><span class="pi">:</span>
@@ -542,19 +546,22 @@ replicaset.apps/mysql-59f74f847d            1         1         1       2m20s
 </code></pre></div>    </div>
   </li>
   <li>Aplicar os novos parámetros:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl apply -f api-deployment.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl apply -f api-deployment.yaml
 Warning: kubectl apply should be used on resource created by either kubectl create --save-config or kubectl apply
 deployment.apps/api-deployment configured
 </code></pre></div>    </div>
   </li>
   <li>Confirmar o <strong><em>scale-up</em></strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get deployment api-deployment
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl get deployment api-deployment
 NAME             READY   UP-TO-DATE   AVAILABLE   AGE
 api-deployment   6/6     6            6           12s
 </code></pre></div>    </div>
   </li>
   <li>Remover os recursos criados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl delete deployment api-deployment 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl delete deployment api-deployment 
 deployment.apps "api-deployment" deleted
 
 $ kubectl delete deployment mysql
@@ -575,7 +582,7 @@ persistentvolume "mysql-pv-volume" deleted
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -663,6 +670,53 @@ persistentvolume "mysql-pv-volume" deleted
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -801,52 +855,6 @@ persistentvolume "mysql-pv-volume" deleted
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -858,13 +866,15 @@ persistentvolume "mysql-pv-volume" deleted
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -900,7 +910,7 @@ persistentvolume "mysql-pv-volume" deleted
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -949,7 +959,8 @@ persistentvolume "mysql-pv-volume" deleted
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OpenStack series I: Keystone - Identity Manager - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,27 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-1---openstack-keystone">Lab 1 - OpenStack Keystone</a><ul><li><a href="#identity-manager">Identity Manager</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#endpoints">Endpoints</a></li><li><a href="#projetos-usuários-e-róis">Projetos, usuários e róis</a></li><li><a href="#quotas">Quotas</a></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-1---openstack-keystone">Lab 1 - OpenStack Keystone</a><ul>
+<li><a href="#identity-manager">Identity Manager</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#endpoints">Endpoints</a></li>
+<li><a href="#projetos-usu%C3%A1rios-e-r%C3%B3is">Projetos, usuários e róis</a></li>
+<li><a href="#quotas">Quotas</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+<li><a href="#horizon">Horizon</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-1---openstack-keystone">Lab 1 - OpenStack Keystone</h1>
 
@@ -385,12 +382,14 @@
 
 <ol>
   <li>Listar os serviços Linux que compõem o Keystone:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@keystone
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@keystone
 devstack@keystone.service                                                                        loaded active running   Devstack devstack@keystone.service
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@keystone
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@keystone
 ● devstack@keystone.service - Devstack devstack@keystone.service
    Loaded: loaded (/etc/systemd/system/devstack@keystone.service; enabled; vendor preset: enabled)
    Active: active (running) since Thu 2020-10-01 10:39:31 PDT; 3 days ago
@@ -406,7 +405,8 @@ Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: [pid: 914|app: 0|req: 131
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os logs do serviço:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ journalctl -f -u devstack@keystone
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ journalctl -f -u devstack@keystone
 -- Logs begin at Thu 2020-10-01 10:39:16 PDT. --
 Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.policy.backends.rules [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None None] enforce identity:validate_token: {'is_delegated_auth': False, 'access_token_id': None, 'user_id': u'e17c0f6e879c4b8d860ec69a2b28ffff', 'roles': [u'ResellerAdmin', u'admin', u'service'], 'user_domain_id': u'default', 'consumer_id': None, 'trustee_id': None, 'is_domain': False, 'is_admin_project': True, 'trustor_id': None, 'token': &lt;KeystoneToken (audit_id=-ZpKXigzR7eMBVPnVEKdFg, audit_chain_id=-ZpKXigzR7eMBVPnVEKdFg) at 0x7f686de864f0&gt;, 'project_id': u'83667b3fd3964824ae4276cfc8610829', 'trust_id': None, 'project_domain_id': u'default'} {{(pid=914) enforce /opt/stack/keystone/keystone/policy/backends/rules.py:33}}
 Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.common.authorization [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None None] RBAC: Authorization granted {{(pid=914) check_policy /opt/stack/keystone/keystone/common/authorization.py:240}}
@@ -416,11 +416,13 @@ Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.middleware
 </code></pre></div>    </div>
   </li>
   <li>Mostrar o arquivo de configuração:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ less /etc/keystone/keystone.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ less /etc/keystone/keystone.conf
 </code></pre></div>    </div>
   </li>
   <li>Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ source devstack/openrc admin
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ source devstack/openrc admin
 WARNING: setting legacy OS_TENANT_NAME to support cli tools.
     
 $ env | grep OS_
@@ -438,7 +440,8 @@ OS_VOLUME_API_VERSION=2
 </code></pre></div>    </div>
   </li>
   <li>Listar os módulos instalados no OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack service list
 +----------------------------------+-------------+----------------+
 | ID                               | Name        | Type           |
 +----------------------------------+-------------+----------------+
@@ -458,7 +461,8 @@ OS_VOLUME_API_VERSION=2
 </code></pre></div>    </div>
   </li>
   <li>Mostrar todas as opções para um comando determinado do OpenStack (neste caso <code class="language-plaintext highlighter-rouge">openstack service</code>, mas serve para qualquer um):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack service --help
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack service --help
 Command "service" matches:
   service create
   service delete
@@ -478,7 +482,8 @@ Command "service" matches:
 
 <ol>
   <li>Mostrar a saída de um comando de OpenStack em formato estendido (neste caso <code class="language-plaintext highlighter-rouge">openstack service list</code>, mas tem muitos outros que também aceitam):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack service list --long
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack service list --long
 +----------------------------------+-------------+----------------+-----------------------------------+---------+
 | ID                               | Name        | Type           | Description                       | Enabled |
 +----------------------------------+-------------+----------------+-----------------------------------+---------+
@@ -498,7 +503,8 @@ Command "service" matches:
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os <em>endpoints</em> dos módulos instalados no OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack catalog list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack catalog list
 +-------------+----------------+--------------------------------------------------------------------------------+
 | Name        | Type           | Endpoints                                                                      |
 +-------------+----------------+--------------------------------------------------------------------------------+
@@ -554,7 +560,8 @@ Command "service" matches:
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informação sobre um <em>endpoint</em> específico:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack catalog show identity
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack catalog show identity
 +-----------+------------------------------------------+
 | Field     | Value                                    |
 +-----------+------------------------------------------+
@@ -575,7 +582,8 @@ Command "service" matches:
 
 <ol>
   <li>Listar os projetos:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack project list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack project list
 +----------------------------------+--------------------+
 | ID                               | Name               |
 +----------------------------------+--------------------+
@@ -591,7 +599,8 @@ Command "service" matches:
 </code></pre></div>    </div>
   </li>
   <li>Criar um projeto e conferir que foi criado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack project create --description "Projeto FIAP" fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack project create --description "Projeto FIAP" fiap
 +-------------+----------------------------------+
 | Field       | Value                            |
 +-------------+----------------------------------+
@@ -624,7 +633,8 @@ $ openstack project list  | grep fiap
 </code></pre></div>    </div>
   </li>
   <li>Mostrar o projeto recém criado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack project show fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack project show fiap
 +-------------+----------------------------------+
 | Field       | Value                            |
 +-------------+----------------------------------+
@@ -639,7 +649,8 @@ $ openstack project list  | grep fiap
 </code></pre></div>    </div>
   </li>
   <li>Criar um usuário:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack user create --password-prompt aluno-fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack user create --password-prompt aluno-fiap
 User Password:
 Repeat User Password:
 +---------------------+----------------------------------+
@@ -655,7 +666,8 @@ Repeat User Password:
 </code></pre></div>    </div>
   </li>
   <li>Listar os róis:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack role list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack role list
 +----------------------------------+-----------------+
 | ID                               | Name            |
 +----------------------------------+-----------------+
@@ -670,11 +682,13 @@ Repeat User Password:
 </code></pre></div>    </div>
   </li>
   <li>Associar o usuário com o projeto como membro:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack role add --project fiap --user aluno-fiap Member
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack role add --project fiap --user aluno-fiap Member
 </code></pre></div>    </div>
   </li>
   <li>Conferir a designação do rol:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack role assignment list --project fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack role assignment list --project fiap
 +----------------------------------+----------------------------------+-------+----------------------------------+--------+-----------+
 | Role                             | User                             | Group | Project                          | Domain | Inherited |
 +----------------------------------+----------------------------------+-------+----------------------------------+--------+-----------+
@@ -688,7 +702,8 @@ Repeat User Password:
 
 <ol>
   <li>Mostrar as quotas do projeto:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack quota show fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack quota show fiap
 +-----------------------+----------------------------------+
 | Field                 | Value                            |
 +-----------------------+----------------------------------+
@@ -735,7 +750,8 @@ Repeat User Password:
 </code></pre></div>    </div>
   </li>
   <li>Atualizar a quota de <em>cores</em> e comprovar que foi aplicada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack quota set --cores 30 fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack quota set --cores 30 fiap
     
 $ openstack quota show fiap
 +-----------------------+----------------------------------+
@@ -792,7 +808,8 @@ $ openstack quota show fiap | grep cores
 
 <ol>
   <li>Deletar o projeto e usuário:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack user delete aluno-fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack user delete aluno-fiap
     
 $ openstack project delete fiap
 </code></pre></div>    </div>
@@ -805,20 +822,23 @@ $ openstack project delete fiap
   <li>Refazer o mesmo processo via Horizon Dashboard:
     <ul>
       <li>Listar <em>endpoints</em>
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/keystone1.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/keystone1.png" alt="">
+</li>
       <li>Listar projetos</li>
       <li>Criar projeto</li>
       <li>Criar usuário
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/keystone2.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/keystone2.png" alt="">
+</li>
       <li>Associar usuário com projeto
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/keystone3.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/keystone3.png" alt="">
+</li>
       <li>Mostrar quotas de um projeto</li>
       <li>Mudar quotas de um projeto</li>
     </ul>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -904,6 +924,53 @@ $ openstack project delete fiap
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1042,52 +1109,6 @@ $ openstack project delete fiap
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1099,13 +1120,15 @@ $ openstack project delete fiap
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1141,7 +1164,7 @@ $ openstack project delete fiap
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1190,7 +1213,8 @@ $ openstack project delete fiap
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OVN-Kubernetes Multiple External Gateway local setup - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,14 +345,21 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#kind-setup">Kind setup</a></li><li><a href="#resource-creation">Resource creation</a></li><li><a href="#environment-check">Environment check</a><ul><li><a href="#pod-readiness-probes">Pod readiness probes</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#kind-setup">Kind setup</a></li>
+<li><a href="#resource-creation">Resource creation</a></li>
+<li>
+<a href="#environment-check">Environment check</a><ul><li><a href="#pod-readiness-probes">Pod readiness probes</a></li></ul>
+</li>
+</ul>
             </nav>
           </aside>
         
         <p>Steps to set up a local environment with OVN Kubernetes Multiple External Gateway capability (also known as Intelligent CNI 2.0 or iCNI2.0) and a <a href="https://frrouting.org/">FRRRouting (FRR)</a> pod acting as external gateway.</p>
 
-<p><img src="/assets/images/posts/2023-02-06-icni2.png" alt="" /></p>
+<p><img src="/assets/images/posts/2023-02-06-icni2.png" alt=""></p>
 
 <h2 id="kind-setup">Kind setup</h2>
 
@@ -379,8 +372,10 @@ $ ./kind.sh --disable-snat-multiple-gws --multi-network-enable
 
 <p>Let’s take a look at the options:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">disable-snat-multiple-gws</code>: Disable SNAT for multiple gws</li>
-  <li><code class="language-plaintext highlighter-rouge">multi-network-enable</code>: Installs <a href="https://github.com/k8snetworkplumbingwg/multus-cni">Multus-CNI</a> on the cluster</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">disable-snat-multiple-gws</code>: Disable SNAT for multiple gws</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">multi-network-enable</code>: Installs <a href="https://github.com/k8snetworkplumbingwg/multus-cni">Multus-CNI</a> on the cluster</li>
 </ul>
 
 <p>After some minutes, we will have a three node cluster ready for use:</p>
@@ -408,7 +403,8 @@ $ ./kind.sh --install-cni-plugins --disable-snat-multiple-gws --multi-network-en
 
 <p>Let’s take a look at the new option introduced by the <a href="https://github.com/ovn-org/ovn-kubernetes/pull/3417">PR</a>:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">install-cni-plugins</code>: Installs additional CNI network plugins</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">install-cni-plugins</code>: Installs additional CNI network plugins</li>
 </ul>
 
 <h2 id="resource-creation">Resource creation</h2>
@@ -1030,6 +1026,53 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/newyear25/" rel="permalink">Happy new year!
 </a>
       
@@ -1153,52 +1196,6 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1210,13 +1207,15 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1252,7 +1251,7 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1301,7 +1300,8 @@ $ kubectl describe po ext-gw2 -n frr | grep Ready
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

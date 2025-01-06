@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[PT] Heat - Introdução - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,8 +345,21 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#pré-requisitos">Pré requisitos</a></li><li><a href="#descrição-do-template">Descrição do template</a></li><li><a href="#execução-do-template">Execução do template</a><ul><li><a href="#via-horizon">Via Horizon</a></li><li><a href="#via-cli">Via CLI</a></li><li><a href="#via-api-rest">Via API REST</a></li></ul></li><li><a href="#resultado-da-execução">Resultado da execução</a></li><li><a href="#conclusão">Conclusão</a></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#pr%C3%A9-requisitos">Pré requisitos</a></li>
+<li><a href="#descri%C3%A7%C3%A3o-do-template">Descrição do template</a></li>
+<li>
+<a href="#execu%C3%A7%C3%A3o-do-template">Execução do template</a><ul>
+<li><a href="#via-horizon">Via Horizon</a></li>
+<li><a href="#via-cli">Via CLI</a></li>
+<li><a href="#via-api-rest">Via API REST</a></li>
+</ul>
+</li>
+<li><a href="#resultado-da-execu%C3%A7%C3%A3o">Resultado da execução</a></li>
+<li><a href="#conclus%C3%A3o">Conclusão</a></li>
+</ul>
             </nav>
           </aside>
         
@@ -392,13 +391,15 @@
 <h2 id="pré-requisitos">Pré requisitos</h2>
 
 <ul>
-  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="language-plaintext highlighter-rouge">admin</code></li>
+  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="language-plaintext highlighter-rouge">admin</code>
+</li>
   <li>Quota suficiente na nossa conta para instanciar os recursos solicitados</li>
 </ul>
 
 <p>No repositório <a href="https://github.com/josecastillolema/churrops.git">https://github.com/josecastillolema/churrops.git</a> podem fazer <em>download</em> do arquivo heat.yaml, o <em>template</em> que usaremos durante este artigo.</p>
 
-<h2 id="descrição-do-template">Descrição do <em>template</em></h2>
+<h2 id="descrição-do-template">Descrição do <em>template</em>
+</h2>
 <p>As duas primeras linhas mostram a versão em uso do formato do template e uma descrição do conteúdo do mesmo:</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">heat_template_version</span><span class="pi">:</span> <span class="s">2016-04-08</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">Servidor web para churrops!</span>
@@ -510,33 +511,36 @@
       <span class="s">Esta URL e a URL "externa" que pode ser usada para acessar o servidor WEB.</span>
 </code></pre></div></div>
 
-<h2 id="execução-do-template">Execução do <em>template</em></h2>
+<h2 id="execução-do-template">Execução do <em>template</em>
+</h2>
 
 <h3 id="via-horizon">Via Horizon</h3>
 <p>Primeiro, na aba <code class="language-plaintext highlighter-rouge">Orquestration - Stacks</code> criamos o nosso <em>stack</em> e setamos os parâmetros opcionais que foram definidos no template.
-<img src="/assets/images/posts/2017-12-20-heat-introducao/01.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/01.png" alt=""></p>
 
 <p>A continuação podemos ver a topologia diversos recursos sendo criados (os recursos em verde já estão disponíveis).
-<img src="/assets/images/posts/2017-12-20-heat-introducao/02.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/02.png" alt=""></p>
 
 <p>Um <em>overview</em> da nossa pilha, com o <em>output</em> que definimos no <em>template</em>.
-<img src="/assets/images/posts/2017-12-20-heat-introducao/03.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/03.png" alt=""></p>
 
 <p>Os recursos que estão sendo criados.
-<img src="/assets/images/posts/2017-12-20-heat-introducao/04.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/04.png" alt=""></p>
 
 <p>E por último todos os eventos relacionados com esses recursos (criação, atualização, modificação, deleção, etc.).
-<img src="/assets/images/posts/2017-12-20-heat-introducao/05.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/05.png" alt=""></p>
 
 <h3 id="via-cli">Via CLI</h3>
 <ul>
   <li>Criação:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>openstack stack create churrops-stack -t heat.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>openstack stack create churrops-stack -t heat.yaml
 openstack stack create churrops-stack -t heat.yaml
 </code></pre></div>    </div>
   </li>
   <li>Para acompanhar a criação:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>watch openstack stack event list churrops-stack
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>watch openstack stack event list churrops-stack
 
 </code></pre></div>    </div>
   </li>
@@ -545,15 +549,15 @@ openstack stack create churrops-stack -t heat.yaml
 <h3 id="via-api-rest">Via API REST</h3>
 <p>Como falamos na introdução, o Heat fornece uma API REST nativa do OpenStack e uma API de consulta compatível com o CloudFormation. Neste caso usaremos a API REST nativa.</p>
 
-<p><img src="/assets/images/posts/2017-12-20-heat-introducao/06.png" alt="" /></p>
+<p><img src="/assets/images/posts/2017-12-20-heat-introducao/06.png" alt=""></p>
 
 <h2 id="resultado-da-execução">Resultado da execução</h2>
 
 <p>Independentemente do método escolhido (Horizon, CLI ou API REST), uma vez que o <em>stack</em> transicione ao estado <code class="language-plaintext highlighter-rouge">created</code> (não deveria demorar muito mais de 2 minutos) poderemos ver a infra instanciada.
-<img src="/assets/images/posts/2017-12-20-heat-introducao/07.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/07.png" alt=""></p>
 
 <p>Em alguns minutos (enquanto <strong>cloud-init</strong> instala e configura o servidor web Apache), poderemos acessar ao nosso servidor pela IP pública.
-<img src="/assets/images/posts/2017-12-20-heat-introducao/07.png" alt="" /></p>
+<img src="/assets/images/posts/2017-12-20-heat-introducao/07.png" alt=""></p>
 
 <h2 id="conclusão">Conclusão</h2>
 <p>Neste artigo introduzimos o Heat, o orquestrador do OpenStack. Vimos como mantém todas as funcionalidades de outros IaCs, como Terraform, mas é integrado de uma forma mais nativa no OpenStack e podemos accesá-lo via <em>dashboard</em>	, linha de comandos ou API REST (compatível com a AWS CloudFormation).</p>
@@ -644,6 +648,53 @@ openstack stack create churrops-stack -t heat.yaml
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -782,52 +833,6 @@ openstack stack create churrops-stack -t heat.yaml
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -839,13 +844,15 @@ openstack stack create churrops-stack -t heat.yaml
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -881,7 +888,7 @@ openstack stack create churrops-stack -t heat.yaml
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -930,7 +937,8 @@ openstack stack create churrops-stack -t heat.yaml
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

@@ -1474,4 +1474,10 @@ var store = [{
         "tags": ["en","es","redhat","pt"],
         "url": "/newyear25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Playing with Podman crun backends: Wasm(Edge) and libkrun",
+        "excerpt":"Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman. $ podman info | grep crun -A 2 name: crun package: crun-1.19.1-1.fc41.x86_64 path: /usr/bin/crun version: |- crun version 1.19.1 commit: 3e32a70c93f5aa5fea69b50256cca7fd4aa23c80 rundir: /run/user/1000/crun spec: 1.0.0 +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +LIBKRUN +WASM:wasmedge +YAJL...","categories": [],
+        "tags": ["dev","en","redhat"],
+        "url": "/podman-wasm-libkrun/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

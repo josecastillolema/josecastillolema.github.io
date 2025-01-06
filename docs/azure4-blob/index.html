@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Azure series IV: Blob storage - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,60 +345,68 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-4---blob-storage">Lab 4 - Blob storage</a><ul><li><a href="#criação-do-container">Criação do container</a></li><li><a href="#acessando-o-objeto">Acessando o objeto</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-4---blob-storage">Lab 4 - Blob storage</a><ul>
+<li><a href="#cria%C3%A7%C3%A3o-do-container">Criação do container</a></li>
+<li><a href="#acessando-o-objeto">Acessando o objeto</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#azure">Serie de artigos</a> sobre Microsoft Azure.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-4---blob-storage">Lab 4 - Blob storage</h1>
 
 <p>Em este lab sobre <strong>Azure Blob Storage</strong> aprenderemos alguns conceitos importantes do armazenamento de objetos:</p>
 <ul>
-  <li>Criação de <em>containers</em></li>
+  <li>Criação de <em>containers</em>
+</li>
   <li>Criação de objetos (<em>blobs</em>)</li>
   <li>Controle de permissões de acesso</li>
   <li>Hospedagem de sites estáticos</li>
 </ul>
 
-<h2 id="criação-do-container">Criação do <em>container</em></h2>
+<h2 id="criação-do-container">Criação do <em>container</em>
+</h2>
 
 <ol>
   <li>
     <p>Accessar o serviço <strong>Storage account</strong>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob01.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob01.png" alt=""></p>
   </li>
   <li>
     <p>Criar um novo <em>storage account</em> de tipo <em>blob storage</em> e com redundância local (o nome deve ser único na Azure):
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob02.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob02.png" alt=""></p>
   </li>
   <li>
     <p>Habilitar acesso público:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob03.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob03.png" alt=""></p>
   </li>
   <li>
     <p>Revisar e confirmar a criaçao da conta de armazenamento.</p>
   </li>
   <li>
     <p>Aguardar a criação da conta:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob05.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob05.png" alt=""></p>
   </li>
   <li>
     <p>Na descriçao da conta, acessar a aba de <strong><em>Containers</em></strong>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob06.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob06.png" alt=""></p>
   </li>
   <li>
     <p>Criar um novo container, de nome <code class="language-plaintext highlighter-rouge">imgs</code> e com acesso público:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob07.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob07.png" alt=""></p>
   </li>
   <li>
     <p>Dentro do container, fazer upload de uma imagem qualquer:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob08.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob08.png" alt=""></p>
   </li>
 </ol>
 
@@ -421,15 +415,15 @@
 <ol>
   <li>
     <p>Na descrição do objeto, copiar a URL:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob09.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob09.png" alt=""></p>
   </li>
   <li>
     <p>Accessar a imagem pela URL do objeto:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob10.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/blob10.png" alt=""></p>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -513,6 +507,53 @@
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -651,52 +692,6 @@
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -708,13 +703,15 @@
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -750,7 +747,7 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -799,7 +796,8 @@
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

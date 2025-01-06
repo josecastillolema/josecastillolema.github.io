@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>DevConf.CZ 2023 - Writing a K8s Operator for Knative Functions - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,12 +345,32 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#about">About</a></li><li><a href="#schedule">Schedule</a></li><li><a href="#speakers">Speakers</a></li><li><a href="#links">Links</a></li><li><a href="#workshop">Workshop</a></li><li><a href="#physics-devconf">physics-devconf</a><ul><li><a href="#index">Index</a></li><li><a href="#goals">Goals</a></li><li><a href="#deploy-the-environment-vm">Deploy the environment (VM)</a></li><li><a href="#access-the-environment">Access the environment</a></li><li><a href="#create-a-new-python-function-and-invoke-it">Create a new (python) function and invoke it</a></li><li><a href="#fork-the-base-operator-github-repository-and-deploy-locally">Fork the base operator github repository and deploy locally</a></li><li><a href="#solution">Solution</a></li><li><a href="#links-1">Links</a></li></ul></li><li><a href="#slides">Slides</a></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#about">About</a></li>
+<li><a href="#schedule">Schedule</a></li>
+<li><a href="#speakers">Speakers</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#workshop">Workshop</a></li>
+<li>
+<a href="#physics-devconf">physics-devconf</a><ul>
+<li><a href="#index">Index</a></li>
+<li><a href="#goals">Goals</a></li>
+<li><a href="#deploy-the-environment-vm">Deploy the environment (VM)</a></li>
+<li><a href="#access-the-environment">Access the environment</a></li>
+<li><a href="#create-a-new-python-function-and-invoke-it">Create a new (python) function and invoke it</a></li>
+<li><a href="#fork-the-base-operator-github-repository-and-deploy-locally">Fork the base operator github repository and deploy locally</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#links-1">Links</a></li>
+</ul>
+</li>
+<li><a href="#slides">Slides</a></li>
+</ul>
             </nav>
           </aside>
         
-        <p><a href="https://www.devconf.info/cz/"><img src="/assets/images/posts/2023-05-23-devconf23/1.png" alt="" /></a></p>
+        <p><a href="https://www.devconf.info/cz/"><img src="/assets/images/posts/2023-05-23-devconf23/1.png" alt=""></a></p>
 
 <h1 id="about">About</h1>
 
@@ -380,7 +386,7 @@
 
 <p><a href="https://devconfcz2023.sched.com/event/1MYpJ/writing-a-k8s-operator-for-knative-functions"><strong>Writing a K8s Operator for Knative Functions</strong></a></p>
 
-<p><a href="https://research.redhat.com/blog/2023/06/09/red-hat-research-engineers-will-lead-the-workshop-on-k8s-operator-for-faas-at-devconf-cz-2023/"><img src="/assets/images/posts/2023-05-23-devconf23/2.png" alt="" /></a></p>
+<p><a href="https://research.redhat.com/blog/2023/06/09/red-hat-research-engineers-will-lead-the-workshop-on-k8s-operator-for-faas-at-devconf-cz-2023/"><img src="/assets/images/posts/2023-05-23-devconf23/2.png" alt=""></a></p>
 
 <p>Serverless and Function as a Service (FaaS) are getting more and more attention from customers and developers as a way to develop, run and manage applications functionality without the burden of infrastructure related knowledge. All big cloud providers offer them already, e.g., AWS Lambda, Google Cloud Functions or Microsoft Azure Functions. One of the most relevant upstream projects for serverless is Knative, which recently added support for functions (create, build, and deploy) on top of K8s clusters.</p>
 
@@ -388,12 +394,16 @@
 
 <p><strong><em>Friday June 16, 2023 • 2:15pm - 3:35pm CEST</em></strong></p>
 
-<p><img src="/assets/images/posts/2023-05-23-devconf23/3.jpeg" alt="" /></p>
+<p><img src="/assets/images/posts/2023-05-23-devconf23/3.jpeg" alt=""></p>
 
 <h1 id="speakers">Speakers</h1>
 <ul>
-  <li><a href="https://devconfcz2023.sched.com/speaker/ltomasbo">Luis Tomas Bolivar</a> - Software Engineer at <strong>Red Hat</strong></li>
-  <li><a href="https://devconfcz2023.sched.com/speaker/jlema">Jose Castillo Lema</a> - Software Engineer at <strong>Red Hat</strong></li>
+  <li>
+<a href="https://devconfcz2023.sched.com/speaker/ltomasbo">Luis Tomas Bolivar</a> - Software Engineer at <strong>Red Hat</strong>
+</li>
+  <li>
+<a href="https://devconfcz2023.sched.com/speaker/jlema">Jose Castillo Lema</a> - Software Engineer at <strong>Red Hat</strong>
+</li>
 </ul>
 
 <h1 id="links">Links</h1>
@@ -414,7 +424,8 @@
 
 <h2 id="index">Index</h2>
 <ul>
-  <li><a href="#physics-devconf">physics-devconf</a>
+  <li>
+<a href="#physics-devconf">physics-devconf</a>
     <ul>
       <li><a href="#index">Index</a></li>
       <li><a href="#goals">Goals</a></li>
@@ -466,8 +477,10 @@ Bringing machine 'default' up with 'libvirt' provider...
   <li>Wget</li>
   <li>Cosign</li>
   <li>Kubectl</li>
-  <li><a href="https://knative.dev/docs/client/install-kn/">Kn</a> - the Knative client</li>
-  <li><a href="https://knative.dev/docs/functions/install-func/">Func</a> - Knative functions</li>
+  <li>
+<a href="https://knative.dev/docs/client/install-kn/">Kn</a> - the Knative client</li>
+  <li>
+<a href="https://knative.dev/docs/functions/install-func/">Func</a> - Knative functions</li>
   <li>Kind</li>
   <li><a href="https://sdk.operatorframework.io/docs/installation/">Operator-sdk</a></li>
 </ul>
@@ -476,11 +489,13 @@ Bringing machine 'default' up with 'libvirt' provider...
 
 <ol>
   <li>Login into the virtual machine just created:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ vagrant ssh
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ vagrant ssh
 </code></pre></div>    </div>
   </li>
   <li>Check if all the pods are running:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl get pods -A
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl get pods -A
  NAMESPACE            NAME                                         READY   STATUS    RESTARTS   AGE
  contour-external     contour-56cfd44877-gmzdd                     1/1     Running     0          2m30s
  contour-external     contour-56cfd44877-wj844                     1/1     Running     0          2m30s
@@ -518,7 +533,8 @@ Bringing machine 'default' up with 'libvirt' provider...
 </code></pre></div>    </div>
   </li>
   <li>Check if the local registry is running:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker ps
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker ps
  CONTAINER ID   IMAGE                  COMMAND                  CREATED         STATUS         PORTS                                                                          NAMES
  59be051ba43c   registry:2             "/entrypoint.sh /etc…"   2 minutes ago   Up 2 minutes   127.0.0.1:50000-&gt;5000/tcp                                                      func-registry
  caf78811a6a9   kindest/node:v1.24.6   "/usr/local/bin/entr…"   4 minutes ago   Up 4 minutes   127.0.0.1:39609-&gt;6443/tcp, 127.0.0.1:80-&gt;30080/tcp, 127.0.0.1:443-&gt;30443/tcp   func-control-plane
@@ -530,19 +546,22 @@ Bringing machine 'default' up with 'libvirt' provider...
 
 <ol>
   <li>Create the Knative function:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ func create -l python test-hw
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ func create -l python test-hw
  Created python function in /home/vagrant/test-hw
 </code></pre></div>    </div>
   </li>
   <li>Take a look around and change the <code class="language-plaintext highlighter-rouge">func.py</code> code as follows:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd test-hw
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ cd test-hw
 
  $ ls
  app.sh  func.py  func.yaml  Procfile  README.md  requirements.txt  test_func.py
 
  $ cat func.py
 </code></pre></div>    </div>
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="nn">parliament</span> <span class="kn">import</span> <span class="n">Context</span>
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="kn">from</span> <span class="nn">parliament</span> <span class="kn">import</span> <span class="n">Context</span>
  <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Request</span>
  <span class="kn">import</span> <span class="nn">json</span>
 
@@ -569,25 +588,29 @@ Bringing machine 'default' up with 'libvirt' provider...
 </code></pre></div>    </div>
   </li>
   <li>Build (and push) the function to the internal registry:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ export FUNC_REGISTRY=localhost:50000/kn-user
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ export FUNC_REGISTRY=localhost:50000/kn-user
  $ func build --push
  🙌 Function image built: localhost:50000/kn-user/test-hw:latest
  🕕 Pushing function image to the registry "localhost:50000" using the "" user credentials
 </code></pre></div>    </div>
   </li>
   <li>Check that the image has been correctly pushed into the internal registry:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ curl localhost:50000/v2/_catalog
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ curl localhost:50000/v2/_catalog
  {"repositories":["kn-user/test-hw"]}
 </code></pre></div>    </div>
   </li>
   <li>Deploy the function to the kind cluster:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ func deploy --build=false --push=false
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ func deploy --build=false --push=false
  ✅ Function deployed in namespace "default" and exposed at URL:
       http://test-hw.default.127.0.0.1.sslip.io
 </code></pre></div>    </div>
   </li>
   <li>Check that the function has been correctly deployed. A new <strong>Knative service (ksvc)</strong> object is created, which triggers the Knative controllers to create the other k8s objects (deployment and route). After approximately one minute minute the deployment is scaled down to 0 replicas if not used to spare resources:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ kubectl get ksvc
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ kubectl get ksvc
  NAME      URL                                         LATESTCREATED   LATESTREADY     READY   REASON
  test-hw   http://test-hw.default.127.0.0.1.sslip.io   test-hw-00001   test-hw-00001   True
 
@@ -604,12 +627,14 @@ Bringing machine 'default' up with 'libvirt' provider...
 </code></pre></div>    </div>
   </li>
   <li>Invoke the function:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ curl http://test-hw.default.127.0.0.1.sslip.io
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ curl http://test-hw.default.127.0.0.1.sslip.io
 DevConf.cz 2023!
 </code></pre></div>    </div>
   </li>
   <li>Check that the deployment has been scaled up:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get deploy
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl get deploy
 NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
 test-hw-00001-deployment   1/1     1            1           3s
 </code></pre></div>    </div>
@@ -623,11 +648,13 @@ test-hw-00001-deployment   1/1     1            1           3s
     <p>Fork <a href="https://github.com/luis5tb/devconf-knative-operator">this github repository</a> into your github account: <code class="language-plaintext highlighter-rouge">https://github.com/luis5tb/devconf-knative-operator</code></p>
   </li>
   <li>Clone your fork locally inside the VM (change <strong>YOUR_USER</strong> by yours):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/YOUR_USER/devconf-knative-operator.git
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ git clone https://github.com/YOUR_USER/devconf-knative-operator.git
 </code></pre></div>    </div>
 
     <p>In case you want to start an operator from scratch do the next instead (change <strong>YOUR_USER</strong> by yours):</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir devconf-knative-operator
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ mkdir devconf-knative-operator
 $ cd devconf-knative-operator
 
 # Create base operator
@@ -639,13 +666,17 @@ $ operator-sdk create api --group knf --version v1alpha1 --kind KnativeFunction 
   </li>
   <li>There are three important files to consider:
     <ul>
-      <li><strong>controllers/knativefunction_controller.go</strong>: implements the operator reconcile loop</li>
-      <li><strong>api/v1alpha1/knativefunction_types.go</strong>: the KnativeFunction CRD definition</li>
-      <li><strong>config/samples/knf_v1alpha1_knativefunction.yaml</strong>: an example KnativeFunction CRD</li>
+      <li>
+<strong>controllers/knativefunction_controller.go</strong>: implements the operator reconcile loop</li>
+      <li>
+<strong>api/v1alpha1/knativefunction_types.go</strong>: the KnativeFunction CRD definition</li>
+      <li>
+<strong>config/samples/knf_v1alpha1_knativefunction.yaml</strong>: an example KnativeFunction CRD</li>
     </ul>
   </li>
   <li>Let’s take a look at <strong>api/v1alpha1/knativefunction_types.go</strong>, as you can see it defines an example <code class="language-plaintext highlighter-rouge">Foo</code> field:
-    <div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">...</span>
+    <div class="language-golang highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="o">...</span>
 <span class="k">type</span> <span class="n">KnativeFunctionSpec</span> <span class="k">struct</span> <span class="p">{</span>
     <span class="c">// Foo is an example field of KnativeFunction. Edit knativefunction_types.go to remove/update</span>
     <span class="n">Foo</span> <span class="kt">string</span> <span class="s">`json:"foo,omitempty"`</span>
@@ -657,7 +688,8 @@ $ operator-sdk create api --group knf --version v1alpha1 --kind KnativeFunction 
     <p>Let’s modify the operator reconcyle loop in <strong>controllers/knativefunction_controller.go</strong>:</p>
 
     <p>Before:</p>
-    <div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">KnativeFunctionReconciler</span><span class="p">)</span> <span class="n">Reconcile</span><span class="p">(</span><span class="n">ctx</span> <span class="n">context</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">req</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Request</span><span class="p">)</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">.</span><span class="n">Result</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+    <div class="language-golang highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">KnativeFunctionReconciler</span><span class="p">)</span> <span class="n">Reconcile</span><span class="p">(</span><span class="n">ctx</span> <span class="n">context</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">req</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Request</span><span class="p">)</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">.</span><span class="n">Result</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">_</span> <span class="o">=</span> <span class="n">log</span><span class="o">.</span><span class="n">FromContext</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
 
     <span class="c">// TODO(user): your logic here</span>
@@ -666,7 +698,8 @@ $ operator-sdk create api --group knf --version v1alpha1 --kind KnativeFunction 
 <span class="p">}</span>
 </code></pre></div>    </div>
     <p>After:</p>
-    <div class="language-golang highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">KnativeFunctionReconciler</span><span class="p">)</span> <span class="n">Reconcile</span><span class="p">(</span><span class="n">ctx</span> <span class="n">context</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">req</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Request</span><span class="p">)</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">.</span><span class="n">Result</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
+    <div class="language-golang highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="k">func</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span><span class="n">KnativeFunctionReconciler</span><span class="p">)</span> <span class="n">Reconcile</span><span class="p">(</span><span class="n">ctx</span> <span class="n">context</span><span class="o">.</span><span class="n">Context</span><span class="p">,</span> <span class="n">req</span> <span class="n">ctrl</span><span class="o">.</span><span class="n">Request</span><span class="p">)</span> <span class="p">(</span><span class="n">ctrl</span><span class="o">.</span><span class="n">Result</span><span class="p">,</span> <span class="kt">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">log</span> <span class="o">:=</span> <span class="n">log</span><span class="o">.</span><span class="n">FromContext</span><span class="p">(</span><span class="n">ctx</span><span class="p">)</span>
 
     <span class="n">function</span> <span class="o">:=</span> <span class="o">&amp;</span><span class="n">knfv1alpha1</span><span class="o">.</span><span class="n">KnativeFunction</span><span class="p">{}</span>
@@ -676,7 +709,8 @@ $ operator-sdk create api --group knf --version v1alpha1 --kind KnativeFunction 
 <span class="p">}</span>
 </code></pre></div>    </div>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd devconf-knative-operator
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ cd devconf-knative-operator
 
 # Make code modifications
 $ go mod tidy
@@ -688,7 +722,8 @@ $ make generate
     <p>Test your code by deploying it. You will need two terminals, <strong>T1</strong> and <strong>T2</strong>.</p>
 
     <p>[<strong>T1</strong>] First option is simply doing <code class="language-plaintext highlighter-rouge">make install run</code>:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make install run
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ make install run
 test -s /home/vagrant/devconf-knative-operator/bin/controller-gen &amp;&amp; /home/vagrant/devconf-knative-operator/bin/controller-gen --version | grep -q v0.11.1 || \
 GOBIN=/home/vagrant/devconf-knative-operator/bin go install sigs.k8s.io/controller-tools/cmd/controller-gen@v0.11.1
 /home/vagrant/devconf-knative-operator/bin/controller-gen rbac:roleName=manager-role crd webhook paths="./..." output:crd:artifacts:config=config/crd/bases
@@ -710,7 +745,8 @@ I0616 08:11:27.582792   10567 request.go:682] Waited for 1.041837981s due to cli
 </code></pre></div>    </div>
 
     <p>[<strong>T1</strong>] Second option, if you want to deploy your controller as a container too:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># First time only
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code># First time only
 # Edit config/manager/manager.yaml so that it does not try to download the image if present
 # Add, after "image: controller:latest": imagePullPolicy: IfNotPresent
 
@@ -732,7 +768,8 @@ $ kubectl logs -f -n devconf-knative-operator-system POD
 </code></pre></div>    </div>
   </li>
   <li>[<strong>T2</strong>] In a <strong>second terminal</strong> create a sample CRD:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="s">$ cat &lt;&lt;EOF | kubectl apply -f -</span>
 <span class="nn">---</span>
 <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">knf.example.com/v1alpha1</span>
 <span class="na">kind</span><span class="pi">:</span> <span class="s">KnativeFunction</span>
@@ -750,7 +787,8 @@ $ kubectl logs -f -n devconf-knative-operator-system POD
 </code></pre></div>    </div>
   </li>
   <li>[<strong>T1</strong>] In the <strong>first terminal</strong> you should see something like:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2023-06-16T08:12:54Z	INFO	Received a request to create a new knativefunction	{"controller": "knativefunction", "controllerGroup": "knf.example.com", "controllerKind": "KnativeFunction", "KnativeFunction": {"name":"knativefunction-sample","namespace":"default"}, "namespace": "default", "name": "knativefunction-sample", "reconcileID": "9be34733-bca6-4134-bf6d-8f0ed69106bd", "Foo =": "test"}
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>2023-06-16T08:12:54Z	INFO	Received a request to create a new knativefunction	{"controller": "knativefunction", "controllerGroup": "knf.example.com", "controllerKind": "KnativeFunction", "KnativeFunction": {"name":"knativefunction-sample","namespace":"default"}, "namespace": "default", "name": "knativefunction-sample", "reconcileID": "9be34733-bca6-4134-bf6d-8f0ed69106bd", "Foo =": "test"}
 </code></pre></div>    </div>
   </li>
   <li>
@@ -759,7 +797,8 @@ $ kubectl logs -f -n devconf-knative-operator-system POD
     <p>You will need to interact with the K8s API from the controller (<code class="language-plaintext highlighter-rouge">knativefunction_controller.go</code>). <a href="https://github.com/operator-framework/operator-sdk/tree/master/testdata/go/v3/memcached-operator">This example repo</a> contains a Memcached operator that ilustrates how to create K8s objects from the controller (i.e. a Deployment).</p>
 
     <p>Make code changes, undeploy and iterate (looping between step 14 and 19 until needed). If the first option was used, just stop the make install run, if the containerized option was chosen, then the next:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl delete -f config/samples/knf_v1alpha1_knativefunction.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl delete -f config/samples/knf_v1alpha1_knativefunction.yaml
 $ make undeploy
 </code></pre></div>    </div>
   </li>
@@ -771,7 +810,8 @@ $ make undeploy
   <li>
     <p>Deploy a CR to force the controller to reconcile and get the function deployed. First you need to edit the <code class="language-plaintext highlighter-rouge">config/samples/knf_v1alpha1_knativefunction.yaml</code> with the desired options:</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Get the previously created function docker image information, with digest
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code># Get the previously created function docker image information, with digest
 $ kubectl get nodes -oyaml | grep test-hw
   - localhost:50000/kn-user/test-hw@sha256:79c4568eedb9f3366c6ee6b72980eec2aff9a80796328888e10f834c00beb51f
 
@@ -796,7 +836,8 @@ spec:
 </code></pre></div>    </div>
 
     <p>And then deploy/update/remote it with:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Create the CR to force reconcile loop for function registration
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code># Create the CR to force reconcile loop for function registration
 $ kubectl apply -f config/samples/knf_v1alpha1_knativefunction.yaml
 
 # Update the config/samples/knf_v1alpha1_knativefunction.yaml, for instance changing the minScale to 0 and re-apply:
@@ -808,7 +849,8 @@ $ kubectl delete -f config/samples/knf_v1alpha1_knativefunction.yaml
   </li>
   <li>
     <p>To check the operator did its job, beside seeing the <code class="language-plaintext highlighter-rouge">make install run</code> logs, you can check as before:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ kubectl get ksvc
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ kubectl get ksvc
 NAME           URL                                                LATESTCREATED        LATESTREADY     READY   REASON
 test-hw        http://test-hw.default.127.0.0.1.sslip.io          test-hw-00001        test-hw-00001   True
 test-function  http://test-function.default.127.0.0.1.sslip.io    test-function-00001  test-function-00001      True 
@@ -960,6 +1002,53 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/newyear25/" rel="permalink">Happy new year!
 </a>
       
@@ -1083,52 +1172,6 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1140,13 +1183,15 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1182,7 +1227,7 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1231,7 +1276,8 @@ test-function-00001-deployment-77f8b87654-6krps   2/2     Running   0          6
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   
