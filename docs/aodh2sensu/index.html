@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Importing alarms from OpenStack Aodh into Sensu Core - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,24 +345,42 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#aodh2sensu">aodh2sensu</a><ul><li><a href="#install">Install</a><ul><li><a href="#via-requirements-file">Via requirements file</a></li><li><a href="#via-pipenv-pipfile">Via pipenv pipfile</a></li></ul></li><li><a href="#use">Use</a></li><li><a href="#docker">Docker</a></li><li><a href="#systemd">Systemd</a><ul><li><a href="#normal">Normal</a></li><li><a href="#docker-1">Docker</a></li></ul></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#aodh2sensu">aodh2sensu</a><ul>
+<li>
+<a href="#install">Install</a><ul>
+<li><a href="#via-requirements-file">Via requirements file</a></li>
+<li><a href="#via-pipenv-pipfile">Via pipenv pipfile</a></li>
+</ul>
+</li>
+<li><a href="#use">Use</a></li>
+<li><a href="#docker">Docker</a></li>
+<li>
+<a href="#systemd">Systemd</a><ul>
+<li><a href="#normal">Normal</a></li>
+<li><a href="#docker-1">Docker</a></li>
+</ul>
+</li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
-        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=aodh2sensu&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=aodh2sensu&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=aodh2sensu&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=aodh2sensu&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=aodh2sensu&type=star&count=true&size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=aodh2sensu&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
-<p><img src="https://img.shields.io/github/license/josecastillolema/aodh2sensu" alt="GitHub" />
-<img src="https://img.shields.io/github/languages/count/josecastillolema/aodh2sensu" alt="GitHub language count" />
-<img src="https://img.shields.io/github/languages/top/josecastillolema/aodh2sensu" alt="GitHub top language" />
-<img src="https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/aodh2sensu" alt="GitHub Pipenv locked Python version" />
-<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/flask" alt="GitHub Pipenv locked dependency version" />
-<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/requests" alt="GitHub Pipenv locked dependency version" />
-<img src="https://img.shields.io/github/workflow/status/josecastillolema/aodh2sensu/CI" alt="GitHub Workflow Status" />
-<img src="https://github.com/josecastillolema/aodh2sensu/workflows/Python%20application/badge.svg" alt="Python application" />
-<img src="https://github.com/josecastillolema/aodh2sensu/workflows/CI/badge.svg" alt="CI" /></p>
+<p><img src="https://img.shields.io/github/license/josecastillolema/aodh2sensu" alt="GitHub">
+<img src="https://img.shields.io/github/languages/count/josecastillolema/aodh2sensu" alt="GitHub language count">
+<img src="https://img.shields.io/github/languages/top/josecastillolema/aodh2sensu" alt="GitHub top language">
+<img src="https://img.shields.io/github/pipenv/locked/python-version/josecastillolema/aodh2sensu" alt="GitHub Pipenv locked Python version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/flask" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/pipenv/locked/dependency-version/josecastillolema/aodh2sensu/requests" alt="GitHub Pipenv locked dependency version">
+<img src="https://img.shields.io/github/workflow/status/josecastillolema/aodh2sensu/CI" alt="GitHub Workflow Status">
+<img src="https://github.com/josecastillolema/aodh2sensu/workflows/Python%20application/badge.svg" alt="Python application">
+<img src="https://github.com/josecastillolema/aodh2sensu/workflows/CI/badge.svg" alt="CI"></p>
 
 <h1 id="aodh2sensu">aodh2sensu</h1>
 
@@ -407,15 +411,18 @@ Options:
   <li>
     <p>Run the <code class="language-plaintext highlighter-rouge">aodh2sensu</code> proxy. <code class="language-plaintext highlighter-rouge">sensu_url</code> must point to the sensu server. The proxy must be run in a server reachable from OpenStack controllers and with access to the Sensu Server (for example, the Sensu Server itself).</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ./aodh2sensu.py
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ ./aodh2sensu.py
 </code></pre></div>    </div>
     <p>or alternatively via pipenv:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ pipenv shell
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ pipenv shell
  $ ./aodh2sensu.py
 </code></pre></div>    </div>
   </li>
   <li>Create an Aodh alarm from OpenStack side. This example alarm will trigger an HTTP POST message to the <code class="language-plaintext highlighter-rouge">aodh2sensu</code> proxy whenever the cpu utilization of <code class="language-plaintext highlighter-rouge">$INSTANCE_ID</code> goes above 20%:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack alarm create \
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack alarm create \
  --name cpu_hi4 \
  --type gnocchi_resources_threshold \
  --description 'CPU High Average' \
@@ -434,7 +441,8 @@ Options:
     <p>where <code class="language-plaintext highlighter-rouge">x.y.z.w</code> is the IP address of the server running <code class="language-plaintext highlighter-rouge">aodh2sensu</code> proxy.</p>
   </li>
   <li>Confirm the alarm transitions from <code class="language-plaintext highlighter-rouge">insufficient_data</code> state to <code class="language-plaintext highlighter-rouge">ok</code> state:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack alarm list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
@@ -443,7 +451,8 @@ Options:
 </code></pre></div>    </div>
   </li>
   <li>Generate load in the instance above the 20% threeshold, and wait for the alarm to transitition to <code class="language-plaintext highlighter-rouge">alarm</code> state:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack alarm list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
@@ -453,11 +462,12 @@ Options:
   </li>
   <li>
     <p>Check the alarm from the Uchiwa dashboard:
-<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot1.png" alt="Screenshot 1 of the Uchiwa dashboard" />
-<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot2.png" alt="Screenshoto 2 of the Uchiwa dashboard" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot1.png" alt="Screenshot 1 of the Uchiwa dashboard">
+<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot2.png" alt="Screenshoto 2 of the Uchiwa dashboard"></p>
   </li>
   <li>Stop the load generation in the instance, wait for the alarm to transition back to <code class="language-plaintext highlighter-rouge">ok</code> state:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack alarm list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack alarm list
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
  | alarm_id                             | type                                       | name           | state             | severity | enabled |
  +--------------------------------------+--------------------------------------------+----------------+-------------------+----------+---------+
@@ -467,10 +477,11 @@ Options:
   </li>
   <li>
     <p>Check the new state of the sensu alert:
-<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot3.png" alt="Screenshot 3 of the Uchiwa dashboard" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot3.png" alt="Screenshot 3 of the Uchiwa dashboard"></p>
   </li>
   <li>Confirm it has disappeared from the list of active alerts:
-<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot4.png" alt="Screenshot 4 of the Uchiwa dashboard" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/aodh2sensu/master/doc/img/screenshot4.png" alt="Screenshot 4 of the Uchiwa dashboard">
+</li>
 </ul>
 
 <h2 id="docker">Docker</h2>
@@ -528,7 +539,7 @@ Options:
 <span class="py">WantedBy</span><span class="p">=</span><span class="s">multi-user.target</span>
 </code></pre></div></div>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -612,6 +623,53 @@ Options:
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -750,52 +808,6 @@ Options:
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -807,13 +819,15 @@ Options:
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -849,7 +863,7 @@ Options:
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -898,7 +912,8 @@ Options:
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

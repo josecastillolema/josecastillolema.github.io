@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Containers series III: Docker Compose - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,26 +345,44 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-3---docker-compose">Lab 3 - Docker Compose</a><ul><li><a href="#executando-servicos">Executando servicos</a><ul><li><a href="#instalação">Instalação</a></li><li><a href="#uso">Uso</a></li><li><a href="#validação">Validação</a></li><li><a href="#clean-up">Clean-up</a></li></ul></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-3---docker-compose">Lab 3 - Docker Compose</a><ul><li>
+<a href="#executando-servicos">Executando servicos</a><ul>
+<li><a href="#instala%C3%A7%C3%A3o">Instalação</a></li>
+<li><a href="#uso">Uso</a></li>
+<li><a href="#valida%C3%A7%C3%A3o">Validação</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+</ul>
+</li></ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-3---docker-compose">Lab 3 - Docker Compose</h1>
 
 <h2 id="executando-servicos">Executando servicos</h2>
 <p><a href="https://docs.docker.com/compose/">Docker Compose</a> permite definir serviços (que a sua vez são formados por containers) e a comunicação entre os mesmos. Esta comunicação é implementada via DNS nos containers. Além disso, no arquivo de configuração do Docker Compose (<strong><em>docker-compose.yml</em></strong>) é possível definir:</p>
 <ul>
-  <li><strong>variáveis de entorno</strong>: comando <code class="language-plaintext highlighter-rouge">environment</code></li>
-  <li><strong>mapeamento de portas</strong>: comando <code class="language-plaintext highlighter-rouge">ports</code></li>
-  <li><strong>persistência de dados</strong>: comando <code class="language-plaintext highlighter-rouge">volumes</code></li>
-  <li><strong>dependências entre os serviços</strong>: comandos <code class="language-plaintext highlighter-rouge">links</code> e <code class="language-plaintext highlighter-rouge">depends on</code></li>
+  <li>
+<strong>variáveis de entorno</strong>: comando <code class="language-plaintext highlighter-rouge">environment</code>
+</li>
+  <li>
+<strong>mapeamento de portas</strong>: comando <code class="language-plaintext highlighter-rouge">ports</code>
+</li>
+  <li>
+<strong>persistência de dados</strong>: comando <code class="language-plaintext highlighter-rouge">volumes</code>
+</li>
+  <li>
+<strong>dependências entre os serviços</strong>: comandos <code class="language-plaintext highlighter-rouge">links</code> e <code class="language-plaintext highlighter-rouge">depends on</code>
+</li>
 </ul>
 
 <p>Vamos trabalhar com dois terminais abertos (<strong>T1</strong> e <strong>T2</strong>).</p>
@@ -390,7 +394,8 @@
     <p><strong>[T1]</strong> Instalação do Docker Compose:</p>
 
     <p>[<strong>Ubuntu</strong>]</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt  install docker-compose -y
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt  install docker-compose -y
  Reading package lists... Done
  Building dependency tree       
  Reading state information... Done
@@ -619,7 +624,8 @@
 </code></pre></div>    </div>
 
     <p>[<strong>Amazon Linux</strong>]</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
    % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                   Dload  Upload   Total   Spent    Left  Speed
  100   152  100   152    0     0   4252      0 --:--:-- --:--:-- --:--:--  4342
@@ -632,11 +638,14 @@
 
     <p>[<strong>Amazon Linux</strong>]
  Instalar o git:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo yum install -y git
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo yum install -y git
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Clonar <a href="https://github.com/josecastillolema/fiap">este repositório</a> e navegar ate a pasta <strong><code class="language-plaintext highlighter-rouge">/fiap/bdt/microservices</code></strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap.git
+  <li>
+<strong>[T1]</strong> Clonar <a href="https://github.com/josecastillolema/fiap">este repositório</a> e navegar ate a pasta <strong><code class="language-plaintext highlighter-rouge">/fiap/bdt/microservices</code></strong>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap.git
  $ cd fiap/bdt/microservices/compose
  $ pwd
  /home/ubuntu/fiap/bdt/microservices/compose
@@ -645,11 +654,16 @@
 
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Mostrar o conteúdo do arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>. São definidos dois serviços:
+  <li>
+<strong>[T1]</strong> Mostrar o conteúdo do arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>. São definidos dois serviços:
     <ul>
-      <li><strong>api</strong>: a API escrita em Python, que tem dependência com (consulta) o serviço <em>mysql</em></li>
-      <li><strong>mysql</strong>: o servidor MySQL, com mapeamento de portas (porta 3306), persistência de dados (pasta <code class="language-plaintext highlighter-rouge">/var/lib/mysql</code>) e algumas variáveis de entorno
-        <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ cat docker-compose.yml</span> 
+      <li>
+<strong>api</strong>: a API escrita em Python, que tem dependência com (consulta) o serviço <em>mysql</em>
+</li>
+      <li>
+<strong>mysql</strong>: o servidor MySQL, com mapeamento de portas (porta 3306), persistência de dados (pasta <code class="language-plaintext highlighter-rouge">/var/lib/mysql</code>) e algumas variáveis de entorno
+        <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cat docker-compose.yml</span> 
  <span class="s">version</span><span class="err">:</span> <span class="s1">'</span><span class="s">2'</span>
  <span class="na">services</span><span class="pi">:</span>
 <span class="na">api</span><span class="pi">:</span>
@@ -676,8 +690,10 @@
 <h3 id="uso">Uso</h3>
 
 <ol>
-  <li><strong>[T1]</strong> Criar os serviços definidos no arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker-compose up
+  <li>
+<strong>[T1]</strong> Criar os serviços definidos no arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker-compose up
  Creating network "compose_default" with the default driver
  Building mysql
  Step 1/3 : FROM mysql
@@ -812,7 +828,8 @@
     <p><strong>[T1]</strong> (Opcional / Alternativa ao passo 4)</p>
 
     <p>O comando anterior pode ser executado com a opção <strong><code class="language-plaintext highlighter-rouge">-d</code></strong>. De esta forma os containers são executados no <em>background</em>, e não será necessário usar dois terminais. Porém, temos menos visibilidade no que está acontecendo nos containers:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker-compose up -d
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker-compose up -d
  Creating network "compose_default" with the default driver
  Creating compose_mysql_1 ... 
  Creating compose_mysql_1 ... done
@@ -825,8 +842,10 @@
 <h3 id="validação">Validação</h3>
 
 <ol>
-  <li><strong>[T2]</strong> Em um segundo terminal, confirmar que os serviços do Docker Compose foram criados corretamente. E necessário navegar ate pasta que contém o arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd fiap/bdt/microservices/compose/
+  <li>
+<strong>[T2]</strong> Em um segundo terminal, confirmar que os serviços do Docker Compose foram criados corretamente. E necessário navegar ate pasta que contém o arquivo <strong><code class="language-plaintext highlighter-rouge">docker-compose.yml</code></strong>.
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ cd fiap/bdt/microservices/compose/
  $ pwd
  /home/ubuntu/fiap/bdt/microservices/compose
  $ docker-compose ps
@@ -836,25 +855,33 @@
  compose_mysql_1   docker-entrypoint.sh mysqld   Up      0.0.0.0:3306-&gt;3306/tcp, 33060/tcp
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Confirmar que os containers foram criados corretamente:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker ps
+  <li>
+<strong>[T2]</strong> Confirmar que os containers foram criados corretamente:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker ps
  CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS                               NAMES
  6d7277694bc3        compose_api         "./api.py"               2 minutes ago       Up About a minute (healthy)   0.0.0.0:4000-&gt;5000/tcp              compose_api_1
  349228f10355        compose_mysql       "docker-entrypoint.s…"   2 minutes ago       Up 2 minutes                  0.0.0.0:3306-&gt;3306/tcp, 33060/tcp   compose_mysql_1
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Testar a API:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ curl localhost:4000
+  <li>
+<strong>[T2]</strong> Testar a API:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ curl localhost:4000
  Benvido a API FIAP!
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Testar a conexão da API com o banco de dados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ curl localhost:4000/getDados
+  <li>
+<strong>[T2]</strong> Testar a conexão da API com o banco de dados:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ curl localhost:4000/getDados
  [{"id": 1234, "name": "Jose Castillo Lema"}]
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Conferir a configuração de DNS, usando o ID do container <em>compose_api</em> obtido no passo <strong>7</strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker exec 6d7277694bc3 ping -c 3 mysql
+  <li>
+<strong>[T2]</strong> Conferir a configuração de DNS, usando o ID do container <em>compose_api</em> obtido no passo <strong>7</strong>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker exec 6d7277694bc3 ping -c 3 mysql
 PING mysql (172.18.0.2) 56(84) bytes of data.
 64 bytes from compose_mysql_1.compose_default (172.18.0.2): icmp_seq=1 ttl=64 time=0.073 ms
 64 bytes from compose_mysql_1.compose_default (172.18.0.2): icmp_seq=2 ttl=64 time=0.070 ms
@@ -870,8 +897,10 @@ rtt min/avg/max/mdev = 0.070/0.071/0.073/0.009 ms
 <h3 id="clean-up"><em>Clean-up</em></h3>
 
 <ol>
-  <li><strong>[T2]</strong> Remover os serviços (e os containers):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker-compose down
+  <li>
+<strong>[T2]</strong> Remover os serviços (e os containers):
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker-compose down
 Stopping compose_api_1   ... done
 Stopping compose_mysql_1 ... done
 Removing compose_api_1   ... done
@@ -881,7 +910,7 @@ Removing network compose_default
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -971,6 +1000,53 @@ Removing network compose_default
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1109,52 +1185,6 @@ Removing network compose_default
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1166,13 +1196,15 @@ Removing network compose_default
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1208,7 +1240,7 @@ Removing network compose_default
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1257,7 +1289,8 @@ Removing network compose_default
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

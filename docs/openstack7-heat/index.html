@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OpenStack series VII: Heat - Orchestration Service - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,25 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-7---openstack-heat">Lab 7 - OpenStack Heat</a><ul><li><a href="#orchestration-service">Orchestration Service</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#stacks">Stacks</a></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-7---openstack-heat">Lab 7 - OpenStack Heat</a><ul>
+<li><a href="#orchestration-service">Orchestration Service</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#stacks">Stacks</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+<li><a href="#horizon">Horizon</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-7---openstack-heat">Lab 7 - OpenStack Heat</h1>
 
@@ -383,12 +378,14 @@
 
 <ol>
   <li>Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
  WARNING: setting legacy OS_TENANT_NAME to support cli tools.
 </code></pre></div>    </div>
   </li>
   <li>Conferir que o Heat foi instalado no OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack service list
  +----------------------------------+-------------+----------------+
  | ID                               | Name        | Type           |
  +----------------------------------+-------------+----------------+
@@ -408,7 +405,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informação sobre o <em>endpoint</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack catalog show heat
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack catalog show heat
  +-----------+--------------------------------------------------------------------------------+
  | Field     | Value                                                                          |
  +-----------+--------------------------------------------------------------------------------+
@@ -426,14 +424,16 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar os serviços Linux que compõem o Heat:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ systemctl | grep devstack@h
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ systemctl | grep devstack@h
  devstack@h-api-cfn.service                                            loaded active running   Devstack devstack@h-api-cfn.service
  devstack@h-api.service                                                loaded active running   Devstack devstack@h-api.service
  devstack@h-eng.service                                                loaded active running   Devstack devstack@h-eng.service
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ systemctl status devstack@h*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ systemctl status devstack@h*
  ● devstack@h-api.service - Devstack devstack@h-api.service
     Loaded: loaded (/etc/systemd/system/devstack@h-api.service; enabled; vendor preset: enabled)
     Active: active (running) since Mon 2020-10-26 15:56:06 PDT; 1 day 20h ago
@@ -467,11 +467,13 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os <em>logs</em> do serviço:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ journalctl -u devstack@h-eng
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ journalctl -u devstack@h-eng
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os arquivos de configuração:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ less /etc/heat/heat.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ less /etc/heat/heat.conf
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -480,7 +482,8 @@
 
 <ol>
   <li>Baixar o <em>template</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap
  Cloning into 'fiap'...
  remote: Enumerating objects: 10, done.
  remote: Counting objects: 100% (10/10), done.
@@ -492,7 +495,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir o <em>stack</em> que vai ser criado:
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">$ cd fiap/cld/openstack/lab07-heat/</span>
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="s">$ cd fiap/cld/openstack/lab07-heat/</span>
     
  <span class="s">$ cat heat.yaml</span>
  <span class="s">heat_template_version</span><span class="err">:</span> <span class="s">2016-04-08</span>
@@ -574,7 +578,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Criar um <em>stack</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack stack create -t heat.yaml fiap-stack --parameter image=cirros-0.3.5-x86_64-disk --parameter private_network=private --parameter flavor=m.fiap --parameter public_network=public
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack stack create -t heat.yaml fiap-stack --parameter image=cirros-0.3.5-x86_64-disk --parameter private_network=private --parameter flavor=m.fiap --parameter public_network=public
 +---------------------+--------------------------------------+
 | Field               | Value                                |
 +---------------------+--------------------------------------+
@@ -589,7 +594,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar ate que fique em estado de <code class="language-plaintext highlighter-rouge">CREATE_COMPLATE</code> (pode demorar uns minutos):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ watch openstack stack list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ watch openstack stack list
 +--------------------------------------+------------+----------------------------------+-----------------+----------------------+--------------+
 | ID                                   | Stack Name | Project                          | Stack Status    | Creation Time        | Updated Time |
 +--------------------------------------+------------+----------------------------------+-----------------+----------------------+--------------+
@@ -598,7 +604,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar o <em>stack</em>, e conferir o <em>output</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack stack show fiap-stack
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack stack show fiap-stack
 +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------+
 | Field                 | Value                                                                                                                             |
 +-----------------------+-----------------------------------------------------------------------------------------------------------------------------------+
@@ -639,7 +646,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar os recursos que foram criados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack stack resource list fiap-stack
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack stack resource list fiap-stack
 +---------------+--------------------------------------+----------------------------+-----------------+----------------------+
 | resource_name | physical_resource_id                 | resource_type              | resource_status | updated_time         |
 +---------------+--------------------------------------+----------------------------+-----------------+----------------------+
@@ -651,7 +659,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar a VM, conferir que tem um <em>floating</em> IP assignado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server list
 +--------------------------------------+--------------------------------+--------+---------------------------------------------------------------------+--------------------------+--------+
 | ID                                   | Name                           | Status | Networks                                                            | Image                    | Flavor |
 +--------------------------------------+--------------------------------+--------+---------------------------------------------------------------------+--------------------------+--------+
@@ -665,7 +674,8 @@
 
 <ol>
   <li>Deletar o <em>stack</em> e conferir que a VM foi deletada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack stack delete fiap-stack
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack stack delete fiap-stack
 Are you sure you want to delete this stack(s) [y/N]? y
     
 $ openstack server list
@@ -678,24 +688,27 @@ $ openstack server list
 <ol>
   <li>Refazer o mesmo processo via Horizon Dashboard:
     <ul>
-      <li>Criação de <em>stack</em></li>
-      <li>Update de <em>stack</em></li>
-      <li>Remoção de <em>stack</em></li>
+      <li>Criação de <em>stack</em>
+</li>
+      <li>Update de <em>stack</em>
+</li>
+      <li>Remoção de <em>stack</em>
+</li>
     </ul>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat1.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat1.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat2.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat2.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat3.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat3.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat4.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat4.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat5.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/heat5.png" alt=""></p>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -783,6 +796,53 @@ $ openstack server list
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -921,52 +981,6 @@ $ openstack server list
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -978,13 +992,15 @@ $ openstack server list
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1020,7 +1036,7 @@ $ openstack server list
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1069,7 +1085,8 @@ $ openstack server list
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

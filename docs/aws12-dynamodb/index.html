@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>AWS series XII: DynamoDB - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,28 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-8---aws-dynamodb">Lab 8 - AWS DynamoDB</a><ul><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#criando-o-db-no-dynamodb">Criando o DB no DynamoDB</a></li><li><a href="#accessando-via-código-python">Accessando via código python</a><ul><li><a href="#usando-o-arquivo-de-credenciais">Usando o arquivo de credenciais</a></li><li><a href="#usando-iam-roles-recomendado">Usando IAM roles (recomendado)</a></li></ul></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-8---aws-dynamodb">Lab 8 - AWS DynamoDB</a><ul>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#criando-o-db-no-dynamodb">Criando o DB no DynamoDB</a></li>
+<li>
+<a href="#accessando-via-c%C3%B3digo-python">Accessando via código python</a><ul>
+<li><a href="#usando-o-arquivo-de-credenciais">Usando o arquivo de credenciais</a></li>
+<li><a href="#usando-iam-roles-recomendado">Usando IAM roles (recomendado)</a></li>
+</ul>
+</li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#aws">Serie de artigos</a> sobre Amazon Web Services.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-8---aws-dynamodb">Lab 8 - AWS DynamoDB</h1>
 
@@ -376,7 +374,8 @@
 <ul>
   <li>Criação de tabelas</li>
   <li>Inserção/consulta de dados via console</li>
-  <li>Inserção/consulta via código <code class="language-plaintext highlighter-rouge">python</code></li>
+  <li>Inserção/consulta via código <code class="language-plaintext highlighter-rouge">python</code>
+</li>
 </ul>
 
 <p>Aproveitaremos para ver alguns conceitos importantes sobre <a href="https://aws.amazon.com/pt/iam/"><strong>Identity and Access Management (IAM)</strong></a>:</p>
@@ -400,10 +399,11 @@
   </li>
   <li>
     <p>No console da AWS Academy, accessar as credenciais da conta para acesso programático:
- <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d1.png" alt="" /></p>
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d1.png" alt=""></p>
   </li>
   <li>Copiar as credenciais no arquivo <code class="language-plaintext highlighter-rouge">~/.aws/credentials</code> dentro da VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ cat ~/.aws/credentials 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  $ cat ~/.aws/credentials 
   [default]
   aws_access_key_id=&lt;copy here&gt;
   aws_secret_access_key=&lt;copy here&gt;
@@ -411,7 +411,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Configuramos a região correta (ignorar o resto dos campos):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ aws configure
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ aws configure
  AWS Access Key ID [****************Q5QG]: 
  AWS Secret Access Key [****************aqWs]: 
  Default region name [None]: us-east-1
@@ -419,7 +420,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar VMs (em formato <code class="language-plaintext highlighter-rouge">json</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances
  {
      "Reservations": [
          {
@@ -642,7 +644,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar VMs (em formato tabela):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances --output table
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances --output table
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
  |                                                                        DescribeInstances                                                                       |
  +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -862,53 +865,59 @@
   </li>
   <li>
     <p>Criar uma nova tabela:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d2.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d2.png" alt=""></p>
   </li>
   <li>
     <p>Configurar o nome da tabela e a chave primaria da mesma:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d3.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d3.png" alt=""></p>
   </li>
   <li>
     <p>Aguardar a criação da tabela:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d4.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d4.png" alt=""></p>
   </li>
   <li>
     <p>Na aba <code class="language-plaintext highlighter-rouge">Items</code>, adicionar um novo item:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d5.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d5.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d5_2.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d5_2.png" alt=""></p>
   </li>
   <li>
     <p>Confirmar a criação do item:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d6.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d6.png" alt=""></p>
   </li>
 </ol>
 
-<h2 id="accessando-via-código-python">Accessando via código <code class="language-plaintext highlighter-rouge">python</code></h2>
+<h2 id="accessando-via-código-python">Accessando via código <code class="language-plaintext highlighter-rouge">python</code>
+</h2>
 
 <h3 id="usando-o-arquivo-de-credenciais">Usando o arquivo de credenciais</h3>
 
 <ol>
   <li>Na VM, instalar o <code class="language-plaintext highlighter-rouge">git</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo yum install -y git
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo yum install -y git
 </code></pre></div>    </div>
   </li>
   <li>Clonar o repostiorio das aulas:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap.git
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap.git
 </code></pre></div>    </div>
   </li>
   <li>Navegar ate a pasta dos códigos de este lab:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cd fiap/shift/multicloud/lab08-paas-dynamo/
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ cd fiap/shift/multicloud/lab08-paas-dynamo/
 </code></pre></div>    </div>
   </li>
   <li>Conferir o código:
     <ul>
-      <li>Carrega a tabela <code class="language-plaintext highlighter-rouge">Alunos</code> da <em>region</em> <code class="language-plaintext highlighter-rouge">us-east-1</code></li>
+      <li>Carrega a tabela <code class="language-plaintext highlighter-rouge">Alunos</code> da <em>region</em> <code class="language-plaintext highlighter-rouge">us-east-1</code>
+</li>
       <li>Faz um <em>scan</em> de todos os dados da tabela</li>
       <li>Insere um novo aluno</li>
     </ul>
 
-    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+    <div class="language-python highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
 <span class="kn">import</span> <span class="nn">boto3</span>
 
 <span class="n">dynamodb</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="n">resource</span><span class="p">(</span><span class="s">'dynamodb'</span><span class="p">,</span> <span class="n">region_name</span><span class="o">=</span><span class="s">'us-east-1'</span><span class="p">)</span>
@@ -943,11 +952,13 @@
 </code></pre></div>    </div>
   </li>
   <li>Instalar as dependências:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ pip3 install boto3
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ pip3 install boto3
 </code></pre></div>    </div>
   </li>
   <li>Rodar o código:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python3 dynamodb.py 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ python3 dynamodb.py 
 
  Testando scan:
  [{'mail': 'rm234472@fiap.com.br', 'nome': 'Jonas Kahnwald', 'RM': 'RM234472', 'tlfne': Decimal('11636229987')}, {'mail': 'rm338132@fiap.com.br', 'nome': 'Joao Lopez', 'RM': 'RM338132', 'tfne': Decimal('11981041293')}]
@@ -966,18 +977,21 @@
 </code></pre></div>    </div>
   </li>
   <li>No console do DynamoDB, conferir que o novo aluno foi inserido:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d7.png" alt="" /></li>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d7.png" alt="">
+</li>
 </ol>
 
 <h3 id="usando-iam-roles-recomendado">Usando IAM <em>roles</em> (recomendado)</h3>
 
 <ol>
   <li>Remover o arquivo de credenciais:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm -rf ~/.aws
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ rm -rf ~/.aws
 </code></pre></div>    </div>
   </li>
   <li>Tentar rodar de novo o código (deberia falhar, pois não estamos mais autenticados):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python3 dynamodb.py 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ python3 dynamodb.py 
 
 Testando scan:
 Traceback (most recent call last):
@@ -1017,10 +1031,11 @@ botocore.exceptions.NoCredentialsError: Unable to locate credentials
 </code></pre></div>    </div>
   </li>
   <li>Nas <strong>contas da AWS Academy</strong>, basta nexar o <em>role</em> <code class="language-plaintext highlighter-rouge">LabInstanceProfile</code> na VM e rodar de novo o código (deberia funcionar):
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam7.png" alt="" /></li>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam7.png" alt="">
+</li>
 </ol>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam9.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam9.png" alt=""></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
 $ python3 dynamodb.py 
@@ -1045,44 +1060,45 @@ Iserindo aluno:
 <ol>
   <li>
     <p>Nas <strong>contas “normais” da AWS</strong> seguir os seguintes passos. Acessar o serviço <strong>IAM</strong>
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam0.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam0.png" alt=""></p>
   </li>
   <li>
     <p>Criar um novo <em>role</em>:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam1.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam1.png" alt=""></p>
   </li>
   <li>
     <p>Escolher EC2 como serviço que vai utilizar o novo <em>role</em>:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam2.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam2.png" alt=""></p>
   </li>
   <li>
     <p>Anexar a <em>policy</em> <code class="language-plaintext highlighter-rouge">AmazonDynamoDBFullAccess</code> no novo <em>role</em>:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam3.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam3.png" alt=""></p>
   </li>
   <li>
     <p>Configurar <em>tags</em>:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam4.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam4.png" alt=""></p>
   </li>
   <li>
     <p>Revisar as configurações e confirmar a criação do <em>role</em>:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam5.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam5.png" alt=""></p>
   </li>
 </ol>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam6.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam6.png" alt=""></p>
 
 <ol>
   <li>
     <p>No console do EC2, anexar o novo <em>role</em> na VM:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam7.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam7.png" alt=""></p>
   </li>
   <li>
     <p>Seleccionar o <em>role</em> que acabamos de criar:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam8.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/iam8.png" alt=""></p>
   </li>
   <li>
     <p>Tentar rodar de novo o código (deberia funcionar):</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python3 dynamodb.py 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ python3 dynamodb.py 
 
 Testando scan:
 [{'mail': 'rm234472@fiap.com.br', 'nome': 'Jonas Kahnwald', 'RM': 'RM234472', 'tfne': Decimal('11636229987')}, {'mail': 'rm338132@fiap.com.br', 'nome': 'Joao Lopez', 'RM': 'RM338132', 'tfne': Decimal('11981041293')}]
@@ -1102,7 +1118,7 @@ Iserindo aluno:
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -1188,6 +1204,53 @@ Iserindo aluno:
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1326,52 +1389,6 @@ Iserindo aluno:
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1383,13 +1400,15 @@ Iserindo aluno:
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1425,7 +1444,7 @@ Iserindo aluno:
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1474,7 +1493,8 @@ Iserindo aluno:
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

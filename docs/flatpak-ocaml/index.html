@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>How to Flatpak OCaml applications - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,14 +345,49 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#how-to-flatpak-an-ocaml-application">How to Flatpak an OCaml application</a><ul><li><a href="#creating-a-hello-world-cli-application">Creating a hello world CLI application</a><ul><li><a href="#flatpak-manifest">Flatpak manifest</a></li><li><a href="#install-and-run-the-application">Install and run the application</a></li></ul></li><li><a href="#creating-a-simple-gtk-program">Creating a simple GTK program</a><ul><li><a href="#preparations">Preparations</a><ul><li><a href="#import-gtk2-library">Import GTK2 library</a></li><li><a href="#wrapper-script">Wrapper script</a></li></ul></li><li><a href="#building-from-sources">Building from sources</a><ul><li><a href="#flatpak-manifest-1">Flatpak manifest</a></li><li><a href="#install-and-run-the-application-1">Install and run the application</a></li></ul></li><li><a href="#building-with-opam">Building with opam</a><ul><li><a href="#source-files">Source files</a></li><li><a href="#generate-flatpak-manifest-code">Generate Flatpak manifest code</a></li><li><a href="#flatpak-manifest-2">Flatpak manifest</a></li><li><a href="#install-and-run-the-application-2">Install and run the application</a></li></ul></li></ul></li><li><a href="#publish-the-application">Publish the application</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#how-to-flatpak-an-ocaml-application">How to Flatpak an OCaml application</a><ul>
+<li>
+<a href="#creating-a-hello-world-cli-application">Creating a hello world CLI application</a><ul>
+<li><a href="#flatpak-manifest">Flatpak manifest</a></li>
+<li><a href="#install-and-run-the-application">Install and run the application</a></li>
+</ul>
+</li>
+<li>
+<a href="#creating-a-simple-gtk-program">Creating a simple GTK program</a><ul>
+<li>
+<a href="#preparations">Preparations</a><ul>
+<li><a href="#import-gtk2-library">Import GTK2 library</a></li>
+<li><a href="#wrapper-script">Wrapper script</a></li>
+</ul>
+</li>
+<li>
+<a href="#building-from-sources">Building from sources</a><ul>
+<li><a href="#flatpak-manifest-1">Flatpak manifest</a></li>
+<li><a href="#install-and-run-the-application-1">Install and run the application</a></li>
+</ul>
+</li>
+<li>
+<a href="#building-with-opam">Building with opam</a><ul>
+<li><a href="#source-files">Source files</a></li>
+<li><a href="#generate-flatpak-manifest-code">Generate Flatpak manifest code</a></li>
+<li><a href="#flatpak-manifest-2">Flatpak manifest</a></li>
+<li><a href="#install-and-run-the-application-2">Install and run the application</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#publish-the-application">Publish the application</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
-        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=flatpak-ocaml-examples&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=flatpak-ocaml-examples&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=flatpak-ocaml-examples&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+        <iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=flatpak-ocaml-examples&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=flatpak-ocaml-examples&type=star&count=true&size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=flatpak-ocaml-examples&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="how-to-flatpak-an-ocaml-application">How to Flatpak an OCaml application</h1>
 
@@ -380,29 +401,35 @@
 
 <p><strong>Table of contents</strong></p>
 <ul>
-  <li><a href="#how-to-flatpak-an-ocaml-application">How to Flatpak an OCaml application</a>
+  <li>
+<a href="#how-to-flatpak-an-ocaml-application">How to Flatpak an OCaml application</a>
     <ul>
-      <li><a href="#creating-a-hello-world-cli-application">Creating a hello world CLI application</a>
+      <li>
+<a href="#creating-a-hello-world-cli-application">Creating a hello world CLI application</a>
         <ul>
           <li><a href="#flatpak-manifest">Flatpak manifest</a></li>
           <li><a href="#install-and-run-the-application">Install and run the application</a></li>
         </ul>
       </li>
-      <li><a href="#creating-a-simple-gtk-program">Creating a simple GTK program</a>
+      <li>
+<a href="#creating-a-simple-gtk-program">Creating a simple GTK program</a>
         <ul>
-          <li><a href="#preparations">Preparations</a>
+          <li>
+<a href="#preparations">Preparations</a>
             <ul>
               <li><a href="#import-gtk2-library">Import GTK2 library</a></li>
               <li><a href="#wrapper-script">Wrapper script</a></li>
             </ul>
           </li>
-          <li><a href="#building-from-sources">Building from sources</a>
+          <li>
+<a href="#building-from-sources">Building from sources</a>
             <ul>
               <li><a href="#flatpak-manifest-1">Flatpak manifest</a></li>
               <li><a href="#install-and-run-the-application-1">Install and run the application</a></li>
             </ul>
           </li>
-          <li><a href="#building-with-opam">Building with opam</a>
+          <li>
+<a href="#building-with-opam">Building with opam</a>
             <ul>
               <li><a href="#source-files">Source files</a></li>
               <li><a href="#generate-flatpak-manifest-code">Generate Flatpak manifest code</a></li>
@@ -433,10 +460,14 @@ hello world
 
 <p>Some things to note in the following manifest:</p>
 <ul>
-  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10">↵</a></li>
-  <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L13-L14">↵</a></li>
-  <li>Build some pre-requisistes using <code class="language-plaintext highlighter-rouge">dune</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L17-L24">↵</a></li>
-  <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L33">↵</a></li>
+  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L9-L10">↵</a>
+</li>
+  <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L13-L14">↵</a>
+</li>
+  <li>Build some pre-requisistes using <code class="language-plaintext highlighter-rouge">dune</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L17-L24">↵</a>
+</li>
+  <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.example.yaml#L33">↵</a>
+</li>
 </ul>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">app-id</span><span class="pi">:</span> <span class="s">flatpak.ocaml.example</span>
@@ -545,7 +576,7 @@ Ouch!
 
 <p>This is what you should see when you run it:</p>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png" alt=""></p>
 
 <h3 id="preparations">Preparations</h3>
 
@@ -570,16 +601,27 @@ Ouch!
 
 <p>Some things to note in the following manifest:</p>
 <ul>
-  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10">↵</a></li>
-  <li>Permissions for the Flatpak app to access X11 (<code class="language-plaintext highlighter-rouge">--share=ipc</code> and <code class="language-plaintext highlighter-rouge">--socket=fallback-x11</code>) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L12-L14">↵</a></li>
-  <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> and some OCaml related environment variables <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L16-L19">↵</a></li>
-  <li>For some reason <code class="language-plaintext highlighter-rouge">debuginfo</code> was breaking <code class="language-plaintext highlighter-rouge">ocamlfind</code>, so it has been disabled <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L20">↵</a></li>
-  <li>We are importing GTK2 from the shared modules repository <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L23">↵</a></li>
-  <li>Installing some <code class="language-plaintext highlighter-rouge">lablgtk</code> pre-requisites: <code class="language-plaintext highlighter-rouge">ocamlfind</code> and <code class="language-plaintext highlighter-rouge">camlp-streams</code> (required only with OCaml&gt;=5) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L25-L49">↵</a></li>
-  <li><code class="language-plaintext highlighter-rouge">lablgtk</code> is build from its <a href="https://github.com/garrigue/lablgtk/archive/refs/tags/2.18.13.tar.gz">sources</a> instead of using opam <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L51-L60">↵</a></li>
-  <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> and <code class="language-plaintext highlighter-rouge">lablgtk</code> library to <code class="language-plaintext highlighter-rouge">/app/lib</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L70-L71">↵</a></li>
-  <li>Removal of the build files at the post-install phase to limit the size of the resulting Flatpak application <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L72-L73">↵</a></li>
-  <li>Wrapper setup <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L75-L81">↵</a></li>
+  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L9-L10">↵</a>
+</li>
+  <li>Permissions for the Flatpak app to access X11 (<code class="language-plaintext highlighter-rouge">--share=ipc</code> and <code class="language-plaintext highlighter-rouge">--socket=fallback-x11</code>) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L12-L14">↵</a>
+</li>
+  <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> and some OCaml related environment variables <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L16-L19">↵</a>
+</li>
+  <li>For some reason <code class="language-plaintext highlighter-rouge">debuginfo</code> was breaking <code class="language-plaintext highlighter-rouge">ocamlfind</code>, so it has been disabled <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L20">↵</a>
+</li>
+  <li>We are importing GTK2 from the shared modules repository <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L23">↵</a>
+</li>
+  <li>Installing some <code class="language-plaintext highlighter-rouge">lablgtk</code> pre-requisites: <code class="language-plaintext highlighter-rouge">ocamlfind</code> and <code class="language-plaintext highlighter-rouge">camlp-streams</code> (required only with OCaml&gt;=5) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L25-L49">↵</a>
+</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">lablgtk</code> is build from its <a href="https://github.com/garrigue/lablgtk/archive/refs/tags/2.18.13.tar.gz">sources</a> instead of using opam <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L51-L60">↵</a>
+</li>
+  <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> and <code class="language-plaintext highlighter-rouge">lablgtk</code> library to <code class="language-plaintext highlighter-rouge">/app/lib</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L70-L71">↵</a>
+</li>
+  <li>Removal of the build files at the post-install phase to limit the size of the resulting Flatpak application <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L72-L73">↵</a>
+</li>
+  <li>Wrapper setup <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.build.yaml#L75-L81">↵</a>
+</li>
 </ul>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">app-id</span><span class="pi">:</span> <span class="s">flatpak.ocaml.lablgtk.build</span>
@@ -675,7 +717,7 @@ Ouch!
 
 <p>This is what you should see when you run it:</p>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png" alt=""></p>
 
 <p>The application has an installed size of 34.8 MB:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ flatpak info flatpak.ocaml.lablgtk.build
@@ -770,15 +812,24 @@ $ ./flatpak-opam-generator.py lablgtk.json &gt; sources/lablgtk.json
 
 <p>Some things to note in the following manifest:</p>
 <ul>
-  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10">↵</a></li>
-  <li>Permissions for the Flatpak app to access X11 (<code class="language-plaintext highlighter-rouge">--share=ipc</code> and <code class="language-plaintext highlighter-rouge">--socket=fallback-x11</code>) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L12-L14">↵</a></li>
-  <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> and some OCaml related environment variables <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L15-L22">↵</a></li>
-  <li>We are importing GTK2 from the shared modules repository <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L25">↵</a></li>
-  <li>Creation of a new switch for installing <code class="language-plaintext highlighter-rouge">lablgtk</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L27-L44">↵</a></li>
-  <li>The manifest code generated by flatpak-opam-generator for <code class="language-plaintext highlighter-rouge">lablgtk</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L46-L62">↵</a></li>
-  <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> and <code class="language-plaintext highlighter-rouge">lablgtk</code> library to <code class="language-plaintext highlighter-rouge">/app/lib</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L71-L72">↵</a></li>
-  <li>Removal of the ocaml switch at the post-install phase to limit the size of the resulting Flatpak application <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L73-L74">↵</a></li>
-  <li>Wrapper setup <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L76-L82">↵</a></li>
+  <li>The SDK extension pointing to the <a href="https://github.com/flathub/org.freedesktop.Sdk.Extension.ocaml">Flatpak SDK Extension for OCaml</a> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L9-L10">↵</a>
+</li>
+  <li>Permissions for the Flatpak app to access X11 (<code class="language-plaintext highlighter-rouge">--share=ipc</code> and <code class="language-plaintext highlighter-rouge">--socket=fallback-x11</code>) <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L12-L14">↵</a>
+</li>
+  <li>The build options setting the <code class="language-plaintext highlighter-rouge">PATH</code> and some OCaml related environment variables <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L15-L22">↵</a>
+</li>
+  <li>We are importing GTK2 from the shared modules repository <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L25">↵</a>
+</li>
+  <li>Creation of a new switch for installing <code class="language-plaintext highlighter-rouge">lablgtk</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L27-L44">↵</a>
+</li>
+  <li>The manifest code generated by flatpak-opam-generator for <code class="language-plaintext highlighter-rouge">lablgtk</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L46-L62">↵</a>
+</li>
+  <li>Installing the application to <code class="language-plaintext highlighter-rouge">/app/bin</code> and <code class="language-plaintext highlighter-rouge">lablgtk</code> library to <code class="language-plaintext highlighter-rouge">/app/lib</code> <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L71-L72">↵</a>
+</li>
+  <li>Removal of the ocaml switch at the post-install phase to limit the size of the resulting Flatpak application <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L73-L74">↵</a>
+</li>
+  <li>Wrapper setup <a href="https://github.com/josecastillolema/flatpak-ocaml-examples/blob/main/flatpak.ocaml.lablgtk.switch.yaml#L76-L82">↵</a>
+</li>
 </ul>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">app-id</span><span class="pi">:</span> <span class="s">flatpak.ocaml.lablgtk.switch</span>
@@ -875,7 +926,7 @@ Ouch!
 
 <p>This is what you should see when you run it:</p>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/flatpak-ocaml-examples/main/img/simple.png" alt=""></p>
 
 <p>The application has an installed size of 11.3 MB:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ flatpak info flatpak.ocaml.lablgtk.switch
@@ -899,7 +950,7 @@ Installation: user
 
 <p>Info on how to later publish the application on <a href="https://flathub.org/">Flathub</a> can be found <a href="https://docs.flathub.org/docs/for-app-authors/submission/">here</a>.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -977,6 +1028,53 @@ Installation: user
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1115,52 +1213,6 @@ Installation: user
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1172,13 +1224,15 @@ Installation: user
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1214,7 +1268,7 @@ Installation: user
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1263,7 +1317,8 @@ Installation: user
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

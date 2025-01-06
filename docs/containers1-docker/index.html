@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Containers series I: Docker - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,30 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-1---docker">Lab 1 - Docker</a><ul><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#instalação">Instalação</a></li><li><a href="#primeiros-passos">Primeiros passos</a></li><li><a href="#customização-de-imagens">Customização de imagens</a><ul><li><a href="#via-docker-commit">Via docker commit</a></li><li><a href="#via-dockerfile">Via Dockerfile</a></li></ul></li><li><a href="#dockerhub">DockerHub</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-1---docker">Lab 1 - Docker</a><ul>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#instala%C3%A7%C3%A3o">Instalação</a></li>
+<li><a href="#primeiros-passos">Primeiros passos</a></li>
+<li>
+<a href="#customiza%C3%A7%C3%A3o-de-imagens">Customização de imagens</a><ul>
+<li><a href="#via-docker-commit">Via docker commit</a></li>
+<li><a href="#via-dockerfile">Via Dockerfile</a></li>
+</ul>
+</li>
+<li><a href="#dockerhub">DockerHub</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-1---docker">Lab 1 - Docker</h1>
 
@@ -376,7 +376,8 @@
 <ul>
   <li>instalação</li>
   <li>customização de imagens via Dockerfile</li>
-  <li>upload de imagens no <a href="https://hub.docker.com/">DockerHub</a></li>
+  <li>upload de imagens no <a href="https://hub.docker.com/">DockerHub</a>
+</li>
 </ul>
 
 <p>Vamos trabalhar com dois terminais abertos (<strong>T1</strong> e <strong>T2</strong>).</p>
@@ -401,7 +402,8 @@
     <p><strong>[T1]</strong> Instalação do Docker</p>
 
     <p>a. [Só no Ubuntu] Atualização dos repositórios</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt update
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt update
  Hit:1 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic InRelease
  Get:2 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-updates InRelease [88.7 kB]
  Get:3 http://us-east-1.ec2.archive.ubuntu.com/ubuntu bionic-backports InRelease [74.6 kB]
@@ -438,7 +440,8 @@
 </code></pre></div>    </div>
 
     <p>b. [Ubuntu] Instalação dos pacotes</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt install docker.io
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt install docker.io
  Reading package lists... Done
  Building dependency tree       
  Reading state information... Done
@@ -502,42 +505,50 @@
 </code></pre></div>    </div>
 
     <p>[Amazon Linux] Instalação dos pacotes</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo yum install -y docker
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo yum install -y docker
 </code></pre></div>    </div>
 
     <p>[Amazon Linux] Iniciar o serviço:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo systemctl start docker
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo systemctl start docker
  $ sudo systemctl enable docker
 </code></pre></div>    </div>
 
     <p>c. Conferir que o usuário não faz parte do grupo <code class="language-plaintext highlighter-rouge">docker</code>, e consecuentemente nao tem permissão para rodar comandos <code class="language-plaintext highlighter-rouge">docker</code>:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ groups
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ groups
  ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev
 </code></pre></div>    </div>
 
     <p>d. Adicionar o usuário (<code class="language-plaintext highlighter-rouge">ubuntu</code>) ao grupo <code class="language-plaintext highlighter-rouge">docker</code>:</p>
 
     <p>[Ubuntu]</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo usermod -aG docker ubuntu
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo usermod -aG docker ubuntu
 </code></pre></div>    </div>
 
     <p>[Amazon Linux]</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo usermod -aG docker ec2-user
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo usermod -aG docker ec2-user
 </code></pre></div>    </div>
 
     <p>e. Reiniciar a VM para que as mudanças de grupo sejam aplicadas:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo reboot
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo reboot
  Connection to ec2-18-210-19-170.compute-1.amazonaws.com closed by remote host.
  Connection to ec2-18-210-19-170.compute-1.amazonaws.com closed.
 </code></pre></div>    </div>
 
     <p>f. Após o reboot, confirmar que o usuário pertence ao grupo <code class="language-plaintext highlighter-rouge">docker</code>:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ groups
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ groups
  ubuntu adm dialout cdrom floppy sudo audio dip video plugdev lxd netdev docker
 </code></pre></div>    </div>
 
     <p>g. Rodar um <code class="language-plaintext highlighter-rouge">docker version</code> para validar a instalação, e conferir que é mostrada tanto a versão do cliente <strong>quanto a do servidor</strong>:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ docker version
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  $ docker version
   Client:
    Version:           19.03.6
    API version:       1.40
@@ -572,13 +583,17 @@
 <h2 id="primeiros-passos">Primeiros passos</h2>
 
 <ol>
-  <li><strong>[T1]</strong> Listar as imagens do repositório local (o catálogo deveria estar vazio, pois não baixamos nenhuma imagem ainda):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker images
+  <li>
+<strong>[T1]</strong> Listar as imagens do repositório local (o catálogo deveria estar vazio, pois não baixamos nenhuma imagem ainda):
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker images
  REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Buscar imagens dentro do catálogo do <a href="https://hub.docker.com/">DockerHub</a>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker search mongodb
+  <li>
+<strong>[T1]</strong> Buscar imagens dentro do catálogo do <a href="https://hub.docker.com/">DockerHub</a>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker search mongodb
  NAME                                DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
  mongo                               MongoDB document databases provide high avai…   7041                [OK]                
  mongo-express                       Web-based MongoDB admin interface, written w…   735                 [OK]                
@@ -607,8 +622,10 @@
  astronomerio/mongodb-source         Mongodb source.                                 0                                       [OK]
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Fazer o <em>download</em> (<code class="language-plaintext highlighter-rouge">pull</code>) da imagem do Ubuntu no repositório local:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker pull ubuntu
+  <li>
+<strong>[T1]</strong> Fazer o <em>download</em> (<code class="language-plaintext highlighter-rouge">pull</code>) da imagem do Ubuntu no repositório local:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker pull ubuntu
  Using default tag: latest
  latest: Pulling from library/ubuntu
  692c352adcf2: Pull complete 
@@ -620,23 +637,31 @@
  docker.io/library/ubuntu:latest
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Listar as imagens novamente, conferir que existe a imagem <code class="language-plaintext highlighter-rouge">ubuntu</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker images
+  <li>
+<strong>[T1]</strong> Listar as imagens novamente, conferir que existe a imagem <code class="language-plaintext highlighter-rouge">ubuntu</code>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker images
  REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
  ubuntu              latest              adafef2e596e        11 days ago         73.9MB
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Deletar a imagem (opcional):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker image rm ubuntu
+  <li>
+<strong>[T1]</strong> Deletar a imagem (opcional):
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker image rm ubuntu
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Rodar um comando de exemplo (<code class="language-plaintext highlighter-rouge">hostname</code>) dentro do container:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker run ubuntu hostname
+  <li>
+<strong>[T1]</strong> Rodar um comando de exemplo (<code class="language-plaintext highlighter-rouge">hostname</code>) dentro do container:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker run ubuntu hostname
  c293c1989a56
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Medir o tempo do comando anterior:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ time docker run ubuntu hostname
+  <li>
+<strong>[T1]</strong> Medir o tempo do comando anterior:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ time docker run ubuntu hostname
  7aa02808ccfc
 
  real	0m0.812s
@@ -651,27 +676,35 @@
       <li>Deletou o container</li>
     </ul>
   </li>
-  <li><strong>[T1]</strong> Conferir que tanto container quanto o <em>host</em> compartilham o Kernel:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ uname -a
+  <li>
+<strong>[T1]</strong> Conferir que tanto container quanto o <em>host</em> compartilham o Kernel:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ uname -a
  Linux ip-172-31-60-180 5.3.0-1023-aws #25~18.04.1-Ubuntu SMP Fri Jun 5 15:18:30 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
 
  $ docker run ubuntu uname -a
  Linux de0407ee790f 5.3.0-1023-aws #25~18.04.1-Ubuntu SMP Fri Jun 5 15:18:30 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Executar a imagem <code class="language-plaintext highlighter-rouge">ubuntu</code> em modo interativo. Observe-se que o <code class="language-plaintext highlighter-rouge">prompt</code> muda quando logamos no container: usuário <code class="language-plaintext highlighter-rouge">root</code> com hostname <code class="language-plaintext highlighter-rouge">5b83d8b5b521</code> (o ID do container em este caso).
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -it ubuntu
+  <li>
+<strong>[T1]</strong> Executar a imagem <code class="language-plaintext highlighter-rouge">ubuntu</code> em modo interativo. Observe-se que o <code class="language-plaintext highlighter-rouge">prompt</code> muda quando logamos no container: usuário <code class="language-plaintext highlighter-rouge">root</code> com hostname <code class="language-plaintext highlighter-rouge">5b83d8b5b521</code> (o ID do container em este caso).
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run -it ubuntu
 root@d8924e5138b3:/#
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> <strong>Sem sair do container no 1o terminal</strong>, listar os containers em execução <strong>no 2o terminal</strong>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+  <li>
+<strong>[T2]</strong> <strong>Sem sair do container no 1o terminal</strong>, listar os containers em execução <strong>no 2o terminal</strong>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 d8924e5138b3        ubuntu              "/bin/bash"         14 seconds ago      Up 13 seconds                           xenodochial_allen
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Continuando no 1o terminal, criar um arquivo ainda dentro do container e sair do container:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@d8924e5138b3:/# touch meuArquivo
+  <li>
+<strong>[T1]</strong> Continuando no 1o terminal, criar um arquivo ainda dentro do container e sair do container:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>root@d8924e5138b3:/# touch meuArquivo
     
 root@d8924e5138b3:/# ls
 bin   dev  home  lib32  libx32  meuArquivo  opt   root  sbin  sys  usr
@@ -680,13 +713,17 @@ boot  etc  lib   lib64  media   mnt         proc  run   srv   tmp  var
 root@d8924e5138b3:/# exit
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Conferir que o container não está mais em execução:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+  <li>
+<strong>[T1]</strong> Conferir que o container não está mais em execução:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Rodar o container novamente, e confirmar que o arquivo criado não existe mais. <strong>Containers são efêmeros</strong>, não armazenam nenhum tipo de mudança, sejam arquivos, dados, softwares instalados, etc.:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -it ubuntu
+  <li>
+<strong>[T1]</strong> Rodar o container novamente, e confirmar que o arquivo criado não existe mais. <strong>Containers são efêmeros</strong>, não armazenam nenhum tipo de mudança, sejam arquivos, dados, softwares instalados, etc.:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run -it ubuntu
 root@5b83d8b5b521:/# ls
 bin   dev  home  lib32  libx32  mnt  proc  run   srv  tmp  var
 boot  etc  lib   lib64  media   opt  root  sbin  sys  usr
@@ -699,7 +736,8 @@ ls: meuArquivo: No such file or directory
 
 <h2 id="customização-de-imagens">Customização de imagens</h2>
 
-<h3 id="via-docker-commit">Via <code class="language-plaintext highlighter-rouge">docker commit</code></h3>
+<h3 id="via-docker-commit">Via <code class="language-plaintext highlighter-rouge">docker commit</code>
+</h3>
 
 <ol>
   <li>
@@ -708,7 +746,8 @@ ls: meuArquivo: No such file or directory
     <p>Vamos criar uma imagem customizada instalando algum <em>software</em>, por exemplo o <code class="language-plaintext highlighter-rouge">nmap</code> (um <em>scanner</em> de portas).</p>
 
     <p>a. <strong>[T1]</strong> <strong>Sem sair do container</strong>, atualizar os repositórios:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@5b83d8b5b521:/# apt update
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>root@5b83d8b5b521:/# apt update
 Get:1 http://security.ubuntu.com/ubuntu focal-security InRelease [107 kB]
 Get:2 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
 Get:3 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [45.2 kB]
@@ -734,7 +773,8 @@ Reading state information... Done
 </code></pre></div>    </div>
 
     <p>b. <strong>[T1]</strong> Instalar o pacote <code class="language-plaintext highlighter-rouge">nmap</code>. O flag <code class="language-plaintext highlighter-rouge">-y</code> pula a pregunta de confirmação:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@5b83d8b5b521:/# apt install -y nmap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>root@5b83d8b5b521:/# apt install -y nmap
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
@@ -801,7 +841,8 @@ Processing triggers for libc-bin (2.31-0ubuntu9) ...
 </code></pre></div>    </div>
 
     <p>c. <strong>[T1]</strong> Conferir a versão instalada:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@5b83d8b5b521:/# nmap --version
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>root@5b83d8b5b521:/# nmap --version
 Nmap version 7.80 ( https://nmap.org )
 Platform: x86_64-pc-linux-gnu
 Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.39 libpcap-1.9.1 nmap-libdnet-1.12 ipv6
@@ -810,25 +851,29 @@ Available nsock engines: epoll poll select
 </code></pre></div>    </div>
 
     <p>d. <strong>[T2]</strong> No 2o terminal, confirmar o ID do container em execução (no qual acabamos de instalar o <code class="language-plaintext highlighter-rouge">nmap</code>):</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 5b83d8b5b521        ubuntu              "/bin/bash"         18 minutes ago      Up 18 minutes                           compassionate_edison
 </code></pre></div>    </div>
 
     <p>e. <strong>[T2]</strong> Criar uma nova imagem (<code class="language-plaintext highlighter-rouge">ubuntu_com_nmap</code>) a partir do container:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker commit 5b8 ubuntu_com_nmap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker commit 5b8 ubuntu_com_nmap
 sha256:287d2c84024a50ba13c9d8304d57df853feea9b3dd9df785313111480a84eecc
 </code></pre></div>    </div>
 
     <p>f. Confirmar a criação da imagem (com um tamanho maior a imagem original):</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker images
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu_com_nmap     latest              287d2c84024a        7 seconds ago       127MB
 ubuntu              latest              adafef2e596e        11 days ago         73.9MB
 </code></pre></div>    </div>
 
     <p>g. Confirmar que na nova imagem, tem de fato o <code class="language-plaintext highlighter-rouge">nmap</code> instalado:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run ubuntu_com_nmap nmap --version
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run ubuntu_com_nmap nmap --version
 Nmap version 7.80 ( https://nmap.org )
 Platform: x86_64-pc-linux-gnu
 Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.39 libpcap-1.9.1 nmap-libdnet-1.12 ipv6
@@ -837,20 +882,23 @@ Available nsock engines: epoll poll select
 </code></pre></div>    </div>
 
     <p>h. Confirmar que a imagem original não foi alterada e não tem o <code class="language-plaintext highlighter-rouge">nmap</code> instalado:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run ubuntu nmap --version
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run ubuntu nmap --version
 docker: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "exec: \"nmap\": executable file not found in $PATH": unknown.
 </code></pre></div>    </div>
   </li>
 </ol>
 
-<h3 id="via-dockerfile">Via <code class="language-plaintext highlighter-rouge">Dockerfile</code></h3>
+<h3 id="via-dockerfile">Via <code class="language-plaintext highlighter-rouge">Dockerfile</code>
+</h3>
 
 <ol>
   <li>
     <p>Customização de imagens via <strong>Dockerfile</strong>. Este é o metodo recomendado para customizar imagens, pois é mais reproduzível que <code class="language-plaintext highlighter-rouge">docker commit</code>.</p>
 
     <p>a. Criar o arquivo <code class="language-plaintext highlighter-rouge">Dockerfile</code> com o seguinte conteúdo:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>FROM ubuntu
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>FROM ubuntu
     
 MAINTAINER Jose Castillo &lt;profjose.lema@fiap.com.br&gt;
     
@@ -859,7 +907,8 @@ RUN apt-get install -y nmap
 </code></pre></div>    </div>
 
     <p>b. “Compilar” o <code class="language-plaintext highlighter-rouge">Dockerfile</code>:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker build -t ubuntu-com-nmap-viadockerfile .
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker build -t ubuntu-com-nmap-viadockerfile .
 Sending build context to Docker daemon  15.87kB
 Step 1/4 : FROM ubuntu
  ---&gt; adafef2e596e
@@ -963,7 +1012,8 @@ Successfully tagged ubuntu-com-nmap-viadockerfile:latest
 </code></pre></div>    </div>
 
     <p>c. Conferir que a nova imagem foi criada (e tem o mesmo tamanho que a imagem criada via <code class="language-plaintext highlighter-rouge">docker commit</code>):</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker images
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker images
 REPOSITORY                      TAG                 IMAGE ID            CREATED             SIZE
 ubuntu-com-nmap-viadockerfile   latest              4647bd58aa0e        13 seconds ago      127MB
 ubuntu_com_nmap                 latest              287d2c84024a        18 minutes ago      127MB
@@ -971,7 +1021,8 @@ ubuntu                          latest              adafef2e596e        11 days 
 </code></pre></div>    </div>
 
     <p>d. Testar a nova imagem:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run ubuntu-com-nmap-viadockerfile nmap --version
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run ubuntu-com-nmap-viadockerfile nmap --version
 Nmap version 7.80 ( https://nmap.org )
 Platform: x86_64-pc-linux-gnu
 Compiled with: liblua-5.3.3 openssl-1.1.1d nmap-libssh2-1.8.2 libz-1.2.11 libpcre-8.39 libpcap-1.9.1 nmap-libdnet-1.12 ipv6
@@ -990,7 +1041,8 @@ Available nsock engines: epoll poll select
     <p>a. Criar uma conta gratuita</p>
 
     <p>b. Logar na conta desde o terminal com o usuário recém criado:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker login
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker login
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username: josecastillolema
 Password: 
@@ -1002,19 +1054,21 @@ Login Succeeded
 </code></pre></div>    </div>
 
     <p>c. Taggear a imagem. O nome da imagem deve ser <code class="language-plaintext highlighter-rouge">username/nome da imagem</code>:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker tag ubuntu-com-nmap-viadockerfile josecastillolema/fiap-bdt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker tag ubuntu-com-nmap-viadockerfile josecastillolema/fiap-bdt
 </code></pre></div>    </div>
 
     <p>d. Fazer o <em>upload</em> (<code class="language-plaintext highlighter-rouge">push</code>) da imagem:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker push josecastillolema/fiap-bdt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker push josecastillolema/fiap-bdt
 </code></pre></div>    </div>
 
     <p>e. Conferir a imagem no portal do DockerHub:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/mob/cloud/img/docker0.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/mob/cloud/img/docker0.png" alt=""></p>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -1102,6 +1156,53 @@ Login Succeeded
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1240,52 +1341,6 @@ Login Succeeded
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1297,13 +1352,15 @@ Login Succeeded
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1339,7 +1396,7 @@ Login Succeeded
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1388,7 +1445,8 @@ Login Succeeded
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

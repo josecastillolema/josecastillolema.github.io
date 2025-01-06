@@ -51,6 +51,7 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-spaceship
 
 author:
   name    : "Jose Castillo Lema"
@@ -157,6 +158,13 @@ comments:
 destination              : docs
 google_analytics         : G-1EBHNQEGXG
 google_site_verification : googled48a6d8a28aaa375.html
+jekyll-spaceship:
+  processors:
+    - mermaid-processor
+    - emoji-processor
+  mermaid-processor:
+    syntax:
+      code: 'mermaid'
 logo                     : /assets/images/favicon_io/android-chrome-192x192.png
 og_image                 : /assets/images/favicon_io/android-chrome-512x512.png  # Open Graph/Twitter default site image
 repository               : josecastillolema/josecastillolema.github.io

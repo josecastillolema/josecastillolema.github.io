@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Kubernetes control plane scale testing with Kubemark - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,8 +345,21 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#architecture">Architecture</a></li><li><a href="#integration-with-cluster-api">Integration with Cluster API</a></li><li><a href="#hands-to-work">Hands to work</a><ul><li><a href="#environment-setup">Environment setup</a></li><li><a href="#creating-the-cluster">Creating the cluster</a></li><li><a href="#creating-resources-on-the-workload-cluster">Creating resources on the workload cluster</a></li><li><a href="#scaling-the-cluster">Scaling the cluster</a></li><li><a href="#stressing-the-cluster">Stressing the cluster</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#architecture">Architecture</a></li>
+<li><a href="#integration-with-cluster-api">Integration with Cluster API</a></li>
+<li>
+<a href="#hands-to-work">Hands to work</a><ul>
+<li><a href="#environment-setup">Environment setup</a></li>
+<li><a href="#creating-the-cluster">Creating the cluster</a></li>
+<li><a href="#creating-resources-on-the-workload-cluster">Creating resources on the workload cluster</a></li>
+<li><a href="#scaling-the-cluster">Scaling the cluster</a></li>
+<li><a href="#stressing-the-cluster">Stressing the cluster</a></li>
+</ul>
+</li>
+</ul>
             </nav>
           </aside>
         
@@ -388,7 +387,7 @@
 
 <p>On the host docker (we will be using a fresh Ubuntu 22.04 virtual machine) we will use <a href="https://kind.sigs.k8s.io/">kind</a> (Kubernetes in Docker, a container running the necessary kubernetes pieces) to create the CAPI Management Cluster. Next, we will use the <code class="language-plaintext highlighter-rouge">clusterctl</code> tool to create a second cluster (using kind as well) for the Kubemark workload (the cluster under test). Lastly, we want to create new nodes for the Kubemark Control Plane Cluster (the cluster under test) and Kubemark requires that we create these hollow nodes as pods running on a cluster that can join the control plane. The Cluster API Kubemark provider then creates pods within the CAPI Management Cluster which will join the Kubemark Control Plane Cluster (the cluster under test/worload cluster) as nodes.</p>
 
-<p><img src="/assets/images/posts/2023-01-18-kubemark.svg" alt="" /></p>
+<p><img src="/assets/images/posts/2023-01-18-kubemark.svg" alt=""></p>
 
 <p>For the demo we will be using a Ubuntu 22.04 virtual machine with 4 vCPUs, 4 GiB of memory and 100 GiB disk.</p>
 
@@ -417,24 +416,28 @@ $ limactl shell ubuntu22.04
 <p>Prepare the host to run ansible:</p>
 <ul>
   <li>Install <code class="language-plaintext highlighter-rouge">ansible</code> (not <code class="language-plaintext highlighter-rouge">ansible-core</code>)
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt install ansible
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt install ansible
  $ ssh-keygen
  $ cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys
 </code></pre></div>    </div>
   </li>
   <li>Clone and and prepare the playbooks:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/elmiko/cluster-api-kubemark-ansible.git
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/elmiko/cluster-api-kubemark-ansible.git
  $ cd cluster-api-kubemark-ansible
  $ echo -e "[defaults]\nallow_world_readable_tmpfiles=true" &gt; ansible.cfg
 </code></pre></div>    </div>
   </li>
   <li>Update <code class="language-plaintext highlighter-rouge">inventory/hosts</code> if you need to change addresses and/or users and run the first playbook:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ ansible-playbook -i inventory/hosts setup_devel_environment.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ ansible-playbook -i inventory/hosts setup_devel_environment.yaml
 </code></pre></div>    </div>
     <p>Once it is finished you will be able to login to the host as the devel user listed in the hosts file. All the development tools should be ready for access.</p>
   </li>
   <li>Run the second playbook to build the <code class="language-plaintext highlighter-rouge">clusterctl</code> binary, all the controller images and push the images to the local registry.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ansible-playbook -i inventory/hosts build_clusterctl_and_images.yaml
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> ansible-playbook -i inventory/hosts build_clusterctl_and_images.yaml
 </code></pre></div>    </div>
   </li>
 </ul>
@@ -828,6 +831,53 @@ $ kubectl get po -n kubelet-density | grep Running | wc -l
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/newyear25/" rel="permalink">Happy new year!
 </a>
       
@@ -951,52 +1001,6 @@ $ kubectl get po -n kubelet-density | grep Running | wc -l
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1008,13 +1012,15 @@ $ kubectl get po -n kubelet-density | grep Running | wc -l
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1050,7 +1056,7 @@ $ kubectl get po -n kubelet-density | grep Running | wc -l
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1099,7 +1105,8 @@ $ kubectl get po -n kubelet-density | grep Running | wc -l
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

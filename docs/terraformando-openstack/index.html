@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>[PT] Terraform – IaC – Terraformando no OpenStack - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,8 +345,15 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#pré-requisitos">Pré requisitos</a></li><li><a href="#clonando-o-repósitorio">Clonando o repósitorio</a></li><li><a href="#fazendo-o-deploy">Fazendo o deploy</a></li><li><a href="#outros-comandos">Outros comandos</a></li><li><a href="#conclusão">Conclusão</a></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#pr%C3%A9-requisitos">Pré requisitos</a></li>
+<li><a href="#clonando-o-rep%C3%B3sitorio">Clonando o repósitorio</a></li>
+<li><a href="#fazendo-o-deploy">Fazendo o deploy</a></li>
+<li><a href="#outros-comandos">Outros comandos</a></li>
+<li><a href="#conclus%C3%A3o">Conclusão</a></li>
+</ul>
             </nav>
           </aside>
         
@@ -381,7 +374,8 @@
 <h2 id="pré-requisitos">Pré requisitos</h2>
 <ul>
   <li>Ter o <code class="language-plaintext highlighter-rouge">git</code> instalado</li>
-  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="language-plaintext highlighter-rouge">admin</code></li>
+  <li>Uma conta em alguma nuvem OpenStack, não necessariamente <code class="language-plaintext highlighter-rouge">admin</code>
+</li>
   <li>Quota suficiente na nossa conta para instanciar os recursos solicitados</li>
   <li>Ter o Terraform instalado (ver <a href="https://churrops.io/2017/08/01/terraform-iac-infra-como-codigo-conhecendo/">[Terraform] – IaC – Infra como Código – Conhecendo</a>)</li>
 </ul>
@@ -394,9 +388,11 @@
 <p>Segue uma breve descrição dos arquivos:</p>
 
 <ul>
-  <li><strong>live.tf</strong>
+  <li>
+<strong>live.tf</strong>
 Arquivo principal, é um <em>template</em> com as informações do <em>provider</em> (neste caso OpenStack) e a topologia dos recursos que vão ser criados. No primeiro bloco definimos as credencias de acesso a nossa nuvem OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>provider "openstack" {
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>provider "openstack" {
    user_name   = "jose.castillo"
    tenant_name = "churrops"
    tenant_id   = "ddc494sdfc8bc6ba7caf6d3615b"
@@ -408,7 +404,8 @@ Arquivo principal, é um <em>template</em> com as informações do <em>provider<
 
     <p>No segundo bloco definimos alguns valores que vamos usar no projeto, como a imagem (neste caso Ubuntu), a chave (caso precisemos acessar por ssh a instância), o <em>flavor</em>, as redes, etc. Este bloco não é obrigatório, mas pode facilitar a nossa vida quando trabalhemos com um número maior de instâncias. Neste exemplo estamos usando o <em>security group</em> padrão do OpenStack (a porta 80 precisa estar aberta), mas de forma muito direta poderíamos criar um recurso de tipo <em>security group</em> personalizado para o nosso servidor web. O <a href="https://www.terraform.io/docs/providers/openstack/">site da Terraform</a> mostra todos os recursos que temos disponíveis para OpenStack.</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>variable "defaults" {
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>variable "defaults" {
    description = "Variaveis do projeto"
    type = "map"
    default {
@@ -425,7 +422,8 @@ Arquivo principal, é um <em>template</em> com as informações do <em>provider<
 </code></pre></div>    </div>
 
     <p>No terceiro bloco definimos o nosso servidor web. Na variável <code class="language-plaintext highlighter-rouge">user_data</code> apontamos para outro arquivo do exemplo, que vai ser executado via <strong>cloud-init</strong> no primeiro <em>boot</em> para configurar o servidor web.</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resource "openstack_compute_instance_v2" "web" {
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>resource "openstack_compute_instance_v2" "web" {
    name = "web"
    image_name = "${var.defaults["image_name"]}"
    flavor_name = "${var.defaults["flavor_name"]}"
@@ -443,7 +441,8 @@ Arquivo principal, é um <em>template</em> com as informações do <em>provider<
 </code></pre></div>    </div>
 
     <p>Por último, os restantes blocos associam uma IP pública ao nosso servidor web:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>resource "openstack_networking_floatingip_v2" "ip-publica" {
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>resource "openstack_networking_floatingip_v2" "ip-publica" {
    pool = "rede-publica"
 }
 
@@ -462,26 +461,27 @@ Retorna o IP público da instância do nosso servidor web.</p>
 
 <p>Arquivo de <em>shell</em> que vai ser executado via <strong>cloud-init</strong> no primeiro <em>boot</em> para configurar o servidor web. Esta versão é para SOs de tipo Debian, mas pode ser fácilmente modificada para funcionar em CentOS e derivados.</p>
 
-<h2 id="fazendo-o-deploy">Fazendo o <em>deploy</em></h2>
+<h2 id="fazendo-o-deploy">Fazendo o <em>deploy</em>
+</h2>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform init
 </code></pre></div></div>
 
-<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/01.png" alt="" /></p>
+<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/01.png" alt=""></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform plan
 </code></pre></div></div>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform apply
 </code></pre></div></div>
-<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/02.png" alt="" /></p>
+<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/02.png" alt=""></p>
 
 <p>Se tudo der certo, veremos a nova VM com a sua IP pública correspondente:</p>
 
-<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/03.png" alt="" /></p>
+<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/03.png" alt=""></p>
 
 <p>E conseguimos acessar ao nosso <em>site</em>:</p>
 
-<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/04.jpeg" alt="" /></p>
+<p><img src="/assets/images/posts/2017-11-26-terraformando-openstack/04.jpeg" alt=""></p>
 
 <h2 id="outros-comandos">Outros comandos</h2>
 <p>O resto dos comandos que foram explicados <a href="https://churrops.io/2017/08/03/terraform-iac-terraformando-na-aws/">no caso da AWS</a>, <code class="language-plaintext highlighter-rouge">terraform graph</code>, <code class="language-plaintext highlighter-rouge">terraform show</code> e <code class="language-plaintext highlighter-rouge">terraform destroy</code> funcionam de forma idêntica em OpenStack.</p>
@@ -578,6 +578,53 @@ Retorna o IP público da instância do nosso servidor web.</p>
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -716,52 +763,6 @@ Retorna o IP público da instância do nosso servidor web.</p>
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -773,13 +774,15 @@ Retorna o IP público da instância do nosso servidor web.</p>
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -815,7 +818,7 @@ Retorna o IP público da instância do nosso servidor web.</p>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -864,7 +867,8 @@ Retorna o IP público da instância do nosso servidor web.</p>
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

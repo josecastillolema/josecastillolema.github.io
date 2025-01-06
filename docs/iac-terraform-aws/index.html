@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>IaC series: Terraform na AWS - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,25 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-14---terraform">Lab 14 - Terraform</a><ul><li><a href="#aws-provider">AWS Provider</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#instalação">Instalação</a></li><li><a href="#uso">Uso</a></li><li><a href="#clean-up">Clean-up</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-14---terraform">Lab 14 - Terraform</a><ul>
+<li><a href="#aws-provider">AWS Provider</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#instala%C3%A7%C3%A3o">Instalação</a></li>
+<li><a href="#uso">Uso</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#infrastructure-as-code-iac">Serie de artigos</a> sobre Infraestructure as a Code (IaC).</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-14---terraform">Lab 14 - Terraform</h1>
 
@@ -390,11 +385,12 @@
   </li>
   <li>
     <p>No painel da Vocareum, accessar as credenciais da conta para acesso programático:
- <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d0.png" alt="" />
- <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d1.png" alt="" /></p>
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d0.png" alt="">
+ <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/shift/multicloud/img/d1.png" alt=""></p>
   </li>
   <li>Copiar as credenciais no arquivo <code class="language-plaintext highlighter-rouge">~/.aws/credentials</code> dentro da VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  $ cat ~/.aws/credentials 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  $ cat ~/.aws/credentials 
   [default]
   aws_access_key_id=&lt;copy here&gt;
   aws_secret_access_key=&lt;copy here&gt;
@@ -402,7 +398,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Configuramos a região correta (ignorar o resto dos campos):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ aws configure
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ aws configure
  AWS Access Key ID [****************Q5QG]: 
  AWS Secret Access Key [****************aqWs]: 
  Default region name [None]: us-east-1
@@ -410,7 +407,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar VMs (em formato <code class="language-plaintext highlighter-rouge">json</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances
  {
      "Reservations": [
          {
@@ -633,7 +631,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar VMs (em formato tabela):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances --output table
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ aws ec2 describe-instances --output table
  ------------------------------------------------------------------------------------------------------------------------------------------------------------------
  |                                                                        DescribeInstances                                                                       |
  +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -851,7 +850,8 @@
   <li>
     <p>Fazer o <em>download</em> da ferramenta:</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ wget https://releases.hashicorp.com/terraform/1.0.6/terraform_1.0.6_linux_amd64.zip
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ wget https://releases.hashicorp.com/terraform/1.0.6/terraform_1.0.6_linux_amd64.zip
  --2021-09-10 13:40:42--  https://releases.hashicorp.com/terraform/1.0.6/terraform_1.0.6_linux_amd64.zip
  Resolving releases.hashicorp.com (releases.hashicorp.com)... 199.232.65.183, 2a04:4e42:50::439
  Connecting to releases.hashicorp.com (releases.hashicorp.com)|199.232.65.183|:443... connected.
@@ -865,17 +865,20 @@
 </code></pre></div>    </div>
   </li>
   <li>Descomprimir o arquivo baixado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ unzip terraform_1.0.6_linux_amd64.zip 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ unzip terraform_1.0.6_linux_amd64.zip 
  Archive:  terraform_1.0.6_linux_amd64.zip
    inflating: terraform               
 </code></pre></div>    </div>
   </li>
   <li>Movimentar o executável:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo mv terraform /usr/local/bin/
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo mv terraform /usr/local/bin/
 </code></pre></div>    </div>
   </li>
   <li>Testar a instalação:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ terraform -h
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ terraform -h
  Usage: terraform [global options] &lt;subcommand&gt; [args]
 
  The available commands for execution are listed below.
@@ -922,7 +925,8 @@
 
 <ol>
   <li>Baixar os <em>templates</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ git clone https://github.com/josecastillolema/fiap
  Cloning into 'fiap'...
  remote: Enumerating objects: 10, done.
  remote: Counting objects: 100% (10/10), done.
@@ -936,7 +940,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir o conteúdo do <a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/multicloud/lab14-iaas-terraform/main.tf">template</a>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ cat main.tf 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ cat main.tf 
  terraform {
    required_providers {
      aws = {
@@ -964,7 +969,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Inicializar o Terraform e o correspondente <em>provider</em> (plugin) de AWS:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ terraform init
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ terraform init
 
  Initializing the backend...
 
@@ -990,13 +996,15 @@
 </code></pre></div>    </div>
   </li>
   <li>Validar os templates:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ terraform fmt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ terraform fmt
  $ terraform validate
  Success! The configuration is valid.
 </code></pre></div>    </div>
   </li>
   <li>Criar a infraestrutura virtual:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ terraform apply
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ terraform apply
 
  Terraform used the selected providers to generate the following execution plan. Resource actions are
  indicated with the following symbols:
@@ -1123,7 +1131,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os recursos criados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ terraform show
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ terraform show
  # aws_instance.app_server:
  resource "aws_instance" "app_server" {
      ami                                  = "ami-087c17d1fe0178315"
@@ -1199,7 +1208,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Validar a criação da instância:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ aws ec2 describe-instances --filters Name=tag-key,Values=Name --query "Reservations[*].Instances[*].{Instance:InstanceId,AZ:Placement.AvailabilityZone,Name:Tags[?Key=='Name']|[0].Value}" --output table
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ aws ec2 describe-instances --filters Name=tag-key,Values=Name --query "Reservations[*].Instances[*].{Instance:InstanceId,AZ:Placement.AvailabilityZone,Name:Tags[?Key=='Name']|[0].Value}" --output table
 --------------------------------------------------
 |                DescribeInstances               |
 +-------------+-----------------------+----------+
@@ -1208,7 +1218,7 @@
 |  us-east-1a |  i-0581e7619465fe0bb  |  fiap-vm |
 +-------------+-----------------------+----------+
 </code></pre></div>    </div>
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/multicloud/img/t1.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/multicloud/img/t1.png" alt=""></p>
   </li>
 </ol>
 
@@ -1216,7 +1226,8 @@
 
 <ol>
   <li>Deletar o plano:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ terraform destroy
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ terraform destroy
 aws_instance.app_server: Refreshing state... [id=i-0581e7619465fe0bb]
 
 Terraform used the selected providers to generate the following execution plan. Resource actions are
@@ -1316,7 +1327,7 @@ Destroy complete! Resources: 1 destroyed.
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -1404,6 +1415,53 @@ Destroy complete! Resources: 1 destroyed.
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1542,52 +1600,6 @@ Destroy complete! Resources: 1 destroyed.
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1599,13 +1611,15 @@ Destroy complete! Resources: 1 destroyed.
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1641,7 +1655,7 @@ Destroy complete! Resources: 1 destroyed.
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1690,7 +1704,8 @@ Destroy complete! Resources: 1 destroyed.
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

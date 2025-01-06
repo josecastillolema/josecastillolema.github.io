@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OpenStack series IV: Neutron - Network Service - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,27 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-4---openstack-neutron">Lab 4 - OpenStack Neutron</a><ul><li><a href="#network-service">Network Service</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#redes-e-subredes-virtuais">Redes e subredes virtuais</a></li><li><a href="#virtual-routers">Virtual routers</a></li><li><a href="#security-groups">Security groups</a></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-4---openstack-neutron">Lab 4 - OpenStack Neutron</a><ul>
+<li><a href="#network-service">Network Service</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#redes-e-subredes-virtuais">Redes e subredes virtuais</a></li>
+<li><a href="#virtual-routers">Virtual routers</a></li>
+<li><a href="#security-groups">Security groups</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+<li><a href="#horizon">Horizon</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-4---openstack-neutron">Lab 4 - OpenStack Neutron</h1>
 
@@ -385,7 +382,8 @@
 
 <ol>
   <li>Carregar as credenciais de OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
  WARNING: setting legacy OS_TENANT_NAME to support cli tools.
     
  $ env | grep OS_
@@ -403,7 +401,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir que o Neutron foi instalado no OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack service list
 +----------------------------------+-------------+----------------+
 | ID                               | Name        | Type           |
 +----------------------------------+-------------+----------------+
@@ -423,7 +422,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informação sobre o <em>endpoint</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack catalog show neutron
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack catalog show neutron
 +-----------+---------------------------------------+
 | Field     | Value                                 |
 +-----------+---------------------------------------+
@@ -437,7 +437,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir que a porta 9696 está aberta e associada ao Neutron:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo netstat -punlt | grep 9696
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo netstat -punlt | grep 9696
 tcp        0      0 0.0.0.0:9696            0.0.0.0:*               LISTEN                    831/python
     
 $ ps aux  | grep 831
@@ -446,7 +447,8 @@ os         6963  0.0  0.0  14224   972 pts/2    S+   05:29   0:00 grep --color=a
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos agentes que compõem o Neutron:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack network agent list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack network agent list
 +--------------------------------------+--------------------+--------+-------------------+-------+-------+---------------------------+
 | ID                                   | Agent Type         | Host   | Availability Zone | Alive | State | Binary                    |
 +--------------------------------------+--------------------+--------+-------------------+-------+-------+---------------------------+
@@ -458,7 +460,8 @@ os         6963  0.0  0.0  14224   972 pts/2    S+   05:29   0:00 grep --color=a
 </code></pre></div>    </div>
   </li>
   <li>Listar os serviços Linux que compõem o Neutron:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@q
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ systemctl | grep devstack@q
 devstack@q-agt.service                                                     loaded active running   Devstack devstack@q-agt.service
 devstack@q-dhcp.service                                                    loaded active running   Devstack devstack@q-dhcp.service
 devstack@q-l3.service                                                      loaded active running   Devstack devstack@q-l3.service
@@ -471,7 +474,8 @@ openvswitch-switch.service                                                 loade
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@q*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ systemctl status devstack@q*
 ● devstack@q-dhcp.service - Devstack devstack@q-dhcp.service
    Loaded: loaded (/etc/systemd/system/devstack@q-dhcp.service; enabled; vendor preset: enabled)
    Active: active (running) since Mon 2020-10-19 11:22:41 PDT; 1 day 18h ago
@@ -534,11 +538,13 @@ $ systemctl status openvswitch-switch
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os logs do serviço:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ journalctl -u devstack@q-svc
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ journalctl -u devstack@q-svc
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os arquivos de configuração:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ less /etc/neutron/neutron.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ less /etc/neutron/neutron.conf
     
 $ less /etc/neutron/plugins/ml2/ml2_conf.ini
     
@@ -546,7 +552,8 @@ $ less /etc/neutron/policy.json
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os arquivos de configuração de uma forma mais clara (sem comentários nem linhas vazias):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ grep -vE "^#|^$" /etc/neutron/plugins/ml2/ml2_conf.ini
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ grep -vE "^#|^$" /etc/neutron/plugins/ml2/ml2_conf.ini
 [DEFAULT]
 [l2pop]
 [ml2]
@@ -582,7 +589,8 @@ local_ip = 192.168.17.131
 
 <ol>
   <li>Criar uma rede:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack network create rede-privada
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack network create rede-privada
 +---------------------------+--------------------------------------+
 | Field                     | Value                                |
 +---------------------------+--------------------------------------+
@@ -617,7 +625,8 @@ local_ip = 192.168.17.131
 </code></pre></div>    </div>
   </li>
   <li>Criar uma subrede:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack subnet create --network rede-privada --subnet-range 10.20.20.0/24 --ip-version 4 --dns-nameserver 8.8.8.8 subrede-privada
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack subnet create --network rede-privada --subnet-range 10.20.20.0/24 --ip-version 4 --dns-nameserver 8.8.8.8 subrede-privada
 +-------------------------+--------------------------------------+
 | Field                   | Value                                |
 +-------------------------+--------------------------------------+
@@ -650,7 +659,8 @@ local_ip = 192.168.17.131
     <p>Subir duas vms via Horizon no projeto <code class="language-plaintext highlighter-rouge">demo</code> associadas à rede/subrede que acabamos de criar nos passos anteriores.</p>
   </li>
   <li>Acessar a uma delas via console e tentar pingar a outra vm pelo IP interno. Depois tenta pingar para a Internet (p.ex. 8.8.8.8, o servidor DNS da Google, não vai conseguir):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ virsh list
  Id    Name                           State
 ----------------------------------------------------
  5     instance-00000007              running
@@ -693,7 +703,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 
 <ol>
   <li>Criar um roteador:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack router create router-fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack router create router-fiap
 +-------------------------+--------------------------------------+
 | Field                   | Value                                |
 +-------------------------+--------------------------------------+
@@ -718,15 +729,18 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 </code></pre></div>    </div>
   </li>
   <li>Associar o roteador a rede externa (pública) do OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack router set --external-gateway public router-fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack router set --external-gateway public router-fiap
 </code></pre></div>    </div>
   </li>
   <li>Adicionar uma interface do roteador à subrede previamente criada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack router add subnet router-fiap subrede-privada
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack router add subnet router-fiap subrede-privada
 </code></pre></div>    </div>
   </li>
   <li>Repetir os testes de ping <strong>via console na vm previamente criada</strong> para ver se a VM sae para “a Internet” (IP 172.24.4.6):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ping 10.20.20.1
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ ping 10.20.20.1
 PING 10.20.20.1 (10.20.20.1) 56(84) bytes of data.
 64 bytes from 10.20.20.1: icmp_seq=1 ttl=64 time=4.24 ms
 --- 10.20.20.1 ping statistics ---
@@ -739,7 +753,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 </code></pre></div>    </div>
   </li>
   <li>Reservar um IP público (<em>floating</em> IP):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack floating ip create public
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack floating ip create public
 +---------------------+--------------------------------------+
 | Field               | Value                                |
 +---------------------+--------------------------------------+
@@ -760,7 +775,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 </code></pre></div>    </div>
   </li>
   <li>Associar o IP público à VM previamente criada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server add floating ip vm-1 172.24.4.13
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server add floating ip vm-1 172.24.4.13
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -769,7 +785,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 
 <ol>
   <li>Criar um <em>security group</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack security group create fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack security group create fiap
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Field           | Value                                                                                                                                                 |
 +-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -786,7 +803,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 </code></pre></div>    </div>
   </li>
   <li>Liberar o tráfego ICMP (para poder pingar à VM):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack security group rule create --ingress --protocol icmp --remote-ip 0.0.0.0/0 fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack security group rule create --ingress --protocol icmp --remote-ip 0.0.0.0/0 fiap
 +-------------------+--------------------------------------+
 | Field             | Value                                |
 +-------------------+--------------------------------------+
@@ -809,7 +827,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 </code></pre></div>    </div>
   </li>
   <li>Liberar o tráfego TCP (para conseguir acessar via SSH à VM):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack security group rule create --ingress --protocol tcp --remote-ip 0.0.0.0/0 fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack security group rule create --ingress --protocol tcp --remote-ip 0.0.0.0/0 fiap
 +-------------------+--------------------------------------+
 | Field             | Value                                |
 +-------------------+--------------------------------------+
@@ -832,7 +851,8 @@ traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 46 byte packets
 </code></pre></div>    </div>
   </li>
   <li>Associar o <em>security group</em> à VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server list
 +--------------------------------------+------+--------+---------------------------------------+--------------------------+--------+
 | ID                                   | Name | Status | Networks                              | Image                    | Flavor |
 +--------------------------------------+------+--------+---------------------------------------+--------------------------+--------+
@@ -844,7 +864,8 @@ $ openstack server add security group vm-1 fiap
 </code></pre></div>    </div>
   </li>
   <li>Tentar pingar a VM pelo IP interno (não é possível):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server list
 +--------------------------------------+------+--------+---------------------------------------+--------------------------+--------+
 | ID                                   | Name | Status | Networks                              | Image                    | Flavor |
 +--------------------------------------+------+--------+---------------------------------------+--------------------------+--------+
@@ -859,7 +880,8 @@ PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.
 </code></pre></div>    </div>
   </li>
   <li>Conferir o ID do roteador para saber a qual <em>network namespace</em> temos que acessar:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack router list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack router list
 +--------------------------------------+-------------+--------+-------+-------------+-------+----------------------------------+
 | ID                                   | Name        | Status | State | Distributed | HA    | Project                          |
 +--------------------------------------+-------------+--------+-------+-------------+-------+----------------------------------+
@@ -869,7 +891,8 @@ PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.
 </code></pre></div>    </div>
   </li>
   <li>Listar os <em>network namespaces</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ip netns ls
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo ip netns ls
 qrouter-d4ea769a-6403-436d-9f8c-c9330597a247
 qdhcp-f7476929-ffcd-4451-a4b0-3e109d1d782c
 qrouter-19d71b70-0c7b-4b5b-8fe8-b11a1d3a7bf7
@@ -877,12 +900,14 @@ qdhcp-4e05e1bd-50f4-494b-aacf-07d43a37d1a1
 </code></pre></div>    </div>
   </li>
   <li>Acessar ao <em>network namespace</em> do <em>virtual router</em> (veja que o <em>prompt</em> muda):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ip netns exec qrouter-d4ea769a-6403-436d-9f8c-c9330597a247 bash
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo ip netns exec qrouter-d4ea769a-6403-436d-9f8c-c9330597a247 bash
 root@ubuntu:~#
 </code></pre></div>    </div>
   </li>
   <li>Conferir os IPs (do <em>gateway</em> e <em>floating</em> IPs):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># ip a
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code># ip a
 1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
@@ -908,7 +933,8 @@ root@ubuntu:~#
 </code></pre></div>    </div>
   </li>
   <li>Pingar à VM e acessar via SSH:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@ubuntu:~# ping 10.20.20.10
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>root@ubuntu:~# ping 10.20.20.10
 PING 10.20.20.10 (10.20.20.10) 56(84) bytes of data.
 64 bytes from 10.20.20.10: icmp_seq=1 ttl=64 time=4.24 ms
 --- 10.20.20.10 ping statistics ---
@@ -924,7 +950,8 @@ $
 </code></pre></div>    </div>
   </li>
   <li>Listar as portas (<strong>fora do <em>prompt</em> do <em>namespace</em></strong>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack port list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack port list
 +--------------------------------------+------+-------------------+-----------------------------------------------------------------------------------------------------+--------+
 | ID                                   | Name | MAC Address       | Fixed IP Addresses                                                                                  | Status |
 +--------------------------------------+------+-------------------+-----------------------------------------------------------------------------------------------------+--------+
@@ -948,7 +975,8 @@ $
 </code></pre></div>    </div>
   </li>
   <li>Mostar informação sobre uma porta virtual determinada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack port show 7b272383-9238-429e-9a8f-b06a3824538b
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack port show 7b272383-9238-429e-9a8f-b06a3824538b
 +-----------------------+----------------------------------------------------------------------------+
 | Field                 | Value                                                                      |
 +-----------------------+----------------------------------------------------------------------------+
@@ -989,13 +1017,15 @@ $
 </code></pre></div>    </div>
   </li>
   <li>Encontrar a interface do OpenvSwitch associada a porta:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl show | grep 7b27
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl show | grep 7b27
     Port "qvo7b272383-92"
         Interface "qvo7b272383-92"
 </code></pre></div>    </div>
   </li>
   <li>Mostrar a porta no OpenvSwitch:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl list interface qvo7b272383-92
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl list interface qvo7b272383-92
 _uuid               : 59fb7296-d229-43ab-b57e-577eebfa8faf
 admin_state         : up
 bfd                 : {}
@@ -1033,7 +1063,8 @@ type                : ""
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os <em>bridges</em> e as interfaces configuradas no OpenvSwitch:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl show
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo ovs-vsctl show
 c4198c58-dfa5-4d11-8cac-49b7565354b0
     Manager "ptcp:6640:127.0.0.1"
         is_connected: true
@@ -1117,7 +1148,8 @@ c4198c58-dfa5-4d11-8cac-49b7565354b0
 
 <ol>
   <li>Deletar VMs, rede, subrede e roteador
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server remove floating ip vm-1   172.24.4.13
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server remove floating ip vm-1   172.24.4.13
 $ openstack router remove subnet router-fiap subrede-privada
 $ openstack router delete router-fiap
 $ openstack server delete vm-1 vm-2
@@ -1133,32 +1165,32 @@ $ openstack subnet delete subrede-privada
     <ul>
       <li>
         <p>Criação de rede
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron1.png" alt="" />
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron2.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron1.png" alt="">
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron2.png" alt=""></p>
       </li>
       <li>Criação de subrede</li>
       <li>
         <p>Criação de roteador
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron3.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron3.png" alt=""></p>
       </li>
       <li>
         <p>Assignar interfaces ao roteador
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron4.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron4.png" alt=""></p>
       </li>
       <li>
         <p>Reservar <em>floating</em> IP e associar a instância
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron5.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron5.png" alt=""></p>
       </li>
       <li>
         <p>Criação de <em>security group</em>
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron6.png" alt="" /></p>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/neutron6.png" alt=""></p>
       </li>
       <li>Liberar regras no security group</li>
     </ul>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -1248,6 +1280,53 @@ $ openstack subnet delete subrede-privada
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1386,52 +1465,6 @@ $ openstack subnet delete subrede-privada
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1443,13 +1476,15 @@ $ openstack subnet delete subrede-privada
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1485,7 +1520,7 @@ $ openstack subnet delete subrede-privada
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1534,7 +1569,8 @@ $ openstack subnet delete subrede-privada
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

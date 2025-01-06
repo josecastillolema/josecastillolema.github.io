@@ -17,4 +17,5 @@ group :jekyll_plugins do
   # Custom
   gem "webrick"
   gem "jekyll-remote-include"
+  gem "jekyll-spaceship"
 end

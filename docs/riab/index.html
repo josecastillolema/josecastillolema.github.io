@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>SDRAN-in-a-Box - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,8 +345,21 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#features">Features</a></li><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#installation">Installation</a></li><li><a href="#resource-usage">Resource usage</a></li><li><a href="#end-to-end-e2e-tests-for-verification">End-to-End (E2E) tests for verification</a><ul><li><a href="#user-plane">User plane</a></li><li><a href="#sd-ran-control-plane">SD-RAN control plane</a></li></ul></li><li><a href="#radio-spectrum-management-rsm-tests">Radio Spectrum Management (RSM) tests</a></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#features">Features</a></li>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#resource-usage">Resource usage</a></li>
+<li>
+<a href="#end-to-end-e2e-tests-for-verification">End-to-End (E2E) tests for verification</a><ul>
+<li><a href="#user-plane">User plane</a></li>
+<li><a href="#sd-ran-control-plane">SD-RAN control plane</a></li>
+</ul>
+</li>
+<li><a href="#radio-spectrum-management-rsm-tests">Radio Spectrum Management (RSM) tests</a></li>
+</ul>
             </nav>
           </aside>
         
@@ -373,7 +372,7 @@
   <li>the ONOS RAN Intelligent Controller (ONOS RIC)</li>
 </ul>
 
-<p><a href="https://docs.sd-ran.org/sdran-1.1/"><img src="/assets/images/posts/2022-03-24-riab.png" alt="" /></a></p>
+<p><a href="https://docs.sd-ran.org/sdran-1.1/"><img src="/assets/images/posts/2022-03-24-riab.png" alt=""></a></p>
 
 <h2 id="features">Features</h2>
 <ul>
@@ -465,19 +464,22 @@ riab          upf-0                                             4/4     Running 
 <p>For this particular <code class="language-plaintext highlighter-rouge">t2.xlarge</code> instance:</p>
 <ul>
   <li>Load
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ uptime
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ uptime
  17:16:22 up 56 min,  2 users,  load average: 4.27, 5.60, 5.49
 </code></pre></div>    </div>
   </li>
   <li>Memory
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ free -h
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ free -h
                total        used        free      shared  buff/cache   available
  Mem:            15G        3.0G        228M        836M         12G         11G
  Swap:            0B          0B          0B
 </code></pre></div>    </div>
   </li>
   <li>Disk
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ df -h
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ df -h
  Filesystem      Size  Used Avail Use% Mounted on
  udev            7.9G     0  7.9G   0% /dev
  tmpfs           1.6G  4.7M  1.6G   1% /run
@@ -539,8 +541,10 @@ rtt min/avg/max/mdev = 34.461/39.955/43.000/3.892 ms
 <p>In order to verify the SD-RAN control plane:</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">make test-kpimon</code>: to see the number of active UEs
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ make test-kpimon
+  <li>
+<code class="language-plaintext highlighter-rouge">make test-kpimon</code>: to see the number of active UEs
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ make test-kpimon
  Helm values.yaml file: /home/ubuntu/sdran-in-a-box//sdran-in-a-box-values-master-stable.yaml
  HEAD is now at 9f79ab8 Fix the default SRIOV resource name for UPF user plane interfaces
  HEAD is now at acb2f51 Bump up UE chart version - CI test again (#1105)
@@ -549,8 +553,10 @@ rtt min/avg/max/mdev = 34.461/39.955/43.000/3.892 ms
  e2:4/e00/2/64                    1                e0000      17:03:42.0                       1                        1              1               1                         0
 </code></pre></div>    </div>
   </li>
-  <li><code class="language-plaintext highlighter-rouge">make test-e2-subscription</code>: to see e2 connection and subscription
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ make test-e2-subscription
+  <li>
+<code class="language-plaintext highlighter-rouge">make test-e2-subscription</code>: to see e2 connection and subscription
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ make test-e2-subscription
  Helm values.yaml file: /home/ubuntu/sdran-in-a-box//sdran-in-a-box-values-master-stable.yaml
  HEAD is now at 9f79ab8 Fix the default SRIOV resource name for UPF user plane interfaces
  HEAD is now at acb2f51 Bump up UE chart version - CI test again (#1105)
@@ -563,7 +569,8 @@ rtt min/avg/max/mdev = 34.461/39.955/43.000/3.892 ms
   <li>
     <p><code class="language-plaintext highlighter-rouge">make test-rnib</code> and <code class="language-plaintext highlighter-rouge">make test-uenib</code>: to check information in R-NIB and UE-NIB</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ make test-rnib
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ make test-rnib
  Helm values.yaml file: /home/ubuntu/sdran-in-a-box//sdran-in-a-box-values-master-stable.yaml
  HEAD is now at 9f79ab8 Fix the default SRIOV resource name for UPF user plane interfaces
  HEAD is now at acb2f51 Bump up UE chart version - CI test again (#1105)
@@ -630,7 +637,8 @@ rtt min/avg/max/mdev = 34.461/39.955/43.000/3.892 ms
 </code></pre></div>    </div>
   </li>
   <li>Run <code class="language-plaintext highlighter-rouge">make test-kpimon</code> before and after detaching the UE to check if the number of active UEs changes. <code class="language-plaintext highlighter-rouge">RRC.ConnMean</code> shows the number of active UEs changing from 1 to 0, since an emulated UE is detached.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ make test-kpimon
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ make test-kpimon
  Helm values.yaml file: /home/ubuntu/sdran-in-a-box//sdran-in-a-box-values-master-stable.yaml
  HEAD is now at 9f79ab8 Fix the default SRIOV resource name for UPF user plane interfaces
  HEAD is now at acb2f51 Bump up UE chart version - CI test again (#1105)
@@ -782,6 +790,53 @@ Aspects:
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/newyear25/" rel="permalink">Happy new year!
 </a>
       
@@ -905,52 +960,6 @@ Aspects:
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -962,13 +971,15 @@ Aspects:
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1004,7 +1015,7 @@ Aspects:
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1053,7 +1064,8 @@ Aspects:
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

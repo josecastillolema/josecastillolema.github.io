@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Azure series III: Disks - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,25 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-2---azure-disks">Lab 2 - Azure Disks</a><ul><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#criando-o-volume">Criando o volume</a></li><li><a href="#configurando-o-volume-dentro-da-instancia">Configurando o volume dentro da instancia</a></li><li><a href="#desanexando-o-volume">Desanexando o volume</a></li><li><a href="#anexando-o-volume-a-uma-2a-instância">Anexando o volume a uma 2a instância</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-2---azure-disks">Lab 2 - Azure Disks</a><ul>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#criando-o-volume">Criando o volume</a></li>
+<li><a href="#configurando-o-volume-dentro-da-instancia">Configurando o volume dentro da instancia</a></li>
+<li><a href="#desanexando-o-volume">Desanexando o volume</a></li>
+<li><a href="#anexando-o-volume-a-uma-2a-inst%C3%A2ncia">Anexando o volume a uma 2a instância</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#azure">Serie de artigos</a> sobre Microsoft Azure.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-2---azure-disks">Lab 2 - Azure Disks</h1>
 
@@ -389,7 +384,8 @@
 
 <ul>
   <li>Na maquina virtual do <a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab01-iaas-vm.md">lab 01 - Virtual Machine</a>, conferir os volumes:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  aula1:~$ lsblk
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>  aula1:~$ lsblk
   NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
   sda       8:0    0   30G  0 disk 
   ├─sda1    8:1    0 29.9G  0 part /
@@ -407,14 +403,16 @@
 
 <ol>
   <li>Na aba <code class="language-plaintext highlighter-rouge">Disks</code> da descrição da instância, criar um novo volume vazio de tipo HDD com tamanho de 50 GB e nome <code class="language-plaintext highlighter-rouge">dados</code>:
-<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk01.png" alt="" /></li>
+<img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk01.png" alt="">
+</li>
 </ol>
 
 <h2 id="configurando-o-volume-dentro-da-instancia">Configurando o volume dentro da instancia</h2>
 
 <ol>
   <li>Na maquina virtual, conferir o novo dispositivo, em este caso <code class="language-plaintext highlighter-rouge">sdc</code>, com tamanho 50 GB (o nome pode mudar). Observe-se que ainda não possue nenhuma partição:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aula1:~$ lsblk
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> aula1:~$ lsblk
  NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
  sda       8:0    0   30G  0 disk 
  ├─sda1    8:1    0 29.9G  0 part /
@@ -427,7 +425,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Usaremos o <code class="language-plaintext highlighter-rouge">fdisk</code> para criar uma partição no novo disco:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula1$ sudo fdisk /dev/sdc
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula1$ sudo fdisk /dev/sdc
 
 Welcome to fdisk (util-linux 2.30.2).
 Changes will remain in memory only, until you decide to write them.
@@ -454,7 +453,8 @@ Syncing disks.
 </code></pre></div>    </div>
   </li>
   <li>Conferir a nova partição (em este caso, <code class="language-plaintext highlighter-rouge">sdc1</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula1:~$ lsblk
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula1:~$ lsblk
 NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda       8:0    0   30G  0 disk 
 ├─sda1    8:1    0 29.9G  0 part /
@@ -468,7 +468,8 @@ sr0      11:0    1  628K  0 rom
 </code></pre></div>    </div>
   </li>
   <li>Criar o sistema de arquivos:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aula1$ sudo mkfs /dev/sdc1
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> aula1$ sudo mkfs /dev/sdc1
  mke2fs 1.44.1 (24-Mar-2018)
  Discarding device blocks: done                            
  Creating filesystem with 13106944 4k blocks and 3276800 inodes
@@ -483,21 +484,25 @@ sr0      11:0    1  628K  0 rom
 </code></pre></div>    </div>
   </li>
   <li>Criar a pasta <code class="language-plaintext highlighter-rouge">/mnt/volumeExterno</code> para montar o volume:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aula1$ sudo mkdir /mnt/volumeExterno
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> aula1$ sudo mkdir /mnt/volumeExterno
 </code></pre></div>    </div>
   </li>
   <li>Montar o volume na pasta recem criada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aula1$ sudo mount /dev/sdc1 /mnt/volumeExterno/
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> aula1$ sudo mount /dev/sdc1 /mnt/volumeExterno/
 </code></pre></div>    </div>
   </li>
   <li>Listar os arquivos do novo volume (é esperado ter uma pasta chamada <code class="language-plaintext highlighter-rouge">lost-found</code>, mesmo que o volume esteja vazio):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aula1$ cd /mnt/volumeExterno/
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> aula1$ cd /mnt/volumeExterno/
  aula1$ ls
  lost+found
 </code></pre></div>    </div>
   </li>
   <li>Criar um arquivo qualquer (como usuário admin):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> aula1$ cd /mnt/volumeExterno
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> aula1$ cd /mnt/volumeExterno
  aula1$ cat meuArquivo 
  sic mundus creatus est
 </code></pre></div>    </div>
@@ -517,9 +522,9 @@ sr0      11:0    1  628K  0 rom
   <li>Na aba <code class="language-plaintext highlighter-rouge">Disks</code> da descrição da instância, remover o volume de dados:</li>
 </ol>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk02.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk02.png" alt=""></p>
 
-<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk03.png" alt="" /></p>
+<p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk03.png" alt=""></p>
 
 <h2 id="anexando-o-volume-a-uma-2a-instância">Anexando o volume a uma 2a instância</h2>
 
@@ -528,7 +533,8 @@ sr0      11:0    1  628K  0 rom
     <p>Criar uma nova máquina virtual com nome <code class="language-plaintext highlighter-rouge">aula2</code> seguindo os passos do <a href="https://github.com/josecastillolema/fiap/blob/master/net/devops/lab01-iaas-vm.md">lab 01 - Virtual Machine</a>.</p>
   </li>
   <li>Uma vez criada, conferir os volumes:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula2:~$ lsblk 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula2:~$ lsblk 
 NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda       8:0    0   30G  0 disk 
 ├─sda1    8:1    0 29.9G  0 part /
@@ -541,10 +547,11 @@ sr0      11:0    1  628K  0 rom
   </li>
   <li>
     <p>Na aba <code class="language-plaintext highlighter-rouge">Disks</code> da descrição da nova instância (<em><code class="language-plaintext highlighter-rouge">aula2</code></em>), anexar o volume <code class="language-plaintext highlighter-rouge">dados</code> previamente criado:
-   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk04.png" alt="" /></p>
+   <img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/net/devops/img/disk04.png" alt=""></p>
   </li>
   <li>Na nova maquina virtual, conferir o novo dispositivo, em este caso <code class="language-plaintext highlighter-rouge">sdc</code>, com tamanho 50 GB (o nome pode mudar). Observe-se que já possue uma partição (<code class="language-plaintext highlighter-rouge">sdc1</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula2:~$ lsblk 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula2:~$ lsblk 
 NAME    MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
 sda       8:0    0   30G  0 disk 
 ├─sda1    8:1    0 29.9G  0 part /
@@ -558,21 +565,24 @@ sr0      11:0    1  628K  0 rom
 </code></pre></div>    </div>
   </li>
   <li>Criar a pasta <code class="language-plaintext highlighter-rouge">/mnt/volumeExterno</code> para montar o volume:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula2$ sudo mkdir /mnt/volumeExterno
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula2$ sudo mkdir /mnt/volumeExterno
 </code></pre></div>    </div>
   </li>
   <li>Montar o volume na pasta recem criada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula2$ sudo mount /dev/sdc1 /mnt/volumeExterno/
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula2$ sudo mount /dev/sdc1 /mnt/volumeExterno/
 </code></pre></div>    </div>
   </li>
   <li>Confirmar que os dados criados na VM <code class="language-plaintext highlighter-rouge">aula1</code> foram persistidos:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>aula2:~$ cat /mnt/volumeExterno/meuArquivo 
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>aula2:~$ cat /mnt/volumeExterno/meuArquivo 
 sic mundus creatus est
 </code></pre></div>    </div>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -656,6 +666,53 @@ sic mundus creatus est
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -794,52 +851,6 @@ sic mundus creatus est
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -851,13 +862,15 @@ sic mundus creatus est
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -893,7 +906,7 @@ sic mundus creatus est
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -942,7 +955,8 @@ sic mundus creatus est
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

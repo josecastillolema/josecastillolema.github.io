@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OpenStack series V: Cinder - Block Storage Service - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,30 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-5---openstack-cinder">Lab 5 - OpenStack Cinder</a><ul><li><a href="#block-storage-service">Block Storage Service</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#volumes">Volumes</a><ul><li><a href="#dentro-da-vm">Dentro da VM</a></li><li><a href="#de-volta-no-devstack">De volta no DevStack</a></li></ul></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-5---openstack-cinder">Lab 5 - OpenStack Cinder</a><ul>
+<li><a href="#block-storage-service">Block Storage Service</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li>
+<a href="#volumes">Volumes</a><ul>
+<li><a href="#dentro-da-vm">Dentro da VM</a></li>
+<li><a href="#de-volta-no-devstack">De volta no DevStack</a></li>
+</ul>
+</li>
+<li><a href="#clean-up">Clean-up</a></li>
+<li><a href="#horizon">Horizon</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-5---openstack-cinder">Lab 5 - OpenStack Cinder</h1>
 
@@ -385,7 +385,8 @@
 
 <ol>
   <li>Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
  WARNING: setting legacy OS_TENANT_NAME to support cli tools.
     
  $ env | grep OS_
@@ -403,7 +404,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir que o Cinder foi instalado no OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack service list
  +----------------------------------+-------------+----------------+
  | ID                               | Name        | Type           |
  +----------------------------------+-------------+----------------+
@@ -423,7 +425,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informação sobre o <em>endpoint</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack catalog show cinder
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack catalog show cinder
  +-----------+----------------------------------------------------------------------------+
  | Field     | Value                                                                      |
  +-----------+----------------------------------------------------------------------------+
@@ -437,7 +440,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informação sobre os serviços OpenStack que compõem o Cinder:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack volume service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack volume service list
  +------------------+--------------------+------+---------+-------+----------------------------+
  | Binary           | Host               | Zone | Status  | State | Updated At                 |
  +------------------+--------------------+------+---------+-------+----------------------------+
@@ -447,7 +451,8 @@
 </code></pre></div>    </div>
 
     <p><strong>Nota:</strong> Se o <code class="language-plaintext highlighter-rouge">cinder-volume</code> aparece com estado <code class="language-plaintext highlighter-rouge">down</code> (provavelmente a VM foi restartada em algum momento), seguem os passos para corrigi-lo:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo losetup -f /opt/stack/data/stack-volumes-default-backing-file
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo losetup -f /opt/stack/data/stack-volumes-default-backing-file
  $ sudo losetup -f /opt/stack/data/stack-volumes-lvmdriver-1-backing-file
  $ sudo systemctl restart devstack@c-vol
 </code></pre></div>    </div>
@@ -455,14 +460,16 @@
     <p>Tentar o comando <code class="language-plaintext highlighter-rouge">openstack volume service list</code> novamente.</p>
   </li>
   <li>Listar os serviços Linux que compõem o Cinder:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ systemctl | grep devstack@c
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ systemctl | grep devstack@c
  devstack@c-api.service                                             loaded active running   Devstack devstack@c-api.service
  devstack@c-sch.service                                             loaded active running   Devstack devstack@c-sch.service
  devstack@c-vol.service                                             loaded active running   Devstack devstack@c-vol.service    
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ systemctl status devstack@c*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ systemctl status devstack@c*
  ● devstack@c-api.service - Devstack devstack@c-api.service
     Loaded: loaded (/etc/systemd/system/devstack@c-api.service; enabled; vendor preset: enabled)
     Active: active (running) since Mon 2020-10-26 15:56:06 PDT; 26min ago
@@ -490,11 +497,13 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os logs do serviço:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ journalctl -u devstack@c-vol
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ journalctl -u devstack@c-vol
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os arquivos de configuração:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ less /etc/cinder/cinder.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ less /etc/cinder/cinder.conf
  $ less /etc/cinder/policy.json
 </code></pre></div>    </div>
   </li>
@@ -504,7 +513,8 @@
 
 <ol>
   <li>Criar um volume vazio de 1 GB:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack volume create teste-fiap --size 1
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack volume create teste-fiap --size 1
  +---------------------+--------------------------------------+
  | Field               | Value                                |
  +---------------------+--------------------------------------+
@@ -532,7 +542,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar os volumes e mostrar o volume recém criado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack volume list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack volume list
 +--------------------------------------+------------+-----------+------+-------------+
 | ID                                   | Name       | Status    | Size | Attached to |
 +--------------------------------------+------------+-----------+------+-------------+
@@ -542,7 +553,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Criar uma VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server create --network private --flavor m.fiap --image cirros-0.3.5-x86_64-disk vm
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server create --network private --flavor m.fiap --image cirros-0.3.5-x86_64-disk vm
 +-------------------------------------+-----------------------------------------------------------------+
 | Field                               | Value                                                           |
 +-------------------------------------+-----------------------------------------------------------------+
@@ -580,11 +592,13 @@
 </code></pre></div>    </div>
   </li>
   <li>Anexar o volume a uma instancia previamente criada (neste caso <code class="language-plaintext highlighter-rouge">vm</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server add volume vm teste-fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server add volume vm teste-fiap
 </code></pre></div>    </div>
   </li>
   <li>Conferir que o volume foi anexado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server show vm
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server show vm
 +-------------------------------------+-----------------------------------------------------------------+
 | Field                               | Value                                                           |
 +-------------------------------------+-----------------------------------------------------------------+
@@ -624,7 +638,8 @@ $ openstack server show vm | grep volumes
 </code></pre></div>    </div>
   </li>
   <li>Acessar à vm:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ virsh list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ virsh list
  Id    Name                           State
 ----------------------------------------------------
  2     instance-0000000a              running
@@ -645,12 +660,14 @@ $
 
 <ol>
   <li>Conferir que o novo volume foi entregue a VM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /dev/vd*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ ls /dev/vd*
 /dev/vda   /dev/vda1  /dev/vdb
 </code></pre></div>    </div>
   </li>
   <li>Criar uma partição no novo disco:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo fdisk /dev/vdb
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo fdisk /dev/vdb
 Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
 Building a new DOS disklabel with disk identifier 0xaba72f7d.
 Changes will remain in memory only, until you decide to write them.
@@ -696,12 +713,14 @@ Syncing disks.
 </code></pre></div>    </div>
   </li>
   <li>Conferir que a partição foi criada:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls /dev/vd*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ ls /dev/vd*
 /dev/vda   /dev/vda1  /dev/vdb   /dev/vdb1
 </code></pre></div>    </div>
   </li>
   <li>Formatar a partição:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mkfs.ext4 /dev/vdb1
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo mkfs.ext4 /dev/vdb1
 mke2fs 1.42.2 (27-Mar-2012)
 Filesystem label=
 OS type: Linux
@@ -725,16 +744,19 @@ Writing superblocks and filesystem accounting information: done
 </code></pre></div>    </div>
   </li>
   <li>Criar uma nova pasta para montar o volume:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mkdir /mnt/nuevo-vol
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo mkdir /mnt/nuevo-vol
 </code></pre></div>    </div>
   </li>
   <li>Montar o novo volume (pode ignorar o erro):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mount /dev/vdb1 /mnt/nuevo-vol
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo mount /dev/vdb1 /mnt/nuevo-vol
 [  201.700545] EXT3-fs (vdb1): error: couldn't mount because of unsupported optional features (240)
 </code></pre></div>    </div>
   </li>
   <li>Confirmar que o volume foi montado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mount
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ mount
 rootfs on / type rootfs (rw)
 /dev on /dev type devtmpfs (rw,relatime,size=21792k,nr_inodes=5448,mode=755)
 /dev/vda1 on / type ext3 (rw,relatime,errors=continue,user_xattr,acl,barrier=1,data=ordered)
@@ -750,7 +772,8 @@ $ mount | grep nuevo-vol
 </code></pre></div>    </div>
   </li>
   <li>Criar um arquivo no novo volume:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo touch /mnt/nuevo-vol/arquivo.txt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo touch /mnt/nuevo-vol/arquivo.txt
     
 $ ls  /mnt/nuevo-vol/
 /mnt/nuevo-vol/arquivo.txt
@@ -762,12 +785,14 @@ $ ls  /mnt/nuevo-vol/
 
 <ol>
   <li>Criar um <em>snapshot</em> do volume:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot create --volume teste-fiap teste-fiap-snap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot create --volume teste-fiap teste-fiap-snap
 Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be available, but current status is: in-use. (HTTP 400) (Request-ID: req-7c30ee3f-20d4-422e-a6d3-2ed44a631de2)
 </code></pre></div>    </div>
 
     <p>OpenStack não recomenda fazer <em>snapshots</em> de volumes em uso. Para forzar:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot create --volume teste-fiap teste-fiap-snap --force
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot create --volume teste-fiap teste-fiap-snap --force
 +-------------+--------------------------------------+
 | Field       | Value                                |
 +-------------+--------------------------------------+
@@ -784,7 +809,8 @@ Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be avail
 </code></pre></div>    </div>
   </li>
   <li>Listar e mostrar o <em>snapshot</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot list
 +--------------------------------------+-----------------+-------------+-----------+------+
 | ID                                   | Name            | Description | Status    | Size |
 +--------------------------------------+-----------------+-------------+-----------+------+
@@ -810,7 +836,8 @@ $ openstack volume snapshot show teste-fiap-snap
 </code></pre></div>    </div>
   </li>
   <li>Mostrar o volume no LVM:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo lvs
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ sudo lvs
   LV                                             VG                        Attr       LSize Pool Origin                                      Data%  Meta%  Move Log Cpy%Sync Convert
   _snapshot-b55e6a7c-3072-4879-8f35-bf68901d0e1a stack-volumes-lvmdriver-1 swi-a-s--- 1.00g      volume-abccb06a-5e9e-422b-a2c0-9f6768071785 0.00
   volume-abccb06a-5e9e-422b-a2c0-9f6768071785    stack-volumes-lvmdriver-1 owi-aos--- 1.00g                               
@@ -828,7 +855,8 @@ $ sudo pvs
 </code></pre></div>    </div>
   </li>
   <li>Desatachar o volume da VM e confirmar que volta para o estado <code class="language-plaintext highlighter-rouge">available</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack server remove volume vm teste-fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack server remove volume vm teste-fiap
     
 $ openstack volume list
 +--------------------------------------+------------+-----------+------+-------------+
@@ -845,7 +873,8 @@ $ openstack volume list
 
 <ol>
   <li>Desanexar e deletar volumes e <em>snapshots</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot delete teste-fiap-snap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack volume snapshot delete teste-fiap-snap
     
 $ openstack volume delete teste-fiap
 </code></pre></div>    </div>
@@ -859,21 +888,22 @@ $ openstack volume delete teste-fiap
     <ul>
       <li>Criação de volume vazio</li>
       <li>Criação de volume a partir de imagem</li>
-      <li><em>Snapshot</em> de volume</li>
+      <li>
+<em>Snapshot</em> de volume</li>
       <li>Atachar/desatachar volumes a VMs</li>
     </ul>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder1.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder1.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder2.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder2.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder3.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder3.png" alt=""></p>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder4.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder4.png" alt=""></p>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -961,6 +991,53 @@ $ openstack volume delete teste-fiap
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -1099,52 +1176,6 @@ $ openstack volume delete teste-fiap
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1156,13 +1187,15 @@ $ openstack volume delete teste-fiap
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1198,7 +1231,7 @@ $ openstack volume delete teste-fiap
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1247,7 +1280,8 @@ $ openstack volume delete teste-fiap
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

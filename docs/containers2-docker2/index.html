@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Containers series II: Docker - continuação - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,25 +345,44 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-2---docker---continuação">Lab 2 - Docker - continuação</a><ul><li><a href="#executando-mysql-server">Executando mysql server</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#lab">Lab</a><ul><li><a href="#variáveis-de-entorno--e">Variáveis de entorno (-e)</a></li><li><a href="#mapeamento-de-portas--p">Mapeamento de portas (-p)</a></li><li><a href="#persistência-de-dados--v">Persistência de dados (-v)</a></li></ul></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-2---docker---continua%C3%A7%C3%A3o">Lab 2 - Docker - continuação</a><ul>
+<li><a href="#executando-mysql-server">Executando mysql server</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li>
+<a href="#lab">Lab</a><ul>
+<li><a href="#vari%C3%A1veis-de-entorno--e">Variáveis de entorno (-e)</a></li>
+<li><a href="#mapeamento-de-portas--p">Mapeamento de portas (-p)</a></li>
+<li><a href="#persist%C3%AAncia-de-dados--v">Persistência de dados (-v)</a></li>
+</ul>
+</li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#containers">Serie de artigos</a> sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-2---docker---continuação">Lab 2 - Docker - continuação</h1>
 
 <h2 id="executando-mysql-server">Executando mysql server</h2>
 <p>Usaremos a imagem oficial <code class="language-plaintext highlighter-rouge">mysql</code> para aprender alguns conceitos importantes do Docker:</p>
 <ul>
-  <li><strong>variáveis de entorno</strong>: <code class="language-plaintext highlighter-rouge">docker run -e</code></li>
-  <li><strong>mapeamento de portas</strong>: <code class="language-plaintext highlighter-rouge">docker run -p</code></li>
-  <li><strong>persistência de dados</strong>: <code class="language-plaintext highlighter-rouge">docker run -v</code></li>
+  <li>
+<strong>variáveis de entorno</strong>: <code class="language-plaintext highlighter-rouge">docker run -e</code>
+</li>
+  <li>
+<strong>mapeamento de portas</strong>: <code class="language-plaintext highlighter-rouge">docker run -p</code>
+</li>
+  <li>
+<strong>persistência de dados</strong>: <code class="language-plaintext highlighter-rouge">docker run -v</code>
+</li>
 </ul>
 
 <h2 id="pre-reqs">Pre-reqs</h2>
@@ -393,8 +398,10 @@
 <p>Vamos trabalhar com dois terminais abertos (<strong>T1</strong> e <strong>T2</strong>).</p>
 
 <ol>
-  <li><strong>[T1]</strong> Obtenção da imagem
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker pull mysql:5.7
+  <li>
+<strong>[T1]</strong> Obtenção da imagem
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker pull mysql:5.7
  Using default tag: latest
  latest: Pulling from library/mysql
  c499e6d256d6: Pull complete 
@@ -419,8 +426,10 @@
 <h3 id="variáveis-de-entorno--e">Variáveis de entorno (<code class="language-plaintext highlighter-rouge">-e</code>)</h3>
 
 <ol>
-  <li><strong>[T1]</strong> Primeira tentativa executando o servidor MySQL
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run mysql:5.7
+  <li>
+<strong>[T1]</strong> Primeira tentativa executando o servidor MySQL
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run mysql:5.7
 2020-04-05 12:45:11+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
 2020-04-05 12:45:11+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
 2020-04-05 12:45:11+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
@@ -428,15 +437,20 @@
        You need to specify one of MYSQL_ROOT_PASSWORD, MYSQL_ALLOW_EMPTY_PASSWORD and MYSQL_RANDOM_ROOT_PASSWORD
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Como mostra a mensagem de erro anterior, não e possível executar o container <code class="language-plaintext highlighter-rouge">mysql</code> sem configurar alguma das seguintes opções em relação à autenticação:
+  <li>
+<strong>[T1]</strong> Como mostra a mensagem de erro anterior, não e possível executar o container <code class="language-plaintext highlighter-rouge">mysql</code> sem configurar alguma das seguintes opções em relação à autenticação:
     <ul>
-      <li>Uma senha para o usuario <em>root</em> do banco via <code class="language-plaintext highlighter-rouge">MYSQL_ROOT_PASSWORD</code></li>
-      <li>Permitir uma senha de <em>root</em> vazia via <code class="language-plaintext highlighter-rouge">MYSQL_ALLOW_EMPTY_PASSWORD</code></li>
-      <li>Criar uma senha de <em>root</em> aleatória via <code class="language-plaintext highlighter-rouge">MYSQL_RANDOM_ROOT_PASSWORD</code></li>
+      <li>Uma senha para o usuario <em>root</em> do banco via <code class="language-plaintext highlighter-rouge">MYSQL_ROOT_PASSWORD</code>
+</li>
+      <li>Permitir uma senha de <em>root</em> vazia via <code class="language-plaintext highlighter-rouge">MYSQL_ALLOW_EMPTY_PASSWORD</code>
+</li>
+      <li>Criar uma senha de <em>root</em> aleatória via <code class="language-plaintext highlighter-rouge">MYSQL_RANDOM_ROOT_PASSWORD</code>
+</li>
     </ul>
 
     <p>Vamos optar pela primeira opção. Para passar variáveis de entorno ao container usaremos a opção <code class="language-plaintext highlighter-rouge">-e</code>. É importante colocar todos os parâmetros opcionais do comando <code class="language-plaintext highlighter-rouge">docker run</code> <strong>antes</strong> do nome da imagem:</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker run -e MYSQL_ROOT_PASSWORD=fiap mysql:5.7
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker run -e MYSQL_ROOT_PASSWORD=fiap mysql:5.7
  2020-04-05 12:50:57+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
  2020-04-05 12:50:57+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
  2020-04-05 12:50:57+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
@@ -482,7 +496,8 @@
     <p><strong>[T2]</strong> Conseguimos executar o container, vamos tentar acessar o banco desde o outro terminal. Para isso, precisamos instalar o cliente do MySQL:</p>
 
     <p>[<strong>Ubuntu</strong>]</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo apt install mysql-client -y
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo apt install mysql-client -y
  Reading package lists... Done
  Building dependency tree       
  Reading state information... Done
@@ -526,7 +541,8 @@
 </code></pre></div>    </div>
 
     <p>[<strong>Amazon Linux</strong>]</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo yum install -y mariadb
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo yum install -y mariadb
 </code></pre></div>    </div>
   </li>
   <li>
@@ -534,18 +550,24 @@
 
     <p>Alguns parametros do cliente MySQL:</p>
     <ul>
-      <li><em>Hostname</em> do banco via <code class="language-plaintext highlighter-rouge">-h</code></li>
-      <li>Usuario via <code class="language-plaintext highlighter-rouge">-u</code></li>
+      <li>
+<em>Hostname</em> do banco via <code class="language-plaintext highlighter-rouge">-h</code>
+</li>
+      <li>Usuario via <code class="language-plaintext highlighter-rouge">-u</code>
+</li>
       <li>Senha via <code class="language-plaintext highlighter-rouge">-p</code>. A senha tem que ser digitada <strong>sem espacos</strong> depois do parametro.
-        <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ mysql -h 127.0.0.1 -u root -pfiap
+        <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ mysql -h 127.0.0.1 -u root -pfiap
  mysql: [Warning] Using a password on the command line interface can be insecure.
  ERROR 2003 (HY000): Can't connect to MySQL server on '127.0.0.1' (111)
 </code></pre></div>        </div>
       </li>
     </ul>
   </li>
-  <li><strong>[T2]</strong> Listar o container em execução para entender a falta de conectividade. A coluna <code class="language-plaintext highlighter-rouge">PORTS</code> mostra que a porta 3306 do container (a padrão do MySQL) não está mapeada a nenhuma porta do <em>host</em>.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker ps
+  <li>
+<strong>[T2]</strong> Listar o container em execução para entender a falta de conectividade. A coluna <code class="language-plaintext highlighter-rouge">PORTS</code> mostra que a porta 3306 do container (a padrão do MySQL) não está mapeada a nenhuma porta do <em>host</em>.
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker ps
  CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                 NAMES
  66696bdd281f        mysql               "docker-entrypoint.s…"   2 minutes ago       Up 2 minutes        3306/tcp, 33060/tcp   funny_yonath
 </code></pre></div>    </div>
@@ -553,12 +575,15 @@
   <li>
     <p><strong>[T2]</strong> Parar o container:</p>
 
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker stop 66696bdd281f
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker stop 66696bdd281f
  66696bdd281f
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Vamos adicionar ao nosso comando <code class="language-plaintext highlighter-rouge">docker run</code> o parâmetro <code class="language-plaintext highlighter-rouge">-p</code>, responsável pelo mapeamento de portas. Recebe um argumento do tipo <strong><em>x:y</em></strong>, a onde <strong><em>x</em></strong> é a porta do lado do host e <strong><em>y</em></strong> a porta do lado do container.
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -e MYSQL_ROOT_PASSWORD=fiap -p 3306:3306 mysql:5.7
+  <li>
+<strong>[T1]</strong> Vamos adicionar ao nosso comando <code class="language-plaintext highlighter-rouge">docker run</code> o parâmetro <code class="language-plaintext highlighter-rouge">-p</code>, responsável pelo mapeamento de portas. Recebe um argumento do tipo <strong><em>x:y</em></strong>, a onde <strong><em>x</em></strong> é a porta do lado do host e <strong><em>y</em></strong> a porta do lado do container.
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run -e MYSQL_ROOT_PASSWORD=fiap -p 3306:3306 mysql:5.7
 2020-04-05 13:04:50+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
 2020-04-05 13:04:50+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
 2020-04-05 13:04:50+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
@@ -595,14 +620,18 @@ Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skippin
 2020-04-05T13:05:07.005006Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Conferir o mapeamento de portas:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ docker ps
+  <li>
+<strong>[T2]</strong> Conferir o mapeamento de portas:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ docker ps
  CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                               NAMES
  38e202140601        mysql               "docker-entrypoint.s…"   11 seconds ago      Up 9 seconds        0.0.0.0:3306-&gt;3306/tcp, 33060/tcp   awesome_greider
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Tentar novamente o acesso ao banco de dados:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mysql -h 127.0.0.1 -u root -pfiap 
+  <li>
+<strong>[T2]</strong> Tentar novamente o acesso ao banco de dados:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ mysql -h 127.0.0.1 -u root -pfiap 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 8
 Server version: 8.0.19 MySQL Community Server - GPL
@@ -619,8 +648,10 @@ mysql&gt; exit
 Bye
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Parar o container:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker stop 38e202140601
+  <li>
+<strong>[T2]</strong> Parar o container:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker stop 38e202140601
 38e202140601
 </code></pre></div>    </div>
   </li>
@@ -633,7 +664,8 @@ Bye
     <p><strong>[T1]</strong> Conseguimos acessar ao banco. Porem, containers são efêmeros. Qualquer dado criado no banco será perdido após o termino do container.</p>
 
     <p>Para conseguir persistência de dados, vamos adicionar ao comando <code class="language-plaintext highlighter-rouge">docker run</code> o parâmetro <code class="language-plaintext highlighter-rouge">-v</code>. Recebe um argumento do tipo <strong><em>x:y</em></strong>, a onde <strong><em>x</em></strong> é o nome do volume e <strong><em>y</em></strong> a pasta a onde esse volume será mapeado dentro do container.</p>
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -e MYSQL_ROOT_PASSWORD=fiap -p 3306:3306 -v voldb:/var/lib/mysql mysql:5.7
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run -e MYSQL_ROOT_PASSWORD=fiap -p 3306:3306 -v voldb:/var/lib/mysql mysql:5.7
 2020-04-05 13:19:02+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
 2020-04-05 13:19:02+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
 2020-04-05 13:19:02+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
@@ -670,8 +702,10 @@ Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skippin
 2020-04-05T13:19:18.485139Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Acessar o banco e criar um <em>database</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mysql -h 127.0.0.1 -u root -pfiap
+  <li>
+<strong>[T2]</strong> Acessar o banco e criar um <em>database</em>:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ mysql -h 127.0.0.1 -u root -pfiap
 mysql: [Warning] Using a password on the command line interface can be insecure.
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 8
@@ -692,22 +726,28 @@ mysql&gt; exit
 Bye
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Parar o container:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+  <li>
+<strong>[T2]</strong> Parar o container:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                               NAMES
 27a9ff19cbd0        mysql               "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes        0.0.0.0:3306-&gt;3306/tcp, 33060/tcp   laughing_lovelace
 $ docker stop 27a9ff19cbd0
 27a9ff19cbd0
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Confirmar que o volume persiste mesmo depois do término do container:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker volume ls
+  <li>
+<strong>[T2]</strong> Confirmar que o volume persiste mesmo depois do término do container:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker volume ls
 DRIVER              VOLUME NAME
 local               voldb
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T1]</strong> Executar novamente o container, para conferir que os dados foram persistidos:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker run -e MYSQL_ROOT_PASSWORD=fiap -p 3306:3306 -v voldb:/var/lib/mysql mysql:5.7
+  <li>
+<strong>[T1]</strong> Executar novamente o container, para conferir que os dados foram persistidos:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ docker run -e MYSQL_ROOT_PASSWORD=fiap -p 3306:3306 -v voldb:/var/lib/mysql mysql:5.7
 2020-04-05 13:28:24+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
 2020-04-05 13:28:24+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
 2020-04-05 13:28:24+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
@@ -719,8 +759,10 @@ local               voldb
 2020-04-05T13:28:25.590278Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
 </code></pre></div>    </div>
   </li>
-  <li><strong>[T2]</strong> Acessar o banco e confirmar que o <em>database</em> criado foi persistido:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mysql -h 127.0.0.1 -u root -p
+  <li>
+<strong>[T2]</strong> Acessar o banco e confirmar que o <em>database</em> criado foi persistido:
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ mysql -h 127.0.0.1 -u root -p
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 8
@@ -752,7 +794,7 @@ Bye
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -840,6 +882,53 @@ Bye
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -978,52 +1067,6 @@ Bye
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -1035,13 +1078,15 @@ Bye
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1077,7 +1122,7 @@ Bye
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1126,7 +1171,8 @@ Bye
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

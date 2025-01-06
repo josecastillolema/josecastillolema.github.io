@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>OpenStack series VI: Swift - Object Storage Service - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,16 +345,25 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#lab-6---openstack-swift">Lab 6 - OpenStack Swift</a><ul><li><a href="#object-storage-service">Object Storage Service</a></li><li><a href="#pre-reqs">Pre-reqs</a></li><li><a href="#containers-e-objetos">Containers e objetos</a></li><li><a href="#clean-up">Clean-up</a></li><li><a href="#horizon">Horizon</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li>
+<a href="#lab-6---openstack-swift">Lab 6 - OpenStack Swift</a><ul>
+<li><a href="#object-storage-service">Object Storage Service</a></li>
+<li><a href="#pre-reqs">Pre-reqs</a></li>
+<li><a href="#containers-e-objetos">Containers e objetos</a></li>
+<li><a href="#clean-up">Clean-up</a></li>
+<li><a href="#horizon">Horizon</a></li>
+</ul>
+</li></ul>
             </nav>
           </aside>
         
         <p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=watch&amp;count=true&amp;size=large&amp;v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=star&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;repo=fiap&amp;type=fork&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="132" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=star&count=true&size=large" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=fiap&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 
 <h1 id="lab-6---openstack-swift">Lab 6 - OpenStack Swift</h1>
 
@@ -384,7 +379,8 @@
 
 <ol>
   <li>Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ source devstack/openrc admin
  WARNING: setting legacy OS_TENANT_NAME to support cli tools.
 
  $ env | grep OS_
@@ -402,7 +398,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir que o Swift foi instalado no OpenStack:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack service list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack service list
  +----------------------------------+-------------+----------------+
  | ID                               | Name        | Type           |
  +----------------------------------+-------------+----------------+
@@ -422,7 +419,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar informação sobre o <em>endpoint</em>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ openstack catalog show swift
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ openstack catalog show swift
  +-----------+-------------------------------------------------------------------------------+
  | Field     | Value                                                                         |
  +-----------+-------------------------------------------------------------------------------+
@@ -438,7 +436,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir que a porta 8080 está aberta e associada ao Swift:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ sudo netstat -punlt | grep 8080
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ sudo netstat -punlt | grep 8080
  tcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      842/python
     
  $ ps aux  | grep 842
@@ -448,7 +447,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Listar os serviços Linux que compõem o Swift:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ systemctl | grep devstack@s
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ systemctl | grep devstack@s
  devstack@s-account.service                                                           loaded active running   Devstack devstack@s-account.service
  devstack@s-container.service                                                         loaded active running   Devstack devstack@s-container.service
  devstack@s-object.service                                                            loaded active running   Devstack devstack@s-object.service
@@ -456,7 +456,8 @@
 </code></pre></div>    </div>
   </li>
   <li>Conferir a saúde dos serviços:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ systemctl status devstack@s*
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ systemctl status devstack@s*
  ● devstack@s-account.service - Devstack devstack@s-account.service
     Loaded: loaded (/etc/systemd/system/devstack@s-account.service; enabled; vendor preset: enabled)
     Active: active (running) since Mon 2020-10-26 15:56:06 PDT; 42min ago
@@ -494,19 +495,23 @@
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os <em>logs</em> do serviço:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ journalctl -u devstack@s-proxy
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ journalctl -u devstack@s-proxy
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os arquivos de configuração:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ less /etc/swift/swift.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ less /etc/swift/swift.conf
 </code></pre></div>    </div>
   </li>
   <li>Mostrar os arquivos de configuração de uma forma mais clara (sem comentários nem linhas vazias):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> $ egrep -v "^#|^$" /etc/swift/swift.conf
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> $ egrep -v "^#|^$" /etc/swift/swift.conf
 </code></pre></div>    </div>
   </li>
   <li>Conferir o <em>endpoint</em> do Keystone:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ openstack catalog show keystone
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ openstack catalog show keystone
 +-----------+------------------------------------------+
 | Field     | Value                                    |
 +-----------+------------------------------------------+
@@ -527,7 +532,8 @@
 
 <ol>
   <li>Mostrar estatísticas de uso gerais (passando o <em>endpoint</em> do Keystone + <code class="language-plaintext highlighter-rouge">/v3</code>):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat
                Account: AUTH_faac34f01fb2464295bcea501b18b741
             Containers: 0
                Objects: 0
@@ -540,33 +546,39 @@ X-Openstack-Request-Id: txc3d40d2b1fa541f4831b0-005f97548e
 </code></pre></div>    </div>
   </li>
   <li>Listar os containers (não deveria ter nenhum ainda):
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 list
 </code></pre></div>    </div>
   </li>
   <li>Criar um arquivo de teste:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo "sic mundus creatus est" &gt; teste.txt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ echo "sic mundus creatus est" &gt; teste.txt
     
 $ cat teste.txt
 sic mundus creatus est
 </code></pre></div>    </div>
   </li>
   <li>Subir o arquivo de teste a um container chamado <code class="language-plaintext highlighter-rouge">fiap</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 upload fiap teste.txt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 upload fiap teste.txt
 teste.txt
 </code></pre></div>    </div>
   </li>
   <li>Listar os containers:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 list
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 list
 fiap
 </code></pre></div>    </div>
   </li>
   <li>Listar o container <code class="language-plaintext highlighter-rouge">fiap</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 list fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 list fiap
 teste
 </code></pre></div>    </div>
   </li>
   <li>Mostrar estatísticas de uso gerais:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat
                         Account: AUTH_faac34f01fb2464295bcea501b18b741
                      Containers: 1
                         Objects: 0
@@ -583,7 +595,8 @@ Containers in policy "policy-0": 1
 </code></pre></div>    </div>
   </li>
   <li>Mostrar estatísticas de uso do container <code class="language-plaintext highlighter-rouge">fiap</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat fiap
                Account: AUTH_faac34f01fb2464295bcea501b18b741
              Container: fiap
                Objects: 1
@@ -602,7 +615,8 @@ X-Openstack-Request-Id: tx08d25d4bce94419282003-005f975ead
 </code></pre></div>    </div>
   </li>
   <li>Mostrar estatísticas de uso do arquivo de teste:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat fiap teste.txt
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 stat fiap teste.txt
                Account: AUTH_faac34f01fb2464295bcea501b18b741
              Container: fiap
                 Object: teste.txt
@@ -618,7 +632,8 @@ X-Openstack-Request-Id: tx993dcb092f184eafa24a4-005f975eca
 </code></pre></div>    </div>
   </li>
   <li>Criar uma nova pasta e fazer o <em>download</em> do arquivo:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir novapasta
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ mkdir novapasta
     
 $ cd novapasta/
     
@@ -627,7 +642,8 @@ teste.txt [auth 0.034s, headers 0.066s, total 0.067s, 0.000 MB/s]
 </code></pre></div>    </div>
   </li>
   <li>Conferir o conteúdo do arquivo baixado:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls -lh
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ ls -lh
 total 8.0K  -rw-rw-r-- 1 os os 7 Oct 26 15:58 teste.txt
     
 $ cat teste.txt
@@ -635,11 +651,13 @@ sic mundus creatus est
 </code></pre></div>    </div>
   </li>
   <li>Configurar permissões de leitura para o usuário <code class="language-plaintext highlighter-rouge">demo</code> no projeto <code class="language-plaintext highlighter-rouge">demo</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 post fiap -r "demo:demo"
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 post fiap -r "demo:demo"
 </code></pre></div>    </div>
   </li>
   <li>Configurar permissões de escrita para o usuário <code class="language-plaintext highlighter-rouge">demo</code> no projeto <code class="language-plaintext highlighter-rouge">demo</code>:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 post fiap -w "demo:demo"
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 post fiap -w "demo:demo"
 </code></pre></div>    </div>
   </li>
 </ol>
@@ -648,7 +666,8 @@ sic mundus creatus est
 
 <ol>
   <li>Deletar objeto e container:
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 delete fiap
+    <div class="language-plaintext highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code>$ swift -V 3 -A http://192.168.17.131/identity/v3 delete fiap
 fiap
     
 $ swift -V 3 -A http://192.168.17.131/identity/v3 stat
@@ -675,17 +694,19 @@ Containers in policy "policy-0": 0
   <li>Refazer o mesmo processo via Horizon Dashboard:
     <ul>
       <li>Criação de container</li>
-      <li><em>Upload</em> de arquivo</li>
-      <li><em>Download</em> de arquivo</li>
+      <li>
+<em>Upload</em> de arquivo</li>
+      <li>
+<em>Download</em> de arquivo</li>
       <li>Configuração de permissões</li>
       <li>Abrir objeto via URL</li>
     </ul>
 
-    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/swift1.png" alt="" /></p>
+    <p><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/swift1.png" alt=""></p>
   </li>
 </ol>
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&amp;type=follow&amp;count=true&amp;size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
 
         
       </section>
@@ -773,6 +794,53 @@ Containers in policy "policy-0": 0
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -911,52 +979,6 @@ Containers in policy "policy-0": 0
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -968,13 +990,15 @@ Containers in policy "policy-0": 0
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -1010,7 +1034,7 @@ Containers in policy "policy-0": 0
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -1059,7 +1083,8 @@ Containers in policy "policy-0": 0
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   

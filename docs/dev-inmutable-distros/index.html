@@ -1,12 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
   Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
   Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
   Free for personal and commercial use under the MIT license
   https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
--->
-<html lang="en" class="no-js">
+--><html lang="en" class="no-js">
   <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Development workflows on inmutable distros: rootless setup - GitOps</title>
@@ -53,7 +53,7 @@
 
 
 
-  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html" />
+  <meta name="google-site-verification" content="googled48a6d8a28aaa375.html">
 
 
 
@@ -112,37 +112,23 @@
           GitOps
           
         </a>
-        <ul class="visible-links"><li class="masthead__menu-item">
-              <a
-                href="/series/"
-                
-                
-              >series</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/classes/"
-                
-                
-              >classes</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/talks/"
-                
-                
-              >talks</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/tags/"
-                
-                
-              >tags</a>
-            </li><li class="masthead__menu-item">
-              <a
-                href="/about/"
-                
-                
-              >about</a>
-            </li></ul>
+        <ul class="visible-links">
+<li class="masthead__menu-item">
+              <a href="/series/">series</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/classes/">classes</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/talks/">talks</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/tags/">tags</a>
+            </li>
+<li class="masthead__menu-item">
+              <a href="/about/">about</a>
+            </li>
+</ul>
         
         <button class="search__toggle" type="button">
           <span class="visually-hidden">Toggle search</span>
@@ -359,8 +345,35 @@
         
           <aside class="sidebar__right sticky">
             <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li><li><a href="#toolbx-approaches">Toolbx approaches</a><ul><li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li><li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li></ul></li><li><a href="#flatpak-approach">Flatpak approach</a></li><li><a href="#combined-approach">Combined approach</a></li><li><a href="#user-rootless-installations">User (rootless) installations</a><ul><li><a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul></li><li><a href="#golang">Golang</a></li><li><a href="#python">Python</a><ul><li><a href="#local-install---custom-version">Local install - custom version</a></li><li><a href="#using-python-virtual-environments">Using python virtual environments</a></li></ul></li><li><a href="#rust">Rust</a></li><li><a href="#ansible">Ansible</a></li></ul></li></ul>
+              <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu">
+<li><a href="#layering-with-rpm-ostree-not-a-good-idea">Layering with rpm-ostree (not a good idea)</a></li>
+<li>
+<a href="#toolbx-approaches">Toolbx approaches</a><ul>
+<li><a href="#single-toolbx-container-for-all-dev-activities">Single toolbx container for all dev activities</a></li>
+<li><a href="#a-toolbx-container-per-language--project">A toolbx container per language / project</a></li>
+</ul>
+</li>
+<li><a href="#flatpak-approach">Flatpak approach</a></li>
+<li><a href="#combined-approach">Combined approach</a></li>
+<li>
+<a href="#user-rootless-installations">User (rootless) installations</a><ul>
+<li>
+<a href="#ocaml">OCaml</a><ul><li><a href="#using-local-switches">Using local switches</a></li></ul>
+</li>
+<li><a href="#golang">Golang</a></li>
+<li>
+<a href="#python">Python</a><ul>
+<li><a href="#local-install---custom-version">Local install - custom version</a></li>
+<li><a href="#using-python-virtual-environments">Using python virtual environments</a></li>
+</ul>
+</li>
+<li><a href="#rust">Rust</a></li>
+<li><a href="#ansible">Ansible</a></li>
+</ul>
+</li>
+</ul>
             </nav>
           </aside>
         
@@ -373,7 +386,8 @@
   <li>System root (baseOS) is mostly immutable</li>
   <li>System software installation/updates are handled as images and applied on reboot</li>
   <li>For installing desktop applications, <a href="https://flatpak.org/">Flatpak</a> is the recommended default route</li>
-  <li><a href="https://containertoolbx.org/">Toolbx</a> can be used to set up containerized Linux environments for developer tools, these containers will mount your home directory and certain important files for GUI programs to work as well</li>
+  <li>
+<a href="https://containertoolbx.org/">Toolbx</a> can be used to set up containerized Linux environments for developer tools, these containers will mount your home directory and certain important files for GUI programs to work as well</li>
   <li>Local user (rootless) installations</li>
 </ul>
 
@@ -455,7 +469,8 @@
   <li>For VSCode
     <ul>
       <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">Dev Containers extension</a></li>
-      <li><a href="https://github.com/owtaylor/toolbox-vscode">toolbox-vscode</a>: a script that configures the current toolbox container to work with the Remote Containers Visual Studio Code extension</li>
+      <li>
+<a href="https://github.com/owtaylor/toolbox-vscode">toolbox-vscode</a>: a script that configures the current toolbox container to work with the Remote Containers Visual Studio Code extension</li>
     </ul>
   </li>
   <li>For Emacs
@@ -465,7 +480,8 @@
   </li>
   <li>For Neovim
     <ul>
-      <li><code class="language-plaintext highlighter-rouge">nvim --remote</code> ?</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">nvim --remote</code> ?</li>
       <li><a href="https://github.com/jamestthompson3/nvim-remote-containers">nvim-remote-containers</a></li>
     </ul>
   </li>
@@ -537,7 +553,7 @@ go version go1.21.3 linux/amd64
 
 <p>Finally, open VSCode (it should automatically detect the local Golang installation), install the <a href="https://marketplace.visualstudio.com/items?itemName=golang.Go">Go VSCode extension</a> and click on <code class="language-plaintext highlighter-rouge">⚠ Analysis Tools Missing</code> to install those.</p>
 
-<p><img src="/assets/images/posts/2023-10-21-dev-inmutable-distros/go.png" alt="" /></p>
+<p><img src="/assets/images/posts/2023-10-21-dev-inmutable-distros/go.png" alt=""></p>
 
 <h3 id="python">Python</h3>
 
@@ -562,7 +578,7 @@ $ pip install ipython jinjanator
 
 <p>Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment <code class="language-plaintext highlighter-rouge">~/bin/python</code>. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.</p>
 
-<p><img src="/assets/images/posts/2023-10-21-dev-inmutable-distros/python.png" alt="" /></p>
+<p><img src="/assets/images/posts/2023-10-21-dev-inmutable-distros/python.png" alt=""></p>
 
 <h4 id="using-python-virtual-environments">Using python virtual environments</h4>
 
@@ -677,6 +693,53 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/podman-wasm-libkrun/" rel="permalink">Playing with Podman crun backends: Wasm(Edge) and libkrun
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          19 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman.
+$ podman info | grep crun -A 2
+    name: crun
+    package: crun-1.1...</p>
+  </article>
+</div>
+
     
       
       
@@ -815,52 +878,6 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
 </div>
 
     
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/lf-sigstore/" rel="permalink">Securing Your Software Supply Chain with Sigstore (LFS182)
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          3 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
   </div>
 </div>
 
@@ -872,13 +889,15 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
 
     
       <div class="search-content">
-        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+        <div class="search-content__inner-wrap">
+<form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
     <label class="sr-only" for="search">
       Enter your search term...
     </label>
-    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term...">
   </form>
-  <div id="results" class="results"></div></div>
+  <div id="results" class="results"></div>
+</div>
 
       </div>
     
@@ -914,7 +933,7 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>
@@ -963,7 +982,8 @@ $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' co
       (d.head || d.body).appendChild(s);
     })();
   </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
 
 
   
