@@ -1499,6 +1499,12 @@ var store = [{
         "url": "/codethedream25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
+        "title": "Red Hat Summit 2025",
+        "excerpt":"I will be speaking at Red Hat Summit 2025 in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders. Here are my sessions: 🧠 Horizon Europe projects working on the cloud edge continuum 🔧 Shifting performance engineering left - with Joe Talerico Register...","categories": [],
+        "tags": ["ansible","en","events","openshift","redhat","research"],
+        "url": "/rh-summit25/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
         "title": "ICPE 2025",
         "excerpt":"ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering Agenda Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes Sai Sindhur Malleni, Red Hat, USA Raúl Sevilla, Red Hat, Spain José Castillo Lema, Red Hat, Spain André Bauer, Illinois Institute of Technology, USA Cite this...","categories": [],
         "tags": ["en","events","networks","openshift","papers","redhat","research"],
