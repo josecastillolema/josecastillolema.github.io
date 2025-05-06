@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-01-06T15:28:32-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Introduction to Backstage - Developer Portals Made Easy (LFS142)</title><link href="https://josecastillolema.github.io/lf-backstage/" rel="alternate" type="text/html" title="Introduction to Backstage - Developer Portals Made Easy (LFS142)" /><published>2025-01-05T00:00:00-06:00</published><updated>2025-01-05T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-backstage</id><content type="html" xml:base="https://josecastillolema.github.io/lf-backstage/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-05-05T19:05:32-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">ICPE 2025</title><link href="https://josecastillolema.github.io/icpe25/" rel="alternate" type="text/html" title="ICPE 2025" /><published>2025-05-05T00:00:00-05:00</published><updated>2025-05-05T00:00:00-05:00</updated><id>https://josecastillolema.github.io/icpe25</id><content type="html" xml:base="https://josecastillolema.github.io/icpe25/"><![CDATA[<p><strong>ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering</strong></p>
+
+<h2 id="agenda"><a href="https://icpe2025.spec.org/program/">Agenda</a></h2>
+
+<p><a href="https://dl.acm.org/doi/10.1145/3676151.3719352"><strong>Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes</strong></a></p>
+
+<p><a href="https://doi.org/10.1145/3676151.3719352"><img src="https://zenodo.org/badge/DOI/10.1145/3676151.3719352.svg" alt="DOI:10.1109/NETSOFT.2019.8806686" /></a></p>
+
+<ul>
+  <li>Sai Sindhur Malleni, <em>Red Hat</em>, USA</li>
+  <li>Raúl Sevilla, <em>Red Hat</em>, Spain</li>
+  <li>José Castillo Lema, <em>Red Hat</em>, Spain</li>
+  <li>André Bauer, <em>Illinois Institute of Technology</em>, USA</li>
+</ul>
+
+<h2 id="cite-this">Cite this</h2>
+
+<h3 id="acm-ref">ACM Ref</h3>
+<p>Sai Sindhur Malleni, Raúl Sevilla, José Castillo Lema, and André Bauer. 2025. Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes. In Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering (ICPE ‘25). Association for Computing Machinery, New York, NY, USA, 113–123. https://doi.org/10.1145/3676151.3719352</p>
+
+<h3 id="bibtex">BibTeX</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3676151.3719352,
+author = {Malleni, Sai Sindhur and Sevilla, Ra\'{u}l and Lema, Jos\'{e} Castillo and Bauer, Andr\'{e}},
+title = {Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes},
+year = {2025},
+isbn = {9798400710735},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3676151.3719352},
+doi = {10.1145/3676151.3719352},
+abstract = {Microservices and containers have transformed the way applications are developed, tested, deployed, scaled, and managed. Several container orchestration platforms, like Kubernetes, have emerged, streamlining container management at scale and providing enter­prise-grade support for application modernization. Driven by application, compliance, and end-user requirements, companies opt to deploy multiple Kubernetes clusters across public and private clouds. However, deploying applications in multi-cluster environments presents distinct challenges, especially managing the communication between the microservices spread across clusters. Traditionally, custom configurations, like VPNs or firewall rules, were required to connect such complex setups of clusters spanning the public cloud and on-premise infrastructure. This industry paper presents a comprehensive analysis of network performance characteristics for three popular open-source multi-cluster networking solutions (namely, Skupper, Submariner, and Istio), addressing the challenges of microservices connectivity across clusters. We evaluate key factors such as latency, throughput, and resource utilization using established tools and benchmarks, offering valuable insights for organizations aiming to optimize the network performance of their multi-cluster deployments. Our experiments revealed that each solution involves unique trade-offs in performance and resource efficiency: Submariner offers low latency and consistency, Istio excels in throughput with moderate resource consumption, and Skupper stands out for its ease of configuration while maintaining balanced performance.},
+booktitle = {Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering},
+pages = {113–123},
+numpages = {11},
+keywords = {benchmark, distributed microservices, kubernetes, multi-cluster networking, network performance},
+location = {Toronto ON, Canada},
+series = {ICPE '25}
+}
+</code></pre></div></div>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="papers" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering]]></summary></entry><entry><title type="html">Introduction to Backstage - Developer Portals Made Easy (LFS142)</title><link href="https://josecastillolema.github.io/lf-backstage/" rel="alternate" type="text/html" title="Introduction to Backstage - Developer Portals Made Easy (LFS142)" /><published>2025-01-05T00:00:00-06:00</published><updated>2025-01-05T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-backstage</id><content type="html" xml:base="https://josecastillolema.github.io/lf-backstage/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
 
 <p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges.</p>
 
@@ -9,17 +47,18 @@
 <p>Earners of the <strong>LFS142: Introduction to Backstage - Developer Portals Made Easy</strong> badge have learned to use the Backstage framework to advocate for and implement developer portals that enhance productivity and creativity within organizations. They can explain Backstage’s architecture, features, and setup processes, tailor Backstage to meet specific organizational needs, and customize it with plugins. They know how to deploy a developer portal that fosters autonomy and reduces technical silos.</p>
 
 <div data-iframe-width="500" data-iframe-height="270" data-share-badge-id="4ee91574-1fa0-4dbc-ba9f-4c86b32eee83" data-share-badge-host="https://www.credly.com"></div>
-<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Getting Started with OpenTelemetry (LFS148)</title><link href="https://josecastillolema.github.io/lf-opentelemetry/" rel="alternate" type="text/html" title="Getting Started with OpenTelemetry (LFS148)" /><published>2025-01-04T00:00:00-06:00</published><updated>2025-01-04T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-opentelemetry</id><content type="html" xml:base="https://josecastillolema.github.io/lf-opentelemetry/"><![CDATA[[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/)
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Getting Started with OpenTelemetry (LFS148)</title><link href="https://josecastillolema.github.io/lf-opentelemetry/" rel="alternate" type="text/html" title="Getting Started with OpenTelemetry (LFS148)" /><published>2025-01-04T00:00:00-06:00</published><updated>2025-01-04T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-opentelemetry</id><content type="html" xml:base="https://josecastillolema.github.io/lf-opentelemetry/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
 
-[Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges.
+<p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges.</p>
 
-I would like to recommend the [Getting Started with OpenTelemetry](https://trainingportal.linuxfoundation.org/courses/getting-started-with-opentelemetry-lfs148/) course to learn how to use [OpenTelemetry](https://opentelemetry.io/) to build and manage unified observability.
+<p>I would like to recommend the <a href="https://trainingportal.linuxfoundation.org/courses/getting-started-with-opentelemetry-lfs148/">Getting Started with OpenTelemetry</a> course to learn how to use <a href="https://opentelemetry.io/">OpenTelemetry</a> to build and manage unified observability.</p>
 
-# LFS148
+<h1 id="lfs148">LFS148</h1>
 
-Earners of the **LSF148: Getting Started with OpenTelemetry** badge have hands-on experience implementing observability in software applications using OpenTelemetry. They can instrument Python and Java applications for traces, metrics, and logs, using both automatic and manual techniques. They understand telemetry signals, can use OpenTelemetry APIs and SDKs, and configure the OpenTelemetry Collector to export data to backends like Jaeger and Prometheus.
+<p>Earners of the <strong>LSF148: Getting Started with OpenTelemetry</strong> badge have hands-on experience implementing observability in software applications using OpenTelemetry. They can instrument Python and Java applications for traces, metrics, and logs, using both automatic and manual techniques. They understand telemetry signals, can use OpenTelemetry APIs and SDKs, and configure the OpenTelemetry Collector to export data to backends like Jaeger and Prometheus.</p>
 
-<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="56d75314-b80c-4942-952a-8e0f23fe28ff" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Playing with Podman crun backends: Wasm(Edge) and libkrun</title><link href="https://josecastillolema.github.io/podman-wasm-libkrun/" rel="alternate" type="text/html" title="Playing with Podman crun backends: Wasm(Edge) and libkrun" /><published>2025-01-02T00:00:00-06:00</published><updated>2025-01-02T00:00:00-06:00</updated><id>https://josecastillolema.github.io/podman-wasm-libkrun</id><content type="html" xml:base="https://josecastillolema.github.io/podman-wasm-libkrun/"><![CDATA[<p>Thanks to <a href="https://github.com/containers/crun">crun</a> we can run <a href="#wasm">WebAssembly (Wasm)</a> and <a href="#libkrun">libkrun</a> workloads in directly in Podman.</p>
+<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="56d75314-b80c-4942-952a-8e0f23fe28ff" data-share-badge-host="https://www.credly.com"></div>
+<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Playing with Podman crun backends: Wasm(Edge) and libkrun</title><link href="https://josecastillolema.github.io/podman-wasm-libkrun/" rel="alternate" type="text/html" title="Playing with Podman crun backends: Wasm(Edge) and libkrun" /><published>2025-01-02T00:00:00-06:00</published><updated>2025-01-02T00:00:00-06:00</updated><id>https://josecastillolema.github.io/podman-wasm-libkrun</id><content type="html" xml:base="https://josecastillolema.github.io/podman-wasm-libkrun/"><![CDATA[<p>Thanks to <a href="https://github.com/containers/crun">crun</a> we can run <a href="#wasm">WebAssembly (Wasm)</a> and <a href="#libkrun">libkrun</a> workloads in directly in Podman.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ podman info | grep crun -A 2
     name: crun
     package: crun-1.19.1-1.fc41.x86_64
@@ -360,7 +399,9 @@ $ flamegraph.pl server-with-wasm.folded &gt; server-with-wasm.sv
 <p><a href="https://ocaml.org/">OCaml</a> es un lenguaje de programación funcional de propósito general y tipado estático, con inferencia de tipos, tipos inductivos, pattern matching, variantes, etc. además de ser muy eficiente. En esta charla veremos las principales características del lenguaje (comparadas con código Python equivalente) y hablaremos sobre el tooling y futuro del lenguaje y la posibilidad de crear (memory safe) unikernels usando la biblioteca de <a href="https://mirage.io/">MirageOS</a>.</p>
 
 <h2 id="bio">Bio</h2>
-<p>José trabaja como ingeniero de software en el equipo de Performance &amp; Scale de Red Hat, con tecnologías cloud-native y plataformas de orquestación de containers. Imparte cursos de Cloud, DevOps, Networking e IoT desde 2016 en cursos de grado y posgrado.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="es" /><category term="events" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Securing Your Software Supply Chain with Sigstore (LFS182)</title><link href="https://josecastillolema.github.io/lf-sigstore/" rel="alternate" type="text/html" title="Securing Your Software Supply Chain with Sigstore (LFS182)" /><published>2024-12-05T00:00:00-06:00</published><updated>2024-12-05T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-sigstore</id><content type="html" xml:base="https://josecastillolema.github.io/lf-sigstore/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
+<p>José trabaja como ingeniero de software en el equipo de Performance &amp; Scale de Red Hat, con tecnologías cloud-native y plataformas de orquestación de containers. Imparte cursos de Cloud, DevOps, Networking e IoT desde 2016 en cursos de grado y posgrado.</p>
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-fp-madrid/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="es" /><category term="events" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Securing Your Software Supply Chain with Sigstore (LFS182)</title><link href="https://josecastillolema.github.io/lf-sigstore/" rel="alternate" type="text/html" title="Securing Your Software Supply Chain with Sigstore (LFS182)" /><published>2024-12-05T00:00:00-06:00</published><updated>2024-12-05T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-sigstore</id><content type="html" xml:base="https://josecastillolema.github.io/lf-sigstore/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
 
 <p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.</p>
 
@@ -404,40 +445,4 @@ $ flamegraph.pl server-with-wasm.folded &gt; server-with-wasm.sv
 
 <p>Excited to share the article: <a href="https://research.redhat.com/blog/article/unleashing-the-potential-of-function-as-a-service-in-the-cloud-continuum/">Unleashing the potential of Function as a Service in the cloud continuum</a></p>
 
-<p>The <a href="/physics">PHYSICS project</a> has successfully concluded, highlighting remarkable collaboration and innovation. Red Hat engineers and partners have made significant strides in evolving Function-as-a-Service (FaaS) in the cloud continuum, advancing multicluster automation, energy efficiency and autoscaling.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Management orchestrator for a Content-Centric Network in a 6G network</title><link href="https://josecastillolema.github.io/dnfa6/" rel="alternate" type="text/html" title="Management orchestrator for a Content-Centric Network in a 6G network" /><published>2024-05-20T00:00:00-05:00</published><updated>2024-05-20T00:00:00-05:00</updated><id>https://josecastillolema.github.io/dnfa6</id><content type="html" xml:base="https://josecastillolema.github.io/dnfa6/"><![CDATA[<p><a href="https://www.freepatentsonline.com/y2024/0163689.html"><strong>Management orchestrator for a Content-Centric Network in a 6G network</strong></a></p>
-
-<h4 id="inventors">Inventors</h4>
-<p>Jose Castillo Lema</p>
-
-<h4 id="publication-date">Publication date</h4>
-<p>2024/5/16</p>
-
-<h4 id="patent-office">Patent office</h4>
-<p>US</p>
-
-<h4 id="application-number">Application number</h4>
-<p>17985750</p>
-
-<h4 id="description">Description</h4>
-<p>A management orchestrator for a content-centric network in a 6G network is described herein according to some aspects. For example, the management orchestrator can receive, from a client device, a request for a network function in the content-centric network executed by a plurality of network nodes in the 6G network. In response to receiving the request for the network function, the management orchestrator can identify a particular network node of the plurality of network nodes usable for executing the network function. The management orchestrator can then automatically deploy a named function via the particular network node. The named function can be used to execute the network function for the client device.</p>
-
-<h4 id="cite-this">Cite this</h4>
-
-<h5 id="bibtex">BibTex</h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@{patent:20240163689,
- title     = "MANAGEMENT ORCHESTRATOR FOR A CONTENT-CENTRIC NETWORK IN A 6G NETWORK",
- number    = "20240163689",
- author    = "Castillo Lema, Jose (Sao Paulo, BR)",
- year      = "2024",
- month     = "May",
- url       = "https://www.freepatentsonline.com/y2024/0163689.html"
-}
-</code></pre></div></div>
-
-<h5 id="endnote">EndNote</h5>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*Patent
-Author	Year	Title	Country	Assignee	Number	URL
-Castillo Lema, Jose (Sao Paulo, BR)	2024	MANAGEMENT ORCHESTRATOR FOR A CONTENT-CENTRIC NETWORK IN A 6G NETWORK	United States	Red Hat, Inc. (Raleigh, NC, US)	20240163689	https://www.freepatentsonline.com/y2024/0163689.html
-</code></pre></div></div>]]></content><author><name>Jose Castillo Lema</name></author><category term="ccn" /><category term="en" /><category term="networks" /><category term="nfv" /><category term="papers" /><category term="research" /><summary type="html"><![CDATA[Management orchestrator for a Content-Centric Network in a 6G network]]></summary></entry></feed>
+<p>The <a href="/physics">PHYSICS project</a> has successfully concluded, highlighting remarkable collaboration and innovation. Red Hat engineers and partners have made significant strides in evolving Function-as-a-Service (FaaS) in the cloud continuum, advancing multicluster automation, energy efficiency and autoscaling.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
