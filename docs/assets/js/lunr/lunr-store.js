@@ -1410,7 +1410,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Code the Dream Skill-IT workshops",
-        "excerpt":"    Code the dream      Classes for Code the Dream Skill-IT workshops.      Docker Hands-on Practice    ","categories": [],
+        "excerpt":"    Code the dream      Classes for Code the Dream Skill-IT workshops.      Docker Hands-on Practice   Each project refers to lectures and/or labs conducted in the classroom.   Feel free to expand on these examples; as long as they’re valid, I’ll accept pull requests 😄.    ","categories": [],
         "tags": ["classes","en","openshift","redhat"],
         "url": "/codethedream/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1482,7 +1482,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Getting Started with OpenTelemetry (LFS148)",
-        "excerpt":"[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/) [Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges. I would like to recommend the [Getting Started with OpenTelemetry](https://trainingportal.linuxfoundation.org/courses/getting-started-with-opentelemetry-lfs148/) course to learn how...","categories": [],
+        "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges. I would like to recommend the Getting Started with OpenTelemetry course to learn how to...","categories": [],
         "tags": ["cert","en"],
         "url": "/lf-opentelemetry/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1491,5 +1491,11 @@ var store = [{
         "excerpt":"Linux Foundation Training &amp; Certification provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges. I would like to recommend the Introduction to Backstage - Developer Portals Made Easy course...","categories": [],
         "tags": ["cert","en"],
         "url": "/lf-backstage/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "ICPE 2025",
+        "excerpt":"ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering Agenda Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes Sai Sindhur Malleni, Red Hat, USA Raúl Sevilla, Red Hat, Spain José Castillo Lema, Red Hat, Spain André Bauer, Illinois Institute of Technology, USA Cite this...","categories": [],
+        "tags": ["en","events","networks","openshift","papers","redhat","research"],
+        "url": "/icpe25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

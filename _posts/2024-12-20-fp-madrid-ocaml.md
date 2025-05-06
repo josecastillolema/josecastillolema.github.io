@@ -18,3 +18,5 @@ Empezamos el nuevo año con **OCaml** como protagonista. Este lenguaje, a pesar 
 
 ## Bio
 José trabaja como ingeniero de software en el equipo de Performance & Scale de Red Hat, con tecnologías cloud-native y plataformas de orquestación de containers. Imparte cursos de Cloud, DevOps, Networking e IoT desde 2016 en cursos de grado y posgrado.
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-fp-madrid/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
