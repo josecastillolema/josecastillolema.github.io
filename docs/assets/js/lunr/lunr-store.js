@@ -1493,6 +1493,12 @@ var store = [{
         "url": "/lf-backstage/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
+        "title": "Code the Dream Skill-IT workshops",
+        "excerpt":"Code the Dream thanks José Castillo Lema of Red Hat for being our featured employer speaker for this week’s Skill-IT 🍳! Last month, José helped our students and apprentices through an intro to Docker, an open-source tool for building and managing containerized applications. Today, José followed up by guiding participants...","categories": [],
+        "tags": ["classes","en","openshift","redhat"],
+        "url": "/codethedream25/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
         "title": "ICPE 2025",
         "excerpt":"ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering Agenda Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes Sai Sindhur Malleni, Red Hat, USA Raúl Sevilla, Red Hat, Spain José Castillo Lema, Red Hat, Spain André Bauer, Illinois Institute of Technology, USA Cite this...","categories": [],
         "tags": ["en","events","networks","openshift","papers","redhat","research"],
