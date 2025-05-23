@@ -1446,7 +1446,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "5 years at Red Hat",
-        "excerpt":"I am very proud to work for Red Hat. Looking forward to the next five.  ![](/assets/images/posts/2024-07-01-redhat-5years.png) ","categories": [],
+        "excerpt":"I am very proud to work for Red Hat. Looking forward to the next five.     ","categories": [],
         "tags": ["en","redhat"],
         "url": "/redhat-5years/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
