@@ -1445,6 +1445,12 @@ var store = [{
         "url": "/physics-rhr-blog/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
+        "title": "5 years at Red Hat",
+        "excerpt":"I am very proud to work for Red Hat. Looking forward to the next five.  ![](/assets/images/posts/2024-07-01-redhat-5years.png) ","categories": [],
+        "tags": ["en","redhat"],
+        "url": "/redhat-5years/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
         "title": "Red Hat OpenShift AI learning",
         "excerpt":"OpenShift AI gives data scientists and developers a powerful AI/ML platform for building AI-enabled applications. Data scientists and developers can collaborate to move from experiment to production in a consistent environment quickly.                     ","categories": [],
         "tags": ["cert","en","iac","openshift","redhat"],
@@ -1500,13 +1506,13 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Red Hat Summit 2025",
-        "excerpt":"I will be speaking at Red Hat Summit 2025 in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders. Here are my sessions: 🧠 Horizon Europe projects working on the cloud edge continuum - with Luis Tomas Bolivar 🔧 Shifting performance engineering left...","categories": [],
+        "excerpt":"Sessions I will be speaking at Red Hat Summit 2025 in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders. Here are my sessions: 🧠 Horizon Europe projects working on the cloud edge continuum - with Luis Tomas Bolivar 🔧 Shifting performance engineering...","categories": [],
         "tags": ["ansible","en","events","openshift","redhat","research"],
         "url": "/rh-summit25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "HotCloudPerf 2025",
-        "excerpt":"**8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)** [![](/assets/images/posts/2025-05-06-hotcloudperf25/1.png)](https://hotcloudperf.spec.org/) ## [Agenda](https://hotcloudperf.spec.org/) ## Overview The [HotCloudPerf](https://hotcloudperf.spec.org/) workshop proposes a meeting venue for academics and practitioners, from experts to trainees, in the field of cloud computing performance. The new understanding of cloud computing covers the full computational continuum from...","categories": [],
+        "excerpt":"8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025) Agenda Overview The HotCloudPerf workshop proposes a meeting venue for academics and practitioners, from experts to trainees, in the field of cloud computing performance. The new understanding of cloud computing covers the full computational continuum from data centers to...","categories": [],
         "tags": ["en","events","networks","openshift","redhat","research"],
         "url": "/hotcloudperf25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
@@ -1515,5 +1521,11 @@ var store = [{
         "excerpt":"ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering Agenda Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes Sai Sindhur Malleni, Red Hat, USA Raúl Sevilla, Red Hat, Spain José Castillo Lema, Red Hat, Spain André Bauer, Illinois Institute of Technology, USA Cite this...","categories": [],
         "tags": ["en","events","networks","openshift","papers","redhat","research"],
         "url": "/icpe25/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "DevConf.CZ 2025",
+        "excerpt":"Sessions I will be speaking at DevConf.CZ 2025 in Brno on June 12-14. DevConf.CZ is an annual, free, Red Hat-sponsored technology conference for users, operators, administrators, and contributors to Free and Open Source technologies. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders. Here are my sessions:...","categories": [],
+        "tags": ["en","events","openshift","redhat","research"],
+        "url": "/devconf25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
