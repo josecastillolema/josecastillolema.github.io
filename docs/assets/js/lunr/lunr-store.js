@@ -1505,6 +1505,12 @@ var store = [{
         "url": "/rh-summit25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
+        "title": "HotCloudPerf 2025",
+        "excerpt":"**8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)** [![](/assets/images/posts/2025-05-06-hotcloudperf25/1.png)](https://hotcloudperf.spec.org/) ## [Agenda](https://hotcloudperf.spec.org/) ## Overview The [HotCloudPerf](https://hotcloudperf.spec.org/) workshop proposes a meeting venue for academics and practitioners, from experts to trainees, in the field of cloud computing performance. The new understanding of cloud computing covers the full computational continuum from...","categories": [],
+        "tags": ["en","events","networks","openshift","redhat","research"],
+        "url": "/hotcloudperf25/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
         "title": "ICPE 2025",
         "excerpt":"ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering Agenda Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes Sai Sindhur Malleni, Red Hat, USA Raúl Sevilla, Red Hat, Spain José Castillo Lema, Red Hat, Spain André Bauer, Illinois Institute of Technology, USA Cite this...","categories": [],
         "tags": ["en","events","networks","openshift","papers","redhat","research"],
