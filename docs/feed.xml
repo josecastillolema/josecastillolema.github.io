@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-05-22T20:19:00-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">ICPE 2025</title><link href="https://josecastillolema.github.io/icpe25/" rel="alternate" type="text/html" title="ICPE 2025" /><published>2025-05-05T00:00:00-05:00</published><updated>2025-05-05T00:00:00-05:00</updated><id>https://josecastillolema.github.io/icpe25</id><content type="html" xml:base="https://josecastillolema.github.io/icpe25/"><![CDATA[<p><strong>ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering</strong></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-05-23T09:24:50-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">ICPE 2025</title><link href="https://josecastillolema.github.io/icpe25/" rel="alternate" type="text/html" title="ICPE 2025" /><published>2025-05-07T00:00:00-05:00</published><updated>2025-05-07T00:00:00-05:00</updated><id>https://josecastillolema.github.io/icpe25</id><content type="html" xml:base="https://josecastillolema.github.io/icpe25/"><![CDATA[<p><strong>ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering</strong></p>
+
+<p><a href="https://icpe2025.spec.org"><img src="/assets/images/posts/2025-05-07-icpe25/1.png" alt="" /></a></p>
 
 <h2 id="agenda"><a href="https://icpe2025.spec.org/program/">Agenda</a></h2>
 
@@ -19,26 +21,65 @@
 <p>Sai Sindhur Malleni, Raúl Sevilla, José Castillo Lema, and André Bauer. 2025. Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes. In Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering (ICPE ‘25). Association for Computing Machinery, New York, NY, USA, 113–123. https://doi.org/10.1145/3676151.3719352</p>
 
 <h3 id="bibtex">BibTeX</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3676151.3719352,
-author = {Malleni, Sai Sindhur and Sevilla, Ra\'{u}l and Lema, Jos\'{e} Castillo and Bauer, Andr\'{e}},
-title = {Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes},
-year = {2025},
-isbn = {9798400710735},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3676151.3719352},
-doi = {10.1145/3676151.3719352},
-abstract = {Microservices and containers have transformed the way applications are developed, tested, deployed, scaled, and managed. Several container orchestration platforms, like Kubernetes, have emerged, streamlining container management at scale and providing enter­prise-grade support for application modernization. Driven by application, compliance, and end-user requirements, companies opt to deploy multiple Kubernetes clusters across public and private clouds. However, deploying applications in multi-cluster environments presents distinct challenges, especially managing the communication between the microservices spread across clusters. Traditionally, custom configurations, like VPNs or firewall rules, were required to connect such complex setups of clusters spanning the public cloud and on-premise infrastructure. This industry paper presents a comprehensive analysis of network performance characteristics for three popular open-source multi-cluster networking solutions (namely, Skupper, Submariner, and Istio), addressing the challenges of microservices connectivity across clusters. We evaluate key factors such as latency, throughput, and resource utilization using established tools and benchmarks, offering valuable insights for organizations aiming to optimize the network performance of their multi-cluster deployments. Our experiments revealed that each solution involves unique trade-offs in performance and resource efficiency: Submariner offers low latency and consistency, Istio excels in throughput with moderate resource consumption, and Skupper stands out for its ease of configuration while maintaining balanced performance.},
-booktitle = {Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering},
-pages = {113–123},
-numpages = {11},
-keywords = {benchmark, distributed microservices, kubernetes, multi-cluster networking, network performance},
-location = {Toronto ON, Canada},
-series = {ICPE '25}
-}
+<div class="language-tex highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings<span class="p">{</span>10.1145/3676151.3719352,
+author = <span class="p">{</span>Malleni, Sai Sindhur and Sevilla, Ra<span class="k">\'</span><span class="p">{</span>u<span class="p">}</span>l and Lema, Jos<span class="k">\'</span><span class="p">{</span>e<span class="p">}</span> Castillo and Bauer, Andr<span class="k">\'</span><span class="p">{</span>e<span class="p">}}</span>,
+title = <span class="p">{</span>Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes<span class="p">}</span>,
+year = <span class="p">{</span>2025<span class="p">}</span>,
+isbn = <span class="p">{</span>9798400710735<span class="p">}</span>,
+publisher = <span class="p">{</span>Association for Computing Machinery<span class="p">}</span>,
+address = <span class="p">{</span>New York, NY, USA<span class="p">}</span>,
+url = <span class="p">{</span>https://doi.org/10.1145/3676151.3719352<span class="p">}</span>,
+doi = <span class="p">{</span>10.1145/3676151.3719352<span class="p">}</span>,
+abstract = <span class="p">{</span>Microservices and containers have transformed the way applications are developed, tested, deployed, scaled, and managed. Several container orchestration platforms, like Kubernetes, have emerged, streamlining container management at scale and providing enter­prise-grade support for application modernization. Driven by application, compliance, and end-user requirements, companies opt to deploy multiple Kubernetes clusters across public and private clouds. However, deploying applications in multi-cluster environments presents distinct challenges, especially managing the communication between the microservices spread across clusters. Traditionally, custom configurations, like VPNs or firewall rules, were required to connect such complex setups of clusters spanning the public cloud and on-premise infrastructure. This industry paper presents a comprehensive analysis of network performance characteristics for three popular open-source multi-cluster networking solutions (namely, Skupper, Submariner, and Istio), addressing the challenges of microservices connectivity across clusters. We evaluate key factors such as latency, throughput, and resource utilization using established tools and benchmarks, offering valuable insights for organizations aiming to optimize the network performance of their multi-cluster deployments. Our experiments revealed that each solution involves unique trade-offs in performance and resource efficiency: Submariner offers low latency and consistency, Istio excels in throughput with moderate resource consumption, and Skupper stands out for its ease of configuration while maintaining balanced performance.<span class="p">}</span>,
+booktitle = <span class="p">{</span>Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering<span class="p">}</span>,
+pages = <span class="p">{</span>113–123<span class="p">}</span>,
+numpages = <span class="p">{</span>11<span class="p">}</span>,
+keywords = <span class="p">{</span>benchmark, distributed microservices, kubernetes, multi-cluster networking, network performance<span class="p">}</span>,
+location = <span class="p">{</span>Toronto ON, Canada<span class="p">}</span>,
+series = <span class="p">{</span>ICPE '25<span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-icpe/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="papers" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering]]></summary></entry><entry><title type="html">Red Hat Summit 2025</title><link href="https://josecastillolema.github.io/rh-summit25/" rel="alternate" type="text/html" title="Red Hat Summit 2025" /><published>2025-05-04T00:00:00-05:00</published><updated>2025-05-04T00:00:00-05:00</updated><id>https://josecastillolema.github.io/rh-summit25</id><content type="html" xml:base="https://josecastillolema.github.io/rh-summit25/"><![CDATA[<p>I will be speaking at <a href="https://www.redhat.com/en/summit">Red Hat Summit 2025</a> in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders.</p>
+<h2 id="pics">Pics</h2>
+<p><img src="/assets/images/posts/2025-05-07-icpe25/2.jpg" alt="" />
+<img src="/assets/images/posts/2025-05-07-icpe25/3.jpg" alt="" />
+<img src="/assets/images/posts/2025-05-07-icpe25/4.jpg" alt="" /></p>
+
+<h2 id="slides">Slides</h2>
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-icpe/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="papers" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering]]></summary></entry><entry><title type="html">HotCloudPerf 2025</title><link href="https://josecastillolema.github.io/hotcloudperf25/" rel="alternate" type="text/html" title="HotCloudPerf 2025" /><published>2025-05-06T00:00:00-05:00</published><updated>2025-05-06T00:00:00-05:00</updated><id>https://josecastillolema.github.io/hotcloudperf25</id><content type="html" xml:base="https://josecastillolema.github.io/hotcloudperf25/"><![CDATA[**8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)**
+
+[![](/assets/images/posts/2025-05-06-hotcloudperf25/1.png)](https://hotcloudperf.spec.org/)
+
+## [Agenda](https://hotcloudperf.spec.org/)
+
+## Overview
+
+The [HotCloudPerf](https://hotcloudperf.spec.org/) workshop proposes a meeting venue for academics and practitioners, from experts to trainees, in the field of cloud computing performance. The new understanding of cloud computing covers the full computational continuum from data centers to edge resources to IoT sensors and devices. The workshop aims to engage this community and to lead to the development of new methodological aspects for gaining a deeper understanding not only of cloud performance, but also of cloud operation and behavior, through diverse quantitative evaluation tools, including benchmarks, metrics, and workload generators. The workshop focuses on novel cloud properties such as elasticity, performance isolation, dependability, and other non-functional system properties, in addition to classical performance-related metrics such as response time, throughput, scalability, and efficiency.
+
+## Acknowledgement
+
+The HotCloudPerf workshop is technically sponsored by the [Standard Performance Evaluation Corporation](https://spec.org/) (SPEC)’s [Research Group](https://research.spec.org/) (RG) and is organized annually by the [RG Cloud Group](https://research.spec.org/working-groups/rg-cloud/). HotCloudPerf has emerged from the series of yearly meetings organized by the RG Cloud Group, since 2013. The RG Cloud Group group is taking a broad approach, relevant for both academia and industry, to cloud benchmarking, quantitative evaluation, and experimental analysis.
+
+## Panel
+
+### Performance modeling for the computing continuum
+
+**Moderator**: Klervie Toczé
+
+**Panelists**
+ - Padma Apparao (Intel)
+ - Tommaso Cucinotta (Scuola Universitaria Superiore Pisa)
+ - Matthijs Jansen (Vrije Universiteit Amsterdam)
+ - Jose Castillo Lema (RedHat)
+
+
+## Pics
+
+![](/assets/images/posts/2025-05-06-hotcloudperf25/2.jpg)
+
+## Slides
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-hotcloudperf/slides.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)]]></summary></entry><entry><title type="html">Red Hat Summit 2025</title><link href="https://josecastillolema.github.io/rh-summit25/" rel="alternate" type="text/html" title="Red Hat Summit 2025" /><published>2025-05-04T00:00:00-05:00</published><updated>2025-05-04T00:00:00-05:00</updated><id>https://josecastillolema.github.io/rh-summit25</id><content type="html" xml:base="https://josecastillolema.github.io/rh-summit25/"><![CDATA[<p>I will be speaking at <a href="https://www.redhat.com/en/summit">Red Hat Summit 2025</a> in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders.</p>
 
 <p>Here are my sessions:</p>
 
@@ -426,26 +467,4 @@ $ flamegraph.pl server-with-wasm.folded &gt; server-with-wasm.sv
 <h2 id="bio">Bio</h2>
 <p>José trabaja como ingeniero de software en el equipo de Performance &amp; Scale de Red Hat, con tecnologías cloud-native y plataformas de orquestación de containers. Imparte cursos de Cloud, DevOps, Networking e IoT desde 2016 en cursos de grado y posgrado.</p>
 
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-fp-madrid/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="es" /><category term="events" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Securing Your Software Supply Chain with Sigstore (LFS182)</title><link href="https://josecastillolema.github.io/lf-sigstore/" rel="alternate" type="text/html" title="Securing Your Software Supply Chain with Sigstore (LFS182)" /><published>2024-12-05T00:00:00-06:00</published><updated>2024-12-05T00:00:00-06:00</updated><id>https://josecastillolema.github.io/lf-sigstore</id><content type="html" xml:base="https://josecastillolema.github.io/lf-sigstore/"><![CDATA[<p><a href="https://training.linuxfoundation.org/"><img src="/assets/images/posts/2021-09-03-lf-courses.png" alt="" /></a></p>
-
-<p><a href="https://training.linuxfoundation.org/">Linux Foundation Training &amp; Certification</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.</p>
-
-<p>I would like to recommend the <a href="https://trainingportal.linuxfoundation.org/courses/securing-your-software-supply-chain-with-sigstore-lfs182">Securing Your Software Supply Chain with Sigstore</a> course which provides knowledge and skills necessary to secure the integrity of your software by leveraging the <a href="https://www.sigstore.dev/">Sigstore</a> toolkit, a free and open source project that offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more.</p>
-
-<h1 id="lfs182">LFS182</h1>
-
-<p>Building and distributing software that is secure throughout its entire lifecycle can be challenging, leaving many projects unprepared to build securely by default. Attacks and vulnerabilities can emerge at any step of the chain, from writing to packaging and distributing software to end users.</p>
-
-<p>Recently, several innovative technologies have emerged to improve the integrity of the software supply chain, reducing the friction developers face in implementing security within their daily work. <a href="https://www.sigstore.dev/">Sigstore</a>, a free and open source project, offers automated signing and verification across release files, container images, binaries, bill of material manifests, and more. These signed materials persist in a tamper-resistant publicly auditable log, so anyone can check for authenticity.</p>
-
-<p>This course will provide you with the knowledge you need to build more securely by default, introducing you to some of the tools under Sigstore’s umbrella: Cosign, Fulcio, and Rekor. Once you complete this course, you will understand how to use Sigstore to secure your software development lifecycle.</p>
-
-<p>By the end of this course, you should be able to:</p>
-<ul>
-  <li>Describe the components of Sigstore and how they support a more secure software supply chain.</li>
-  <li>Be able to sign and verify software artifacts with Sigstore.</li>
-  <li>Understand how to implement Sigstore within the software development lifecycle.</li>
-</ul>
-
-<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="e835f1aa-ece8-4c7a-ad64-a5bd91cc06bc" data-share-badge-host="https://www.credly.com"></div>
-<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-fp-madrid/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="es" /><category term="events" /><summary type="html"><![CDATA[]]></summary></entry></feed>
