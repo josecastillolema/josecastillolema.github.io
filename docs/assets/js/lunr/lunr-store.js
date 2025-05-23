@@ -1500,7 +1500,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "Red Hat Summit 2025",
-        "excerpt":"I will be speaking at Red Hat Summit 2025 in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders. Here are my sessions: 🧠 Horizon Europe projects working on the cloud edge continuum 🔧 Shifting performance engineering left - with Joe Talerico Register...","categories": [],
+        "excerpt":"I will be speaking at Red Hat Summit 2025 in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders. Here are my sessions: 🧠 Horizon Europe projects working on the cloud edge continuum - with Luis Tomas Bolivar 🔧 Shifting performance engineering left...","categories": [],
         "tags": ["ansible","en","events","openshift","redhat","research"],
         "url": "/rh-summit25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
