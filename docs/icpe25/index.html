@@ -384,23 +384,23 @@
 <p>Sai Sindhur Malleni, Raúl Sevilla, José Castillo Lema, and André Bauer. 2025. Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes. In Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering (ICPE ‘25). Association for Computing Machinery, New York, NY, USA, 113–123. https://doi.org/10.1145/3676151.3719352</p>
 
 <h3 id="bibtex">BibTeX</h3>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@inproceedings{10.1145/3676151.3719352,
-author = {Malleni, Sai Sindhur and Sevilla, Ra\'{u}l and Lema, Jos\'{e} Castillo and Bauer, Andr\'{e}},
-title = {Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes},
-year = {2025},
-isbn = {9798400710735},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-url = {https://doi.org/10.1145/3676151.3719352},
-doi = {10.1145/3676151.3719352},
-abstract = {Microservices and containers have transformed the way applications are developed, tested, deployed, scaled, and managed. Several container orchestration platforms, like Kubernetes, have emerged, streamlining container management at scale and providing enter­prise-grade support for application modernization. Driven by application, compliance, and end-user requirements, companies opt to deploy multiple Kubernetes clusters across public and private clouds. However, deploying applications in multi-cluster environments presents distinct challenges, especially managing the communication between the microservices spread across clusters. Traditionally, custom configurations, like VPNs or firewall rules, were required to connect such complex setups of clusters spanning the public cloud and on-premise infrastructure. This industry paper presents a comprehensive analysis of network performance characteristics for three popular open-source multi-cluster networking solutions (namely, Skupper, Submariner, and Istio), addressing the challenges of microservices connectivity across clusters. We evaluate key factors such as latency, throughput, and resource utilization using established tools and benchmarks, offering valuable insights for organizations aiming to optimize the network performance of their multi-cluster deployments. Our experiments revealed that each solution involves unique trade-offs in performance and resource efficiency: Submariner offers low latency and consistency, Istio excels in throughput with moderate resource consumption, and Skupper stands out for its ease of configuration while maintaining balanced performance.},
-booktitle = {Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering},
-pages = {113–123},
-numpages = {11},
-keywords = {benchmark, distributed microservices, kubernetes, multi-cluster networking, network performance},
-location = {Toronto ON, Canada},
-series = {ICPE '25}
-}
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">10.1145/3676151.3719352</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Malleni, Sai Sindhur and Sevilla, Ra\'{u}l and Lema, Jos\'{e} Castillo and Bauer, Andr\'{e}}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{9798400710735}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
+  <span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3676151.3719352}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3676151.3719352}</span><span class="p">,</span>
+  <span class="na">abstract</span> <span class="p">=</span> <span class="s">{Microservices and containers have transformed the way applications are developed, tested, deployed, scaled, and managed. Several container orchestration platforms, like Kubernetes, have emerged, streamlining container management at scale and providing enter­prise-grade support for application modernization. Driven by application, compliance, and end-user requirements, companies opt to deploy multiple Kubernetes clusters across public and private clouds. However, deploying applications in multi-cluster environments presents distinct challenges, especially managing the communication between the microservices spread across clusters. Traditionally, custom configurations, like VPNs or firewall rules, were required to connect such complex setups of clusters spanning the public cloud and on-premise infrastructure. This industry paper presents a comprehensive analysis of network performance characteristics for three popular open-source multi-cluster networking solutions (namely, Skupper, Submariner, and Istio), addressing the challenges of microservices connectivity across clusters. We evaluate key factors such as latency, throughput, and resource utilization using established tools and benchmarks, offering valuable insights for organizations aiming to optimize the network performance of their multi-cluster deployments. Our experiments revealed that each solution involves unique trade-offs in performance and resource efficiency: Submariner offers low latency and consistency, Istio excels in throughput with moderate resource consumption, and Skupper stands out for its ease of configuration while maintaining balanced performance.}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{113–123}</span><span class="p">,</span>
+  <span class="na">numpages</span> <span class="p">=</span> <span class="s">{11}</span><span class="p">,</span>
+  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{benchmark, distributed microservices, kubernetes, multi-cluster networking, network performance}</span><span class="p">,</span>
+  <span class="na">location</span> <span class="p">=</span> <span class="s">{Toronto ON, Canada}</span><span class="p">,</span>
+  <span class="na">series</span> <span class="p">=</span> <span class="s">{ICPE '25}</span>
+<span class="p">}</span>
 </code></pre></div></div>
 
 <h2 id="pics">Pics</h2>
@@ -721,7 +721,9 @@ series = {ICPE '25}
         <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-        <div class="page__footer-follow">
+        
+
+<div class="page__footer-follow">
   <ul class="social-icons">
     
 
@@ -746,6 +748,7 @@ series = {ICPE '25}
     
   </ul>
 </div>
+
 
 <div class="page__footer-copyright">© 2025 <a href="https://josecastillolema.github.io">GitOps</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
 
