@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-07-14T05:30:29-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">DevConf.CZ 2025</title><link href="https://josecastillolema.github.io/devconf25/" rel="alternate" type="text/html" title="DevConf.CZ 2025" /><published>2025-05-23T00:00:00-05:00</published><updated>2025-05-23T00:00:00-05:00</updated><id>https://josecastillolema.github.io/devconf25</id><content type="html" xml:base="https://josecastillolema.github.io/devconf25/"><![CDATA[<p><a href="https://www.devconf.info/cz/"><img src="/assets/images/posts/2025-05-23-devconf25/1.jpg" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-07-24T03:24:20-05:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">CODECO 11th Plenary Meeting &amp;amp; IETF 123 hackaton</title><link href="https://josecastillolema.github.io/codeco-plenary11/" rel="alternate" type="text/html" title="CODECO 11th Plenary Meeting &amp;amp; IETF 123 hackaton" /><published>2025-07-16T00:00:00-05:00</published><updated>2025-07-16T00:00:00-05:00</updated><id>https://josecastillolema.github.io/codeco-plenary11</id><content type="html" xml:base="https://josecastillolema.github.io/codeco-plenary11/"><![CDATA[<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/1.jpg" alt="" /></p>
+
+<h2 id="codeco-11th-plenary-meeting">CODECO 11th Plenary Meeting</h2>
+
+<p>The <a href="https://he-codeco.eu/">CODECO project</a>, held its 11th Plenary Meeting on July 16th – 18th, 2025, at Telefonica District premises in Madrid, Spain.</p>
+
+<p>CODECO is shaping the future of edge-cloud infrastructure operations and management. It has already developed a novel working approach for intelligent management of workflows and resources in the edge-cloud continuum supporting different profiles of applications e.g., data-intense, real-time, green etc. It also gives tools for developers to leveraging advanced edge-cloud resource management capabilities on top of Kubernetes, Kubeflow, Edgenet and other frameworks.</p>
+
+<p>One of the most enjoyable aspects of this project, is that meetings are practical, hands-on, to the point and results focused. As the project is in its last year, there are many things developed and many things happening every month.</p>
+
+<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/2.jpg" alt="" />
+<img src="/assets/images/posts/2025-07-16-codeco-plenary11/3.jpg" alt="" /></p>
+
+<h2 id="ietf-123-hackaton">IETF 123 hackaton</h2>
+
+<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/4.jpg" alt="" /></p>
+
+<p>The Internet Engineering Task Force (IETF) is holding a <a href="https://wiki.ietf.org/en/meeting/123/hackathon">hackathon</a> to encourage developers and subject matter experts to discuss, collaborate, and develop utilities, ideas, sample code, and solutions that show practical implementations of IETF standards.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>🗓 When: 19 - 20 July 2025 (Saturday - Sunday)
+🇪🇸 Where: Meliá Castilla
+</code></pre></div></div>
+
+<p>This is your chance to shine, showcase your skills, and 𝗰𝗼𝗺𝗽𝗲𝘁𝗲 𝗳𝗼𝗿 𝗮 €𝟮𝟴𝟬𝟬 𝗿𝗲𝘄𝗮𝗿𝗱 by securing a spot in the top 3 of each challenge. 🏆💰</p>
+
+<h3 id="codeco-challenges">CODECO challenges</h3>
+
+<ul>
+  <li>
+    <p><strong>Challenge 1: Green network observability and reporting</strong></p>
+
+    <p>This challenge explores energy-awareness observability and reporting that may suit telco-cloud resource management. The challenge relies on approaches and code under development in the context of the Horizon Europe project CODECO, and also relates with a new informational draft being proposed to <a href="https://datatracker.ietf.org/doc/bofreq-palmero-getting-ready-for-energy-efficient-networking-green/">IETF GREEN</a>.</p>
+
+    <p>The main goal of this challenge is to consider enhancements to CODECO (as a relevant example of an edge-cloud orchestrator that provides a data-compute-network approach) in terms of monitoring and exporting metrics aligned with GREEN principles e.g., CO2 network footprinting, green workload percentage.</p>
+
+    <p>The reporting will be provided to Prometheus and eventually to SDN; alignment to YANG will be considered.</p>
+  </li>
+  <li>
+    <p><strong>Challenge 2: Joint exposure of compute and network metrics for path selection</strong></p>
+
+    <p>This enhancement to the CODECO framework introduces <a href="https://datatracker.ietf.org/wg/cats/about/">Computing-Aware Traffic Steering (CATS)</a>-aligned path selection capabilities by leveraging CODECO’s existing compute and network observability. The goal is to support computing-aware traffic steering across the Edge-Cloud continuum, in line with the architectural direction of IETF CATS.</p>
+
+    <p>CODECO collects real-time infrastructure metrics -such as CPU , memory usage, latency, and network congestion— from its ACM and NetMA components and aggregates them via the PDLC-CA module into node and cluster scores. These scores are then used to inform microservice placement and potential workload redirection decisions, consistent with CATS principles.</p>
+
+    <p>The aim is to adapt the current approach to provide scores from PDLC and PDLC-CA to NetMA which may assist in Path ranking and selection based on dynamic network latency and congestion data.</p>
+
+    <p>This design supports the CATS use case of service instance selection and path steering based on combined compute and network metrics, helping optimize service experience in distributed, heterogeneous edge environments.</p>
+
+    <p>Setup instructions <a href="https://gitlab.eclipse.org/eclipse-research-labs/codeco-project/hackathon/challenge-2/codeco-cats/-/blob/main/Installing_the_CODECO_VM__Extracting_Metrics__and_Building_a_Three-Level_Metrics_Management_.pdf">here</a>.</p>
+  </li>
+</ul>
+
+<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">DevConf.CZ 2025</title><link href="https://josecastillolema.github.io/devconf25/" rel="alternate" type="text/html" title="DevConf.CZ 2025" /><published>2025-05-23T00:00:00-05:00</published><updated>2025-05-23T00:00:00-05:00</updated><id>https://josecastillolema.github.io/devconf25</id><content type="html" xml:base="https://josecastillolema.github.io/devconf25/"><![CDATA[<p><a href="https://www.devconf.info/cz/"><img src="/assets/images/posts/2025-05-23-devconf25/1.jpg" alt="" /></a></p>
 
 <h2 id="sessions">Sessions</h2>
 
@@ -485,26 +537,4 @@ $ flamegraph.pl server-with-wasm.folded &gt; server-with-wasm.sv
 </code></pre></div></div>
 
 <p>This is the resulting flame graph. It looks like most of the time is spent on <code class="language-plaintext highlighter-rouge">libwasmedge.so</code> calls:
-<img src="/assets/images/posts/2025-01-02-podman-wasm-libkrun/2.svg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman. $ podman info | grep crun -A 2 name: crun package: crun-1.19.1-1.fc41.x86_64 path: /usr/bin/crun version: |- crun version 1.19.1 commit: 3e32a70c93f5aa5fea69b50256cca7fd4aa23c80 rundir: /run/user/1000/crun spec: 1.0.0 +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +LIBKRUN +WASM:wasmedge +YAJL]]></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear25/" rel="alternate" type="text/html" title="Happy new year!" /><published>2025-01-01T00:00:00-06:00</published><updated>2025-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear25</id><content type="html" xml:base="https://josecastillolema.github.io/newyear25/"><![CDATA[<p><img src="/assets/images/posts/2025-01-01-newyear25.png" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="es" /><category term="redhat" /><category term="pt" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">InstructLab: Democratizing AI Models at Scale (DL01001G)</title><link href="https://josecastillolema.github.io/instructlab/" rel="alternate" type="text/html" title="InstructLab: Democratizing AI Models at Scale (DL01001G)" /><published>2024-12-21T00:00:00-06:00</published><updated>2022-12-21T00:00:00-06:00</updated><id>https://josecastillolema.github.io/instructlab</id><content type="html" xml:base="https://josecastillolema.github.io/instructlab/"><![CDATA[<p><a href="https://www.ibm.com/training/"><img src="/assets/images/posts/2024-12-21-instructlab.jpg" alt="" /></a></p>
-
-<p><a href="https://www.ibm.com/training/">IBM Training</a> provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.</p>
-
-<p>I would like to recommend the <a href="https://www.ibm.com/training/course/instructlab-democratizing-ai-models-at-scale-DL01001G">InstructLab: Democratizing AI Models at Scale</a> course which helps to understand InstructLab and its applications in customizing AI Language Models (SLMs and LLMs).</p>
-
-<h1 id="course-overview">Course Overview</h1>
-
-<p>Unlock the full potential of both Large Language Models (LLMs) and Small Language Models (SLMs) and transform your expertise into actionable insights. Have you ever felt that Language Models fall short in understanding your domain-specific knowledge? InstructLab bridges this gap, enabling you to contribute your expertise and enhance the model’s capabilities. This course will guide you through the process of democratizing AI with InstructLab, providing a deep dive into the underlying technology and hands-on tutorials to get you started. By the end of this course, you’ll be equipped to synthesize your domain specific data, fine-tune, align, and customize AI Language Models. Amplify your AI expertise, and earn a Credly digital badge to showcase your skills.</p>
-
-<h1 id="course-details">Course details</h1>
-
-<p>Objectives</p>
-
-<ul>
-  <li>Understand the LAB Methodology (Large-Scale Alignment for ChatBots) including taxonomy, synthetic data generation, and fine-tuning.</li>
-  <li>Demonstrate InstructLab capabilities and its use cases.</li>
-  <li>Contribute knowledge, skills, and the triage process for InstructLab through hands-on tutorials.</li>
-  <li>Get InstructLab foundational badge through completing the course and passing the quiz with a minimum score of 80%.</li>
-</ul>
-
-<div data-iframe-width="450" data-iframe-height="270" data-share-badge-id="2c7e4052-7eee-4467-bdc6-d4695cb24d13" data-share-badge-host="https://www.credly.com"></div>
-<script type="text/javascript" async="" src="//cdn.credly.com/assets/utilities/embed.js"></script>]]></content><author><name>Jose Castillo Lema</name></author><category term="cert" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<img src="/assets/images/posts/2025-01-02-podman-wasm-libkrun/2.svg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[Thanks to crun we can run WebAssembly (Wasm) and libkrun workloads in directly in Podman. $ podman info | grep crun -A 2 name: crun package: crun-1.19.1-1.fc41.x86_64 path: /usr/bin/crun version: |- crun version 1.19.1 commit: 3e32a70c93f5aa5fea69b50256cca7fd4aa23c80 rundir: /run/user/1000/crun spec: 1.0.0 +SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +LIBKRUN +WASM:wasmedge +YAJL]]></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear25/" rel="alternate" type="text/html" title="Happy new year!" /><published>2025-01-01T00:00:00-06:00</published><updated>2025-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear25</id><content type="html" xml:base="https://josecastillolema.github.io/newyear25/"><![CDATA[<p><img src="/assets/images/posts/2025-01-01-newyear25.png" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="es" /><category term="redhat" /><category term="pt" /><summary type="html"><![CDATA[]]></summary></entry></feed>
