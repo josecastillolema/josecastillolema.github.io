@@ -52,6 +52,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-spaceship
+  - jekyll-google-analytics
 
 author:
   name    : "Jose Castillo Lema"
