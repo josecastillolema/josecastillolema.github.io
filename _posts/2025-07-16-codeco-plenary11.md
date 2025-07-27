@@ -32,7 +32,7 @@ The Internet Engineering Task Force (IETF) is holding a [hackathon](https://wiki
     🗓 When: 19 - 20 July 2025 (Saturday - Sunday)
     🇪🇸 Where: Meliá Castilla
 
-This is your chance to shine, showcase your skills, and 𝗰𝗼𝗺𝗽𝗲𝘁𝗲 𝗳𝗼𝗿 𝗮 €𝟮𝟴𝟬𝟬 𝗿𝗲𝘄𝗮𝗿𝗱 by securing a spot in the top 3 of each challenge. 🏆💰
+This is your chance to shine, showcase your skills, and **compete for a €2800 reward** by securing a spot in the top 3 of each challenge. 🏆💰
 
 ### CODECO challenges
 
