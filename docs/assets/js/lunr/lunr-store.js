@@ -583,7 +583,7 @@ var store = [{
       },{
         "title": "My code is open",
         "excerpt":"     ","categories": [],
-        "tags": ["redhat"],
+        "tags": ["dev","en","redhat"],
         "url": "/mycodeisopen/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
@@ -1533,5 +1533,11 @@ var store = [{
         "excerpt":"CODECO 11th Plenary Meeting The CODECO project, held its 11th Plenary Meeting on July 16th – 18th, 2025, at Telefonica District premises in Madrid, Spain. CODECO is shaping the future of edge-cloud infrastructure operations and management. It has already developed a novel working approach for intelligent management of workflows and...","categories": [],
         "tags": ["en","networks","redhat","research"],
         "url": "/codeco-plenary11/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "CNCF contributor card",
+        "excerpt":"  ","categories": [],
+        "tags": ["dev","en","redhat"],
+        "url": "/cncf-contributor-card/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
