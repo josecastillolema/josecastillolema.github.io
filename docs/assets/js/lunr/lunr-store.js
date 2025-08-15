@@ -1439,10 +1439,10 @@ var store = [{
         "url": "/dnfa6/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
-        "title": "Unleashing the potential of Function as a Service in the cloud continuum",
-        "excerpt":"Excited to share the article: Unleashing the potential of Function as a Service in the cloud continuum The PHYSICS project has successfully concluded, highlighting remarkable collaboration and innovation. Red Hat engineers and partners have made significant strides in evolving Function-as-a-Service (FaaS) in the cloud continuum, advancing multicluster automation, energy efficiency...","categories": [],
+        "title": "RHRQ: Unleashing the potential of Function as a Service in the cloud continuum",
+        "excerpt":"The article Unleashing the potential of Function as a Service in the cloud continuum has been published in the Red Hat Research Quarterly May 2024 edition. The PHYSICS project has successfully concluded, highlighting remarkable collaboration and innovation. Red Hat engineers and partners have made significant strides in evolving Function-as-a-Service (FaaS)...","categories": [],
         "tags": ["en","networks","redhat","research"],
-        "url": "/physics-rhr-blog/",
+        "url": "/rhrq-physics/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "5 years at Red Hat",
@@ -1539,5 +1539,11 @@ var store = [{
         "excerpt":"  ","categories": [],
         "tags": ["dev","en","redhat"],
         "url": "/cncf-contributor-card/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes",
+        "excerpt":"   The article: Bridging clusters: a comparative look at multicluster networking performance in Kubernetes has been published in the Red Hat Research Quarterly Summer 2025 edition.  ","categories": [],
+        "tags": ["en","networks","redhat","research"],
+        "url": "/rhrq-multicluster-k8s/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
