@@ -52,7 +52,6 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-spaceship
-  - jekyll-google-analytics
 
 author:
   name    : "Jose Castillo Lema"
@@ -147,7 +146,7 @@ tag_archive:
 
 # Custom
 analytics:
-  provider               : "google" # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
     tracking_id          : "G-1EBHNQEGXG"
     anonymize_ip         : # true, false (default)
@@ -157,7 +156,6 @@ comments:
   disqus:
     shortname            : https-josecastillolema-github-io
 destination              : docs
-google_analytics         : G-1EBHNQEGXG
 google_site_verification : googled48a6d8a28aaa375.html
 jekyll-spaceship:
   processors:

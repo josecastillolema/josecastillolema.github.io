@@ -4,3 +4,6 @@ _site
 Gemfile.lock
 *.swo
 *.swp
+CLAUDE.md
+docs/CLAUDE.md
+docs/CLAUDE/
