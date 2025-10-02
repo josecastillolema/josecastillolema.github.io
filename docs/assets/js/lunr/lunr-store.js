@@ -1546,4 +1546,10 @@ var store = [{
         "tags": ["en","networks","redhat","research"],
         "url": "/rhrq-multicluster-k8s/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Open Source Community Day 2025",
+        "excerpt":"The Open Source Community Day, organised by the Eclipse Foundation in collaboration with EUCloudEdgeIoT.eu, is a vibrant gathering of individuals united by a shared passion for open source software and technology. This event provides a unique opportunity for EU-funded projects to engage directly with the open source community—offering a space...","categories": [],
+        "tags": ["en","networks","redhat","research"],
+        "url": "/oscd25/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

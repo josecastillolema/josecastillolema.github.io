@@ -36,7 +36,7 @@ Let's create a new **project**, **secret** and corresponding **permissions**:
 ❯ oc new-project kubemark
 Now using project "kubemark" on server "https://api.crc.testing:6443".
 
-❯ oc create secret generic kubeconfig --from-file=kubeconfig=$KUBECONFIG
+❯ oc create secret generic kubeconfig --from-file=kubeconfig=$HOME/.crc/machines/crc/kubeconfig
 secret/kubeconfig created
 
 ❯ oc adm policy add-scc-to-user privileged -z default
@@ -46,8 +46,8 @@ clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "de
 Let's create the **Kubemark pod** (which in turn will automatically instantiate a new node):
 ```yaml
 ❯ cat <<EOF | oc apply -f -
-apiVersion: v1
 kind: Pod
+apiVersion: v1
 metadata:
   labels:
     app: hollow-node
