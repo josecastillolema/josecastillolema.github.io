@@ -407,7 +407,7 @@ All flatpak applications installed in user mode.</p>
   <li>
     <p>Messaging application: Zen via <a href="https://flathub.org/apps/app.zen_browser.zen">Flatpak</a></p>
 
-    <p>Use it as client for Google Calendar, Simplenote, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, iCloud, Discord, Element, Feedly, ChatGPT and Gemini.</p>
+    <p>Use it as client for GTranslate, GKeep, GCalendar, Gmail, Outlook, Teams, Slack, Google Chat, WhatsApp, Discord, Element, Feedly, ChatGPT and Gemini.</p>
 
     <p>Was using Ferdium via <a href="https://flathub.org/apps/org.ferdium.Ferdium">Flatpak</a> but <a href="https://github.com/ferdium/ferdium-app/issues/1973">ferdium/ferdium-app##1973</a> is a blocker for me.</p>
   </li>
@@ -536,10 +536,17 @@ All flatpak applications installed in user mode.</p>
 
 <p>If you have managed to get working any of the following please let me know:</p>
 <ul>
+  <li>CRC
+    <ul>
+      <li>[RFE] CRC libvirt related resources should be in the user namespace, not root <a href="https://github.com/crc-org/crc/issues/3541">crc-org/crc#3541</a>
+</li>
+    </ul>
+  </li>
   <li>Dropbox
     <ul>
-      <li>Tray icon not working <a href="https://github.com/flathub/com.dropbox.Client/issues/265">flathub/com.dropbox.Client#265</a>
-</li>
+      <li>
+        <s>Tray icon not working [flathub/com.dropbox.Client#265](https://github.com/flathub/com.dropbox.Client/issues/265)</s>
+      </li>
     </ul>
   </li>
   <li>Emacs
@@ -550,6 +557,14 @@ All flatpak applications installed in user mode.</p>
 </li>
     </ul>
   </li>
+  <li>Flatpak
+    <ul>
+      <li>flatpak-spawn –host doesn’t work with apps requiring tty/pty <a href="https://github.com/flatpak/flatpak-xdg-utils/issues/57">flatpak/flatpak-xdg-utils#57</a>
+</li>
+      <li>
+    </li>
+</ul>
+  </li>
   <li>Ferdium
     <ul>
       <li>
@@ -559,8 +574,9 @@ All flatpak applications installed in user mode.</p>
 </li>
       <li>Feature: Ability to add Chrome extensions like password managers <a href="https://github.com/ferdium/ferdium-app/issues/135">ferdium/ferdium-app#135</a>
 </li>
-      <li>Unable to print from Gmail view <a href="https://github.com/ferdium/ferdium-app/issues/1573">ferdium/ferdium-app#1573</a>
-</li>
+      <li>
+        <s>Unable to print from Gmail view [ferdium/ferdium-app#1573](https://github.com/ferdium/ferdium-app/issues/1573)</s>
+      </li>
       <li>
         <s>Stuck in purple screen in Linux with Wayland [ferdium/ferdium-app#1551](https://github.com/ferdium/ferdium-app/issues/1551)</s>
       </li>
@@ -652,11 +668,16 @@ All flatpak applications installed in user mode.</p>
   </li>
   <li>Toolbx
     <ul>
-      <li>Is there a way to preserve toolbox PWD upon exit? <a href="https://github.com/containers/toolbox/issues/1604">containers/toolbox#1604</a>
-</li>
+      <li>
+        <s>Is there a way to preserve toolbox PWD upon exit? [containers/toolbox#1604](https://github.com/containers/toolbox/issues/1604)</s>
+      </li>
       <li>Load completions from the host <a href="https://github.com/containers/toolbox/issues/1472">containers/toolbox#1302</a>
 </li>
       <li>Support for custom commands upon entering container <a href="https://github.com/containers/toolbox/issues/1302">containers/toolbox#1302</a>
+</li>
+      <li>Optionally make exec session terminate with parent <a href="https://github.com/containers/toolbox/issues/1204">containers/toolbox#1204</a>
+</li>
+      <li>podman run/exec should not ignore the SIGHUP signal <a href="https://github.com/containers/toolbox/issues/1400">containers/toolbox#1400</a>
 </li>
     </ul>
   </li>
@@ -696,7 +717,7 @@ All flatpak applications installed in user mode.</p>
   </li>
   <li>Zathura
     <ul>
-      <li>Add Flatpak manifest <a href="https://git.pwmt.org/pwmt/zathura/-/merge_requests/25">pwmt/zathura#25</a>
+      <li>Publish on Flathub? <a href="https://github.com/pwmt/zathura/issues/655">pwmt/zathura#655</a>
 </li>
     </ul>
   </li>
@@ -800,6 +821,50 @@ All flatpak applications installed in user mode.</p>
   
   <h2 class="page__related-title">You May Also Enjoy</h2>
   <div class="grid__wrapper">
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/oscd25/" rel="permalink">Open Source Community Day 2025
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Open Source Community Day, organised by the Eclipse Foundation in collaboration with EUCloudEdgeIoT.eu, is a vibrant gathering of individuals united by a...</p>
+  </article>
+</div>
+
     
       
       
@@ -926,52 +991,6 @@ All flatpak applications installed in user mode.</p>
         <i class="far fa-clock" aria-hidden="true"></i>
         
           5 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/devconf25/" rel="permalink">DevConf.CZ 2025
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
         
       </span>
     

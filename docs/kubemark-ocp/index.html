@@ -379,7 +379,7 @@ crc-2zx29-master-0   Ready    control-plane,master,worker   54d     v1.26.6+73ac
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>❯ oc new-project kubemark
 Now using project "kubemark" on server "https://api.crc.testing:6443".
 
-❯ oc create secret generic kubeconfig --from-file=kubeconfig=$KUBECONFIG
+❯ oc create secret generic kubeconfig --from-file=kubeconfig=$HOME/.crc/machines/crc/kubeconfig
 secret/kubeconfig created
 
 ❯ oc adm policy add-scc-to-user privileged -z default
@@ -388,8 +388,8 @@ clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "de
 
 <p>Let’s create the <strong>Kubemark pod</strong> (which in turn will automatically instantiate a new node):</p>
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">❯ cat &lt;&lt;EOF | oc apply -f -</span>
-<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
 <span class="na">kind</span><span class="pi">:</span> <span class="s">Pod</span>
+<span class="na">apiVersion</span><span class="pi">:</span> <span class="s">v1</span>
 <span class="na">metadata</span><span class="pi">:</span>
   <span class="na">labels</span><span class="pi">:</span>
     <span class="na">app</span><span class="pi">:</span> <span class="s">hollow-node</span>
@@ -611,6 +611,50 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &lt;
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
+        <a href="/oscd25/" rel="permalink">Open Source Community Day 2025
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">The Open Source Community Day, organised by the Eclipse Foundation in collaboration with EUCloudEdgeIoT.eu, is a vibrant gathering of individuals united by a...</p>
+  </article>
+</div>
+
+    
+      
+      
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
         <a href="/rhrq-multicluster-k8s/" rel="permalink">RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes
 </a>
       
@@ -722,52 +766,6 @@ test   1/1     Running   0          36s   192.168.192.168   kubemark-node   &lt;
         <i class="far fa-clock" aria-hidden="true"></i>
         
           5 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">
-
-</p>
-  </article>
-</div>
-
-    
-      
-      
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/favicon_io/android-chrome-512x512.png" alt="">
-      </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/devconf25/" rel="permalink">DevConf.CZ 2025
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          1 minute read
         
       </span>
     
