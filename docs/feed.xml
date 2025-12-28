@@ -1,4 +1,253 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-11-24T09:53:20-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Open vSwitch and OVN 2025 Fall Conference</title><link href="https://josecastillolema.github.io/ovscon25/" rel="alternate" type="text/html" title="Open vSwitch and OVN 2025 Fall Conference" /><published>2025-11-19T00:00:00-06:00</published><updated>2025-11-19T00:00:00-06:00</updated><id>https://josecastillolema.github.io/ovscon25</id><content type="html" xml:base="https://josecastillolema.github.io/ovscon25/"><![CDATA[<p><a href="https://www.openvswitch.org/support/ovscon2025/"><img src="/assets/images/posts/2025-11-19-ovscon25.png" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-12-28T04:32:20-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Local Soft-RoCE development workflows with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflows with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
+
+<p>Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.</p>
+
+<p><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/configuring_infiniband_and_rdma_networks/index#configuring-soft-roce_configuring-roce">Soft-RoCE</a> is a software implementation of remote direct memory access (RDMA) over Ethernet, which is also called RXE. We can use Soft-RoCE on hosts without RoCE host channel adapters (HCA).</p>
+
+<p>We will be using <a href="https://enterprise-support.nvidia.com/s/article/ib-write-bw">ib_write_bw</a> as the network benchmarking tool.</p>
+
+<h2 id="testing-with-dockerpodman">Testing with Docker/Podman</h2>
+
+<ol>
+  <li>
+    <p>Load the software RoCE module:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>modprobe rdma_rxe
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create RXE on the active interface:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>rdma <span class="nb">link </span>add rxe0 <span class="nb">type </span>rxe netdev eth0
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Verify configuration:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Check GID setup (this is the tricky part):</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cat</span> /sys/class/infiniband/rxe0/ports/1/gids/0
+ fe80:0000:0000:0000:c805:5eff:fe37:e715
+
+ <span class="nb">cat</span> /sys/class/infiniband/rxe0/ports/1/gids/1
+ 0000:0000:0000:0000:0000:ffff:c0a8:0117
+</code></pre></div>    </div>
+
+    <p>GID 0 is an IPv6 link-local address while GID 1 is an IPv4-mapped IPv6 address:</p>
+    <ul>
+      <li>GID 0: <code class="language-plaintext highlighter-rouge">fe80:0000:0000:0000:c805:5eff:fe37:e715</code> IPv6 link-local address</li>
+      <li>GID 1: <code class="language-plaintext highlighter-rouge">0000:0000:0000:0000:0000:ffff:c0a8:0117</code> IPv4-mapped IPv6 address - 192.168.1.23</li>
+    </ul>
+  </li>
+  <li>
+    <p>Create client/server containers with RDMA access:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker run <span class="nt">-d</span> <span class="nt">--name</span> server-container <span class="nt">--privileged</span> <span class="se">\</span>
+   <span class="nt">--device</span><span class="o">=</span>/dev/infiniband/uverbs0 <span class="se">\</span>
+   <span class="nt">--volume</span><span class="o">=</span>/sys/class/infiniband:/sys/class/infiniband:ro <span class="se">\</span>
+   quay.io/cloud-bulldozer/k8s-netperf:latest <span class="se">\</span>
+   <span class="nb">sleep </span>3600
+
+ docker run <span class="nt">-d</span> <span class="nt">--name</span> client-container <span class="nt">--privileged</span> <span class="se">\</span>
+   <span class="nt">--device</span><span class="o">=</span>/dev/infiniband/uverbs0 <span class="se">\</span>
+   <span class="nt">--volume</span><span class="o">=</span>/sys/class/infiniband:/sys/class/infiniband:ro <span class="se">\</span>
+   quay.io/cloud-bulldozer/k8s-netperf:latest <span class="se">\</span>
+   <span class="nb">sleep </span>3600
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Get server container IP address:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker inspect server-container | <span class="nb">grep </span>IPAddress | <span class="nb">tail</span> <span class="nt">-1</span>
+                <span class="s2">"IPAddress"</span>: <span class="s2">"172.17.0.2"</span>,
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run the test:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker <span class="nb">exec </span>server-container ib_write_bw <span class="nt">-d</span> rxe0 <span class="nt">-x</span> 1 <span class="nt">-F</span>
+ docker <span class="nb">exec </span>client-container ib_write_bw <span class="nt">-d</span> rxe0 <span class="nt">-x</span> 1 <span class="nt">-F</span> 172.17.0.2
+ <span class="nt">---------------------------------------------------------------------------------------</span>
+                     RDMA_Write BW Test
+ Dual-port       : OFF          Device         : rxe0
+ Number of qps   : 1            Transport <span class="nb">type</span> : IB
+ Connection <span class="nb">type</span> : RC           Using SRQ      : OFF
+ PCIe relax order: ON           Lock-free      : OFF
+ ibv_wr<span class="k">*</span> API     : OFF          Using DDP      : OFF
+ TX depth        : 128
+ CQ Moderation   : 1
+ CQE Poll Batch  : 16
+ Mtu             : 1024[B]
+ Link <span class="nb">type</span>       : Ethernet
+ GID index       : 1
+ Max inline data : 0[B]
+ rdma_cm QPs     : OFF
+ Data ex. method : Ethernet
+ <span class="nt">---------------------------------------------------------------------------------------</span>
+ <span class="nb">local </span>address: LID 0000 QPN 0x001f PSN 0xeb83da RKey 0x00108c VAddr 0x007fa70d049000
+ GID: 254:128:00:00:00:00:00:00:65:153:129:16:120:165:110:231
+ remote address: LID 0000 QPN 0x0020 PSN 0xeb83da RKey 0x00115c VAddr 0x007f3a0742d000
+ GID: 254:128:00:00:00:00:00:00:65:153:129:16:120:165:110:231
+ <span class="nt">---------------------------------------------------------------------------------------</span>
+ <span class="c">#bytes     #iterations    BW peak[MiB/sec]    BW average[MiB/sec]   MsgRate[Mpps]</span>
+ 65536      5000             1032.41            1024.75              0.016396
+ <span class="nt">---------------------------------------------------------------------------------------</span>
+</code></pre></div>    </div>
+
+    <p>We obtained an average bandwidth of ~1024 MiB/sec.</p>
+  </li>
+  <li>
+    <p>Cleanup. Remove the containers and the RXE device:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker <span class="nb">rm</span> <span class="nt">-f</span> server-container client-container
+ <span class="nb">sudo </span>rdma <span class="nb">link </span>delete rxe0
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="testing-with-kind">Testing with Kind</h2>
+
+<p>We will be using <a href="https://github.com/cloud-bulldozer/k8s-netperf/">k8s-netperf</a> as the kubernetes network benchmarking tool. k8s-netperf supports ib_write_bw as one of its backends.</p>
+
+<ol>
+  <li>
+    <p>Load the software RoCE module:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>modprobe rdma_rxe
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create RXE on the active interface:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>rdma <span class="nb">link </span>add rxe0 <span class="nb">type </span>rxe netdev eth0
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Verify configuration:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Let’s create an RDMA enabled kind cluster config <code class="language-plaintext highlighter-rouge">kind-config-rdma.yaml</code>:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="na">kind</span><span class="pi">:</span> <span class="s">Cluster</span>
+ <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kind.x-k8s.io/v1alpha4</span>
+ <span class="na">nodes</span><span class="pi">:</span>
+   <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">control-plane</span>
+     <span class="na">extraMounts</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+   <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">worker</span>
+     <span class="na">extraMounts</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+   <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">worker</span>
+     <span class="na">extraMounts</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create the kind cluster:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kind create cluster <span class="nt">--config</span> kind-config-rdma.yaml
+ Creating cluster <span class="s2">"kind"</span> ...
+  ✓ Ensuring node image <span class="o">(</span>kindest/node:v1.32.2<span class="o">)</span> 🖼
+  ✓ Preparing nodes 📦 📦 📦
+  ✓ Writing configuration 📜
+  ✓ Starting control-plane 🕹️
+  ✓ Installing CNI 🔌
+  ✓ Installing StorageClass 💾
+  ✓ Joining worker nodes 🚜
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Label the nodes:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kubectl label node kind-worker  node-role.kubernetes.io/worker<span class="o">=</span><span class="s2">""</span>
+ kubectl label node kind-worker2 node-role.kubernetes.io/worker<span class="o">=</span><span class="s2">""</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Create a k8s-netperf config file for RoCEv2 traffic <code class="language-plaintext highlighter-rouge">config.yaml</code>:</p>
+
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">---</span>
+ <span class="s">tests</span><span class="err">:</span>
+   <span class="pi">-</span> <span class="na">UDPStream</span><span class="pi">:</span>
+     <span class="na">parallelism</span><span class="pi">:</span> <span class="m">1</span>
+     <span class="na">profile</span><span class="pi">:</span> <span class="s2">"</span><span class="s">UDP_STREAM"</span>
+     <span class="na">duration</span><span class="pi">:</span> <span class="m">5</span>
+     <span class="na">samples</span><span class="pi">:</span> <span class="m">1</span>
+     <span class="na">messagesize</span><span class="pi">:</span> <span class="m">1024</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run the test:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1
+ INFO[2025-12-28 11:29:38] Starting k8s-netperf <span class="o">(</span>roce2@e2988034e0f9dd4e2a59f131f6ae7866b12fd6de<span class="o">)</span>
+ INFO[2025-12-28 11:29:38] 📒 Reading config.yaml file.
+ INFO[2025-12-28 11:29:38] 📒 Reading config.yaml file - using ConfigV2 Method.
+ WARN[2025-12-28 11:29:38] 😥 Prometheus is not available
+ INFO[2025-12-28 11:29:38] 🔨 Creating namespace: netperf
+ INFO[2025-12-28 11:29:38] 🔨 Creating service account: netperf
+ WARN[2025-12-28 11:29:38] ⚠️  No zone label
+ WARN[2025-12-28 11:29:38] ⚠️  Single node per zone and/or no zone labels
+ INFO[2025-12-28 11:29:38] 🚀 Starting Deployment <span class="k">for</span>: client-host <span class="k">in </span>namespace: netperf
+ INFO[2025-12-28 11:29:38] ⏰ Checking <span class="k">for </span>client-host Pods to become ready...
+ INFO[2025-12-28 11:29:56] Looking <span class="k">for </span>pods with label <span class="nv">role</span><span class="o">=</span>host-client
+ INFO[2025-12-28 11:29:56] 🚀 Starting Deployment <span class="k">for</span>: server-host <span class="k">in </span>namespace: netperf
+ INFO[2025-12-28 11:29:56] ⏰ Checking <span class="k">for </span>server-host Pods to become ready...
+ INFO[2025-12-28 11:30:11] Looking <span class="k">for </span>pods with label <span class="nv">role</span><span class="o">=</span>host-server
+ INFO[2025-12-28 11:30:16] 🗒️  Running ib_write_bw UDP_STREAM <span class="o">(</span>service <span class="nb">false</span><span class="o">)</span> <span class="k">for </span>5s
+ WARN[2025-12-28 11:30:22] Not able to collect OpenShift specific node info
+ +-------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-------------------+--------------------------+
+ |    RESULT TYPE    |   DRIVER    |  SCENARIO  | PARALLELISM | HOST NETWORK | SERVICE | EXTERNAL SERVER | UDN INFO | BRIDGE INFO | MESSAGE SIZE | BURST | SAME NODE | DURATION | SAMPLES |     AVG VALUE     | 95% CONFIDENCE INTERVAL  |
+ +-------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-------------------+--------------------------+
+ | 📊 Stream Results | ib_write_bw | UDP_STREAM | 1           | <span class="nb">true</span>         | <span class="nb">false</span>   | <span class="nb">false</span>           |          |             | 1024         | 0     | <span class="nb">false</span>     | 5        | 1       | 935.110000 <span class="o">(</span>Mb/s<span class="o">)</span> | 0.000000-0.000000 <span class="o">(</span>Mb/s<span class="o">)</span> |
+ +-------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-------------------+--------------------------+
+ +------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-----------+
+ |       TYPE       |   DRIVER    |  SCENARIO  | PARALLELISM | HOST NETWORK | SERVICE | EXTERNAL SERVER | UDN INFO | BRIDGE INFO | MESSAGE SIZE | BURST | SAME NODE | DURATION | SAMPLES | AVG VALUE |
+ +------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-----------+
+ | UDP Loss Percent | ib_write_bw | UDP_STREAM | 1           | <span class="nb">true</span>         | <span class="nb">false</span>   | <span class="nb">false</span>           |          |             | 1024         | 0     | <span class="nb">false</span>     | 5        | 1       | 0.000000  |
+ +------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-----------+
+ INFO[2025-12-28 11:30:22] Cleaning resources created by k8s-netperf
+ INFO[2025-12-28 11:30:22] ⏰ Waiting <span class="k">for </span>netperf Namespace to be deleted...
+</code></pre></div>    </div>
+
+    <p>The average bandwidth was ~935 MiB/sec.</p>
+  </li>
+  <li>
+    <p>Cleanup. Remove the kind cluster and the RXE device:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kind delete cluster
+ <span class="nb">sudo </span>rdma <span class="nb">link </span>delete rxe0
+</code></pre></div>    </div>
+  </li>
+</ol>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="networks" /><category term="redhat" /><summary type="html"><![CDATA[RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.]]></summary></entry><entry><title type="html">Open vSwitch and OVN 2025 Fall Conference</title><link href="https://josecastillolema.github.io/ovscon25/" rel="alternate" type="text/html" title="Open vSwitch and OVN 2025 Fall Conference" /><published>2025-11-19T00:00:00-06:00</published><updated>2025-11-19T00:00:00-06:00</updated><id>https://josecastillolema.github.io/ovscon25</id><content type="html" xml:base="https://josecastillolema.github.io/ovscon25/"><![CDATA[<p><a href="https://www.openvswitch.org/support/ovscon2025/"><img src="/assets/images/posts/2025-11-19-ovscon25.png" alt="" /></a></p>
 
 <h2 id="sessions">Sessions</h2>
 
@@ -239,12 +488,4 @@
 
 <iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-rh-summit/horizon.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
 
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-rh-summit/shift-left.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="ansible" /><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Code the Dream Skill-IT workshops</title><link href="https://josecastillolema.github.io/codethedream25/" rel="alternate" type="text/html" title="Code the Dream Skill-IT workshops" /><published>2025-04-25T00:00:00-05:00</published><updated>2025-04-05T00:00:00-05:00</updated><id>https://josecastillolema.github.io/codethedream25</id><content type="html" xml:base="https://josecastillolema.github.io/codethedream25/"><![CDATA[<p><a href="https://codethedream.org/">Code the Dream</a> thanks José Castillo Lema of Red Hat for being our featured employer speaker for this week’s Skill-IT 🍳!</p>
-
-<p>Last month, José helped our students and apprentices through an intro to Docker, an open-source tool for building and managing containerized applications. Today, José followed up by guiding participants through hands-on practice with Docker. We’re grateful to José and Red Hat for being valuable partners in our work!</p>
-
-<p>Skill-IT 🍳is a weekly lunch-and-learn workshop for Code the Dream students and apprentices to explore career topics, programs, and organizations. Our goal is to help participants make informed decisions and navigate the tech industry as they launch their careers.</p>
-
-<p>Interested in being a featured employer speaker for a future Skill-IT 🍳? Contact our Director of Employer Partnerships, <a href="https://www.linkedin.com/in/rosalyn-hundley/">Rosalyn H. Barnett</a>, at <a href="mailto:rosalyn@codethedream.org">rosalyn@codethedream.org</a> to learn more and get scheduled!</p>
-
-<p><img src="/assets/images/posts/2025-04-25-codethedream25.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="classes" /><category term="en" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[Code the Dream thanks José Castillo Lema of Red Hat for being our featured employer speaker for this week’s Skill-IT 🍳!]]></summary></entry></feed>
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-rh-summit/shift-left.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="ansible" /><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
