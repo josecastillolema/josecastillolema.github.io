@@ -36,6 +36,7 @@ We will be using [ib_write_bw](https://enterprise-support.nvidia.com/s/article/i
 
     ```bash
     rdma link show
+    link rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
     ```
 
 4. Check GID setup (this is the tricky part):
@@ -118,7 +119,7 @@ We will be using [ib_write_bw](https://enterprise-support.nvidia.com/s/article/i
 
 ## Testing with Kind
 
-We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) as the kubernetes network benchmarking tool. k8s-netperf supports ib_write_bw as one of its backends.
+We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) as the kubernetes network benchmarking tool. k8s-netperf supports `ib_write_bw` as one of its backends.
 
 1. Load the software RoCE module:
 
@@ -136,6 +137,7 @@ We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) 
 
     ```bash
     rdma link show
+    link rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
     ```
 
 4. Let's create an RDMA enabled kind cluster config `kind-config-rdma.yaml`:

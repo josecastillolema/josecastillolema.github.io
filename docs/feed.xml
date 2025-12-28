@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-12-28T04:32:20-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Local Soft-RoCE development workflows with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflows with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-12-28T05:04:36-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Local Soft-RoCE development workflows with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflows with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
 
 <p>Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.</p>
 
@@ -25,6 +25,7 @@
     <p>Verify configuration:</p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+ <span class="nb">link </span>rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
 </code></pre></div>    </div>
   </li>
   <li>
@@ -111,7 +112,7 @@
 
 <h2 id="testing-with-kind">Testing with Kind</h2>
 
-<p>We will be using <a href="https://github.com/cloud-bulldozer/k8s-netperf/">k8s-netperf</a> as the kubernetes network benchmarking tool. k8s-netperf supports ib_write_bw as one of its backends.</p>
+<p>We will be using <a href="https://github.com/cloud-bulldozer/k8s-netperf/">k8s-netperf</a> as the kubernetes network benchmarking tool. k8s-netperf supports <code class="language-plaintext highlighter-rouge">ib_write_bw</code> as one of its backends.</p>
 
 <ol>
   <li>
@@ -130,6 +131,7 @@
     <p>Verify configuration:</p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+ <span class="nb">link </span>rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
 </code></pre></div>    </div>
   </li>
   <li>
