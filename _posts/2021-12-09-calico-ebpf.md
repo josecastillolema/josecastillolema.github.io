@@ -19,7 +19,7 @@ I would like to strongly recomend the [Certified Calico Operator: eBPF](https://
 
 The new **CCO-L2-EBPF** (Certified Calico Operator: eBPF) course specifically addresses the strengths of eBPF and when it is, or is not, the right choice. It will also help you see how easy it is to deploy the Calico eBPF data plane if you have made the choice that it is right for you and your cluster.
 
-This is a level 2 course, which means that you should probably complete the [existing level 1 course](/calico) first, unless you’re very familiar with Calico and Kubernetes already.
+This is a level 2 course, which means that you should probably complete the [existing level 1 course](/calico/) first, unless you’re very familiar with Calico and Kubernetes already.
 
 # What the Course Covers
 

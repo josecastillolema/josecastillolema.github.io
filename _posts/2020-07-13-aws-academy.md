@@ -34,7 +34,7 @@ O curso é introdutório e oferece uma visão geral detalhada dos seguintes tóp
 
 O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [**certificação AWS Certified Cloud Practitioner (CLF-C01)**](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/).
 
-Na FIAP ofertamos este curso ([1ª edição](/shift-aws-foundations), [2ª edição](/shift-aws-foundations-2), [3ª edição](/shift-aws-foundations-3), [4ª edição](/shift-aws-foundations-4), [5ª edição](/shift-aws-foundations-5), [6ª edição](/shift-aws-foundations-6), [7ª edição](/shift-aws-foundations-7), [8ª edição](/shift-aws-foundations-8) e [9ª edição](/shift-aws-foundations-9)) na modalidade [SHIFT](https://www.fiap.com.br/shift).
+Na FIAP ofertamos este curso ([1ª edição](/shift-aws-foundations/), [2ª edição](/shift-aws-foundations-2/), [3ª edição](/shift-aws-foundations-3/), [4ª edição](/shift-aws-foundations-4/), [5ª edição](/shift-aws-foundations-5/), [6ª edição](/shift-aws-foundations-6/), [7ª edição](/shift-aws-foundations-7/), [8ª edição](/shift-aws-foundations-8/) e [9ª edição](/shift-aws-foundations-9/)) na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
 ![](/assets/images/posts/2020-07-09-aws-academy/05.png)
 
@@ -69,7 +69,7 @@ Esse curso de nível intermediário ajudará os estudantes a ganharem experiênc
 
 Recomendamos que os alunos cursem o [AWS Academy Cloud Foundations](#aws-academy-cloud-foundations-acf) ou equivalente, antes de iniciar este curso.
 
-Na FIAP ofertamos este curso ([1ª edição](/shift-aws-dev), [2ª edição](/shift-aws-dev-2), [3ª edição](/shift-aws-dev-3), [4ª edição](/shift-aws-dev-4), [5ª edição](/shift-aws-dev-5) e [6ª edição](/shift-aws-dev-6)) na modalidade [SHIFT](https://www.fiap.com.br/shift).
+Na FIAP ofertamos este curso ([1ª edição](/shift-aws-dev/), [2ª edição](/shift-aws-dev-2/), [3ª edição](/shift-aws-dev-3/), [4ª edição](/shift-aws-dev-4/), [5ª edição](/shift-aws-dev-5/) e [6ª edição](/shift-aws-dev-6/)) na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
 ![](/assets/images/posts/2020-07-09-aws-academy/06.png)
 
@@ -115,7 +115,7 @@ Este curso introdutório apresenta aos alunos os conceitos e a terminologia de i
 
 Estes exercícios de laboratório ensinam os alunos a conduzir a análise de Big Data com exemplos práticos do mundo real. Os laboratórios e os recursos de aprendizado foram projetados para complementar os cursos de análise de dados existentes em uma instituição e fornecer aos alunos uma experiência prática ao trabalhar com dados em escala. Voltado para estudantes interessados em seguir carreiras em análise de dados, o AWS Academy Data Analytics requer uma base sólida em conceitos e habilidades de TI e contém **7.5 horas** de conteúdo.
 
-Na FIAP ofertamos este curso aos alunos do [MBA em Engenharia de dados](/fiap-abd).
+Na FIAP ofertamos este curso aos alunos do [MBA em Engenharia de dados](/fiap-abd/).
 
 ![](/assets/images/posts/2020-07-09-aws-academy/08.png)
 

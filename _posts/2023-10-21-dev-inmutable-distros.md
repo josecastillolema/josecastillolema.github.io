@@ -11,7 +11,7 @@ toc_sticky: true
 
 > Continuation of [Samsai](https://samsai.eu/) notes on [Toolbox-based Emacs Flatpak workflow](https://samsai.eu/post/toolbox-based-emacs-flatpak-workflow/).
 
-I have been using inmutable OS distributions for a while (Fedora Silverblue and Sericea, see my [dotfiles](/dotfiles)). They have the following characteristics:
+I have been using inmutable OS distributions for a while (Fedora Silverblue and Sericea, see my [dotfiles](/dotfiles/)). They have the following characteristics:
  - System root (baseOS) is mostly immutable
  - System software installation/updates are handled as images and applied on reboot
  - For installing desktop applications, [Flatpak](https://flatpak.org/) is the recommended default route

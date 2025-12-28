@@ -26,7 +26,7 @@ Recomendamos ter conhecimentos técnicos gerais de TI e de negócios.
 
 ## Como funciona?
 
-Você vai ter acesso à plataforma [AWS Academy](/aws-academy), com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da AWS Academy e professor da FIAP.
+Você vai ter acesso à plataforma [AWS Academy](/aws-academy/), com videoaulas em inglês (tradução e legendas em português), laboratórios para cada módulo, leituras complementares e testes após cada etapa para acompanhar a evolução com vista ao exame de certificação. Mais 30 dias de acesso às aulas, com dois momentos de interação ao vivo com José Castillo, Accredited Educator da AWS Academy e professor da FIAP.
 
 ## Digital + Live
 Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios práticos e mais duas lives com o professor, visando à preparação para a prova, nos dias **19/07** e **24/08**, das 19h às 20h. No fim, você receberá um certificado oficial de conclusão de curso da AWS Academy e poderá aproveitar 50% OFF para fazer a prova de Certificação AWS Cloud Practitioner.

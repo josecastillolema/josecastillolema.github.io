@@ -519,7 +519,7 @@ kube-system   kube-proxy-skgc9                                                1/
 kube-system   kube-scheduler-kubemark-workload-control-plane-lvkcv            1/1     Running   0          6m39s
 </code></pre></div></div>
 
-<p>Let’s deploy <a href="https://github.com/ovn-org/ovn-kubernetes/">OVN-Kubernetes</a> on the cluster (more information on how to deploy OVN-K on a preexisting kind cluster in this <a href="/ovnk8s-kind">past blog post</a>. OVN-Kubernetes is a CNI for Kubernetes based on the <a href="https://www.ovn.org/en/">Open Virtual Network (OVN)</a> project:</p>
+<p>Let’s deploy <a href="https://github.com/ovn-org/ovn-kubernetes/">OVN-Kubernetes</a> on the cluster (more information on how to deploy OVN-K on a preexisting kind cluster in this <a href="/ovnk8s-kind/">past blog post</a>. OVN-Kubernetes is a CNI for Kubernetes based on the <a href="https://www.ovn.org/en/">Open Virtual Network (OVN)</a> project:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./deploy-cni-ovn.sh $(pwd)/kubeconfig.kubemark-workload kubemark-workload
 </code></pre></div></div>
 
