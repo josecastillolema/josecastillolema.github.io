@@ -18,7 +18,7 @@ AWS Learning badges are credentials that offer these benefits:
 
 ## What types of AWS Learning Badges are available?
 
-AWS Learning badges are aligned to select [AWS Skill Builder](/skillbuilder) learning plans, such as:
+AWS Learning badges are aligned to select [AWS Skill Builder](/skillbuilder/) learning plans, such as:
 
  - [Storage Learning Plan - Object](https://explore.skillbuilder.aws/learn/public/learning_plan/view/51/storage-learning-plan-object-storage)
  - [Storage Learning Plan - Block](https://explore.skillbuilder.aws/learn/public/learning_plan/view/93/storage-learning-plan-block-storage)

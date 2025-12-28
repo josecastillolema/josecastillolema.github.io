@@ -13,7 +13,7 @@ toc_sticky: true
 
 > Originally published at [**Churrops on DevOps**](https://churrops.io/2017/12/20/heat-introducao/) on December 20, 2017.
 
-Olá pessoal, vamos começar uma série de artigos sobre Heat, o “terraform” nativo do OpenStack, ou para quem vem do mundo da AWS, o CloudFormation do OpenStack (inclusive parcialmente compatível). Neste primeiro artigo introdutório vamos aprender a criar as nossas próprias pilhas (ou *stacks*) e recriar a instância do servidor web que criamos no [post passado](/terraformando-openstack) usando o Terraform.
+Olá pessoal, vamos começar uma série de artigos sobre Heat, o “terraform” nativo do OpenStack, ou para quem vem do mundo da AWS, o CloudFormation do OpenStack (inclusive parcialmente compatível). Neste primeiro artigo introdutório vamos aprender a criar as nossas próprias pilhas (ou *stacks*) e recriar a instância do servidor web que criamos no [post passado](/terraformando-openstack/) usando o Terraform.
 
 O objetivo principal de Heat é criar um serviço para gerenciar todo o ciclo de vida de infra e aplicativos dentro do OpenStack. Ele implementa um mecanismo de orquestração com base em *templates* na forma de arquivos de texto (em formato `.yaml`) que podem ser tratados como código. O formato dos `templates` está evoluindo a cada versão do OpenStack, mas o Heat se esforça para fornecer compatibilidade com o formato do modelo AWS CloudFormation, de modo que muitos modelos CloudFormation existentes podem ser iniciados no OpenStack (inclusive permitindo, por exemplo, escalar do OpenStack para dentro da AWS). Para quem tiver interesse, existe também um esforço da comunidade para suportar templates TOSCA, chamado [Heat Translator](https://wiki.openstack.org/wiki/Heat-Translator).
 

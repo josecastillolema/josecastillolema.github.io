@@ -139,7 +139,7 @@ O resto dos comandos que foram explicados [no caso da AWS](https://churrops.io/2
 ## Conclusão
 Terraform se integra muito bem com vários provedores de nuvem, incluíndo OpenStack! Neste artigo vimos como é simples integrar OpenStack com a ferramenta, e como a mesma funciona de forma coerente entre várias nuvens.
 
-Nos [próximos artigos](/heat-introducao) de OpenStack falaremos sobre *heat*, o “terraform” nativo da plataforma, e veremos como é simples também gerenciar o ciclo de vida de *hardware* e *software* usando o orquestrador nativo da nuvem.
+Nos [próximos artigos](/heat-introducao/) de OpenStack falaremos sobre *heat*, o “terraform” nativo da plataforma, e veremos como é simples também gerenciar o ciclo de vida de *hardware* e *software* usando o orquestrador nativo da nuvem.
 
 Obrigado a todos e um abraço!
 

@@ -33,5 +33,5 @@ The Red Hat Research Program emphasizes research projects (PhD dissertations, Ma
 
 ## Projects
 
-- [PHYSICS](/physics): oPtimized HYbrid Space-time servIce Continuum in faaS
-- [ICOS](/icos): IoT2Cloud Operating System
+- [PHYSICS](/physics/): oPtimized HYbrid Space-time servIce Continuum in faaS
+- [ICOS](/icos/): IoT2Cloud Operating System

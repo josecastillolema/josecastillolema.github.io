@@ -12,7 +12,7 @@ toc_sticky: true
 
 [![](/assets/images/posts/2019-04-30-aws-educate/0.png)](https://aws.amazon.com/pt/education/awseducate/)
 
-Para acompanhar alguns cursos da FIAP, uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma [AWS Educate](/aws-educate).
+Para acompanhar alguns cursos da FIAP, uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma [AWS Educate](/aws-educate/).
 
 A plataforma on-line do AWS Educate fornece um suporte digital integrado com compartilhamento de recursos, suporte ao ensino, interação com a comunidade e acesso ao **console AWS com 50$ de créditos** e labs online.
 

@@ -24,7 +24,7 @@ Sugerimos que você se aprofunde no conteúdo do curso AWS Academy Cloud Foundat
 
 ## SHIFT remoto
 
-Você vai ter acesso à plataforma [AWS Academy](/aws-academy). Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.
+Você vai ter acesso à plataforma [AWS Academy](/aws-academy/). Aulas ao vivo com conteúdo e metodologia especialmente pensados para o aprendizado remoto. Os vídeos dos encontros também ficam disponíveis por 7 dias após a última aula. O conteúdo complementar pode ser acessado durante 1 ano. E você ainda tem acesso ao ecossistema FIAP e aos nossos coworkings.
 
 ## Benefício FIAP
 Você terá acesso a um voucher de 50% de desconto para o exame de Certificação AWS Certified Developer - Associate. O curso AWS Academy Cloud Foundations é pré-requisito para esse curso. Adquirindo o AWS Academy Cloud Developing, você terá acesso integral prévio e sem custo ao Cloud Foundations (incluso voucher de 50% de prova de Certificação AWS Cloud Practitioner).

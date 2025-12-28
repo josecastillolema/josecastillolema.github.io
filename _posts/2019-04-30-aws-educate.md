@@ -64,7 +64,7 @@ toc_sticky: true
 
 ## Cadastro na plataforma via convite do instrutor
 
-Seguir os passos descritos em [AWS Educate: Cadastro na plataforma](/aws-educate-login)
+Seguir os passos descritos em [AWS Educate: Cadastro na plataforma](/aws-educate-login/)
 
 ![](/assets/images/posts/2019-04-30-aws-educate/cert2019.jpg)
 ![](/assets/images/posts/2019-04-30-aws-educate/cert2020.jpg)
