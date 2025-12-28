@@ -384,6 +384,7 @@
 
     <div class="language-bash highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+ <span class="nb">link </span>rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
 </code></pre></div>    </div>
   </li>
   <li>
@@ -475,7 +476,7 @@
 
 <h2 id="testing-with-kind">Testing with Kind</h2>
 
-<p>We will be using <a href="https://github.com/cloud-bulldozer/k8s-netperf/">k8s-netperf</a> as the kubernetes network benchmarking tool. k8s-netperf supports ib_write_bw as one of its backends.</p>
+<p>We will be using <a href="https://github.com/cloud-bulldozer/k8s-netperf/">k8s-netperf</a> as the kubernetes network benchmarking tool. k8s-netperf supports <code class="language-plaintext highlighter-rouge">ib_write_bw</code> as one of its backends.</p>
 
 <ol>
   <li>
@@ -497,6 +498,7 @@
 
     <div class="language-bash highlighter-rouge">
 <div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+ <span class="nb">link </span>rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
 </code></pre></div>    </div>
   </li>
   <li>
