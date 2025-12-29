@@ -1559,7 +1559,7 @@ var store = [{
         "url": "/ovscon25/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
-        "title": "Local Soft-RoCE development workflows with kind",
+        "title": "Local Soft-RoCE development workflow with kind",
         "excerpt":"RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved...","categories": [],
         "tags": ["dev","en","networks","redhat"],
         "url": "/roce-local-dev/",

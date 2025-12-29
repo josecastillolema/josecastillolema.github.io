@@ -1,5 +1,5 @@
 ---
-title:  "Local Soft-RoCE development workflows with kind"
+title:  "Local Soft-RoCE development workflow with kind"
 last_modified_at: 2025-12-28
 tags:
   - dev
