@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2025-12-29T05:17:43-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Local Soft-RoCE development workflow with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflow with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-01-04T14:01:44-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear26/" rel="alternate" type="text/html" title="Happy new year!" /><published>2026-01-01T00:00:00-06:00</published><updated>2026-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear26</id><content type="html" xml:base="https://josecastillolema.github.io/newyear26/"><![CDATA[<p><img src="/assets/images/posts/2026-01-01-newyear26.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Local Soft-RoCE development workflow with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflow with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
 
 <p>Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.</p>
 
@@ -463,31 +463,4 @@
 
 <h2 id="slides">Slides</h2>
 
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-hotcloudperf/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)]]></summary></entry><entry><title type="html">Red Hat Summit 2025</title><link href="https://josecastillolema.github.io/rh-summit25/" rel="alternate" type="text/html" title="Red Hat Summit 2025" /><published>2025-05-04T00:00:00-05:00</published><updated>2025-05-04T00:00:00-05:00</updated><id>https://josecastillolema.github.io/rh-summit25</id><content type="html" xml:base="https://josecastillolema.github.io/rh-summit25/"><![CDATA[<p><img src="/assets/images/posts/2025-05-04-rh-summit25/1.jpg" alt="" /></p>
-
-<h2 id="sessions">Sessions</h2>
-
-<p>I will be speaking at <a href="https://www.redhat.com/en/summit">Red Hat Summit 2025</a> in Boston on May 19-22. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders.</p>
-
-<p>Here are my sessions:</p>
-
-<ul>
-  <li>🧠 Horizon Europe projects working on the cloud edge continuum - with Luis Tomas Bolivar</li>
-  <li>🔧 Shifting performance engineering left - with Joe Talerico</li>
-</ul>
-
-<p>More information can be found in this Red Hat Research <a href="https://research.redhat.com/blog/2025/05/12/find-ai-and-far-edge-research-and-emerging-tech-at-red-hat-summit/">blog post</a>.</p>
-
-<h2 id="registration">Registration</h2>
-
-<p>Register <a href="https://www.redhat.com/en/summit">here</a> for Summit and <a href="https://commons.openshift.org/gatherings/summit-25-may-19/">here</a> for OpenShift Commons!</p>
-
-<h2 id="pics">Pics</h2>
-
-<p><img src="/assets/images/posts/2025-05-04-rh-summit25/2.jpg" alt="" /></p>
-
-<h2 id="slides">Slides</h2>
-
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-rh-summit/horizon.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
-
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-rh-summit/shift-left.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="ansible" /><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-hotcloudperf/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)]]></summary></entry></feed>
