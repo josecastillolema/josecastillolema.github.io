@@ -1564,4 +1564,10 @@ var store = [{
         "tags": ["dev","en","networks","redhat"],
         "url": "/roce-local-dev/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "Happy new year!",
+        "excerpt":"  ","categories": [],
+        "tags": ["en","redhat"],
+        "url": "/newyear26/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]
