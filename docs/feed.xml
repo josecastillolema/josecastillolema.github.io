@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-01-04T14:01:44-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear26/" rel="alternate" type="text/html" title="Happy new year!" /><published>2026-01-01T00:00:00-06:00</published><updated>2026-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear26</id><content type="html" xml:base="https://josecastillolema.github.io/newyear26/"><![CDATA[<p><img src="/assets/images/posts/2026-01-01-newyear26.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Local Soft-RoCE development workflow with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflow with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-01-14T07:40:16-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">KDE express #65: esLibre’26 - OCaml y Containerlab</title><link href="https://josecastillolema.github.io/kde-express/" rel="alternate" type="text/html" title="KDE express #65: esLibre’26 - OCaml y Containerlab" /><published>2026-01-14T00:00:00-06:00</published><updated>2026-01-14T00:00:00-06:00</updated><id>https://josecastillolema.github.io/kde-express</id><content type="html" xml:base="https://josecastillolema.github.io/kde-express/"><![CDATA[[![](/assets/images/posts/2026-01-14-kde-express.png)](https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/)
+
+Especial [esLibre 2026 Melide](https://eslib.re/2026/) destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas:
+
+ - [OCaml vs Python: ventajas de lenguajes (verdaderamente) funcionales](https://propuestas.eslib.re/2026/charlas/ocaml-vs-python-ventajas-de-lenguajes-verdaderamente-funcionales)
+      - Charla larga (30 min)
+      - Web del proyecto: [https://ocaml.org/](https://ocaml.org/)
+      - Público objetivo: Interesados en programación y programación funcional.
+        OCaml es un lenguaje de programación funcional de propósito general y tipado estático, con inferencia de tipos, tipos inductivos, pattern matching, variantes, etc. además de ser muy eficiente. En esta charla veremos las principales características del lenguaje (comparadas con código Python equivalente) y hablaremos sobre el tooling y futuro del lenguaje.
+
+ - [Containerlab: crea tu propio laboratorio de redes](https://propuestas.eslib.re/2026/charlas/containerlab-crea-tu-propio-laboratorio-de-redes)
+      - Charla larga (alrededor de 30 minutos)
+      - Web del proyecto: [https://containerlab.dev/](https://containerlab.dev/)
+      - Público objetivo: Profesores, alumnos, personas interesadas en aprender redes de computadores, containers, virtualización, etc.
+      - Containerlab es un herramienta para orquestar y gestionar laboratorios de redes basados ​​en contenedores. Se encarga de iniciar los contenedores, crear el cableado virtual entre ellos para crear topologías de laboratorio a elección del usuario y gestionar el ciclo de vida de los laboratorios. Descubre como puedes usar la para crear ambientes interactivos en ambientes compartidos como Github Codespaces.]]></content><author><name>Jose Castillo Lema</name></author><category term="classes" /><category term="dev" /><category term="events" /><category term="es" /><category term="iac" /><category term="networks" /><category term="nfv" /><category term="podcast" /><category term="sdn" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear26/" rel="alternate" type="text/html" title="Happy new year!" /><published>2026-01-01T00:00:00-06:00</published><updated>2026-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear26</id><content type="html" xml:base="https://josecastillolema.github.io/newyear26/"><![CDATA[<p><img src="/assets/images/posts/2026-01-01-newyear26.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Local Soft-RoCE development workflow with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflow with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
 
 <p>Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.</p>
 
@@ -173,7 +187,7 @@
 </code></pre></div>    </div>
   </li>
   <li>
-    <p>Create the kind cluster:</p>
+    <p>Create the kind cluster (works perfectly fine with podman as well, just export <code class="language-plaintext highlighter-rouge">KIND_EXPERIMENTAL_PROVIDER=podman</code>):</p>
 
     <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kind create cluster <span class="nt">--config</span> kind-config-rdma.yaml
  Creating cluster <span class="s2">"kind"</span> ...
@@ -429,38 +443,4 @@
 <img src="/assets/images/posts/2025-05-07-icpe25/4.jpg" alt="" /></p>
 
 <h2 id="slides">Slides</h2>
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-icpe/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="papers" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering]]></summary></entry><entry><title type="html">HotCloudPerf 2025</title><link href="https://josecastillolema.github.io/hotcloudperf25/" rel="alternate" type="text/html" title="HotCloudPerf 2025" /><published>2025-05-06T00:00:00-05:00</published><updated>2025-05-06T00:00:00-05:00</updated><id>https://josecastillolema.github.io/hotcloudperf25</id><content type="html" xml:base="https://josecastillolema.github.io/hotcloudperf25/"><![CDATA[<p><strong>8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)</strong></p>
-
-<p><a href="https://hotcloudperf.spec.org/"><img src="/assets/images/posts/2025-05-06-hotcloudperf25/1.png" alt="" /></a></p>
-
-<h2 id="agenda"><a href="https://hotcloudperf.spec.org/">Agenda</a></h2>
-
-<h2 id="overview">Overview</h2>
-
-<p>The <a href="https://hotcloudperf.spec.org/">HotCloudPerf</a> workshop proposes a meeting venue for academics and practitioners, from experts to trainees, in the field of cloud computing performance. The new understanding of cloud computing covers the full computational continuum from data centers to edge resources to IoT sensors and devices. The workshop aims to engage this community and to lead to the development of new methodological aspects for gaining a deeper understanding not only of cloud performance, but also of cloud operation and behavior, through diverse quantitative evaluation tools, including benchmarks, metrics, and workload generators. The workshop focuses on novel cloud properties such as elasticity, performance isolation, dependability, and other non-functional system properties, in addition to classical performance-related metrics such as response time, throughput, scalability, and efficiency.</p>
-
-<h2 id="acknowledgement">Acknowledgement</h2>
-
-<p>The HotCloudPerf workshop is technically sponsored by the <a href="https://spec.org/">Standard Performance Evaluation Corporation</a> (SPEC)’s <a href="https://research.spec.org/">Research Group</a> (RG) and is organized annually by the <a href="https://research.spec.org/working-groups/rg-cloud/">RG Cloud Group</a>. HotCloudPerf has emerged from the series of yearly meetings organized by the RG Cloud Group, since 2013. The RG Cloud Group group is taking a broad approach, relevant for both academia and industry, to cloud benchmarking, quantitative evaluation, and experimental analysis.</p>
-
-<h2 id="panel">Panel</h2>
-
-<h3 id="performance-modeling-for-the-computing-continuum">Performance modeling for the computing continuum</h3>
-
-<p><strong>Moderator</strong>: Klervie Toczé</p>
-
-<p><strong>Panelists</strong></p>
-<ul>
-  <li>Padma Apparao (Intel)</li>
-  <li>Tommaso Cucinotta (Scuola Universitaria Superiore Pisa)</li>
-  <li>Matthijs Jansen (Vrije Universiteit Amsterdam)</li>
-  <li>Jose Castillo Lema (RedHat)</li>
-</ul>
-
-<h2 id="pics">Pics</h2>
-
-<p><img src="/assets/images/posts/2025-05-06-hotcloudperf25/2.jpg" alt="" /></p>
-
-<h2 id="slides">Slides</h2>
-
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-hotcloudperf/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)]]></summary></entry></feed>
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-icpe/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="papers" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering]]></summary></entry></feed>
