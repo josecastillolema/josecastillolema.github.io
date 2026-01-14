@@ -178,7 +178,7 @@ We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) 
             readOnly: true
     ```
 
-5. Create the kind cluster:
+5. Create the kind cluster (works perfectly fine with podman as well, just export `KIND_EXPERIMENTAL_PROVIDER=podman`):
 
     ```bash
     kind create cluster --config kind-config-rdma.yaml
