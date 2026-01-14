@@ -1572,7 +1572,7 @@ var store = [{
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       },{
         "title": "KDE express #65: esLibre'26 - OCaml y Containerlab",
-        "excerpt":"[![](/assets/images/posts/2026-01-14-kde-express.png)](https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/) Especial [esLibre 2026 Melide](https://eslib.re/2026/) destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas: - [OCaml vs Python: ventajas de lenguajes (verdaderamente) funcionales](https://propuestas.eslib.re/2026/charlas/ocaml-vs-python-ventajas-de-lenguajes-verdaderamente-funcionales) - Charla larga (30 min) - Web del proyecto: [https://ocaml.org/](https://ocaml.org/) - Público objetivo: Interesados en programación y programación funcional. OCaml...","categories": [],
+        "excerpt":"Especial esLibre 2026 Melide destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas: OCaml vs Python: ventajas de lenguajes (verdaderamente) funcionales Charla larga (30 min) Web del proyecto: https://ocaml.org/ Público objetivo: Interesados en programación y programación funcional. OCaml es un lenguaje de programación...","categories": [],
         "tags": ["classes","dev","events","es","iac","networks","nfv","podcast","sdn"],
         "url": "/kde-express/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
