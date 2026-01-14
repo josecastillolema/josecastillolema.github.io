@@ -15,7 +15,7 @@ toc: false
 toc_sticky: true
 ---
 
-[![](/assets/images/posts/2026-01-14-kde-express.png)](https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/)
+[![](/assets/images/posts/2026-01-14-kde-express/1.png)](https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/)
 
 Especial [esLibre 2026 Melide](https://eslib.re/2026/) destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas:
 
@@ -30,3 +30,5 @@ Especial [esLibre 2026 Melide](https://eslib.re/2026/) destacando algunas de las
       - Web del proyecto: [https://containerlab.dev/](https://containerlab.dev/)
       - Público objetivo: Profesores, alumnos, personas interesadas en aprender redes de computadores, containers, virtualización, etc.
       - Containerlab es un herramienta para orquestar y gestionar laboratorios de redes basados ​​en contenedores. Se encarga de iniciar los contenedores, crear el cableado virtual entre ellos para crear topologías de laboratorio a elección del usuario y gestionar el ciclo de vida de los laboratorios. Descubre como puedes usar la para crear ambientes interactivos en ambientes compartidos como Github Codespaces.
+
+[![](/assets/images/posts/2026-01-14-kde-express/2.png)](https://open.spotify.com/episode/1U8dvZbh9XYueqqS5OvSsm)
