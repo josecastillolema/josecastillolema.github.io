@@ -331,7 +331,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          10 minute read
+          19 minute read
         
       </span>
     
@@ -349,12 +349,20 @@
 <i class="fas fa-file-alt"></i> On this page</h4></header>
               <ul class="toc__menu">
 <li><a href="#testing-with-dockerpodman">Testing with Docker/Podman</a></li>
-<li><a href="#testing-with-kind">Testing with Kind</a></li>
+<li>
+<a href="#testing-with-kind">Testing with Kind</a><ul><li><a href="#single-node-cluster">Single node cluster</a></li></ul>
+</li>
+<li>
+<a href="#github-actions">GitHub actions</a><ul>
+<li><a href="#first-attempt-not-working">First attempt (not working)</a></li>
+<li><a href="#final-attempt">Final attempt</a></li>
+</ul>
+</li>
 </ul>
             </nav>
           </aside>
         
-        <p>RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
+        <p><strong>RDMA over Converged Ethernet</strong> (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
 
 <p>Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.</p>
 
@@ -623,6 +631,248 @@
 </code></pre></div>    </div>
   </li>
 </ol>
+
+<h3 id="single-node-cluster">Single node cluster</h3>
+
+<ol>
+  <li>
+    <p>You can also create a one node all-in-one kind cluster:</p>
+
+    <div class="language-yaml highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> <span class="na">kind</span><span class="pi">:</span> <span class="s">Cluster</span>
+ <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kind.x-k8s.io/v1alpha4</span>
+ <span class="na">nodes</span><span class="pi">:</span>
+   <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">control-plane</span>
+     <span class="na">extraMounts</span><span class="pi">:</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+       <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Label the one node:</p>
+
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1 <span class="nt">--local</span>
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Don’t forget the <code class="language-plaintext highlighter-rouge">--local</code> flag when invoking k8s-netperf:</p>
+
+    <div class="language-bash highlighter-rouge">
+<div class="highlight"><pre class="highlight"><code> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1 <span class="nt">--local</span>
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<h2 id="github-actions">GitHub actions</h2>
+
+<h3 id="first-attempt-not-working">First attempt (not working)</h3>
+
+<p>For the first attempt we tried using the <strong>Ubuntu Azure github runner OS</strong>. Ubuntu Azure kernel lacks soft-RoCE (<code class="language-plaintext highlighter-rouge">rdma_rxe</code>) but has the <strong>soft-iWARP</strong> (<code class="language-plaintext highlighter-rouge">siw</code>) driver instead:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">RoCE</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">push</span><span class="pi">:</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@master</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Setup Soft-RoCE</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">sudo apt-get install -y linux-modules-extra-$(uname -r)</span>
+          <span class="s">sudo modprobe siw</span>
+          <span class="s">sudo rdma link add siw0 type siw netdev eth0</span>
+          <span class="s">rdma link show</span>
+
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">engineerd/setup-kind@v0.6.2</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">config</span><span class="pi">:</span> <span class="s">testing/kind-config-rdma.yaml</span>
+          <span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">v0.27.0"</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Labeling</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">kubectl label node kind-control-plane node-role.kubernetes.io/worker=""</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Runs k8s-netperf</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">git clone --depth 1 https://github.com/josecastillolema/k8s-netperf.git</span>
+          <span class="s">cd k8s-netperf</span>
+          <span class="s">go build -o k8s-netperf cmd/k8s-netperf/k8s-netperf.go</span>
+          <span class="s">./k8s-netperf --config config.yaml --hostNet --privileged --ib-write-bw siw0:0 --local</span>
+</code></pre></div></div>
+
+<p>Unfortunately this elegant and quick worflow does not work. It fails at QP RTS transition. The following kernel ring buffer entry points to something related to running on a Docker veth interface:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eth0: renamed from vethf90b642
+</code></pre></div></div>
+
+<p>We have tried running <code class="language-plaintext highlighter-rouge">ib_write_bw</code> with the <code class="language-plaintext highlighter-rouge">-R</code> flag to use RDMA CM (Connection Manager) instead of manual / IB-style QP setup but even that did not work.</p>
+
+<h3 id="final-attempt">Final attempt</h3>
+
+<p>Since we were unable to make soft-iWARP work we opted for running the workload on a <strong>QEMU Fedora virtual machine with soft-RoCE</strong>. The workflow takes approximately 30 minutes:</p>
+
+<ul>
+  <li>It spins a Fedora 43 virtual machine with 2 vCPUs and 7 GB of memory</li>
+  <li>Resizes the image to 10 GB</li>
+  <li>Through cloud-init:
+    <ul>
+      <li>Installs <code class="language-plaintext highlighter-rouge">kernel-modules-extra</code> to load the <code class="language-plaintext highlighter-rouge">rdma_rxe</code> driver</li>
+      <li>Makes some <code class="language-plaintext highlighter-rouge">sysctl</code> adjustments to prevent the too many open files error</li>
+      <li>Installs <code class="language-plaintext highlighter-rouge">kind</code> and <code class="language-plaintext highlighter-rouge">kubectl</code>
+</li>
+      <li>Deploys a single node kind cluster using the podman provider</li>
+      <li>Runs the <code class="language-plaintext highlighter-rouge">k8s-netperf</code> workload</li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">RoCE</span>
+
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">pull_request</span><span class="pi">:</span>
+    <span class="na">branches</span><span class="pi">:</span> <span class="pi">[</span> <span class="s2">"</span><span class="s">*"</span> <span class="pi">]</span>
+    <span class="na">paths-ignore</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">**.md'</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">**.sh'</span>
+
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="na">qemu</span><span class="pi">:</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+    <span class="na">timeout-minutes</span><span class="pi">:</span> <span class="m">45</span>
+
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Checkout k8s-netperf</span>
+        <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v4</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Build k8s-netperf</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">make build</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Install dependencies</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">sudo apt-get update</span>
+          <span class="s">sudo apt-get install -y \</span>
+            <span class="s">qemu-system-x86 \</span>
+            <span class="s">qemu-utils \</span>
+            <span class="s">genisoimage</span>
+
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Boot Fedora Cloud Image with QEMU and install Podman + RDMA + Kind</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">cd /tmp</span>
+
+          <span class="s">FEDORA_CLOUD_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/43/Cloud/x86_64/images"</span>
+          <span class="s">FEDORA_IMAGE="Fedora-Cloud-Base-Generic-43-1.6.x86_64.qcow2"</span>
+          <span class="s">wget -q "$FEDORA_CLOUD_URL/$FEDORA_IMAGE" -O fedora-cloud.qcow2; then</span>
+
+          <span class="s"># Resize the qcow2 image to 10GB (default 5GB is too small for packages + Kind)</span>
+          <span class="s">qemu-img resize fedora-cloud.qcow2 10G</span>
+
+          <span class="s">mkdir -p /tmp/cloud-init</span>
+          <span class="s"># Copy Kind config from repository</span>
+          <span class="s">cp $GITHUB_WORKSPACE/testing/kind-config-rdma.yaml /tmp/cloud-init/kind-config.yaml</span>
+          <span class="s"># Copy k8s-netperf binary and config</span>
+          <span class="s">echo "Copying k8s-netperf binary and config..."</span>
+          <span class="s">cp $GITHUB_WORKSPACE/bin/amd64/k8s-netperf /tmp/cloud-init/</span>
+          <span class="s">cp $GITHUB_WORKSPACE/examples/roce.yml /tmp/cloud-init/</span>
+
+          <span class="s"># Create user-data for cloud-init</span>
+          <span class="s">printf '%s\n' \</span>
+            <span class="s">'#cloud-config' \</span>
+            <span class="s">'users:' \</span>
+            <span class="s">'  - default' \</span>
+            <span class="s">'  - name: fedora' \</span>
+            <span class="s">'    sudo: ALL=(ALL) NOPASSWD:ALL' \</span>
+            <span class="s">'    shell: /bin/bash' \</span>
+            <span class="s">'' \</span>
+            <span class="s">'chpasswd:' \</span>
+            <span class="s">'  list: |' \</span>
+            <span class="s">'    fedora:fedora' \</span>
+            <span class="s">'  expire: false' \</span>
+            <span class="s">'' \</span>
+            <span class="s">'packages:' \</span>
+            <span class="s">'  - podman' \</span>
+            <span class="s">'  - rdma-core' \</span>
+            <span class="s">'' \</span>
+            <span class="s">'runcmd:' \</span>
+            <span class="s">'  - set -ex' \</span>
+            <span class="s">'  - trap "echo CLOUD_INIT_FAILED; sync; poweroff" ERR' \</span>
+            <span class="s">'  - dnf install -y kernel-modules-extra-$(uname -r)' \</span>
+            <span class="s">'  - mkdir -p /mnt/cdrom' \</span>
+            <span class="s">'  - mount /dev/sr0 /mnt/cdrom || mount /dev/sr1 /mnt/cdrom || mount /dev/sdb /mnt/cdrom || { echo "❌ Failed to mount cloud-init ISO"; echo "FAST_FAIL_MOUNT_ERROR"; poweroff; exit 1; }' \</span>
+            <span class="s">'  - cp /mnt/cdrom/kind-config.yaml /tmp/' \</span>
+            <span class="s">'  - cp /mnt/cdrom/k8s-netperf /usr/local/bin/' \</span>
+            <span class="s">'  - chmod +x /usr/local/bin/k8s-netperf' \</span>
+            <span class="s">'  - cp /mnt/cdrom/roce.yml /tmp/' \</span>
+            <span class="s">'  - umount /mnt/cdrom' \</span>
+            <span class="s">'  - modprobe ib_core || { echo "❌ Failed to load ib_core module"; exit 1; }' \</span>
+            <span class="s">'  - modprobe ib_uverbs || { echo "❌ Failed to load ib_uverbs module"; exit 1; }' \</span>
+            <span class="s">'  - modprobe rdma_rxe || { echo "❌ Failed to load rdma_rxe module"; exit 1; }' \</span>
+            <span class="s">'  - rdma link add rxe0 type rxe netdev ens3 || { echo "❌ Failed to create RXE device"; exit 1; }' \</span>
+            <span class="s">'  - rdma link show' \</span>
+            <span class="s">'  - sysctl -w kernel.keys.maxkeys=5000' \</span>
+            <span class="s">'  - sysctl -w fs.inotify.max_user_watches=2099999999' \</span>
+            <span class="s">'  - sysctl -w fs.inotify.max_user_instances=2099999999' \</span>
+            <span class="s">'  - sysctl -w fs.inotify.max_queued_events=2099999999' \</span>
+            <span class="s">'  - curl -Lo /usr/local/bin/kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64' \</span>
+            <span class="s">'  - chmod +x /usr/local/bin/kind' \</span>
+            <span class="s">'  - KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster --config=/tmp/kind-config.yaml' \</span>
+            <span class="s">'  - kind get clusters' \</span>
+            <span class="s">'  - curl -Lo /usr/local/bin/kubectl "https://dl.k8s.io/release/v1.31.0/bin/linux/amd64/kubectl"' \</span>
+            <span class="s">'  - chmod +x /usr/local/bin/kubectl' \</span>
+            <span class="s">'  - kubectl label node kind-control-plane node-role.kubernetes.io/worker=""' \</span>
+            <span class="s">'  - k8s-netperf --config /tmp/roce.yml --privileged --ib-write-bw rxe0:1 --hostNet --local' \</span>
+            <span class="s">'  - echo "=== RDMA + Podman + Kind + k8s-netperf completed successfully! ==="' \</span>
+            <span class="s">'  - sync' \</span>
+            <span class="s">'  - poweroff' \</span>
+            <span class="s">&gt; /tmp/cloud-init/user-data</span>
+
+          <span class="s"># Create meta-data using printf</span>
+          <span class="s">printf '%s\n' \</span>
+            <span class="s">'instance-id: rdma-test-vm' \</span>
+            <span class="s">'local-hostname: rdma-test' \</span>
+            <span class="s">&gt; /tmp/cloud-init/meta-data</span>
+
+          <span class="s"># Create cloud-init ISO</span>
+          <span class="s">genisoimage -output /tmp/cloud-init.iso -volid cidata -joliet -rock /tmp/cloud-init/user-data /tmp/cloud-init/meta-data /tmp/cloud-init/kind-config.yaml /tmp/cloud-init/k8s-netperf /tmp/cloud-init/roce.yml</span>
+
+          <span class="s"># Boot QEMU with cloud image in background</span>
+          <span class="s">touch /tmp/vm-output.log</span>
+          <span class="s">qemu-system-x86_64 \</span>
+            <span class="s">-machine accel=tcg \</span>
+            <span class="s">-cpu max \</span>
+            <span class="s">-m 7168 \</span>
+            <span class="s">-smp 2 \</span>
+            <span class="s">-drive file=/tmp/fedora-cloud.qcow2,format=qcow2 \</span>
+            <span class="s">-drive file=/tmp/cloud-init.iso,format=raw \</span>
+            <span class="s">-netdev user,id=net0,dns=8.8.8.8 \</span>
+            <span class="s">-device e1000,netdev=net0 \</span>
+            <span class="s">-nographic \</span>
+            <span class="s">-serial mon:stdio &gt; /tmp/vm-output.log 2&gt;&amp;1 &amp;</span>
+          <span class="s">QEMU_PID=$!</span>
+          <span class="s">echo "QEMU started with PID $QEMU_PID"</span>
+
+          <span class="s"># Stream logs in real-time</span>
+          <span class="s">tail -f /tmp/vm-output.log &amp;</span>
+          <span class="s">TAIL_PID=$!</span>
+
+          <span class="s"># Cleanup</span>
+          <span class="s">kill $TAIL_PID 2&gt;/dev/null || true</span>
+          <span class="s">kill $QEMU_PID 2&gt;/dev/null || true</span>
+          <span class="s">sleep 2</span>
+
+          <span class="s">VM_OUTPUT=$(cat /tmp/vm-output.log)</span>
+</code></pre></div></div>
 
         
       </section>

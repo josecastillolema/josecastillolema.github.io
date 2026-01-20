@@ -10,7 +10,7 @@ toc: true
 toc_sticky: true
 ---
 
-RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.
+**RDMA over Converged Ethernet** (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.
 
 Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.
 
@@ -254,3 +254,236 @@ We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) 
     kind delete cluster
     sudo rdma link delete rxe0
     ```
+
+### Single node cluster
+
+1. You can also create a one node all-in-one kind cluster:
+
+    ```yaml
+    kind: Cluster
+    apiVersion: kind.x-k8s.io/v1alpha4
+    nodes:
+      - role: control-plane
+        extraMounts:
+          - hostPath: /dev/infiniband
+            containerPath: /dev/infiniband
+          - hostPath: /sys/class/infiniband
+            containerPath: /sys/class/infiniband
+            readOnly: true
+          - hostPath: /sys/class/net
+            containerPath: /sys/class/net
+            readOnly: true
+    ```
+
+2. Label the one node:
+
+    ```bash
+    k8s-netperf --config config.yaml --hostNet --privileged --ib-write-bw rxe0:1 --local
+    ```
+
+3. Don't forget the `--local` flag when invoking k8s-netperf:
+
+    ```bash
+    k8s-netperf --config config.yaml --hostNet --privileged --ib-write-bw rxe0:1 --local
+    ```
+
+## GitHub actions
+
+### First attempt (not working)
+
+For the first attempt we tried using the **Ubuntu Azure github runner OS**. Ubuntu Azure kernel lacks soft-RoCE (`rdma_rxe`) but has the **soft-iWARP** (`siw`) driver instead:
+
+```yaml
+name: RoCE
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Setup Soft-RoCE
+        run: |
+          sudo apt-get install -y linux-modules-extra-$(uname -r)
+          sudo modprobe siw
+          sudo rdma link add siw0 type siw netdev eth0
+          rdma link show
+
+      - uses: engineerd/setup-kind@v0.6.2
+        with:
+          config: testing/kind-config-rdma.yaml
+          version: "v0.27.0"
+
+      - name: Labeling
+        run: |
+          kubectl label node kind-control-plane node-role.kubernetes.io/worker=""
+
+      - name: Runs k8s-netperf
+        run: |
+          git clone --depth 1 https://github.com/josecastillolema/k8s-netperf.git
+          cd k8s-netperf
+          go build -o k8s-netperf cmd/k8s-netperf/k8s-netperf.go
+          ./k8s-netperf --config config.yaml --hostNet --privileged --ib-write-bw siw0:0 --local
+```
+
+Unfortunately this elegant and quick worflow does not work. It fails at QP RTS transition. The following kernel ring buffer entry points to something related to running on a Docker veth interface:
+```
+eth0: renamed from vethf90b642
+```
+
+We have tried running `ib_write_bw` with the `-R` flag to use RDMA CM (Connection Manager) instead of manual / IB-style QP setup but even that did not work.
+
+### Final attempt
+
+Since we were unable to make soft-iWARP work we opted for running the workload on a **QEMU Fedora virtual machine with soft-RoCE**. The workflow takes approximately 30 minutes:
+
+ - It spins a Fedora 43 virtual machine with 2 vCPUs and 7 GB of memory
+ - Resizes the image to 10 GB
+ - Through cloud-init:
+   - Installs `kernel-modules-extra` to load the `rdma_rxe` driver
+   - Makes some `sysctl` adjustments to prevent the too many open files error
+   - Installs `kind` and `kubectl`
+   - Deploys a single node kind cluster using the podman provider
+   - Runs the `k8s-netperf` workload
+
+```yaml
+name: RoCE
+
+on:
+  pull_request:
+    branches: [ "*" ]
+    paths-ignore:
+    - '**.md'
+    - '**.sh'
+
+jobs:
+  qemu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout k8s-netperf
+        uses: actions/checkout@v4
+
+      - name: Build k8s-netperf
+        run: |
+          make build
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            qemu-system-x86 \
+            qemu-utils \
+            genisoimage
+
+      - name: Boot Fedora Cloud Image with QEMU and install Podman + RDMA + Kind
+        run: |
+          cd /tmp
+
+          FEDORA_CLOUD_URL="https://download.fedoraproject.org/pub/fedora/linux/releases/43/Cloud/x86_64/images"
+          FEDORA_IMAGE="Fedora-Cloud-Base-Generic-43-1.6.x86_64.qcow2"
+          wget -q "$FEDORA_CLOUD_URL/$FEDORA_IMAGE" -O fedora-cloud.qcow2; then
+
+          # Resize the qcow2 image to 10GB (default 5GB is too small for packages + Kind)
+          qemu-img resize fedora-cloud.qcow2 10G
+
+          mkdir -p /tmp/cloud-init
+          # Copy Kind config from repository
+          cp $GITHUB_WORKSPACE/testing/kind-config-rdma.yaml /tmp/cloud-init/kind-config.yaml
+          # Copy k8s-netperf binary and config
+          echo "Copying k8s-netperf binary and config..."
+          cp $GITHUB_WORKSPACE/bin/amd64/k8s-netperf /tmp/cloud-init/
+          cp $GITHUB_WORKSPACE/examples/roce.yml /tmp/cloud-init/
+
+          # Create user-data for cloud-init
+          printf '%s\n' \
+            '#cloud-config' \
+            'users:' \
+            '  - default' \
+            '  - name: fedora' \
+            '    sudo: ALL=(ALL) NOPASSWD:ALL' \
+            '    shell: /bin/bash' \
+            '' \
+            'chpasswd:' \
+            '  list: |' \
+            '    fedora:fedora' \
+            '  expire: false' \
+            '' \
+            'packages:' \
+            '  - podman' \
+            '  - rdma-core' \
+            '' \
+            'runcmd:' \
+            '  - set -ex' \
+            '  - trap "echo CLOUD_INIT_FAILED; sync; poweroff" ERR' \
+            '  - dnf install -y kernel-modules-extra-$(uname -r)' \
+            '  - mkdir -p /mnt/cdrom' \
+            '  - mount /dev/sr0 /mnt/cdrom || mount /dev/sr1 /mnt/cdrom || mount /dev/sdb /mnt/cdrom || { echo "❌ Failed to mount cloud-init ISO"; echo "FAST_FAIL_MOUNT_ERROR"; poweroff; exit 1; }' \
+            '  - cp /mnt/cdrom/kind-config.yaml /tmp/' \
+            '  - cp /mnt/cdrom/k8s-netperf /usr/local/bin/' \
+            '  - chmod +x /usr/local/bin/k8s-netperf' \
+            '  - cp /mnt/cdrom/roce.yml /tmp/' \
+            '  - umount /mnt/cdrom' \
+            '  - modprobe ib_core || { echo "❌ Failed to load ib_core module"; exit 1; }' \
+            '  - modprobe ib_uverbs || { echo "❌ Failed to load ib_uverbs module"; exit 1; }' \
+            '  - modprobe rdma_rxe || { echo "❌ Failed to load rdma_rxe module"; exit 1; }' \
+            '  - rdma link add rxe0 type rxe netdev ens3 || { echo "❌ Failed to create RXE device"; exit 1; }' \
+            '  - rdma link show' \
+            '  - sysctl -w kernel.keys.maxkeys=5000' \
+            '  - sysctl -w fs.inotify.max_user_watches=2099999999' \
+            '  - sysctl -w fs.inotify.max_user_instances=2099999999' \
+            '  - sysctl -w fs.inotify.max_queued_events=2099999999' \
+            '  - curl -Lo /usr/local/bin/kind https://kind.sigs.k8s.io/dl/v0.27.0/kind-linux-amd64' \
+            '  - chmod +x /usr/local/bin/kind' \
+            '  - KIND_EXPERIMENTAL_PROVIDER=podman kind create cluster --config=/tmp/kind-config.yaml' \
+            '  - kind get clusters' \
+            '  - curl -Lo /usr/local/bin/kubectl "https://dl.k8s.io/release/v1.31.0/bin/linux/amd64/kubectl"' \
+            '  - chmod +x /usr/local/bin/kubectl' \
+            '  - kubectl label node kind-control-plane node-role.kubernetes.io/worker=""' \
+            '  - k8s-netperf --config /tmp/roce.yml --privileged --ib-write-bw rxe0:1 --hostNet --local' \
+            '  - echo "=== RDMA + Podman + Kind + k8s-netperf completed successfully! ==="' \
+            '  - sync' \
+            '  - poweroff' \
+            > /tmp/cloud-init/user-data
+
+          # Create meta-data using printf
+          printf '%s\n' \
+            'instance-id: rdma-test-vm' \
+            'local-hostname: rdma-test' \
+            > /tmp/cloud-init/meta-data
+
+          # Create cloud-init ISO
+          genisoimage -output /tmp/cloud-init.iso -volid cidata -joliet -rock /tmp/cloud-init/user-data /tmp/cloud-init/meta-data /tmp/cloud-init/kind-config.yaml /tmp/cloud-init/k8s-netperf /tmp/cloud-init/roce.yml
+
+          # Boot QEMU with cloud image in background
+          touch /tmp/vm-output.log
+          qemu-system-x86_64 \
+            -machine accel=tcg \
+            -cpu max \
+            -m 7168 \
+            -smp 2 \
+            -drive file=/tmp/fedora-cloud.qcow2,format=qcow2 \
+            -drive file=/tmp/cloud-init.iso,format=raw \
+            -netdev user,id=net0,dns=8.8.8.8 \
+            -device e1000,netdev=net0 \
+            -nographic \
+            -serial mon:stdio > /tmp/vm-output.log 2>&1 &
+          QEMU_PID=$!
+          echo "QEMU started with PID $QEMU_PID"
+
+          # Stream logs in real-time
+          tail -f /tmp/vm-output.log &
+          TAIL_PID=$!
+
+          # Cleanup
+          kill $TAIL_PID 2>/dev/null || true
+          kill $QEMU_PID 2>/dev/null || true
+          sleep 2
+
+          VM_OUTPUT=$(cat /tmp/vm-output.log)
+```
