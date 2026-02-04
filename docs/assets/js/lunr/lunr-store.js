@@ -1576,4 +1576,10 @@ var store = [{
         "tags": ["classes","dev","events","es","iac","networks","nfv","podcast","sdn"],
         "url": "/kde-express/",
         "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
+      },{
+        "title": "FOSDEM 2026",
+        "excerpt":"Sessions I will be speaking at FOSDEM 2026 in Brussels from the 31st of January to the 1st of February. FOSDEM is a free event for software developers to meet, share ideas and collaborate. Every year, thousands of developers of free and open source software from all over the world...","categories": [],
+        "tags": ["en","events","openshift","redhat","research"],
+        "url": "/fosdem26/",
+        "teaser": "/assets/images/favicon_io/android-chrome-512x512.png"
       }]

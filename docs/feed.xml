@@ -1,4 +1,31 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-01-20T03:35:54-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">KDE express #65: esLibre’26 - OCaml y Containerlab</title><link href="https://josecastillolema.github.io/kde-express/" rel="alternate" type="text/html" title="KDE express #65: esLibre’26 - OCaml y Containerlab" /><published>2026-01-14T00:00:00-06:00</published><updated>2026-01-14T00:00:00-06:00</updated><id>https://josecastillolema.github.io/kde-express</id><content type="html" xml:base="https://josecastillolema.github.io/kde-express/"><![CDATA[<p><a href="https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/"><img src="/assets/images/posts/2026-01-14-kde-express/1.png" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-02-04T03:00:22-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">FOSDEM 2026</title><link href="https://josecastillolema.github.io/fosdem26/" rel="alternate" type="text/html" title="FOSDEM 2026" /><published>2026-02-01T00:00:00-06:00</published><updated>2026-02-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/fosdem26</id><content type="html" xml:base="https://josecastillolema.github.io/fosdem26/"><![CDATA[<p><a href="https://fosdem.org/2026/"><img src="/assets/images/posts/2026-02-01-fosdem26.jpg" alt="" /></a></p>
+
+<h2 id="sessions">Sessions</h2>
+
+<p>I will be speaking at <a href="https://fosdem.org/2026/">FOSDEM 2026</a> in Brussels from the 31st of January to the 1st of February. FOSDEM is a free event for software developers to meet, share ideas and collaborate. Every year, thousands of developers of free and open source software from all over the world gather at the event in Brussels. You don’t need to register. Just turn up and join in!</p>
+
+<p>Here are my sessions:</p>
+
+<ul>
+  <li>🧠 <a href="https://fosdem.org/2026/schedule/event/C9NF8K-api_remoting_for_llama_cpp_near-native_gpu_speed_in_macos_containers/">API Remoting for llama.cpp: Near-Native GPU Speed in macOS Containers</a> - with Kevin Pouget</li>
+  <li>🔧 <a href="https://fosdem.org/2026/schedule/event/FGMRSG-a_performance_comparison_of_kubernetes_multi-cluster_networking/">A Performance Comparison of Kubernetes Multi-Cluster Networking</a> - with Raúl Sevilla</li>
+</ul>
+
+<h2 id="slides">Slides</h2>
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2026-fosdem/llamacpp-macos.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2026-fosdem/multicluster-networking.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
+
+<h2 id="recordings">Recordings</h2>
+
+<video width="480" height="320" controls="controls">
+  <source src="https://video.fosdem.org/2026/ud2120/C9NF8K-api_remoting_for_llama_cpp_near-native_gpu_speed_in_macos_containers.av1.webm" type="video/webm" />
+</video>
+
+<video width="480" height="320" controls="controls">
+  <source src="https://video.fosdem.org/2026/h1301/FGMRSG-a_performance_comparison_of_kubernetes_multi-cluster_networking.av1.webm" type="video/webm" />
+</video>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">KDE express #65: esLibre’26 - OCaml y Containerlab</title><link href="https://josecastillolema.github.io/kde-express/" rel="alternate" type="text/html" title="KDE express #65: esLibre’26 - OCaml y Containerlab" /><published>2026-01-14T00:00:00-06:00</published><updated>2026-01-14T00:00:00-06:00</updated><id>https://josecastillolema.github.io/kde-express</id><content type="html" xml:base="https://josecastillolema.github.io/kde-express/"><![CDATA[<p><a href="https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/"><img src="/assets/images/posts/2026-01-14-kde-express/1.png" alt="" /></a></p>
 
 <p>Especial <a href="https://eslib.re/2026/">esLibre 2026 Melide</a> destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas:</p>
 
@@ -642,52 +669,4 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
 <iframe width="560" height="315" src="https://www.youtube.com/embed/01-S0iiGd5Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <p><img src="https://img.shields.io/youtube/views/01-S0iiGd5Y?style=social" alt="YouTube Video Views" />
-<img src="https://img.shields.io/youtube/likes/01-S0iiGd5Y?style=social" alt="YouTube Video Likes" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">ICPE 2025</title><link href="https://josecastillolema.github.io/icpe25/" rel="alternate" type="text/html" title="ICPE 2025" /><published>2025-05-07T00:00:00-05:00</published><updated>2025-05-07T00:00:00-05:00</updated><id>https://josecastillolema.github.io/icpe25</id><content type="html" xml:base="https://josecastillolema.github.io/icpe25/"><![CDATA[<p><strong>ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering</strong></p>
-
-<p><a href="https://icpe2025.spec.org"><img src="/assets/images/posts/2025-05-07-icpe25/1.png" alt="" /></a></p>
-
-<h2 id="agenda"><a href="https://icpe2025.spec.org/program/">Agenda</a></h2>
-
-<p><a href="https://dl.acm.org/doi/10.1145/3676151.3719352"><strong>Bridging Clusters: A Comparative Look at Multicluster Networking Performance in Kubernetes</strong></a></p>
-
-<p><a href="https://doi.org/10.1145/3676151.3719352"><img src="https://zenodo.org/badge/DOI/10.1145/3676151.3719352.svg" alt="DOI:10.1109/NETSOFT.2019.8806686" /></a></p>
-
-<ul>
-  <li>Sai Sindhur Malleni, <em>Red Hat</em>, USA</li>
-  <li>Raúl Sevilla, <em>Red Hat</em>, Spain</li>
-  <li>José Castillo Lema, <em>Red Hat</em>, Spain</li>
-  <li>André Bauer, <em>Illinois Institute of Technology</em>, USA</li>
-</ul>
-
-<h2 id="cite-this">Cite this</h2>
-
-<h3 id="acm-ref">ACM Ref</h3>
-<p>Sai Sindhur Malleni, Raúl Sevilla, José Castillo Lema, and André Bauer. 2025. Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes. In Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering (ICPE ‘25). Association for Computing Machinery, New York, NY, USA, 113–123. https://doi.org/10.1145/3676151.3719352</p>
-
-<h3 id="bibtex">BibTeX</h3>
-<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">10.1145/3676151.3719352</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Malleni, Sai Sindhur and Sevilla, Ra\'{u}l and Lema, Jos\'{e} Castillo and Bauer, Andr\'{e}}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Bridging Clusters: A Comparative Look at Multi-Cluster Networking Performance in Kubernetes}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
-  <span class="na">isbn</span> <span class="p">=</span> <span class="s">{9798400710735}</span><span class="p">,</span>
-  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
-  <span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3676151.3719352}</span><span class="p">,</span>
-  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3676151.3719352}</span><span class="p">,</span>
-  <span class="na">abstract</span> <span class="p">=</span> <span class="s">{Microservices and containers have transformed the way applications are developed, tested, deployed, scaled, and managed. Several container orchestration platforms, like Kubernetes, have emerged, streamlining container management at scale and providing enter­prise-grade support for application modernization. Driven by application, compliance, and end-user requirements, companies opt to deploy multiple Kubernetes clusters across public and private clouds. However, deploying applications in multi-cluster environments presents distinct challenges, especially managing the communication between the microservices spread across clusters. Traditionally, custom configurations, like VPNs or firewall rules, were required to connect such complex setups of clusters spanning the public cloud and on-premise infrastructure. This industry paper presents a comprehensive analysis of network performance characteristics for three popular open-source multi-cluster networking solutions (namely, Skupper, Submariner, and Istio), addressing the challenges of microservices connectivity across clusters. We evaluate key factors such as latency, throughput, and resource utilization using established tools and benchmarks, offering valuable insights for organizations aiming to optimize the network performance of their multi-cluster deployments. Our experiments revealed that each solution involves unique trade-offs in performance and resource efficiency: Submariner offers low latency and consistency, Istio excels in throughput with moderate resource consumption, and Skupper stands out for its ease of configuration while maintaining balanced performance.}</span><span class="p">,</span>
-  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering}</span><span class="p">,</span>
-  <span class="na">pages</span> <span class="p">=</span> <span class="s">{113–123}</span><span class="p">,</span>
-  <span class="na">numpages</span> <span class="p">=</span> <span class="s">{11}</span><span class="p">,</span>
-  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{benchmark, distributed microservices, kubernetes, multi-cluster networking, network performance}</span><span class="p">,</span>
-  <span class="na">location</span> <span class="p">=</span> <span class="s">{Toronto ON, Canada}</span><span class="p">,</span>
-  <span class="na">series</span> <span class="p">=</span> <span class="s">{ICPE '25}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="pics">Pics</h2>
-<p><img src="/assets/images/posts/2025-05-07-icpe25/2.jpg" alt="" />
-<img src="/assets/images/posts/2025-05-07-icpe25/3.jpg" alt="" />
-<img src="/assets/images/posts/2025-05-07-icpe25/4.jpg" alt="" /></p>
-
-<h2 id="slides">Slides</h2>
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-icpe/slides.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="papers" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[ICPE ‘25: Proceedings of the 16th ACM/SPEC International Conference on Performance Engineering]]></summary></entry></feed>
+<img src="https://img.shields.io/youtube/likes/01-S0iiGd5Y?style=social" alt="YouTube Video Likes" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
