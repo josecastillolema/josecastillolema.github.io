@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-02-04T03:00:22-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">FOSDEM 2026</title><link href="https://josecastillolema.github.io/fosdem26/" rel="alternate" type="text/html" title="FOSDEM 2026" /><published>2026-02-01T00:00:00-06:00</published><updated>2026-02-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/fosdem26</id><content type="html" xml:base="https://josecastillolema.github.io/fosdem26/"><![CDATA[<p><a href="https://fosdem.org/2026/"><img src="/assets/images/posts/2026-02-01-fosdem26.jpg" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-02-12T06:17:30-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Top GitHub users</title><link href="https://josecastillolema.github.io/top-github-users/" rel="alternate" type="text/html" title="Top GitHub users" /><published>2026-02-12T00:00:00-06:00</published><updated>2026-02-12T00:00:00-06:00</updated><id>https://josecastillolema.github.io/top-github-users</id><content type="html" xml:base="https://josecastillolema.github.io/top-github-users/"><![CDATA[<p><a href="https://gayanvoice.github.io/top-github-users/index.html"><img src="/assets/images/posts/2026-02-12-top-github-users.png" alt="" /></a></p>
+
+<h2 id="per-country">Per country</h2>
+
+<p>List of most active GitHub users based on public contributions private contributions and number of followers by country or state. The list updated 2026/2/12 1:33 AM UTC.</p>
+
+<p>The <a href="https://github.com/gayanvoice/top-github-users">repository</a> contains users 138 countries and 674 cities. To get into the list you need to have minimum number of followers that varies in each country.</p>
+
+<h3 id="spain-es">Spain :es:</h3>
+
+<p>The <a href="https://github.com/gayanvoice/top-github-users/blob/main/markdown/followers/spain.md">public/total contributions and followers by users in Spain</a> on 2026/1/12 12:56 AM UTC.</p>
+
+<p>There are 945 users in Spain. You need at least 129 followers to be on this list.</p>
+
+<h4 id="by-public-contributions">By public contributions</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Compay</th>
+      <th>Location</th>
+      <th>Public contributions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>156</td>
+      <td><a href="https://github.com/josecastillolema/">josecastillolema</a></td>
+      <td>Red Hat</td>
+      <td>Madrid, Spain</td>
+      <td>715</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="by-total-contributions">By total contributions</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Compay</th>
+      <th>Location</th>
+      <th>Total contributions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>307</td>
+      <td><a href="https://github.com/josecastillolema/">josecastillolema</a></td>
+      <td>Red Hat</td>
+      <td>Madrid, Spain</td>
+      <td>907</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="by-followers">By followers</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Compay</th>
+      <th>Location</th>
+      <th>Followers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>535</td>
+      <td><a href="https://github.com/josecastillolema/">josecastillolema</a></td>
+      <td>Red Hat</td>
+      <td>Madrid, Spain</td>
+      <td>209</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">FOSDEM 2026</title><link href="https://josecastillolema.github.io/fosdem26/" rel="alternate" type="text/html" title="FOSDEM 2026" /><published>2026-02-01T00:00:00-06:00</published><updated>2026-02-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/fosdem26</id><content type="html" xml:base="https://josecastillolema.github.io/fosdem26/"><![CDATA[<p><a href="https://fosdem.org/2026/"><img src="/assets/images/posts/2026-02-01-fosdem26.jpg" alt="" /></a></p>
 
 <h2 id="sessions">Sessions</h2>
 
@@ -632,41 +713,4 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   </li>
 </ul>
 
-<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">DevConf.CZ 2025</title><link href="https://josecastillolema.github.io/devconf25/" rel="alternate" type="text/html" title="DevConf.CZ 2025" /><published>2025-05-23T00:00:00-05:00</published><updated>2025-05-23T00:00:00-05:00</updated><id>https://josecastillolema.github.io/devconf25</id><content type="html" xml:base="https://josecastillolema.github.io/devconf25/"><![CDATA[<p><a href="https://www.devconf.info/cz/"><img src="/assets/images/posts/2025-05-23-devconf25/1.jpg" alt="" /></a></p>
-
-<h2 id="sessions">Sessions</h2>
-
-<p>I will be speaking at <a href="https://www.devconf.info/cz/">DevConf.CZ 2025</a> in Brno on June 12-14. DevConf.CZ is an annual, free, Red Hat-sponsored technology conference for users, operators, administrators, and contributors to Free and Open Source technologies. Explore the latest in AI, Security, DevEx, Platform Engineering with industry leaders.</p>
-
-<p>Here are my sessions:</p>
-
-<ul>
-  <li>🔧 <a href="https://pretalx.devconf.info/devconf-cz-2025/talk/NLWP8Z/">Shifting performance engineering left</a> - with Raul Sevilla</li>
-  <li>🧠 <a href="https://pretalx.devconf.info/devconf-cz-2025/talk/N9CLR3/">CODECO: AI-Driven Orchestration for Multi-Cluster Edge Deployment</a> - with Dean Kelly and Alka Nixon</li>
-</ul>
-
-<p>More information can be found in this Red Hat Research <a href="https://research.redhat.com/blog/2025/06/04/find-ai-edge-research-infrastructure-cryptography-and-more-at-research-related-devconf-cz-talks/">blog post</a>.</p>
-
-<h2 id="pics">Pics</h2>
-
-<p><img src="/assets/images/posts/2025-05-23-devconf25/2.jpg" alt="" />
-<img src="/assets/images/posts/2025-05-23-devconf25/3.jpg" alt="" />
-<img src="/assets/images/posts/2025-05-23-devconf25/4.jpg" alt="" /></p>
-
-<h2 id="slides">Slides</h2>
-
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-devconf.cz/shift-left.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
-
-<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/talks/main/2025-devconf.cz/codeco.pdf&amp;embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
-
-<h2 id="recordings">Recordings</h2>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fb-DlHSQZ5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p><img src="https://img.shields.io/youtube/views/fb-DlHSQZ5g?style=social" alt="YouTube Video Views" />
-<img src="https://img.shields.io/youtube/likes/fb-DlHSQZ5g?style=social" alt="YouTube Video Likes" /></p>
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/01-S0iiGd5Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p><img src="https://img.shields.io/youtube/views/01-S0iiGd5Y?style=social" alt="YouTube Video Views" />
-<img src="https://img.shields.io/youtube/likes/01-S0iiGd5Y?style=social" alt="YouTube Video Likes" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
