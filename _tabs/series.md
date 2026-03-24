@@ -2,7 +2,7 @@
 layout: page
 title: Series
 icon: fas fa-list
-order: 4
+order: 3
 toc: true
 ---
 

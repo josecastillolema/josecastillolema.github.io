@@ -2,7 +2,7 @@
 layout: page
 title: Talks
 icon: fas fa-microphone
-order: 6
+order: 4
 toc: true
 ---
 

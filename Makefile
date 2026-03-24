@@ -3,7 +3,7 @@ DOCKER_SETUP = apt-get update -qq && apt-get install -y -qq build-essential git 
 DOCKER_RUN = docker run -e JEKYLL_ENV=production -p 4000:4000 --rm -v=.:/srv/jekyll:Z
 
 serve:
-	sudo /usr/bin/rm -rf docs
+	sudo /usr/bin/rm -rf docs .jekyll-cache .jekyll-metadata
 	touch Gemfile.lock
 	touch .jekyll-metadata
 	mkdir -p docs .jekyll-cache

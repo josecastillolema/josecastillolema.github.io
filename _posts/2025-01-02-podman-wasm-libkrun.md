@@ -7,6 +7,7 @@ tags:
   - redhat
 toc: true
 toc_sticky: true
+mermaid: true
 ---
 
 Thanks to [crun](https://github.com/containers/crun) we can run [WebAssembly (Wasm)](#wasm) and [libkrun](#libkrun) workloads in directly in Podman.
