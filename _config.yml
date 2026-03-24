@@ -1,162 +1,153 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# The Site Configuration
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Import the theme
+theme: jekyll-theme-chirpy
+
+lang: en
+
+# Change to your timezone
+timezone:
+
+# jekyll-seo-tag settings
 title: GitOps
-email: josecastillolema@gmail.com
-description: "Networks, SDN, NFVi, OpenStack, K8s/OpenShift."
-# twitter_username: username
-github_username: josecastillolema
-minimal_mistakes_skin: default
-search: true
+tagline: "Networks, SDN, NFVi, OpenStack, K8s/OpenShift."
 
-# Build settings
+description: >-
+  Networks, SDN, NFVi, OpenStack, K8s/OpenShift.
+
+url: "https://josecastillolema.github.io"
+
+github:
+  username: josecastillolema
+
+social:
+  name: Jose Castillo Lema
+  email: josecastillolema@gmail.com
+  links:
+    - https://github.com/josecastillolema
+    - https://www.linkedin.com/in/jose-castillo-lema
+    - https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema
+    - https://www.researchgate.net/profile/Jose_Castillo-Lema
+    - https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ
+    - https://www.opennetworking.org/ambassadors/jose-castillo-lema/
+
+# Site Verification Settings
+webmaster_verifications:
+  google: googled48a6d8a28aaa375
+
+# Web Analytics Settings
+analytics:
+  google:
+    id: "G-1EBHNQEGXG"
+
+# Prefer color scheme setting.
+theme_mode: # [light | dark]
+
+# the avatar on sidebar
+avatar: /assets/images/me.jpg
+
+social_preview_image: /assets/images/favicon_io/android-chrome-512x512.png
+
+# boolean type, the global switch for TOC in posts.
+toc: true
+
+comments:
+  provider: disqus
+  disqus:
+    shortname: https-josecastillolema-github-io
+
+pwa:
+  enabled: false
+  cache:
+    enabled: false
+
+paginate: 5
+
+baseurl: ""
+
+# Build output
+destination: docs
+
+# ------------ The following options are not recommended to be modified ------------------
+
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
-# Outputting
-permalink: /:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
-include:
-  - _pages
+kramdown:
+  footnote_backlink: "&#8617;&#xfe0e;"
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - LICENSE
-  - Makefile
-  - README.md
-
-# Plugins (previously gems:)
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-  - jekyll-spaceship
-
-author:
-  name    : "Jose Castillo Lema"
-  avatar  : "/assets/images/me.jpg"
-  bio     : "Software Engineer @ **RedHat**"
-  location: "Santiago, Spain"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/josecastillolema"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/jose-castillo-lema"
-    - label: "Acclaim"
-      icon: "fas fa-fw fa-angle-double-up"
-      url: "https://www.youracclaim.com/users/jose-castillo-lema"
-    #- label: "CertDirectory"
-    #  icon: "fab fa-fw fa-contao"
-    #  url: "https://certdirectory.io/profile/6843f5c7-cf26-40ab-81fc-4fe4971d767d"
-    # - label: "Accredible"
-    #   icon: "fas fa-fw fa-credit-card"
-    #   url: "https://www.credential.net/profile/joscastillolema/wallet"
-    - label: "StackOverflow"
-      icon: "fab fa-fw fa-stack-overflow"
-      url: "https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema"
-    - label: "ResearchGate"
-      icon: "fab fa-fw fa-researchgate"
-      url: "https://www.researchgate.net/profile/Jose_Castillo-Lema"
-    - label: "GoogleScholar"
-      icon: "fab fa-fw fa-google"
-      url: "https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ"
-    #- label: "DockerHub"
-    #  icon: "fab fa-fw fa-docker"
-    #  url: "https://hub.docker.com/u/josecastillolema"
-    #- label: "Lattes"
-    #  icon: "fas fa-fw fa-university"
-    #  url: "http://lattes.cnpq.br/7955703023492257"
-    # - label: "Gravatar"
-    #   icon: "fas fa-fw fa-power-off"
-    #   url: "https://en.gravatar.com/josecastillolema"
-    - label: "ONF"
-      icon: "fab fa-fw fa-battle-net"
-      url: "https://www.opennetworking.org/ambassadors/jose-castillo-lema/"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube-square"
-      url: "https://www.youtube.com/channel/UCm5egt_lHxJX-VQdkLPszog/playlists"
-    - label: "RSS"
-      icon: "fas fa-fw fa-rss-square"
-      url: "https://josecastillolema.github.io/feed.xml"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:josecastillolema@gmail.com"
-
-footer:
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/josecastillolema"
-    - label: "LinkedIn"
-      icon: "fab fa-fw fa-linkedin"
-      url: https://www.linkedin.com/in/jose-castillo-lema
-    - label: "Stack Overflow"
-      icon: "fab fa-stack-overflow"
-      url: "https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema"
+collections:
+  tabs:
+    output: true
+    sort_by: order
 
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
-      read_time: true
+      layout: post
       comments: true
-      share: true
-      related: true
-  # _pages
+      toc: true
+      permalink: /posts/:title/
   - scope:
-      path: "_pages"
-      type: pages
+      path: _drafts
     values:
-      layout: single
-      author_profile: true
+      comments: false
+  - scope:
+      path: ""
+      type: tabs
+    values:
+      layout: page
+      permalink: /:title/
 
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
+sass:
+  style: compressed
 
-# Custom
-analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
-  google:
-    tracking_id          : "G-1EBHNQEGXG"
-    anonymize_ip         : # true, false (default)
-baseurl                  : ""
-comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : https-josecastillolema-github-io
-destination              : docs
-google_site_verification : googled48a6d8a28aaa375.html
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: [development]
+
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - docs
+  - tools
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - Makefile
+  - CLAUDE.md
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+jekyll-archives:
+  enabled: [categories, tags]
+  layouts:
+    category: category
+    tag: tag
+  permalinks:
+    tag: /tags/:name/
+    category: /categories/:name/
+
 jekyll-spaceship:
   processors:
     - mermaid-processor
@@ -164,18 +155,3 @@ jekyll-spaceship:
   mermaid-processor:
     syntax:
       code: 'mermaid'
-logo                     : /assets/images/favicon_io/android-chrome-192x192.png
-og_image                 : /assets/images/favicon_io/android-chrome-512x512.png  # Open Graph/Twitter default site image
-repository               : josecastillolema/josecastillolema.github.io
-social:
-  links: # An array of links to social media profiles
-    - https://www.linkedin.com/in/jose-castillo-lema
-    - https://github.com/josecastillolema
-    - https://stackoverflow.com/users/4288758/jos%c3%a9-castillo-lema
-    - https://www.researchgate.net/profile/Jose_Castillo-Lema
-    - https://scholar.google.com.br/citations?user=_xNpHiwAAAAJ
-    - http://lattes.cnpq.br/7955703023492257
-    - https://www.opennetworking.org/ambassadors/jose-castillo-lema/
-teaser                   : /assets/images/favicon_io/android-chrome-512x512.png
-url                      : https://josecastillolema.github.io
-words_per_minute         : 100

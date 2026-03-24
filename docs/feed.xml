@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" /><updated>2026-02-12T06:17:30-06:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><author><name>Jose Castillo Lema</name></author><entry><title type="html">Top GitHub users</title><link href="https://josecastillolema.github.io/top-github-users/" rel="alternate" type="text/html" title="Top GitHub users" /><published>2026-02-12T00:00:00-06:00</published><updated>2026-02-12T00:00:00-06:00</updated><id>https://josecastillolema.github.io/top-github-users</id><content type="html" xml:base="https://josecastillolema.github.io/top-github-users/"><![CDATA[<p><a href="https://gayanvoice.github.io/top-github-users/index.html"><img src="/assets/images/posts/2026-02-12-top-github-users.png" alt="" /></a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://josecastillolema.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://josecastillolema.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-03-24T13:19:24+00:00</updated><id>https://josecastillolema.github.io/feed.xml</id><title type="html">GitOps</title><subtitle>Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</subtitle><entry><title type="html">Top GitHub users</title><link href="https://josecastillolema.github.io/posts/top-github-users/" rel="alternate" type="text/html" title="Top GitHub users" /><published>2026-02-12T00:00:00+00:00</published><updated>2026-02-12T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/top-github-users</id><content type="html" xml:base="https://josecastillolema.github.io/posts/top-github-users/"><![CDATA[<p><a href="https://gayanvoice.github.io/top-github-users/index.html"><img src="/assets/images/posts/2026-02-12-top-github-users.png" alt="" /></a></p>
 
 <h2 id="per-country">Per country</h2>
 
@@ -79,7 +79,7 @@
       <td>209</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">FOSDEM 2026</title><link href="https://josecastillolema.github.io/fosdem26/" rel="alternate" type="text/html" title="FOSDEM 2026" /><published>2026-02-01T00:00:00-06:00</published><updated>2026-02-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/fosdem26</id><content type="html" xml:base="https://josecastillolema.github.io/fosdem26/"><![CDATA[<p><a href="https://fosdem.org/2026/"><img src="/assets/images/posts/2026-02-01-fosdem26.jpg" alt="" /></a></p>
+</table>]]></content><author><name></name></author><category term="dev" /><category term="en" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">FOSDEM 2026</title><link href="https://josecastillolema.github.io/posts/fosdem26/" rel="alternate" type="text/html" title="FOSDEM 2026" /><published>2026-02-01T00:00:00+00:00</published><updated>2026-02-01T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/fosdem26</id><content type="html" xml:base="https://josecastillolema.github.io/posts/fosdem26/"><![CDATA[<p><a href="https://fosdem.org/2026/"><img src="/assets/images/posts/2026-02-01-fosdem26.jpg" alt="" /></a></p>
 
 <h2 id="sessions">Sessions</h2>
 
@@ -106,7 +106,7 @@
 
 <video width="480" height="320" controls="controls">
   <source src="https://video.fosdem.org/2026/h1301/FGMRSG-a_performance_comparison_of_kubernetes_multi-cluster_networking.av1.webm" type="video/webm" />
-</video>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">KDE express #65: esLibre’26 - OCaml y Containerlab</title><link href="https://josecastillolema.github.io/kde-express/" rel="alternate" type="text/html" title="KDE express #65: esLibre’26 - OCaml y Containerlab" /><published>2026-01-14T00:00:00-06:00</published><updated>2026-01-14T00:00:00-06:00</updated><id>https://josecastillolema.github.io/kde-express</id><content type="html" xml:base="https://josecastillolema.github.io/kde-express/"><![CDATA[<p><a href="https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/"><img src="/assets/images/posts/2026-01-14-kde-express/1.png" alt="" /></a></p>
+</video>]]></content><author><name></name></author><category term="en" /><category term="events" /><category term="openshift" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">KDE express #65: esLibre’26 - OCaml y Containerlab</title><link href="https://josecastillolema.github.io/posts/kde-express/" rel="alternate" type="text/html" title="KDE express #65: esLibre’26 - OCaml y Containerlab" /><published>2026-01-14T00:00:00+00:00</published><updated>2026-01-14T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/kde-express</id><content type="html" xml:base="https://josecastillolema.github.io/posts/kde-express/"><![CDATA[<p><a href="https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/"><img src="/assets/images/posts/2026-01-14-kde-express/1.png" alt="" /></a></p>
 
 <p>Especial <a href="https://eslib.re/2026/">esLibre 2026 Melide</a> destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas:</p>
 
@@ -129,7 +129,7 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   </li>
 </ul>
 
-<p><a href="https://open.spotify.com/episode/1U8dvZbh9XYueqqS5OvSsm"><img src="/assets/images/posts/2026-01-14-kde-express/2.png" alt="" /></a></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="classes" /><category term="dev" /><category term="events" /><category term="es" /><category term="iac" /><category term="networks" /><category term="nfv" /><category term="podcast" /><category term="sdn" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/newyear26/" rel="alternate" type="text/html" title="Happy new year!" /><published>2026-01-01T00:00:00-06:00</published><updated>2026-01-01T00:00:00-06:00</updated><id>https://josecastillolema.github.io/newyear26</id><content type="html" xml:base="https://josecastillolema.github.io/newyear26/"><![CDATA[<p><img src="/assets/images/posts/2026-01-01-newyear26.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Local Soft-RoCE development workflow with kind</title><link href="https://josecastillolema.github.io/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflow with kind" /><published>2025-12-28T00:00:00-06:00</published><updated>2025-12-28T00:00:00-06:00</updated><id>https://josecastillolema.github.io/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/roce-local-dev/"><![CDATA[<p><strong>RDMA over Converged Ethernet</strong> (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
+<p><a href="https://open.spotify.com/episode/1U8dvZbh9XYueqqS5OvSsm"><img src="/assets/images/posts/2026-01-14-kde-express/2.png" alt="" /></a></p>]]></content><author><name></name></author><category term="classes" /><category term="dev" /><category term="events" /><category term="es" /><category term="iac" /><category term="networks" /><category term="nfv" /><category term="podcast" /><category term="sdn" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Happy new year!</title><link href="https://josecastillolema.github.io/posts/newyear26/" rel="alternate" type="text/html" title="Happy new year!" /><published>2026-01-01T00:00:00+00:00</published><updated>2026-01-01T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/newyear26</id><content type="html" xml:base="https://josecastillolema.github.io/posts/newyear26/"><![CDATA[<p><img src="/assets/images/posts/2026-01-01-newyear26.jpg" alt="" /></p>]]></content><author><name></name></author><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Local Soft-RoCE development workflow with kind</title><link href="https://josecastillolema.github.io/posts/roce-local-dev/" rel="alternate" type="text/html" title="Local Soft-RoCE development workflow with kind" /><published>2025-12-28T00:00:00+00:00</published><updated>2025-12-28T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/roce-local-dev</id><content type="html" xml:base="https://josecastillolema.github.io/posts/roce-local-dev/"><![CDATA[<p><strong>RDMA over Converged Ethernet</strong> (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.</p>
 
 <p>Network-intensive applications like networked storage, cluster computing and Artificial Intelligence workloads need a network infrastructure with a high bandwidth and low latency. The advantages of RDMA over other network application programming interfaces are lower latency, lower CPU load and higher bandwidth.</p>
 
@@ -143,31 +143,40 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   <li>
     <p>Load the software RoCE module:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>modprobe rdma_rxe
-</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> <span class="nb">sudo </span>modprobe rdma_rxe
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Create RXE on the active interface:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>rdma <span class="nb">link </span>add rxe0 <span class="nb">type </span>rxe netdev eth0
-</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> <span class="nb">sudo </span>rdma <span class="nb">link </span>add rxe0 <span class="nb">type </span>rxe netdev eth0
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Verify configuration:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> rdma <span class="nb">link </span>show
  <span class="nb">link </span>rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Check GID setup (this is the tricky part):</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">cat</span> /sys/class/infiniband/rxe0/ports/1/gids/0
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre> <span class="nb">cat</span> /sys/class/infiniband/rxe0/ports/1/gids/0
  fe80:0000:0000:0000:c805:5eff:fe37:e715
 
  <span class="nb">cat</span> /sys/class/infiniband/rxe0/ports/1/gids/1
  0000:0000:0000:0000:0000:ffff:c0a8:0117
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
 
     <p>GID 0 is an IPv6 link-local address while GID 1 is an IPv4-mapped IPv6 address:</p>
     <ul>
@@ -178,7 +187,18 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   <li>
     <p>Create client/server containers with RDMA access:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker run <span class="nt">-d</span> <span class="nt">--name</span> server-container <span class="nt">--privileged</span> <span class="se">\</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre> docker run <span class="nt">-d</span> <span class="nt">--name</span> server-container <span class="nt">--privileged</span> <span class="se">\</span>
    <span class="nt">--device</span><span class="o">=</span>/dev/infiniband/uverbs0 <span class="se">\</span>
    <span class="nt">--volume</span><span class="o">=</span>/sys/class/infiniband:/sys/class/infiniband:ro <span class="se">\</span>
    quay.io/cloud-bulldozer/k8s-netperf:latest <span class="se">\</span>
@@ -189,19 +209,48 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
    <span class="nt">--volume</span><span class="o">=</span>/sys/class/infiniband:/sys/class/infiniband:ro <span class="se">\</span>
    quay.io/cloud-bulldozer/k8s-netperf:latest <span class="se">\</span>
    <span class="nb">sleep </span>3600
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Get server container IP address:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker inspect server-container | <span class="nb">grep </span>IPAddress | <span class="nb">tail</span> <span class="nt">-1</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>docker inspect server-container | <span class="nb">grep </span>IPAddress | <span class="nb">tail</span> <span class="nt">-1</span>
                 <span class="s2">"IPAddress"</span>: <span class="s2">"172.17.0.2"</span>,
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Run the test:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker <span class="nb">exec </span>server-container ib_write_bw <span class="nt">-d</span> rxe0 <span class="nt">-x</span> 1 <span class="nt">-F</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre> docker <span class="nb">exec </span>server-container ib_write_bw <span class="nt">-d</span> rxe0 <span class="nt">-x</span> 1 <span class="nt">-F</span>
  docker <span class="nb">exec </span>client-container ib_write_bw <span class="nt">-d</span> rxe0 <span class="nt">-x</span> 1 <span class="nt">-F</span> 172.17.0.2
  <span class="nt">---------------------------------------------------------------------------------------</span>
                      RDMA_Write BW Test
@@ -228,16 +277,18 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
  <span class="c">#bytes     #iterations    BW peak[MiB/sec]    BW average[MiB/sec]   MsgRate[Mpps]</span>
  65536      5000             1032.41            1024.75              0.016396
  <span class="nt">---------------------------------------------------------------------------------------</span>
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
 
     <p>We obtained an average bandwidth of ~1024 MiB/sec.</p>
   </li>
   <li>
     <p>Cleanup. Remove the containers and the RXE device:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> docker <span class="nb">rm</span> <span class="nt">-f</span> server-container client-container
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> docker <span class="nb">rm</span> <span class="nt">-f</span> server-container client-container
  <span class="nb">sudo </span>rdma <span class="nb">link </span>delete rxe0
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
 </ol>
 
@@ -249,26 +300,63 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   <li>
     <p>Load the software RoCE module:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>modprobe rdma_rxe
-</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> <span class="nb">sudo </span>modprobe rdma_rxe
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Create RXE on the active interface:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">sudo </span>rdma <span class="nb">link </span>add rxe0 <span class="nb">type </span>rxe netdev eth0
-</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> <span class="nb">sudo </span>rdma <span class="nb">link </span>add rxe0 <span class="nb">type </span>rxe netdev eth0
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Verify configuration:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> rdma <span class="nb">link </span>show
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> rdma <span class="nb">link </span>show
  <span class="nb">link </span>rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Let’s create an RDMA enabled kind cluster config <code class="language-plaintext highlighter-rouge">kind-config-rdma.yaml</code>:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="na">kind</span><span class="pi">:</span> <span class="s">Cluster</span>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="rouge-code"><pre> <span class="na">kind</span><span class="pi">:</span> <span class="s">Cluster</span>
  <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kind.x-k8s.io/v1alpha4</span>
  <span class="na">nodes</span><span class="pi">:</span>
    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">control-plane</span>
@@ -277,36 +365,45 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">worker</span>
      <span class="na">extraMounts</span><span class="pi">:</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">worker</span>
      <span class="na">extraMounts</span><span class="pi">:</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
-</code></pre></div>    </div>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Create the kind cluster (works perfectly fine with podman as well, just export <code class="language-plaintext highlighter-rouge">KIND_EXPERIMENTAL_PROVIDER=podman</code>):</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kind create cluster <span class="nt">--config</span> kind-config-rdma.yaml
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre> kind create cluster <span class="nt">--config</span> kind-config-rdma.yaml
  Creating cluster <span class="s2">"kind"</span> ...
   ✓ Ensuring node image <span class="o">(</span>kindest/node:v1.32.2<span class="o">)</span> 🖼
   ✓ Preparing nodes 📦 📦 📦
@@ -315,19 +412,29 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   ✓ Installing CNI 🔌
   ✓ Installing StorageClass 💾
   ✓ Joining worker nodes 🚜
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Label the nodes:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kubectl label node kind-worker  node-role.kubernetes.io/worker<span class="o">=</span><span class="s2">""</span>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> kubectl label node kind-worker  node-role.kubernetes.io/worker<span class="o">=</span><span class="s2">""</span>
  kubectl label node kind-worker2 node-role.kubernetes.io/worker<span class="o">=</span><span class="s2">""</span>
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Create a k8s-netperf config file for RoCEv2 traffic <code class="language-plaintext highlighter-rouge">config.yaml</code>:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="s">---</span>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre> <span class="s">---</span>
  <span class="s">tests</span><span class="err">:</span>
    <span class="pi">-</span> <span class="na">UDPStream</span><span class="pi">:</span>
      <span class="na">parallelism</span><span class="pi">:</span> <span class="m">1</span>
@@ -335,12 +442,41 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
      <span class="na">duration</span><span class="pi">:</span> <span class="m">5</span>
      <span class="na">samples</span><span class="pi">:</span> <span class="m">1</span>
      <span class="na">messagesize</span><span class="pi">:</span> <span class="m">1024</span>
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Run the test:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1
  INFO[2025-12-28 11:29:38] Starting k8s-netperf <span class="o">(</span>roce2@e2988034e0f9dd4e2a59f131f6ae7866b12fd6de<span class="o">)</span>
  INFO[2025-12-28 11:29:38] 📒 Reading config.yaml file.
  INFO[2025-12-28 11:29:38] 📒 Reading config.yaml file - using ConfigV2 Method.
@@ -369,16 +505,18 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
  +------------------+-------------+------------+-------------+--------------+---------+-----------------+----------+-------------+--------------+-------+-----------+----------+---------+-----------+
  INFO[2025-12-28 11:30:22] Cleaning resources created by k8s-netperf
  INFO[2025-12-28 11:30:22] ⏰ Waiting <span class="k">for </span>netperf Namespace to be deleted...
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
 
     <p>The average bandwidth was ~935 MiB/sec.</p>
   </li>
   <li>
     <p>Cleanup. Remove the kind cluster and the RXE device:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> kind delete cluster
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre> kind delete cluster
  <span class="nb">sudo </span>rdma <span class="nb">link </span>delete rxe0
-</code></pre></div>    </div>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
 </ol>
 
@@ -388,7 +526,20 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   <li>
     <p>You can also create a one node all-in-one kind cluster:</p>
 
-    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="na">kind</span><span class="pi">:</span> <span class="s">Cluster</span>
+    <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre> <span class="na">kind</span><span class="pi">:</span> <span class="s">Cluster</span>
  <span class="na">apiVersion</span><span class="pi">:</span> <span class="s">kind.x-k8s.io/v1alpha4</span>
  <span class="na">nodes</span><span class="pi">:</span>
    <span class="pi">-</span> <span class="na">role</span><span class="pi">:</span> <span class="s">control-plane</span>
@@ -397,23 +548,25 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/dev/infiniband</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/infiniband</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
        <span class="pi">-</span> <span class="na">hostPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
          <span class="na">containerPath</span><span class="pi">:</span> <span class="s">/sys/class/net</span>
-         <span class="na">readOnly</span><span class="pi">:</span> <span class="no">true</span>
-</code></pre></div>    </div>
+         <span class="na">readOnly</span><span class="pi">:</span> <span class="kc">true</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Label the one node:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1 <span class="nt">--local</span>
-</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1 <span class="nt">--local</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
   <li>
     <p>Don’t forget the <code class="language-plaintext highlighter-rouge">--local</code> flag when invoking k8s-netperf:</p>
 
-    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1 <span class="nt">--local</span>
-</code></pre></div>    </div>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> k8s-netperf <span class="nt">--config</span> config.yaml <span class="nt">--hostNet</span> <span class="nt">--privileged</span> <span class="nt">--ib-write-bw</span> rxe0:1 <span class="nt">--local</span>
+</pre></td></tr></tbody></table></code></pre></div>    </div>
   </li>
 </ol>
 
@@ -423,7 +576,41 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
 
 <p>For the first attempt we tried using the <strong>Ubuntu Azure github runner OS</strong>. Ubuntu Azure kernel lacks soft-RoCE (<code class="language-plaintext highlighter-rouge">rdma_rxe</code>) but has the <strong>soft-iWARP</strong> (<code class="language-plaintext highlighter-rouge">siw</code>) driver instead:</p>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">RoCE</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre></td><td class="rouge-code"><pre><span class="na">name</span><span class="pi">:</span> <span class="s">RoCE</span>
 
 <span class="na">on</span><span class="pi">:</span>
   <span class="na">push</span><span class="pi">:</span>
@@ -457,11 +644,12 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
           <span class="s">cd k8s-netperf</span>
           <span class="s">go build -o k8s-netperf cmd/k8s-netperf/k8s-netperf.go</span>
           <span class="s">./k8s-netperf --config config.yaml --hostNet --privileged --ib-write-bw siw0:0 --local</span>
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>Unfortunately this elegant and quick worflow does not work. It fails at QP RTS transition. The following kernel ring buffer entry points to something related to running on a Docker veth interface:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>eth0: renamed from vethf90b642
-</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>eth0: renamed from vethf90b642
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>We have tried running <code class="language-plaintext highlighter-rouge">ib_write_bw</code> with the <code class="language-plaintext highlighter-rouge">-R</code> flag to use RDMA CM (Connection Manager) instead of manual / IB-style QP setup but even that did not work.</p>
 
@@ -483,7 +671,142 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   </li>
 </ul>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">name</span><span class="pi">:</span> <span class="s">RoCE</span>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+</pre></td><td class="rouge-code"><pre><span class="na">name</span><span class="pi">:</span> <span class="s">RoCE</span>
 
 <span class="na">on</span><span class="pi">:</span>
   <span class="na">pull_request</span><span class="pi">:</span>
@@ -618,7 +941,7 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
           <span class="s">sleep 2</span>
 
           <span class="s">VM_OUTPUT=$(cat /tmp/vm-output.log)</span>
-</code></pre></div></div>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="networks" /><category term="redhat" /><summary type="html"><![CDATA[RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.]]></summary></entry><entry><title type="html">Open vSwitch and OVN 2025 Fall Conference</title><link href="https://josecastillolema.github.io/ovscon25/" rel="alternate" type="text/html" title="Open vSwitch and OVN 2025 Fall Conference" /><published>2025-11-19T00:00:00-06:00</published><updated>2025-11-19T00:00:00-06:00</updated><id>https://josecastillolema.github.io/ovscon25</id><content type="html" xml:base="https://josecastillolema.github.io/ovscon25/"><![CDATA[<p><a href="https://www.openvswitch.org/support/ovscon2025/"><img src="/assets/images/posts/2025-11-19-ovscon25.png" alt="" /></a></p>
+</pre></td></tr></tbody></table></code></pre></div></div>]]></content><author><name></name></author><category term="dev" /><category term="en" /><category term="networks" /><category term="redhat" /><summary type="html"><![CDATA[RDMA over Converged Ethernet (RoCE) is a network protocol which allows remote direct memory access (RDMA) over an Ethernet network. There are multiple RoCE versions, in particular the RoCE v2 protocol exists on top of either the UDP/IPv4 or the UDP/IPv6 protocol and destination port number 4791 has been reserved for RoCE v2.]]></summary></entry><entry><title type="html">Open vSwitch and OVN 2025 Fall Conference</title><link href="https://josecastillolema.github.io/posts/ovscon25/" rel="alternate" type="text/html" title="Open vSwitch and OVN 2025 Fall Conference" /><published>2025-11-19T00:00:00+00:00</published><updated>2025-11-19T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/ovscon25</id><content type="html" xml:base="https://josecastillolema.github.io/posts/ovscon25/"><![CDATA[<p><a href="https://www.openvswitch.org/support/ovscon2025/"><img src="/assets/images/posts/2025-11-19-ovscon25.png" alt="" /></a></p>
 
 <h2 id="sessions">Sessions</h2>
 
@@ -639,7 +962,7 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LT6FQG9fR3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
 <p><img src="https://img.shields.io/youtube/views/LT6FQG9fR3k?style=social" alt="YouTube Video Views" />
-<img src="https://img.shields.io/youtube/likes/LT6FQG9fR3k?style=social" alt="YouTube Video Likes" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Open Source Community Day 2025</title><link href="https://josecastillolema.github.io/oscd25/" rel="alternate" type="text/html" title="Open Source Community Day 2025" /><published>2025-09-23T00:00:00-05:00</published><updated>2025-09-23T00:00:00-05:00</updated><id>https://josecastillolema.github.io/oscd25</id><content type="html" xml:base="https://josecastillolema.github.io/oscd25/"><![CDATA[<p>The <a href="https://www.eclipse.org/events/2025/oscd/">Open Source Community Day</a>, organised by the <a href="https://www.eclipse.org">Eclipse Foundation</a> in collaboration with <a href="https://eucloudedgeiot.eu/">EUCloudEdgeIoT.eu</a>, is a vibrant gathering of individuals united by a shared passion for open source software and technology. This event provides a unique opportunity for EU-funded projects to engage directly with the open source community—offering a space to connect, collaborate, and exchange ideas.</p>
+<img src="https://img.shields.io/youtube/likes/LT6FQG9fR3k?style=social" alt="YouTube Video Likes" /></p>]]></content><author><name></name></author><category term="en" /><category term="events" /><category term="networks" /><category term="openshift" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Open Source Community Day 2025</title><link href="https://josecastillolema.github.io/posts/oscd25/" rel="alternate" type="text/html" title="Open Source Community Day 2025" /><published>2025-09-23T00:00:00+00:00</published><updated>2025-09-23T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/oscd25</id><content type="html" xml:base="https://josecastillolema.github.io/posts/oscd25/"><![CDATA[<p>The <a href="https://www.eclipse.org/events/2025/oscd/">Open Source Community Day</a>, organised by the <a href="https://www.eclipse.org">Eclipse Foundation</a> in collaboration with <a href="https://eucloudedgeiot.eu/">EUCloudEdgeIoT.eu</a>, is a vibrant gathering of individuals united by a shared passion for open source software and technology. This event provides a unique opportunity for EU-funded projects to engage directly with the open source community—offering a space to connect, collaborate, and exchange ideas.</p>
 
 <p>Whether you’re aiming to expand your skills, network with professionals, contribute to open-source initiatives, or simply meet like-minded peers, this day delivers a rich array of opportunities tailored to diverse goals and interests. It’s a platform for personal and professional growth, community building, and strengthening Europe’s open innovation ecosystem.</p>
 
@@ -658,10 +981,10 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
 
 <p><a href="https://www.eventbrite.co.uk/e/open-source-community-day-registration-1383527019559?aff=oddtdtcreator">Register</a></p>
 
-<p><img src="/assets/images/posts/2025-09-23-oscd25.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[The Open Source Community Day, organised by the Eclipse Foundation in collaboration with EUCloudEdgeIoT.eu, is a vibrant gathering of individuals united by a shared passion for open source software and technology. This event provides a unique opportunity for EU-funded projects to engage directly with the open source community—offering a space to connect, collaborate, and exchange ideas.]]></summary></entry><entry><title type="html">RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes</title><link href="https://josecastillolema.github.io/rhrq-multicluster-k8s/" rel="alternate" type="text/html" title="RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes" /><published>2025-08-15T00:00:00-05:00</published><updated>2025-08-15T00:00:00-05:00</updated><id>https://josecastillolema.github.io/rhrq-multicluster-k8s</id><content type="html" xml:base="https://josecastillolema.github.io/rhrq-multicluster-k8s/"><![CDATA[<p><a href="https://research.redhat.com/quarterly/"><img src="/assets/images/posts/2024-06-05-rhrq-physics.png" alt="" /></a></p>
+<p><img src="/assets/images/posts/2025-09-23-oscd25.jpg" alt="" /></p>]]></content><author><name></name></author><category term="en" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[The Open Source Community Day, organised by the Eclipse Foundation in collaboration with EUCloudEdgeIoT.eu, is a vibrant gathering of individuals united by a shared passion for open source software and technology. This event provides a unique opportunity for EU-funded projects to engage directly with the open source community—offering a space to connect, collaborate, and exchange ideas.]]></summary></entry><entry><title type="html">RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes</title><link href="https://josecastillolema.github.io/posts/rhrq-multicluster-k8s/" rel="alternate" type="text/html" title="RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes" /><published>2025-08-15T00:00:00+00:00</published><updated>2025-08-15T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/rhrq-multicluster-k8s</id><content type="html" xml:base="https://josecastillolema.github.io/posts/rhrq-multicluster-k8s/"><![CDATA[<p><a href="https://research.redhat.com/quarterly/"><img src="/assets/images/posts/2024-06-05-rhrq-physics.png" alt="" /></a></p>
 
-<p>The article: <a href="https://research.redhat.com/blog/article/bridging-clusters-a-comparative-look-at-multicluster-networking-performance-in-kubernetes/">Bridging clusters: a comparative look at multicluster networking performance in Kubernetes</a> has been published in the <a href="https://research.redhat.com/blog/issue/summer-2025/">Red Hat Research Quarterly Summer 2025 edition</a>.</p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CNCF contributor card</title><link href="https://josecastillolema.github.io/cncf-contributor-card/" rel="alternate" type="text/html" title="CNCF contributor card" /><published>2025-08-14T00:00:00-05:00</published><updated>2025-08-14T00:00:00-05:00</updated><id>https://josecastillolema.github.io/cncf-contributor-card</id><content type="html" xml:base="https://josecastillolema.github.io/cncf-contributor-card/"><![CDATA[<iframe src="https://contribcard.cncf.io/josecastillolema" width="100%" height="680" style="border:1px solid #ccc;">
-</iframe>]]></content><author><name>Jose Castillo Lema</name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CODECO 11th Plenary Meeting &amp;amp; IETF 123 hackaton</title><link href="https://josecastillolema.github.io/codeco-plenary11/" rel="alternate" type="text/html" title="CODECO 11th Plenary Meeting &amp;amp; IETF 123 hackaton" /><published>2025-07-16T00:00:00-05:00</published><updated>2025-07-16T00:00:00-05:00</updated><id>https://josecastillolema.github.io/codeco-plenary11</id><content type="html" xml:base="https://josecastillolema.github.io/codeco-plenary11/"><![CDATA[<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/1.jpg" alt="" /></p>
+<p>The article: <a href="https://research.redhat.com/blog/article/bridging-clusters-a-comparative-look-at-multicluster-networking-performance-in-kubernetes/">Bridging clusters: a comparative look at multicluster networking performance in Kubernetes</a> has been published in the <a href="https://research.redhat.com/blog/issue/summer-2025/">Red Hat Research Quarterly Summer 2025 edition</a>.</p>]]></content><author><name></name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CNCF contributor card</title><link href="https://josecastillolema.github.io/posts/cncf-contributor-card/" rel="alternate" type="text/html" title="CNCF contributor card" /><published>2025-08-14T00:00:00+00:00</published><updated>2025-08-14T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/cncf-contributor-card</id><content type="html" xml:base="https://josecastillolema.github.io/posts/cncf-contributor-card/"><![CDATA[<iframe src="https://contribcard.cncf.io/josecastillolema" width="100%" height="680" style="border:1px solid #ccc;">
+</iframe>]]></content><author><name></name></author><category term="dev" /><category term="en" /><category term="redhat" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">CODECO 11th Plenary Meeting &amp;amp; IETF 123 hackaton</title><link href="https://josecastillolema.github.io/posts/codeco-plenary11/" rel="alternate" type="text/html" title="CODECO 11th Plenary Meeting &amp;amp; IETF 123 hackaton" /><published>2025-07-16T00:00:00+00:00</published><updated>2025-07-16T00:00:00+00:00</updated><id>https://josecastillolema.github.io/posts/codeco-plenary11</id><content type="html" xml:base="https://josecastillolema.github.io/posts/codeco-plenary11/"><![CDATA[<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/1.jpg" alt="" /></p>
 
 <h2 id="codeco-11th-plenary-meeting">CODECO 11th Plenary Meeting</h2>
 
@@ -680,9 +1003,11 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
 
 <p>The Internet Engineering Task Force (IETF) is holding a <a href="https://wiki.ietf.org/en/meeting/123/hackathon">hackathon</a> to encourage developers and subject matter experts to discuss, collaborate, and develop utilities, ideas, sample code, and solutions that show practical implementations of IETF standards.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>🗓 When: 19 - 20 July 2025 (Saturday - Sunday)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>🗓 When: 19 - 20 July 2025 (Saturday - Sunday)
 🇪🇸 Where: Meliá Castilla
-</code></pre></div></div>
+</pre></td></tr></tbody></table></code></pre></div></div>
 
 <p>This is your chance to shine, showcase your skills, and <strong>compete for a €2800 reward</strong> by securing a spot in the top 3 of each challenge. 🏆💰</p>
 
@@ -713,4 +1038,4 @@ OCaml es un lenguaje de programación funcional de propósito general y tipado e
   </li>
 </ul>
 
-<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg" alt="" /></p>]]></content><author><name>Jose Castillo Lema</name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p><img src="/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg" alt="" /></p>]]></content><author><name></name></author><category term="en" /><category term="networks" /><category term="redhat" /><category term="research" /><summary type="html"><![CDATA[]]></summary></entry></feed>
