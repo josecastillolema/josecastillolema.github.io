@@ -96,7 +96,7 @@ defaults:
       layout: post
       comments: true
       toc: true
-      permalink: /posts/:title/
+      permalink: /:title/
   - scope:
       path: _drafts
     values:
@@ -135,9 +135,9 @@ exclude:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
+  - jemoji
 
 jekyll-archives:
   enabled: [categories, tags]
@@ -147,11 +147,6 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
-
-jekyll-spaceship:
-  processors:
-    - mermaid-processor
-    - emoji-processor
   mermaid-processor:
     syntax:
       code: 'mermaid'

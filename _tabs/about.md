@@ -1,7 +1,7 @@
 ---
 layout: page
 icon: fas fa-info-circle
-order: 7
+order: 5
 ---
 
 {% remote_include https://raw.githubusercontent.com/josecastillolema/josecastillolema/master/README.md %}
