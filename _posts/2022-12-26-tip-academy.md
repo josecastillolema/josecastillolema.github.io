@@ -10,9 +10,9 @@ tags:
   - sdn
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2022-12-26-tip-academy/1.svg
+image_link: https://www.tip.academy/
 ---
-
-[![](/assets/images/posts/2022-12-26-tip-academy/1.svg)](https://www.tip.academy/)
 
 [TIP Academy](https://www.tip.academy/) is an online Academy managed by the [Telecom Infra Project (TIP)](https://telecominfraproject.com/) supporting the development of organizations in the telecommunications and IT industry. It provides an open, community-based learning and knowledge-sharing space for organizations and telco professionals, building an ecosystem around open, disaggregated solutions.
 

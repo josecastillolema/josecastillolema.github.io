@@ -9,9 +9,9 @@ tags:
   - pt
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-05-31-fiap-meetup/0.png
+image_link: https://www.meetup.com/pt-BR/fiapmeetups/events/278576296
 ---
-
-[![](/assets/images/posts/2021-05-31-fiap-meetup/0.png)](https://www.meetup.com/pt-BR/fiapmeetups/events/278576296)
 
 ## Descrição do evento
 

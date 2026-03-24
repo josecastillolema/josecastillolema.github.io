@@ -9,9 +9,9 @@ tags:
   - sdn
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2022-01-26-magma-cert/0.png
+image_link: https://magma.edunext.io/
 ---
-
-[![](/assets/images/posts/2022-01-26-magma-cert/0.png)](https://magma.edunext.io/)
 
 The purpose of the Magma certification test is to evaluate the technical abilities of engineers to deploy and operate [Magma](https://www.magmacore.org/). The test will consist of 25 questions that will test your knowledge of the three main Magma components: the access gateway, the Orc8r, and the network management system. During this test, you will be free to use all resources available to you. A score of 80% or higher is required to pass the test.
 

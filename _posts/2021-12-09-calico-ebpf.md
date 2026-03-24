@@ -11,9 +11,9 @@ tags:
   - sdn
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-01-05-calico/1.png
+image_link: https://www.projectcalico.org/
 ---
-
-[![](/assets/images/posts/2021-01-05-calico/1.png)](https://www.projectcalico.org/)
 
 I would like to strongly recomend the [Certified Calico Operator: eBPF](https://academy.tigera.io/course/certified-calico-operator-ebpf/) course for everyone interested in eBPF networking.
 

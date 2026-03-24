@@ -6,8 +6,7 @@ tags:
   - redhat
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2024-07-01-redhat-5years.png
 ---
 
 I am very proud to work for Red Hat. Looking forward to the next five.
-
-![](/assets/images/posts/2024-07-01-redhat-5years.png)

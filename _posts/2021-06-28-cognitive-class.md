@@ -9,9 +9,9 @@ tags:
   - openshift
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-06-28-cognitive-class.png
+image_link: https://cognitiveclass.ai/
 ---
-
-[![](/assets/images/posts/2021-06-28-cognitive-class.png)](https://cognitiveclass.ai/)
 
 [Cognitive Class @ai](https://cognitiveclass.ai/) is a platform for learning leading-edge technologies: blockchain, data science, AI, Cloud, Serverless, Docker, Kubernetes and more ...
 

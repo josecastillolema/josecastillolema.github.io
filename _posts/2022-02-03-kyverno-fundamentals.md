@@ -8,9 +8,9 @@ tags:
   - openshift
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2022-02-03-kyverno-fundamentals/0.png
+image_link: https://nirmata.com
 ---
-
-[![](/assets/images/posts/2022-02-03-kyverno-fundamentals/0.png)](https://nirmata.com)
 
 I would like to strongly recomend the [Kyverno Fundamentals Certification](https://learn.nirmata.com/courses/kyverno-fundamentals-certification) course for everyone interested in Kubernetes security.
 

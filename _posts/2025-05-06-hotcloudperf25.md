@@ -10,11 +10,11 @@ tags:
   - research
 toc: yes
 toc_sticky: true
+image: /assets/images/posts/2025-05-06-hotcloudperf25/1.png
+image_link: https://hotcloudperf.spec.org/
 ---
 
 **8th Workshop on Hot Topics in Cloud Computing Performance (HotCloudPerf 2025)**
-
-[![](/assets/images/posts/2025-05-06-hotcloudperf25/1.png)](https://hotcloudperf.spec.org/)
 
 ## [Agenda](https://hotcloudperf.spec.org/)
 

@@ -8,9 +8,9 @@ tags:
   - research
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2022-08-10-rh-research/1.jpg
+image_link: https://research.redhat.com/
 ---
-
-[![](/assets/images/posts/2022-08-10-rh-research/1.jpg)](https://research.redhat.com/)
 
 ## About
 

@@ -7,8 +7,7 @@ tags:
   - redhat
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2020-09-30-mycodeisopen/1.jpg
 ---
 
 ![](/assets/images/posts/2020-09-30-mycodeisopen/0.jpg)
-
-![](/assets/images/posts/2020-09-30-mycodeisopen/1.jpg)

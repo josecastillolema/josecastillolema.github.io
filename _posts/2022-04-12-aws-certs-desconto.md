@@ -7,9 +7,9 @@ tags:
   - pt
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2022-04-12-aws-certs-desconto/1.png
+image_link: https://pages.awscloud.com/LATAM-launch-STR-aws-certification-disc-br-2022-interest.html
 ---
-
-[![](/assets/images/posts/2022-04-12-aws-certs-desconto/1.png)](https://pages.awscloud.com/LATAM-launch-STR-aws-certification-disc-br-2022-interest.html)
 
 A AWS está com descontos de 50% a 85% nas certificações:
  - AWS Certified Cloud Practitioner - 85% de desconto

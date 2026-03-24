@@ -8,9 +8,9 @@ tags:
   - research
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2022-11-17-rhr-talks-physics.png
+image_link: https://research.redhat.com/events/research-days-physics/
 ---
-
-[![](/assets/images/posts/2022-11-17-rhr-talks-physics.png)](https://research.redhat.com/events/research-days-physics/)
 
 Join [Red Hat Research](https://research.redhat.com/) for the next Research Days event, **PHYSICS EU Project: Advancing FaaS applications in the cloud continuum** on November 16, 2022, from 3PM to 4:30PM CEST.
 

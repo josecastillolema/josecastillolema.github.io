@@ -8,9 +8,8 @@ tags:
   - research
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2025-07-16-codeco-plenary11/1.jpg
 ---
-
-![](/assets/images/posts/2025-07-16-codeco-plenary11/1.jpg)
 
 ## CODECO 11th Plenary Meeting
 

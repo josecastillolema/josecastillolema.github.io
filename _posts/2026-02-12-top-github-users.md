@@ -6,9 +6,9 @@ tags:
   - en
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2026-02-12-top-github-users.png
+image_link: https://gayanvoice.github.io/top-github-users/index.html
 ---
-
-[![](/assets/images/posts/2026-02-12-top-github-users.png)](https://gayanvoice.github.io/top-github-users/index.html)
 
 ## Per country
 

@@ -8,9 +8,9 @@ tags:
   - research
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2023-01-18-codeco-kickoff/1.png
+image_link: https://he-codeco.eu/
 ---
-
-[![](/assets/images/posts/2023-01-18-codeco-kickoff/1.png)](https://he-codeco.eu/)
 
 Kick off of the [Horizon Europe CODECO](https://he-codeco.eu/) in the Munich Highlight Towers, on 16th and 17th of January 2023.
 

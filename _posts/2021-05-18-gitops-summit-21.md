@@ -6,9 +6,9 @@ tags:
   - events
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-05-18-gitops-summit-21.png
+image_link: https://events.linuxfoundation.org/gitops-summit/
 ---
-
-[![](/assets/images/posts/2021-05-18-gitops-summit-21.png)](https://events.linuxfoundation.org/gitops-summit/)
 
 ## Virtual Experience
 

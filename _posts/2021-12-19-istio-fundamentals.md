@@ -8,9 +8,9 @@ tags:
   - openshift
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-12-19-istio-fundamentals/0.png
+image_link: https://www.tetrate.io/
 ---
-
-[![](/assets/images/posts/2021-12-19-istio-fundamentals/0.png)](https://www.tetrate.io/)
 
 I would like to strongly recomend the [Istio Fundamentals](https://academy.tetrate.io/courses/istio-fundamentals) and [Envoy Fundamentals](https://academy.tetrate.io/courses/envoy-fundamentals) courses from the [Tetrate Academy](https://academy.tetrate.io/) for everyone interested in service mesh arquitectures.
 

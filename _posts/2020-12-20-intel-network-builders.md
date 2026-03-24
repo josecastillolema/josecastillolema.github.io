@@ -9,9 +9,9 @@ tags:
   - sdn
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2020-12-20-intel-network-builders/logo.jpg
+image_link: https://networkbuilders.intel.com/university
 ---
-
-[![](/assets/images/posts/2020-12-20-intel-network-builders/logo.jpg)](https://networkbuilders.intel.com/university)
 
 [Intel® Network Builders University](https://networkbuilders.intel.com/university) is a comprehensive network functions virtualization (NFV) and software defined networking (SDN) training program. The university includes a broad collection of online content training to help technical professionals in the network industry to improve their knowledge of key Intel® technologies, industry trends, and technical aspects of NFV deployments.
 

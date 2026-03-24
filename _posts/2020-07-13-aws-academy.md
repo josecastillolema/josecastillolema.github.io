@@ -9,9 +9,9 @@ tags:
   - pt
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2020-07-09-aws-academy/01.png
+image_link: https://aws.amazon.com/pt/training/awsacademy/
 ---
-
-[![](/assets/images/posts/2020-07-09-aws-academy/01.png)](https://aws.amazon.com/pt/training/awsacademy/)
 
 ## Benefícios do programa
 - Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.

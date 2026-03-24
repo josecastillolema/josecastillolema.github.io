@@ -7,9 +7,9 @@ tags:
   - en
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2022-01-02-skillbuilder.png
+image_link: https://explore.skillbuilder.aws/
 ---
-
-[![](/assets/images/posts/2022-01-02-skillbuilder.png)](https://explore.skillbuilder.aws/)
 
 Since October 19th, former [aws.training site](https://www.aws.training/) has moved to AWS Training and Certification’s new learning center, [AWS Skill Builder](https://explore.skillbuilder.aws/).
 

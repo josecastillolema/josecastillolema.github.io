@@ -7,9 +7,9 @@ tags:
   - pt
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2020-10-26-totvs-talks/0.jpeg
+image_link: https://bandnewsfm.band.uol.com.br/totvs-talks/
 ---
-
-[![](/assets/images/posts/2020-10-26-totvs-talks/0.jpeg)](https://bandnewsfm.band.uol.com.br/totvs-talks/)
 
 O [TOTVS TALKS Podcast](https://bandnewsfm.band.uol.com.br/totvs-talks/) é uma parceria entre a BandNews FM e a TOTVS. Aqui, você ouve conversas sobre tecnologia – ferramentas, soluções e caminhos; cada mês, um novo assunto. Os episódios novos saem sempre no dia 20 e você encontra o programa no site da BandNews FM e no Spotify.
 

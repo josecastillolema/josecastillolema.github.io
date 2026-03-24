@@ -7,9 +7,9 @@ tags:
   - events
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2024-12-20-fp-madrid-ocaml.png
+image_link: https://www.meetup.com/es-ES/fp-madrid/events/305145445
 ---
-
-[![](/assets/images/posts/2024-12-20-fp-madrid-ocaml.png)](https://www.meetup.com/es-ES/fp-madrid/events/305145445)
 
 Empezamos el nuevo año con **OCaml** como protagonista. Este lenguaje, a pesar de ser relativamente desconocido en nuestra comunidad, ha tenido un gran impacto en el diseño de lenguajes como Rust y Scala, también ha sido muy relevante en el mundo académico. En esta charla, José nos introducirá en el mundo de OCaml apoyándose en Python para hacer comparativas.
 

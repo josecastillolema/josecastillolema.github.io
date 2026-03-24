@@ -1,4 +1,17 @@
 <style>
+  /* Keep banner images at their original size */
+  .post-meta .preview-img {
+    width: auto !important;
+    height: auto !important;
+    aspect-ratio: unset !important;
+  }
+  .post-meta .preview-img img {
+    width: auto !important;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: unset !important;
+  }
+
   /* Disable avatar zoom on hover */
   @media all and (min-width: 576px) {
     #sidebar #avatar img {

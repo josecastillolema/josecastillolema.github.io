@@ -7,9 +7,9 @@ tags:
   - en
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-04-08-azure-fundamentals/1.png
+image_link: https://www.microsoft.com/en-us/trainingdays
 ---
-
-[![](/assets/images/posts/2021-04-08-azure-fundamentals/1.png)](https://www.microsoft.com/en-us/trainingdays)
 
 By participating in any of the following [Microsoft Virtual Training Days](https://www.microsoft.com/en-us/trainingdays):
  - Microsoft Azure Virtual Training Day: **Fundamentals**

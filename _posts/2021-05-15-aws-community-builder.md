@@ -6,11 +6,12 @@ tags:
   - en
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-05-15-aws-community-builder.png
+image_link: https://aws.amazon.com/developer/community/community-builders/
 ---
 
 
 ## AWS Community Builders program
-[![](/assets/images/posts/2021-05-15-aws-community-builder.png)](https://aws.amazon.com/developer/community/community-builders/)
 
 I am glad to be part of the [AWS Community Builders program](https://aws.amazon.com/developer/community/community-builders/). The program offers technical resources, mentorship, and networking opportunities to AWS enthusiasts and emerging thought leaders who are passionate about sharing knowledge and connecting with the technical community.
 
