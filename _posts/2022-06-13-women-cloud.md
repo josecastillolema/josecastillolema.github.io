@@ -8,9 +8,9 @@ tags:
   - pt
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2022-06-13-women-cloud.jpeg
+image_link: https://aws-mulheres-em-cloud-2022.splashthat.com/
 ---
-
-[![](/assets/images/posts/2022-06-13-women-cloud.jpeg)](https://aws-mulheres-em-cloud-2022.splashthat.com/)
 
 Sabemos que a tecnologia tem um poder transformador quando aliada à educação e podemos usá-la como ferramenta nos impactos positivos na luta de igualdade social.
 

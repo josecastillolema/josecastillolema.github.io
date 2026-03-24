@@ -7,9 +7,9 @@ tags:
   - huawei
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-05-10-hcia-ia-notes/0.png
+image_link: https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=3.0
 ---
-
-[![](/assets/images/posts/2021-05-10-hcia-ia-notes/0.png)](https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=3.0)
 
 Some of the notes I prepared studying for the [Huawei Certified ICT Associate - Artificial Intelligence (HCIA-IA)](https://e.huawei.com/en/talent/#/cert/product-details?certifiedProductId=345&authenticationLevel=CTYPE_CARE_HCIA&technicalField=PSC&version=3.0) exam.
 

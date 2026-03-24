@@ -8,9 +8,9 @@ tags:
   - youtube
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2020-10-31-caio-youtube.png
+image_link: https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos
 ---
-
-[![](/assets/images/posts/2020-10-31-caio-youtube.png)](https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos)
 
 Gostaria de recomendar o [canal de YouTube](https://www.youtube.com/channel/UCbDgBA7vpWsB7AwiPPmhfXA/videos) do meu amigo [**Caio Ferreria**](https://www.linkedin.com/in/caiocf/).
 

@@ -8,9 +8,9 @@ tags:
   - events
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-11-04-microsoft-ignite/0.png
+image_link: https://csc.docs.microsoft.com/ignite/registration/fall2021
 ---
-
-[![](/assets/images/posts/2021-11-04-microsoft-ignite/0.png)](https://csc.docs.microsoft.com/ignite/registration/fall2021)
 
 Complete one challenge and earn a free Microsoft Certification exam.
 

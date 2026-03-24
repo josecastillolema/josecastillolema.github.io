@@ -9,9 +9,9 @@ tags:
   - redhat
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2021-11-28-gremlin-caos/1.png
+image_link: https://www.gremlin.com/
 ---
-
-[![](/assets/images/posts/2021-11-28-gremlin-caos/1.png)](https://www.gremlin.com/)
 
 Chaos Engineering continues to grow in popularity and is rapidly becoming a job requirement. To help Engineering and Testing teams meet the need, take a look at **Gremlin Chaos Engineering Practitioner Certificate Program**! The Certificate Program is now the easiest way to demonstrate your Chaos Engineering expertise and increase your visibility.
 

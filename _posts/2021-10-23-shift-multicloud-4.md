@@ -8,9 +8,9 @@ tags:
   - pt
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-10-23-shift-multicloud-4.png
+image_link: https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online
 ---
-
-[![](/assets/images/posts/2021-10-23-shift-multicloud-4.png)](https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online)
 
 A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.
 

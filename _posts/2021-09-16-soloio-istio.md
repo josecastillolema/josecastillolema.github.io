@@ -8,9 +8,9 @@ tags:
   - openshift
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-09-16-soloio-istio.png
+image_link: https://www.solo.io/
 ---
-
-[![](/assets/images/posts/2021-09-16-soloio-istio.png)](https://www.solo.io/)
 
 # Get certified
 

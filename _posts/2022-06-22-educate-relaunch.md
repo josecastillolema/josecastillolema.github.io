@@ -7,11 +7,11 @@ tags:
   - en
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2022-06-22-educate-relaunch.png
+image_link: https://aws.amazon.com/education/awseducate/
 ---
 
-[![](/assets/images/posts/2022-06-22-educate-relaunch.png)](https://aws.amazon.com/education/awseducate/)
-
-AWS Educate is now open to any individual, regardless of where they are in their education, technical experience, or career journey.
+[AWS Educate](https://aws.amazon.com/education/awseducate/) is now open to any individual, regardless of where they are in their education, technical experience, or career journey.
 
 AWS Educate offers hundreds of hours of self-paced training and resources for new-to-cloud learners—including hands-on labs in the AWS Management Console. The platform guides you to targeted training content based on your knowledge, goals, interests, and age. Check out some of the most popular course offerings.
 

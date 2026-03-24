@@ -9,6 +9,6 @@ tags:
   - pt
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2021-11-24-huawey-job-fair-21.jpg
+image_link: https://app.huawei.com/web/Brazil_External/#/job_platform
 ---
-
-[![](/assets/images/posts/2021-11-24-huawey-job-fair-21.jpg)](https://app.huawei.com/web/Brazil_External/#/job_platform)

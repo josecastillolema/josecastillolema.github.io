@@ -8,9 +8,9 @@ tags:
   - pt
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2019-04-30-aws-educate/0.png
+image_link: https://aws.amazon.com/pt/education/awseducate/
 ---
-
-[![](/assets/images/posts/2019-04-30-aws-educate/0.png)](https://aws.amazon.com/pt/education/awseducate/)
 
 Para acompanhar alguns cursos da FIAP, uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma [AWS Educate](/aws-educate/).
 

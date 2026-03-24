@@ -9,9 +9,9 @@ tags:
   - pt
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2020-11-13-haina-talent/logo.jpg
+image_link: https://e.huawei.com/en/talent
 ---
-
-[![](/assets/images/posts/2020-11-13-haina-talent/logo.jpg)](https://e.huawei.com/en/talent)
 
 Para acompanhar os cursos [HCIA Routing & Switching](/hcia-14/), uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma [Huawei Talent Online](https://e.huawei.com/en/talent).
 

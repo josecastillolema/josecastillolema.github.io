@@ -6,9 +6,9 @@ tags:
   - en
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2021-09-03-lf-courses.png
+image_link: https://training.linuxfoundation.org/
 ---
-
-[![](/assets/images/posts/2021-09-03-lf-courses.png)](https://training.linuxfoundation.org/)
 
 [Linux Foundation Training & Certification](https://training.linuxfoundation.org/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges.
 

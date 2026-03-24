@@ -6,9 +6,9 @@ tags:
   - en
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2024-12-21-instructlab.jpg
+image_link: https://www.ibm.com/training/
 ---
-
-[![](/assets/images/posts/2024-12-21-instructlab.jpg)](https://www.ibm.com/training/)
 
 [IBM Training](https://www.ibm.com/training/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.
 

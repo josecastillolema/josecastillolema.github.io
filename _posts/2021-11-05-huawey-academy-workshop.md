@@ -10,9 +10,9 @@ tags:
   - webinar
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2021-11-05-huawey-academy-workshop.png
+image_link: http://www.huawei.com/audience/answer.do?u=2675759
 ---
-
-[![](/assets/images/posts/2021-11-05-huawey-academy-workshop.png)](http://www.huawei.com/audience/answer.do?u=2675759)
 
 No dia 09 de Novembro, será realizado um Worshop ao vivo sobre o programa **Huawei ICT Academy**, com apresentação de alguns casos de universidades parceiras. Participe e aprenda um pouco mais sobre como podemos trabalhar juntos.
 

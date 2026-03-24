@@ -7,9 +7,9 @@ tags:
   - pt
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2020-10-12-aws-cert-challenge.jpg
+image_link: https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/
 ---
-
-[![](/assets/images/posts/2020-10-12-aws-cert-challenge.jpg)](https://aws.amazon.com/blogs/training-and-certification/coming-to-twitch-aws-power-hour-cloud-practitioner/)
 
 A AWS está oferecendo de forma gratuita a **certificação AWS Cloud Practitioner**, que normalmente tem um valor de $200, como parte da iniciativa AWS re:Invent 2020 durante os meses de outubro e novembro de este ano.
 

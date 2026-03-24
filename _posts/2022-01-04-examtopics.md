@@ -6,9 +6,9 @@ tags:
   - en
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2022-01-04-examtopics.jpg
+image_link: https://www.examtopics.com/
 ---
-
-[![](/assets/images/posts/2022-01-04-examtopics.jpg)](https://www.examtopics.com/)
 
 I have been using the mocks from [ExamTopics](https://www.examtopics.com/) latelly to prepare to several certification exams and I have to say I found them the best material around.
 
