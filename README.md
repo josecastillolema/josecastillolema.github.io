@@ -26,8 +26,6 @@ It is possible to [override the theme defaults](https://jekyllrb.com/docs/themes
    - [`_plugins/octocat_emoji.rb`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_plugins/octocat_emoji.rb)
  - Prevent preview image stretching and disable avatar zoom on hover
    - [`_includes/metadata-hook.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_includes/metadata-hook.html)
- - Custom favicon at site root
-   - [`favicon.ico`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/favicon.ico)
 
 ## Troubleshooting
 
