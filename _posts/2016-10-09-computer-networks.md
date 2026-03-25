@@ -9,9 +9,9 @@ tags:
   - sdn
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2016-10-09-computer-networks.png
+image_link: https://www.journals.elsevier.com/computer-networks
 ---
-
-[![](/assets/images/posts/2016-10-09-computer-networks.png)](https://www.journals.elsevier.com/computer-networks)
 
 [**Volume 107, Part 2, Pages 270-291**](https://www.sciencedirect.com/science/article/abs/pii/S1389128616301177)
 

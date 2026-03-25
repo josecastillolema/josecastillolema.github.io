@@ -11,9 +11,9 @@ tags:
   - pt
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2017-02-01-fiap-corporate.png
+image_link: https://www.fiap.com.br/corporate/
 ---
-
-[![](/assets/images/posts/2017-02-01-fiap-corporate.png)](https://www.fiap.com.br/corporate/)
 
 - **Citibank**: Internet of Things (2017)
 - **Gerdau**: Internet of Things (2017)

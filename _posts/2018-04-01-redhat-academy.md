@@ -12,9 +12,9 @@ tags:
   - redhat
 toc: true
 toc_sticky: true
+image: /assets/images/posts/2018-04-01-redhat-academy/2018-04-01-redhat-academy.jpg
+image_link: https://www.redhat.com/pt-br/services/training/red-hat-academy
 ---
-
-[![](/assets/images/posts/2018-04-01-redhat-academy/2018-04-01-redhat-academy.jpg)](https://www.redhat.com/pt-br/services/training/red-hat-academy)
 
 ## Benefícios
 - Aproveite os descontos (**voucher 50% *off***) nos exames de certificação.
