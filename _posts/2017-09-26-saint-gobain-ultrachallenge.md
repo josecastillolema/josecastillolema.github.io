@@ -9,8 +9,8 @@ tags:
   - youtube
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2017-09-26-saint-gobain-ultrachallenge.jpeg
+image_link: https://www.saint-gobain.com.br/noticias/primeiro-ultra-challenge-da-america-latina
 ---
-
-[![](/assets/images/posts/2017-09-26-saint-gobain-ultrachallenge.jpeg)](https://www.saint-gobain.com.br/noticias/primeiro-ultra-challenge-da-america-latina)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5W_O2iI0Y2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

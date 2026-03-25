@@ -9,9 +9,9 @@ tags:
   - pt
 toc: yes
 toc_sticky: true
+image: /assets/images/posts/2019-04-30-aws-educate/0.png
+image_link: https://aws.amazon.com/pt/education/awseducate/
 ---
-
-[![](/assets/images/posts/2019-04-30-aws-educate/0.png)](https://aws.amazon.com/pt/education/awseducate/)
 
 
 ## Recursos e benefícios

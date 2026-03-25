@@ -8,11 +8,11 @@ tags:
   - youtube
 toc: false
 toc_sticky: true
+image: /assets/images/posts/2018-07-28-openstackday.jpeg
+image_link: https://openstackbr.com.br/
 ---
 
 ## IPv6 no OpenStack
-
-[![](/assets/images/posts/2018-07-28-openstackday.jpeg)](https://openstackbr.com.br/)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/z-hQnrt2_88" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
