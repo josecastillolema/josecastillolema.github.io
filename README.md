@@ -4,37 +4,30 @@
 ![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m785297761-3cb3eb53ca3a7966274012bc)
 ![GitHub language count](https://img.shields.io/github/languages/count/josecastillolema/josecastillolema.github.io)
 ![GitHub top language](https://img.shields.io/github/languages/top/josecastillolema/josecastillolema.github.io)
-![gem](https://img.shields.io/badge/gem-3.1.2-blue)
-![ruby](https://img.shields.io/badge/ruby-2.7-blue)
-![jekyll](https://img.shields.io/badge/jekyll-3.8.7-blue)
-![bundler](https://img.shields.io/badge/bundler-2.1.4-blue)
+![ruby](https://img.shields.io/badge/ruby-3.3-blue)
+![jekyll](https://img.shields.io/badge/jekyll-4.4.1-blue)
+![bundler](https://img.shields.io/badge/bundler-4.0.8-blue)
 ![GitHub last commit](https://img.shields.io/github/last-commit/josecastillolema/josecastillolema.github.io)
 
-Sources of the **GitOps project's website** (https://josecastillolema.github.io/). Built with [Jekyll](http://jekyllrb.com/) and [Minimal Mistakes theme](https://github.com/mmistakes/minimal-mistakes/) as a static site.
+Sources of the **GitOps project's website** (https://josecastillolema.github.io/). Built with [Jekyll](http://jekyllrb.com/) and [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy) as a static site.
 
-With Gem-based themes, directories such as the `assets`, `_layouts`, `_includes`, and `_sass` are stored in the theme’s gem, hidden from your immediate view. This allows for easier installation and updating as you don’t have to manage any of the theme files. Remote themes are similar to Gem-based themes, but do not require Gemfile changes or whitelisting making them ideal for sites hosted with GitHub Pages.
+The site is generated locally and then the site static files are pushed to GitHub because the site depends on an [unsupported plugin](https://pages.github.com/versions/), [`jekyll-remote-include`](https://github.com/netrics/jekyll-remote-include).
 
-The site is generated locally and then the site static files are pushed to GitHub because the site depends on an [unsupported plugins](https://pages.github.com/versions/), [`jekyll-remote-include`](https://github.com/netrics/jekyll-remote-include).
+# Chirpy theme
 
-# Minimal Mistakes remote theme starter
-
-Click [**Use this template**](https://github.com/mmistakes/mm-github-pages-starter/generate) button above for the quickest method of getting started with the [Minimal Mistakes Jekyll theme](https://github.com/mmistakes/minimal-mistakes), replace sample content with your own and [configure as necessary](https://mmistakes.github.io/minimal-mistakes/docs/configuration/).
+Click [**Use this template**](https://github.com/cotes2020/chirpy-starter/generate) button for the quickest method of getting started with the [Chirpy Jekyll theme](https://github.com/cotes2020/jekyll-theme-chirpy). See the [Chirpy documentation](https://chirpy.cotes.page/) for configuration details.
 
 ## Customizations
 
 It is possible to [override the theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) with your own customizations:
- - Favicon display
-   - [`_includes/head.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/master/_includes/head.html#L18)
- - [Vanilla Back To Top](https://github.com/vfeskov/vanilla-back-to-top)
-   - [`_layouts/default.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/master/_layouts/default.html#L21-L25)
- - Master head color
-   - [`_sass/minimal-mistakes/_masthead.scss`](https://github.com/josecastillolema/josecastillolema.github.io/blob/master/_sass/minimal-mistakes/_masthead.scss#L14)
-   - [`_sass/minimal-mistakes/_navigation.scss`](https://github.com/josecastillolema/josecastillolema.github.io/blob/master/_sass/minimal-mistakes/_navigation.scss#L180)
- - Social icons color
-   - [`_sass/minimal-mistakes/_utilities.scss`](https://github.com/josecastillolema/josecastillolema.github.io/blob/master/_sass/minimal-mistakes/_utilities.scss#L328-L340)
- - Remove teasers from search result list
-   - [`assets/js/vanilla-back-to-top.min.js`](https://github.com/mmistakes/minimal-mistakes/blob/8a67ce8e41ec850f2d7c373aa47739b2abfee6f1/assets/js/lunr/lunr-en.js#L52-L54)
-
+ - Custom home page with year summary table and year headers
+   - [`_layouts/home.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_layouts/home.html)
+ - Frontmatter `image_link` support (replaces preview image lightbox with custom URL) and `:octocat:` emoji
+   - [`_plugins/octocat_emoji.rb`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_plugins/octocat_emoji.rb)
+ - Prevent preview image stretching and disable avatar zoom on hover
+   - [`_includes/metadata-hook.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_includes/metadata-hook.html)
+ - Custom favicon at site root
+   - [`favicon.ico`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/favicon.ico)
 
 ## Troubleshooting
 
