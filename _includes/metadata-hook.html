@@ -55,16 +55,26 @@
   window.addEventListener('load', function () {
     setTimeout(function () {
       if (typeof tocbot === 'undefined') return;
-      tocbot.destroy();
-      tocbot.init({
-        tocSelector: '#toc',
+      var shared = {
         contentSelector: '.content',
         ignoreSelector: '[data-toc-skip]',
         headingSelector: 'h2, h3, h4, h5, h6',
         orderedList: false,
-        scrollSmooth: false,
-        headingsOffset: 32
-      });
+        scrollSmooth: false
+      };
+      tocbot.destroy();
+      if (window.matchMedia('(min-width: 1200px)').matches) {
+        tocbot.init(Object.assign({}, shared, {
+          tocSelector: '#toc',
+          headingsOffset: 32
+        }));
+      } else {
+        tocbot.init(Object.assign({}, shared, {
+          tocSelector: '#toc-popup-content',
+          collapseDepth: 4,
+          headingsOffset: 48
+        }));
+      }
     }, 500);
   });
 </script>
