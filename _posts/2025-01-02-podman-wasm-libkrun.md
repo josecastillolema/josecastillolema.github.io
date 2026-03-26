@@ -145,7 +145,13 @@ Let's compare "normal" native containers, Wasm(Edge) and libkrun for several sce
 Wasm image is 77% smaller than the usual container ones. To keep the without-wasm image minimal we have leveraged [musl](https://musl.libc.org/), a minimal C library that is often used on embedded systems and other environments where a full-featured library like glibc is not available.
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "Image size"
     x-axis [podman, wasmedge, libkrun]
     y-axis "Size (MBs)" 0 --> 5
@@ -170,7 +176,13 @@ f906858667d5  libkrun     3.15%       101.5MB / 67.1GB   0.15%       0B / 656B  
 libkrun presents a slightly higher CPU usage (and much more PIDs in use).
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "CPU usage"
     x-axis [podman, wasmedge, libkrun]
     y-axis "CPU (%)" 0 --> 4
@@ -182,7 +194,13 @@ xychart-beta
 Native podman container memory consumption is less than a quarter MB. Wasmedge consumes over 25 MBs (x126) and libkrun over 100 MBs (x487).
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "Memory usage"
     x-axis [podman, wasmedge, libkrun]
     y-axis "Memory (MBs)" 0 --> 120
@@ -205,7 +223,13 @@ Native podman containers consume approximately half core. WasmEdge container tak
 
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "CPU usage"
     x-axis [podman, wasmedge, libkrun]
     y-axis "CPU (%)" 0 --> 300
@@ -217,7 +241,13 @@ xychart-beta
 There are no major variations from the memory perspective compared to the idle scenario.
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "Memory usage"
     x-axis [podman, wasmedge, libkrun]
     y-axis "Memory (MBs)" 0 --> 120
@@ -248,7 +278,13 @@ Sample standard deviation 0ms
 The WasmEdge podman container becomes unresponsive after some time. Even so, it only achieves a 4% rate compared with the native podman container solution.
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "Requests per second"
     x-axis [podman, wasmedge, libkrun]
     y-axis "RPS (#/sec)" 0 --> 80000
@@ -260,7 +296,13 @@ xychart-beta
 The WasmEdge podman container presents the worst latency even delivering only 4% of the request compared with the native container solution.
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "Average time per request"
     x-axis [podman, wasmedge, libkrun]
     y-axis "Average time (ms)" 0 --> 5
@@ -377,7 +419,13 @@ We observe some podman overhead (approximately 30%).
 Podman is not responsible for the poor networking performance of the Wasmedge enabled server.
 
 ```mermaid
-xychart-beta
+---
+config:
+    xyChart:
+        showDataLabel: true
+        showDataLabelOutsideBar: true
+---
+xychart
     title "Requests per second"
     x-axis [podman, native, podman-wasm, wasm]
     y-axis "RPS (#/sec)" 0 --> 90000

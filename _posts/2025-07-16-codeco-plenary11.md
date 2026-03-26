@@ -28,8 +28,11 @@ One of the most enjoyable aspects of this project, is that meetings are practica
 
 The Internet Engineering Task Force (IETF) is holding a [hackathon](https://wiki.ietf.org/en/meeting/123/hackathon) to encourage developers and subject matter experts to discuss, collaborate, and develop utilities, ideas, sample code, and solutions that show practical implementations of IETF standards.
 
-    🗓 When: 19 - 20 July 2025 (Saturday - Sunday)
-    🇪🇸 Where: Meliá Castilla
+🗓 When
+: 19 - 20 July 2025 (Saturday - Sunday)
+
+🇪🇸 Where
+: Meliá Castilla
 
 This is your chance to shine, showcase your skills, and **compete for a €2800 reward** by securing a spot in the top 3 of each challenge. 🏆💰
 

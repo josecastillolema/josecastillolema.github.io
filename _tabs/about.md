@@ -2,6 +2,7 @@
 layout: page
 icon: fas fa-info-circle
 order: 5
+description: "Cloud Architect at Red Hat. Teaching Cloud, DevOps and IoT post-graduate courses since 2016."
 ---
 
 {% remote_include https://raw.githubusercontent.com/josecastillolema/josecastillolema/master/README.md %}
