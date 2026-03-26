@@ -12,6 +12,33 @@
     object-fit: unset !important;
   }
 
+  /* Expand TOC contents by default */
+  .is-collapsed {
+    max-height: 1000px !important;
+  }
+
+  /* Style h5/h6 entries in TOC (desktop) */
+  .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-link {
+    font-size: 0.85em;
+  }
+  .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-link {
+    font-size: 0.8em;
+  }
+
+  /* Style h5/h6 entries in TOC (mobile popup) */
+  #toc-popup .node-name--H5 {
+    padding-left: 4.5rem;
+  }
+  #toc-popup .node-name--H6 {
+    padding-left: 5.625rem;
+  }
+
+  /* Bold h5/h6 in post content */
+  .content h5,
+  .content h6 {
+    font-weight: 600;
+  }
+
   /* Disable avatar zoom on hover */
   @media all and (min-width: 576px) {
     #sidebar #avatar img {
@@ -22,3 +49,22 @@
     }
   }
 </style>
+
+<script>
+  /* Extend TOC to support h5 and h6 headings (Chirpy only supports h2-h4) */
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      if (typeof tocbot === 'undefined') return;
+      tocbot.destroy();
+      tocbot.init({
+        tocSelector: '#toc',
+        contentSelector: '.content',
+        ignoreSelector: '[data-toc-skip]',
+        headingSelector: 'h2, h3, h4, h5, h6',
+        orderedList: false,
+        scrollSmooth: false,
+        headingsOffset: 32
+      });
+    }, 500);
+  });
+</script>
