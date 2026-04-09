@@ -33,6 +33,11 @@ module Jekyll
         github_base = raw_base
       end
 
+      # escape [text]: patterns that aren't reference link definitions
+      content = content.gsub(/\[([^\]]+)\]:(?=\s+(?!https?:\/\/))/) do
+        "\\[#{Regexp.last_match(1)}\\]:"
+      end
+
       # rewrite images: ![alt](relative) -> raw URL (so they render)
       content = content.gsub(/(!\[[^\]]*\]\()(?!https?:\/\/|#|\/)([^)]+)\)/) do
         prefix = Regexp.last_match(1)
