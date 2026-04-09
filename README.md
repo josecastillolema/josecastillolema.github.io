@@ -28,6 +28,9 @@ It is possible to [override the theme defaults](https://jekyllrb.com/docs/themes
    - [`_plugins/octocat_emoji.rb`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_plugins/octocat_emoji.rb)
  - Prevent preview image stretching, disable avatar zoom on hover, expand TOC by default, extend TOC to support h5/h6 headings, and bold h5/h6 in post content
    - [`_includes/metadata-hook.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_includes/metadata-hook.html)
+ - TOC support for page layouts (Chirpy only supports TOC on posts by default). Adds TOC panel and mobile popup to pages with `toc: true`.
+   - [`_layouts/page.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_layouts/page.html)
+   - [`_includes/js-selector.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_includes/js-selector.html)
 
 ## Troubleshooting
 
