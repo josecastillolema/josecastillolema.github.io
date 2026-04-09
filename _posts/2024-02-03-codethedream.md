@@ -10,10 +10,10 @@ toc: false
 toc_sticky: true
 ---
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=codethedream&type=watch&count=true&size=large&v=2" frameborder="0" scrolling="0" width="130" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=codethedream&type=star&count=true&size=large" frameborder="0" scrolling="0" width="115" height="30" title="GitHub"></iframe>
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&repo=codethedream&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+[![GitHub watchers](https://img.shields.io/github/watchers/josecastillolema/codethedream?style=social)](https://github.com/josecastillolema/codethedream/watchers)
+[![GitHub stars](https://img.shields.io/github/stars/josecastillolema/codethedream?style=social)](https://github.com/josecastillolema/codethedream/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/josecastillolema/codethedream?style=social)](https://github.com/josecastillolema/codethedream/network/members)
 
 {% remote_include https://raw.githubusercontent.com/josecastillolema/codethedream/main/README.md %}
 
-<iframe src="https://ghbtns.com/github-btn.html?user=josecastillolema&type=follow&count=true&size=large" frameborder="0" scrolling="0" width="230" height="30" title="GitHub"></iframe>
+[![GitHub followers](https://img.shields.io/github/followers/josecastillolema?label=Follow%20%40josecastillolema&style=social)](https://github.com/josecastillolema)
