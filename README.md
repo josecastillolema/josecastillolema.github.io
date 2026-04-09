@@ -11,7 +11,7 @@
 
 Sources of the **GitOps project's website** (https://josecastillolema.github.io/). Built with [Jekyll](http://jekyllrb.com/) and [Chirpy theme](https://github.com/cotes2020/jekyll-theme-chirpy) as a static site.
 
-The site is generated locally and then the site static files are pushed to GitHub because the site depends on an [unsupported plugin](https://pages.github.com/versions/), [`jekyll-remote-include`](https://github.com/netrics/jekyll-remote-include).
+The site is generated locally and then the site static files are pushed to GitHub because the site depends on a custom `remote_include` plugin (see below) which is not supported by [GitHub Pages](https://pages.github.com/versions/).
 
 # Chirpy theme
 
@@ -22,6 +22,8 @@ Click [**Use this template**](https://github.com/cotes2020/chirpy-starter/genera
 It is possible to [override the theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults) with your own customizations:
  - Custom home page with year summary table and year headers
    - [`_layouts/home.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_layouts/home.html)
+ - Custom `remote_include` plugin that replaces the archived [`jekyll-remote-include`](https://github.com/netrics/jekyll-remote-include) gem. Fetches raw markdown from GitHub and rewrites relative links to point to the GitHub repository (blob URLs for links, raw URLs for images). Also strips the first `# Title` heading from the fetched content to avoid duplication with the post's own title.
+   - [`_plugins/remote_include_rewrite.rb`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_plugins/remote_include_rewrite.rb)
  - Frontmatter `image_link` support (replaces preview image lightbox with custom URL) and `:octocat:` emoji
    - [`_plugins/octocat_emoji.rb`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_plugins/octocat_emoji.rb)
  - Prevent preview image stretching, disable avatar zoom on hover, expand TOC by default, extend TOC to support h5/h6 headings, and bold h5/h6 in post content
