@@ -731,10 +731,10 @@
  Creating compose_api_1 ... 
  Creating compose_api_1 ... done
  Attaching to compose_mysql_1, compose_api_1
- mysql_1  | 2020-04-08 19:52:56+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
- mysql_1  | 2020-04-08 19:52:57+00:00 [Note] [Entrypoint]: Switching to dedicated user 'mysql'
- mysql_1  | 2020-04-08 19:52:57+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
- mysql_1  | 2020-04-08 19:52:57+00:00 [Note] [Entrypoint]: Initializing database files
+ mysql_1  | 2020-04-08 19:52:56+00:00 [Note] \[Entrypoint\]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
+ mysql_1  | 2020-04-08 19:52:57+00:00 [Note] \[Entrypoint\]: Switching to dedicated user 'mysql'
+ mysql_1  | 2020-04-08 19:52:57+00:00 [Note] \[Entrypoint\]: Entrypoint script for MySQL Server 8.0.19-1debian10 started.
+ mysql_1  | 2020-04-08 19:52:57+00:00 [Note] \[Entrypoint\]: Initializing database files
  mysql_1  | 2020-04-08T19:52:57.639740Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
  mysql_1  | 2020-04-08T19:52:57.639830Z 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.19) initializing of server in progress as process 41
  api_1    |  * Serving Flask app "api" (lazy loading)
@@ -747,30 +747,30 @@
  api_1    |  * Debugger is active!
  api_1    |  * Debugger PIN: 463-518-758
  mysql_1  | 2020-04-08T19:53:03.024229Z 5 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
- mysql_1  | 2020-04-08 19:53:08+00:00 [Note] [Entrypoint]: Database files initialized
- mysql_1  | 2020-04-08 19:53:08+00:00 [Note] [Entrypoint]: Starting temporary server
+ mysql_1  | 2020-04-08 19:53:08+00:00 [Note] \[Entrypoint\]: Database files initialized
+ mysql_1  | 2020-04-08 19:53:08+00:00 [Note] \[Entrypoint\]: Starting temporary server
  mysql_1  | 2020-04-08T19:53:08.721880Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
  mysql_1  | 2020-04-08T19:53:08.722007Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.19) starting as process 91
  mysql_1  | 2020-04-08T19:53:09.446603Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
  mysql_1  | 2020-04-08T19:53:09.457240Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
  mysql_1  | 2020-04-08T19:53:09.478577Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.19'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
- mysql_1  | 2020-04-08 19:53:09+00:00 [Note] [Entrypoint]: Temporary server started.
+ mysql_1  | 2020-04-08 19:53:09+00:00 [Note] \[Entrypoint\]: Temporary server started.
  mysql_1  | 2020-04-08T19:53:09.527830Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock'
  mysql_1  | Warning: Unable to load '/usr/share/zoneinfo/iso3166.tab' as time zone. Skipping it.
  mysql_1  | Warning: Unable to load '/usr/share/zoneinfo/leap-seconds.list' as time zone. Skipping it.
  mysql_1  | Warning: Unable to load '/usr/share/zoneinfo/zone.tab' as time zone. Skipping it.
  mysql_1  | Warning: Unable to load '/usr/share/zoneinfo/zone1970.tab' as time zone. Skipping it.
- mysql_1  | 2020-04-08 19:53:13+00:00 [Note] [Entrypoint]: Creating database fiapdb
+ mysql_1  | 2020-04-08 19:53:13+00:00 [Note] \[Entrypoint\]: Creating database fiapdb
  mysql_1  | 
- mysql_1  | 2020-04-08 19:53:13+00:00 [Note] [Entrypoint]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/aso.sql
+ mysql_1  | 2020-04-08 19:53:13+00:00 [Note] \[Entrypoint\]: /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/aso.sql
  mysql_1  | 
  mysql_1  | 
- mysql_1  | 2020-04-08 19:53:14+00:00 [Note] [Entrypoint]: Stopping temporary server
+ mysql_1  | 2020-04-08 19:53:14+00:00 [Note] \[Entrypoint\]: Stopping temporary server
  mysql_1  | 2020-04-08T19:53:14.140552Z 12 [System] [MY-013172] [Server] Received SHUTDOWN from user root. Shutting down mysqld (Version: 8.0.19).
  mysql_1  | 2020-04-08T19:53:15.777586Z 0 [System] [MY-010910] [Server] /usr/sbin/mysqld: Shutdown complete (mysqld 8.0.19)  MySQL Community Server - GPL.
- mysql_1  | 2020-04-08 19:53:16+00:00 [Note] [Entrypoint]: Temporary server stopped
+ mysql_1  | 2020-04-08 19:53:16+00:00 [Note] \[Entrypoint\]: Temporary server stopped
  mysql_1  | 
- mysql_1  | 2020-04-08 19:53:16+00:00 [Note] [Entrypoint]: MySQL init process done. Ready for start up.
+ mysql_1  | 2020-04-08 19:53:16+00:00 [Note] \[Entrypoint\]: MySQL init process done. Ready for start up.
  mysql_1  | 
  mysql_1  | 2020-04-08T19:53:16.482021Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
  mysql_1  | 2020-04-08T19:53:16.482148Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.19) starting as process 1

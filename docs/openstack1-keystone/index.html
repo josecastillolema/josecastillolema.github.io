@@ -25,9 +25,9 @@ devstack@keystone.service                                                       
            ├─862 keystoneuWSGI maste
            ├─912 keystoneuWSGI worker
            └─914 keystoneuWSGI worker
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.policy.backends.rules [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.common.authorization [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None N
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: [pid: 914|app: 0|req: 131/264] 192.168.17.131 () {62 vars in 1401 bytes} [Sun Oct  4 17:1
+Oct 04 17:16:40 ubuntu devstack@keystone.service\[862\]: DEBUG keystone.policy.backends.rules \[None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None
+Oct 04 17:16:40 ubuntu devstack@keystone.service[862\]: DEBUG keystone.common.authorization \[None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None N
+Oct 04 17:16:40 ubuntu devstack@keystone.service[862\]: [pid: 914|app: 0|req: 131/264] 192.168.17.131 () {62 vars in 1401 bytes} \[Sun Oct  4 17:1
 </pre></table></code></div></div><li>Mostrar os logs do serviço:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -37,10 +37,10 @@ Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: [pid: 914|app: 0|req: 131
 7
 </pre><td class="rouge-code"><pre>$ journalctl -f -u devstack@keystone
 -- Logs begin at Thu 2020-10-01 10:39:16 PDT. --
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.policy.backends.rules [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None None] enforce identity:validate_token: {'is_delegated_auth': False, 'access_token_id': None, 'user_id': u'e17c0f6e879c4b8d860ec69a2b28ffff', 'roles': [u'ResellerAdmin', u'admin', u'service'], 'user_domain_id': u'default', 'consumer_id': None, 'trustee_id': None, 'is_domain': False, 'is_admin_project': True, 'trustor_id': None, 'token': &lt;KeystoneToken (audit_id=-ZpKXigzR7eMBVPnVEKdFg, audit_chain_id=-ZpKXigzR7eMBVPnVEKdFg) at 0x7f686de864f0&gt;, 'project_id': u'83667b3fd3964824ae4276cfc8610829', 'trust_id': None, 'project_domain_id': u'default'} {{(pid=914) enforce /opt/stack/keystone/keystone/policy/backends/rules.py:33}}
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.common.authorization [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None None] RBAC: Authorization granted {{(pid=914) check_policy /opt/stack/keystone/keystone/common/authorization.py:240}}
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: [pid: 914|app: 0|req: 131/264] 192.168.17.131 () {62 vars in 1401 bytes} [Sun Oct  4 17:16:40 2020] GET /identity/v3/auth/tokens =&gt; generated 4921 bytes in 22 msecs (HTTP/1.1 200) 6 headers in 380 bytes (1 switches on core 0)
-Oct 04 17:16:40 ubuntu devstack@keystone.service[862]: DEBUG keystone.middleware.auth [None req-08e49b2e-1253-43d8-8810-83c8d135eab4 None None] Authenticating user token {{(pid=912) process_request /usr/local/lib/python2.7/dist-packages/keystonemiddleware/auth_token/__init__.py:400}}
+Oct 04 17:16:40 ubuntu devstack@keystone.service[862\]: DEBUG keystone.policy.backends.rules [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None None] enforce identity:validate_token: {'is_delegated_auth': False, 'access_token_id': None, 'user_id': u'e17c0f6e879c4b8d860ec69a2b28ffff', 'roles': [u'ResellerAdmin', u'admin', u'service'], 'user_domain_id': u'default', 'consumer_id': None, 'trustee_id': None, 'is_domain': False, 'is_admin_project': True, 'trustor_id': None, 'token': &lt;KeystoneToken (audit_id=-ZpKXigzR7eMBVPnVEKdFg, audit_chain_id=-ZpKXigzR7eMBVPnVEKdFg) at 0x7f686de864f0&gt;, 'project_id': u'83667b3fd3964824ae4276cfc8610829', 'trust_id': None, 'project_domain_id': u'default'} {{(pid=914) enforce /opt/stack/keystone/keystone/policy/backends/rules.py:33}}
+Oct 04 17:16:40 ubuntu devstack@keystone.service\[862\]: DEBUG keystone.common.authorization [None req-0b250eac-2081-49bb-bf22-f6fc6b232040 None None] RBAC: Authorization granted {{(pid=914) check_policy /opt/stack/keystone/keystone/common/authorization.py:240}}
+Oct 04 17:16:40 ubuntu devstack@keystone.service\[862\]: [pid: 914|app: 0|req: 131/264] 192.168.17.131 () {62 vars in 1401 bytes} [Sun Oct  4 17:16:40 2020] GET /identity/v3/auth/tokens =&gt; generated 4921 bytes in 22 msecs (HTTP/1.1 200) 6 headers in 380 bytes (1 switches on core 0)
+Oct 04 17:16:40 ubuntu devstack@keystone.service\[862\]: DEBUG keystone.middleware.auth [None req-08e49b2e-1253-43d8-8810-83c8d135eab4 None None] Authenticating user token {{(pid=912) process_request /usr/local/lib/python2.7/dist-packages/keystonemiddleware/auth_token/__init__.py:400}}
 ...
 </pre></table></code></div></div><li>Mostrar o arquivo de configuração:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre><td class="rouge-code"><pre>$ less /etc/keystone/keystone.conf
