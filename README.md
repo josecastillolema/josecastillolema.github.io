@@ -31,6 +31,8 @@ It is possible to [override the theme defaults](https://jekyllrb.com/docs/themes
  - TOC support for page layouts (Chirpy only supports TOC on posts by default). Adds TOC panel and mobile popup to pages with `toc: true`.
    - [`_layouts/page.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_layouts/page.html)
    - [`_includes/js-selector.html`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/_includes/js-selector.html)
+ - Fix Atom feed icon/logo using absolute URLs so RSS readers (e.g., Feedly) can resolve the favicon. Chirpy's default template uses `site.baseurl` which produces relative paths.
+   - [`assets/feed.xml`](https://github.com/josecastillolema/josecastillolema.github.io/blob/main/assets/feed.xml)
 
 ## Troubleshooting
 
