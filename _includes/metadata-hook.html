@@ -39,6 +39,29 @@
     font-weight: 600;
   }
 
+  /* Merge output blocks into preceding code blocks: remove gap and hide header */
+  .highlighter-rouge + .language-plaintext {
+    margin-top: -0.75rem;
+  }
+  .highlighter-rouge + .language-plaintext .code-header {
+    display: none;
+  }
+
+  /* Hide line numbers on shell code blocks and align with plaintext blocks */
+  .language-sh .rouge-gutter,
+  .language-bash .rouge-gutter {
+    display: none !important;
+  }
+  .language-sh .rouge-code,
+  .language-bash .rouge-code {
+    padding-left: 1.25rem !important;
+  }
+
+  /* Hide "Plaintext" label on untagged code blocks */
+  [data-label-text="Plaintext"] {
+    display: none;
+  }
+
   /* Disable avatar zoom on hover */
   @media all and (min-width: 576px) {
     #sidebar #avatar img {

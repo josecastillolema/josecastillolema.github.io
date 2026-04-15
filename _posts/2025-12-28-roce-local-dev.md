@@ -36,6 +36,8 @@ We will be using [ib_write_bw](https://enterprise-support.nvidia.com/s/article/i
 
     ```bash
     rdma link show
+    ```
+    ```
     link rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
     ```
 
@@ -43,9 +45,15 @@ We will be using [ib_write_bw](https://enterprise-support.nvidia.com/s/article/i
 
     ```bash
     cat /sys/class/infiniband/rxe0/ports/1/gids/0
+    ```
+    ```
     fe80:0000:0000:0000:c805:5eff:fe37:e715
+    ```
 
+    ```bash
     cat /sys/class/infiniband/rxe0/ports/1/gids/1
+    ```
+    ```
     0000:0000:0000:0000:0000:ffff:c0a8:0117
     ```
 
@@ -73,6 +81,8 @@ We will be using [ib_write_bw](https://enterprise-support.nvidia.com/s/article/i
 
     ```bash
     docker inspect server-container | grep IPAddress | tail -1
+    ```
+    ```
                     "IPAddress": "172.17.0.2",
     ```
 
@@ -81,6 +91,8 @@ We will be using [ib_write_bw](https://enterprise-support.nvidia.com/s/article/i
     ```bash
     docker exec server-container ib_write_bw -d rxe0 -x 1 -F
     docker exec client-container ib_write_bw -d rxe0 -x 1 -F 172.17.0.2
+    ```
+    ```
     ---------------------------------------------------------------------------------------
                         RDMA_Write BW Test
     Dual-port       : OFF          Device         : rxe0
@@ -137,6 +149,8 @@ We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) 
 
     ```bash
     rdma link show
+    ```
+    ```
     link rxe0/1 state ACTIVE physical_state LINK_UP netdev eth0
     ```
 
@@ -182,6 +196,8 @@ We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) 
 
     ```bash
     kind create cluster --config kind-config-rdma.yaml
+    ```
+    ```
     Creating cluster "kind" ...
      ✓ Ensuring node image (kindest/node:v1.32.2) 🖼
      ✓ Preparing nodes 📦 📦 📦
@@ -216,6 +232,8 @@ We will be using [k8s-netperf](https://github.com/cloud-bulldozer/k8s-netperf/) 
 
     ```bash
     k8s-netperf --config config.yaml --hostNet --privileged --ib-write-bw rxe0:1
+    ```
+    ```
     INFO[2025-12-28 11:29:38] Starting k8s-netperf (roce2@e2988034e0f9dd4e2a59f131f6ae7866b12fd6de)
     INFO[2025-12-28 11:29:38] 📒 Reading config.yaml file.
     INFO[2025-12-28 11:29:38] 📒 Reading config.yaml file - using ConfigV2 Method.

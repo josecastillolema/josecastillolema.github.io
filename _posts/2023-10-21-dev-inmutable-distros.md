@@ -202,7 +202,9 @@ Then you can just pip install any dependencies, open the project in VSCode and c
 
 Before opening the project in VSCode:
 ```sh
-$ flatpak run --command=sh com.visualstudio.code
+flatpak run --command=sh com.visualstudio.code
+```
+```
 [📦] python -m venv .
 [📦] source bin/activate
 ()[📦] pip install -r requirements.txt
@@ -232,9 +234,13 @@ pip install ansible ansible-lint
 ```
 Ansible will be installed on `~/.local/bin`, so we need to add this path to our editor of choice (i.e.: VSCode):
 ```sh
-$ which ansible
+which ansible
+```
+```
 ~/.local/bin/ansible
-$ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' com.visualstudio.code
+```
+```sh
+sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' com.visualstudio.code
 ```
 
 Installed the Ansible extension by Red Hat in VSCode and [enabled Lightspeed](https://developers.redhat.com/articles/2023/08/22/enhance-ansible-development-experience-lightspeed).
