@@ -46,7 +46,7 @@ theme_mode: # [light | dark]
 # the avatar on sidebar
 avatar: /assets/images/me.jpg
 
-social_preview_image: /assets/images/favicon_io/android-chrome-512x512.png
+social_preview_image: /assets/img/favicons/web-app-manifest-512x512.png
 
 # boolean type, the global switch for TOC in posts.
 toc: true

@@ -32,7 +32,7 @@ Sem mais, vamos la!
 
 ## Clonando o repósitorio
 
-```
+```sh
 $ git clone https://github.com/josecastillolema/churrops.git
 ```
 
@@ -40,7 +40,7 @@ Segue uma breve descrição dos arquivos:
 
  - **live.tf**
    Arquivo principal, é um *template* com as informações do *provider* (neste caso OpenStack) e a topologia dos recursos que vão ser criados. No primeiro bloco definimos as credencias de acesso a nossa nuvem OpenStack:
-   ```
+   ```hcl
    provider "openstack" {
       user_name   = "jose.castillo"
       tenant_name = "churrops"
@@ -53,7 +53,7 @@ Segue uma breve descrição dos arquivos:
 
    No segundo bloco definimos alguns valores que vamos usar no projeto, como a imagem (neste caso Ubuntu), a chave (caso precisemos acessar por ssh a instância), o *flavor*, as redes, etc. Este bloco não é obrigatório, mas pode facilitar a nossa vida quando trabalhemos com um número maior de instâncias. Neste exemplo estamos usando o *security group* padrão do OpenStack (a porta 80 precisa estar aberta), mas de forma muito direta poderíamos criar um recurso de tipo *security group* personalizado para o nosso servidor web. O [site da Terraform](https://www.terraform.io/docs/providers/openstack/) mostra todos os recursos que temos disponíveis para OpenStack.
 
-   ```
+   ```hcl
    variable "defaults" {
       description = "Variaveis do projeto"
       type = "map"
@@ -71,7 +71,7 @@ Segue uma breve descrição dos arquivos:
    ```
 
    No terceiro bloco definimos o nosso servidor web. Na variável `user_data` apontamos para outro arquivo do exemplo, que vai ser executado via **cloud-init** no primeiro *boot* para configurar o servidor web.
-   ```
+   ```hcl
    resource "openstack_compute_instance_v2" "web" {
       name = "web"
       image_name = "${var.defaults["image_name"]}"
@@ -90,7 +90,7 @@ Segue uma breve descrição dos arquivos:
    ```
 
    Por último, os restantes blocos associam uma IP pública ao nosso servidor web:
-   ```
+   ```hcl
    resource "openstack_networking_floatingip_v2" "ip-publica" {
       pool = "rede-publica"
    }
@@ -110,16 +110,16 @@ Arquivo de *shell* que vai ser executado via **cloud-init** no primeiro *boot* p
 
 ## Fazendo o *deploy*
 
-```
+```sh
 $ terraform init
 ```
 
 ![](/assets/images/posts/2017-11-26-terraformando-openstack/01.png)
 
-```
+```sh
 $ terraform plan
 ```
-```
+```sh
 $ terraform apply
 ```
 ![](/assets/images/posts/2017-11-26-terraformando-openstack/02.png)

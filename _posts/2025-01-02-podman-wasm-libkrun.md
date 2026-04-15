@@ -11,7 +11,7 @@ mermaid: true
 ---
 
 Thanks to [crun](https://github.com/containers/crun) we can run [WebAssembly (Wasm)](#wasm) and [libkrun](#libkrun) workloads in directly in Podman.
-```
+```sh
 $ podman info | grep crun -A 2
     name: crun
     package: crun-1.19.1-1.fc41.x86_64
@@ -31,12 +31,12 @@ WebAssembly (abbreviated Wasm) is a portable binary instruction format. It has g
 We can leverage the portability of Wasm to run Wasm workloads alongside Linux containers by combining crun and Podman. crun supports running Wasm workload by using [WasmEdge](https://wasmedge.org/), [Wasmtime](https://wasmtime.dev/) or [Wasmer](https://wasmer.io/) runtimes. WasmEdge is a lightweight, high-performance, and extensible WebAssembly runtime for cloud-native and edge applications.
 
 To enable Wasm(Edge) applications through Podman in Fedora we need to:
-```
+```sh
 $ rpm-ostree install wasmedge crun-wasm
 ```
 
 To run Wasm applications though Podman:
-```
+```sh
 $ podman --runtime /usr/bin/crun-wasm run -dp 8080:8080 --platform=wasi/wasm -t --rm server-with-wasm
 ```
 
@@ -53,12 +53,12 @@ libkrun enables [Confidential Workloads (CW)](https://virtee.io/the-case-for-con
 This model is useful to quickly run and deploy small container-based applications, typically with a single container. The driving factor for confidential workloads is quick startup time and reduced resource usage for higher density.
 
 To leverage libkrun through Podman in Fedora we need to:
-```
+```sh
 $ rpm-ostree install libkrun
 ```
 
 To use the libkrun backend though Podman:
-```
+```sh
 $ podman run --annotation=run.oci.handler=krun -dp 8080:8080 -t --rm server-without-wasm
 ```
 
@@ -163,7 +163,7 @@ xychart
 
 ##### Idle
 
-```
+```sh
 $ podman stats
 ID            NAME        CPU %       MEM USAGE / LIMIT  MEM %       NET IO      BLOCK IO      PIDS        CPU TIME    AVG CPU %
 241deb12adf5  podman      0.01%       208.9kB / 67.1GB   0.00%       0B / 726B   0B / 0B       1           3.915ms     0.01%
@@ -209,7 +209,7 @@ xychart
 
 ##### Under load
 
-```
+```sh
 $ podman stats
 ID            NAME        CPU %       MEM USAGE / LIMIT  MEM %       NET IO        BLOCK IO      PIDS        CPU TIME     AVG CPU %
 241deb12adf5  podman      57.34%      417.8kB / 67.1GB   0.00%       0B / 1.216kB  0B / 0B       1           13.879976s   0.13%
@@ -257,7 +257,7 @@ xychart
 #### Networking performance
 
 To compare networking performance among the three solutions we have used [Drill](https://github.com/fcsonline/drill), a HTTP load testing application written in Rust. The [benchmark file](https://github.com/josecastillolema/wasmedge-server/blob/main/drill-benchmark.yml) can be found in the repository and generates 85 byte HTTP GETs and POSTs calls:
-```
+```sh
 $ drill --benchmark drill-benchmark.yml --stats
 ...
 Time taken for tests      44.0 seconds
@@ -349,20 +349,20 @@ Wasm is often described as having "near-native performance". Let's remove podman
 #### Wasmedge
 
 To build locally the WasmEdge enabled served:
-```
+```sh
 $ rustup target add wasm32-wasi
 $ cargo build --target wasm32-wasi --release
 ```
 
 Run the Wasm bytecode file in WasmEdge CLI.
 
-```
+```sh
 $ wasmedge target/wasm32-wasi/release/server-with-wasm.wasm
 Listening on http://0.0.0.0:8080
 ```
 
 And run the test:
-```
+```sh
 $ drill --benchmark drill-benchmark.yml --stats
 ...
 Time taken for tests      91.4 seconds
@@ -383,20 +383,20 @@ While the server did not become unresponsive and sustained a longer test, the RP
 #### Native
 
 Compile the Rust server source code:
-```
+```sh
 $ rustup target add x86_64-unknown-linux-musl
 $ cargo build --target x86_64-unknown-linux-musl --release
 ```
 
 Run the server:
 
-```
+```sh
 $ ./target/x86_64-unknown-linux-musl/release/server-without-wasm
 Listening on http://0.0.0.0:8080
 ```
 
 And run the test:
-```
+```sh
 $ drill --benchmark drill-benchmark.yml --stats
 ...
 Time taken for tests      23.0 seconds
@@ -435,7 +435,7 @@ xychart
 Looking at this nice article about the [Performance of WebAssembly runtimes in 2023](https://00f.net/2023/01/04/webassembly-benchmark-2023/) it does not look that Wasmedge is a slow runtime compared to the median performance. If you’re looking for the best performer, looks like [iwasm](https://github.com/bytecodealliance/wasm-micro-runtime) is currently the one to choose, but overall Wasmtime, WasmEdge and Wasmer (supported by crun) are in the same ballpark and have a decent performance.
 
 A quick look at the `wasmedge` CLI options shows an option that could be of interest for this particular use case, however no significant performance improvement was observed with it:
-```
+```sh
 $ wasmedge -h
 ...
 --enable-threads
@@ -454,7 +454,7 @@ debug = 1
 ```
 
 Build and run again the server, clone the [FlameGraph repository](https://github.com/brendangregg/FlameGraph) and for convenience put it on your path:
-```
+```sh
 $ perf record -F 99 -p [pid of server-with-wasm] --call-graph dwarf -- curl localhost:8080
 $ perf script > server-with-wasm.perf
 $ stackcollapse-perf.pl server-with-wasm.perf > server-with-wasm.folded

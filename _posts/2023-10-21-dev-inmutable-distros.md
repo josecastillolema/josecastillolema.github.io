@@ -61,17 +61,17 @@ Drawbacks:
 ## Flatpak approach
 
 You can install Flatpak SDKs such as the Rust build tools like this:
-```
-$ flatpak install org.freedesktop.Sdk.Extension.rust-stable
+```sh
+flatpak install org.freedesktop.Sdk.Extension.rust-stable
 ```
 
 And then load them into a Flatpak editor using an SDK extension flag:
-```
-$ FLATPAK_ENABLE_SDK_EXT=rust-stable flatpak run com.visualstudio.code
+```sh
+FLATPAK_ENABLE_SDK_EXT=rust-stable flatpak run com.visualstudio.code
 ```
 or just load every SDK available in your local setup:
-```
-$ FLATPAK_ENABLE_SDK_EXT=* flatpak run com.visualstudio.code
+```sh
+FLATPAK_ENABLE_SDK_EXT=* flatpak run com.visualstudio.code
 ```
 
 This causes the tools and libraries from that SDK to be made visible to the Flatpak application. There are Flatpak SDKs for a few languages like Java, Rust, Haskell, PHP and Node, but obviously support for all use-cases does not exist. But if you only plan to develop in languages that already have an SDK ready or are willing to learn how to package more SDKs, then this approach is definitely viable for things like Neovim, Emacs and VSCode Flatpaks.
@@ -112,24 +112,19 @@ Let's take a look at local installs for several platforms.
 ### OCaml
 
 We will leverage the [OCaml Package Manager (opam)](https://opam.ocaml.org/) to install the platform (or several versions) and local switches to each project:
-```
-$ curl https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-i686-linux -Lo ~/bin/opam && chmod +x ~/bin/opam
+```sh
+curl https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-i686-linux -Lo ~/bin/opam && chmod +x ~/bin/opam
 ```
 
 From a toolbx container with proper development tools, i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile) incialize the opam environment and install the [platform tools](https://ocaml.org/docs/platform):
-```
-⬢ $ opam init
-⬢ $ opam install dune ocaml-lsp-server odoc ocamlformat utop
-```
-
-Optionally, install some extras for Emacs, Vim and Neovim:
-```
-⬢ $ opam install ocp-indent ocp-index merlin tuareg
+```sh
+opam init
+opam install dune ocaml-lsp-server odoc utop
 ```
 
 We need to add the opam path (`~/bin`) to our editor of choice (i.e.: VSCode) path:
-```
-$ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/bin:/home/$USER/.opam/default/bin' com.visualstudio.code
+```sh
+sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/bin:/home/$USER/.opam/default/bin' com.visualstudio.code
 ```
 
 Finally, open the project in VSCode and choose the corresponding opam switch.
@@ -138,8 +133,8 @@ Finally, open the project in VSCode and choose the corresponding opam switch.
 
 It is possible to define a switch within the source of a project to be used specifically in that project.
 If a **local switch** is detected in the current directory or a parent, opam will select it automatically.
-```
-⬢ $ opam switch create .
+```sh
+opam switch create .
 ```
 
 Finally, open the project in VSCode and choose the corresponding recommended opam switch.
@@ -148,24 +143,23 @@ Finally, open the project in VSCode and choose the corresponding recommended opa
 ### Golang
 
 Download latest version:
-```
-$ mkdr ~/go
-$ curl https://go.dev/dl/go1.21.3.linux-amd64.tar.gz -Lo ~/go.tar.gz
-$ tar xf ~/go/go.tar.gz
-$ mv ~/go/go ~/go/go-1.21.3
+```sh
+mkdr ~/go
+curl https://go.dev/dl/go1.21.3.linux-amd64.tar.gz -Lo ~/go.tar.gz
+tar xf ~/go/go.tar.gz
+mv ~/go/go ~/go/go-1.21.3
 ```
 
 Add the following environment variables to your environment:
-```
+```sh
 export GOROOT=$HOME/go/go-1.21.3
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 
 Check installation:
-```
-$ go version
-go version go1.21.3 linux/amd64
+```sh
+go version
 ```
 
 Finally, open VSCode (it should automatically detect the local Golang installation), install the [Go VSCode extension](https://marketplace.visualstudio.com/items?itemName=golang.Go) and click on `⚠ Analysis Tools Missing` to install those.
@@ -178,21 +172,26 @@ Finally, open VSCode (it should automatically detect the local Golang installati
 Install both `python` and `pip` in the local user environment, compiling an specific version.
 
 From a toolbx container with proper development tools (and readline, sqlite and libffi dev dependencies), i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/41/Containerfile) download and compile Python:
-```
-⬢ $ wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
-⬢ $ tar -xf Python-3.?.?.tar.xz
-⬢ $ cd Python-3.?.?.tar.xz
-⬢ $ ./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions --with-ensurepip=install
-⬢ $ make install
-⬢ $ ln -s ~/bin/python3 ~/bin/python
+```sh
+wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
+tar -xf Python-3.?.?.tar.xz
+cd Python-3.?.?.tar.xz
+./configure --prefix=$HOME --enable-optimizations --enable-loadable-sqlite-extensions --with-ensurepip=install
+make install
+ln -s ~/bin/python3 ~/bin/python
 ```
 
 And then install `pip`:
+```sh
+curl -O https://bootstrap.pypa.io/get-pip.py
+chmod +x get-pip.py
+./get-pip.py
+pip install ipython jinjanator
 ```
-$ curl -O https://bootstrap.pypa.io/get-pip.py
-$ chmod +x get-pip.py
-$ ./get-pip.py
-$ pip install ipython jinjanator
+
+Finally install the LSP server:
+```sh
+pip install ty
 ```
 
 Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment `~/bin/python`. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.
@@ -202,7 +201,7 @@ Then you can just pip install any dependencies, open the project in VSCode and c
 #### Using python virtual environments
 
 Before opening the project in VSCode:
-```
+```sh
 $ flatpak run --command=sh com.visualstudio.code
 [📦] python -m venv .
 [📦] source bin/activate
@@ -214,8 +213,13 @@ Then open the project in VSCode and choose the local virtual environment.
 
 To download Rustup and install Rust, run the following in your terminal, then follow the on-screen instructions.
 
+```sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
-$ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+Finally install the LSP server:
+```sh
+rustup component add rust-analyzer
 ```
 
 ### Ansible
@@ -223,11 +227,11 @@ $ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 Python is a pre-requisite.
 
 Local ansible installation:
+```sh
+pip install ansible ansible-lint
 ```
-$ pip install ansible ansible-lint
-```
-Ansible will be installed on ~/.local/bin, so we need to add this path to our editor of choice (i.e.: VSCode):
-```
+Ansible will be installed on `~/.local/bin`, so we need to add this path to our editor of choice (i.e.: VSCode):
+```sh
 $ which ansible
 ~/.local/bin/ansible
 $ sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' com.visualstudio.code

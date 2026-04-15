@@ -3,7 +3,7 @@ title:  "Entrevistas en Diferido"
 last_modified_at: 2026-04-13
 tags:
   - dev
-  - en
+  - es
 toc: false
 toc_sticky: true
 image: /assets/images/posts/2026-04-13-entrevistas-diferido.jpg

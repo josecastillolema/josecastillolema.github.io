@@ -19,7 +19,7 @@ The primary use case of Kubemark is scalability testing, as simulated clusters c
 We won't be using the [Cluster API Kubemark Provider](https://github.com/kubernetes-sigs/cluster-api-provider-kubemark/) for this demo, and instead we will be using directly Kubemark itself.
 
 Let's assume we have a **working OpenShift cluster** available. We will be leveraging a [Red Hat OpenShift Local instance](https://developers.redhat.com/products/openshift-local/overview) (formerly Red Hat CodeReady Containers) for this demo:
-```
+```sh
 ❯ oc version
 Client Version: 4.13.6
 Kustomize Version: v4.5.7
@@ -32,7 +32,7 @@ crc-2zx29-master-0   Ready    control-plane,master,worker   54d     v1.26.6+73ac
 ```
 
 Let's create a new **project**, **secret** and corresponding **permissions**:
-```
+```sh
 ❯ oc new-project kubemark
 Now using project "kubemark" on server "https://api.crc.testing:6443".
 
@@ -87,7 +87,7 @@ pod/kubemark-node created
 ## Validation
 
 Let's check the if new node was properly registered:
-```
+```sh
 ❯ oc get po
 NAME             READY   STATUS    RESTARTS   AGE
 kubemark-node    1/1     Running   0          5s
@@ -99,7 +99,7 @@ kubemark-node        Ready    <none>                        4s      v1.26.7
 ```
 
 The cluster should be healthy:
-```
+```sh
 ❯ oc get co
 NAME                                       VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
 authentication                             4.13.6    True        False         False      12d
@@ -131,7 +131,7 @@ service-ca                                 4.13.6    True        False         F
 ```
 
 And there should a few pods already "running" in the new hollow node:
-```
+```sh
 ❯ oc get pods -A --field-selector spec.nodeName=kubemark-node
 NAMESPACE                           NAME                                  READY   STATUS     RESTARTS   AGE
 hostpath-provisioner                csi-hostpathplugin-8p9j5              4/4     Running    0          17m
@@ -149,7 +149,7 @@ openshift-sdn                       sdn-rv9mb                             2/2   
 ```
 
 Let's try to create some pods on the new hollow node:
-```
+```sh
 ❯ oc run test --image nginx --overrides='{"spec": { "nodeSelector": {"kubernetes.io/hostname": "kubemark-node"}}}'
 pod/test created
 
