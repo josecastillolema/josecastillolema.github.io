@@ -1,4 +1,6 @@
 Jekyll::Hooks.register [:pages, :posts, :documents], :post_render do |doc|
+  next unless doc.output
+  next unless doc.output_ext == ".html"
   if doc.output
     doc.output = doc.output.gsub(":octocat:", '<img class="emoji" title="octocat" alt="octocat" src="https://github.githubassets.com/images/icons/emoji/octocat.png" height="20" width="20">')
 
