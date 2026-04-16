@@ -10,6 +10,8 @@ toc_sticky: true
 image: /assets/images/posts/2024-03-30-industriosa-ocaml/1.webp
 ---
 
+<!-- cSpell:language en,es -->
+
 La **programación funcional** es un paradigma que enfatiza el uso de funciones en lugar de modificar el estado o los datos directamente. Promueve un código declarativo conciso y se centra en la inmutabilidad, lo que hace que su código sea más fácil de leer, depurar y razonar. Esta reunión tiene como objetivo presentar [OCaml](https://ocaml.org/), un lenguaje de programación funcional de propósito general y tipado estático con un fuerte soporte para los principios de programación funcional.
 
 En este evento abordaremos los siguientes temas:

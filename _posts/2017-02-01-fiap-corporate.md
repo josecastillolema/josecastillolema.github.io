@@ -15,6 +15,8 @@ image: /assets/images/posts/2017-02-01-fiap-corporate.png
 image_link: https://www.fiap.com.br/corporate/
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 - **Citibank**: Internet of Things (2017)
 - **Gerdau**: Internet of Things (2017)
 - **Ambev**: Computers Networks and Cloud Computing (2018)

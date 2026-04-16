@@ -13,6 +13,8 @@ image: /assets/images/posts/2020-11-13-haina-talent/logo.jpg
 image_link: https://e.huawei.com/en/talent
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 Para acompanhar os cursos [HCIA Routing & Switching](/hcia-14/), uma vez aprovado no processo seletivo é necessária a criação de uma conta na plataforma [Huawei Talent Online](https://e.huawei.com/en/talent).
 
 A plataforma on-line da Huawei ICT Academy fornece um suporte digital integrado com compartilhamento de recursos, suporte ao ensino, interação com a comunidade e aprendizado móvel.

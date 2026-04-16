@@ -13,6 +13,8 @@ image: /assets/images/posts/2021-05-31-fiap-meetup/0.png
 image_link: https://www.meetup.com/pt-BR/fiapmeetups/events/278576296
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 ## Descrição do evento
 
 De acordo com o Gartner, mais de 85% das organizações executarão aplicativos em contêineres no Kubernetes até 2025. Por isso alguns profissionais definem que o Kubernetes será o “sistema operacional” da nuvem durante a transformação de aplicações para a Arquitetura de Microsserviços.

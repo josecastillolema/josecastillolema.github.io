@@ -12,6 +12,8 @@ toc: true
 toc_sticky: true
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 > Originally published at [**Churrops on DevOps**](https://churrops.io/2017/11/26/terraform-iac-terraformando-no-openstack/) on November 26, 2017.
 
 Olá pessoal, vamos começar uma uma série de artigos sobre OpenStack dando continuidade aos artigos sobre Terraform ([parte 1](https://churrops.io/2017/08/01/terraform-iac-infra-como-codigo-conhecendo/) e [parte 2](https://churrops.io/2017/08/03/terraform-iac-terraformando-na-aws/)) do [Rodrigo Floriano](https://churrops.io/about-authorsrdglinux/), pois é uma ferramenta que vários assíduos do blog já conhecem e usam a diário!

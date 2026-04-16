@@ -12,6 +12,8 @@ image: /assets/images/posts/2022-04-27-eu-capacito.png
 image_link: https://www.institutoitmidia.com.br/eu-capacito/
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 Em conjunto com o [EU CAPACITO](https://www.institutoitmidia.com.br/eu-capacito/), programa liderado pelo [Instituto IT Mídia](https://www.institutoitmidia.com.br/), a FIAP oferece 20 Nano Courses gratuitos. São cursos de 40 a 160 horas nas áreas de Tecnologia, Inovação e Negócios.
 
 [Cadastre-se](https://on.fiap.com.br/local/programaeucapacito/) e escolha os seus.

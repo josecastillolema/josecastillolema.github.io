@@ -13,6 +13,8 @@ image: /assets/images/posts/2020-07-09-aws-academy/01.png
 image_link: https://aws.amazon.com/pt/training/awsacademy/
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 ## Benefícios do programa
 - Acesso ao currículo criado pela AWS: O currículo pronto para ensino permite que as instituições membro incorporem a instrução em seu catálogo de cursos. As atualizações regulares da AWS refletem o ritmo da inovação e as melhores práticas da computação em nuvem.
 - Crie habilidades alinhadas à AWS Certification: os alunos adquirem habilidades de computação na Nuvem AWS por meio de experiência prática e podem se preparar para a AWS Certification com simulados gratuitos e **descontos de 50% para os exames completos**.

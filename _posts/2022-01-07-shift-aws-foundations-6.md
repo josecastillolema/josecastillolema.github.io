@@ -13,6 +13,8 @@ image: /assets/images/posts/2022-01-07-shift-aws-foundations-6/0.png
 image_link: https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 O **AWS Academy Cloud Foundations** (Fundamentos de nuvem da AWS Academy) é destinado a profissionais interessados em aperfeiçoar seus conhecimentos sobre computação em nuvem e AWS, e àqueles que gostariam de obter a certificação da Amazon – **[AWS Certified Cloud Practitioner (CLF-01)](https://aws.amazon.com/pt/certification/certified-cloud-practitioner/)**.
 
 O curso oferece uma visão geral detalhada dos conceitos de nuvem, dos serviços essenciais, da segurança, da arquitetura, da definição de preço e do suporte da AWS. A certificação AWS Certified Cloud Practitioner é uma etapa recomendada para a obtenção da certificação Specialty ou em nível Associate.

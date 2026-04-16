@@ -10,6 +10,8 @@ toc: false
 toc_sticky: true
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 <video width="480" height="320" controls="controls">
   <source src="/assets/images/posts/2021-11-03-aws-community-day-21/1.mp4" type="video/mp4">
 </video>

@@ -12,6 +12,8 @@ image: /assets/images/posts/2022-06-13-women-cloud.jpeg
 image_link: https://aws-mulheres-em-cloud-2022.splashthat.com/
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 Sabemos que a tecnologia tem um poder transformador quando aliada à educação e podemos usá-la como ferramenta nos impactos positivos na luta de igualdade social.
 
 A AWS apoia uma força de trabalho STEM (abordagem interdisciplinar inovadora que engloba temas como ciências, tecnologia, engenharia e matemática) como uma comunidade global, diversificada e inclusiva, e por isso preparou um dia muito especial para inspirar, motivar e conectar suas alunas e educadoras ao próximo nível de sua carreira em tecnologia.

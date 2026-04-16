@@ -14,6 +14,8 @@ image: /assets/images/posts/2021-11-05-huawey-academy-workshop.png
 image_link: http://www.huawei.com/audience/answer.do?u=2675759
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 No dia 09 de Novembro, será realizado um Worshop ao vivo sobre o programa **Huawei ICT Academy**, com apresentação de alguns casos de universidades parceiras. Participe e aprenda um pouco mais sobre como podemos trabalhar juntos.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7ub5a4JODt0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

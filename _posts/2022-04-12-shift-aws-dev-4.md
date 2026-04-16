@@ -14,6 +14,8 @@ image: /assets/images/posts/2022-04-12-shift-aws-dev-4/1.png
 image_link: https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-developing
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 Nosso foco é formar profissionais que dominem o desenvolvimento em Cloud. Você vai aprender a utilizar AWS SDK e a identificar as melhores práticas para criar aplicativos na nuvem AWS. Também vai se preparar para o exame de certificação **[AWS Certified Developer - Associate (DVA-C01)](https://aws.amazon.com/pt/certification/certified-developer-associate/)**. Uma jornada com 40 horas de conteúdo, talks e laboratórios práticos.
 
 ## Para quem?

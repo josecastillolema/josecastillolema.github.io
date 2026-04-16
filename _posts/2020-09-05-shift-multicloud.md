@@ -12,6 +12,8 @@ image: /assets/images/posts/2020-09-05-shift-multicloud.png
 image_link: https://www.fiap.com.br/shift/curso/tecnologia/multicloud-architecture-development-solutions-service-online
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 A Computação em Nuvem está transformando a forma como as organizações investem no mundo digital. Nesse cenário, adotar Cloud Computing no ambiente corporativo é seguir o fluxo tecnológico natural. E se manter sempre à frente quanto à e-science e opções de serviços.
 
 Além de ser uma solução inovadora, a Cloud também é um modelo de negócio relativamente novo, aplicável a qualquer tipo de empresa. Nosso foco é formar o profissional para dominar modelos de serviços de Computação em Nuvem (SaaS, PaaS, IaaS), modelos de implantação em Nuvem (privado, público, híbrido e multicloud) e economia em Nuvem. Tudo isso por meio de atividades hands-on na Amazon Web Services (AWS).

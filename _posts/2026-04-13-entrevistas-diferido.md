@@ -10,6 +10,8 @@ image: /assets/images/posts/2026-04-13-entrevistas-diferido.jpg
 image_link: https://t.me/s/entrevistaendiferido
 ---
 
+<!-- cSpell:language en,es -->
+
 **Entrevista para el canal [Entrevistas en Diferido](https://t.me/s/entrevistaendiferido)**
 
 > #EntrevistaJoseCastilloLema

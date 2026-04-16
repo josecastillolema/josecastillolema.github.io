@@ -11,6 +11,8 @@ toc: true
 toc_sticky: true
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 > Originally published at [**Churrops on DevOps**](https://churrops.io/2017/12/20/heat-introducao/) on December 20, 2017.
 
 Olá pessoal, vamos começar uma série de artigos sobre Heat, o “terraform” nativo do OpenStack, ou para quem vem do mundo da AWS, o CloudFormation do OpenStack (inclusive parcialmente compatível). Neste primeiro artigo introdutório vamos aprender a criar as nossas próprias pilhas (ou *stacks*) e recriar a instância do servidor web que criamos no [post passado](/terraformando-openstack/) usando o Terraform.

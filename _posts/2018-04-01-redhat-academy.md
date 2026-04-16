@@ -16,6 +16,8 @@ image: /assets/images/posts/2018-04-01-redhat-academy/2018-04-01-redhat-academy.
 image_link: https://www.redhat.com/pt-br/services/training/red-hat-academy
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 ## Benefícios
 - Aproveite os descontos (**voucher 50% *off***) nos exames de certificação.
 - Escolha o estilo de aprendizado ideal para você dentre os nossos vários formatos de material didático.

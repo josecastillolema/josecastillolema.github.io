@@ -14,6 +14,8 @@ toc: true
 toc_sticky: true
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 [Serie de artigos](/series/#containers) sobre containers (Docker, Docker Compose, Docker Swarm e Kubernetes).
 
 [![GitHub watchers](https://img.shields.io/github/watchers/josecastillolema/fiap?style=social)](https://github.com/josecastillolema/fiap/watchers)

@@ -11,6 +11,8 @@ toc_sticky: true
 image: /assets/images/posts/2018-09-11-ict-competition.jpg
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 A Huawei University promove pela primeira vez no Brasil o ICT Competition, um campeonato mundial promovido anualmente pela companhia para estudantes de TIC – Tecnologia da Informação e Comunicação . Com a participação de mais de 50 países, o programa deve receber mais de 80 mil alunos de cerca de mil instituições de ensino em sua primeira fase, que acontece por meio de uma prova online.
 
 Os estudantes aprovados na primeira fase (top 50) competirão em uma seletiva nacional, que determinará quem serão os representantes do Brasil na fase regional no Mexico (top 6), e posteriormente na fase final, que acontecerá na China em 2019. Os finalistas também poderão conhecer os laboratórios de Pesquisa e Desenvolvimento da sede global da companhia, além de receber certificados de acordo com sua colocação e concorrer a smartphones Huawei.

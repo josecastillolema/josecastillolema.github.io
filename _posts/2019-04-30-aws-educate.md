@@ -13,6 +13,8 @@ image: /assets/images/posts/2019-04-30-aws-educate/0.png
 image_link: https://aws.amazon.com/pt/education/awseducate/
 ---
 
+<!-- cSpell:language en,pt-BR -->
+
 
 ## Recursos e benefícios
 - Acesso ao [**AWS Educate Student Portal**](https://aws.amazon.com/pt/education/awseducate/).

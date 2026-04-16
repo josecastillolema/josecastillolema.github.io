@@ -17,6 +17,8 @@ image: /assets/images/posts/2026-01-14-kde-express/1.png
 image_link: https://kdeexpress.gitlab.io/posts/kdeexpress/65-kde-express/
 ---
 
+<!-- cSpell:language en,es -->
+
 Especial [esLibre 2026 Melide](https://eslib.re/2026/) destacando algunas de las ponencias, hoy tenemos a José Castillo Lema, que nos trae dos charlas:
 
  - [OCaml vs Python: ventajas de lenguajes (verdaderamente) funcionales](https://propuestas.eslib.re/2026/charlas/ocaml-vs-python-ventajas-de-lenguajes-verdaderamente-funcionales)
