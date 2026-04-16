@@ -49,7 +49,7 @@ Os alunos podem adquirir materiais de aprendizagem, concluir tarefas, consultar 
 ![](/assets/images/posts/2020-11-13-haina-talent/6.png)
 ![](/assets/images/posts/2020-11-13-haina-talent/7.png)
 
-9. Confirmar a solicitação e aguardar pelo mail de aprovação. A aprovação é manual, e não inmediata:
+9. Confirmar a solicitação e aguardar pelo mail de aprovação. A aprovação é manual, e não imediata:
 ![](/assets/images/posts/2020-11-13-haina-talent/8.png)
 
 10. Aguardar o mail de aprovação:

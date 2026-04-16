@@ -30,7 +30,7 @@ Sem mais, vamos la!
  - Quota suficiente na nossa conta para instanciar os recursos solicitados
  - Ter o Terraform instalado (ver [[Terraform] – IaC – Infra como Código – Conhecendo](https://churrops.io/2017/08/01/terraform-iac-infra-como-codigo-conhecendo/))
 
-## Clonando o repósitorio
+## Clonando o repositório
 
 ```sh
 git clone https://github.com/josecastillolema/churrops.git

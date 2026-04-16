@@ -40,7 +40,7 @@ Sem mais, vamos criar o nosso primeiro *stack* e recriar o nosso servidor web.
 No repositório [https://github.com/josecastillolema/churrops.git](https://github.com/josecastillolema/churrops.git) podem fazer *download* do arquivo heat.yaml, o *template* que usaremos durante este artigo.
 
 ## Descrição do *template*
-As duas primeras linhas mostram a versão em uso do formato do template e uma descrição do conteúdo do mesmo:
+As duas primeiras linhas mostram a versão em uso do formato do template e uma descrição do conteúdo do mesmo:
 ```yaml
 heat_template_version: 2016-04-08
 description: Servidor web para churrops!
@@ -202,7 +202,7 @@ Em alguns minutos (enquanto **cloud-init** instala e configura o servidor web Ap
 
 
 ## Conclusão
-Neste artigo introduzimos o Heat, o orquestrador do OpenStack. Vimos como mantém todas as funcionalidades de outros IaCs, como Terraform, mas é integrado de uma forma mais nativa no OpenStack e podemos accesá-lo via *dashboard*	, linha de comandos ou API REST (compatível com a AWS CloudFormation).
+Neste artigo introduzimos o Heat, o orquestrador do OpenStack. Vimos como mantém todas as funcionalidades de outros IaCs, como Terraform, mas é integrado de uma forma mais nativa no OpenStack e podemos acessá-lo via *dashboard*	, linha de comandos ou API REST (compatível com a AWS CloudFormation).
 
 Nos próximos artigos veremos como criar via Heat um balanceador de carga em alta disponibilidade usando `haproxy` e VRRP.
 

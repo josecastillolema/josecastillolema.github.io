@@ -1,5 +1,5 @@
 ---
-title:  "FIAP SHIFT: AWS Academy Cloud Foundations - 4rd edition"
+title:  "FIAP SHIFT: AWS Academy Cloud Foundations - 4th edition"
 last_modified_at: 2021-06-21
 tags:
   - aws

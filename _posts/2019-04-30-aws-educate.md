@@ -16,7 +16,7 @@ image_link: https://aws.amazon.com/pt/education/awseducate/
 
 ## Recursos e benefícios
 - Acesso ao [**AWS Educate Student Portal**](https://aws.amazon.com/pt/education/awseducate/).
-- Accesso ao **console AWS com 50$ de créditos** e labs online.
+- Acesso ao **console AWS com 50$ de créditos** e labs online.
 - [**Cloud Career Pathways**](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Explore trajetórias profissionais na nuvem para saber mais sobre as principais competências de nuvem nas carreiras de tecnologia mais procuradas. Desde Cientista de machine learning até Desenvolvedor de aplicativos, cada trajetória alinha-se a uma função específica e inclui mais de 25 horas de conteúdo autoguiado acompanhado de testes de conhecimento. Ganhe distintivos pelas trajetórias concluídas e compartilhe com potenciais empregadores no AWS Educate Job Board.
 - [**AWS Educate Badges**](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/): Desbloqueie um distintivo do AWS Educate em uma das áreas de interesse de maior crescimento do setor, incluindo Alexa, jogos e Internet das Coisas (IoT). Cada distintivo apresenta 10-15 horas de conteúdo individualizado para expandir seu conjunto de habilidades na nuvem.
 - [**Salas de aula do AWS Educate**](https://aws.amazon.com/pt/education/awseducate/classrooms/): Uma sala de aula virtual para os estudantes aprenderem sobre a nuvem em um ambiente prático. Cada sala de aula utiliza um conjunto distinto de serviços que são ideais para o aprendizado de vários tópicos sobre a nuvem, como Big Data ou machine learning.
@@ -54,7 +54,7 @@ image_link: https://aws.amazon.com/pt/education/awseducate/
 
 1. Acessar [www.awseducate.com](https://www.awseducate.com/)
 
-2. Seleccionar **Join AWS Educate**
+2. Selecionar **Join AWS Educate**
 
 3. Selecionar o rol de estudante
 

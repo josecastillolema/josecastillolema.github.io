@@ -1,6 +1,6 @@
 ---
 title:  "InstructLab: Democratizing AI Models at Scale (DL01001G)"
-last_modified_at: 2022-12-21
+last_modified_at: 2024-12-21
 tags:
   - cert
   - en
@@ -10,7 +10,7 @@ image: /assets/images/posts/2024-12-21-instructlab.jpg
 image_link: https://www.ibm.com/training/
 ---
 
-[IBM Training](https://www.ibm.com/training/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possiblity of earning certificates and badges.
+[IBM Training](https://www.ibm.com/training/) provides free online-learning courses on a range of open source topics from Linux to blockchain, networking to cloud, and everything in between, with the possibility of earning certificates and badges.
 
 I would like to recommend the [InstructLab: Democratizing AI Models at Scale](https://www.ibm.com/training/course/instructlab-democratizing-ai-models-at-scale-DL01001G) course which helps to understand InstructLab and its applications in customizing AI Language Models (SLMs and LLMs).
 

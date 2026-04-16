@@ -1,5 +1,5 @@
 ---
-title:  "Development workflows on inmutable distros: rootless setup"
+title:  "Development workflows on immutable distros: rootless setup"
 last_modified_at: 2023-10-21
 tags:
   - dev
@@ -11,7 +11,7 @@ toc_sticky: true
 
 > Continuation of [Samsai](https://samsai.eu/) notes on [Toolbox-based Emacs Flatpak workflow](https://samsai.eu/post/toolbox-based-emacs-flatpak-workflow/).
 
-I have been using inmutable OS distributions for a while (Fedora Silverblue and Sericea, see my [dotfiles](/dotfiles/)). They have the following characteristics:
+I have been using immutable OS distributions for a while (Fedora Silverblue and Sericea, see my [dotfiles](/dotfiles/)). They have the following characteristics:
  - System root (baseOS) is mostly immutable
  - System software installation/updates are handled as images and applied on reboot
  - For installing desktop applications, [Flatpak](https://flatpak.org/) is the recommended default route
@@ -25,15 +25,15 @@ I personally follow these guidelines when installing new applications:
  - Avoid duplication (i.e.: installing the same editors or development environments in several places)
  - Try to avoid `rpm-ostree` layering on baseOS as much as possible
 
-The development workflow story on inmutable distros hasn't really been standardized yet, as these distros are quite new. Let's take a look at several approaches and **finally discuss the local (rootless) installation method**.
+The development workflow story on immutable distros hasn't really been standardized yet, as these distros are quite new. Let's take a look at several approaches and **finally discuss the local (rootless) installation method**.
 
 ## Layering with rpm-ostree (not a good idea)
 
-You can also install development tools directly on the inmutable distros install using package layering with `rpm-ostree`. So, if you want to, you can install your editor, compilers, build tools and linters straight on the Silverblue install.
+You can also install development tools directly on the immutable distros install using package layering with `rpm-ostree`. So, if you want to, you can install your editor, compilers, build tools and linters straight on the Silverblue install.
 
 However, this isn't really how most people view you should use Silverblue. The application installation process is a bit more annoying, although experimental support for installing software without rebooting does exist nowadays. It also makes your system install kind of messy due to large numbers of overlayed packages.
 
-I wouldn't take this route because while you aren't strictly speaking losing all of the benefits of inmutable distros, you are making life quite difficult for yourself compared to just using regular Fedora Workstation for instance. You also don't get the benefits of separating your system from your application environments and expose yourself to more potential breakages.
+I wouldn't take this route because while you aren't strictly speaking losing all of the benefits of immutable distros, you are making life quite difficult for yourself compared to just using regular Fedora Workstation for instance. You also don't get the benefits of separating your system from your application environments and expose yourself to more potential breakages.
 
 
 ## Toolbx approaches
@@ -44,7 +44,7 @@ The easiest way to have everything working in a predictable and simple manner is
 The benefit of this approach is that it is extremely close to how you'd work on any other Linux distribution.
 
 This approach has several drawbacks:
- - All software pilled into one environment
+ - All software piled into one environment
  - Keeping the text editor inside the Toolbox still results in somewhat poor integration with the host system
  - Install desktop applications into toolbx containers instead of Flatpak applications
 
@@ -99,9 +99,9 @@ Tools available:
 
 ## User (rootless) installations
 
-I have not seen much information about this method anywhere and for me as of today it is the prefered approach. Flatpak applications (i.e.: editors) cannot access the root filesystem (i.e.: the preinstalled python package on `/usr/bin/python`). However they have full access to the home directory (same as Toolbx containers).
+I have not seen much information about this method anywhere and for me as of today it is the preferred approach. Flatpak applications (i.e.: editors) cannot access the root filesystem (i.e.: the preinstalled python package on `/usr/bin/python`). However they have full access to the home directory (same as Toolbx containers).
 
-So installing the development runtimes and tools locally (and then configuring your Flatpak editor to use them) provides an excelent out of the box developer experience without the need of Flatpak SDKs nor plugins to enable your editor to access the Toolbx containers.
+So installing the development runtimes and tools locally (and then configuring your Flatpak editor to use them) provides an excellent out of the box developer experience without the need of Flatpak SDKs nor plugins to enable your editor to access the Toolbx containers.
 
 Drawbacks:
  - It can be more time consuming to set up than normal `rpm` installs in some scenarios
@@ -116,7 +116,7 @@ We will leverage the [OCaml Package Manager (opam)](https://opam.ocaml.org/) to 
 curl https://github.com/ocaml/opam/releases/download/2.1.5/opam-2.1.5-i686-linux -Lo ~/bin/opam && chmod +x ~/bin/opam
 ```
 
-From a toolbx container with proper development tools, i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile) incialize the opam environment and install the [platform tools](https://ocaml.org/docs/platform):
+From a toolbx container with proper development tools, i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox-38/Containerfile) initialize the opam environment and install the [platform tools](https://ocaml.org/docs/platform):
 ```sh
 opam init
 opam install dune ocaml-lsp-server odoc utop
@@ -144,7 +144,7 @@ Finally, open the project in VSCode and choose the corresponding recommended opa
 
 Download latest version:
 ```sh
-mkdr ~/go
+mkdir ~/go
 curl https://go.dev/dl/go1.21.3.linux-amd64.tar.gz -Lo ~/go.tar.gz
 tar xf ~/go/go.tar.gz
 mv ~/go/go ~/go/go-1.21.3
@@ -164,7 +164,7 @@ go version
 
 Finally, open VSCode (it should automatically detect the local Golang installation), install the [Go VSCode extension](https://marketplace.visualstudio.com/items?itemName=golang.Go) and click on `⚠ Analysis Tools Missing` to install those.
 
-![](/assets/images/posts/2023-10-21-dev-inmutable-distros/go.png)
+![](/assets/images/posts/2023-10-21-dev-immutable-distros/go.png)
 
 ### Python
 
@@ -196,7 +196,7 @@ pip install ty
 
 Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment `~/bin/python`. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.
 
-![](/assets/images/posts/2023-10-21-dev-inmutable-distros/python.png)
+![](/assets/images/posts/2023-10-21-dev-immutable-distros/python.png)
 
 #### Using python virtual environments
 

@@ -10,7 +10,7 @@ image: /assets/images/posts/2022-01-04-examtopics.jpg
 image_link: https://www.examtopics.com/
 ---
 
-I have been using the mocks from [ExamTopics](https://www.examtopics.com/) latelly to prepare to several certification exams and I have to say I found them the best material around.
+I have been using the mocks from [ExamTopics](https://www.examtopics.com/) lately to prepare to several certification exams and I have to say I found them the best material around.
 
 I personally prefer them over exam reviews/practice tests from paid platforms, for the following reasons:
  - the community around
