@@ -1,4 +1,4 @@
-<!doctype html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover" ><meta name="generator" content="Jekyll v4.4.1" /><meta property="og:title" content="OpenStack series V: Cinder - Block Storage Service" /><meta property="og:locale" content="en" /><meta name="description" content="Serie de artigos sobre OpenStack." /><meta property="og:description" content="Serie de artigos sobre OpenStack." /><link rel="canonical" href="https://josecastillolema.github.io/openstack5-cinder/" /><meta property="og:url" content="https://josecastillolema.github.io/openstack5-cinder/" /><meta property="og:site_name" content="GitOps" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2018-04-27T00:00:00+00:00" /><meta property="og:image" content="https://josecastillolema.github.io/assets/img/favicons/web-app-manifest-512x512.png" /><meta name="twitter:card" content="summary_large_image" /><meta property="twitter:image" content="https://josecastillolema.github.io/assets/img/favicons/web-app-manifest-512x512.png" /><meta property="twitter:title" content="OpenStack series V: Cinder - Block Storage Service" /><meta name="google-site-verification" content="googled48a6d8a28aaa375" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2018-04-27T00:00:00+00:00","datePublished":"2018-04-27T00:00:00+00:00","description":"Serie de artigos sobre OpenStack.","headline":"OpenStack series V: Cinder - Block Storage Service","mainEntityOfPage":{"@type":"WebPage","@id":"https://josecastillolema.github.io/openstack5-cinder/"},"url":"https://josecastillolema.github.io/openstack5-cinder/"}</script><title>OpenStack series V: Cinder - Block Storage Service | GitOps</title><link rel="icon" type="image/png" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/assets/img/favicons/favicon.svg"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.gstatic.com" ><link rel="preconnect" href="https://cdn.jsdelivr.net" ><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" ><link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css"> <script src="/assets/js/dist/theme.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.20/dayjs.min.js,npm/dayjs@1.11.20/locale/en.js,npm/dayjs@1.11.20/plugin/relativeTime.js,npm/dayjs@1.11.20/plugin/localizedFormat.js,npm/tocbot@4.36.4/dist/tocbot.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id=G-1EBHNQEGXG"></script> <script> document.addEventListener('DOMContentLoaded', () => { window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-1EBHNQEGXG'); }); </script><style> /* Keep banner images at their original size */ .post-meta .preview-img { width: auto !important; height: auto !important; aspect-ratio: unset !important; } .post-meta .preview-img img { width: auto !important; height: auto !important; max-width: 100%; object-fit: unset !important; } /* Expand TOC contents by default */ .is-collapsed { max-height: 1000px !important; } /* Style h5/h6 entries in TOC (desktop) */ .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-link { font-size: 0.85em; } .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-link { font-size: 0.8em; } /* Style h5/h6 entries in TOC (mobile popup) */ #toc-popup .node-name--H5 { padding-left: 4.5rem; } #toc-popup .node-name--H6 { padding-left: 5.625rem; } /* Bold h5/h6 in post content */ .content h5, .content h6 { font-weight: 600; } /* Merge output blocks into preceding code blocks: remove gap and hide header */ .highlighter-rouge + .language-plaintext { margin-top: -0.75rem; } .highlighter-rouge + .language-plaintext .code-header { display: none; } /* Hide line numbers on shell code blocks and align with plaintext blocks */ .language-sh .rouge-gutter, .language-bash .rouge-gutter { display: none !important; } .language-sh .rouge-code, .language-bash .rouge-code { padding-left: 1.25rem !important; } /* Hide "Plaintext" label on untagged code blocks */ [data-label-text="Plaintext"] { display: none; } /* Disable avatar zoom on hover */ @media all and (min-width: 576px) { #sidebar #avatar img { transition: none; } #sidebar #avatar img:hover { transform: none; } }</style><script> /* Extend TOC to support h5 and h6 headings (Chirpy only supports h2-h4) */ window.addEventListener('load', function () { setTimeout(function () { if (typeof tocbot === 'undefined') return; var shared = { contentSelector: '.content', ignoreSelector: '[data-toc-skip]', headingSelector: 'h2, h3, h4, h5, h6', orderedList: false, scrollSmooth: false }; tocbot.destroy(); if (window.matchMedia('(min-width: 1200px)').matches) { tocbot.init(Object.assign({}, shared, { tocSelector: '#toc', headingsOffset: 32 })); } else { tocbot.init(Object.assign({}, shared, { tocSelector: '#toc-popup-content', collapseDepth: 4, headingsOffset: 48 })); } }, 500); }); </script><body><aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end"><header class="profile-wrapper"> <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/me.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a> <a class="site-title d-block" href="/">GitOps</a><p class="site-subtitle fst-italic mb-0">Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</p></header><nav class="flex-column flex-grow-1 w-100 ps-0"><ul class="nav"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/series/" class="nav-link"> <i class="fa-fw fas fa-list"></i> <span>SERIES</span> </a><li class="nav-item"> <a href="/talks/" class="nav-link"> <i class="fa-fw fas fa-microphone"></i> <span>TALKS</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle"></i> <span>ABOUT</span> </a></ul></nav><div class="sidebar-bottom d-flex flex-wrap align-items-center w-100"> <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/josecastillolema" aria-label="github" target="_blank" rel="noopener noreferrer" > <i class="fab fa-github"></i> </a> <a href="javascript:location.href = 'mailto:' + ['josecastillolema','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="https://www.linkedin.com/in/jose-castillo-lema" aria-label="linkedin" target="_blank" rel="noopener noreferrer" > <i class="fab fa-linkedin"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></aside><div id="main-wrapper" class="d-flex justify-content-center"><div class="container d-flex flex-column px-xxl-5"><header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar"><div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100" ><nav id="breadcrumb" aria-label="Breadcrumb"> <span> <a href="/">Home</a> </span> <span>OpenStack series V: Cinder - Block Storage Service</span></nav><button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar"> <i class="fas fa-bars fa-fw"></i> </button><div id="topbar-title"> Post</div><button type="button" id="search-trigger" class="btn btn-link" aria-label="Search"> <i class="fas fa-search fa-fw"></i> </button> <search id="search" class="align-items-center ms-3 ms-lg-0"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..." > </search> <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button></div></header><div class="row flex-grow-1"><main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4"><article class="px-1" data-toc="true"><header><h1 data-toc-skip>OpenStack series V: Cinder - Block Storage Service</h1><div class="post-meta text-muted"> <span> Posted <time data-ts="1524787200" data-df="ll" data-bs-toggle="tooltip" data-bs-placement="bottom" > Apr 27, 2018 </time> </span> <span> Updated <time data-ts="1524787200" data-df="ll" data-bs-toggle="tooltip" data-bs-placement="bottom" > Apr 27, 2018 </time> </span><div class="d-flex justify-content-between"> <span> By <em> <a href="https://github.com/josecastillolema">Jose Castillo Lema</a> </em> </span><div> <span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="2291 words" > <em>12 min</em> read</span></div></div></div></header><div id="toc-bar" class="d-flex align-items-center justify-content-between invisible"> <span class="label text-truncate">OpenStack series V: Cinder - Block Storage Service</span> <button type="button" class="toc-trigger btn me-1"> <i class="fa-solid fa-list-ul fa-fw"></i> </button></div><button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm"> <span class="label ps-2 pe-1">Contents</span> <i class="fa-solid fa-angle-right fa-fw"></i> </button> <dialog id="toc-popup" class="p-0"><div class="header d-flex flex-row align-items-center justify-content-between"><div class="label text-truncate py-2 ms-4">OpenStack series V: Cinder - Block Storage Service</div><button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75"> <i class="fas fa-close"></i> </button></div><div id="toc-popup-content" class="px-4 py-3 pb-4"></div></dialog><div class="content"><p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p><p><a href="https://github.com/josecastillolema/fiap/watchers" class="img-link shimmer" ><img src="https://img.shields.io/github/watchers/josecastillolema/fiap?style=social" alt="GitHub watchers" loading="lazy"></a> <a href="https://github.com/josecastillolema/fiap/stargazers" class="img-link shimmer" ><img src="https://img.shields.io/github/stars/josecastillolema/fiap?style=social" alt="GitHub stars" loading="lazy"></a> <a href="https://github.com/josecastillolema/fiap/network/members" class="img-link shimmer" ><img src="https://img.shields.io/github/forks/josecastillolema/fiap?style=social" alt="GitHub forks" loading="lazy"></a></p><h2 id="block-storage-service"><span class="me-2">Block Storage Service</span><a href="#block-storage-service" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>Usaremos o serviço <a href="https://docs.openstack.org/cinder/latest/">Cinder</a> para aprender alguns conceitos importantes sobre armazenamento de bloco:</p><ul><li>criação de volumes<li><em>snapshots</em><li>partição, formatação e montagem de volumes</ul><h2 id="pre-reqs"><span class="me-2">Pre-reqs</span><a href="#pre-reqs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li>Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<!doctype html><html lang="en" ><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7f7f7"><meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1b1b1e"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1, shrink-to-fit=no, viewport-fit=cover" ><meta name="generator" content="Jekyll v4.4.1" /><meta property="og:title" content="OpenStack series V: Cinder - Block Storage Service" /><meta property="og:locale" content="en" /><meta name="description" content="Serie de artigos sobre OpenStack." /><meta property="og:description" content="Serie de artigos sobre OpenStack." /><link rel="canonical" href="https://josecastillolema.github.io/openstack5-cinder/" /><meta property="og:url" content="https://josecastillolema.github.io/openstack5-cinder/" /><meta property="og:site_name" content="GitOps" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2018-04-27T00:00:00+00:00" /><meta property="og:image" content="https://josecastillolema.github.io/assets/img/favicons/web-app-manifest-512x512.png" /><meta name="twitter:card" content="summary_large_image" /><meta property="twitter:image" content="https://josecastillolema.github.io/assets/img/favicons/web-app-manifest-512x512.png" /><meta property="twitter:title" content="OpenStack series V: Cinder - Block Storage Service" /><meta name="google-site-verification" content="googled48a6d8a28aaa375" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2018-04-27T00:00:00+00:00","datePublished":"2018-04-27T00:00:00+00:00","description":"Serie de artigos sobre OpenStack.","headline":"OpenStack series V: Cinder - Block Storage Service","mainEntityOfPage":{"@type":"WebPage","@id":"https://josecastillolema.github.io/openstack5-cinder/"},"url":"https://josecastillolema.github.io/openstack5-cinder/"}</script><title>OpenStack series V: Cinder - Block Storage Service | GitOps</title><link rel="icon" type="image/png" href="/assets/img/favicons/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/assets/img/favicons/favicon.svg"><link rel="shortcut icon" href="/assets/img/favicons/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-touch-icon.png"><link rel="preconnect" href="https://fonts.googleapis.com" ><link rel="dns-prefetch" href="https://fonts.googleapis.com" ><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="dns-prefetch" href="https://fonts.gstatic.com" ><link rel="preconnect" href="https://cdn.jsdelivr.net" ><link rel="dns-prefetch" href="https://cdn.jsdelivr.net" ><link rel="stylesheet" href="/assets/css/jekyll-theme-chirpy.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css"> <script src="/assets/js/dist/theme.min.js"></script> <script defer src="https://cdn.jsdelivr.net/combine/npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/glightbox@3.3.0/dist/js/glightbox.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/dayjs@1.11.20/dayjs.min.js,npm/dayjs@1.11.20/locale/en.js,npm/dayjs@1.11.20/plugin/relativeTime.js,npm/dayjs@1.11.20/plugin/localizedFormat.js,npm/tocbot@4.36.4/dist/tocbot.min.js"></script> <script defer src="/assets/js/dist/post.min.js"></script> <script defer src="https://www.googletagmanager.com/gtag/js?id=G-1EBHNQEGXG"></script> <script> document.addEventListener('DOMContentLoaded', () => { window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-1EBHNQEGXG'); }); </script><style> /* Keep banner images at their original size */ .post-meta .preview-img { width: auto !important; height: auto !important; aspect-ratio: unset !important; } .post-meta .preview-img img { width: auto !important; height: auto !important; max-width: 100%; object-fit: unset !important; } /* Expand TOC contents by default */ .is-collapsed { max-height: 1000px !important; } /* Style h5/h6 entries in TOC (desktop) */ .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-link { font-size: 0.85em; } .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-list-item .toc-link { font-size: 0.8em; } /* Style h5/h6 entries in TOC (mobile popup) */ #toc-popup .node-name--H5 { padding-left: 4.5rem; } #toc-popup .node-name--H6 { padding-left: 5.625rem; } /* Bold h5/h6 in post content */ .content h5, .content h6 { font-weight: 600; } /* Merge output blocks into preceding code blocks: remove gap and hide header */ .highlighter-rouge + .language-plaintext { margin-top: -0.75rem; } .highlighter-rouge + .language-plaintext .code-header { display: none; } /* Hide line numbers on shell code blocks and align with plaintext blocks */ .language-sh .rouge-gutter, .language-bash .rouge-gutter { display: none !important; } .language-sh .rouge-code, .language-bash .rouge-code { padding-left: 1.25rem !important; } /* Hide "Plaintext" label on untagged code blocks */ [data-label-text="Plaintext"] { display: none; } /* Disable avatar zoom on hover */ @media all and (min-width: 576px) { #sidebar #avatar img { transition: none; } #sidebar #avatar img:hover { transform: none; } }</style><script> /* Extend TOC to support h5 and h6 headings (Chirpy only supports h2-h4) */ window.addEventListener('load', function () { setTimeout(function () { if (typeof tocbot === 'undefined') return; var shared = { contentSelector: '.content', ignoreSelector: '[data-toc-skip]', headingSelector: 'h2, h3, h4, h5, h6', orderedList: false, scrollSmooth: false }; tocbot.destroy(); if (window.matchMedia('(min-width: 1200px)').matches) { tocbot.init(Object.assign({}, shared, { tocSelector: '#toc', headingsOffset: 32 })); } else { tocbot.init(Object.assign({}, shared, { tocSelector: '#toc-popup-content', collapseDepth: 4, headingsOffset: 48 })); } }, 500); }); </script><body><aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end"><header class="profile-wrapper"> <a href="/" id="avatar" class="rounded-circle"><img src="/assets/images/me.jpg" width="112" height="112" alt="avatar" onerror="this.style.display='none'"></a> <a class="site-title d-block" href="/">GitOps</a><p class="site-subtitle fst-italic mb-0">Networks, SDN, NFVi, OpenStack, K8s/OpenShift.</p></header><nav class="flex-column flex-grow-1 w-100 ps-0"><ul class="nav"><li class="nav-item"> <a href="/" class="nav-link"> <i class="fa-fw fas fa-home"></i> <span>HOME</span> </a><li class="nav-item"> <a href="/tags/" class="nav-link"> <i class="fa-fw fas fa-tags"></i> <span>TAGS</span> </a><li class="nav-item"> <a href="/series/" class="nav-link"> <i class="fa-fw fas fa-list"></i> <span>SERIES</span> </a><li class="nav-item"> <a href="/talks/" class="nav-link"> <i class="fa-fw fas fa-microphone"></i> <span>TALKS</span> </a><li class="nav-item"> <a href="/archives/" class="nav-link"> <i class="fa-fw fas fa-archive"></i> <span>ARCHIVES</span> </a><li class="nav-item"> <a href="/about/" class="nav-link"> <i class="fa-fw fas fa-info-circle"></i> <span>ABOUT</span> </a></ul></nav><div class="sidebar-bottom d-flex flex-wrap align-items-center w-100"> <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle"> <i class="fas fa-adjust"></i> </button> <span class="icon-border"></span> <a href="https://github.com/josecastillolema" aria-label="github" target="_blank" rel="noopener noreferrer" > <i class="fab fa-github"></i> </a> <a href="javascript:location.href = 'mailto:' + ['josecastillolema','gmail.com'].join('@')" aria-label="email" > <i class="fas fa-envelope"></i> </a> <a href="https://www.linkedin.com/in/jose-castillo-lema" aria-label="linkedin" target="_blank" rel="noopener noreferrer" > <i class="fab fa-linkedin"></i> </a> <a href="/feed.xml" aria-label="rss" > <i class="fas fa-rss"></i> </a></div></aside><div id="main-wrapper" class="d-flex justify-content-center"><div class="container d-flex flex-column px-xxl-5"><header id="topbar-wrapper" class="flex-shrink-0" aria-label="Top Bar"><div id="topbar" class="d-flex align-items-center justify-content-between px-lg-3 h-100" ><nav id="breadcrumb" aria-label="Breadcrumb"> <span> <a href="/">Home</a> </span> <span>OpenStack series V: Cinder - Block Storage Service</span></nav><button type="button" id="sidebar-trigger" class="btn btn-link" aria-label="Sidebar"> <i class="fas fa-bars fa-fw"></i> </button><div id="topbar-title"> Post</div><button type="button" id="search-trigger" class="btn btn-link" aria-label="Search"> <i class="fas fa-search fa-fw"></i> </button> <search id="search" class="align-items-center ms-3 ms-lg-0"> <i class="fas fa-search fa-fw"></i> <input class="form-control" id="search-input" type="search" aria-label="search" autocomplete="off" placeholder="Search..." > </search> <button type="button" class="btn btn-link text-decoration-none" id="search-cancel">Cancel</button></div></header><div class="row flex-grow-1"><main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4"><article class="px-1" data-toc="true"><header><h1 data-toc-skip>OpenStack series V: Cinder - Block Storage Service</h1><div class="post-meta text-muted"> <span> Posted <time data-ts="1524787200" data-df="ll" data-bs-toggle="tooltip" data-bs-placement="bottom" > Apr 27, 2018 </time> </span> <span> Updated <time data-ts="1524787200" data-df="ll" data-bs-toggle="tooltip" data-bs-placement="bottom" > Apr 27, 2018 </time> </span><div class="d-flex justify-content-between"> <span> By <em> <a href="https://github.com/josecastillolema">Jose Castillo Lema</a> </em> </span><div> <span class="readtime" data-bs-toggle="tooltip" data-bs-placement="bottom" title="2291 words" > <em>12 min</em> read</span></div></div></div></header><div id="toc-bar" class="d-flex align-items-center justify-content-between invisible"> <span class="label text-truncate">OpenStack series V: Cinder - Block Storage Service</span> <button type="button" class="toc-trigger btn me-1"> <i class="fa-solid fa-list-ul fa-fw"></i> </button></div><button id="toc-solo-trigger" type="button" class="toc-trigger btn btn-outline-secondary btn-sm"> <span class="label ps-2 pe-1">Contents</span> <i class="fa-solid fa-angle-right fa-fw"></i> </button> <dialog id="toc-popup" class="p-0"><div class="header d-flex flex-row align-items-center justify-content-between"><div class="label text-truncate py-2 ms-4">OpenStack series V: Cinder - Block Storage Service</div><button id="toc-popup-close" type="button" class="btn mx-1 my-1 opacity-75"> <i class="fas fa-close"></i> </button></div><div id="toc-popup-content" class="px-4 py-3 pb-4"></div></dialog><div class="content"><p><a href="/series/#openstack">Serie de artigos</a> sobre OpenStack.</p><p><a href="https://github.com/josecastillolema/fiap/watchers" class="img-link shimmer" ><img src="https://img.shields.io/github/watchers/josecastillolema/fiap?style=social" alt="GitHub watchers" loading="lazy"></a> <a href="https://github.com/josecastillolema/fiap/stargazers" class="img-link shimmer" ><img src="https://img.shields.io/github/stars/josecastillolema/fiap?style=social" alt="GitHub stars" loading="lazy"></a> <a href="https://github.com/josecastillolema/fiap/network/members" class="img-link shimmer" ><img src="https://img.shields.io/github/forks/josecastillolema/fiap?style=social" alt="GitHub forks" loading="lazy"></a></p><h2 id="block-storage-service"><span class="me-2">Block Storage Service</span><a href="#block-storage-service" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><p>Usaremos o serviço <a href="https://docs.openstack.org/cinder/latest/">Cinder</a> para aprender alguns conceitos importantes sobre armazenamento de bloco:</p><ul><li>criação de volumes<li><em>snapshots</em><li>partição, formatação e montagem de volumes</ul><h2 id="pre-reqs"><span class="me-2">Pre-reqs</span><a href="#pre-reqs" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li><p>Carregar as credenciais de administrador e conferir que foram aplicadas no ambiente:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -13,22 +13,22 @@
 13
 14
 15
-</pre><td class="rouge-code"><pre> $ source devstack/openrc admin
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span><span class="nb">source </span>devstack/openrc admin
  WARNING: setting legacy OS_TENANT_NAME to support cli tools.
     
- $ env | grep OS_
- OS_PROJECT_DOMAIN_ID=default
- OS_REGION_NAME=RegionOne
- OS_USER_DOMAIN_ID=default
- OS_PROJECT_NAME=demo
- OS_IDENTITY_API_VERSION=3
- OS_PASSWORD=nomoresecret
- OS_AUTH_TYPE=password
- OS_AUTH_URL=http://192.168.17.131/identity
- OS_USERNAME=admin
- OS_TENANT_NAME=demo
- OS_VOLUME_API_VERSION=2
-</pre></table></code></div></div><li>Conferir que o Cinder foi instalado no OpenStack:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+ <span class="nv">$ </span><span class="nb">env</span> | <span class="nb">grep </span>OS_
+ <span class="nv">OS_PROJECT_DOMAIN_ID</span><span class="o">=</span>default
+ <span class="nv">OS_REGION_NAME</span><span class="o">=</span>RegionOne
+ <span class="nv">OS_USER_DOMAIN_ID</span><span class="o">=</span>default
+ <span class="nv">OS_PROJECT_NAME</span><span class="o">=</span>demo
+ <span class="nv">OS_IDENTITY_API_VERSION</span><span class="o">=</span>3
+ <span class="nv">OS_PASSWORD</span><span class="o">=</span>nomoresecret
+ <span class="nv">OS_AUTH_TYPE</span><span class="o">=</span>password
+ <span class="nv">OS_AUTH_URL</span><span class="o">=</span>http://192.168.17.131/identity
+ <span class="nv">OS_USERNAME</span><span class="o">=</span>admin
+ <span class="nv">OS_TENANT_NAME</span><span class="o">=</span>demo
+ <span class="nv">OS_VOLUME_API_VERSION</span><span class="o">=</span>2
+</pre></table></code></div></div><li><p>Conferir que o Cinder foi instalado no OpenStack:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -45,7 +45,7 @@
 15
 16
 17
-</pre><td class="rouge-code"><pre> $ openstack service list
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>openstack service list
  +----------------------------------+-------------+----------------+
  | ID                               | Name        | Type           |
  +----------------------------------+-------------+----------------+
@@ -62,7 +62,7 @@
  | d8b098869281469bbd90bbc762aad340 | glance      | image          |
  | fc980824a1954be882a9af7591f78e99 | heat        | orchestration  |
  +----------------------------------+-------------+----------------+
-</pre></table></code></div></div><li>Mostrar informação sobre o <em>endpoint</em>:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Mostrar informação sobre o <em>endpoint</em>:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -73,46 +73,46 @@
 9
 10
 11
-</pre><td class="rouge-code"><pre> $ openstack catalog show cinder
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>openstack catalog show cinder
  +-----------+----------------------------------------------------------------------------+
  | Field     | Value                                                                      |
  +-----------+----------------------------------------------------------------------------+
  | endpoints | RegionOne                                                                  |
  |           |   public: http://192.168.17.131/volume/v1/faac34f01fb2464295bcea501b18b741 |
  |           |                                                                            |
- | id        | 23dbf9f8ad1345e5b4d6d781c4b88e03                                           |
+ | <span class="nb">id</span>        | 23dbf9f8ad1345e5b4d6d781c4b88e03                                           |
  | name      | cinder                                                                     |
- | type      | volume                                                                     |
+ | <span class="nb">type</span>      | volume                                                                     |
  +-----------+----------------------------------------------------------------------------+
-</pre></table></code></div></div><li>Mostrar informação sobre os serviços OpenStack que compõem o Cinder:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Mostrar informação sobre os serviços OpenStack que compõem o Cinder:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-</pre><td class="rouge-code"><pre> $ openstack volume service list
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>openstack volume service list
  +------------------+--------------------+------+---------+-------+----------------------------+
  | Binary           | Host               | Zone | Status  | State | Updated At                 |
  +------------------+--------------------+------+---------+-------+----------------------------+
  | cinder-scheduler | ubuntu             | nova | enabled | up    | 2020-10-26T23:22:11.000000 |
  | cinder-volume    | ubuntu@lvmdriver-1 | nova | enabled | up    | 2020-10-26T23:22:07.000000 |
  +------------------+--------------------+------+---------+-------+----------------------------+
-</pre></table></code></div></div><p><strong>Nota:</strong> Se o <code class="language-plaintext highlighter-rouge">cinder-volume</code> aparece com estado <code class="language-plaintext highlighter-rouge">down</code> (provavelmente a VM foi restartada em algum momento), seguem os passos para corrigi-lo:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><p><strong>Nota:</strong> Se o <code class="language-plaintext highlighter-rouge">cinder-volume</code> aparece com estado <code class="language-plaintext highlighter-rouge">down</code> (provavelmente a VM foi restartada em algum momento), seguem os passos para corrigi-lo:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre><td class="rouge-code"><pre> $ sudo losetup -f /opt/stack/data/stack-volumes-default-backing-file
- $ sudo losetup -f /opt/stack/data/stack-volumes-lvmdriver-1-backing-file
- $ sudo systemctl restart devstack@c-vol
-</pre></table></code></div></div><p>Tentar o comando <code class="language-plaintext highlighter-rouge">openstack volume service list</code> novamente.</p><li>Listar os serviços Linux que compõem o Cinder:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span><span class="nb">sudo </span>losetup <span class="nt">-f</span> /opt/stack/data/stack-volumes-default-backing-file
+ <span class="nv">$ </span><span class="nb">sudo </span>losetup <span class="nt">-f</span> /opt/stack/data/stack-volumes-lvmdriver-1-backing-file
+ <span class="nv">$ </span><span class="nb">sudo </span>systemctl restart devstack@c-vol
+</pre></table></code></div></div><p>Tentar o comando <code class="language-plaintext highlighter-rouge">openstack volume service list</code> novamente.</p><li><p>Listar os serviços Linux que compõem o Cinder:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre><td class="rouge-code"><pre> $ systemctl | grep devstack@c
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>systemctl | <span class="nb">grep </span>devstack@c
  devstack@c-api.service                                             loaded active running   Devstack devstack@c-api.service
  devstack@c-sch.service                                             loaded active running   Devstack devstack@c-sch.service
  devstack@c-vol.service                                             loaded active running   Devstack devstack@c-vol.service    
-</pre></table></code></div></div><li>Conferir a saúde dos serviços:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Conferir a saúde dos serviços:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -137,38 +137,38 @@
 23
 24
 25
-</pre><td class="rouge-code"><pre> $ systemctl status devstack@c*
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>systemctl status devstack@c<span class="k">*</span>
  ● devstack@c-api.service - Devstack devstack@c-api.service
-    Loaded: loaded (/etc/systemd/system/devstack@c-api.service; enabled; vendor preset: enabled)
-    Active: active (running) since Mon 2020-10-26 15:56:06 PDT; 26min ago
-  Main PID: 805 (uwsgi)
-    Status: "uWSGI is ready"
+    Loaded: loaded <span class="o">(</span>/etc/systemd/system/devstack@c-api.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+    Active: active <span class="o">(</span>running<span class="o">)</span> since Mon 2020-10-26 15:56:06 PDT<span class="p">;</span> 26min ago
+  Main PID: 805 <span class="o">(</span>uwsgi<span class="o">)</span>
+    Status: <span class="s2">"uWSGI is ready"</span>
     CGroup: /system.slice/system-devstack.slice/devstack@c-api.service
             ├─805 cinder-apiuWSGI maste
             ├─888 cinder-apiuWSGI worker
             └─891 cinder-apiuWSGI worker
 
  ● devstack@c-sch.service - Devstack devstack@c-sch.service
-    Loaded: loaded (/etc/systemd/system/devstack@c-sch.service; enabled; vendor preset: enabled)
-    Active: active (running) since Mon 2020-10-26 15:56:06 PDT; 26min ago
-  Main PID: 784 (cinder-schedule)
+    Loaded: loaded <span class="o">(</span>/etc/systemd/system/devstack@c-sch.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+    Active: active <span class="o">(</span>running<span class="o">)</span> since Mon 2020-10-26 15:56:06 PDT<span class="p">;</span> 26min ago
+  Main PID: 784 <span class="o">(</span>cinder-schedule<span class="o">)</span>
     CGroup: /system.slice/system-devstack.slice/devstack@c-sch.service
-            └─784 /usr/bin/python /usr/local/bin/cinder-scheduler --config-file /etc/cinder/cinder.conf
+            └─784 /usr/bin/python /usr/local/bin/cinder-scheduler <span class="nt">--config-file</span> /etc/cinder/cinder.conf
 
  ● devstack@c-vol.service - Devstack devstack@c-vol.service
-    Loaded: loaded (/etc/systemd/system/devstack@c-vol.service; enabled; vendor preset: enabled)
-    Active: active (running) since Mon 2020-10-26 16:01:43 PDT; 21min ago
-  Main PID: 3901 (cinder-volume)
+    Loaded: loaded <span class="o">(</span>/etc/systemd/system/devstack@c-vol.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+    Active: active <span class="o">(</span>running<span class="o">)</span> since Mon 2020-10-26 16:01:43 PDT<span class="p">;</span> 21min ago
+  Main PID: 3901 <span class="o">(</span>cinder-volume<span class="o">)</span>
     CGroup: /system.slice/system-devstack.slice/devstack@c-vol.service
-            ├─3901 /usr/bin/python /usr/local/bin/cinder-volume --config-file /etc/cinder/cinder.conf
-            └─3912 /usr/bin/python /usr/local/bin/cinder-volume --config-file /etc/cinder/cinder.conf
-</pre></table></code></div></div><li>Mostrar os logs do serviço:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre><td class="rouge-code"><pre> $ journalctl -u devstack@c-vol
-</pre></table></code></div></div><li>Mostrar os arquivos de configuração:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+            ├─3901 /usr/bin/python /usr/local/bin/cinder-volume <span class="nt">--config-file</span> /etc/cinder/cinder.conf
+            └─3912 /usr/bin/python /usr/local/bin/cinder-volume <span class="nt">--config-file</span> /etc/cinder/cinder.conf
+</pre></table></code></div></div><li><p>Mostrar os logs do serviço:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>journalctl <span class="nt">-u</span> devstack@c-vol
+</pre></table></code></div></div><li><p>Mostrar os arquivos de configuração:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre><td class="rouge-code"><pre> $ less /etc/cinder/cinder.conf
- $ less /etc/cinder/policy.json
-</pre></table></code></div></div></ol><h2 id="volumes"><span class="me-2">Volumes</span><a href="#volumes" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li>Criar um volume vazio de 1 GB:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>less /etc/cinder/cinder.conf
+ <span class="nv">$ </span>less /etc/cinder/policy.json
+</pre></table></code></div></div></ol><h2 id="volumes"><span class="me-2">Volumes</span><a href="#volumes" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li><p>Criar um volume vazio de 1 GB:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -193,18 +193,18 @@
 23
 24
 25
-</pre><td class="rouge-code"><pre> $ openstack volume create teste-fiap --size 1
+</pre><td class="rouge-code"><pre> <span class="nv">$ </span>openstack volume create teste-fiap <span class="nt">--size</span> 1
  +---------------------+--------------------------------------+
  | Field               | Value                                |
  +---------------------+--------------------------------------+
- | attachments         | []                                   |
+ | attachments         | <span class="o">[]</span>                                   |
  | availability_zone   | nova                                 |
- | bootable            | false                                |
+ | bootable            | <span class="nb">false</span>                                |
  | consistencygroup_id | None                                 |
  | created_at          | 2020-10-26T23:00:56.770211           |
  | description         | None                                 |
  | encrypted           | False                                |
- | id                  | cab7679c-d7dd-4826-93ec-f4b78b434467 |
+ | <span class="nb">id</span>                  | cab7679c-d7dd-4826-93ec-f4b78b434467 |
  | migration_status    | None                                 |
  | multiattach         | False                                |
  | name                | teste-fiap                           |
@@ -214,25 +214,25 @@
  | snapshot_id         | None                                 |
  | source_volid        | None                                 |
  | status              | creating                             |
- | type                | lvmdriver-1                          |
+ | <span class="nb">type</span>                | lvmdriver-1                          |
  | updated_at          | None                                 |
  | user_id             | fe2d2a5507ed4ad2919258d7252cebc6     |
  +---------------------+--------------------------------------+
-</pre></table></code></div></div><li>Listar os volumes e mostrar o volume recém criado:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Listar os volumes e mostrar o volume recém criado:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
 7
-</pre><td class="rouge-code"><pre>$ openstack volume list
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack volume list
 +--------------------------------------+------------+-----------+------+-------------+
 | ID                                   | Name       | Status    | Size | Attached to |
 +--------------------------------------+------------+-----------+------+-------------+
 | abccb06a-5e9e-422b-a2c0-9f6768071785 | teste-fiap | available |    1 |             |
 | cab7679c-d7dd-4826-93ec-f4b78b434467 | teste-fiap | error     |    1 |             |
 +--------------------------------------+------------+-----------+------+-------------+
-</pre></table></code></div></div><li>Criar uma VM:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Criar uma VM:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -267,7 +267,7 @@
 33
 34
 35
-</pre><td class="rouge-code"><pre>$ openstack server create --network private --flavor m.fiap --image cirros-0.3.5-x86_64-disk vm
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack server create <span class="nt">--network</span> private <span class="nt">--flavor</span> m.fiap <span class="nt">--image</span> cirros-0.3.5-x86_64-disk vm
 +-------------------------------------+-----------------------------------------------------------------+
 | Field                               | Value                                                           |
 +-------------------------------------+-----------------------------------------------------------------+
@@ -287,24 +287,24 @@
 | adminPass                           | NZX7c7qpXoif                                                    |
 | config_drive                        |                                                                 |
 | created                             | 2020-10-26T23:28:07Z                                            |
-| flavor                              | m.fiap (a0683bcb-b937-4c75-be19-7641eceeff78)                   |
+| flavor                              | m.fiap <span class="o">(</span>a0683bcb-b937-4c75-be19-7641eceeff78<span class="o">)</span>                   |
 | hostId                              |                                                                 |
-| id                                  | 8d2d0c89-1ae6-4ad2-9299-171c14a29567                            |
-| image                               | cirros-0.3.5-x86_64-disk (cd992dd3-2197-49fe-9f0e-43d783d18a5c) |
+| <span class="nb">id</span>                                  | 8d2d0c89-1ae6-4ad2-9299-171c14a29567                            |
+| image                               | cirros-0.3.5-x86_64-disk <span class="o">(</span>cd992dd3-2197-49fe-9f0e-43d783d18a5c<span class="o">)</span> |
 | key_name                            | None                                                            |
 | name                                | vm                                                              |
 | progress                            | 0                                                               |
 | project_id                          | faac34f01fb2464295bcea501b18b741                                |
 | properties                          |                                                                 |
-| security_groups                     | name='default'                                                  |
+| security_groups                     | <span class="nv">name</span><span class="o">=</span><span class="s1">'default'</span>                                                  |
 | status                              | BUILD                                                           |
 | updated                             | 2020-10-26T23:28:06Z                                            |
 | user_id                             | fe2d2a5507ed4ad2919258d7252cebc6                                |
 | volumes_attached                    |                                                                 |
 +-------------------------------------+-----------------------------------------------------------------+
-</pre></table></code></div></div><li>Anexar o volume a uma instancia previamente criada (neste caso <code class="language-plaintext highlighter-rouge">vm</code>):<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre><td class="rouge-code"><pre>$ openstack server add volume vm teste-fiap
-</pre></table></code></div></div><li>Conferir que o volume foi anexado:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Anexar o volume a uma instancia previamente criada (neste caso <code class="language-plaintext highlighter-rouge">vm</code>):</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack server add volume vm teste-fiap
+</pre></table></code></div></div><li><p>Conferir que o volume foi anexado:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -341,7 +341,7 @@
 35
 36
 37
-</pre><td class="rouge-code"><pre>$ openstack server show vm
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack server show vm
 +-------------------------------------+-----------------------------------------------------------------+
 | Field                               | Value                                                           |
 +-------------------------------------+-----------------------------------------------------------------+
@@ -357,28 +357,28 @@
 | OS-SRV-USG:terminated_at            | None                                                            |
 | accessIPv4                          |                                                                 |
 | accessIPv6                          |                                                                 |
-| addresses                           | private=fdb5:7432:9bc4:0:f816:3eff:fe7c:12a1, 10.0.0.8          |
+| addresses                           | <span class="nv">private</span><span class="o">=</span>fdb5:7432:9bc4:0:f816:3eff:fe7c:12a1, 10.0.0.8          |
 | config_drive                        |                                                                 |
 | created                             | 2020-10-26T23:28:06Z                                            |
-| flavor                              | m.fiap (a0683bcb-b937-4c75-be19-7641eceeff78)                   |
+| flavor                              | m.fiap <span class="o">(</span>a0683bcb-b937-4c75-be19-7641eceeff78<span class="o">)</span>                   |
 | hostId                              | 4621bfea4420d850fc73fcc3691454ce013120c75edf0c1bd98473eb        |
-| id                                  | 8d2d0c89-1ae6-4ad2-9299-171c14a29567                            |
-| image                               | cirros-0.3.5-x86_64-disk (cd992dd3-2197-49fe-9f0e-43d783d18a5c) |
+| <span class="nb">id</span>                                  | 8d2d0c89-1ae6-4ad2-9299-171c14a29567                            |
+| image                               | cirros-0.3.5-x86_64-disk <span class="o">(</span>cd992dd3-2197-49fe-9f0e-43d783d18a5c<span class="o">)</span> |
 | key_name                            | None                                                            |
 | name                                | vm                                                              |
 | progress                            | 0                                                               |
 | project_id                          | faac34f01fb2464295bcea501b18b741                                |
 | properties                          |                                                                 |
-| security_groups                     | name='default'                                                  |
+| security_groups                     | <span class="nv">name</span><span class="o">=</span><span class="s1">'default'</span>                                                  |
 | status                              | ACTIVE                                                          |
 | updated                             | 2020-10-26T23:29:07Z                                            |
 | user_id                             | fe2d2a5507ed4ad2919258d7252cebc6                                |
-| volumes_attached                    | id='abccb06a-5e9e-422b-a2c0-9f6768071785'                       |
+| volumes_attached                    | <span class="nb">id</span><span class="o">=</span><span class="s1">'abccb06a-5e9e-422b-a2c0-9f6768071785'</span>                       |
 +-------------------------------------+-----------------------------------------------------------------+
     
-$ openstack server show vm | grep volumes
-| volumes_attached                    | id='abccb06a-5e9e-422b-a2c0-9f6768071785'                       |
-</pre></table></code></div></div><li>Acessar à vm:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<span class="nv">$ </span>openstack server show vm | <span class="nb">grep </span>volumes
+| volumes_attached                    | <span class="nb">id</span><span class="o">=</span><span class="s1">'abccb06a-5e9e-422b-a2c0-9f6768071785'</span>                       |
+</pre></table></code></div></div><li><p>Acessar à vm:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -391,24 +391,24 @@ $ openstack server show vm | grep volumes
 11
 12
 13
-</pre><td class="rouge-code"><pre>$ virsh list
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>virsh list
  Id    Name                           State
-----------------------------------------------------
+<span class="nt">----------------------------------------------------</span>
  2     instance-0000000a              running
 
-$ virsh console 2
+<span class="nv">$ </span>virsh console 2
 Connected to domain instance-0000000a
 Escape character is ^]
 
-login as 'cirros' user. default password: 'cubswin:)'. use 'sudo' for root.
+login as <span class="s1">'cirros'</span> user. default password: <span class="s1">'cubswin:)'</span><span class="nb">.</span> use <span class="s1">'sudo'</span> <span class="k">for </span>root.
 vm login: cirros
 Password:
-$
-</pre></table></code></div></div></ol><h3 id="dentro-da-vm"><span class="me-2">Dentro da VM</span><a href="#dentro-da-vm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><ol><li>Conferir que o novo volume foi entregue a VM:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<span class="err">$</span>
+</pre></table></code></div></div></ol><h3 id="dentro-da-vm"><span class="me-2">Dentro da VM</span><a href="#dentro-da-vm" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><ol><li><p>Conferir que o novo volume foi entregue a VM:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre><td class="rouge-code"><pre>$ ls /dev/vd*
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">ls</span> /dev/vd<span class="k">*</span>
 /dev/vda   /dev/vda1  /dev/vdb
-</pre></table></code></div></div><li>Criar uma partição no novo disco:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Criar uma partição no novo disco:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -451,11 +451,11 @@ $
 41
 42
 43
-</pre><td class="rouge-code"><pre>$ sudo fdisk /dev/vdb
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>fdisk /dev/vdb
 Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
 Building a new DOS disklabel with disk identifier 0xaba72f7d.
-Changes will remain in memory only, until you decide to write them.
-After that, of course, the previous content won't be recoverable.
+Changes will remain <span class="k">in </span>memory only, <span class="k">until </span>you decide to write them.
+After that, of course, the previous content won<span class="s1">'t be recoverable.
 
 Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
 
@@ -472,33 +472,33 @@ Command action
    p   print the partition table
    q   quit without saving changes
    s   create a new empty Sun disklabel
-   t   change a partition's system id
-   u   change display/entry units
+   t   change a partition'</span>s system <span class="nb">id
+   </span>u   change display/entry units
    v   verify the partition table
-   w   write table to disk and exit
-   x   extra functionality (experts only)
+   w   write table to disk and <span class="nb">exit
+   </span>x   extra functionality <span class="o">(</span>experts only<span class="o">)</span>
 
-Command (m for help): n
-Partition type:
-   p   primary (0 primary, 0 extended, 4 free)
+Command <span class="o">(</span>m <span class="k">for </span><span class="nb">help</span><span class="o">)</span>: n
+Partition <span class="nb">type</span>:
+   p   primary <span class="o">(</span>0 primary, 0 extended, 4 free<span class="o">)</span>
    e   extended
-Select (default p): p
-Partition number (1-4, default 1): 1
-First sector (2048-2097151, default 2048):
+Select <span class="o">(</span>default p<span class="o">)</span>: p
+Partition number <span class="o">(</span>1-4, default 1<span class="o">)</span>: 1
+First sector <span class="o">(</span>2048-2097151, default 2048<span class="o">)</span>:
 Using default value 2048
-Last sector, +sectors or +size{K,M,G} (2048-2097151, default 2097151):
+Last sector, +sectors or +size<span class="o">{</span>K,M,G<span class="o">}</span> <span class="o">(</span>2048-2097151, default 2097151<span class="o">)</span>:
 Using default value 2097151
 
-Command (m for help): w
+Command <span class="o">(</span>m <span class="k">for </span><span class="nb">help</span><span class="o">)</span>: w
 The partition table has been altered!
 
-Calling ioctl() to re-read partition table.
+Calling ioctl<span class="o">()</span> to re-read partition table.
 Syncing disks.
-</pre></table></code></div></div><li>Conferir que a partição foi criada:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Conferir que a partição foi criada:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre><td class="rouge-code"><pre>$ ls /dev/vd*
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">ls</span> /dev/vd<span class="k">*</span>
 /dev/vda   /dev/vda1  /dev/vdb   /dev/vdb1
-</pre></table></code></div></div><li>Formatar a partição:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Formatar a partição:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -519,34 +519,34 @@ Syncing disks.
 19
 20
 21
-</pre><td class="rouge-code"><pre>$ sudo mkfs.ext4 /dev/vdb1
-mke2fs 1.42.2 (27-Mar-2012)
-Filesystem label=
-OS type: Linux
-Block size=4096 (log=2)
-Fragment size=4096 (log=2)
-Stride=0 blocks, Stripe width=0 blocks
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>mkfs.ext4 /dev/vdb1
+mke2fs 1.42.2 <span class="o">(</span>27-Mar-2012<span class="o">)</span>
+Filesystem <span class="nv">label</span><span class="o">=</span>
+OS <span class="nb">type</span>: Linux
+Block <span class="nv">size</span><span class="o">=</span>4096 <span class="o">(</span><span class="nv">log</span><span class="o">=</span>2<span class="o">)</span>
+Fragment <span class="nv">size</span><span class="o">=</span>4096 <span class="o">(</span><span class="nv">log</span><span class="o">=</span>2<span class="o">)</span>
+<span class="nv">Stride</span><span class="o">=</span>0 blocks, Stripe <span class="nv">width</span><span class="o">=</span>0 blocks
 65536 inodes, 261888 blocks
-13094 blocks (5.00%) reserved for the super user
-First data block=0
-Maximum filesystem blocks=268435456
-8 block groups
-32768 blocks per group, 32768 fragments per group
+13094 blocks <span class="o">(</span>5.00%<span class="o">)</span> reserved <span class="k">for </span>the super user
+First data <span class="nv">block</span><span class="o">=</span>0
+Maximum filesystem <span class="nv">blocks</span><span class="o">=</span>268435456
+8 block <span class="nb">groups
+</span>32768 blocks per group, 32768 fragments per group
 8192 inodes per group
 Superblock backups stored on blocks:
         32768, 98304, 163840, 229376
 
-Allocating group tables: done
-Writing inode tables: done
-Creating journal (4096 blocks): done
-Writing superblocks and filesystem accounting information: done
-</pre></table></code></div></div><li>Criar uma nova pasta para montar o volume:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre><td class="rouge-code"><pre>$ sudo mkdir /mnt/nuevo-vol
-</pre></table></code></div></div><li>Montar o novo volume (pode ignorar o erro):<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+Allocating group tables: <span class="k">done
+</span>Writing inode tables: <span class="k">done
+</span>Creating journal <span class="o">(</span>4096 blocks<span class="o">)</span>: <span class="k">done
+</span>Writing superblocks and filesystem accounting information: <span class="k">done</span>
+</pre></table></code></div></div><li><p>Criar uma nova pasta para montar o volume:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo mkdir</span> /mnt/novo-vol
+</pre></table></code></div></div><li><p>Montar o novo volume (pode ignorar o erro):</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre><td class="rouge-code"><pre>$ sudo mount /dev/vdb1 /mnt/nuevo-vol
-[  201.700545] EXT3-fs (vdb1): error: couldn't mount because of unsupported optional features (240)
-</pre></table></code></div></div><li>Confirmar que o volume foi montado:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>mount /dev/vdb1 /mnt/novo-vol
+<span class="o">[</span>  201.700545] EXT3-fs <span class="o">(</span>vdb1<span class="o">)</span>: error: couldn<span class="s1">'t mount because of unsupported optional features (240)
+</span></pre></table></code></div></div><li><p>Confirmar que o volume foi montado:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -559,32 +559,32 @@ Writing superblocks and filesystem accounting information: done
 11
 12
 13
-</pre><td class="rouge-code"><pre>$ mount
-rootfs on / type rootfs (rw)
-/dev on /dev type devtmpfs (rw,relatime,size=21792k,nr_inodes=5448,mode=755)
-/dev/vda1 on / type ext3 (rw,relatime,errors=continue,user_xattr,acl,barrier=1,data=ordered)
-/proc on /proc type proc (rw,relatime)
-sysfs on /sys type sysfs (rw,relatime)
-devpts on /dev/pts type devpts (rw,relatime,gid=5,mode=620,ptmxmode=000)
-tmpfs on /dev/shm type tmpfs (rw,relatime,mode=777)
-tmpfs on /run type tmpfs (rw,nosuid,relatime,size=200k,mode=755)
-/dev/vdb1 on /mnt/nuevo-vol type ext4 (rw,relatime,user_xattr,barrier=1,data=ordered)
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>mount
+rootfs on / <span class="nb">type </span>rootfs <span class="o">(</span>rw<span class="o">)</span>
+/dev on /dev <span class="nb">type </span>devtmpfs <span class="o">(</span>rw,relatime,size<span class="o">=</span>21792k,nr_inodes<span class="o">=</span>5448,mode<span class="o">=</span>755<span class="o">)</span>
+/dev/vda1 on / <span class="nb">type </span>ext3 <span class="o">(</span>rw,relatime,errors<span class="o">=</span><span class="k">continue</span>,user_xattr,acl,barrier<span class="o">=</span>1,data<span class="o">=</span>ordered<span class="o">)</span>
+/proc on /proc <span class="nb">type </span>proc <span class="o">(</span>rw,relatime<span class="o">)</span>
+sysfs on /sys <span class="nb">type </span>sysfs <span class="o">(</span>rw,relatime<span class="o">)</span>
+devpts on /dev/pts <span class="nb">type </span>devpts <span class="o">(</span>rw,relatime,gid<span class="o">=</span>5,mode<span class="o">=</span>620,ptmxmode<span class="o">=</span>000<span class="o">)</span>
+tmpfs on /dev/shm <span class="nb">type </span>tmpfs <span class="o">(</span>rw,relatime,mode<span class="o">=</span>777<span class="o">)</span>
+tmpfs on /run <span class="nb">type </span>tmpfs <span class="o">(</span>rw,nosuid,relatime,size<span class="o">=</span>200k,mode<span class="o">=</span>755<span class="o">)</span>
+/dev/vdb1 on /mnt/novo-vol <span class="nb">type </span>ext4 <span class="o">(</span>rw,relatime,user_xattr,barrier<span class="o">=</span>1,data<span class="o">=</span>ordered<span class="o">)</span>
 
-$ mount | grep nuevo-vol
-/dev/vdb1 on /mnt/nuevo-vol type ext4 (rw,relatime,user_xattr,barrier=1,data=ordered)
-</pre></table></code></div></div><li>Criar um arquivo no novo volume:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<span class="nv">$ </span>mount | <span class="nb">grep </span>novo-vol
+/dev/vdb1 on /mnt/novo-vol <span class="nb">type </span>ext4 <span class="o">(</span>rw,relatime,user_xattr,barrier<span class="o">=</span>1,data<span class="o">=</span>ordered<span class="o">)</span>
+</pre></table></code></div></div><li><p>Criar um arquivo no novo volume:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre><td class="rouge-code"><pre>$ sudo touch /mnt/nuevo-vol/arquivo.txt
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo touch</span> /mnt/novo-vol/arquivo.txt
     
-$ ls  /mnt/nuevo-vol/
-/mnt/nuevo-vol/arquivo.txt
-</pre></table></code></div></div></ol><h3 id="de-volta-no-devstack"><span class="me-2">De volta no DevStack</span><a href="#de-volta-no-devstack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><ol><li>Criar um <em>snapshot</em> do volume:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<span class="nv">$ </span><span class="nb">ls</span>  /mnt/novo-vol/
+/mnt/novo-vol/arquivo.txt
+</pre></table></code></div></div></ol><h3 id="de-volta-no-devstack"><span class="me-2">De volta no DevStack</span><a href="#de-volta-no-devstack" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3><ol><li><p>Criar um <em>snapshot</em> do volume:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-</pre><td class="rouge-code"><pre>$ openstack volume snapshot create --volume teste-fiap teste-fiap-snap
-Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be available, but current status is: in-use. (HTTP 400) (Request-ID: req-7c30ee3f-20d4-422e-a6d3-2ed44a631de2)
-</pre></table></code></div></div><p>OpenStack não recomenda fazer <em>snapshots</em> de volumes em uso. Para forzar:</p><div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack volume snapshot create <span class="nt">--volume</span> teste-fiap teste-fiap-snap
+Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be available, but current status is: <span class="k">in</span><span class="nt">-use</span><span class="nb">.</span> <span class="o">(</span>HTTP 400<span class="o">)</span> <span class="o">(</span>Request-ID: req-7c30ee3f-20d4-422e-a6d3-2ed44a631de2<span class="o">)</span>
+</pre></table></code></div></div><p>OpenStack não recomenda fazer <em>snapshots</em> de volumes em uso. Para forçar:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -598,13 +598,13 @@ Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be avail
 12
 13
 14
-</pre><td class="rouge-code"><pre>$ openstack volume snapshot create --volume teste-fiap teste-fiap-snap --force
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack volume snapshot create <span class="nt">--volume</span> teste-fiap teste-fiap-snap <span class="nt">--force</span>
 +-------------+--------------------------------------+
 | Field       | Value                                |
 +-------------+--------------------------------------+
 | created_at  | 2020-10-26T23:33:56.630662           |
 | description | None                                 |
-| id          | b55e6a7c-3072-4879-8f35-bf68901d0e1a |
+| <span class="nb">id</span>          | b55e6a7c-3072-4879-8f35-bf68901d0e1a |
 | name        | teste-fiap-snap                      |
 | properties  |                                      |
 | size        | 1                                    |
@@ -612,7 +612,7 @@ Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be avail
 | updated_at  | None                                 |
 | volume_id   | abccb06a-5e9e-422b-a2c0-9f6768071785 |
 +-------------+--------------------------------------+
-</pre></table></code></div></div><li>Listar e mostrar o <em>snapshot</em>:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Listar e mostrar o <em>snapshot</em>:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -635,20 +635,20 @@ Invalid volume: Volume abccb06a-5e9e-422b-a2c0-9f6768071785 status must be avail
 21
 22
 23
-</pre><td class="rouge-code"><pre>$ openstack volume snapshot list
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack volume snapshot list
 +--------------------------------------+-----------------+-------------+-----------+------+
 | ID                                   | Name            | Description | Status    | Size |
 +--------------------------------------+-----------------+-------------+-----------+------+
 | b55e6a7c-3072-4879-8f35-bf68901d0e1a | teste-fiap-snap | None        | available |    1 |
 +--------------------------------------+-----------------+-------------+-----------+------+
     
-$ openstack volume snapshot show teste-fiap-snap
+<span class="nv">$ </span>openstack volume snapshot show teste-fiap-snap
 +--------------------------------------------+--------------------------------------+
 | Field                                      | Value                                |
 +--------------------------------------------+--------------------------------------+
 | created_at                                 | 2020-10-26T23:33:57.000000           |
 | description                                | None                                 |
-| id                                         | b55e6a7c-3072-4879-8f35-bf68901d0e1a |
+| <span class="nb">id</span>                                         | b55e6a7c-3072-4879-8f35-bf68901d0e1a |
 | name                                       | teste-fiap-snap                      |
 | os-extended-snapshot-attributes:progress   | 100%                                 |
 | os-extended-snapshot-attributes:project_id | faac34f01fb2464295bcea501b18b741     |
@@ -658,7 +658,7 @@ $ openstack volume snapshot show teste-fiap-snap
 | updated_at                                 | 2020-10-26T23:33:57.000000           |
 | volume_id                                  | abccb06a-5e9e-422b-a2c0-9f6768071785 |
 +--------------------------------------------+--------------------------------------+
-</pre></table></code></div></div><li>Mostrar o volume no LVM:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Mostrar o volume no LVM:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -673,22 +673,22 @@ $ openstack volume snapshot show teste-fiap-snap
 13
 14
 15
-</pre><td class="rouge-code"><pre>$ sudo lvs
+</pre><td class="rouge-code"><pre><span class="nv">$ </span><span class="nb">sudo </span>lvs
   LV                                             VG                        Attr       LSize Pool Origin                                      Data%  Meta%  Move Log Cpy%Sync Convert
   _snapshot-b55e6a7c-3072-4879-8f35-bf68901d0e1a stack-volumes-lvmdriver-1 swi-a-s--- 1.00g      volume-abccb06a-5e9e-422b-a2c0-9f6768071785 0.00
   volume-abccb06a-5e9e-422b-a2c0-9f6768071785    stack-volumes-lvmdriver-1 owi-aos--- 1.00g                               
-  volume-dba8b01e-f259-468e-b370-c94732ea00be    stack-volumes-lvmdriver-1 -wi-a----- 1.00g
+  volume-dba8b01e-f259-468e-b370-c94732ea00be    stack-volumes-lvmdriver-1 <span class="nt">-wi-a-----</span> 1.00g
    
-$ sudo vgs
-  VG                        #PV #LV #SN Attr   VSize  VFree
+<span class="nv">$ </span><span class="nb">sudo </span>vgs
+  VG                        <span class="c">#PV #LV #SN Attr   VSize  VFree</span>
   stack-volumes-default       1   0   0 wz--n- 10.01g 10.01g
   stack-volumes-lvmdriver-1   1   3   1 wz--n- 10.01g  7.01g
       
-$ sudo pvs
+<span class="nv">$ </span><span class="nb">sudo </span>pvs
   PV         VG                        Fmt  Attr PSize  PFree
   /dev/loop1 stack-volumes-default     lvm2 a--  10.01g 10.01g
   /dev/loop2 stack-volumes-lvmdriver-1 lvm2 a--  10.01g  7.01g
-</pre></table></code></div></div><li>Desatachar o volume da VM e confirmar que volta para o estado <code class="language-plaintext highlighter-rouge">available</code>:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Desatachar o volume da VM e confirmar que volta para o estado <code class="language-plaintext highlighter-rouge">available</code>:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -696,18 +696,18 @@ $ sudo pvs
 6
 7
 8
-</pre><td class="rouge-code"><pre>$ openstack server remove volume vm teste-fiap
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack server remove volume vm teste-fiap
     
-$ openstack volume list
+<span class="nv">$ </span>openstack volume list
 +--------------------------------------+------------+-----------+------+-------------+
 | ID                                   | Name       | Status    | Size | Attached to |
 +--------------------------------------+------------+-----------+------+-------------+
 | abccb06a-5e9e-422b-a2c0-9f6768071785 | teste-fiap | available |    1 |             |
 +--------------------------------------+------------+-----------+------+-------------+
-</pre></table></code></div></div><li>Anexar o volume a outra VM, monta-lo e conferir que o arquivo criado continua presente</ol><h2 id="clean-up"><span class="me-2"><em>Clean-up</em></span><a href="#clean-up" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li>Desanexar e deletar volumes e <em>snapshots</em>:<div class="language-plaintext highlighter-rouge"><div class="code-header"> <span data-label-text="Plaintext"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></table></code></div></div><li><p>Anexar o volume a outra VM, monta-lo e conferir que o arquivo criado continua presente</p></ol><h2 id="clean-up"><span class="me-2"><em>Clean-up</em></span><a href="#clean-up" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li><p>Desanexar e deletar volumes e <em>snapshots</em>:</p><div class="language-sh highlighter-rouge"><div class="code-header"> <span data-label-text="Shell"><i class="fas fa-code fa-fw small"></i></span> <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre><td class="rouge-code"><pre>$ openstack volume snapshot delete teste-fiap-snap
+</pre><td class="rouge-code"><pre><span class="nv">$ </span>openstack volume snapshot delete teste-fiap-snap
     
-$ openstack volume delete teste-fiap
+<span class="nv">$ </span>openstack volume delete teste-fiap
 </pre></table></code></div></div></ol><h2 id="horizon"><span class="me-2">Horizon</span><a href="#horizon" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2><ol><li>Refazer o mesmo processo via Horizon Dashboard:<ul><li>Criação de volume vazio<li>Criação de volume a partir de imagem<li><em>Snapshot</em> de volume<li>Atachar/desatachar volumes a VMs</ul><p><a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder1.png" class="popup img-link shimmer"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder1.png" alt="" loading="lazy"></a></p><p><a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder2.png" class="popup img-link shimmer"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder2.png" alt="" loading="lazy"></a></p><p><a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder3.png" class="popup img-link shimmer"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder3.png" alt="" loading="lazy"></a></p><p><a href="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder4.png" class="popup img-link shimmer"><img src="https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/img/cinder4.png" alt="" loading="lazy"></a></p></ol><p><a href="https://github.com/josecastillolema" class="img-link shimmer" ><img src="https://img.shields.io/github/followers/josecastillolema?label=Follow%20%40josecastillolema&amp;style=social" alt="GitHub followers" loading="lazy"></a></p></div><div class="post-tail-wrapper text-muted"><div class="post-tags"> <i class="fa fa-tags fa-fw me-1"></i> <a href="/tags/classes/" class="post-tag no-text-decoration" >classes</a> <a href="/tags/fiap/" class="post-tag no-text-decoration" >fiap</a> <a href="/tags/openstack/" class="post-tag no-text-decoration" >openstack</a> <a href="/tags/pt/" class="post-tag no-text-decoration" >pt</a> <a href="/tags/redhat/" class="post-tag no-text-decoration" >redhat</a> <a href="/tags/sds/" class="post-tag no-text-decoration" >sds</a> <a href="/tags/series/" class="post-tag no-text-decoration" >series</a></div><div class=" post-tail-bottom d-flex justify-content-between align-items-center mt-5 pb-2 " ><div class="license-wrapper"> This post is licensed under <a href="https://creativecommons.org/licenses/by/4.0/"> CC BY 4.0 </a> by the author.</div><div class="share-wrapper d-flex align-items-center"> <span class="share-label text-muted">Share</span> <span class="share-icons"> <a href="https://twitter.com/intent/tweet?text=OpenStack%20series%20V:%20Cinder%20-%20Block%20Storage%20Service%20-%20GitOps&url=https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack5-cinder%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Twitter" aria-label="Twitter"> <i class="fa-fw fa-brands fa-square-x-twitter"></i> </a> <a href="https://www.facebook.com/sharer/sharer.php?title=OpenStack%20series%20V:%20Cinder%20-%20Block%20Storage%20Service%20-%20GitOps&u=https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack5-cinder%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Facebook" aria-label="Facebook"> <i class="fa-fw fab fa-facebook-square"></i> </a> <a href="https://t.me/share/url?url=https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack5-cinder%2F&text=OpenStack%20series%20V:%20Cinder%20-%20Block%20Storage%20Service%20-%20GitOps" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Telegram" aria-label="Telegram"> <i class="fa-fw fab fa-telegram"></i> </a> <a href="https://www.linkedin.com/feed/?shareActive=true&shareUrl=https%3A%2F%2Fjosecastillolema.github.io%2Fopenstack5-cinder%2F" target="_blank" rel="noopener" data-bs-toggle="tooltip" data-bs-placement="top" title="Linkedin" aria-label="Linkedin"> <i class="fa-fw fab fa-linkedin"></i> </a> <button id="copy-link" aria-label="Copy link" class="btn small" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy link" data-title-succeed="Link copied successfully!" > <i class="fa-fw fas fa-link pe-none fs-6"></i> </button> </span></div></div></div></article></main><aside aria-label="Panel" id="panel-wrapper" class="col-xl-3 ps-2 text-muted"><div class="access"><section id="access-lastmod"><h2 class="panel-heading">Recently Updated</h2><ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2"><li class="text-truncate lh-lg"> <a href="/entrevistas-diferido/">Entrevistas en Diferido</a><li class="text-truncate lh-lg"> <a href="/chirpy/">Migrating from Jekyll Minimal Mistakes theme to Chirpy</a><li class="text-truncate lh-lg"> <a href="/top-github-users/">Top GitHub users</a><li class="text-truncate lh-lg"> <a href="/fosdem26/">FOSDEM 2026</a><li class="text-truncate lh-lg"> <a href="/kde-express/">KDE express #65: esLibre'26 - OCaml y Containerlab</a></ul></section><section><h2 class="panel-heading">Trending Tags</h2><div class="d-flex flex-wrap mt-3 mb-1 me-3"> <a class="post-tag btn btn-outline-primary" href="/tags/pt/">pt</a> <a class="post-tag btn btn-outline-primary" href="/tags/en/">en</a> <a class="post-tag btn btn-outline-primary" href="/tags/classes/">classes</a> <a class="post-tag btn btn-outline-primary" href="/tags/networks/">networks</a> <a class="post-tag btn btn-outline-primary" href="/tags/cert/">cert</a> <a class="post-tag btn btn-outline-primary" href="/tags/redhat/">redhat</a> <a class="post-tag btn btn-outline-primary" href="/tags/fiap/">fiap</a> <a class="post-tag btn btn-outline-primary" href="/tags/aws/">aws</a> <a class="post-tag btn btn-outline-primary" href="/tags/events/">events</a> <a class="post-tag btn btn-outline-primary" href="/tags/openshift/">openshift</a></div></section></div><div class="toc-border-cover z-3"></div><section id="toc-wrapper" class="invisible position-sticky ps-0 pe-4 pb-4"><h2 class="panel-heading ps-3 pb-2 mb-0">Contents</h2><nav id="toc"></nav></section></aside></div><div class="row"><div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 px-md-4"><aside id="related-posts" aria-labelledby="related-label"><h3 class="mb-4" id="related-label">Further Reading</h3><nav class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4 mb-4"><article class="col"> <a href="/openstack6-swift/" class="post-preview card h-100"><div class="card-body"> <time data-ts="1524960000" data-df="ll" > Apr 29, 2018 </time><h4 class="pt-0 my-2">OpenStack series VI: Swift - Object Storage Service</h4><div class="text-muted"><p>Serie de artigos sobre OpenStack. {% remote_include https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/lab06-swift.md %}</p></div></div></a></article><article class="col"> <a href="/openstack8-terraform/" class="post-preview card h-100"><div class="card-body"> <time data-ts="1525392000" data-df="ll" > May 4, 2018 </time><h4 class="pt-0 my-2">OpenStack series VIII: Terraform</h4><div class="text-muted"><p>Serie de artigos sobre OpenStack. {% remote_include https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/lab08-terraform.md %}</p></div></div></a></article><article class="col"> <a href="/openstack7-heat/" class="post-preview card h-100"><div class="card-body"> <time data-ts="1525219200" data-df="ll" > May 2, 2018 </time><h4 class="pt-0 my-2">OpenStack series VII: Heat - Orchestration Service</h4><div class="text-muted"><p>Serie de artigos sobre OpenStack. {% remote_include https://raw.githubusercontent.com/josecastillolema/fiap/master/cld/openstack/lab07-heat.md %}</p></div></div></a></article></nav></aside><nav class="post-navigation d-flex justify-content-between" aria-label="Post Navigation"> <a href="/openstack4-neutron/" class="btn btn-outline-primary" aria-label="Older" ><p>OpenStack series IV: Neutron - Network Service</p></a> <a href="/openstack6-swift/" class="btn btn-outline-primary" aria-label="Newer" ><p>OpenStack series VI: Swift - Object Storage Service</p></a></nav><footer aria-label="Site Info" class=" d-flex flex-column justify-content-center text-muted flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3 " ><p>© <time>2026</time> <a href="https://github.com/josecastillolema">Jose Castillo Lema</a>. <span data-bs-toggle="tooltip" data-bs-placement="top" title="Except where otherwise noted, the blog posts on this site are licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License by the author." >Some rights reserved.</span></p><p>Using the <a data-bs-toggle="tooltip" data-bs-placement="top" title="v7.5.0" href="https://github.com/cotes2020/jekyll-theme-chirpy" target="_blank" rel="noopener" >Chirpy</a> theme for <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.</p></footer></div></div><div id="search-result-wrapper" class="d-flex justify-content-center d-none"><div class="col-11 content"><div id="search-hints"><section><h2 class="panel-heading">Trending Tags</h2><div class="d-flex flex-wrap mt-3 mb-1 me-3"> <a class="post-tag btn btn-outline-primary" href="/tags/pt/">pt</a> <a class="post-tag btn btn-outline-primary" href="/tags/en/">en</a> <a class="post-tag btn btn-outline-primary" href="/tags/classes/">classes</a> <a class="post-tag btn btn-outline-primary" href="/tags/networks/">networks</a> <a class="post-tag btn btn-outline-primary" href="/tags/cert/">cert</a> <a class="post-tag btn btn-outline-primary" href="/tags/redhat/">redhat</a> <a class="post-tag btn btn-outline-primary" href="/tags/fiap/">fiap</a> <a class="post-tag btn btn-outline-primary" href="/tags/aws/">aws</a> <a class="post-tag btn btn-outline-primary" href="/tags/events/">events</a> <a class="post-tag btn btn-outline-primary" href="/tags/openshift/">openshift</a></div></section></div><div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div></div></div></div><aside aria-label="Scroll to Top"> <button id="back-to-top" type="button" class="btn btn-lg btn-box-shadow"> <i class="fas fa-angle-up"></i> </button></aside></div><div id="mask" class="d-none position-fixed w-100 h-100 z-1"></div><script> var disqus_config = function () { this.page.url = 'https://josecastillolema.github.io/openstack5-cinder/'; this.page.identifier = '/openstack5-cinder/'; }; function addDisqus() { let disqusThread = document.createElement('div'); let paragraph = document.createElement('p'); disqusThread.id = 'disqus_thread'; paragraph.className = 'text-center text-muted small'; paragraph.innerHTML = 'Comments powered by <a href="https://disqus.com/">Disqus</a>.'; disqusThread.appendChild(paragraph); const footer = document.querySelector('footer'); footer.insertAdjacentElement("beforebegin", disqusThread); }function reloadDisqus(event) { if (event.source === window && event.data && event.data.id === Theme.ID) {if (typeof DISQUS === 'undefined') { return; } if (document.readyState == 'complete') { DISQUS.reset({ reload: true, config: disqus_config }); } } } addDisqus(); if (Theme.switchable) { addEventListener('message', reloadDisqus); }var disqusObserver = new IntersectionObserver( function (entries) { if (entries[0].isIntersecting) { var d = document, s = d.createElement('script'); s.src = 'https://https-josecastillolema-github-io.disqus.com/embed.js'; s.setAttribute('data-timestamp', +new Date()); (d.head || d.body).appendChild(s); disqusObserver.disconnect(); } }, { threshold: [0] } ); disqusObserver.observe(document.getElementById('disqus_thread')); </script> <script> document.addEventListener('DOMContentLoaded', () => { SimpleJekyllSearch({ searchInput: document.getElementById('search-input'), resultsContainer: document.getElementById('search-results'), json: '/assets/js/data/search.json', searchResultTemplate: '<article class="px-1 px-sm-2 px-lg-4 px-xl-0"><header><h2><a href="{url}">{title}</a></h2><div class="post-meta d-flex flex-column flex-sm-row text-muted mt-1 mb-1"> {categories} {tags}</div></header><p>{content}</p></article>', noResultsText: '<p class="mt-5">Oops! No results found.</p>', templateMiddleware: function(prop, value, template) { if (prop === 'categories') { if (value === '') { return `${value}`; } else { return `<div class="me-sm-4"><i class="far fa-folder fa-fw"></i>${value}</div>`; } } if (prop === 'tags') { if (value === '') { return `${value}`; } else { return `<div><i class="fa fa-tag fa-fw"></i>${value}</div>`; } } } }); }); </script>
