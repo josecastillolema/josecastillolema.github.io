@@ -12,7 +12,9 @@ mermaid: true
 
 Thanks to [crun](https://github.com/containers/crun) we can run [WebAssembly (Wasm)](#wasm) and [libkrun](#libkrun) workloads in directly in Podman.
 ```sh
-$ podman info | grep crun -A 2
+podman info | grep crun -A 2
+```
+```
     name: crun
     package: crun-1.19.1-1.fc41.x86_64
     path: /usr/bin/crun
@@ -32,12 +34,12 @@ We can leverage the portability of Wasm to run Wasm workloads alongside Linux co
 
 To enable Wasm(Edge) applications through Podman in Fedora we need to:
 ```sh
-$ rpm-ostree install wasmedge crun-wasm
+rpm-ostree install wasmedge crun-wasm
 ```
 
 To run Wasm applications though Podman:
 ```sh
-$ podman --runtime /usr/bin/crun-wasm run -dp 8080:8080 --platform=wasi/wasm -t --rm server-with-wasm
+podman --runtime /usr/bin/crun-wasm run -dp 8080:8080 --platform=wasi/wasm -t --rm server-with-wasm
 ```
 
 ## libkrun
@@ -54,12 +56,12 @@ This model is useful to quickly run and deploy small container-based application
 
 To leverage libkrun through Podman in Fedora we need to:
 ```sh
-$ rpm-ostree install libkrun
+rpm-ostree install libkrun
 ```
 
 To use the libkrun backend though Podman:
 ```sh
-$ podman run --annotation=run.oci.handler=krun -dp 8080:8080 -t --rm server-without-wasm
+podman run --annotation=run.oci.handler=krun -dp 8080:8080 -t --rm server-without-wasm
 ```
 
 ## Setup
@@ -164,7 +166,9 @@ xychart
 ##### Idle
 
 ```sh
-$ podman stats
+podman stats
+```
+```
 ID            NAME        CPU %       MEM USAGE / LIMIT  MEM %       NET IO      BLOCK IO      PIDS        CPU TIME    AVG CPU %
 241deb12adf5  podman      0.01%       208.9kB / 67.1GB   0.00%       0B / 726B   0B / 0B       1           3.915ms     0.01%
 a568ddf0f97b  wasmedge    0.04%       26.35MB / 67.1GB   0.04%       0B / 796B   0B / 0B       1           30.242ms    0.04%
@@ -210,7 +214,9 @@ xychart
 ##### Under load
 
 ```sh
-$ podman stats
+podman stats
+```
+```
 ID            NAME        CPU %       MEM USAGE / LIMIT  MEM %       NET IO        BLOCK IO      PIDS        CPU TIME     AVG CPU %
 241deb12adf5  podman      57.34%      417.8kB / 67.1GB   0.00%       0B / 1.216kB  0B / 0B       1           13.879976s   0.13%
 110f88177027  wasmedge    98.57%      26.6MB  / 67.1GB   0.04%       0B / 656B     0B / 0B       1           6.130282s    27.35%
@@ -258,7 +264,9 @@ xychart
 
 To compare networking performance among the three solutions we have used [Drill](https://github.com/fcsonline/drill), a HTTP load testing application written in Rust. The [benchmark file](https://github.com/josecastillolema/wasmedge-server/blob/main/drill-benchmark.yml) can be found in the repository and generates 85 byte HTTP GETs and POSTs calls:
 ```sh
-$ drill --benchmark drill-benchmark.yml --stats
+drill --benchmark drill-benchmark.yml --stats
+```
+```
 ...
 Time taken for tests      44.0 seconds
 Total requests            2000000
@@ -350,20 +358,22 @@ Wasm is often described as having "near-native performance". Let's remove podman
 
 To build locally the WasmEdge enabled served:
 ```sh
-$ rustup target add wasm32-wasi
-$ cargo build --target wasm32-wasi --release
+rustup target add wasm32-wasi
+cargo build --target wasm32-wasi --release
 ```
 
 Run the Wasm bytecode file in WasmEdge CLI.
 
 ```sh
-$ wasmedge target/wasm32-wasi/release/server-with-wasm.wasm
+wasmedge target/wasm32-wasi/release/server-with-wasm.wasm
 Listening on http://0.0.0.0:8080
 ```
 
 And run the test:
 ```sh
-$ drill --benchmark drill-benchmark.yml --stats
+drill --benchmark drill-benchmark.yml --stats
+```
+```
 ...
 Time taken for tests      91.4 seconds
 Total requests            200000
@@ -384,20 +394,24 @@ While the server did not become unresponsive and sustained a longer test, the RP
 
 Compile the Rust server source code:
 ```sh
-$ rustup target add x86_64-unknown-linux-musl
-$ cargo build --target x86_64-unknown-linux-musl --release
+rustup target add x86_64-unknown-linux-musl
+cargo build --target x86_64-unknown-linux-musl --release
 ```
 
 Run the server:
 
 ```sh
-$ ./target/x86_64-unknown-linux-musl/release/server-without-wasm
+./target/x86_64-unknown-linux-musl/release/server-without-wasm
+```
+```
 Listening on http://0.0.0.0:8080
 ```
 
 And run the test:
 ```sh
-$ drill --benchmark drill-benchmark.yml --stats
+drill --benchmark drill-benchmark.yml --stats
+```
+```
 ...
 Time taken for tests      23.0 seconds
 Total requests            2000000
@@ -436,7 +450,9 @@ Looking at this nice article about the [Performance of WebAssembly runtimes in 2
 
 A quick look at the `wasmedge` CLI options shows an option that could be of interest for this particular use case, however no significant performance improvement was observed with it:
 ```sh
-$ wasmedge -h
+wasmedge -h
+```
+```
 ...
 --enable-threads
                 Enable Threads proposal
@@ -455,10 +471,10 @@ debug = 1
 
 Build and run again the server, clone the [FlameGraph repository](https://github.com/brendangregg/FlameGraph) and for convenience put it on your path:
 ```sh
-$ perf record -F 99 -p [pid of server-with-wasm] --call-graph dwarf -- curl localhost:8080
-$ perf script > server-with-wasm.perf
-$ stackcollapse-perf.pl server-with-wasm.perf > server-with-wasm.folded
-$ flamegraph.pl server-with-wasm.folded > server-with-wasm.sv
+perf record -F 99 -p [pid of server-with-wasm] --call-graph dwarf -- curl localhost:8080
+perf script > server-with-wasm.perf
+stackcollapse-perf.pl server-with-wasm.perf > server-with-wasm.folded
+flamegraph.pl server-with-wasm.folded > server-with-wasm.sv
 ```
 
 This is the resulting flame graph. It looks like most of the time is spent on `libwasmedge.so` calls:

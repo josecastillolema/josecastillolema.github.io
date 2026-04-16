@@ -20,32 +20,48 @@ We won't be using the [Cluster API Kubemark Provider](https://github.com/kuberne
 
 Let's assume we have a **working OpenShift cluster** available. We will be leveraging a [Red Hat OpenShift Local instance](https://developers.redhat.com/products/openshift-local/overview) (formerly Red Hat CodeReady Containers) for this demo:
 ```sh
-❯ oc version
+oc version
+```
+```
 Client Version: 4.13.6
 Kustomize Version: v4.5.7
 Server Version: 4.13.6
 Kubernetes Version: v1.26.6+73ac561
+```
 
-❯ oc get node
+```sh
+oc get node
+```
+```
 NAME                 STATUS   ROLES                         AGE     VERSION
 crc-2zx29-master-0   Ready    control-plane,master,worker   54d     v1.26.6+73ac561
 ```
 
 Let's create a new **project**, **secret** and corresponding **permissions**:
 ```sh
-❯ oc new-project kubemark
+oc new-project kubemark
+```
+```
 Now using project "kubemark" on server "https://api.crc.testing:6443".
+```
 
-❯ oc create secret generic kubeconfig --from-file=kubeconfig=$HOME/.crc/machines/crc/kubeconfig
+```sh
+oc create secret generic kubeconfig --from-file=kubeconfig=$HOME/.crc/machines/crc/kubeconfig
+```
+```
 secret/kubeconfig created
+```
 
-❯ oc adm policy add-scc-to-user privileged -z default
+```sh
+oc adm policy add-scc-to-user privileged -z default
+```
+```
 clusterrole.rbac.authorization.k8s.io/system:openshift:scc:privileged added: "default"
 ```
 
 Let's create the **Kubemark pod** (which in turn will automatically instantiate a new node):
 ```yaml
-❯ cat <<EOF | oc apply -f -
+cat <<EOF | oc apply -f -
 kind: Pod
 apiVersion: v1
 metadata:
@@ -88,11 +104,17 @@ pod/kubemark-node created
 
 Let's check the if new node was properly registered:
 ```sh
-❯ oc get po
+oc get po
+```
+```
 NAME             READY   STATUS    RESTARTS   AGE
 kubemark-node    1/1     Running   0          5s
+```
 
-❯ oc get node
+```sh
+oc get node
+```
+```
 NAME                 STATUS   ROLES                         AGE     VERSION
 crc-2zx29-master-0   Ready    control-plane,master,worker   54d     v1.26.6+73ac561
 kubemark-node        Ready    <none>                        4s      v1.26.7
@@ -100,7 +122,9 @@ kubemark-node        Ready    <none>                        4s      v1.26.7
 
 The cluster should be healthy:
 ```sh
-❯ oc get co
+oc get co
+```
+```
 NAME                                       VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE   MESSAGE
 authentication                             4.13.6    True        False         False      12d
 cluster-api                                4.13.6    True        False         False      13d
@@ -132,7 +156,9 @@ service-ca                                 4.13.6    True        False         F
 
 And there should a few pods already "running" in the new hollow node:
 ```sh
-❯ oc get pods -A --field-selector spec.nodeName=kubemark-node
+oc get pods -A --field-selector spec.nodeName=kubemark-node
+```
+```
 NAMESPACE                           NAME                                  READY   STATUS     RESTARTS   AGE
 hostpath-provisioner                csi-hostpathplugin-8p9j5              4/4     Running    0          17m
 openshift-dns                       dns-default-lt7g8                     2/2     Running    0          17m
@@ -145,15 +171,20 @@ openshift-multus                    multus-additional-cni-plugins-rv6j7   0/1   
 openshift-multus                    network-metrics-daemon-zh2vz          2/2     Running    0          17m
 openshift-network-diagnostics       network-check-target-l85xq            1/1     Running    0          17m
 openshift-sdn                       sdn-rv9mb                             2/2     Running    0          17m
-
 ```
 
 Let's try to create some pods on the new hollow node:
 ```sh
-❯ oc run test --image nginx --overrides='{"spec": { "nodeSelector": {"kubernetes.io/hostname": "kubemark-node"}}}'
+oc run test --image nginx --overrides='{"spec": { "nodeSelector": {"kubernetes.io/hostname": "kubemark-node"}}}'
+```
+```
 pod/test created
+```
 
-❯ oc get po -o wide test
+```sh
+oc get po -o wide test
+```
+```
 NAME   READY   STATUS    RESTARTS   AGE   IP                NODE            NOMINATED NODE   READINESS GATES
 test   1/1     Running   0          36s   192.168.192.168   kubemark-node   <none>           <none>
 ```

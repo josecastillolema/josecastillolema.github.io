@@ -33,7 +33,7 @@ Sem mais, vamos la!
 ## Clonando o repósitorio
 
 ```sh
-$ git clone https://github.com/josecastillolema/churrops.git
+git clone https://github.com/josecastillolema/churrops.git
 ```
 
 Segue uma breve descrição dos arquivos:
@@ -111,16 +111,16 @@ Arquivo de *shell* que vai ser executado via **cloud-init** no primeiro *boot* p
 ## Fazendo o *deploy*
 
 ```sh
-$ terraform init
+terraform init
 ```
 
 ![](/assets/images/posts/2017-11-26-terraformando-openstack/01.png)
 
 ```sh
-$ terraform plan
+terraform plan
 ```
 ```sh
-$ terraform apply
+terraform apply
 ```
 ![](/assets/images/posts/2017-11-26-terraformando-openstack/02.png)
 
