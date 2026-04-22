@@ -74,6 +74,27 @@
 </style>
 
 <script>
+  /* Hide {content} placeholder in search results for image-only posts */
+  (function () {
+    var _orig = window.SimpleJekyllSearch;
+    Object.defineProperty(window, 'SimpleJekyllSearch', {
+      configurable: true,
+      set: function (fn) {
+        _orig = fn;
+      },
+      get: function () {
+        return function (opts) {
+          var origMw = opts.templateMiddleware;
+          opts.templateMiddleware = function (prop, value, template) {
+            if (prop === 'content' && value === '') return value;
+            if (origMw) return origMw(prop, value, template);
+          };
+          return _orig(opts);
+        };
+      }
+    });
+  })();
+
   /* Extend TOC to support h5 and h6 headings (Chirpy only supports h2-h4) */
   window.addEventListener('load', function () {
     setTimeout(function () {
