@@ -168,7 +168,23 @@ Finally, open VSCode (it should automatically detect the local Golang installati
 
 ### Python
 
-#### Local install - custom version
+#### Local install - custom version (new approach)
+
+Use `uv` to perform a local python install:
+```sh
+curl -LsSf https://astral.sh/uv/install.sh | sh
+uv python install 3.14
+ln -sf ~/.local/bin/python3.14 ~/.local/bin/python
+```
+
+Then install IPython and the LSP server:
+```
+uv tool install ipython
+uv tool install ty
+```
+
+#### Local install - custom version (old approach)
+
 Install both `python` and `pip` in the local user environment, compiling an specific version.
 
 From a toolbx container with proper development tools (and readline, sqlite and libffi dev dependencies), i.e.: [this one](https://github.com/josecastillolema/toolbox-images/blob/main/fedora-toolbox/41/Containerfile) download and compile Python:
@@ -224,7 +240,30 @@ Finally install the LSP server:
 rustup component add rust-analyzer
 ```
 
-### Ansible
+### Ansible (new)
+
+Python is a pre-requisite.
+
+Local ansible installation:
+```sh
+uv tool install ansible ansible-lint
+```
+Ansible will be installed on `~/.local/bin`, so we need to add this path to our editor of choice (i.e.: VSCode):
+```sh
+which ansible
+```
+```
+~/.local/bin/ansible
+```
+```sh
+sudo flatpak override --env=PATH='/app/bin:/usr/bin:/home/$USER/.local/bin' com.visualstudio.code
+```
+
+Installed the Ansible extension by Red Hat in VSCode.
+
+When opening VSCode it should automatically detect the local Ansible installation.
+
+### Ansible (old)
 
 Python is a pre-requisite.
 
