@@ -95,6 +95,15 @@
     });
   })();
 
+  /* Press "/" to open the search box */
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== '/') return;
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || e.target.isContentEditable) return;
+    var trigger = document.getElementById('search-trigger');
+    if (trigger) { e.preventDefault(); trigger.click(); }
+  });
+
   /* Extend TOC to support h5 and h6 headings (Chirpy only supports h2-h4) */
   window.addEventListener('load', function () {
     setTimeout(function () {

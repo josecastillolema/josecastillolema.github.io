@@ -58,3 +58,8 @@ module Jekyll
 end
 
 Liquid::Template.register_tag('remote_include', Jekyll::RemoteIncludeRewrite)
+
+Jekyll::Hooks.register :posts, :post_render do |post|
+  post.content = post.content.gsub(/\{%\s*remote_include\s+[^%]*%\}/, '')
+  post.output  = post.output.gsub(/\{%\s*remote_include\s+[^%]*%\}/, '') if post.output
+end
