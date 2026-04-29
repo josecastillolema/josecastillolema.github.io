@@ -1,5 +1,6 @@
 ---
 title:  "Digital credentials for Red Hat Certified Professionals"
+description: Red Hat digital credentials and certifications on Credly
 last_modified_at: 2022-05-02
 tags:
   - ansible

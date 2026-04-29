@@ -1,5 +1,6 @@
 ---
 title:  "Containers series III: Docker Compose"
+description: "Tutorial de Docker Compose: orquestração de aplicações multi-container"
 last_modified_at: 2019-01-29
 tags:
   - classes

@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Foundations"
+description: Primeira edição do curso FIAP SHIFT AWS Academy Cloud Foundations com preparação para a certificação AWS Cloud Practitioner
 last_modified_at: 2020-08-30
 tags:
   - aws

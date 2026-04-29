@@ -1,5 +1,6 @@
 ---
 title:  "Computer Networks - Volume 107"
+description: Journal paper on software-defined WiNeMO architecture for QoS-guaranteed mobile service transport in Computer Networks.
 last_modified_at: 2016-10-09
 tags:
   - en

@@ -1,5 +1,6 @@
 ---
 title:  "CODECO project kick off"
+description: CODECO EU Horizon Europe project kick-off for AI-driven orchestration of edge computing
 last_modified_at: 2023-01-18
 tags:
   - en
@@ -25,6 +26,6 @@ unique Innovation and Research Community Engagement Programme.
 
 Read more about it in the [Red Hat Research blog](https://research.redhat.com/blog/research_project/codeco/).
 
-![](/assets/images/posts/2023-01-18-codeco-kickoff/2.jpg)
+![CODECO kick-off meeting group photo 1](/assets/images/posts/2023-01-18-codeco-kickoff/2.jpg)
 
-![](/assets/images/posts/2023-01-18-codeco-kickoff/3.jpg)
+![CODECO kick-off meeting group photo 2](/assets/images/posts/2023-01-18-codeco-kickoff/3.jpg)

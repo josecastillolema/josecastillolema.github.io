@@ -1,5 +1,6 @@
 ---
 title:  "Microsoft Ignite Cloud Skills Challenge"
+description: Completed the Azure Admin Challenge at Microsoft Ignite with a free certification exam voucher
 last_modified_at: 2022-03-17
 tags:
   - azure
@@ -33,7 +34,7 @@ The challenge ends on November 30, 2021 at 4:00 PM (16:00) UTC. Make sure all mo
  - Security Operations Analyst Challenge
  - Identity + Information Protection Challenge
 
-![](/assets/images/posts/2021-11-04-microsoft-ignite/1.png)
+![Microsoft Ignite challenge badge](/assets/images/posts/2021-11-04-microsoft-ignite/1.png)
 
 ## Eligible exams
 

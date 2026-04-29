@@ -1,5 +1,6 @@
 ---
 title:  "AWS Learning Badges"
+description: AWS digital learning badges for cloud skills validation on Credly
 last_modified_at: 2022-04-14
 tags:
   - aws

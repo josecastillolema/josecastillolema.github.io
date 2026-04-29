@@ -1,5 +1,6 @@
 ---
 title:  "OCaml (vs Python) y Unikernels con MirageOS"
+description: Charla en FP Madrid comparando OCaml con Python y explorando unikernels con MirageOS
 last_modified_at: 2024-12-20
 tags:
   - dev

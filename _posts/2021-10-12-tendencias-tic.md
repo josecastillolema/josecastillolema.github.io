@@ -1,5 +1,6 @@
 ---
 title:  "Tendências de mercado na área de TIC"
+description: Webinar sobre tendências de mercado na área de tecnologia da informação e comunicação
 last_modified_at: 2021-10-12
 tags:
   - cert

@@ -1,5 +1,6 @@
 ---
 title:  "Containers series VI: Kompose"
+description: "Tutorial de Kompose: conversão de arquivos Docker Compose para manifests Kubernetes"
 last_modified_at: 2019-02-06
 tags:
   - classes

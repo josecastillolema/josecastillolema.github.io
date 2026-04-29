@@ -1,5 +1,6 @@
 ---
 title:  "Red Hat Research"
+description: Overview of the Red Hat Research program connecting upstream open source communities with academia
 last_modified_at: 2022-11-21
 tags:
   - en
@@ -28,7 +29,7 @@ The Red Hat Research Program emphasizes research projects (PhD dissertations, Ma
 
 ## Profile
 
-[![](/assets/images/posts/2022-08-10-rh-research/2.png)](https://research.redhat.com/blog/project_member/jose-castillo-lema/)
+[![Red Hat Research profile page](/assets/images/posts/2022-08-10-rh-research/2.png)](https://research.redhat.com/blog/project_member/jose-castillo-lema/)
 
 
 ## Projects

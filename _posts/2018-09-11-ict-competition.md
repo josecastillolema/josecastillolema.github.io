@@ -1,5 +1,6 @@
 ---
 title:  "Huawei ICT Competition Brazil 2018-2019"
+description: Campeonato mundial de TIC promovido pela Huawei para estudantes no Brasil
 last_modified_at: 2018-09-11
 tags:
   - classes

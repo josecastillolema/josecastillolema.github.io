@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series V: Cinder - Block Storage Service"
+description: "Tutorial de OpenStack Cinder: criação e gerenciamento de volumes de bloco"
 last_modified_at: 2018-04-27
 tags:
   - classes

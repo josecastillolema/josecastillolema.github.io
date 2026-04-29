@@ -1,5 +1,6 @@
 ---
 title:  "Huawei ICT Job Fair Brazil 2021"
+description: Feira de empregos Huawei ICT Job Fair Brasil 2021
 last_modified_at: 2021-11-24
 tags:
   - cert

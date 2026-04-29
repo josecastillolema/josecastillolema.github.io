@@ -1,5 +1,6 @@
 ---
 title:  "Top GitHub users"
+description: Rankings among the most active GitHub users in Spain by contributions and followers
 last_modified_at: 2026-02-12
 tags:
   - dev

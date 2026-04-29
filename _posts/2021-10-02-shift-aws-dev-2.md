@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Developing - 2nd edition"
+description: Segunda edição do curso FIAP SHIFT de desenvolvimento em nuvem AWS
 last_modified_at: 2021-10-02
 tags:
   - aws

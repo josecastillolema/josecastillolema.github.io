@@ -1,5 +1,6 @@
 ---
 title:  "RHRQ: Bridging clusters, a comparative look at multicluster networking performance in Kubernetes"
+description: Article on multi-cluster networking performance in Kubernetes published in the Red Hat Research Quarterly
 last_modified_at: 2025-08-15
 tags:
   - en

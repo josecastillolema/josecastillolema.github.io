@@ -1,5 +1,6 @@
 ---
 title:  "TOTVS TALKS #09 - A computação em nuvem no Brasil"
+description: Palestra no TOTVS TALKS sobre computação em nuvem no Brasil
 last_modified_at: 2020-10-26
 tags:
   - events
@@ -17,9 +18,9 @@ O [TOTVS TALKS Podcast](https://bandnewsfm.band.uol.com.br/totvs-talks/) é uma 
 
 
 
-[![](/assets/images/posts/2020-10-26-totvs-talks/1.jpeg)](https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w)
+[![TOTVS TALKS podcast cover](/assets/images/posts/2020-10-26-totvs-talks/1.jpeg)](https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w)
 
-[![](/assets/images/posts/2020-10-26-totvs-talks/2.png)](https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w)
+[![TOTVS TALKS no Spotify](/assets/images/posts/2020-10-26-totvs-talks/2.png)](https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w)
 
 Neste [nono episódio](https://open.spotify.com/episode/3tjjbSBQOjnOj7JNwWiNK6?si=YMFflZtASiOwbFLZQPMx2w), o podcast de tecnologia para o mundo dos negócios fala sobre o panorama atual da computação em nuvem no Brasil. A digitalização dos negócios continua parte do debate. Não só porque o mercado vem reconhecendo ano após ano a importância da tecnologia para manter as empresas competitivas, mas também porque o cenário imposto pela pandemia do coronavírus exigiu que as empresas se reinventassem apoiadas na tecnologia. E hoje já é praticamente impossível falar de tecnologia sem falar de Cloud Computing, a computação em nuvem.
 

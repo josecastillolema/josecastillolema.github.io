@@ -1,5 +1,6 @@
 ---
 title:  "[PT] Terraform – IaC – Terraformando no OpenStack"
+description: "Tutorial prático de Terraform no OpenStack: criando um servidor web com IP público via IaC"
 last_modified_at: 2017-11-26
 tags:
   - openstack
@@ -116,7 +117,7 @@ Arquivo de *shell* que vai ser executado via **cloud-init** no primeiro *boot* p
 terraform init
 ```
 
-![](/assets/images/posts/2017-11-26-terraformando-openstack/01.png)
+![Saída do comando terraform init](/assets/images/posts/2017-11-26-terraformando-openstack/01.png)
 
 ```sh
 terraform plan
@@ -124,15 +125,15 @@ terraform plan
 ```sh
 terraform apply
 ```
-![](/assets/images/posts/2017-11-26-terraformando-openstack/02.png)
+![Saída do terraform apply criando recursos no OpenStack](/assets/images/posts/2017-11-26-terraformando-openstack/02.png)
 
 Se tudo der certo, veremos a nova VM com a sua IP pública correspondente:
 
-![](/assets/images/posts/2017-11-26-terraformando-openstack/03.png)
+![OpenStack Horizon mostrando a nova VM com IP público](/assets/images/posts/2017-11-26-terraformando-openstack/03.png)
 
 E conseguimos acessar ao nosso *site*:
 
-![](/assets/images/posts/2017-11-26-terraformando-openstack/04.jpeg)
+![Servidor web rodando na instância OpenStack implantada](/assets/images/posts/2017-11-26-terraformando-openstack/04.jpeg)
 
 
 ## Outros comandos

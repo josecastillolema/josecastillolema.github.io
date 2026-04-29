@@ -1,5 +1,6 @@
 ---
 title:  "Playing with Podman crun backends: Wasm(Edge) and libkrun"
+description: Performance comparison of Podman native containers, WasmEdge and libkrun crun backends
 last_modified_at: 2025-01-02
 tags:
   - dev
@@ -48,7 +49,7 @@ podman --runtime /usr/bin/crun-wasm run -dp 8080:8080 --platform=wasi/wasm -t --
 
 It integrates a VMM (Virtual Machine Monitor, the userspace side of an Hypervisor) with the minimum amount of emulated devices required to its purpose, abstracting most of the complexity that comes from Virtual Machine management, offering users a simple C API.
 
-![](/assets/images/posts/2025-01-02-podman-wasm-libkrun/1.webp)
+![libkrun architecture diagram](/assets/images/posts/2025-01-02-podman-wasm-libkrun/1.webp)
 
 libkrun enables [Confidential Workloads (CW)](https://virtee.io/the-case-for-confidential-workloads/), autonomous, mission specific workloads that run inside a dedicated Virtualization-based TEE. They may make use of a minimal kernel, or have one statically-linked to it (unikernel case), but they shouldn’t depend on any other binary components.
 
@@ -478,4 +479,4 @@ flamegraph.pl server-with-wasm.folded > server-with-wasm.sv
 ```
 
 This is the resulting flame graph. It looks like most of the time is spent on `libwasmedge.so` calls:
-![](/assets/images/posts/2025-01-02-podman-wasm-libkrun/2.svg)
+![Wasm server flame graph](/assets/images/posts/2025-01-02-podman-wasm-libkrun/2.svg)

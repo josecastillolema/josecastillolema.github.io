@@ -1,5 +1,6 @@
 ---
 title:  "Ultra Challenge Saint-Gobain"
+description: Participação no primeiro Ultra Challenge Saint-Gobain da América Latina
 last_modified_at: 2017-09-26
 tags:
   - events

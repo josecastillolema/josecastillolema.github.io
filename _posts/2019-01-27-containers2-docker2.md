@@ -1,5 +1,6 @@
 ---
 title:  "Containers series II: Docker - continuação"
+description: "Tutorial de Docker: construção de imagens com Dockerfile e uso de volumes"
 last_modified_at: 2019-01-27
 tags:
   - classes

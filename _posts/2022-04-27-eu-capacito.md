@@ -1,5 +1,6 @@
 ---
 title:  "Programa EU CAPACITO"
+description: Programa EU CAPACITO de capacitação digital gratuita em parceria com a Huawei
 last_modified_at: 2022-04-27
 tags:
   - classes

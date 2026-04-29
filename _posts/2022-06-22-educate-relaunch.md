@@ -1,5 +1,6 @@
 ---
 title:  "AWS Educate relaunch"
+description: AWS Educate platform relaunch with new features and free cloud learning resources
 last_modified_at: 2022-06-22
 tags:
   - aws

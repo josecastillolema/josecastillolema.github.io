@@ -1,5 +1,6 @@
 ---
 title:  "Development workflows on immutable distros: rootless setup"
+description: Setting up rootless development workflows on immutable Linux distributions like Fedora Silverblue
 last_modified_at: 2023-10-21
 tags:
   - dev
@@ -164,7 +165,7 @@ go version
 
 Finally, open VSCode (it should automatically detect the local Golang installation), install the [Go VSCode extension](https://marketplace.visualstudio.com/items?itemName=golang.Go) and click on `⚠ Analysis Tools Missing` to install those.
 
-![](/assets/images/posts/2023-10-21-dev-immutable-distros/go.png)
+![VSCode Go extension analysis tools installation](/assets/images/posts/2023-10-21-dev-immutable-distros/go.png)
 
 ### Python
 
@@ -212,7 +213,7 @@ pip install ty
 
 Then you can just pip install any dependencies, open the project in VSCode and choose the corresponding Python environment `~/bin/python`. I do not tend to pip install the requirements of the projects thought (only the indispensable ones, like i.e.: ansible), instead prefer the virtual environments approach that will be described next.
 
-![](/assets/images/posts/2023-10-21-dev-immutable-distros/python.png)
+![VSCode Python environment selection](/assets/images/posts/2023-10-21-dev-immutable-distros/python.png)
 
 #### Using python virtual environments
 

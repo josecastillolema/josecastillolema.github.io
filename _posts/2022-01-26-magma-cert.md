@@ -1,5 +1,6 @@
 ---
 title:  "MT101x: Magma Technical Certification Exam"
+description: Free technical certification exam for Magma covering access gateway and Orc8r components
 last_modified_at: 2022-01-26
 tags:
   - cert
@@ -25,4 +26,4 @@ Prior to taking the test, you should have previously reviewed all documentation 
 
 At the end of the course, you can earn a certificate by passing a final exam.
 
-[![](/assets/images/posts/2022-01-26-magma-cert/1.png)](https://magma.edunext.io/certificates/dec605887c0547308253fd01a0972cef)
+[![Magma certification of completion](/assets/images/posts/2022-01-26-magma-cert/1.png)](https://magma.edunext.io/certificates/dec605887c0547308253fd01a0972cef)

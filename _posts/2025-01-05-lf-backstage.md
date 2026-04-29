@@ -1,5 +1,6 @@
 ---
 title:  "Introduction to Backstage - Developer Portals Made Easy (LFS142)"
+description: Completed the Linux Foundation LFS142 course on building developer portals with Backstage
 last_modified_at: 2025-01-05
 tags:
   - cert

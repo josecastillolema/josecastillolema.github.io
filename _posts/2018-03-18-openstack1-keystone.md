@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series I: Keystone - Identity Manager"
+description: "Tutorial de OpenStack Keystone: gerenciamento de identidade, projetos e usuários"
 last_modified_at: 2018-03-18
 tags:
   - classes

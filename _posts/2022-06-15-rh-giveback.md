@@ -1,5 +1,6 @@
 ---
 title:  "Red Hat Giveback Program"
+description: Red Hat Giveback volunteering program supporting open source communities
 last_modified_at: 2022-06-15
 tags:
   - en

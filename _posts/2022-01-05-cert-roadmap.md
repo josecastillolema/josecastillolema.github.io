@@ -1,5 +1,6 @@
 ---
 title:  "Certification preparation roadmap"
+description: Recommended preparation roadmap for AWS, Azure, Huawei, and Red Hat certification exams
 last_modified_at: 2022-02-05
 tags:
   - aws

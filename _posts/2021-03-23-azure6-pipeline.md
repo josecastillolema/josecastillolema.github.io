@@ -1,5 +1,6 @@
 ---
 title:  "Azure series VI: Azure Pipeline"
+description: "Tutorial de Azure: configuração de pipelines de CI/CD com Azure Pipelines"
 last_modified_at: 2021-03-23
 tags:
   - azure

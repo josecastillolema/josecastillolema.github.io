@@ -1,5 +1,6 @@
 ---
 title:  "AWS Community Day Brasil 2021"
+description: Maior encontro de grupos de usuários AWS do Brasil em 2021
 last_modified_at: 2021-11-03
 tags:
   - aws

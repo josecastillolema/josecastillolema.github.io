@@ -1,5 +1,6 @@
 ---
 title:  "Containers series VII: Kubernetes - Uso"
+description: "Tutorial de Kubernetes: deploy e gerenciamento de aplicações no cluster"
 last_modified_at: 2019-02-08
 tags:
   - classes

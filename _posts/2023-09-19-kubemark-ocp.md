@@ -1,5 +1,6 @@
 ---
 title:  "Kubemark on OpenShift"
+description: Running Kubemark on OpenShift for large-scale control plane testing
 last_modified_at: 2023-09-19
 tags:
   - en

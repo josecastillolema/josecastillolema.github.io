@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Foundations - 8th edition"
+description: Oitava edição do curso FIAP SHIFT AWS Academy Cloud Foundations
 last_modified_at: 2022-07-09
 tags:
   - aws

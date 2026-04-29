@@ -1,5 +1,6 @@
 ---
 title:  "KDE express #65: esLibre'26 - OCaml y Containerlab"
+description: Episodio del podcast KDE express sobre las charlas de OCaml y Containerlab en esLibre 2026
 last_modified_at: 2026-01-14
 tags:
   - classes
@@ -33,4 +34,4 @@ Especial [esLibre 2026 Melide](https://eslib.re/2026/) destacando algunas de las
       - Público objetivo: Profesores, alumnos, personas interesadas en aprender redes de computadores, containers, virtualización, etc.
       - Containerlab es un herramienta para orquestar y gestionar laboratorios de redes basados ​​en contenedores. Se encarga de iniciar los contenedores, crear el cableado virtual entre ellos para crear topologías de laboratorio a elección del usuario y gestionar el ciclo de vida de los laboratorios. Descubre como puedes usar la para crear ambientes interactivos en ambientes compartidos como Github Codespaces.
 
-[![](/assets/images/posts/2026-01-14-kde-express/2.png)](https://open.spotify.com/episode/1U8dvZbh9XYueqqS5OvSsm)
+[![Episodio del podcast KDE Express en Spotify](/assets/images/posts/2026-01-14-kde-express/2.png)](https://open.spotify.com/episode/1U8dvZbh9XYueqqS5OvSsm)

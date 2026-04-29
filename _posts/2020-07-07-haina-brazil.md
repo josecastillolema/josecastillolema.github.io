@@ -1,5 +1,6 @@
 ---
 title:  "Huawei Certificate Training Program"
+description: Programa de treinamentos gratuitos da Huawei no Brasil com vouchers para certificações HCIA
 last_modified_at: 2020-07-07
 tags:
   - cert
@@ -18,6 +19,6 @@ A Huawei está oferecendo **treinamentos digitais gratuitos**, trazendo para o B
 
 São 500 vouchers para realização da prova, que pode ser realizada remotamente pelos centros da [Person VUE](https://home.pearsonvue.com/Clients/Huawei.aspx).
 
-![](/assets/images/posts/2020-07-07-haina-brazil/1.png)
+![Huawei HCIA certification tracks](/assets/images/posts/2020-07-07-haina-brazil/1.png)
 
 

@@ -1,5 +1,6 @@
 ---
 title:  "Microsoft Security Virtual Training Day"
+description: Free Microsoft Security Virtual Training Day with complimentary SC-900 exam voucher
 last_modified_at: 2022-04-24
 tags:
   - azure

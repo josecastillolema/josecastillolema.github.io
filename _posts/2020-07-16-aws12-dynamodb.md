@@ -1,5 +1,6 @@
 ---
 title:  "AWS series XII: DynamoDB"
+description: "Tutorial de AWS DynamoDB: banco de dados NoSQL gerenciado na nuvem"
 last_modified_at: 2020-07-16
 tags:
   - aws

@@ -1,5 +1,6 @@
 ---
 title:  "FIAP MBA ON Live - 1ASO - Fase 3 - Cloud"
+description: Live do MBA FIAP ON sobre cloud computing, containers e orquestração
 last_modified_at: 2019-10-10
 tags:
   - events

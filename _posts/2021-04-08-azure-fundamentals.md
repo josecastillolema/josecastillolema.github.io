@@ -1,5 +1,6 @@
 ---
 title:  "Microsoft Azure Virtual Training Days"
+description: Free Microsoft Azure Virtual Training Days with complimentary certification exams
 last_modified_at: 2021-11-26
 tags:
   - azure
@@ -21,7 +22,7 @@ You’ll be eligible to take the following certifications exam at no cost:
  - [Microsoft Azure Data Fundamentals (DP-900)](https://docs.microsoft.com/en-us/learn/certifications/exams/dp-900)
  - [Microsoft Azure AI Fundamentals (AI-900)](https://docs.microsoft.com/en-us/learn/certifications/exams/ai-900)
 
-![](/assets/images/posts/2021-04-08-azure-fundamentals/2.png)
+![Microsoft Azure training badge](/assets/images/posts/2021-04-08-azure-fundamentals/2.png)
 
 # Azure Fundamentals
 
@@ -81,14 +82,14 @@ Discover the solutions it’s possible to create with AI and the Azure services 
 
 After completing this free trainings you’ll be eligible to take the certifications exam at no cost.
 
-![](/assets/images/posts/2021-04-08-azure-fundamentals/3.png)
+![Microsoft Azure training badge](/assets/images/posts/2021-04-08-azure-fundamentals/3.png)
 
 <div data-iframe-width="400" data-iframe-height="270" data-share-badge-id="8d9a02d4-89f5-4bfa-a64d-471af8cb07b7" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-![](/assets/images/posts/2021-04-08-azure-fundamentals/4.png)
+![Microsoft Azure training badge](/assets/images/posts/2021-04-08-azure-fundamentals/4.png)
 
 <div data-iframe-width="400" data-iframe-height="270" data-share-badge-id="fd6913cb-4fc5-4dc5-9f69-cd585d1f100a" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-![](/assets/images/posts/2021-04-08-azure-fundamentals/5.png)
+![Microsoft Azure training badge](/assets/images/posts/2021-04-08-azure-fundamentals/5.png)
 
 <div data-iframe-width="400" data-iframe-height="270" data-share-badge-id="fe780c15-3bcc-4399-a522-ac9fcb17a07b" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>

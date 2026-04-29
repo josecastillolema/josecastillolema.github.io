@@ -1,5 +1,6 @@
 ---
 title:  "Webinar Mandic Cloud - IPv6 no OpenStack"
+description: Webinar sobre IPv6 no OpenStack para a Mandic Cloud
 last_modified_at: 2018-03-14
 tags:
   - events

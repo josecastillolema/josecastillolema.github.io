@@ -1,5 +1,6 @@
 ---
 title:  "CODECO 11th Plenary Meeting & IETF 123 hackaton"
+description: CODECO project 11th plenary meeting in Madrid and IETF 123 hackathon challenges
 last_modified_at: 2025-07-16
 tags:
   - en
@@ -19,12 +20,12 @@ CODECO is shaping the future of edge-cloud infrastructure operations and managem
 
 One of the most enjoyable aspects of this project, is that meetings are practical, hands-on, to the point and results focused. As the project is in its last year, there are many things developed and many things happening every month.
 
-![](/assets/images/posts/2025-07-16-codeco-plenary11/2.jpg)
-![](/assets/images/posts/2025-07-16-codeco-plenary11/3.jpg)
+![CODECO 11th Plenary Meeting group photo 1](/assets/images/posts/2025-07-16-codeco-plenary11/2.jpg)
+![CODECO 11th Plenary Meeting group photo 2](/assets/images/posts/2025-07-16-codeco-plenary11/3.jpg)
 
 ## IETF 123 hackaton
 
-![](/assets/images/posts/2025-07-16-codeco-plenary11/4.jpg)
+![IETF 123 hackathon banner](/assets/images/posts/2025-07-16-codeco-plenary11/4.jpg)
 
 The Internet Engineering Task Force (IETF) is holding a [hackathon](https://wiki.ietf.org/en/meeting/123/hackathon) to encourage developers and subject matter experts to discuss, collaborate, and develop utilities, ideas, sample code, and solutions that show practical implementations of IETF standards.
 
@@ -58,4 +59,4 @@ This is your chance to shine, showcase your skills, and **compete for a €2800 
 
    Setup instructions [here](https://gitlab.eclipse.org/eclipse-research-labs/codeco-project/hackathon/challenge-2/codeco-cats/-/blob/main/Installing_the_CODECO_VM__Extracting_Metrics__and_Building_a_Three-Level_Metrics_Management_.pdf).
 
-![](/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg)
+![CODECO IETF 123 hackathon challenges setup](/assets/images/posts/2025-07-16-codeco-plenary11/5.jpg)

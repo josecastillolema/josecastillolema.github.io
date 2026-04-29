@@ -1,5 +1,6 @@
 ---
 title:  "Locust CCN client"
+description: A Locust client for load testing Content-Centric Networking infrastructure compatible with ccn-lite
 last_modified_at: 2019-03-10
 tags:
   - ccn

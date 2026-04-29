@@ -1,5 +1,6 @@
 ---
 title:  "Kyverno Fundamentals Certification"
+description: Free Kyverno Fundamentals Certification course covering Kubernetes policy engine basics
 last_modified_at: 2022-02-03
 tags:
   - cert

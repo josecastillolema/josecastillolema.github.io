@@ -1,5 +1,6 @@
 ---
 title:  "Getting Started with OpenTelemetry (LFS148)"
+description: Completed the Linux Foundation LFS148 course on observability with OpenTelemetry
 last_modified_at: 2025-01-04
 tags:
   - cert

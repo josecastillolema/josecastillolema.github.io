@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Developing - 3rd edition"
+description: Terceira edição do curso FIAP SHIFT AWS Academy Cloud Developing
 last_modified_at: 2022-01-21
 tags:
   - aws
@@ -108,4 +109,4 @@ Você terá acesso a um voucher de 50% de desconto para o exame de Certificaçã
     * Describe how AWS SAM is used to deploy serverless applications.
 
 
-    [![](/assets/images/posts/2022-01-21-shift-aws-dev-3/2.jpg)](https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-developing)
+    [![Página do curso FIAP SHIFT AWS Academy Cloud Developing](/assets/images/posts/2022-01-21-shift-aws-dev-3/2.jpg)](https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-developing)

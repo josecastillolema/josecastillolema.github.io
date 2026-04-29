@@ -1,5 +1,6 @@
 ---
 title:  "Intel Network Builders University"
+description: Free Intel Network Builders University courses on NFV, SDN, and network transformation technologies
 last_modified_at: 2020-12-20
 tags:
   - en
@@ -19,7 +20,7 @@ I would like to recomend its courses to everyone who is interested in learning m
 
 Intel proposes three learning paths:
 
-![](/assets/images/posts/2020-12-20-intel-network-builders/paths.png)
+![Intel Network Builders University learning paths](/assets/images/posts/2020-12-20-intel-network-builders/paths.png)
 
 # Foundational Learning Pathway
 - Software Defined Infrastructure (SDI) – A World Where the Application Defines the System

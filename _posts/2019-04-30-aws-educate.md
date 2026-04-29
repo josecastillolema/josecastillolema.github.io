@@ -1,5 +1,6 @@
 ---
 title:  "AWS Educate"
+description: Programa AWS Educate para alunos e professores com créditos e laboratórios gratuitos
 last_modified_at: 2021-07-25
 tags:
   - aws
@@ -41,15 +42,15 @@ image_link: https://aws.amazon.com/pt/education/awseducate/
 - Integração de dados
 
 ## [AWS Educate Badges](https://aws.amazon.com/pt/education/awseducate/pathways-and-badges/)
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge0.png) AWS DeepLens
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge1.png) Jogos
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge2.png) AWS DeepRacer
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge3.png) Datapalooza
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge4.png) Amazon Sumerian
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge5.png) AWS RoboMaker
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge6.png) Internet das Coisas
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge7.png) Alexa
-- ![](/assets/images/posts/2019-04-30-aws-educate/badge8.png) Startups da AWS
+- ![AWS DeepLens badge](/assets/images/posts/2019-04-30-aws-educate/badge0.png) AWS DeepLens
+- ![Jogos badge](/assets/images/posts/2019-04-30-aws-educate/badge1.png) Jogos
+- ![AWS DeepRacer badge](/assets/images/posts/2019-04-30-aws-educate/badge2.png) AWS DeepRacer
+- ![Datapalooza badge](/assets/images/posts/2019-04-30-aws-educate/badge3.png) Datapalooza
+- ![Amazon Sumerian badge](/assets/images/posts/2019-04-30-aws-educate/badge4.png) Amazon Sumerian
+- ![AWS RoboMaker badge](/assets/images/posts/2019-04-30-aws-educate/badge5.png) AWS RoboMaker
+- ![Internet das Coisas badge](/assets/images/posts/2019-04-30-aws-educate/badge6.png) Internet das Coisas
+- ![Alexa badge](/assets/images/posts/2019-04-30-aws-educate/badge7.png) Alexa
+- ![Startups da AWS badge](/assets/images/posts/2019-04-30-aws-educate/badge8.png) Startups da AWS
 
 
 ## Cadastro na plataforma
@@ -68,5 +69,5 @@ image_link: https://aws.amazon.com/pt/education/awseducate/
 
 Seguir os passos descritos em [AWS Educate: Cadastro na plataforma](/aws-educate-login/)
 
-![](/assets/images/posts/2019-04-30-aws-educate/cert2019.jpg)
-![](/assets/images/posts/2019-04-30-aws-educate/cert2020.jpg)
+![Certificado de instituição membro AWS Educate 2019](/assets/images/posts/2019-04-30-aws-educate/cert2019.jpg)
+![Certificado de instituição membro AWS Educate 2020](/assets/images/posts/2019-04-30-aws-educate/cert2020.jpg)

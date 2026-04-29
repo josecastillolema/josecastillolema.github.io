@@ -1,5 +1,6 @@
 ---
 title:  "Essentials for Istio by Solo.io"
+description: Hands-on certification from Solo.io covering Istio deployment, security, and observability
 last_modified_at: 2021-09-16
 tags:
   - cert

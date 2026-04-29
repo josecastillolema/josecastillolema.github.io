@@ -1,5 +1,6 @@
 ---
 title:  "AWS series VIII: Elastic Beanstalk (EB) com Spring Boot"
+description: "Tutorial de AWS Elastic Beanstalk: deploy de aplicações Spring Boot"
 last_modified_at: 2020-07-14
 tags:
   - aws

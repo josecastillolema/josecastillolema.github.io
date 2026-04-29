@@ -1,5 +1,6 @@
 ---
 title:  "HotCloudPerf 2025"
+description: Panelist at the 8th Workshop on Hot Topics in Cloud Computing Performance
 last_modified_at: 2025-05-06
 tags:
   - en
@@ -41,7 +42,7 @@ The HotCloudPerf workshop is technically sponsored by the [Standard Performance 
 
 ## Pics
 
-![](/assets/images/posts/2025-05-06-hotcloudperf25/2.jpg)
+![HotCloudPerf 2025 workshop presentation photo](/assets/images/posts/2025-05-06-hotcloudperf25/2.jpg)
 
 ## Slides
 

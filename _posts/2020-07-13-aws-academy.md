@@ -1,5 +1,6 @@
 ---
 title:  "AWS Academy"
+description: Programa AWS Academy na FIAP com currículos de cloud, certificações e laboratórios práticos
 last_modified_at: 2022-11-07
 tags:
   - aws
@@ -38,7 +39,7 @@ O curso possui **20 horas** de conteúdo e prepara os alunos para conseguir a [*
 
 Na FIAP ofertamos este curso ([1ª edição](/shift-aws-foundations/), [2ª edição](/shift-aws-foundations-2/), [3ª edição](/shift-aws-foundations-3/), [4ª edição](/shift-aws-foundations-4/), [5ª edição](/shift-aws-foundations-5/), [6ª edição](/shift-aws-foundations-6/), [7ª edição](/shift-aws-foundations-7/), [8ª edição](/shift-aws-foundations-8/) e [9ª edição](/shift-aws-foundations-9/)) na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
-![](/assets/images/posts/2020-07-09-aws-academy/05.png)
+![AWS Academy Cloud Foundations badge](/assets/images/posts/2020-07-09-aws-academy/05.png)
 
 <div data-iframe-width="550" data-iframe-height="270" data-share-badge-id="03cac722-8a10-484c-b93e-3b70f3dd8d89" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -59,7 +60,7 @@ Neste curso, os alunos exploram serviços, aplicativos e casos de uso de computa
 
 Este curso é uma extensão do *AWS Academy Introduction to Cloud: Semester 1*. O curso fornece aos alunos instrução em sala de aula que apresenta as habilidades de computação em nuvem e acelera os alunos em direção às próximas etapas em sua jornada educacional.
 
-![](/assets/images/posts/2020-07-09-aws-academy/11.png)
+![AWS Academy Introduction to Cloud badge](/assets/images/posts/2020-07-09-aws-academy/11.png)
 
 <div data-iframe-width="600" data-iframe-height="270" data-share-badge-id="7a88bdff-5ac3-4499-adc5-d5c9a0f5e002" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -73,7 +74,7 @@ Recomendamos que os alunos cursem o [AWS Academy Cloud Foundations](#aws-academy
 
 Na FIAP ofertamos este curso ([1ª edição](/shift-aws-dev/), [2ª edição](/shift-aws-dev-2/), [3ª edição](/shift-aws-dev-3/), [4ª edição](/shift-aws-dev-4/), [5ª edição](/shift-aws-dev-5/) e [6ª edição](/shift-aws-dev-6/)) na modalidade [SHIFT](https://www.fiap.com.br/shift).
 
-![](/assets/images/posts/2020-07-09-aws-academy/06.png)
+![AWS Academy Cloud Developing badge](/assets/images/posts/2020-07-09-aws-academy/06.png)
 
 <div data-iframe-width="500" data-iframe-height="270" data-share-badge-id="87cdceb2-4a25-4d58-81e1-8728db9029bf" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -85,7 +86,7 @@ O curso de nível intermediário cobre os fundamentos na construção da infraes
 
 Recomendamos que os alunos cursem o [AWS Academy Cloud Foundations](#aws-academy-cloud-foundations-acf) ou equivalente, antes de iniciar este curso.
 
-![](/assets/images/posts/2020-07-09-aws-academy/10.png)
+![AWS Academy Cloud Architecting badge](/assets/images/posts/2020-07-09-aws-academy/10.png)
 
 <div data-iframe-width="500" data-iframe-height="270" data-share-badge-id="e7ef23eb-a846-47d4-aa5e-744b38f3431d" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -97,7 +98,7 @@ Esse curso de nível intermediário preparará os alunos para buscar DevOps sob 
 
 Recomendamos que os alunos cursem o [AWS Academy Cloud Foundations](#aws-academy-cloud-foundations-acf) ou equivalente, antes de iniciar este curso.
 
-![](/assets/images/posts/2020-07-09-aws-academy/09.png)
+![AWS Academy Cloud Operations badge](/assets/images/posts/2020-07-09-aws-academy/09.png)
 
 <div data-iframe-width="500" data-iframe-height="270" data-share-badge-id="15108bc4-5de7-4240-97c7-117d05628bd2" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -107,7 +108,7 @@ Recomendamos que os alunos cursem o [AWS Academy Cloud Foundations](#aws-academy
 
 Este curso introdutório apresenta aos alunos os conceitos e a terminologia de inteligência artificial (IA) e *machine learning* (ML). Ao final deste curso, os alunos poderão selecionar e aplicar serviços de ML para resolver problemas de negócios. Eles também poderão rotular, criar, treinar e implantar um modelo de ML personalizado. Este curso tem aproximadamente **20 horas** de conteúdo entregue por meio de palestras, laboratórios práticos e trabalho em projetos.
 
-![](/assets/images/posts/2020-07-09-aws-academy/07.png)
+![AWS Academy Machine Learning badge](/assets/images/posts/2020-07-09-aws-academy/07.png)
 
 <div data-iframe-width="550" data-iframe-height="270" data-share-badge-id="5cc9e269-41a0-406a-9a92-b0dd0458ea06" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -119,7 +120,7 @@ Estes exercícios de laboratório ensinam os alunos a conduzir a análise de Big
 
 Na FIAP ofertamos este curso aos alunos do [MBA em Engenharia de dados](/fiap-abd/).
 
-![](/assets/images/posts/2020-07-09-aws-academy/08.png)
+![AWS Academy Data Analytics badge](/assets/images/posts/2020-07-09-aws-academy/08.png)
 
 <div data-iframe-width="500" data-iframe-height="270" data-share-badge-id="5f2f7254-05bd-4e00-b7ea-d52a52b554c4" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -129,7 +130,7 @@ Na FIAP ofertamos este curso aos alunos do [MBA em Engenharia de dados](/fiap-ab
 
 Este curso fornece uma visão geral dos conceitos e habilidades fundamentais necessários para a função de técnico em operações de engenharia em um ambiente de datacenter. Os alunos aprenderão sobre tópicos como noções básicas de datacenter, infraestrutura física de data center, fundamentos elétricos e baterias e geradores de datacenter.
 
-![](/assets/images/posts/2020-07-09-aws-academy/12.png)
+![AWS Academy Engineering Operations badge](/assets/images/posts/2020-07-09-aws-academy/12.png)
 
 <div data-iframe-width="600" data-iframe-height="270" data-share-badge-id="ac0caf49-1307-4032-aa25-daeeeb653dd3" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
@@ -137,7 +138,7 @@ Este curso fornece uma visão geral dos conceitos e habilidades fundamentais nec
 
 Este curso foi desenvolvido para ajudar os alunos a desenvolver conhecimentos técnicos em operações de datacenter. Embora este seja um curso fundamental, os alunos devem ter conhecimento geral dos conceitos de engenharia mecânica e elétrica.
 
-![](/assets/images/posts/2020-07-09-aws-academy/13.png)
+![AWS Academy Data Center Technician badge](/assets/images/posts/2020-07-09-aws-academy/13.png)
 
 <div data-iframe-width="600" data-iframe-height="270" data-share-badge-id="23e39e37-c0ad-43e9-a08a-c48bf1841e44" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 

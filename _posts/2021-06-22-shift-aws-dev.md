@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Developing"
+description: Curso FIAP SHIFT de desenvolvimento na nuvem AWS com preparação para a certificação AWS Developer Associate
 last_modified_at: 2021-06-22
 tags:
   - aws

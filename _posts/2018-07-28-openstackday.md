@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack Day SP 2018"
+description: Palestra sobre IPv6 no OpenStack no OpenStack Day São Paulo 2018
 last_modified_at: 2018-07-28
 tags:
   - events

@@ -1,5 +1,6 @@
 ---
 title:  "Containers series IV: Docker Swarm"
+description: "Tutorial de Docker Swarm: orquestração de containers em cluster"
 last_modified_at: 2019-02-02
 tags:
   - classes

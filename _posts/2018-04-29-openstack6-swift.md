@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series VI: Swift - Object Storage Service"
+description: "Tutorial de OpenStack Swift: armazenamento de objetos"
 last_modified_at: 2018-04-29
 tags:
   - classes

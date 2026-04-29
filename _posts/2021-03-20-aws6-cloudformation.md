@@ -1,5 +1,6 @@
 ---
 title:  "AWS series VI: CloudFormation"
+description: "Tutorial de AWS CloudFormation: provisionamento de infraestrutura como código"
 last_modified_at: 2021-03-20
 tags:
   - aws

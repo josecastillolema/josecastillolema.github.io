@@ -1,5 +1,6 @@
 ---
 title:  "[PT] Heat - Introdução"
+description: "Introdução ao Heat, o orquestrador nativo do OpenStack, com exemplo prático de criação de servidor web"
 last_modified_at: 2017-10-28
 tags:
   - iac
@@ -161,19 +162,19 @@ outputs:
 
 ### Via Horizon
 Primeiro, na aba `Orquestration - Stacks` criamos o nosso *stack* e setamos os parâmetros opcionais que foram definidos no template.
-![](/assets/images/posts/2017-12-20-heat-introducao/01.png)
+![Diálogo de criação de stack no Horizon com parâmetros do template Heat](/assets/images/posts/2017-12-20-heat-introducao/01.png)
 
 A continuação podemos ver a topologia diversos recursos sendo criados (os recursos em verde já estão disponíveis).
-![](/assets/images/posts/2017-12-20-heat-introducao/02.png)
+![Topologia do stack Heat mostrando recursos sendo criados](/assets/images/posts/2017-12-20-heat-introducao/02.png)
 
 Um *overview* da nossa pilha, com o *output* que definimos no *template*.
-![](/assets/images/posts/2017-12-20-heat-introducao/03.png)
+![Visão geral do stack Heat com URL de saída](/assets/images/posts/2017-12-20-heat-introducao/03.png)
 
 Os recursos que estão sendo criados.
-![](/assets/images/posts/2017-12-20-heat-introducao/04.png)
+![Lista de recursos do stack Heat](/assets/images/posts/2017-12-20-heat-introducao/04.png)
 
 E por último todos os eventos relacionados com esses recursos (criação, atualização, modificação, deleção, etc.).
-![](/assets/images/posts/2017-12-20-heat-introducao/05.png)
+![Log de eventos do stack Heat](/assets/images/posts/2017-12-20-heat-introducao/05.png)
 
 ### Via CLI
  - Criação:
@@ -191,16 +192,16 @@ E por último todos os eventos relacionados com esses recursos (criação, atual
 ### Via API REST
 Como falamos na introdução, o Heat fornece uma API REST nativa do OpenStack e uma API de consulta compatível com o CloudFormation. Neste caso usaremos a API REST nativa.
 
-![](/assets/images/posts/2017-12-20-heat-introducao/06.png)
+![Requisição REST API de criação de stack Heat](/assets/images/posts/2017-12-20-heat-introducao/06.png)
 
 
 ## Resultado da execução
 
 Independentemente do método escolhido (Horizon, CLI ou API REST), uma vez que o *stack* transicione ao estado `created` (não deveria demorar muito mais de 2 minutos) poderemos ver a infra instanciada.
-![](/assets/images/posts/2017-12-20-heat-introducao/07.png)
+![Instâncias OpenStack mostrando o servidor web implantado](/assets/images/posts/2017-12-20-heat-introducao/07.png)
 
 Em alguns minutos (enquanto **cloud-init** instala e configura o servidor web Apache), poderemos acessar ao nosso servidor pela IP pública.
-![](/assets/images/posts/2017-12-20-heat-introducao/07.png)
+![Página do servidor web mostrando mensagem Churrops](/assets/images/posts/2017-12-20-heat-introducao/07.png)
 
 
 ## Conclusão

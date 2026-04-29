@@ -1,5 +1,6 @@
 ---
 title:  "Kudos to ExamTopics"
+description: Why ExamTopics is a preferred free resource for certification exam preparation
 last_modified_at: 2022-01-04
 tags:
   - cert

@@ -1,5 +1,6 @@
 ---
 title:  "Gremlin Certified Chaos Engineering Practitioner (GCCEP)"
+description: Free Gremlin certification covering chaos engineering fundamentals and best practices
 last_modified_at: 2021-11-28
 tags:
   - cert
@@ -21,7 +22,7 @@ Learn more at [gremlin.com/certification](https://www.gremlin.com/certification/
 
 At the end of the course, you can earn a badge by passing a final exam.
 
-![](/assets/images/posts/2021-11-28-gremlin-caos/2.png)
+![Gremlin chaos engineering certificate](/assets/images/posts/2021-11-28-gremlin-caos/2.png)
 
 <iframe
   src="https://www.credential.net/embed/47846980-307e-4b0e-9bf6-043abbce2a7a"

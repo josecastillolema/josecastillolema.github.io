@@ -1,5 +1,6 @@
 ---
 title:  "Flatpak SDK Extension for OCaml"
+description: A Flatpak SDK extension that adds the OCaml compiler and toolchain to the Freedesktop SDK
 last_modified_at: 2024-01-04
 tags:
   - dev

@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Foundations - 6th edition"
+description: Sexta edição do curso FIAP SHIFT AWS Academy Cloud Foundations
 last_modified_at: 2022-01-07
 tags:
   - aws
@@ -48,4 +49,4 @@ Serão 20 horas de curso, com duração de quatro semanas, seis laboratórios pr
  - Módulo 9: Arquitetura de nuvem
  - Módulo 10: Auto scaling e monitoramento
 
- [![](/assets/images/posts/2022-01-07-shift-aws-foundations-6/1.png)](https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online)
+ [![Página do curso FIAP SHIFT AWS Academy Cloud Foundations](/assets/images/posts/2022-01-07-shift-aws-foundations-6/1.png)](https://www.fiap.com.br/shift/curso/tecnologia/aws-academy-cloud-foundations-online)

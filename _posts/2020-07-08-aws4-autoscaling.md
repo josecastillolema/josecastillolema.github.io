@@ -1,5 +1,6 @@
 ---
 title:  "AWS series IV: Auto Scaling"
+description: "Tutorial de AWS Auto Scaling: escalabilidade automática de instâncias EC2"
 last_modified_at: 2020-07-08
 tags:
   - aws

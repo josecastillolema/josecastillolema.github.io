@@ -1,5 +1,6 @@
 ---
 title:  "Legends of Linux Trivia"
+description: Red Hat interactive Linux trivia game covering history and fundamentals
 last_modified_at: 2022-03-20
 tags:
   - cert
@@ -15,12 +16,12 @@ Red Hat [is offering](https://redhatdg.co1.qualtrics.com/jfe/form/SV_bjRFSHqPdTp
 
 ### Red Hat Enterprise Linux Trivia - Red Hat Titan
 
-![](/assets/images/posts/2023-03-20-linux-trivia/RedHatTitan.png)
+![Red Hat Titan badge](/assets/images/posts/2023-03-20-linux-trivia/RedHatTitan.png)
 
 ###  Linux Command-Line Trivia - Command-Line Captain
 
-![](/assets/images/posts/2023-03-20-linux-trivia/Command-LineCaptain.png)
+![Command-Line Captain badge](/assets/images/posts/2023-03-20-linux-trivia/Command-LineCaptain.png)
 
 ###  Linux Open Source Trivia - Open Sourcer-er
 
-![](/assets/images/posts/2023-03-20-linux-trivia/OpenSourcer-er.png)
+![Open Sourcer-er badge](/assets/images/posts/2023-03-20-linux-trivia/OpenSourcer-er.png)

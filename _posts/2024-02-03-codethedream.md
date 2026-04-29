@@ -1,5 +1,6 @@
 ---
 title:  "Code the Dream Skill-IT workshops"
+description: Skill-IT workshops delivered for Code the Dream covering OpenShift and cloud-native technologies
 last_modified_at: 2024-02-03
 tags:
   - classes

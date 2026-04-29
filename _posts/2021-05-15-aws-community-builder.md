@@ -1,5 +1,6 @@
 ---
 title:  "AWS Community Builder"
+description: Joining the AWS Community Builders program for technical resources, mentorship, and networking
 last_modified_at: 2021-05-15
 tags:
   - aws

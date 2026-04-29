@@ -1,5 +1,6 @@
 ---
 title:  "FIAP Corporate"
+description: Cursos corporativos de IoT, redes e cloud para Citibank, Gerdau, Ambev, T-Systems e CCR
 last_modified_at: 2021-11-26
 tags:
   - aws

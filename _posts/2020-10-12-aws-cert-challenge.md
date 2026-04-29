@@ -1,5 +1,6 @@
 ---
 title:  "AWS Global Certification Challenge"
+description: Desafio global de certificação AWS com desconto de 50% nos exames
 last_modified_at: 2020-10-12
 tags:
   - aws

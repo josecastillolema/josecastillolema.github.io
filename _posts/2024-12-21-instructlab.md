@@ -1,5 +1,6 @@
 ---
 title:  "InstructLab: Democratizing AI Models at Scale (DL01001G)"
+description: Completed the IBM Training course on InstructLab for customizing AI language models at scale
 last_modified_at: 2024-12-21
 tags:
   - cert

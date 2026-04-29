@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series VII: Heat - Orchestration Service"
+description: "Tutorial de OpenStack Heat: orquestração de infraestrutura via templates"
 last_modified_at: 2018-05-02
 tags:
   - classes

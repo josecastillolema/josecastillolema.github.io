@@ -1,5 +1,6 @@
 ---
 title:  "Entrevistas en Diferido"
+description: Entrevista para el canal Entrevistas en Diferido sobre Linux, software libre y esLibre 2026
 last_modified_at: 2026-04-13
 tags:
   - dev

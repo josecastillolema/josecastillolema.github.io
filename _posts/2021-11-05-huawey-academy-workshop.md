@@ -1,5 +1,6 @@
 ---
 title:  "Huawei ICT Academy Instructor Workshop Brazil 2021"
+description: Workshop ao vivo sobre o programa Huawei ICT Academy com casos de universidades parceiras
 last_modified_at: 2022-03-18
 tags:
   - cert

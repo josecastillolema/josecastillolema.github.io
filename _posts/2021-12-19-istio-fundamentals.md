@@ -1,5 +1,6 @@
 ---
 title:  "Istio and Envoy Fundamentals by Tetrate"
+description: Free Tetrate Academy courses and certifications on Istio service mesh and Envoy proxy
 last_modified_at: 2022-01-12
 tags:
   - cert
@@ -45,6 +46,6 @@ Envoy is an open-source edge and service proxy that is a key part of modern, clo
 
 At the end of the course, you can earn one certificate per course by passing a final exam.
 
-[![](/assets/images/posts/2021-12-19-istio-fundamentals/1.png)](https://academy.tetrate.io/certificates/em1ijnibkx)
+[![Tetrate Istio certification](/assets/images/posts/2021-12-19-istio-fundamentals/1.png)](https://academy.tetrate.io/certificates/em1ijnibkx)
 
-[![](/assets/images/posts/2021-12-19-istio-fundamentals/2.png)](https://tetrate-academy.thinkific.com/certificates/g0qtgjk4ix)
+[![Tetrate Istio certification](/assets/images/posts/2021-12-19-istio-fundamentals/2.png)](https://tetrate-academy.thinkific.com/certificates/g0qtgjk4ix)

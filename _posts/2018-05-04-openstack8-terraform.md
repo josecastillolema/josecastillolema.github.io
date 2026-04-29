@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series VIII: Terraform"
+description: "Tutorial de Terraform com OpenStack: provisionamento de infraestrutura como código"
 last_modified_at: 2018-05-04
 tags:
   - classes

@@ -1,5 +1,6 @@
 ---
 title:  "IaC series: Ansible na AWS"
+description: Laboratório prático de Infrastructure as Code usando Ansible para provisionamento na AWS
 last_modified_at: 2022-03-21
 tags:
   - ansible

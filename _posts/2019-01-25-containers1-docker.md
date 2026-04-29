@@ -1,5 +1,6 @@
 ---
 title:  "Containers series I: Docker"
+description: "Tutorial de Docker: conceitos básicos, comandos principais e criação de containers"
 last_modified_at: 2019-01-25
 tags:
   - classes

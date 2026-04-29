@@ -1,5 +1,6 @@
 ---
 title:  "AWS Skill Builder"
+description: AWS Skill Builder learning center with free official practice question sets for certification exams
 last_modified_at: 2022-02-02
 tags:
   - aws

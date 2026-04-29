@@ -1,5 +1,6 @@
 ---
 title:  "Code the Dream Skill-IT workshops"
+description: Featured employer speaker at Code the Dream Skill-IT workshops delivering hands-on Docker training
 last_modified_at: 2025-04-05
 tags:
   - classes

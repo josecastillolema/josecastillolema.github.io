@@ -1,5 +1,6 @@
 ---
 title:  "Securing Your Software Supply Chain with Sigstore (LFS182)"
+description: Completed the Linux Foundation course on securing the software supply chain using Sigstore
 last_modified_at: 2024-12-05
 tags:
   - cert

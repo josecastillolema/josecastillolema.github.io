@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series III: Nova - Compute Service"
+description: "Tutorial de OpenStack Nova: criação e gerenciamento de instâncias (VMs)"
 last_modified_at: 2018-03-22
 tags:
   - classes

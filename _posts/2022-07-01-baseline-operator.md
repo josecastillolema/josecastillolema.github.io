@@ -1,5 +1,6 @@
 ---
 title:  "baseline-operator"
+description: Kubernetes operator for automated performance regression testing using ripsaw and cloud-bulldozer
 last_modified_at: 2022-07-01
 tags:
   - dev

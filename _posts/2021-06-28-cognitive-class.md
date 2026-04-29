@@ -1,5 +1,6 @@
 ---
 title:  "Cognitive Class @ai"
+description: Free learning paths and certifications on Cognitive Class covering data science, containers, and Kubernetes
 last_modified_at: 2022-05-06
 tags:
   - cert

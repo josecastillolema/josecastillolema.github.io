@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series IV: Neutron - Network Service"
+description: "Tutorial de OpenStack Neutron: configuração de redes, sub-redes e roteadores"
 last_modified_at: 2018-04-25
 tags:
   - classes

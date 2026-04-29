@@ -1,5 +1,6 @@
 ---
 title:  "OpenStack series II: Glance - Image Service"
+description: "Tutorial de OpenStack Glance: gerenciamento de imagens de máquinas virtuais"
 last_modified_at: 2018-03-20
 tags:
   - classes

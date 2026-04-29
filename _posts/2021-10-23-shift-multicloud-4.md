@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: Multicloud Architecture - 4th edition"
+description: Quarta edição do curso FIAP SHIFT de arquitetura multicloud com labs na AWS
 last_modified_at: 2021-10-23
 tags:
   - aws

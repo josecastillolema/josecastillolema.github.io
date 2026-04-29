@@ -1,5 +1,6 @@
 ---
 title:  "CNCF contributor card"
+description: My CNCF contributor card showcasing open source contributions to Cloud Native projects
 last_modified_at: 2025-08-14
 tags:
   - dev

@@ -1,5 +1,6 @@
 ---
 title:  "Huawei Routing & Switching vs Datacom"
+description: Apresentação sobre as diferenças entre a trilha Huawei Routing and Switching e sua substituta Datacom
 last_modified_at: 2022-03-18
 tags:
   - cert

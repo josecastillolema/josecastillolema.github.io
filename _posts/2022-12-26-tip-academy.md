@@ -1,5 +1,6 @@
 ---
 title:  "TIP Academy"
+description: Free courses on telecom infrastructure from the Telecom Infra Project Academy
 last_modified_at: 2023-01-04
 tags:
   - cert
@@ -41,11 +42,11 @@ Upon completion of this learning program, you will be able to:
 
 After completing the courses training you’ll be eligible to take the final assessments at no cost.
 
-![](/assets/images/posts/2022-12-26-tip-academy/4.png)
+![TIP Academy Why Open RAN certificate](/assets/images/posts/2022-12-26-tip-academy/4.png)
 
-![](/assets/images/posts/2022-12-26-tip-academy/2.png)
+![TIP Academy Why Open RAN badge](/assets/images/posts/2022-12-26-tip-academy/2.png)
 
-![](/assets/images/posts/2022-12-26-tip-academy/5.png)
+![TIP Academy Open RAN Fundamentals certificate](/assets/images/posts/2022-12-26-tip-academy/5.png)
 
-![](/assets/images/posts/2022-12-26-tip-academy/3.png)
+![TIP Academy Open RAN Fundamentals badge](/assets/images/posts/2022-12-26-tip-academy/3.png)
 

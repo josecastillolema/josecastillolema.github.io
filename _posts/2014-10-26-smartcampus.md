@@ -1,5 +1,6 @@
 ---
 title:  "Smart Campus SP"
+description: IoT smart campus project for São Paulo using FIWARE platform.
 last_modified_at: 2014-10-26
 tags:
   - dev

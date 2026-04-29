@@ -1,5 +1,6 @@
 ---
 title:  "Microsoft Power Platform Virtual Training Day"
+description: Free Microsoft Virtual Training Day covering Power Platform fundamentals with a complimentary PL-900 exam voucher
 last_modified_at: 2022-04-14
 tags:
   - azure

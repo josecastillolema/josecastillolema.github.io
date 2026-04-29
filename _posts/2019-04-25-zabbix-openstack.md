@@ -1,11 +1,12 @@
 ---
 title:  "Zabbix templates for OpenStack"
+description: Zabbix monitoring templates for OpenStack services deployed via Ansible
 last_modified_at: 2019-04-25
 tags:
   - ansible
+  - en
   - monitoring
   - openstack
-  - pt
   - redhat
 toc: true
 toc_sticky: true

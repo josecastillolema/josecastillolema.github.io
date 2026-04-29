@@ -1,5 +1,6 @@
 ---
 title:  "Red Hat OpenShift AI learning"
+description: Earned multiple Credly badges for Red Hat OpenShift AI learning paths
 last_modified_at: 2024-08-02
 tags:
   - cert

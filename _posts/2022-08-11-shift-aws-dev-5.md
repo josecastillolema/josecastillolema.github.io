@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: AWS Academy Cloud Developing - 5th edition"
+description: Quinta edição do curso FIAP SHIFT AWS Academy Cloud Developing
 last_modified_at: 2022-08-11
 tags:
   - aws

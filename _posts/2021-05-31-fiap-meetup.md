@@ -1,5 +1,6 @@
 ---
 title:  "FIAP Meetup #9 - Kubernetes & Service Mesh"
+description: Meetup técnico sobre Kubernetes, microsserviços e Service Mesh organizado pela FIAP
 last_modified_at: 2021-07-08
 tags:
   - events
@@ -47,7 +48,7 @@ FIAP & LuizaLabs & RedHat
 
 ## Participantes
 
-![](/assets/images/posts/2021-05-31-fiap-meetup/1.png)
+![FIAP Meetup Kubernetes](/assets/images/posts/2021-05-31-fiap-meetup/1.png)
 
 **André Pontes Sampaio**
 

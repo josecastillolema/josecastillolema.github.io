@@ -1,5 +1,6 @@
 ---
 title:  "Caio Ferreira - canal de YouTube"
+description: Canal de YouTube com conteúdo sobre AWS e cloud computing
 last_modified_at: 2020-10-31
 tags:
   - aws

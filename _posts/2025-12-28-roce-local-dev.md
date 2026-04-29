@@ -1,5 +1,6 @@
 ---
 title:  "Local Soft-RoCE development workflow with kind"
+description: Setting up a local Soft-RoCE development workflow with Docker/Podman and kind for RDMA testing
 last_modified_at: 2025-12-28
 tags:
   - dev

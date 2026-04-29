@@ -1,5 +1,6 @@
 ---
 title:  "5 years at Red Hat"
+description: Celebrating five years working at Red Hat
 last_modified_at: 2024-07-01
 tags:
   - en

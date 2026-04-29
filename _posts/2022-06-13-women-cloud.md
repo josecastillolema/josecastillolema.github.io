@@ -1,5 +1,6 @@
 ---
 title:  "AWS - Mulheres em Cloud"
+description: Programa AWS Mulheres em Cloud para mulheres que desejam iniciar carreira em cloud computing
 last_modified_at: 2022-06-13
 tags:
   - aws

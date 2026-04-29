@@ -1,5 +1,6 @@
 ---
 title:  "GitOps Summit 2021"
+description: GitOps Summit 2021 covering best practices for GitOps adoption and progressive delivery
 last_modified_at: 2021-05-18
 tags:
   - en

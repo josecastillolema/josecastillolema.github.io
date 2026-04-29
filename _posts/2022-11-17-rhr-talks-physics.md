@@ -1,5 +1,6 @@
 ---
 title:  "RHR talks: PHYSICS EU project"
+description: Red Hat Research talk on the PHYSICS EU project for FaaS in hybrid cloud
 last_modified_at: 2022-11-17
 tags:
   - en

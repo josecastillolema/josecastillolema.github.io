@@ -1,5 +1,6 @@
 ---
 title:  "Containers series V: Kubernetes - Instalação"
+description: "Tutorial de Kubernetes: instalação e configuração de um cluster local"
 last_modified_at: 2019-02-04
 tags:
   - classes

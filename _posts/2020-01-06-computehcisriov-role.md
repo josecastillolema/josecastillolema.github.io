@@ -1,5 +1,6 @@
 ---
 title:  "ComputeHCISriov role for Director/TripleO"
+description: Hyper-converged SR-IOV compute role proposed and merged upstream in OpenStack TripleO
 last_modified_at: 2020-01-06
 tags:
   - dev

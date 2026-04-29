@@ -1,5 +1,6 @@
 ---
 title:  "How to Flatpak OCaml applications"
+description: Guide to packaging OCaml applications as Flatpaks using the Freedesktop SDK extension
 last_modified_at: 2023-12-19
 tags:
   - dev

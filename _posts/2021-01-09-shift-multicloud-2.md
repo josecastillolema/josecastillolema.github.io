@@ -1,5 +1,6 @@
 ---
 title:  "FIAP SHIFT: Multicloud Architecture - 2nd edition"
+description: Segunda edição do curso FIAP SHIFT sobre arquitetura multicloud com atividades hands-on na AWS
 last_modified_at: 2021-01-09
 tags:
   - aws

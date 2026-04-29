@@ -1,5 +1,6 @@
 ---
 title:  "Linux Foundation Training & Certification courses"
+description: Free Linux Foundation online courses covering open source development, security, and GitOps
 last_modified_at: 2022-05-19
 tags:
   - cert
