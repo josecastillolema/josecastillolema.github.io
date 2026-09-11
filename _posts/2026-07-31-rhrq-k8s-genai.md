@@ -15,3 +15,5 @@ image_link: https://research.redhat.com/quarterly/
 ---
 
 The article: [Kubernetes meets GenAI: evaluating performance for AI inference workloads](https://research.redhat.com/blog/article/kubernetes-meets-genai-evaluating-performance-for-ai-inference-workloads/) has been published in the [Red Hat Research Quarterly Summer 2026 edition](https://research.redhat.com/blog/issue/summer-2026/).
+
+<iframe src="https://docs.google.com/gview?url=https://raw.githubusercontent.com/josecastillolema/josecastillolema.github.io/main/assets/docs/RHRQ_Summer26%20K8GenAI.pdf&embedded=true" style="width:100%; height: unset; aspect-ratio: 1/1;" frameborder="0"></iframe>
